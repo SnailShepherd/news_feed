@@ -13,10 +13,10 @@
     "https://www.interfax-russia.ru/realty/news": {},
     "https://www.metalinfo.ru/ru/news": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 19 Sep 2025 16:44:03 GMT"
+      "Last-Modified": "Fri, 19 Sep 2025 17:32:40 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"249ff-h85FEq+zXsCfXlmvK45PwFpOPS0\""
+      "ETag": "W/\"24b6e-wmnrlW54xuUOyf6q/g/Pwqft3hc\""
     },
     "https://ria-stk.ru/news/vse-novosti.php": {},
     "http://government.ru/news/": {},
@@ -25,7 +25,7 @@
     },
     "https://realty.ria.ru/lenta/": {},
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"16ml1kbvj2i3np6\""
+      "ETag": "\"122p22t31w53o7p\""
     }
   },
   "stats": {
@@ -46,12 +46,17 @@
         "error": "401 Client Error: Unauthorized for url: https://minstroyrf.gov.ru/press/?d=all"
       },
       {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fddc76c3cb0>, 'Connection to ancb.ru timed out. (connect timeout=30)'))"
+      },
+      {
         "source": "Главгосэкспертиза",
         "url": "https://gge.ru/press-center/news/",
         "error": "403 Client Error: Forbidden for url: https://gge.ru/press-center/news/"
       }
     ],
-    "last_run": "2025-09-19T16:43:53.206105Z",
-    "items": 331
+    "last_run": "2025-09-19T17:32:34.539612Z",
+    "items": 298
   }
 }
