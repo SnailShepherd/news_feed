@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "newsfeed"
+version = "0.1.0"
+description = "Unified news feed builder"
+authors = [{name="you"}]
+requires-python = ">=3.11"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["newsfeed", "newsfeed.sources"]
