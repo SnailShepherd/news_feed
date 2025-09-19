@@ -1,19 +1,17 @@
-# Unified news feed for normacs
+# news_feed (updated scrapers)
 
-- Автосборка GitHub Actions ежечасно и по кнопке (Actions → *Build unified feed* → Run).
-- Результат публикуется как GitHub Pages: `docs/unified.json` по адресу `/unified.json`.
+Ключевые изменения:
+- Исправлен Минстрой (`?d=news` вместо `?d=all`).
+- Главгосэкспертиза — официальный RSS `https://gge.ru/rss/` (обходит 403).
+- АНЦБ — переведено на HTTPS.
+- Металлоснабжение и сбыт — только RSS + фильтр статей.
+- Кэширование результатов источников (`cache/items/*.json`): при 304/сбоях данные не пропадают.
+- Улучшенный парсер дат на русском + извлечение из `<meta>`/`<time>` на карточках.
 
-## Быстрый старт
-1. Включите **Actions** и **Pages** (Source: `Deploy from a branch`, Branch: `main` / `docs`).
-2. Дайте Actions права на запись (Repository → Settings → Actions → General → Workflow permissions → *Read and write*).
-3. При необходимости запустите вручную: Actions → *Build unified feed* → Run workflow.
-
-## Файлы
-- `.github/workflows/build.yml` — пайплайн.
-- `scripts/aggregate.py` — сборщик.
-- `sources.json` — конфиг источников.
-- `docs/index.html` — заглушка-страница с ссылкой на JSON.
-- `docs/unified.json` — результат.
-
-## Обновление
-Меняйте `sources.json` (правила ссылок) или `scripts/aggregate.py` (логика парсинга), коммитьте — сборка запустится автоматически.
+Локальный запуск:
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python src/build.py
+```
+Результат: `docs/unified.json`
