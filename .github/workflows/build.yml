@@ -1,12 +1,10 @@
 name: Build feed
 
 on:
+  push:
   schedule:
-    - cron: '*/30 * * * *'
-  workflow_dispatch: {}
-
-permissions:
-  contents: write
+    - cron: "17 * * * *"  # каждый час в XX:17
+  workflow_dispatch:
 
 jobs:
   build:
@@ -15,18 +13,23 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Build feed
         run: |
-          python -m src.build
-      - name: Commit & push updated JSON
+          python -m newsfeed build --window-start "$(date -u -d '3 hours ago' '+%Y-%m-%d %H:00 MSK' || date -u '+%Y-%m-%d %H:00 MSK')" --out docs/unified.json
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: unified.json
+          path: docs/unified.json
+      - name: Commit & push
         run: |
-          git config user.name "news-bot"
-          git config user.email "actions@github.com"
+          git config user.name "auto-bot"
+          git config user.email "bot@example.com"
           git add docs/unified.json
-          git commit -m "Update unified.json [skip ci]" || echo "No changes"
-          git push
+          git commit -m "Update unified.json" || echo "No changes"
+          git push || true
