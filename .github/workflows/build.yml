@@ -1,35 +1,44 @@
-name: Build feed
+name: Build unified feed
 
 on:
-  push:
   schedule:
-    - cron: "17 * * * *"  # каждый час в XX:17
+    - cron: '0 * * * *'  # каждый час
   workflow_dispatch:
+  push:
+    paths:
+      - 'sources.json'
+      - 'scripts/**'
+      - '.github/workflows/build.yml'
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-      - name: Install deps
+          python-version: '3.11'
+
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
       - name: Build feed
         run: |
-          python -m newsfeed build --window-start "$(date -u -d '3 hours ago' '+%Y-%m-%d %H:00 MSK' || date -u '+%Y-%m-%d %H:00 MSK')" --out docs/unified.json
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: unified.json
-          path: docs/unified.json
-      - name: Commit & push
+          python scripts/aggregate.py
+
+      - name: Commit output (docs/unified.json)
         run: |
-          git config user.name "auto-bot"
-          git config user.email "bot@example.com"
-          git add docs/unified.json
-          git commit -m "Update unified.json" || echo "No changes"
-          git push || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/unified.json .cache/state.json || true
+          git commit -m "Update unified feed [skip ci]" || echo "No changes"
+          git push
