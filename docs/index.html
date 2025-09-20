@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>news_feed viewer</title>
+<style>
+body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:24px}
+.card{border:1px solid #e5e7eb;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+h1{font-size:20px;margin:0 0 12px}
+.meta{color:#6b7280;font-size:12px;margin:4px 0}
+.tags{margin-top:8px}
+.tag{display:inline-block;border:1px solid #d1d5db;border-radius:9999px;padding:2px 8px;margin-right:6px;font-size:12px;color:#374151}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+input,select{padding:8px;border:1px solid #d1d5db;border-radius:8px}
+</style>
+</head>
+<body>
+<h1>Агрегатор новостей</h1>
+<div class="controls">
+  <input id="q" placeholder="Поиск по заголовку/источнику...">
+  <select id="src"><option value="">Все источники</option></select>
+</div>
+<div id="root">Загрузка…</div>
+<script>
+const root = document.getElementById('root');
+const q = document.getElementById('q');
+const src = document.getElementById('src');
+
+function render(items){
+  root.innerHTML = '';
+  if(!items.length){ root.textContent='Ничего не найдено'; return; }
+  for(const it of items){
+    const card = document.createElement('div');
+    card.className='card';
+    const a = document.createElement('a');
+    a.textContent = it.title || '(без заголовка)';
+    a.href = it.url || '#';
+    a.target="_blank";
+    const title = document.createElement('div');
+    title.appendChild(a);
+    const meta = document.createElement('div');
+    meta.className='meta';
+    meta.textContent = [(it.published||''),(it.source||'')].filter(Boolean).join(' • ');
+    const tags = document.createElement('div');
+    tags.className='tags';
+    for(const t of (it.labels||[])){
+      const span = document.createElement('span');
+      span.className='tag'; span.textContent=t;
+      tags.appendChild(span);
+    }
+    card.appendChild(title);
+    card.appendChild(meta);
+    if(it.summary){ const p = document.createElement('p'); p.textContent = it.summary; card.appendChild(p); }
+    card.appendChild(tags);
+    root.appendChild(card);
+  }
+}
+
+async function main(){
+  const res = await fetch('unified.json', {cache:'no-store'});
+  const data = await res.json();
+  window.__data = data;
+  // fill sources
+  const sources = [...new Set(data.map(d => d.source).filter(Boolean))].sort();
+  for(const s of sources){
+    const o = document.createElement('option');
+    o.value=s; o.textContent=s; src.appendChild(o);
+  }
+  const apply = () => {
+    const query = (q.value||'').toLowerCase();
+    const s = src.value;
+    let items = data;
+    if(query){
+      items = items.filter(d => (d.title||'').toLowerCase().includes(query) || (d.source||'').toLowerCase().includes(query));
+    }
+    if(s){ items = items.filter(d => d.source === s); }
+    render(items);
+  };
+  q.addEventListener('input', apply);
+  src.addEventListener('change', apply);
+  apply();
+}
+main();
+</script>
+</body>
+</html>
