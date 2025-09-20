@@ -17,6 +17,7 @@ python -m venv .venv
 pip install -r requirements.txt
 
 # Сбор фида:
+export PYTHONPATH=src
 python -m newsfeed build --window-start "2025-09-18 00:00 MSK" --out docs/unified.json
 
 # Быстрый просмотр (локально откройте docs/index.html)
