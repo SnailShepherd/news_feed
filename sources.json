@@ -1,0 +1,169 @@
+[
+  {
+    "name": "НОТИМ",
+    "base_url": "https://notim.ru",
+    "start_url": "https://notim.ru/",
+    "include_patterns": [
+      "/news",
+      "/events",
+      "/article"
+    ],
+    "link_min_text_len": 16
+  },
+  {
+   "name": "Минстрой России",
+    "base_url": "https://minstroyrf.gov.ru",
+    "start_url": "https://minstroyrf.gov.ru/press/?d=news",
+    "include_patterns": ["/press/"],
+    "exclude_regex": "/press/(?:contacts|docs|mediagallery|periodical|smi|events)",
+    "link_min_text_len": 8,
+    "max_links": 30
+  },
+  {
+    "name": "АРД: статьи",
+    "base_url": "https://ardexpert.ru",
+    "start_url": "https://ardexpert.ru/article",
+    "include_patterns": [
+      "/article/"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "Гостинформ",
+    "base_url": "https://www.gostinfo.ru",
+    "start_url": "https://www.gostinfo.ru/News/List",
+    "include_patterns": [
+      "/News/"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "ФАУ ФЦС",
+    "base_url": "https://faufcc.ru",
+    "start_url": "https://faufcc.ru/press-tsentr/novosti",
+    "include_patterns": [
+      "/press-tsentr/novosti",
+      "/press-center/news"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "АНЦБ",
+    "base_url": "http://ancb.ru",
+    "start_url": "http://ancb.ru/publication",
+    "include_patterns": [
+      "/publication/read",
+      "/publication/"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "ЕЭК ЕАЭС",
+    "base_url": "https://eec.eaeunion.org",
+    "start_url": "https://eec.eaeunion.org/news/",
+    "include_patterns": [
+      "/news/"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "Минфин России",
+    "base_url": "https://minfin.gov.ru",
+    "start_url": "https://minfin.gov.ru/ru/press-center/",
+    "include_patterns": [
+      "/press-center"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "Интерфакс-Недвижимость",
+    "base_url": "https://www.interfax-russia.ru",
+    "start_url": "https://www.interfax-russia.ru/realty/news",
+    "include_patterns": [
+      "/realty/news/"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "Металлоснабжение и сбыт",
+    "base_url": "https://www.metalinfo.ru",
+    "start_url": "https://www.metalinfo.ru/ru/news",
+    "include_patterns": ["/ru/news/"],
+    "include_regex": "/ru/news/\\d{5,}$",
+    "exclude_regex": "/ru/news/(?:r\\w+|s\\d+|services|subscribe|market|consumer|construction|nonferrous|ferrous)",
+    "link_min_text_len": 8,
+    "max_links": 20
+  },
+  {
+    "name": "Парламентская газета: Экономика",
+    "base_url": "https://www.pnp.ru",
+    "start_url": "https://www.pnp.ru/economics/",
+    "include_patterns": [
+      "/economics/"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "ЕРЗ.РФ",
+    "base_url": "https://erzrf.ru",
+    "start_url": "https://erzrf.ru/news/",
+    "include_patterns": [
+      "/news/"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "РИА СТК",
+    "base_url": "https://ria-stk.ru",
+    "start_url": "https://ria-stk.ru/news/vse-novosti.php",
+    "include_patterns": [
+      "/news/"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "Правительство РФ",
+    "base_url": "http://government.ru",
+    "start_url": "http://government.ru/news/",
+    "include_patterns": [
+      "/news/"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "Стройгаз.ру",
+    "base_url": "https://stroygaz.ru",
+    "start_url": "https://stroygaz.ru/news/",
+    "include_patterns": [
+      "/news/"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "РИА Недвижимость: лента",
+    "base_url": "https://realty.ria.ru",
+    "start_url": "https://realty.ria.ru/lenta/",
+    "include_patterns": [
+      "/20"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+    "name": "Российская газета: Экономика",
+    "base_url": "https://rg.ru",
+    "start_url": "https://rg.ru/tema/ekonomika",
+    "include_patterns": [
+      "/20"
+    ],
+    "link_min_text_len": 8
+  },
+  {
+   "name": "Главгосэкспертиза",
+    "base_url": "https://gge.ru",
+    "start_url": "https://gge.ru/press-center/news/",
+    "include_patterns": ["/press-center/news"],
+    "exclude_regex": "/press-center/(?:publications|mediagallery|smi|open-events|.*\\?)",
+    "link_min_text_len": 8,
+    "max_links": 20
+  }
+]
