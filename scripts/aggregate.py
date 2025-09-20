@@ -37,7 +37,7 @@ _adapter = HTTPAdapter(max_retries=_retry)
 SESSION.mount("http://", _adapter)
 SESSION.mount("https://", _adapter)
 HOST_DELAY_DEFAULT = 1.5
-HOST_DELAY_OVERRIDES = {"www.metalinfo.ru": 3.0}
+HOST_DELAY_OVERRIDES = {"www.metalinfo.ru": 6.0, "metalinfo.ru": 6.0}
 _last_req_at = defaultdict(lambda: 0.0)
 
 
@@ -383,7 +383,7 @@ def build_feed(all_items):
     for it in by_url.values():
         title = (it.get("title") or "").strip()
         url = it.get("url") or ""
-        if SKIP_KEYWORDS.search(title) or SKIP_KEYWORDS.search(url):
+        if ('SKIP_KEYWORDS' in globals() and SKIP_KEYWORDS and (SKIP_KEYWORDS.search(title) or SKIP_KEYWORDS.search(url))):
             continue
         if not it.get("date_published"):
             continue
@@ -408,6 +408,9 @@ def main():
     sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
     all_items = []
     for src in sources:
+        if not src.get('enabled', True):
+            logging.info("Skip disabled source: %s — %s", src.get('name'), src.get('start_url'))
+            continue
         try:
             items = harvest_source(src)
             logging.info("  -> %d items", len(items))

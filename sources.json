@@ -11,13 +11,16 @@
     "link_min_text_len": 16
   },
   {
-   "name": "Минстрой России",
+    "name": "Минстрой России",
     "base_url": "https://minstroyrf.gov.ru",
     "start_url": "https://minstroyrf.gov.ru/press/?d=news",
-    "include_patterns": ["/press/"],
+    "include_patterns": [
+      "/press/"
+    ],
     "exclude_regex": "/press/(?:contacts|docs|mediagallery|periodical|smi|events)",
     "link_min_text_len": 8,
-    "max_links": 30
+    "max_links": 30,
+    "enabled": false
   },
   {
     "name": "АРД: статьи",
@@ -55,7 +58,8 @@
       "/publication/read",
       "/publication/"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "enabled": false
   },
   {
     "name": "ЕЭК ЕАЭС",
@@ -88,11 +92,13 @@
     "name": "Металлоснабжение и сбыт",
     "base_url": "https://www.metalinfo.ru",
     "start_url": "https://www.metalinfo.ru/ru/news",
-    "include_patterns": ["/ru/news/"],
-    "include_regex": "/ru/news/\\d{5,}$",
+    "include_patterns": [
+      "/ru/news/"
+    ],
+    "include_regex": "/ru/news/s\\\\d+\\\\.html$",
     "exclude_regex": "/ru/news/(?:r\\w+|s\\d+|services|subscribe|market|consumer|construction|nonferrous|ferrous)",
     "link_min_text_len": 8,
-    "max_links": 20
+    "max_links": 30
   },
   {
     "name": "Парламентская газета: Экономика",
@@ -158,12 +164,15 @@
     "link_min_text_len": 8
   },
   {
-   "name": "Главгосэкспертиза",
+    "name": "Главгосэкспертиза",
     "base_url": "https://gge.ru",
     "start_url": "https://gge.ru/press-center/news/",
-    "include_patterns": ["/press-center/news"],
+    "include_patterns": [
+      "/press-center/news"
+    ],
     "exclude_regex": "/press-center/(?:publications|mediagallery|smi|open-events|.*\\?)",
     "link_min_text_len": 8,
-    "max_links": 20
+    "max_links": 20,
+    "enabled": false
   }
 ]
