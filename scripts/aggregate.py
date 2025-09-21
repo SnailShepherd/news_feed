@@ -53,7 +53,7 @@ DOCS_DIR.mkdir(exist_ok=True)
 if STATE_FILE.exists():
     STATE = json.loads(STATE_FILE.read_text(encoding="utf-8"))
 else:
-    STATE = {"headers": {}, "stats": {}}
+    STATE = {"headers": {}, "stats": {}, "index_hash": {}, "seen_urls": {}}
 
 def save_state():
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -324,6 +324,14 @@ def harvest_source(src: dict):
     logging.info("Harvest: %s — %s", src["name"], src["start_url"])
     index_html = fetch_page(src["start_url"])
 
+    # Если содержимое ленты не изменилось — пропускаем весь источник
+    idx_digest = hashlib.sha256(index_html.encode("utf-8")).hexdigest()
+    ih = STATE.setdefault("index_hash", {})
+    if ih.get(src["start_url"]) == idx_digest:
+        logging.info("Index unchanged: %s — %s", src["name"], src["start_url"])
+        return []
+    ih[src["start_url"]] = idx_digest
+
     # XML/HTML автодетект
     soup = BeautifulSoup(index_html, "xml" if index_html.lstrip().startswith("<?xml") else "html.parser")    
 
@@ -351,14 +359,26 @@ def harvest_source(src: dict):
     uniq = []
     seen = set()
     for u in links:
-        if u in seen: 
+        if u in seen:
             continue
         seen.add(u)
         uniq.append(u)
+
+    # лимит по источнику (берём из sources.json или общий DEFAULT)
     uniq = uniq[: int(src.get("max_links", MAX_LINKS_PER_SOURCE)) ]
 
+    # Обрабатываем только новые относительно последнего прогона
+    seen_map = STATE.setdefault("seen_urls", {})
+    already_seen_list = list(seen_map.get(src["name"], []))
+    already_seen = set(already_seen_list)
+
+    new_links = [u for u in uniq if u not in already_seen]
+    if not new_links:
+        logging.info("  no new links for %s", src["name"])
+        return []
+
     items = []
-    for url in uniq:
+    for url in new_links:
         try:
             html = fetch_page(url)
             item = build_item(url, src["name"], html)
@@ -366,6 +386,13 @@ def harvest_source(src: dict):
                 items.append(item)
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
+
+    # обновим «виденные» ссылки — держим скользящее окно последних 500
+    keep = 500
+    # сначала — новые (в порядке обхода), затем часть старых, которые ещё встречаются в uniq
+    tail = [u for u in already_seen_list if u in uniq]
+    seen_map[src["name"]] = (new_links + tail)[:keep]
+
     return items
 
 def build_feed(all_items):
