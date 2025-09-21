@@ -91,7 +91,7 @@
     "https://www.interfax-russia.ru/realty/news/psk-priobrela-u-samoleta-uchastok-pod-zhk-biznes-klassa-v-peterburge": {},
     "https://www.metalinfo.ru/ru/news": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 21 Sep 2025 00:31:47 GMT"
+      "Last-Modified": "Sun, 21 Sep 2025 00:46:10 GMT"
     },
     "https://www.pnp.ru/economics/senator-epifanova-otsrochennyy-vykhod-na-pensiyu-uvelichivaet-ee-razmer.html?utm_source=pnpru&utm_medium=story&utm_campaign=inner_page": {
       "Last-Modified": "Sat, 20 Sep 2025 13:32:16 GMT"
@@ -700,8 +700,8 @@
     }
   },
   "stats": {
-    "last_run": "2025-09-21T00:39:35.305690Z",
-    "items": 151,
+    "last_run": "2025-09-21T00:47:56.133346Z",
+    "items": 0,
     "errors": [
       {
         "source": "РИА СТК",
@@ -722,24 +722,29 @@
         "source": "РИА СТК",
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f66805a2c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8925ed3d10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     ]
   },
   "index_hash": {
     "https://notim.ru/": "1b5fd813da81c391ec2d0ba735c14e7cda96b24dab1452a457fbd19b4622e900",
-    "https://ardexpert.ru/article": "8aeaa7cf391fe867df9cac45bbb82f875592ea78a26cb2f4fa3250b2eb2edc9b",
+    "https://ardexpert.ru/article": "04276567e352150f02f75ce7fa16095e903bcc32a41c687c7a72fddae96e7bc4",
     "https://www.gostinfo.ru/News/List": "135d63c4b4d9589b9e9c96228ff5e104129251548feee326c1b93ff794a17c25",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d",
-    "https://eec.eaeunion.org/news/": "cb7810137b29b16e702bb2434ee11aec335b60d7fab38a70743000d9559cef90",
+    "https://eec.eaeunion.org/news/": "ea8038e354ff4458b3288230778f6789aaebcbee1e277d79754c2afac7621b04",
     "https://minfin.gov.ru/ru/press-center/": "152f5b9e3196ddfebba13a385a3f20e5362dc643fa47b085323da3325b3cc7da",
-    "https://www.interfax-russia.ru/realty/news": "54e82be06d489e5a8fd57c420970d162b92e20beeb7e5dc1d75c85b0ed4085a9",
-    "https://www.metalinfo.ru/ru/news": "fb7a50c9189f81112775ee9a1b3aa86716043e35b9402267fdfc44c6e67592f7",
-    "https://www.pnp.ru/economics/": "b31cfa1e7d2dfd1f8746c4c9662ccf56153875a084183b4bd05db0871e01a280",
+    "https://www.interfax-russia.ru/realty/news": "7e8efd1bc0400228cfeae90aaebcab248fe31c1e975d5e87e0a16b4bf3325047",
+    "https://www.metalinfo.ru/ru/news": "1f87e5549ab2bfe1c3c5d8b3a0ae3c52dc2adaed644fb0a2424b2653889d4063",
+    "https://www.pnp.ru/economics/": "fb806146d3539da0fe514379a8ecbbe1b7fc4c199bbbb6e3cf2610478c0bed80",
     "https://erzrf.ru/news/": "776660a7f80f8e7b80ee824b74f4d2bd9426333818672df965727daef88d6a35",
     "https://ria-stk.ru/news/vse-novosti.php": "3612f8aa8c3e09851fb15e0c63cce0629dfda279fe32bc2f007c8b7233401ba9",
-    "http://government.ru/news/": "ad57036594f5d8505c17831035e054ef1265720bf75a722bfa0bc4b3906f3dd9",
-    "https://stroygaz.ru/news/": "20d5ef541a9e17677c4de1907661e5bbc0c019514194aa27249a0d72e8b56020",
-    "https://realty.ria.ru/lenta/": "65f63e6155358d4c1980cd2333d9283b2b5dd5f31cc12cde55c92f8345b3d9c8",
+    "http://government.ru/news/": "bdeee3c2dfd3970359fddb1f1b352e38dbc05f03e94a89dae3fcac13f1e5a45d",
+    "https://stroygaz.ru/news/": "57d602c15c9dd6820df0989c3d0d755189556b7d701526fbe56ecf8094735c99",
+    "https://realty.ria.ru/lenta/": "33dfb6c7f92be3a5b163272f09f8e290b972b12a72802292fa70ae878fadea92",
     "https://rg.ru/tema/ekonomika": "99fcf4eca6b38744f5529a617f5ffaed861f8956456ef6991fca4df70ba1ae84"
   },
   "seen_urls": {
