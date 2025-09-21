@@ -2,7 +2,7 @@ name: Build unified feed
 
 on:
   schedule:
-    - cron: '0 * * * *'  # каждый час
+    - cron: '0 */3 * * *'  # каждые 3 часа
   workflow_dispatch:
   push:
     paths:
@@ -20,6 +20,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Restore .cache/pages (HTML cache)
+        uses: actions/cache@v4
+        with:  
+          path: .cache/pages
+          key: pages-${{ hashFiles('sources.json', 'scripts/aggregate.py') }}-${{ github.run_id }}
+          restore-keys: |
+            pages-${{ hashFiles('sources.json', 'scripts/aggregate.py') }}-
+            pages-
 
       - name: Set up Python
         uses: actions/setup-python@v5
