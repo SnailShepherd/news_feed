@@ -1,8 +1,7 @@
 name: Build unified feed
 
 on:
-  schedule:
-    - cron: '0 */3 * * *'  # каждые 3 часа
+  # ручной запуск из UI с выбором режима
   workflow_dispatch:
     inputs:
       mode:
@@ -13,25 +12,21 @@ on:
         options:
           - normal
           - rebuild
-  push:
-    paths:
-      - 'sources.json'
-      - 'scripts/**'
-      - '.github/workflows/build.yml'
-
-permissions:
-  contents: write
+  # автозапуск по расписанию (каждые 3 часа)
+  schedule:
+    - cron: "0 */3 * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+
+      # кэш страниц (HTML), чтобы экономить запросы
       - name: Restore .cache/pages (HTML cache)
         uses: actions/cache@v4
-        with:  
+        with:
           path: .cache/pages
           key: pages-${{ hashFiles('sources.json', 'scripts/aggregate.py') }}-${{ github.run_id }}
           restore-keys: |
@@ -41,25 +36,25 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.x"
 
-      - name: Install dependencies
+      - name: Install deps
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Build feed
-          run: |
-            MODE="${{ github.event.inputs.mode }}"
-            if [ "${MODE}" = "rebuild" ]; then
-              echo "Running in REBUILD mode"
-              python scripts/aggregate.py --rebuild
-            else
-              echo "Running in NORMAL mode"
-              python scripts/aggregate.py
-            fi
+        run: |
+          MODE="${{ github.event.inputs.mode }}"
+          if [ "${MODE}" = "rebuild" ]; then
+            echo "Running in REBUILD mode"
+            python scripts/aggregate.py --rebuild
+          else
+            echo "Running in NORMAL mode"
+            python scripts/aggregate.py
+          fi
 
-      - name: Commit output (docs/unified.json)
+      - name: Commit output (docs/unified.json & state)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
