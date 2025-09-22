@@ -13,7 +13,7 @@
   {
     "name": "Минстрой России",
     "base_url": "https://minstroyrf.gov.ru",
-    "start_url": "https://minstroyrf.gov.ru/press/?d=news?per-page=24",
+    "start_url": "https://minstroyrf.gov.ru/press/?d=news",
     "include_patterns": [
       "/press/"
     ],
@@ -49,9 +49,10 @@
       "/press-center/news"
     ],
     "link_min_text_len": 0,
+    "restrict_domain": true,
+    "skip_index_hash": true,
     "accept_empty_anchor": true,
     "include_regex": "/press-(?:tsentr/novosti|center/news)/[^/?#]+/?$",
-    "restrict_domain": true,
     "max_links": 50
   },
   {
@@ -86,7 +87,7 @@
   {
     "name": "Интерфакс-Недвижимость",
     "base_url": "https://www.interfax-russia.ru",
-    "start_url": "https://www.interfax-russia.ru/realty/news?per-page=32",
+    "start_url": "https://www.interfax-russia.ru/realty/news",
     "include_patterns": [
       "/realty/news/"
     ],
@@ -99,11 +100,10 @@
     "include_patterns": [
       "/ru/news/"
     ],
-    "include_regex": "/ru/news/\\d+(?:/|\\.html)?$",
+    "include_regex": "/ru/news/s\\\\d+\\\\.html$",
     "exclude_regex": "/ru/news/(?:r\\w+|services|subscribe|market|consumer|construction|nonferrous|ferrous)",
     "link_min_text_len": 8,
-    "max_links": 20,
-    "restrict_domain": true
+    "max_links": 20
   },
   {
     "name": "Парламентская газета: Экономика",
@@ -112,11 +112,11 @@
     "include_patterns": [
       "/economics/"
     ],
-    "link_min_text_len": 0,
-    "accept_empty_anchor": true,
-    "include_regex": "^https?://(?:www\\.)?pnp\\.ru/economics/(?:\\d{4}/\\d{2}/\\d{2}/)?[^/]+\\.html$",
-    "exclude_regex": "/economics/\\d+/?$",
-    "restrict_domain": true
+    "link_min_text_len": 8,
+    "restrict_domain": true,
+    "include_regex": "^https?://(?:www\\.)?pnp\\.ru/economics/(?:\\\\d{4}/\\\\d{2}/\\\\d{2}/)?[^/]+\\\\.html$",
+    "exclude_regex": "/economics/\\\\d+/?$|/economics/(?:$|\\\\d{4}/\\\\d{2}/\\\\d{2}/$)",
+    "accept_empty_anchor": true
   },
   {
     "name": "ЕРЗ.РФ",
@@ -126,7 +126,6 @@
       "/news/"
     ],
     "link_min_text_len": 8,
-    "include_regex": "^https?://(?:www\\.)?erzrf\\.ru/news/[^?#/]+/?$",
     "restrict_domain": true
   },
   {
@@ -136,7 +135,11 @@
     "include_patterns": [
       "/news/"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "restrict_domain": true,
+    "include_regex": "^https?://(?:www\\.)?ria-stk\\.ru/news/index\\.php\\?ELEMENT_ID=\\d+.*$",
+    "exclude_regex": "/news/(?:vse-novosti\\.php|index\\.php\\?PAGEN_|.*\\bPAGEN_\\d+=)",
+    "max_links": 50
   },
   {
     "name": "Правительство РФ",
@@ -154,7 +157,11 @@
     "include_patterns": [
       "/news/"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "restrict_domain": true,
+    "include_regex": "^https?://(?:www\\.)?stroygaz\\.ru/news/[^/]+/[^/]+/?$",
+    "exclude_regex": "^https?://(?:www\\.)?stroygaz\\.ru/news/(?:$|[^/]+/?$)|\\\\?PAGEN_\\\\d+=|\\\\?page=\\\\d+",
+    "max_links": 60
   },
   {
     "name": "РИА Недвижимость: лента",
