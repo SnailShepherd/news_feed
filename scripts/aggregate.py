@@ -453,8 +453,53 @@ def harvest_json_source(src: dict, force: bool = False):
 
 
 def harvest_source(src: dict, force: bool = False):
-    logging.info("Harvest: %s — %s", src["name"], src["start_url"])
-    index_html = fetch_page(src["start_url"])
+    stats = STATE.setdefault("stats", {})
+    cooldowns = stats.setdefault("cooldowns", {})
+    errors = stats.setdefault("errors", [])
+
+    start_url = src["start_url"]
+    cooldown_until = cooldowns.get(start_url)
+    now = time.time()
+    if cooldown_until and cooldown_until > now:
+        until_dt = datetime.fromtimestamp(cooldown_until, timezone.utc)
+        logging.warning(
+            "Skip due to active cooldown until %s: %s — %s",
+            until_dt.isoformat(),
+            src.get("name"),
+            start_url,
+        )
+        errors.append(
+            {
+                "source": src.get("name"),
+                "url": start_url,
+                "error": f"cooldown active until {until_dt.isoformat()}",
+            }
+        )
+        return []
+
+    logging.info("Harvest: %s — %s", src["name"], start_url)
+    try:
+        index_html = fetch_page(start_url)
+    except requests.HTTPError as exc:
+        resp = exc.response
+        status = resp.status_code if resp is not None else None
+        if status in {500, 502, 503, 504}:
+            cooldowns[start_url] = time.time() + 6 * 3600
+            logging.warning(
+                "Server error %s, cooldown 6h: %s — %s",
+                status,
+                src.get("name"),
+                start_url,
+            )
+            errors.append(
+                {
+                    "source": src.get("name"),
+                    "url": start_url,
+                    "error": f"HTTP {status} -> cooldown 6h",
+                }
+            )
+            return []
+        raise
 
     # Если содержимое ленты не изменилось — пропускаем весь источник
     idx_digest = hashlib.sha256(index_html.encode("utf-8")).hexdigest()
