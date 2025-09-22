@@ -117,6 +117,12 @@ def cache_key_for(url: str) -> str:
         slug = slug[:150]
     return f"{p.netloc}-{slug}.html"
 
+
+def cache_key_with_suffix(base_key: str, suffix: str) -> str:
+    if base_key.endswith(".html"):
+        return f"{base_key[:-5]}{suffix}.html"
+    return f"{base_key}{suffix}"
+
 def fetch_page(url: str) -> str:
     page_path = PAGES_DIR / cache_key_for(url)
     use_conditional = not (ARGS and getattr(ARGS, 'rebuild', False))
@@ -454,7 +460,37 @@ def harvest_json_source(src: dict, force: bool = False):
 
 def harvest_source(src: dict, force: bool = False):
     logging.info("Harvest: %s — %s", src["name"], src["start_url"])
-    index_html = fetch_page(src["start_url"])
+    start_url = src["start_url"]
+    try:
+        index_html = fetch_page(start_url)
+    except requests.HTTPError as err:
+        index_html = None
+        if (
+            err.response is not None
+            and err.response.status_code == 503
+            and start_url.startswith("https://")
+        ):
+            http_url = start_url.replace("https://", "http://", 1)
+            try:
+                index_html = fetch_page(http_url)
+                http_cache_key = cache_key_with_suffix(
+                    cache_key_for(start_url), "-http"
+                )
+                (PAGES_DIR / http_cache_key).write_text(index_html, encoding="utf-8")
+            except Exception:
+                pass
+        if index_html is None:
+            cache_candidates = [
+                PAGES_DIR / cache_key_for(start_url),
+                PAGES_DIR / cache_key_with_suffix(cache_key_for(start_url), "-http"),
+            ]
+            for cached in cache_candidates:
+                if cached.exists():
+                    index_html = cached.read_text(encoding="utf-8")
+                    break
+        if index_html is None:
+            logging.error("Failed to fetch %s: %s", start_url, err)
+            raise
 
     # Если содержимое ленты не изменилось — пропускаем весь источник
     idx_digest = hashlib.sha256(index_html.encode("utf-8")).hexdigest()
