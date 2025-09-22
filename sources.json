@@ -153,8 +153,11 @@
     "name": "Стройгаз.ру",
     "base_url": "https://stroygaz.ru",
     "start_url": "https://stroygaz.ru/news/",
-    "include_patterns": [
-      "/news/"
+    "include_regex": "^https?://(?:www\\.)?stroygaz\\.ru/news/[a-z0-9-]+/[a-z0-9-]+/(?:[a-z0-9-]+/)*$",
+    "exclude_regex": [
+      "\\?",
+      "/news/?$",
+      "/news/[a-z0-9-]+/?$"
     ],
     "link_min_text_len": 8
   },
