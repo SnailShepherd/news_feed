@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: '0 */3 * * *'  # каждые 3 часа
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode"
+        required: false
+        default: "normal"
+        type: choice
+        options:
+          - normal
+          - rebuild
   push:
     paths:
       - 'sources.json'
@@ -40,8 +49,15 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build feed
-        run: |
-          python scripts/aggregate.py
+          run: |
+            MODE="${{ github.event.inputs.mode }}"
+            if [ "${MODE}" = "rebuild" ]; then
+              echo "Running in REBUILD mode"
+              python scripts/aggregate.py --rebuild
+            else
+              echo "Running in NORMAL mode"
+              python scripts/aggregate.py
+            fi
 
       - name: Commit output (docs/unified.json)
         run: |
