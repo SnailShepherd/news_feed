@@ -25,6 +25,7 @@ OUT_JSON = DOCS_DIR / "unified.json"
 REQUEST_TIMEOUT = 30
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 MAX_LINKS_PER_SOURCE = 100
+FEED_MAX_ITEMS = int(os.environ.get("FEED_MAX_ITEMS", "2000"))
 
 # Перехваты ошибок/429 и паузы между запросами к одному хосту
 SESSION = requests.Session()
@@ -39,7 +40,6 @@ SESSION.mount("https://", _adapter)
 HOST_DELAY_DEFAULT = 1.5
 HOST_DELAY_OVERRIDES = {"www.metalinfo.ru": 6.0, "metalinfo.ru": 6.0}
 _last_req_at = defaultdict(lambda: 0.0)
-
 
 MSK = pytz.timezone("Europe/Moscow")
 
@@ -66,7 +66,7 @@ def http_get(url: str):
         "Accept-Language": "ru,en;q=0.9",
         "Accept-Encoding": "gzip, deflate, br",
         "Connection": "keep-alive",
-    }    
+    }
     hinfo = STATE["headers"].get(url, {})
     if "ETag" in hinfo:
         hdrs["If-None-Match"] = hinfo["ETag"]
@@ -92,7 +92,7 @@ def http_get(url: str):
         logging.warning("429 Too Many Requests: %s -> sleep %ss", url, wait)
         time.sleep(wait)
         resp = SESSION.get(url, headers=hdrs, timeout=REQUEST_TIMEOUT, allow_redirects=True)
-        _last_req_at[host] = time.time()    
+        _last_req_at[host] = time.time()
     if resp.status_code == 304:
         logging.info("304 Not Modified: %s", url)
         return None, hinfo  # indicate to reuse cached file
@@ -235,7 +235,7 @@ def extract_date_candidates(soup: BeautifulSoup):
     seen = set()
     uniq = []
     for s in out:
-        if s in seen: 
+        if s in seen:
             continue
         seen.add(s)
         uniq.append(s)
@@ -333,7 +333,7 @@ def harvest_source(src: dict):
     ih[src["start_url"]] = idx_digest
 
     # XML/HTML автодетект
-    soup = BeautifulSoup(index_html, "xml" if index_html.lstrip().startswith("<?xml") else "html.parser")    
+    soup = BeautifulSoup(index_html, "xml" if index_html.lstrip().startswith("<?xml") else "html.parser")
 
     # Collect candidate links
     links = []
@@ -341,7 +341,7 @@ def harvest_source(src: dict):
     exc_re = re.compile(src.get("exclude_regex")) if src.get("exclude_regex") else None
     for a in soup.find_all("a"):
         href = a.get("href")
-        if not href: 
+        if not href:
             continue
         href = urljoin(src["base_url"], href)
         if not any(p in href for p in src["include_patterns"]):
@@ -349,7 +349,7 @@ def harvest_source(src: dict):
         if inc_re and not inc_re.search(href):
             continue
         if exc_re and exc_re.search(href):
-            continue        
+            continue
         text_ok = (a.get_text(strip=True) or "")
         if len(text_ok) < src.get("link_min_text_len", 0):
             continue
@@ -414,13 +414,13 @@ def build_feed(all_items):
             continue
         if not it.get("date_published"):
             continue
-        items.append(it)    
+        items.append(it)
 
-    # Sort by date desc, nulls-last
+    # Sort by date desc (новые сверху), nulls-last (но мы null уже отфильтровали)
     def sort_key(x):
         dp = x.get("date_published")
         return (0, dp) if dp else (1, "")
-    items.sort(key=sort_key)
+    items.sort(key=sort_key, reverse=True)
 
     feed = {
         "version": "https://jsonfeed.org/version/1.1",
@@ -430,6 +430,57 @@ def build_feed(all_items):
         "items": items,
     }
     return feed
+
+# ---- Merge helpers (Variant B) ----
+def load_existing_feed_items():
+    """Загрузить текущие items из docs/unified.json, если файл существует."""
+    if not OUT_JSON.exists():
+        return []
+    try:
+        data = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        if isinstance(data, dict) and "items" in data and isinstance(data["items"], list):
+            return data["items"]
+        # на всякий случай поддержим старый формат (если кто-то сохранил чистый список)
+        if isinstance(data, list):
+            return data
+    except Exception as e:
+        logging.warning("Cannot load existing feed (%s). Will start from fresh items.", e)
+    return []
+
+def merge_items(existing, new):
+    """Склеить items, убрать дубликаты по URL, предпочитая новые записи и записи с заполненной датой."""
+    by_url = {}
+    for it in existing:
+        u = it.get("url")
+        if not u: 
+            continue
+        by_url[u] = it
+    for it in new:
+        u = it.get("url")
+        if not u:
+            continue
+        old = by_url.get(u)
+        if not old:
+            by_url[u] = it
+            continue
+        # Если в новой записи появилась дата — берём новую
+        if it.get("date_published") and not old.get("date_published"):
+            by_url[u] = it
+            continue
+        # В остальных случаях просто обновим старую новой версией (на случай правок заголовка и т. п.)
+        by_url[u] = it
+
+    merged = list(by_url.values())
+
+    # Сортировка по дате у нас окончательно произойдёт в build_feed,
+    # но слегка подсортируем тут, чтобы ограничение по размеру не «съело» самые новые.
+    merged.sort(key=lambda x: x.get("date_published") or "", reverse=True)
+
+    # Обрезка по размеру
+    if FEED_MAX_ITEMS and len(merged) > FEED_MAX_ITEMS:
+        merged = merged[:FEED_MAX_ITEMS]
+
+    return merged
 
 def main():
     sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
@@ -445,7 +496,26 @@ def main():
         except Exception as e:
             logging.error("  !! Failed: %s (%s)", src.get("name"), e)
             STATE.setdefault("stats", {}).setdefault("errors", []).append({"source": src.get("name"), "url": src.get("start_url"), "error": str(e)})
-    feed = build_feed(all_items)
+
+    if not all_items:
+        # Нет новых карточек — ленту не переписываем, чтобы не обнулять историю
+        existing_count = 0
+        if OUT_JSON.exists():
+            try:
+                existing_count = len(json.loads(OUT_JSON.read_text(encoding="utf-8")).get("items", []))
+            except Exception:
+                existing_count = 0
+        STATE.setdefault("stats", {})["last_run"] = datetime.utcnow().isoformat() + "Z"
+        STATE["stats"]["items"] = existing_count
+        save_state()
+        logging.info("No new items -> keep existing %s as-is (%d items)", OUT_JSON, existing_count)
+        return
+
+    # Есть новые карточки — сливаем с существующей лентой
+    existing_items = load_existing_feed_items()
+    merged_raw = merge_items(existing_items, all_items)
+    feed = build_feed(merged_raw)
+
     OUT_JSON.write_text(json.dumps(feed, ensure_ascii=False, indent=2), encoding="utf-8")
     STATE.setdefault("stats", {})["last_run"] = datetime.utcnow().isoformat() + "Z"
     STATE["stats"]["items"] = len(feed["items"])
