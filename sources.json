@@ -44,6 +44,8 @@
     "name": "ФАУ ФЦС",
     "base_url": "https://faufcc.ru",
     "start_url": "https://faufcc.ru/press-tsentr/novosti",
+    "mode": "api",
+    "api_endpoint": "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50",
     "include_patterns": [
       "/press-tsentr/novosti",
       "/press-center/news"
