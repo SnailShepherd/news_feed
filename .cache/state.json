@@ -91,7 +91,7 @@
     "https://www.interfax-russia.ru/realty/news/psk-priobrela-u-samoleta-uchastok-pod-zhk-biznes-klassa-v-peterburge": {},
     "https://www.metalinfo.ru/ru/news": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 22 Sep 2025 20:12:05 GMT"
+      "Last-Modified": "Mon, 22 Sep 2025 20:24:11 GMT"
     },
     "https://www.pnp.ru/economics/senator-epifanova-otsrochennyy-vykhod-na-pensiyu-uvelichivaet-ee-razmer.html?utm_source=pnpru&utm_medium=story&utm_campaign=inner_page": {
       "Last-Modified": "Mon, 22 Sep 2025 16:16:19 GMT"
@@ -148,7 +148,7 @@
       "Last-Modified": "Sat, 20 Sep 2025 13:32:49 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"24f6f-gN57EEV8HF7HK5tAVo1MNEIyu04\""
+      "ETag": "W/\"25817-50Jh0Zd4RR1MGuN0rpnioTRwQTo\""
     },
     "https://erzrf.ru/news/klyuchevyye-soobshcheniya-telegram-kanala-yerzrf-novosti-s-15-po-19-sentyabrya": {
       "ETag": "W/\"248f7-wZ7n1ZMXcIjvdtvEEhVwHkYBlhk\""
@@ -1561,7 +1561,7 @@
     }
   },
   "stats": {
-    "last_run": "2025-09-22T20:19:57.004465+00:00",
+    "last_run": "2025-09-22T20:23:47.599462+00:00",
     "items": 285,
     "errors": [
       {
@@ -1608,26 +1608,31 @@
         "source": "РИА СТК",
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fab03990e10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+      },
+      {
+        "source": "Гостинформ",
+        "url": "https://www.gostinfo.ru/News/List",
+        "error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f15dbeee850>, 'Connection to www.gostinfo.ru timed out. (connect timeout=30)'))"
       }
     ]
   },
   "index_hash": {
     "https://notim.ru/": "1b5fd813da81c391ec2d0ba735c14e7cda96b24dab1452a457fbd19b4622e900",
-    "https://ardexpert.ru/article": "84252dac5c76070c7368ed36d9a86e216c25ca9703b52a04752dd477bbad21e0",
+    "https://ardexpert.ru/article": "c7df4a383f4b2c0b5b632d313ae6683aac9fccfbea800826e7cfe9fd35a2efab",
     "https://www.gostinfo.ru/News/List": "135d63c4b4d9589b9e9c96228ff5e104129251548feee326c1b93ff794a17c25",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d",
-    "https://eec.eaeunion.org/news/": "dffa49bb25c2cf8847052899dc2c6f0e6631f6869cf099fd072a5e48a6041f4d",
+    "https://eec.eaeunion.org/news/": "a1753736e17db63a8c9e763edfb36d355a1eb9c870d4a3277dbc6fa39c074f9b",
     "https://minfin.gov.ru/ru/press-center/": "cd5c37a3cca28c6cd42b292776945b41ce56fd04525633983cb3c447303700eb",
     "https://www.interfax-russia.ru/realty/news": "c44bcdda002ad8c989b3bce55243d991466ebe7fbfcc2407e10d8da1e46f65d5",
-    "https://www.metalinfo.ru/ru/news": "89b060bd3475ef334f4c593cea9cd6c877d0b4b4b2e51ce8d970de7a99be1d91",
-    "https://www.pnp.ru/economics/": "096e1a9f010caeb86b493a6b9856f52851644043fd5f6dac1aa265380ee68c22",
-    "https://erzrf.ru/news/": "6b6d5771daf97cd75f83b7c7a4b5ff4f29ce51b7ca777264d6eda7a98507d0ba",
-    "https://ria-stk.ru/news/vse-novosti.php": "ebb0d5493615aa309fd38b7763f032d199078d3f6c17738f5a2fe05af739c65a",
-    "http://government.ru/news/": "49e3b26fc82b41f23bb47f1d26c9ec7729f5dead2a51bf3f75df7aa4caf3ba4f",
-    "https://stroygaz.ru/news/": "f2ee742ec92d0a9cd92d80254d93b14d1f741eb070217b35bc1b91562d803f45",
-    "https://realty.ria.ru/lenta/": "3c08f2875f2f13c77e318dd54654f7aa074745e813e59e4437d6e0f726517d4e",
+    "https://www.metalinfo.ru/ru/news": "5357b1c7dbbaa2c0879e040f967cb73cc722eec29505ca2fc7c9e56f2ddaf20b",
+    "https://www.pnp.ru/economics/": "46bf1fc87103ae4e028e9078d339a4f48ab0f45189b265b1a9b921ddff7902e9",
+    "https://erzrf.ru/news/": "de82c98ca18fe848252b5018c6f22f2c5f7f7ea54eff7cdc6198b08627820e44",
+    "https://ria-stk.ru/news/vse-novosti.php": "6defa3f6d4961c4c14184244230652f8b6dc061b7a509722022633148a7d2d8b",
+    "http://government.ru/news/": "ff7a28e3156e2e9a56137201653a37a65c8f21c66cfb438278faa87f7b781727",
+    "https://stroygaz.ru/news/": "44168098849d54885aaeb470f1d926d902d82dc57e01f0894a02a01edf7872db",
+    "https://realty.ria.ru/lenta/": "e19114a3ba9143360bfde785b01042345f7dbdd5f674183cc68378c5b9ab7e23",
     "https://rg.ru/tema/ekonomika": "954ecc74883d8c5ecd914a059cd27c1e6e95225351bcc5c91c4b09585d00e147",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "b6425e479fc94b6e3e5ec7ba2f282a7295153b39946d17231b6f045e674dcf46"
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "c10c2a043c63476801202a21f550828d72cbd833690931398b3b3fbd110500e3"
   },
   "seen_urls": {
     "НОТИМ": [
