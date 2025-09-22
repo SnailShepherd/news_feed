@@ -353,10 +353,15 @@ def harvest_source(src: dict, force: bool = False):
     inc_re = re.compile(src.get("include_regex")) if src.get("include_regex") else None
     exc_re = re.compile(src.get("exclude_regex")) if src.get("exclude_regex") else None
     for a in soup.find_all("a"):
+    base_host = urlparse(src["base_url"]).netloc.replace("www.", "")
         href = a.get("href")
         if not href:
             continue
         href = urljoin(src["base_url"], href)
+        if src.get("restrict_domain"):
+            h = urlparse(href).netloc.replace("www.", "")
+            if h != base_host:
+                continue
         if not any(p in href for p in src["include_patterns"]):
             continue
         if inc_re and not inc_re.search(href):
@@ -365,9 +370,14 @@ def harvest_source(src: dict, force: bool = False):
             continue
         text_ok = (a.get_text(strip=True) or "")
         # Allow empty anchors when source explicitly permits it
-        if len(text_ok) < src.get("link_min_text_len", 0) and not src.get("accept_empty_anchor"):
-            # Try alternative attributes if allowed (title/aria-label) — используются на «оверлей»-ссылках
-            if not src.get("accept_empty_anchor"):
+        min_len = int(src.get("link_min_text_len", 0))
+        if len(text_ok) < min_len:
+            if src.get("accept_empty_anchor"):
+                # fallback to attributes
+                txt2 = a.get("title") or a.get("aria-label") or ""
+                if len(txt2) < min_len:
+                    pass  # still accept link
+            else:
                 continue
         links.append(href)
 
