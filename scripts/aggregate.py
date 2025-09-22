@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os, re, json, logging, pathlib, sys, hashlib, argparse
+import os, re, json, logging, pathlib, sys, hashlib, argparse, random
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse
 
@@ -39,7 +39,7 @@ _adapter = HTTPAdapter(max_retries=_retry)
 SESSION.mount("http://", _adapter)
 SESSION.mount("https://", _adapter)
 HOST_DELAY_DEFAULT = 1.5
-HOST_DELAY_OVERRIDES = {"www.metalinfo.ru": 6.0, "metalinfo.ru": 6.0}
+HOST_DELAY_OVERRIDES = {"www.metalinfo.ru": 6.0, "metalinfo.ru": 6.0, "www.pnp.ru": 6.0, "pnp.ru": 6.0}
 _last_req_at = defaultdict(lambda: 0.0)
 
 MSK = pytz.timezone("Europe/Moscow")
@@ -82,6 +82,8 @@ def http_get(url: str, allow_conditional: bool = True):
     sleep_for = _last_req_at[host] + delay - now
     if sleep_for > 0:
         time.sleep(sleep_for)
+    if host in HOST_DELAY_OVERRIDES:
+        time.sleep(random.uniform(0, 2))
     resp = SESSION.get(url, headers=hdrs, timeout=REQUEST_TIMEOUT, allow_redirects=True)
     _last_req_at[host] = time.time()
     # Явный перехват 429 с уважением Retry-After
@@ -116,6 +118,11 @@ def cache_key_for(url: str) -> str:
     if len(slug) > 150:
         slug = slug[:150]
     return f"{p.netloc}-{slug}.html"
+
+def cache_key_with_suffix(base_key: str, suffix: str) -> str:
+    if base_key.endswith(".html"):
+        return f"{base_key[:-5]}{suffix}.html"
+    return f"{base_key}{suffix}"
 
 def fetch_page(url: str) -> str:
     page_path = PAGES_DIR / cache_key_for(url)
