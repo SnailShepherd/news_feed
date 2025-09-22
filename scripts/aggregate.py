@@ -352,8 +352,8 @@ def harvest_source(src: dict, force: bool = False):
     links = []
     inc_re = re.compile(src.get("include_regex")) if src.get("include_regex") else None
     exc_re = re.compile(src.get("exclude_regex")) if src.get("exclude_regex") else None
-    for a in soup.find_all("a"):
     base_host = urlparse(src["base_url"]).netloc.replace("www.", "")
+    for a in soup.find_all("a"):
         href = a.get("href")
         if not href:
             continue
