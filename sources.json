@@ -95,7 +95,7 @@
     "include_patterns": [
       "/ru/news/"
     ],
-    "include_regex": "/ru/news/s\\\\d+\\\\.html$",
+    "include_regex": "/ru/news/\\d+\\.html$",
     "exclude_regex": "/ru/news/(?:r\\w+|services|subscribe|market|consumer|construction|nonferrous|ferrous)",
     "link_min_text_len": 8,
     "max_links": 20
@@ -107,7 +107,8 @@
     "include_patterns": [
       "/economics/"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 0,
+    "accept_empty_anchor": true
   },
   {
     "name": "ЕРЗ.РФ",
