@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os, re, json, logging, pathlib, sys, hashlib, argparse
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse
 
 import requests
@@ -60,7 +60,7 @@ def save_state():
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
 
 # ---- HTTP ----
-def http_get(url: str):
+def http_get(url: str, allow_conditional: bool = True):
     hdrs = {
         "User-Agent": USER_AGENT,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -69,10 +69,11 @@ def http_get(url: str):
         "Connection": "keep-alive",
     }
     hinfo = STATE["headers"].get(url, {})
-    if "ETag" in hinfo:
-        hdrs["If-None-Match"] = hinfo["ETag"]
-    if "Last-Modified" in hinfo:
-        hdrs["If-Modified-Since"] = hinfo["Last-Modified"]
+    if allow_conditional:
+        if "ETag" in hinfo:
+            hdrs["If-None-Match"] = hinfo["ETag"]
+        if "Last-Modified" in hinfo:
+            hdrs["If-Modified-Since"] = hinfo["Last-Modified"]
 
     # Пауза по хосту
     host = urlparse(url).netloc
@@ -118,7 +119,8 @@ def cache_key_for(url: str) -> str:
 
 def fetch_page(url: str) -> str:
     page_path = PAGES_DIR / cache_key_for(url)
-    content, _ = http_get(url)
+    use_conditional = not (ARGS and getattr(ARGS, 'rebuild', False))
+    content, _ = http_get(url, allow_conditional=use_conditional)
     if content is None and page_path.exists():
         # Not modified -> reuse cached
         return page_path.read_text(encoding="utf-8")
@@ -187,10 +189,15 @@ META_DATE_KEYS = [
     ("meta", "property", "article:modified_time"),
     ("meta", "property", "og:published_time"),
     ("meta", "property", "og:updated_time"),
+    ("meta", "property", "article:published"),
     ("meta", "name", "pubdate"),
     ("meta", "name", "date"),
+    ("meta", "name", "publish-date"),
+    ("meta", "name", "publication_date"),
+    ("meta", "name", "dc.date"),
     ("meta", "name", "dcterms.date"),
     ("meta", "itemprop", "datePublished"),
+    ("meta", "itemprop", "dateCreated"),
 ]
 
 def extract_date_candidates(soup: BeautifulSoup):
@@ -227,7 +234,12 @@ def extract_date_candidates(soup: BeautifulSoup):
                     walk(it)
         walk(data)
     # Common date containers
-    for sel in ["span.date", ".news-date", ".article-date", ".date", ".time"]:
+    for sel in [
+        "span.date", ".news-date", ".news__date", ".article-date", ".post-date",
+        ".entry-date", ".published", ".article__date", ".article-info__date",
+        ".date-publication", ".date-time", ".meta__date", ".time__value",
+        ".date", ".time", "time[itemprop='datePublished']"
+    ]:
         for el in soup.select(sel):
             txt = el.get_text(" ", strip=True)
             if txt:
@@ -294,24 +306,7 @@ def extract_title(soup: BeautifulSoup):
         return soup.title.string.strip()
     return None
 
-
-def is_listing_url(url: str) -> bool:
-    u = url.lower()
-    if "pagen_" in u or "page=" in u or "all_news=y" in u:
-        return True
-    # obvious list roots
-    if re.search(r"/news/(?:\?|$)", u):
-        return True
-    # /news/<section>/ (exactly one segment after news)
-    m = re.search(r"/news/([^/?#]+)/?$", u)
-    if m:
-        return True
-    return False
-
 def build_item(url: str, source_name: str, html: str):
-    # Skip obvious listing URLs to avoid false positives
-    if is_listing_url(url):
-        return None
     soup = BeautifulSoup(html, "html.parser")
     title = extract_title(soup) or url
     cands = extract_date_candidates(soup)
@@ -343,14 +338,12 @@ def harvest_source(src: dict, force: bool = False):
     index_html = fetch_page(src["start_url"])
 
     # Если содержимое ленты не изменилось — пропускаем весь источник
-    # Optional index hashing skip for SPA/API sources
-    if not src.get("skip_index_hash"):
-        idx_digest = hashlib.sha256(index_html.encode("utf-8")).hexdigest()
-        ih = STATE.setdefault("index_hash", {})
-        if not force and ih.get(src["start_url"]) == idx_digest:
-            logging.info("Index unchanged: %s — %s", src["name"], src["start_url"])
-            return []
-        ih[src["start_url"]] = idx_digest
+    idx_digest = hashlib.sha256(index_html.encode("utf-8")).hexdigest()
+    ih = STATE.setdefault("index_hash", {})
+    if not force and ih.get(src["start_url"]) == idx_digest:
+        logging.info("Index unchanged: %s — %s", src["name"], src["start_url"])
+        return []
+    ih[src["start_url"]] = idx_digest
 
     # XML/HTML автодетект
     soup = BeautifulSoup(index_html, "xml" if index_html.lstrip().startswith("<?xml") else "html.parser")
@@ -359,11 +352,16 @@ def harvest_source(src: dict, force: bool = False):
     links = []
     inc_re = re.compile(src.get("include_regex")) if src.get("include_regex") else None
     exc_re = re.compile(src.get("exclude_regex")) if src.get("exclude_regex") else None
+    base_host = urlparse(src["base_url"]).netloc.replace("www.", "")
     for a in soup.find_all("a"):
         href = a.get("href")
         if not href:
             continue
         href = urljoin(src["base_url"], href)
+        if src.get("restrict_domain"):
+            h = urlparse(href).netloc.replace("www.", "")
+            if h != base_host:
+                continue
         if not any(p in href for p in src["include_patterns"]):
             continue
         if inc_re and not inc_re.search(href):
@@ -371,8 +369,16 @@ def harvest_source(src: dict, force: bool = False):
         if exc_re and exc_re.search(href):
             continue
         text_ok = (a.get_text(strip=True) or "")
-        if len(text_ok) < src.get("link_min_text_len", 0):
-            continue
+        # Allow empty anchors when source explicitly permits it
+        min_len = int(src.get("link_min_text_len", 0))
+        if len(text_ok) < min_len:
+            if src.get("accept_empty_anchor"):
+                # fallback to attributes
+                txt2 = a.get("title") or a.get("aria-label") or ""
+                if len(txt2) < min_len:
+                    pass  # still accept link
+            else:
+                continue
         links.append(href)
 
     # Dedup and limit
@@ -534,7 +540,7 @@ def main():
                 existing_count = len(json.loads(OUT_JSON.read_text(encoding="utf-8")).get("items", []))
             except Exception:
                 existing_count = 0
-        STATE.setdefault("stats", {})["last_run"] = datetime.utcnow().isoformat() + "Z"
+        STATE.setdefault("stats", {})["last_run"] = datetime.now(timezone.utc).isoformat()
         STATE["stats"]["items"] = existing_count
         save_state()
         logging.info("No new items -> keep existing %s as-is (%d items)", OUT_JSON, existing_count)
@@ -546,7 +552,7 @@ def main():
         existing_items = load_existing_feed_items()
         feed = build_feed(existing_items)
         OUT_JSON.write_text(json.dumps(feed, ensure_ascii=False, indent=2), encoding="utf-8")
-        STATE.setdefault("stats", {})["last_run"] = datetime.utcnow().isoformat() + "Z"
+        STATE.setdefault("stats", {})["last_run"] = datetime.now(timezone.utc).isoformat()
         STATE["stats"]["items"] = len(feed["items"])
         save_state()
         logging.info("Rewrote(existing only) %s (%d items)", OUT_JSON, len(feed["items"]))
@@ -558,7 +564,7 @@ def main():
     feed = build_feed(merged_raw)
 
     OUT_JSON.write_text(json.dumps(feed, ensure_ascii=False, indent=2), encoding="utf-8")
-    STATE.setdefault("stats", {})["last_run"] = datetime.utcnow().isoformat() + "Z"
+    STATE.setdefault("stats", {})["last_run"] = datetime.now(timezone.utc).isoformat()
     STATE["stats"]["items"] = len(feed["items"])
     save_state()
     logging.info("Saved feed to %s (%d items)", OUT_JSON, len(feed["items"]))
