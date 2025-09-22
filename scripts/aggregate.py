@@ -333,6 +333,125 @@ def build_item(url: str, source_name: str, html: str):
     }
     return item
 
+def harvest_json_source(src: dict, force: bool = False):
+    endpoint = src.get("api_endpoint")
+    if not endpoint:
+        logging.warning("  missing api_endpoint for %s", src.get("name"))
+        return []
+
+    logging.info("Harvest API: %s — %s", src.get("name"), endpoint)
+
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/json",
+        "Accept-Language": "ru,en;q=0.9",
+    }
+    host = urlparse(endpoint).netloc
+    delay = HOST_DELAY_OVERRIDES.get(host, HOST_DELAY_DEFAULT)
+    now = time.time()
+    sleep_for = _last_req_at[host] + delay - now
+    if sleep_for > 0:
+        time.sleep(sleep_for)
+
+    resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
+    _last_req_at[host] = time.time()
+    if resp.status_code == 429:
+        ra = resp.headers.get("Retry-After")
+        try:
+            wait = int(ra) if ra else 5
+        except ValueError:
+            wait = 5
+        logging.warning("429 Too Many Requests (API): %s -> sleep %ss", endpoint, wait)
+        time.sleep(wait)
+        resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
+        _last_req_at[host] = time.time()
+    resp.raise_for_status()
+
+    text = resp.text
+    idx_digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
+    ih = STATE.setdefault("index_hash", {})
+    if not force and ih.get(endpoint) == idx_digest:
+        logging.info("Index unchanged (API): %s — %s", src.get("name"), endpoint)
+        return []
+    ih[endpoint] = idx_digest
+
+    try:
+        payload = resp.json()
+    except ValueError as exc:
+        logging.error("  invalid JSON for %s: %s", src.get("name"), exc)
+        return []
+
+    data = payload.get("data") if isinstance(payload, dict) else payload
+    if not isinstance(data, list):
+        logging.warning("  unexpected API payload for %s", src.get("name"))
+        return []
+
+    base_url = src.get("base_url") or endpoint
+    max_links = int(src.get("max_links", MAX_LINKS_PER_SOURCE))
+    seen_map = STATE.setdefault("seen_urls", {})
+    already_seen_list = list(seen_map.get(src["name"], []))
+    already_seen = set(already_seen_list)
+
+    entries = []
+    seen_links = set()
+    for entry in data:
+        link = entry.get("link") or entry.get("url") or entry.get("slug")
+        if not link:
+            continue
+        if isinstance(link, str) and not link.startswith("http"):
+            url = urljoin(base_url, link)
+        else:
+            url = link
+        if url in seen_links:
+            continue
+        seen_links.add(url)
+        entries.append((url, entry))
+        if len(entries) >= max_links:
+            break
+
+    entry_urls = [url for url, _ in entries]
+
+    if force:
+        new_entries = entries
+    else:
+        new_entries = [it for it in entries if it[0] not in already_seen]
+        if not new_entries:
+            logging.info("  no new links for %s", src["name"])
+            return []
+
+    items = []
+    for url, entry in new_entries:
+        try:
+            html = fetch_page(url)
+            item = build_item(url, src["name"], html)
+            title = entry.get("name") or entry.get("title")
+            if title:
+                item["title"] = title.strip()
+            date_val = entry.get("publishedAt") or entry.get("publishDate") or entry.get("publish_date")
+            if date_val:
+                try:
+                    dt = dparser.isoparse(date_val)
+                    dt = make_aware_msk(dt)
+                    dt = clamp_year(dt)
+                    if dt:
+                        item["date_published"] = dt.isoformat()
+                except Exception:
+                    pass
+            elif entry.get("publishDateRus"):
+                dt = try_parse_any_date([entry["publishDateRus"]])
+                if dt:
+                    item["date_published"] = dt.isoformat()
+            items.append(item)
+        except Exception as e:
+            logging.warning("  skip %s: %s", url, e)
+
+    keep = 500
+    tail = [u for u in already_seen_list if u in entry_urls]
+    seen_map[src["name"]] = ([url for url, _ in new_entries] + tail)[:keep]
+
+    return items
+
+
 def harvest_source(src: dict, force: bool = False):
     logging.info("Harvest: %s — %s", src["name"], src["start_url"])
     index_html = fetch_page(src["start_url"])
@@ -525,7 +644,10 @@ def main():
             logging.info("Skip disabled source: %s — %s", src.get('name'), src.get('start_url'))
             continue
         try:
-            items = harvest_source(src, force=ARGS.rebuild)
+            if src.get("mode") == "api":
+                items = harvest_json_source(src, force=ARGS.rebuild)
+            else:
+                items = harvest_source(src, force=ARGS.rebuild)
             logging.info("  -> %d items", len(items))
             all_items.extend(items)
         except Exception as e:
