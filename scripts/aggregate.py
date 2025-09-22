@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os, re, json, logging, pathlib, sys, hashlib
+import os, re, json, logging, pathlib, sys, hashlib, argparse
 from datetime import datetime, timedelta
 from urllib.parse import urljoin, urlparse
 
@@ -26,6 +26,7 @@ REQUEST_TIMEOUT = 30
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 MAX_LINKS_PER_SOURCE = 100
 FEED_MAX_ITEMS = int(os.environ.get("FEED_MAX_ITEMS", "2000"))
+ARGS = None  # будет заполнено в main()
 
 # Перехваты ошибок/429 и паузы между запросами к одному хосту
 SESSION = requests.Session()
@@ -320,14 +321,14 @@ def build_item(url: str, source_name: str, html: str):
     }
     return item
 
-def harvest_source(src: dict):
+def harvest_source(src: dict, force: bool = False):
     logging.info("Harvest: %s — %s", src["name"], src["start_url"])
     index_html = fetch_page(src["start_url"])
 
     # Если содержимое ленты не изменилось — пропускаем весь источник
     idx_digest = hashlib.sha256(index_html.encode("utf-8")).hexdigest()
     ih = STATE.setdefault("index_hash", {})
-    if ih.get(src["start_url"]) == idx_digest:
+    if not force and ih.get(src["start_url"]) == idx_digest:
         logging.info("Index unchanged: %s — %s", src["name"], src["start_url"])
         return []
     ih[src["start_url"]] = idx_digest
@@ -372,10 +373,13 @@ def harvest_source(src: dict):
     already_seen_list = list(seen_map.get(src["name"], []))
     already_seen = set(already_seen_list)
 
-    new_links = [u for u in uniq if u not in already_seen]
-    if not new_links:
-        logging.info("  no new links for %s", src["name"])
-        return []
+    if force:
+        new_links = uniq  # при rebuild обрабатываем все доступные uniq-ссылки
+    else:
+        new_links = [u for u in uniq if u not in already_seen]
+        if not new_links:
+            logging.info("  no new links for %s", src["name"])
+            return []
 
     items = []
     for url in new_links:
@@ -391,6 +395,7 @@ def harvest_source(src: dict):
     keep = 500
     # сначала — новые (в порядке обхода), затем часть старых, которые ещё встречаются в uniq
     tail = [u for u in already_seen_list if u in uniq]
+    # при rebuild тоже обновляем, чтобы после форс-прогона обычные запуски работали эффективно
     seen_map[src["name"]] = (new_links + tail)[:keep]
 
     return items
@@ -483,6 +488,11 @@ def merge_items(existing, new):
     return merged
 
 def main():
+    global ARGS
+    parser = argparse.ArgumentParser(description="Aggregate news feed")
+    parser.add_argument("--rebuild", action="store_true", help="Force rebuild: ignore index unchanged and seen-URL filters; always rewrite unified.json")
+    ARGS = parser.parse_args()
+    
     sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
     all_items = []
     for src in sources:
@@ -490,14 +500,14 @@ def main():
             logging.info("Skip disabled source: %s — %s", src.get('name'), src.get('start_url'))
             continue
         try:
-            items = harvest_source(src)
+            items = harvest_source(src, force=ARGS.rebuild)
             logging.info("  -> %d items", len(items))
             all_items.extend(items)
         except Exception as e:
             logging.error("  !! Failed: %s (%s)", src.get("name"), e)
             STATE.setdefault("stats", {}).setdefault("errors", []).append({"source": src.get("name"), "url": src.get("start_url"), "error": str(e)})
 
-    if not all_items:
+    if not all_items and not ARGS.rebuild:
         # Нет новых карточек — ленту не переписываем, чтобы не обнулять историю
         existing_count = 0
         if OUT_JSON.exists():
@@ -509,6 +519,18 @@ def main():
         STATE["stats"]["items"] = existing_count
         save_state()
         logging.info("No new items -> keep existing %s as-is (%d items)", OUT_JSON, existing_count)
+        return
+
+    if ARGS.rebuild and not all_items:
+        # Форс-режим и ничего не накраулилось (сетевые/источники без изменений):
+        # просто нормализуем и пересохраним существующую ленту (пересортировка/обрезка)
+        existing_items = load_existing_feed_items()
+        feed = build_feed(existing_items)
+        OUT_JSON.write_text(json.dumps(feed, ensure_ascii=False, indent=2), encoding="utf-8")
+        STATE.setdefault("stats", {})["last_run"] = datetime.utcnow().isoformat() + "Z"
+        STATE["stats"]["items"] = len(feed["items"])
+        save_state()
+        logging.info("Rewrote(existing only) %s (%d items)", OUT_JSON, len(feed["items"]))
         return
 
     # Есть новые карточки — сливаем с существующей лентой
