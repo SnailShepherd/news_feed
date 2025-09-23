@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 23 Sep 2025 20:46:54 GMT"
+      "Last-Modified": "Tue, 23 Sep 2025 21:15:58 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Tue, 23 Sep 2025 02:02:14 GMT"
@@ -1374,26 +1374,41 @@
         "source": "Главгосэкспертиза",
         "url": "https://gge.ru/press-center/news/",
         "error": "403 Client Error: Forbidden for url: https://gge.ru/press-center/news/"
+      },
+      {
+        "source": "Минстрой России",
+        "url": "https://minstroyrf.gov.ru/press/?d=news&per-page=24",
+        "error": "401 Client Error: Unauthorized for url: https://minstroyrf.gov.ru/press/?d=news&per-page=24"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0ebbab6650>, 'Connection to ancb.ru timed out. (connect timeout=30)'))"
+      },
+      {
+        "source": "Главгосэкспертиза",
+        "url": "https://gge.ru/press-center/news/",
+        "error": "403 Client Error: Forbidden for url: https://gge.ru/press-center/news/"
       }
     ],
-    "last_run": "2025-09-23T21:10:36.583331+00:00",
+    "last_run": "2025-09-23T21:15:38.314871+00:00",
     "items": 621
   },
   "index_hash": {
     "https://notim.ru/": "1b5fd813da81c391ec2d0ba735c14e7cda96b24dab1452a457fbd19b4622e900",
-    "https://ardexpert.ru/article": "a9532e10ac9ba86654b068ae59c07b55c1db7d5b23ae972493414bc2049655b4",
+    "https://ardexpert.ru/article": "9f00b2485536a13e3e34618797186a3d5b08408e3586d82e36a4323969542e40",
     "https://www.gostinfo.ru/News/List": "f05f5ab936b11cd69576c6bc1f2c4e1e10124e06204907c7e1cd1e4ba0f3e394",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "326d8349e224c01317b22cb168bc59a1c5d2a82aafb445e65cde6d2398c2f037",
-    "https://eec.eaeunion.org/news/": "6b0e20364e5af2f15cceac732f654454b03aff664f8f6a73c3fde1d82c4df0e5",
-    "https://minfin.gov.ru/ru/press-center/": "cdca0015d9acd01eb5c19e824f3951826e81a1ed2bfee14472e5361f678dbeb6",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "4d6b7657826cb82ad73c51529b24059f75d2eb9ff276ebdfd331bf57115f0087",
-    "https://www.metalinfo.ru/ru/news": "1717334f3e6988401568b2506b356d5142210c453deb9adc599cb158f0839852",
-    "https://www.pnp.ru/economics/": "1c1a6b7da6283dd5c3d83ab3af7ae746f3d1554002260e2aced09435865ac706",
+    "https://eec.eaeunion.org/news/": "fdd066d36c48f7ec3d10b9c75ec3b7a7a5c79a3691ac4ccb6d8d8ff01b6c5a52",
+    "https://minfin.gov.ru/ru/press-center/": "f4de3d5af002e2aeead4bf991d1876c23407fb8f2f0b3a358f6d9088836f49d2",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "3c288edd78b3c0f644b9ecd5f96be9b150ae8395968968132db4f8e3c10bbc9f",
+    "https://www.metalinfo.ru/ru/news": "ec8603c2b27b3fc4b0d5a8d306618f35326fdd5661a3cddcd535ba69c2d9368b",
+    "https://www.pnp.ru/economics/": "9e37a9e6ca87933ba26c67383258acc573a26214616d20a9025442c64985c661",
     "https://erzrf.ru/news/": "24e5e797f41a6269655f8e9f2856341a2f6f92ccd85212252fb2fe8d5e17f842",
-    "https://ria-stk.ru/news/vse-novosti.php": "52f49ae3250cbf259c44e639695a3afc527f080ca6a3a57352e84833df2f09de",
-    "http://government.ru/news/": "f10fbd303845160bd6ff9ee4cb9e067144d3cfd68d082349fe63f1eb81882acb",
-    "https://stroygaz.ru/news/": "ba0b911fb32495493e90cbb5ac70d926ff773dd30c660a9fe5e6a00e94b65855",
-    "https://realty.ria.ru/lenta/": "d8cce25f20f9e2bbd868b31a7f498125d02081dac9daf9ee3ba77ec8093b108f",
+    "https://ria-stk.ru/news/vse-novosti.php": "b52e0a5adc096faa866cfd9587c0387158b42a5e7ef9ec40f1bb981143b4bfa1",
+    "http://government.ru/news/": "254801376b1de69dda2161517ffedbc14c297e3f00e31d545192c0bd0b6e2bc1",
+    "https://stroygaz.ru/news/": "f4fa91dbed24ceca9c02134100673cbd28fb732cd2bb1f4a759ee5af3cb91c04",
+    "https://realty.ria.ru/lenta/": "f61dee0482647f9f2c5a72ea8d6f8f082fcfb48bec5d375c8e70c067ed31b868",
     "https://rg.ru/tema/ekonomika": "a3cfe6a2a31db8f0b965c396dcff4b6e74b233894688c6c7503d7ee75bf78965",
     "http://ancb.ru/publication": "8e8ffd4a52fd0c745a7a477f90566ad6bb25e37be6b152c879af111e5d9851f3"
   },
