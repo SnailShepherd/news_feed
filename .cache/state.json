@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 23 Sep 2025 02:02:06 GMT"
+      "Last-Modified": "Tue, 23 Sep 2025 03:31:07 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Tue, 23 Sep 2025 02:02:14 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"25817-4VTbabUAXleFdDVms6lZMbkuCTU\""
+      "ETag": "W/\"25816-o3cPTvuhiS43p6yVGIKgyxV2ch4\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"25897-GtuDiRpGRWYYZL186/zbT9+OiPc\""
@@ -738,29 +738,39 @@
     },
     "https://rg.ru/2025/09/22/v-cb-zaiavili-chto-sredniaia-zarplata-po-rossii-v-etom-godu-vyrosla-na-15.html": {
       "ETag": "\"ezbrwp7spo1lw4\""
-    }
+    },
+    "https://www.metalinfo.ru/ru/news/176780": {},
+    "https://www.metalinfo.ru/ru/news/176781": {},
+    "https://www.metalinfo.ru/ru/news/176783": {},
+    "https://www.metalinfo.ru/ru/news/176759": {}
   },
   "stats": {
     "cooldowns": {},
-    "errors": [],
-    "last_run": "2025-09-23T02:09:38.635508+00:00",
-    "items": 272
+    "errors": [
+      {
+        "source": "Гостинформ",
+        "url": "https://www.gostinfo.ru/News/List",
+        "error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f525247de50>, 'Connection to www.gostinfo.ru timed out. (connect timeout=30)'))"
+      }
+    ],
+    "last_run": "2025-09-23T03:30:42.597683+00:00",
+    "items": 276
   },
   "index_hash": {
     "https://notim.ru/": "1b5fd813da81c391ec2d0ba735c14e7cda96b24dab1452a457fbd19b4622e900",
-    "https://ardexpert.ru/article": "0b8d0889105aed4c6c6be99e2642f8d2b0732d535364f3133d062a248de3ad0e",
+    "https://ardexpert.ru/article": "62d759d9a156a1e5af9d60d3e25d76074cc609e67ec3b08fd675c733070def5e",
     "https://www.gostinfo.ru/News/List": "135d63c4b4d9589b9e9c96228ff5e104129251548feee326c1b93ff794a17c25",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "6d1c44bda79458300613e93d963571e727936b4761dd2b2b363b8fd5bed4abcd",
-    "https://eec.eaeunion.org/news/": "d4c319ece77fcd93956728c2c7bc066ede72a0ca213996b591cd337861d151f3",
-    "https://minfin.gov.ru/ru/press-center/": "a817d212a2abd77ca6b99191d50239e22c296ec92873c24173a78db69b2e5654",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "0813a4794257cba67b96f75b2974538ac61ee7b35ab9a0dcbe568a6f01263e49",
-    "https://www.metalinfo.ru/ru/news": "5357b1c7dbbaa2c0879e040f967cb73cc722eec29505ca2fc7c9e56f2ddaf20b",
-    "https://www.pnp.ru/economics/": "67e41c20351fba97708c3b405e27058ca7a2adc86bf0d18f27a7adf1c5a35514",
-    "https://erzrf.ru/news/": "70f786aea5350ed4b5eeaba0b9b01568fbb5b5941262d5e9e9fed1d364b5f247",
-    "https://ria-stk.ru/news/vse-novosti.php": "0fcf02221398a1cf28a39184cf8a9daf7cd36cb6cb877e1b84e47760f5783e72",
-    "http://government.ru/news/": "6232de71236c0ea6a1090cd899ac7cc4b2ce27ddaae708bc8eeeb57c30bb1b60",
-    "https://stroygaz.ru/news/": "f406c2438684c675d9bd378f3281929bfd2d1c4fc99610fcda7fea26c5313adb",
-    "https://realty.ria.ru/lenta/": "f04d4997c6115290e7c275574e9f2bfbb4a021f7811f953d78ff66e8b422b017",
+    "https://eec.eaeunion.org/news/": "e7a811562d70c77362d074570803873653f137844b07328bb8638c39934b2067",
+    "https://minfin.gov.ru/ru/press-center/": "49fdffd484708895b792f658be328282cdecba566f83889b0d935f3d620e74cb",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "b29a653f7ac64b8702c4c9c331c0604a66e6669e3388f81ff6582b200ebf0581",
+    "https://www.metalinfo.ru/ru/news": "5a0419ae7a72355ff62c4bdcda6faac4fd186f8ec66ff959b5028dd6fcf8f384",
+    "https://www.pnp.ru/economics/": "2ba8660a6cab1ccd9fbc120db29649b8036985b116bef4d3855732a66a7c9c64",
+    "https://erzrf.ru/news/": "190ba395acdff41fe76f56f44e7fb015c5e018bbb3438ab197fe869674ff964f",
+    "https://ria-stk.ru/news/vse-novosti.php": "51a31b8c583907c01f1dfd811c88212505cad7154bfeb267021e51c0710c8513",
+    "http://government.ru/news/": "6769ea95623a88ff3fe4ed1660adab6949424fad2118ee219244d674708e6c69",
+    "https://stroygaz.ru/news/": "f9d2d5b18449f5068a8d83fb03eb4933d8ec49b192cee9439e2774b32ddd0cc3",
+    "https://realty.ria.ru/lenta/": "1a0c9456437e75e7654b5eb3a145a6a84ea54ea41a0a541d9d1a1badc4a29eec",
     "https://rg.ru/tema/ekonomika": "51e63d7d2333fc7b2077ca87173acf336d085af4d5a0d01e1df3507b79db8538"
   },
   "seen_urls": {
@@ -947,6 +957,10 @@
       "https://www.interfax-russia.ru/realty/news/bank-dom-rf-nazval-lidiruyushchie-po-dosrochnoy-vyplate-ipoteki-regiony"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/176780",
+      "https://www.metalinfo.ru/ru/news/176781",
+      "https://www.metalinfo.ru/ru/news/176783",
+      "https://www.metalinfo.ru/ru/news/176759",
       "https://www.metalinfo.ru/ru/news/176778",
       "https://www.metalinfo.ru/ru/news/176769",
       "https://www.metalinfo.ru/ru/news/176765",
@@ -962,11 +976,7 @@
       "https://www.metalinfo.ru/ru/news/176760",
       "https://www.metalinfo.ru/ru/news/176757",
       "https://www.metalinfo.ru/ru/news/176763",
-      "https://www.metalinfo.ru/ru/news/176754",
-      "https://www.metalinfo.ru/ru/news/176755",
-      "https://www.metalinfo.ru/ru/news/176735",
-      "https://www.metalinfo.ru/ru/news/176761",
-      "https://www.metalinfo.ru/ru/news/176723"
+      "https://www.metalinfo.ru/ru/news/176754"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html",
