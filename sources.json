@@ -8,7 +8,8 @@
       "/events",
       "/article"
     ],
-    "link_min_text_len": 16
+    "link_min_text_len": 16,
+    "enabled": false
   },
   {
     "name": "Минстрой России",
@@ -20,7 +21,7 @@
     "exclude_regex": "/press/(?:contacts|docs|mediagallery|periodical|smi|events)",
     "link_min_text_len": 8,
     "max_links": 30,
-    "enabled": true    
+    "enabled": true
   },
   {
     "name": "АРД: статьи",
@@ -29,7 +30,8 @@
     "include_patterns": [
       "/article/"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "enabled": false
   },
   {
     "name": "Гостинформ",
@@ -38,7 +40,8 @@
     "include_patterns": [
       "/News/"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "enabled": true
   },
   {
     "name": "ФАУ ФЦС",
@@ -54,7 +57,8 @@
     "accept_empty_anchor": true,
     "include_regex": "/press-(?:tsentr/novosti|center/news)/[^/?#]+/?$",
     "restrict_domain": true,
-    "max_links": 50
+    "max_links": 50,
+    "enabled": false
   },
   {
     "name": "АНЦБ",
@@ -81,7 +85,8 @@
       "^https?://(?:www\\.)?eec\\.eaeunion\\.org/news/(?:page|tag|category|archive|search)/"
     ],
     "link_min_text_len": 8,
-    "restrict_domain": true
+    "restrict_domain": true,
+    "enabled": false
   },
   {
     "name": "Минфин России",
@@ -90,7 +95,8 @@
     "include_patterns": [
       "/press-center"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "enabled": false
   },
   {
     "name": "Интерфакс-Недвижимость",
@@ -99,7 +105,8 @@
     "include_patterns": [
       "/realty/news/"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "enabled": false
   },
   {
     "name": "Металлоснабжение и сбыт",
@@ -112,7 +119,8 @@
     "exclude_regex": "/ru/news/(?:r\\w+|services|subscribe|market|consumer|construction|nonferrous|ferrous)",
     "link_min_text_len": 8,
     "max_links": 20,
-    "restrict_domain": true
+    "restrict_domain": true,
+    "enabled": false
   },
   {
     "name": "Парламентская газета: Экономика",
@@ -125,7 +133,8 @@
     "accept_empty_anchor": true,
     "include_regex": "^https?://(?:www\\.)?pnp\\.ru/economics/(?:\\d{4}/\\d{2}/\\d{2}/)?[^/]+\\.html$",
     "exclude_regex": "/economics/\\d+/?$",
-    "restrict_domain": true
+    "restrict_domain": true,
+    "enabled": true
   },
   {
     "name": "ЕРЗ.РФ",
@@ -136,7 +145,8 @@
     ],
     "link_min_text_len": 8,
     "include_regex": "^https?://(?:www\\.)?erzrf\\.ru/news/[^?#/]+/?$",
-    "restrict_domain": true
+    "restrict_domain": true,
+    "enabled": false
   },
   {
     "name": "РИА СТК",
@@ -145,7 +155,8 @@
     "include_patterns": [
       "/news/"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "enabled": true
   },
   {
     "name": "Правительство РФ",
@@ -154,7 +165,8 @@
     "include_patterns": [
       "/news/"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "enabled": false
   },
   {
     "name": "Стройгаз.ру",
@@ -166,7 +178,8 @@
       "/news/?$",
       "/news/[a-z0-9-]+/?$"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "enabled": false
   },
   {
     "name": "РИА Недвижимость: лента",
@@ -175,7 +188,8 @@
     "include_patterns": [
       "/20"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "enabled": false
   },
   {
     "name": "Российская газета: Экономика",
@@ -184,7 +198,8 @@
     "include_patterns": [
       "/20"
     ],
-    "link_min_text_len": 8
+    "link_min_text_len": 8,
+    "enabled": false
   },
   {
     "name": "Главгосэкспертиза",
@@ -196,6 +211,6 @@
     "exclude_regex": "/press-center/(?:publications|mediagallery|smi|open-events|.*\\?)",
     "link_min_text_len": 8,
     "max_links": 20,
-    "enabled": true    
+    "enabled": false
   }
 ]
