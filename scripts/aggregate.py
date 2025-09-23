@@ -916,6 +916,19 @@ def merge_items(existing, new):
 
         merged = dict(old)
         for key, value in it.items():
+            if key == "date_published":
+                old_date = old.get("date_published")
+                new_date = value
+                if old_date and new_date:
+                    item_id = it.get("id") or old.get("id")
+                    if item_id:
+                        first_seen_map = STATE.get("first_seen", {})
+                        fallback_date = first_seen_map.get(item_id)
+                        if fallback_date and fallback_date == new_date:
+                            # The new value comes from the first-seen fallback; keep the
+                            # previously stored publication date instead of overwriting it
+                            # with the crawl timestamp.
+                            continue
             if key in rich_fields and not has_rich_value(value):
                 continue
             merged[key] = value
