@@ -38,6 +38,11 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Install Chromium for Selenium warm-up
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y chromium-browser chromium-chromedriver
+
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
