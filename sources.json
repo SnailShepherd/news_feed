@@ -13,7 +13,7 @@
   {
     "name": "Минстрой России",
     "base_url": "https://minstroyrf.gov.ru",
-    "start_url": "https://minstroyrf.gov.ru/press/?d=news?per-page=24",
+    "start_url": "https://minstroyrf.gov.ru/press/?d=news&per-page=24",
     "include_patterns": [
       "/press/"
     ],
@@ -74,7 +74,14 @@
     "include_patterns": [
       "/news/"
     ],
-    "link_min_text_len": 8
+    "include_regex": "^https?://(?:www\\.)?eec\\.eaeunion\\.org/news/(?!events/?$)[^?#]+/?$",
+    "exclude_regex": [
+      "^https?://(?:www\\.)?eec\\.eaeunion\\.org/news/?$",
+      "^https?://(?:www\\.)?eec\\.eaeunion\\.org/news/events/?$",
+      "^https?://(?:www\\.)?eec\\.eaeunion\\.org/news/(?:page|tag|category|archive|search)/"
+    ],
+    "link_min_text_len": 8,
+    "restrict_domain": true
   },
   {
     "name": "Минфин России",

@@ -113,6 +113,10 @@ def http_get(url: str, allow_conditional: bool = True):
 def cache_key_for(url: str) -> str:
     p = urlparse(url)
     slug = re.sub(r"[^a-zA-Z0-9]+", "-", (p.path or "/")).strip("-")
+    query = (p.query or "").strip()
+    if query:
+        q_hash = hashlib.sha1(query.encode("utf-8")).hexdigest()[:10]
+        slug = f"{slug}-{q_hash}" if slug else q_hash
     if not slug:
         slug = "index"
     if len(slug) > 150:
@@ -127,7 +131,16 @@ def cache_key_with_suffix(base_key: str, suffix: str) -> str:
 def fetch_page(url: str) -> str:
     page_path = PAGES_DIR / cache_key_for(url)
     use_conditional = not (ARGS and getattr(ARGS, 'rebuild', False))
-    content, _ = http_get(url, allow_conditional=use_conditional)
+    try:
+        content, _ = http_get(url, allow_conditional=use_conditional)
+    except requests.HTTPError as exc:
+        status = exc.response.status_code if exc.response is not None else None
+        if status in {500, 502, 503, 504} and page_path.exists():
+            logging.warning(
+                "HTTP %s for %s — using cached copy", status, url
+            )
+            return page_path.read_text(encoding="utf-8")
+        raise
     if content is None and page_path.exists():
         # Not modified -> reuse cached
         return page_path.read_text(encoding="utf-8")
@@ -245,7 +258,9 @@ def extract_date_candidates(soup: BeautifulSoup):
         "span.date", ".news-date", ".news__date", ".article-date", ".post-date",
         ".entry-date", ".published", ".article__date", ".article-info__date",
         ".date-publication", ".date-time", ".meta__date", ".time__value",
-        ".date", ".time", "time[itemprop='datePublished']"
+        ".date", ".time", "time[itemprop='datePublished']", ".news-detail__date",
+        ".presscenter_event_date", ".blog-post__date", ".news-item__date",
+        ".article__meta-date", ".card__date"
     ]:
         for el in soup.select(sel):
             txt = el.get_text(" ", strip=True)
