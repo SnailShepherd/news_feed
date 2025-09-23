@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 23 Sep 2025 19:41:59 GMT"
+      "Last-Modified": "Tue, 23 Sep 2025 20:46:54 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Tue, 23 Sep 2025 02:02:14 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"233f7-YbO5i/o59CalLOoUFb/IhArx/Hw\""
+      "ETag": "W/\"233f7-RkMIqUuOrVsN98ARwtM5hpz4ueI\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"25897-GtuDiRpGRWYYZL186/zbT9+OiPc\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"i56ecysodg3kkf\""
+      "ETag": "\"l1wcwtyiw13n4x\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -1301,7 +1301,22 @@
     "http://ancb.ru/publication/read/19984": {},
     "http://ancb.ru/publication/read/19983": {},
     "http://ancb.ru/publication/read/19982": {},
-    "http://ancb.ru/publication/read/19977": {}
+    "http://ancb.ru/publication/read/19977": {},
+    "https://rg.ru/2025/09/23/reg-cfo/karera-so-vkusom-rabota.html": {
+      "ETag": "\"59irangfrr1xs3\""
+    },
+    "https://rg.ru/2025/09/23/ekspert-oleg-skapenker-banki-sokrashchaiut-limit-kreditok-dazhe-u-horoshih-klientov.html": {
+      "ETag": "\"jo068awrtf21vb\""
+    },
+    "https://rg.ru/2025/09/23/reg-cfo/fakel-uspeha.html": {
+      "ETag": "\"16za7esz921pf2\""
+    },
+    "https://rg.ru/2025/09/23/reg-cfo/i-do-kosmosa-doshli.html": {
+      "ETag": "\"v8w6mvw0oc1sir\""
+    },
+    "https://rg.ru/2025/09/23/reg-cfo/dirizhabl-priletel.html": {
+      "ETag": "\"g94znqwzs11w8f\""
+    }
   },
   "stats": {
     "cooldowns": {},
@@ -1320,27 +1335,32 @@
         "source": "Парламентская газета: Экономика",
         "url": "https://www.pnp.ru/economics/",
         "error": "403 Client Error: Forbidden for url: https://www.pnp.ru/economics/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7efe3125eb10>, 'Connection to ancb.ru timed out. (connect timeout=30)'))"
       }
     ],
-    "last_run": "2025-09-23T19:41:36.731132+00:00",
-    "items": 523
+    "last_run": "2025-09-23T20:46:46.656805+00:00",
+    "items": 528
   },
   "index_hash": {
     "https://notim.ru/": "1b5fd813da81c391ec2d0ba735c14e7cda96b24dab1452a457fbd19b4622e900",
-    "https://ardexpert.ru/article": "0b8a6126b053483aff56ef6335e393f1c2c09261c82870af70801749b6f786e3",
+    "https://ardexpert.ru/article": "fe665ef55aa74ce4c74d6359b165d2a3d4e406dfcba72bf26ffe7f48c43f411d",
     "https://www.gostinfo.ru/News/List": "f05f5ab936b11cd69576c6bc1f2c4e1e10124e06204907c7e1cd1e4ba0f3e394",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "326d8349e224c01317b22cb168bc59a1c5d2a82aafb445e65cde6d2398c2f037",
-    "https://eec.eaeunion.org/news/": "440d7eef28b54e6cc6e5d2b85d4a6de50e584555a4b6ebae840c7f3fac625372",
-    "https://minfin.gov.ru/ru/press-center/": "74c5a4031635aa911b9c037527b7b7e2d334989a5dd6aa63f485270c4dc0f86a",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "8fe525ec155ac0083840333f1aacfcbb6ebe277b894d09d558d3fcf7982a571f",
-    "https://www.metalinfo.ru/ru/news": "1b85dc6b4228e5286054ad47660767c9dbc4f59365d2224248594e807c9c4755",
-    "https://www.pnp.ru/economics/": "64c913d39202dbedc1a5527e886f8e69c8e9a9403932100d983322de354b4192",
-    "https://erzrf.ru/news/": "6fedb4cb48a97e44cac912fdef954b3133e06ba880a8b33926dbea57a1f21417",
-    "https://ria-stk.ru/news/vse-novosti.php": "e2e3a17b82f18c54dd0f86af31bd39139aa3ca6cac70033014f522a4843a4e0d",
-    "http://government.ru/news/": "f8c8ed28ba6d0edbe77e860e9da4eb10ffbe0a587c3d5b26b85aeda44d206b03",
-    "https://stroygaz.ru/news/": "f44f24830b93c75c4a42e6925d394f2bb6d340eabb74cd5bff1fc9063505c94b",
-    "https://realty.ria.ru/lenta/": "8ad2c6da393d18dfc47a7fca605722e4af453871e93c0428e8ef854a6c950811",
-    "https://rg.ru/tema/ekonomika": "9294ebc48be4a36af99377f71614c53a0cc1bc170999d949bcda6d001bca9779",
+    "https://eec.eaeunion.org/news/": "2d685a99b9a6137f2632cebcd0ad2a25b9e273560b17f1e120b531ad24758f02",
+    "https://minfin.gov.ru/ru/press-center/": "cdca0015d9acd01eb5c19e824f3951826e81a1ed2bfee14472e5361f678dbeb6",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "03d2a5afd2b08dfbd567ebbc0540869349fd6117fe39730c70d9bd56f4878efc",
+    "https://www.metalinfo.ru/ru/news": "1717334f3e6988401568b2506b356d5142210c453deb9adc599cb158f0839852",
+    "https://www.pnp.ru/economics/": "1c1a6b7da6283dd5c3d83ab3af7ae746f3d1554002260e2aced09435865ac706",
+    "https://erzrf.ru/news/": "bf46260e61e271ec9ad60dca796fd0487b0159af242a8bf8d199eaf8ce1d5ba5",
+    "https://ria-stk.ru/news/vse-novosti.php": "52f49ae3250cbf259c44e639695a3afc527f080ca6a3a57352e84833df2f09de",
+    "http://government.ru/news/": "fc30516d9d7b5986c91dc337c78e407b8b00593275475c9e6d4237661967d2dc",
+    "https://stroygaz.ru/news/": "8e84b160947b6f7313f2a046a3d93b6347f28d900f2064fd77b7539958fe09bf",
+    "https://realty.ria.ru/lenta/": "ebd7f2cf6ff804b4d7b745fb32290d248e1030c0585782be6bb172349b030662",
+    "https://rg.ru/tema/ekonomika": "f73c2d5dec1adbd101a4f8300b2a627fd79de2ce2b82b67f7b8c93370ad764bd",
     "http://ancb.ru/publication": "8e8ffd4a52fd0c745a7a477f90566ad6bb25e37be6b152c879af111e5d9851f3"
   },
   "seen_urls": {
@@ -1689,6 +1709,11 @@
       "https://realty.ria.ru/20250923/aktsii-2043694123.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/09/23/reg-cfo/karera-so-vkusom-rabota.html",
+      "https://rg.ru/2025/09/23/ekspert-oleg-skapenker-banki-sokrashchaiut-limit-kreditok-dazhe-u-horoshih-klientov.html",
+      "https://rg.ru/2025/09/23/reg-cfo/fakel-uspeha.html",
+      "https://rg.ru/2025/09/23/reg-cfo/i-do-kosmosa-doshli.html",
+      "https://rg.ru/2025/09/23/reg-cfo/dirizhabl-priletel.html",
       "https://rg.ru/2025/09/23/reg-cfo/v-moskve-postroili-dom-gde-okna-budet-myt-robot.html",
       "https://rg.ru/2025/09/23/koshelek-ili-zhizn.html",
       "https://rg.ru/2025/09/23/tabak-pod-zamkom.html",
@@ -1707,7 +1732,6 @@
       "https://rg.ru/2025/09/23/reg-cfo/maksim-liksutov-segodnia-servisom-elektrosamokatov-polzuiutsia-5-mln-chelovek.html",
       "https://rg.ru/2025/09/23/nuzhno-li-vvodit-finansovyj-pasport-grazhdanina.html",
       "https://rg.ru/2025/09/23/legkaia-promyshlennost-v-rf-sposobna-narastit-moshchnosti-pri-podderzhke-gosudarstva.html",
-      "https://rg.ru/2025/09/23/proekt-ob-ipotechnyh-kanikulah-dlia-semej-s-detmi-do-15-let-priniat-v-i-chtenii.html",
       "https://rg.ru/2025/09/23/mintrans-v-rossii-do-2030-goda-trebuetsia-zamena-bolee-1-700-vethih-sudov.html",
       "https://rg.ru/2025/09/23/reg-urfo/konec-sviazi.html",
       "https://rg.ru/2025/09/23/oficialnyj-kurs-dollara-ponizhen-do-8335-rublia.html",
@@ -1717,10 +1741,6 @@
       "https://rg.ru/2025/09/23/cena-ai-92-na-birzhe-23-sentiabria-podnialas-vyshe-736-tysiachi-rublej-za-tonnu.html",
       "https://rg.ru/2025/09/23/selskij-turizm-v-rossii-kak-derevni-i-sela-prevrashchaiutsia-v-turisticheskie-magnity.html",
       "https://rg.ru/2025/09/23/reg-szfo/plyvem-na-salmi.html",
-      "https://rg.ru/2025/09/23/reg-szfo/v-murmanske-silnyj-ciklon-povalil-derevia-na-ulicah.html",
-      "https://rg.ru/2025/09/23/cb-30-sentiabria-obsudit-simvoly-dlia-novoj-banknoty-500-rublej.html",
-      "https://rg.ru/2025/09/23/mishustin-30-servisov-na-baze-gosteha-nahodiatsia-v-razrabotke.html",
-      "https://rg.ru/2025/09/23/rossiianam-rekomendovali-izbegat-samoupravstva-v-borbe-s-sosedskim-hlamom.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
       "https://rg.ru/2025/09/17/v-moskve-otkrylas-desiataia-gmp-konferenciia-pod-devizom-reguliruia-segodnia-sozdaem-stabilnoe-zavtra.html"
