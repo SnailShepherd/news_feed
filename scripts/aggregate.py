@@ -56,6 +56,8 @@ if STATE_FILE.exists():
 else:
     STATE = {"headers": {}, "stats": {}, "index_hash": {}, "seen_urls": {}}
 
+STATE.setdefault("first_seen", {})
+
 def save_state():
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -204,6 +206,92 @@ def parse_ru_date_words(s: str):
             return None
     return None
 
+def finalize_datetime(dt: datetime):
+    if dt is None:
+        return None
+    dt = make_aware_msk(dt)
+    dt = dt.replace(microsecond=0)
+    return clamp_year(dt)
+
+DEFAULT_CONTENT_SELECTORS = [
+    "article",
+    "main article",
+    "article .article__content",
+    ".article__body",
+    ".article__content",
+    ".article-body",
+    ".article-body__content",
+    ".article_text",
+    ".article-text",
+    ".article-content",
+    ".article__text",
+    ".content",
+    ".content__inner",
+    ".content__text",
+    ".content-text",
+    ".content-text__body",
+    ".contentBody",
+    ".entry-content",
+    ".news-body",
+    ".news-content",
+    ".news-detail",
+    ".news-detail__content",
+    ".news-detail__text",
+    ".news-detail__wrapper",
+    ".news-item__text",
+    ".news-text",
+    ".post-content",
+    ".presscenter__content",
+    "#news-detail",
+]
+
+def _normalize_whitespace(text: str) -> str:
+    if not text:
+        return ""
+    lines = [line.strip() for line in text.splitlines()]
+    lines = [line for line in lines if line]
+    return "\n".join(lines)
+
+def extract_content_text(soup: BeautifulSoup, selectors=None):
+    if isinstance(selectors, str):
+        selectors = [selectors]
+    else:
+        selectors = list(selectors or [])
+    tried = []
+
+    def element_text(elem):
+        if elem is None:
+            return ""
+        for junk in elem.find_all(["script", "style", "noscript", "form", "iframe"]):
+            junk.decompose()
+        text = elem.get_text("\n", strip=True)
+        return _normalize_whitespace(text)
+
+    for sel in selectors + DEFAULT_CONTENT_SELECTORS:
+        if sel in tried:
+            continue
+        tried.append(sel)
+        for node in soup.select(sel):
+            text = element_text(node)
+            if len(text) >= 120:
+                return text
+            # Короткие карточки тоже могут встречаться
+            if len(text) >= 40:
+                return text
+
+    # Fallback: собрать параграфы из <article> или <body>
+    container = soup.find("article") or soup.body
+    if container:
+        paragraphs = []
+        for p in container.find_all(["p", "li"]):
+            txt = _normalize_whitespace(p.get_text(" ", strip=True))
+            if len(txt) >= 20:
+                paragraphs.append(txt)
+        if paragraphs:
+            return "\n\n".join(paragraphs)
+
+    return None
+
 META_DATE_KEYS = [
     ("meta", "property", "article:published_time"),
     ("meta", "property", "article:modified_time"),
@@ -277,29 +365,30 @@ def extract_date_candidates(soup: BeautifulSoup):
     return uniq[:20]
 
 def try_parse_any_date(candidates):
+    default_base = make_aware_msk(datetime.now(MSK).replace(month=1, day=1, hour=0, minute=0, second=0, microsecond=0))
     for raw in candidates:
         s = raw.strip()
         # Try ISO-like first
         try:
-            dt = dparser.isoparse(s)
-            dt = make_aware_msk(dt)
-            dt = clamp_year(dt)
+            dt = finalize_datetime(dparser.isoparse(s))
             if dt: return dt
         except Exception:
             pass
         # Try generic parser in day-first mode
         try:
-            dt = dparser.parse(s, dayfirst=True, fuzzy=True, default=make_aware_msk(datetime.now()).replace(month=1, day=1))
-            dt = make_aware_msk(dt)
-            dt = clamp_year(dt)
+            dt = finalize_datetime(dparser.parse(
+                s,
+                dayfirst=True,
+                fuzzy=True,
+                default=default_base,
+            ))
             if dt: return dt
         except Exception:
             pass
         # Try Russian words
         dt = parse_ru_date_words(s)
         if dt:
-            dt = make_aware_msk(dt)
-            dt = clamp_year(dt)
+            dt = finalize_datetime(dt)
             if dt: return dt
         # Relative dates
         low = s.lower()
@@ -328,7 +417,7 @@ def extract_title(soup: BeautifulSoup):
         return soup.title.string.strip()
     return None
 
-def build_item(url: str, source_name: str, html: str):
+def build_item(url: str, source_name: str, html: str, content_selectors=None):
     soup = BeautifulSoup(html, "html.parser")
     title = extract_title(soup) or url
     cands = extract_date_candidates(soup)
@@ -340,19 +429,34 @@ def build_item(url: str, source_name: str, html: str):
         if m:
             y, mo, d = map(int, m.groups())
             try:
-                dt = make_aware_msk(datetime(y, mo, d))
+                dt = finalize_datetime(datetime(y, mo, d))
             except ValueError:
                 dt = None
 
+    item_id = hashlib.sha256(url.encode("utf-8")).hexdigest()
+    content_text = extract_content_text(soup, selectors=content_selectors)
+
     item = {
-        "id": hashlib.sha256(url.encode("utf-8")).hexdigest(),
+        "id": item_id,
         "url": url,
         "title": title,
         "date_published": dt.isoformat() if dt else None,
-        "content_text": None,
+        "content_text": content_text,
         "tags": [],
         "source": source_name,
     }
+
+    if not item["date_published"]:
+        first_seen_map = STATE.setdefault("first_seen", {})
+        cached = first_seen_map.get(item_id)
+        if cached:
+            item["date_published"] = cached
+        else:
+            seen_dt = make_aware_msk(datetime.now(MSK)).replace(second=0, microsecond=0)
+            iso = seen_dt.isoformat()
+            first_seen_map[item_id] = iso
+            item["date_published"] = iso
+
     return item
 
 def harvest_json_source(src: dict, force: bool = False):
@@ -445,16 +549,14 @@ def harvest_json_source(src: dict, force: bool = False):
     for url, entry in new_entries:
         try:
             html = fetch_page(url)
-            item = build_item(url, src["name"], html)
+            item = build_item(url, src["name"], html, content_selectors=src.get("content_selectors"))
             title = entry.get("name") or entry.get("title")
             if title:
                 item["title"] = title.strip()
             date_val = entry.get("publishedAt") or entry.get("publishDate") or entry.get("publish_date")
             if date_val:
                 try:
-                    dt = dparser.isoparse(date_val)
-                    dt = make_aware_msk(dt)
-                    dt = clamp_year(dt)
+                    dt = finalize_datetime(dparser.isoparse(date_val))
                     if dt:
                         item["date_published"] = dt.isoformat()
                 except Exception:
@@ -718,7 +820,7 @@ def harvest_source(src: dict, force: bool = False):
                     raise FileNotFoundError("cached copy missing during cooldown")
             else:
                 html = fetch_page(url)
-            item = build_item(url, src["name"], html)
+            item = build_item(url, src["name"], html, content_selectors=src.get("content_selectors"))
             if item:
                 items.append(item)
         except Exception as e:
