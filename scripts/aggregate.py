@@ -889,6 +889,16 @@ def load_existing_feed_items():
 
 def merge_items(existing, new):
     """Склеить items, убрать дубликаты по URL, предпочитая новые записи и записи с заполненной датой."""
+
+    def has_rich_value(value):
+        if value is None:
+            return False
+        if isinstance(value, str):
+            return value.strip() != ""
+        return True
+
+    rich_fields = {"content_text", "content_html", "summary"}
+
     by_url = {}
     for it in existing:
         u = it.get("url")
@@ -903,12 +913,14 @@ def merge_items(existing, new):
         if not old:
             by_url[u] = it
             continue
-        # Если в новой записи появилась дата — берём новую
-        if it.get("date_published") and not old.get("date_published"):
-            by_url[u] = it
-            continue
-        # В остальных случаях просто обновим старую новой версией (на случай правок заголовка и т. п.)
-        by_url[u] = it
+
+        merged = dict(old)
+        for key, value in it.items():
+            if key in rich_fields and not has_rich_value(value):
+                continue
+            merged[key] = value
+
+        by_url[u] = merged
 
     merged = list(by_url.values())
 
