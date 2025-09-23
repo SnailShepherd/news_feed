@@ -465,36 +465,17 @@ def harvest_source(src: dict, force: bool = False):
     errors = stats.setdefault("errors", [])
 
     start_url = src["start_url"]
+    cache_path = PAGES_DIR / cache_key_for(start_url)
     cooldown_until = cooldowns.get(start_url)
     now = time.time()
+    use_only_cache = False
+    index_html = None
     if cooldown_until and cooldown_until > now:
         until_dt = datetime.fromtimestamp(cooldown_until, timezone.utc)
-        logging.warning(
-            "Skip due to active cooldown until %s: %s — %s",
-            until_dt.isoformat(),
-            src.get("name"),
-            start_url,
-        )
-        errors.append(
-            {
-                "source": src.get("name"),
-                "url": start_url,
-                "error": f"cooldown active until {until_dt.isoformat()}",
-            }
-        )
-        return []
-
-    logging.info("Harvest: %s — %s", src["name"], start_url)
-    try:
-        index_html = fetch_page(start_url)
-    except requests.HTTPError as exc:
-        resp = exc.response
-        status = resp.status_code if resp is not None else None
-        if status in {500, 502, 503, 504}:
-            cooldowns[start_url] = time.time() + 6 * 3600
+        if cache_path.exists():
             logging.warning(
-                "Server error %s, cooldown 6h: %s — %s",
-                status,
+                "Skip due to active cooldown until %s (using cached index): %s — %s",
+                until_dt.isoformat(),
                 src.get("name"),
                 start_url,
             )
@@ -502,11 +483,100 @@ def harvest_source(src: dict, force: bool = False):
                 {
                     "source": src.get("name"),
                     "url": start_url,
-                    "error": f"HTTP {status} -> cooldown 6h",
+                    "error": f"cooldown active until {until_dt.isoformat()} -> used cache",
+                }
+            )
+            index_html = cache_path.read_text(encoding="utf-8")
+            use_only_cache = True
+        else:
+            logging.warning(
+                "Skip due to active cooldown until %s: %s — %s",
+                until_dt.isoformat(),
+                src.get("name"),
+                start_url,
+            )
+            errors.append(
+                {
+                    "source": src.get("name"),
+                    "url": start_url,
+                    "error": f"cooldown active until {until_dt.isoformat()} (no cache)",
                 }
             )
             return []
-        raise
+
+    logging.info("Harvest: %s — %s", src["name"], start_url)
+    if index_html is None:
+        try:
+            index_html = fetch_page(start_url)
+        except requests.HTTPError as exc:
+            resp = exc.response
+            status = resp.status_code if resp is not None else None
+            if status in {500, 502, 503, 504}:
+                cooldowns[start_url] = time.time() + 6 * 3600
+                if cache_path.exists():
+                    logging.warning(
+                        "Server error %s, using cached index + cooldown 6h: %s — %s",
+                        status,
+                        src.get("name"),
+                        start_url,
+                    )
+                    errors.append(
+                        {
+                            "source": src.get("name"),
+                            "url": start_url,
+                            "error": f"HTTP {status} -> used cache + cooldown 6h",
+                        }
+                    )
+                    index_html = cache_path.read_text(encoding="utf-8")
+                    use_only_cache = True
+                else:
+                    logging.warning(
+                        "Server error %s, cooldown 6h: %s — %s",
+                        status,
+                        src.get("name"),
+                        start_url,
+                    )
+                    errors.append(
+                        {
+                            "source": src.get("name"),
+                            "url": start_url,
+                            "error": f"HTTP {status} -> cooldown 6h",
+                        }
+                    )
+                    return []
+            else:
+                raise
+        except requests.exceptions.RetryError as exc:
+            cooldowns[start_url] = time.time() + 6 * 3600
+            if cache_path.exists():
+                logging.warning(
+                    "Server error (retry exhausted), using cached index + cooldown 6h: %s — %s",
+                    src.get("name"),
+                    start_url,
+                )
+                errors.append(
+                    {
+                        "source": src.get("name"),
+                        "url": start_url,
+                        "error": f"retry exhausted -> used cache + cooldown 6h: {exc}",
+                    }
+                )
+                index_html = cache_path.read_text(encoding="utf-8")
+                use_only_cache = True
+            else:
+                logging.warning(
+                    "Server error (retry exhausted), cooldown 6h: %s — %s",
+                    src.get("name"),
+                    start_url,
+                )
+                errors.append(
+                    {
+                        "source": src.get("name"),
+                        "url": start_url,
+                        "error": f"retry exhausted -> cooldown 6h: {exc}",
+                    }
+                )
+                return []
 
     # Если содержимое ленты не изменилось — пропускаем весь источник
     idx_digest = hashlib.sha256(index_html.encode("utf-8")).hexdigest()
@@ -521,8 +591,53 @@ def harvest_source(src: dict, force: bool = False):
 
     # Collect candidate links
     links = []
-    inc_re = re.compile(src.get("include_regex")) if src.get("include_regex") else None
-    exc_re = re.compile(src.get("exclude_regex")) if src.get("exclude_regex") else None
+    include_patterns = src.get("include_patterns")
+    if include_patterns:
+        if isinstance(include_patterns, (str, bytes)):
+            include_patterns = [include_patterns]
+        else:
+            include_patterns = [p for p in include_patterns if p]
+    else:
+        include_patterns = []
+
+    include_regex = src.get("include_regex")
+    include_res = []
+    if include_regex:
+        raw_patterns = (
+            [include_regex]
+            if isinstance(include_regex, (str, bytes))
+            else [p for p in include_regex if p]
+        )
+        for pattern in raw_patterns:
+            try:
+                include_res.append(re.compile(pattern))
+            except re.error as exc:
+                logging.warning(
+                    "Invalid include_regex %r for %s: %s",
+                    pattern,
+                    src.get("name"),
+                    exc,
+                )
+
+    exclude_regex = src.get("exclude_regex")
+    exclude_res = []
+    if exclude_regex:
+        raw_patterns = (
+            [exclude_regex]
+            if isinstance(exclude_regex, (str, bytes))
+            else [p for p in exclude_regex if p]
+        )
+        for pattern in raw_patterns:
+            try:
+                exclude_res.append(re.compile(pattern))
+            except re.error as exc:
+                logging.warning(
+                    "Invalid exclude_regex %r for %s: %s",
+                    pattern,
+                    src.get("name"),
+                    exc,
+                )
+
     base_host = urlparse(src["base_url"]).netloc.replace("www.", "")
     for a in soup.find_all("a"):
         href = a.get("href")
@@ -533,11 +648,11 @@ def harvest_source(src: dict, force: bool = False):
             h = urlparse(href).netloc.replace("www.", "")
             if h != base_host:
                 continue
-        if not any(p in href for p in src["include_patterns"]):
+        if include_patterns and not any(p in href for p in include_patterns):
             continue
-        if inc_re and not inc_re.search(href):
+        if include_res and not any(r.search(href) for r in include_res):
             continue
-        if exc_re and exc_re.search(href):
+        if exclude_res and any(r.search(href) for r in exclude_res):
             continue
         text_ok = (a.get_text(strip=True) or "")
         # Allow empty anchors when source explicitly permits it
@@ -580,7 +695,14 @@ def harvest_source(src: dict, force: bool = False):
     items = []
     for url in new_links:
         try:
-            html = fetch_page(url)
+            if use_only_cache:
+                page_path = PAGES_DIR / cache_key_for(url)
+                if page_path.exists():
+                    html = page_path.read_text(encoding="utf-8")
+                else:
+                    raise FileNotFoundError("cached copy missing during cooldown")
+            else:
+                html = fetch_page(url)
             item = build_item(url, src["name"], html)
             if item:
                 items.append(item)
