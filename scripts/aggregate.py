@@ -14,6 +14,21 @@ from bs4 import BeautifulSoup
 from dateutil import parser as dparser
 import pytz
 
+try:
+    from scripts.http_client import (
+        HostClient,
+        RequestStrategy,
+        SourceTemporarilyUnavailable,
+        build_strategy_registry,
+    )
+except ModuleNotFoundError:  # pragma: no cover - fallback when run as a script
+    from http_client import (  # type: ignore
+        HostClient,
+        RequestStrategy,
+        SourceTemporarilyUnavailable,
+        build_strategy_registry,
+    )
+
 # ---- Settings ----
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT / "docs"
@@ -57,12 +72,40 @@ else:
     STATE = {"headers": {}, "stats": {}, "index_hash": {}, "seen_urls": {}}
 
 STATE.setdefault("first_seen", {})
+STATE.setdefault("host_state", {})
+
+HOST_STRATEGIES: dict[str, RequestStrategy] = {}
+HOST_CLIENTS: dict[str, HostClient] = {}
 
 def save_state():
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
 
 # ---- HTTP ----
-def http_get(url: str, allow_conditional: bool = True):
+def _get_host_for_source(src: dict | None) -> str | None:
+    if not src:
+        return None
+    base = src.get("base_url") or src.get("start_url")
+    if not base:
+        return None
+    return urlparse(base).netloc
+
+
+def get_host_client(url: str, src: dict | None = None) -> HostClient | None:
+    host = urlparse(url).netloc
+    src_host = _get_host_for_source(src)
+    if src_host:
+        host = src_host
+    strategy = HOST_STRATEGIES.get(host)
+    if not strategy:
+        return None
+    client = HOST_CLIENTS.get(host)
+    if client is None:
+        client = HostClient(host, strategy, STATE)
+        HOST_CLIENTS[host] = client
+    return client
+
+
+def http_get(url: str, allow_conditional: bool = True, src: dict | None = None):
     hdrs = {
         "User-Agent": USER_AGENT,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -86,10 +129,24 @@ def http_get(url: str, allow_conditional: bool = True):
         time.sleep(sleep_for)
     if host in HOST_DELAY_OVERRIDES:
         time.sleep(random.uniform(0, 2))
-    resp = SESSION.get(url, headers=hdrs, timeout=REQUEST_TIMEOUT, allow_redirects=True)
+    client = get_host_client(url, src)
+    try:
+        if client:
+            timeout_value = None if client.strategy.timeout else (REQUEST_TIMEOUT, REQUEST_TIMEOUT)
+            resp = client.get(
+                url,
+                headers=hdrs,
+                allow_redirects=True,
+                timeout=timeout_value,
+            )
+        else:
+            resp = SESSION.get(url, headers=hdrs, timeout=REQUEST_TIMEOUT, allow_redirects=True)
+    except SourceTemporarilyUnavailable:
+        raise
+    except requests.exceptions.RequestException as exc:
+        raise
     _last_req_at[host] = time.time()
-    # Явный перехват 429 с уважением Retry-After
-    if resp.status_code == 429:
+    if not client and resp.status_code == 429:
         ra = resp.headers.get("Retry-After")
         try:
             wait = int(ra) if ra else 5
@@ -101,14 +158,15 @@ def http_get(url: str, allow_conditional: bool = True):
         _last_req_at[host] = time.time()
     if resp.status_code == 304:
         logging.info("304 Not Modified: %s", url)
-        return None, hinfo  # indicate to reuse cached file
+        return None, hinfo
     resp.raise_for_status()
-    # Save headers for next time
     new_hinfo = {}
     et = resp.headers.get("ETag")
     lm = resp.headers.get("Last-Modified")
-    if et: new_hinfo["ETag"] = et
-    if lm: new_hinfo["Last-Modified"] = lm
+    if et:
+        new_hinfo["ETag"] = et
+    if lm:
+        new_hinfo["Last-Modified"] = lm
     STATE["headers"][url] = new_hinfo
     return resp.text, new_hinfo
 
@@ -130,11 +188,11 @@ def cache_key_with_suffix(base_key: str, suffix: str) -> str:
         return f"{base_key[:-5]}{suffix}.html"
     return f"{base_key}{suffix}"
 
-def fetch_page(url: str) -> str:
+def fetch_page(url: str, src: dict | None = None) -> str:
     page_path = PAGES_DIR / cache_key_for(url)
     use_conditional = not (ARGS and getattr(ARGS, 'rebuild', False))
     try:
-        content, _ = http_get(url, allow_conditional=use_conditional)
+        content, _ = http_get(url, allow_conditional=use_conditional, src=src)
     except requests.HTTPError as exc:
         status = exc.response.status_code if exc.response is not None else None
         if status in {500, 502, 503, 504} and page_path.exists():
@@ -142,6 +200,8 @@ def fetch_page(url: str) -> str:
                 "HTTP %s for %s — using cached copy", status, url
             )
             return page_path.read_text(encoding="utf-8")
+        raise
+    except SourceTemporarilyUnavailable:
         raise
     if content is None and page_path.exists():
         # Not modified -> reuse cached
@@ -624,7 +684,7 @@ def harvest_source(src: dict, force: bool = False):
     logging.info("Harvest: %s — %s", src["name"], start_url)
     if index_html is None:
         try:
-            index_html = fetch_page(start_url)
+            index_html = fetch_page(start_url, src=src)
         except requests.HTTPError as exc:
             resp = exc.response
             status = resp.status_code if resp is not None else None
@@ -691,6 +751,37 @@ def harvest_source(src: dict, force: bool = False):
                         "source": src.get("name"),
                         "url": start_url,
                         "error": f"retry exhausted -> cooldown 6h: {exc}",
+                    }
+                )
+                return []
+        except SourceTemporarilyUnavailable as exc:
+            failures = STATE.setdefault("stats", {}).setdefault("errors", [])
+            logging.warning(
+                "Temporary unavailability for %s: %s", src.get("name"), exc
+            )
+            if cache_path.exists():
+                logging.warning(
+                    "Using cached index due to host issue: %s — %s",
+                    src.get("name"),
+                    start_url,
+                )
+                failures.append(
+                    {
+                        "source": src.get("name"),
+                        "url": start_url,
+                        "error": f"temporary unavailable -> used cache: {exc}",
+                        "status": "cached",
+                    }
+                )
+                index_html = cache_path.read_text(encoding="utf-8")
+                use_only_cache = True
+            else:
+                failures.append(
+                    {
+                        "source": src.get("name"),
+                        "url": start_url,
+                        "error": f"temporary unavailable: {exc}",
+                        "status": "skipped",
                     }
                 )
                 return []
@@ -819,10 +910,27 @@ def harvest_source(src: dict, force: bool = False):
                 else:
                     raise FileNotFoundError("cached copy missing during cooldown")
             else:
-                html = fetch_page(url)
+                html = fetch_page(url, src=src)
             item = build_item(url, src["name"], html, content_selectors=src.get("content_selectors"))
             if item:
                 items.append(item)
+        except SourceTemporarilyUnavailable as exc:
+            page_path = PAGES_DIR / cache_key_for(url)
+            if page_path.exists():
+                logging.warning(
+                    "  using cached copy for %s due to temporary issue: %s", url, exc
+                )
+                html = page_path.read_text(encoding="utf-8")
+                item = build_item(
+                    url,
+                    src["name"],
+                    html,
+                    content_selectors=src.get("content_selectors"),
+                )
+                if item:
+                    items.append(item)
+            else:
+                logging.warning("  skip %s: %s", url, exc)
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
 
@@ -951,9 +1059,11 @@ def main():
     global ARGS
     parser = argparse.ArgumentParser(description="Aggregate news feed")
     parser.add_argument("--rebuild", action="store_true", help="Force rebuild: ignore index unchanged and seen-URL filters; always rewrite unified.json")
+    parser.add_argument("--dry-run", action="store_true", help="Run without writing unified.json/state")
     ARGS = parser.parse_args()
 
     sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
+    HOST_STRATEGIES.update(build_strategy_registry(sources))
     all_items = []
     for src in sources:
         if not src.get('enabled', True):
@@ -980,7 +1090,8 @@ def main():
                 existing_count = 0
         STATE.setdefault("stats", {})["last_run"] = datetime.now(timezone.utc).isoformat()
         STATE["stats"]["items"] = existing_count
-        save_state()
+        if not ARGS.dry_run:
+            save_state()
         logging.info("No new items -> keep existing %s as-is (%d items)", OUT_JSON, existing_count)
         return
 
@@ -989,10 +1100,12 @@ def main():
         # просто нормализуем и пересохраним существующую ленту (пересортировка/обрезка)
         existing_items = load_existing_feed_items()
         feed = build_feed(existing_items)
-        OUT_JSON.write_text(json.dumps(feed, ensure_ascii=False, indent=2), encoding="utf-8")
+        if not ARGS.dry_run:
+            OUT_JSON.write_text(json.dumps(feed, ensure_ascii=False, indent=2), encoding="utf-8")
         STATE.setdefault("stats", {})["last_run"] = datetime.now(timezone.utc).isoformat()
         STATE["stats"]["items"] = len(feed["items"])
-        save_state()
+        if not ARGS.dry_run:
+            save_state()
         logging.info("Rewrote(existing only) %s (%d items)", OUT_JSON, len(feed["items"]))
         return
 
@@ -1001,10 +1114,12 @@ def main():
     merged_raw = merge_items(existing_items, all_items)
     feed = build_feed(merged_raw)
 
-    OUT_JSON.write_text(json.dumps(feed, ensure_ascii=False, indent=2), encoding="utf-8")
+    if not ARGS.dry_run:
+        OUT_JSON.write_text(json.dumps(feed, ensure_ascii=False, indent=2), encoding="utf-8")
     STATE.setdefault("stats", {})["last_run"] = datetime.now(timezone.utc).isoformat()
     STATE["stats"]["items"] = len(feed["items"])
-    save_state()
+    if not ARGS.dry_run:
+        save_state()
     logging.info("Saved feed to %s (%d items)", OUT_JSON, len(feed["items"]))
 
 if __name__ == "__main__":

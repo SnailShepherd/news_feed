@@ -21,7 +21,27 @@
     "exclude_regex": "/press/(?:contacts|docs|mediagallery|periodical|smi|events)",
     "link_min_text_len": 8,
     "max_links": 30,
-    "enabled": true
+    "enabled": true,
+    "request_strategy": {
+      "connect_timeout": 15,
+      "read_timeout": 45,
+      "max_attempts": 4,
+      "backoff_factor": 2.0,
+      "use_cloudscraper": true,
+      "warmup": {
+        "url": "https://minstroyrf.gov.ru/",
+        "delay": [5, 10],
+        "timeout": 60
+      },
+      "selenium_fallback": true,
+      "selenium_wait": 6,
+      "retry_statuses": [403, 503],
+      "extra_headers": {
+        "Referer": "https://minstroyrf.gov.ru/press/",
+        "Cache-Control": "no-cache"
+      },
+      "record_path_on_success": true
+    }
   },
   {
     "name": "АРД: статьи",
@@ -41,7 +61,15 @@
       "/News/"
     ],
     "link_min_text_len": 8,
-    "enabled": true
+    "enabled": true,
+    "request_strategy": {
+      "connect_timeout": 5,
+      "read_timeout": 25,
+      "max_attempts": 5,
+      "backoff_factor": 1.5,
+      "retry_statuses": [500, 502, 503, 504],
+      "capture_cookies": true
+    }
   },
   {
     "name": "ФАУ ФЦС",
@@ -69,7 +97,16 @@
       "/publication/"
     ],
     "link_min_text_len": 8,
-    "enabled": true
+    "enabled": true,
+    "request_strategy": {
+      "connect_timeout": 4,
+      "read_timeout": 30,
+      "max_attempts": 6,
+      "backoff_factor": 1.8,
+      "retry_statuses": [500, 502, 503, 504],
+      "proxies": [],
+      "warmup_first": false
+    }
   },
   {
     "name": "ЕЭК ЕАЭС",
@@ -134,7 +171,31 @@
     "include_regex": "^https?://(?:www\\.)?pnp\\.ru/economics/(?:\\d{4}/\\d{2}/\\d{2}/)?[^/]+\\.html$",
     "exclude_regex": "/economics/\\d+/?$",
     "restrict_domain": true,
-    "enabled": true
+    "enabled": true,
+    "request_strategy": {
+      "connect_timeout": 6,
+      "read_timeout": 30,
+      "max_attempts": 4,
+      "backoff_factor": 1.5,
+      "retry_statuses": [403],
+      "extra_headers": {
+        "Accept-Language": "ru-RU,ru;q=0.9,en;q=0.8",
+        "Referer": "https://www.pnp.ru/",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-User": "?1"
+      },
+      "warmup": {
+        "url": "https://www.pnp.ru/economics/",
+        "delay": [2, 4],
+        "timeout": 40
+      },
+      "selenium_fallback": true,
+      "selenium_wait": 5,
+      "capture_cookies": true,
+      "record_path_on_success": true
+    }
   },
   {
     "name": "ЕРЗ.РФ",
@@ -156,7 +217,15 @@
       "/news/"
     ],
     "link_min_text_len": 8,
-    "enabled": true
+    "enabled": true,
+    "request_strategy": {
+      "connect_timeout": 5,
+      "read_timeout": 25,
+      "max_attempts": 5,
+      "backoff_factor": 1.5,
+      "retry_statuses": [500, 502, 503, 504],
+      "proxies": []
+    }
   },
   {
     "name": "Правительство РФ",
