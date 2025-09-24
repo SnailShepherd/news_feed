@@ -18,12 +18,6 @@ from requests import Response, Session
 from requests.adapters import HTTPAdapter
 
 
-try:
-    import cloudscraper  # type: ignore
-except Exception:  # pragma: no cover - optional dependency during import stage
-    cloudscraper = None
-
-
 LOGGER = logging.getLogger(__name__)
 
 DEFAULT_USER_AGENT = os.environ.get(
@@ -69,7 +63,6 @@ class RequestStrategy:
     retry_statuses: List[int] = field(default_factory=list)
     extra_headers: Dict[str, str] = field(default_factory=dict)
     warmup: Optional[WarmupConfig] = None
-    use_cloudscraper: bool = False
     selenium_fallback: bool = False
     selenium_wait: float = 5.0
     selenium_extra_options: List[str] = field(default_factory=list)
@@ -148,7 +141,6 @@ def build_strategy_from_config(name: str, config: Dict[str, Any]) -> RequestStra
     warmup_cfg = config.get("warmup")
     if isinstance(warmup_cfg, dict):
         strategy.warmup = parse_warmup(warmup_cfg)
-    strategy.use_cloudscraper = bool(config.get("use_cloudscraper"))
     strategy.selenium_fallback = bool(config.get("selenium_fallback"))
     if config.get("selenium_wait") is not None:
         strategy.selenium_wait = float(config["selenium_wait"])
@@ -269,10 +261,7 @@ class HostClient:
 
     # Internal helpers ---------------------------------------------------
     def _create_session(self) -> Session:
-        if self.strategy.use_cloudscraper and cloudscraper is not None:
-            session = cloudscraper.create_scraper()
-        else:
-            session = requests.Session()
+        session = requests.Session()
         adapter = HTTPAdapter(max_retries=0)
         session.mount("http://", adapter)
         session.mount("https://", adapter)
