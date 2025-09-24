@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 24 Sep 2025 00:04:12 GMT"
+      "Last-Modified": "Wed, 24 Sep 2025 01:09:50 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 00:06:29 GMT"
@@ -1475,9 +1475,15 @@
         "url": "http://ancb.ru/publication",
         "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8440ffcb90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8440ffc550>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f84415709d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8441570b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f84413af2f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8441390160>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
         "status": "cached"
+      },
+      {
+        "source": "Минстрой России",
+        "url": "https://minstroyrf.gov.ru/press/?d=news&per-page=24",
+        "error": "temporary unavailable: warm-up failed for minstroyrf.gov.ru: warm-up failed with 401",
+        "status": "skipped"
       }
     ],
-    "last_run": "2025-09-24T00:06:39.799109+00:00",
+    "last_run": "2025-09-24T01:09:20.139441+00:00",
     "items": 638,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -1490,33 +1496,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 2.080169000009846,
-        "connect_ms": 381.38470900000243,
-        "response_ms": 383.4648780000123,
+        "dns_ms": 1303.6988300000019,
+        "connect_ms": 208.80816199999686,
+        "response_ms": 1512.5069919999987,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8441390160>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 516.2195589999783,
+        "connect_ms": 1420.3934500000344,
+        "response_ms": 1936.6130090000127,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 3.055129999950168,
-        "connect_ms": 344.61874600009423,
-        "response_ms": 347.6738760000444,
+        "dns_ms": 10654.366608000004,
+        "connect_ms": 0.0,
+        "response_ms": 5756.497849999988,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.6405469999890556,
-        "connect_ms": 411.06972199997927,
-        "response_ms": 411.7102689999683,
+        "dns_ms": 677.4269910000044,
+        "connect_ms": 51.10034999998447,
+        "response_ms": 728.5273409999888,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -1532,14 +1538,14 @@
     "https://minfin.gov.ru/ru/press-center/": "f4de3d5af002e2aeead4bf991d1876c23407fb8f2f0b3a358f6d9088836f49d2",
     "https://www.interfax-russia.ru/realty/news?per-page=32": "319a81e6235587182d6fcd92a054fa997abe50e3dc2d61c8c1d3bb6d6aa3fdf8",
     "https://www.metalinfo.ru/ru/news": "5d472c87802154c3a2d41afc72d87d5624fbba30dd3bcd325b5d024fad31e2fe",
-    "https://www.pnp.ru/economics/": "c4ff35b2503c2f9e0e9b7bc53606b57e850349a31ddd3bc441b1710deaf8e1ae",
+    "https://www.pnp.ru/economics/": "36681ee07dd3b37c4295824a137717192d0331d9be6ebcf8f3b606e68618bebf",
     "https://erzrf.ru/news/": "2a01424c560e1127b7a49995529dd5572f56009e8b577c2ec26303da144d9314",
-    "https://ria-stk.ru/news/vse-novosti.php": "3986ff3b1e8ae4b313ad15bb7e8ac8403ca79223ee46d561b11c37c1c740d441",
+    "https://ria-stk.ru/news/vse-novosti.php": "f194fddf81f12ebf5f615ae4fa76d4d6b836183a08e47a455404a1dd6b5948f2",
     "http://government.ru/news/": "bd954013e6046a621f83a2555cb20590902aca439b0f6b11ea831c31ca69e3ae",
     "https://stroygaz.ru/news/": "2dab744a6ff5c555eed89cd32b079b4ab3bcc4773712bf76bb639ec313e7ab8c",
     "https://realty.ria.ru/lenta/": "2cb1e29419f4e4b21f1711ba2c493f4a41278e251e4b62f668cd2e999144adb9",
     "https://rg.ru/tema/ekonomika": "a3cfe6a2a31db8f0b965c396dcff4b6e74b233894688c6c7503d7ee75bf78965",
-    "http://ancb.ru/publication": "888f20364316a80610381064556290b099f00930cdf53c43df9a75a3e980e146"
+    "http://ancb.ru/publication": "8e8ffd4a52fd0c745a7a477f90566ad6bb25e37be6b152c879af111e5d9851f3"
   },
   "seen_urls": {
     "НОТИМ": [
@@ -2552,10 +2558,19 @@
       "last_success_path": null
     },
     "ancb.ru": {
-      "cookies": [],
+      "cookies": [
+        {
+          "name": "PHPSESSID",
+          "value": "eac2d708f80942383e2248bc14382848",
+          "domain": "ancb.ru",
+          "path": "/",
+          "secure": false,
+          "expires": null
+        }
+      ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f84413af2f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1758672166.08374
       },
       "warmup_done": false,
@@ -2565,27 +2580,43 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "sw8M9zmcIY2P4tty",
+          "value": "ca2XzoWgRpX8MFVE",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758673557
+          "expires": 1758677358
         },
         {
           "name": "__ddg10_",
-          "value": "1758672357",
+          "value": "1758676158",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758673557
+          "expires": 1758677358
         },
         {
           "name": "__ddg9_",
-          "value": "172.182.225.5",
+          "value": "57.151.138.5",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758673557
+          "expires": 1758677358
+        },
+        {
+          "name": "__ddg1_",
+          "value": "0hCUfOX1SMJaCITy2Mtd",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1790212158
+        },
+        {
+          "name": "PHPSESSID",
+          "value": "ad76dc591f5df9446bd1dae64e015507",
+          "domain": "www.pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": null
         },
         {
           "name": "usr_abt_grp",
@@ -2601,17 +2632,17 @@
         "consecutive": 0
       },
       "warmup_done": true,
-      "last_success_path": "/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html"
+      "last_success_path": "/economics/"
     },
     "ria-stk.ru": {
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "eWvFg1AtiDzwxAxXyRSLn1E3wvLU1cBR",
+          "value": "QDYac6luqsPksX2zie8p47DwBVPJsUQZ",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758683159
+          "expires": 1758686959
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -2619,7 +2650,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1789776359
+          "expires": 1789780159
         }
       ],
       "failures": {
