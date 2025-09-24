@@ -12,44 +12,6 @@
     "enabled": true
   },
   {
-    "name": "Минстрой России",
-    "base_url": "https://minstroyrf.gov.ru",
-    "start_url": "https://minstroyrf.gov.ru/press/?d=news&per-page=24",
-    "include_patterns": [
-      "/press/"
-    ],
-    "exclude_regex": "/press/(?:contacts|docs|mediagallery|periodical|smi|events)",
-    "link_min_text_len": 8,
-    "max_links": 30,
-    "enabled": true,
-    "request_strategy": {
-      "connect_timeout": 15,
-      "read_timeout": 45,
-      "max_attempts": 4,
-      "backoff_factor": 2.0,
-      "use_cloudscraper": true,
-      "warmup": {
-        "url": "https://minstroyrf.gov.ru/",
-        "delay": [
-          5,
-          10
-        ],
-        "timeout": 60
-      },
-      "selenium_fallback": true,
-      "selenium_wait": 6,
-      "retry_statuses": [
-        403,
-        503
-      ],
-      "extra_headers": {
-        "Referer": "https://minstroyrf.gov.ru/press/",
-        "Cache-Control": "no-cache"
-      },
-      "record_path_on_success": true
-    }
-  },
-  {
     "name": "АРД: статьи",
     "base_url": "https://ardexpert.ru",
     "start_url": "https://ardexpert.ru/article",
