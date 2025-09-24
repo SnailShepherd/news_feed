@@ -132,6 +132,12 @@
     ],
     "include_regex": "/ru/news/\\d+(?:/|\\.html)?$",
     "exclude_regex": "/ru/news/(?:r\\w+|services|subscribe|market|consumer|construction|nonferrous|ferrous)",
+    "content_selectors": [
+      ".newsText",
+      ".news-detail",
+      "[itemprop='articleBody']",
+      "article"
+    ],
     "link_min_text_len": 8,
     "max_links": 20,
     "restrict_domain": true,
@@ -200,6 +206,9 @@
       "/news/"
     ],
     "link_min_text_len": 8,
+    "exclude_regex": [
+      "^https?://(?:www\\.)?ria-stk\\.ru/news/?$"
+    ],
     "enabled": true,
     "request_strategy": {
       "connect_timeout": 5,
@@ -223,6 +232,9 @@
       "/news/"
     ],
     "link_min_text_len": 8,
+    "exclude_regex": [
+      "\\?page=\\d+$"
+    ],
     "enabled": true
   },
   {
@@ -232,8 +244,13 @@
     "include_regex": "^https?://(?:www\\.)?stroygaz\\.ru/news/[a-z0-9-]+/[a-z0-9-]+/(?:[a-z0-9-]+/)*$",
     "exclude_regex": [
       "\\?",
-      "/news/?$",
-      "/news/[a-z0-9-]+/?$"
+      "/news/?$"
+    ],
+    "content_selectors": [
+      ".content",
+      ".news-detail",
+      ".article",
+      ".news-text"
     ],
     "link_min_text_len": 8,
     "enabled": true
@@ -246,6 +263,11 @@
       "/20"
     ],
     "link_min_text_len": 8,
+    "content_selectors": [
+      "[itemprop='articleBody']",
+      ".article__content",
+      "article"
+    ],
     "enabled": true
   },
   {
@@ -256,6 +278,13 @@
       "/20"
     ],
     "link_min_text_len": 8,
+    "content_selectors": [
+      "article .article__body",
+      ".article__text",
+      ".b-material-body__content",
+      "[itemprop='articleBody']",
+      "main article"
+    ],
     "enabled": true
   }
 ]

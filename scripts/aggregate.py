@@ -45,6 +45,23 @@ MAX_LINKS_PER_SOURCE = 100
 FEED_MAX_ITEMS = int(os.environ.get("FEED_MAX_ITEMS", "2000"))
 ARGS = None  # будет заполнено в main()
 
+LISTING_PATH_RE = re.compile(r"/(?:news/?$|tag/|category/|archive/|search/|page/)", re.I)
+LISTING_QUERY_RE = re.compile(r"(?:^|&)(?:page=\d+|PAGEN_\d+=\d+|VOTE_ID=\d+)", re.I)
+
+
+def is_listing_url(u: str) -> bool:
+    p = urlparse(u)
+    if LISTING_PATH_RE.search(p.path or ""):
+        return True
+    if p.query and LISTING_QUERY_RE.search(p.query):
+        return True
+    return False
+
+
+def log_listing_skip(url: str):
+    if ARGS and getattr(ARGS, "debug", False):
+        logging.info("Skip listing URL: %s", url)
+
 # Перехваты ошибок/429 и паузы между запросами к одному хосту
 SESSION = requests.Session()
 _retry = Retry(
@@ -479,6 +496,12 @@ def extract_title(soup: BeautifulSoup):
         return soup.title.string.strip()
     return None
 
+
+def html_to_text(html: str) -> str:
+    soup = BeautifulSoup(html or "", "html.parser")
+    return soup.get_text("\n", strip=True)
+
+
 def build_item(url: str, source_name: str, html: str, content_selectors=None):
     soup = BeautifulSoup(html, "html.parser")
     title = extract_title(soup) or url
@@ -590,6 +613,9 @@ def harvest_json_source(src: dict, force: bool = False):
             url = urljoin(base_url, link)
         else:
             url = link
+        if is_listing_url(url):
+            log_listing_skip(url)
+            continue
         if url in seen_links:
             continue
         seen_links.add(url)
@@ -612,6 +638,11 @@ def harvest_json_source(src: dict, force: bool = False):
         try:
             html = fetch_page(url)
             item = build_item(url, src["name"], html, content_selectors=src.get("content_selectors"))
+            body_html = entry.get("content") or entry.get("text") or entry.get("body")
+            if body_html:
+                text = html_to_text(body_html)
+                if text:
+                    item["content_text"] = text
             title = entry.get("name") or entry.get("title")
             if title:
                 item["title"] = title.strip()
@@ -858,6 +889,9 @@ def harvest_source(src: dict, force: bool = False):
             h = urlparse(href).netloc.replace("www.", "")
             if h != base_host:
                 continue
+        if is_listing_url(href):
+            log_listing_skip(href)
+            continue
         if include_patterns and not any(p in href for p in include_patterns):
             continue
         if include_res and not any(r.search(href) for r in include_res):
@@ -1062,6 +1096,7 @@ def main():
     parser = argparse.ArgumentParser(description="Aggregate news feed")
     parser.add_argument("--rebuild", action="store_true", help="Force rebuild: ignore index unchanged and seen-URL filters; always rewrite unified.json")
     parser.add_argument("--dry-run", action="store_true", help="Run without writing unified.json/state")
+    parser.add_argument("--debug", action="store_true", help="Enable verbose debug output")
     ARGS = parser.parse_args()
 
     sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
