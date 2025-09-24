@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 24 Sep 2025 03:10:17 GMT"
+      "Last-Modified": "Wed, 24 Sep 2025 03:32:24 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -1392,7 +1392,11 @@
     },
     "https://rg.ru/2025/09/24/reg-pfo/ekspert-shcherbachenko-poschital-za-skolko-rossiiane-mogut-nakopit-na-iphone-17.html": {
       "ETag": "\"dgxm1rd25j1rgv\""
-    }
+    },
+    "https://www.metalinfo.ru/ru/news/176813": {},
+    "https://www.metalinfo.ru/ru/news/176828": {},
+    "https://www.metalinfo.ru/ru/news/176834": {},
+    "https://www.metalinfo.ru/ru/news/176829": {}
   },
   "stats": {
     "cooldowns": {},
@@ -1524,10 +1528,16 @@
         "url": "https://minstroyrf.gov.ru/press/?d=news&per-page=24",
         "error": "temporary unavailable: warm-up failed for minstroyrf.gov.ru: warm-up failed with 401",
         "status": "skipped"
+      },
+      {
+        "source": "Минстрой России",
+        "url": "https://minstroyrf.gov.ru/press/?d=news&per-page=24",
+        "error": "temporary unavailable: warm-up failed for minstroyrf.gov.ru: warm-up failed with 401",
+        "status": "skipped"
       }
     ],
-    "last_run": "2025-09-24T03:18:14.555239+00:00",
-    "items": 645,
+    "last_run": "2025-09-24T03:32:04.793986+00:00",
+    "items": 649,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -1539,33 +1549,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 2.6090890000034506,
-        "connect_ms": 334.44879299997865,
-        "response_ms": 337.0578819999821,
+        "dns_ms": 679.0398549999992,
+        "connect_ms": 937.8864129999869,
+        "response_ms": 1616.926267999986,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 3.2142310000153884,
-        "connect_ms": 327.6602969999658,
-        "response_ms": 330.8745279999812,
+        "dns_ms": 479.1738680000037,
+        "connect_ms": 435.5082399999901,
+        "response_ms": 914.6821079999938,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 2.790731000004598,
-        "connect_ms": 286.9559199999685,
-        "response_ms": 289.7466509999731,
+        "dns_ms": 11944.634891999982,
+        "connect_ms": 0.0,
+        "response_ms": 1909.1049399999918,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.7036559999278325,
-        "connect_ms": 412.36094700013837,
-        "response_ms": 413.0646030000662,
+        "dns_ms": 667.9213500000003,
+        "connect_ms": 160.18833600000448,
+        "response_ms": 828.1096860000048,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -1574,19 +1584,19 @@
   },
   "index_hash": {
     "https://notim.ru/": "1b5fd813da81c391ec2d0ba735c14e7cda96b24dab1452a457fbd19b4622e900",
-    "https://ardexpert.ru/article": "cfa1482ed23b4ca886183b768d7ae8b75283a8763d6ad3793cc6a273abbddd75",
+    "https://ardexpert.ru/article": "3a61167d9a19f4b8e3360c4ff05a185e7ec0249f7203fe655e443a09a66bad38",
     "https://www.gostinfo.ru/News/List": "f05f5ab936b11cd69576c6bc1f2c4e1e10124e06204907c7e1cd1e4ba0f3e394",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "326d8349e224c01317b22cb168bc59a1c5d2a82aafb445e65cde6d2398c2f037",
-    "https://eec.eaeunion.org/news/": "d08be7a2318c33d95d3276bcc6e5836b60ea7889ade1ef8625e3f74aa74126bc",
+    "https://eec.eaeunion.org/news/": "20634df1976fff0d54f65ebf2083c30bd1bfa3fbceccd856eda323fa22d8a44a",
     "https://minfin.gov.ru/ru/press-center/": "c267dea09a14d2a64cbfa6a57f583b4d24c0ecc43f7b999d1a974b7d9d5717ab",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "9032e5219bdc1a1e5ff498e0b04b78465fbdb6e515dbb78a088d11b485dd6db0",
-    "https://www.metalinfo.ru/ru/news": "03633570c1e1de2b8897aa1b9538a1ad1206cf25a743abe6a3275af2c8451c1d",
-    "https://www.pnp.ru/economics/": "cc4e25ba223d592517134710a1a7eeab42ab89c2c4267b5c5776b3da09b2577a",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "b7f1d62e1aef32025f6af771807461ab4ebeeeb421a1a4344a99e8c8c66cd712",
+    "https://www.metalinfo.ru/ru/news": "08fa13fc26c0c89c87f280ac35fcf7170efa8dd693dbd369848a59bd847495ba",
+    "https://www.pnp.ru/economics/": "ef20bbbd8cb57468073a8de00cff676c925849836da2530ad3f4938839aa4d93",
     "https://erzrf.ru/news/": "b9e02d0d1870666a287c469b1092972ebe678df739f5e2d30d51e9a1d7dcad13",
-    "https://ria-stk.ru/news/vse-novosti.php": "9a08f40b8708aa9c22eeaeb4695fa9eb6a060f78ba891dccf7eed8e8b0cbb869",
-    "http://government.ru/news/": "74b36ec339f0cfae6d9357d62e6330b424d20cc9b2d8d871291944a5592ba6d7",
-    "https://stroygaz.ru/news/": "4e36cd1d520af6e8d4336ab78eaadb8867870b373db6a68ae2091add6ba39bb3",
-    "https://realty.ria.ru/lenta/": "be599ce230871580b39fda70c250034f6c044de83847b07773bf1f45d342aa70",
+    "https://ria-stk.ru/news/vse-novosti.php": "c2ef9680e56cdc126846ec633000220fbc5a0a868533b7fdbf2b3710fcd583ed",
+    "http://government.ru/news/": "351ccc0603979e6658209ba71ad113b57af5b16cc800867922183dce18228f30",
+    "https://stroygaz.ru/news/": "74b5c2c8f7f00f50df1f163e8fcd89b2b487eba0112ead399399b46a19f5fde9",
+    "https://realty.ria.ru/lenta/": "24cd5a42f84deea39a1351b783c7e5ab910c359c5294e56ca3ea4c1a64216270",
     "https://rg.ru/tema/ekonomika": "58ac01e6bdf6e824947b94aaafc7ac9f06bb123187afbff9ac7c186b5fc68149",
     "http://ancb.ru/publication": "8e8ffd4a52fd0c745a7a477f90566ad6bb25e37be6b152c879af111e5d9851f3"
   },
@@ -2134,6 +2144,10 @@
       "https://www.interfax-russia.ru/realty/news/do-2-mlrd-rubley-potrebuetsya-na-vosstanovlenie-hrama-na-severo-vostoke-moskvy"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/176813",
+      "https://www.metalinfo.ru/ru/news/176828",
+      "https://www.metalinfo.ru/ru/news/176834",
+      "https://www.metalinfo.ru/ru/news/176829",
       "https://www.metalinfo.ru/ru/news/176766",
       "https://www.metalinfo.ru/ru/news/176821",
       "https://www.metalinfo.ru/ru/news/176809",
@@ -2150,10 +2164,6 @@
       "https://www.metalinfo.ru/ru/news/176820",
       "https://www.metalinfo.ru/ru/news/176808",
       "https://www.metalinfo.ru/ru/news/176811",
-      "https://www.metalinfo.ru/ru/news/176805",
-      "https://www.metalinfo.ru/ru/news/176810",
-      "https://www.metalinfo.ru/ru/news/176800",
-      "https://www.metalinfo.ru/ru/news/176794",
       "https://www.metalinfo.ru/ru/news/176821",
       "https://www.metalinfo.ru/ru/news/176809",
       "https://www.metalinfo.ru/ru/news/176827",
@@ -2169,10 +2179,6 @@
       "https://www.metalinfo.ru/ru/news/176820",
       "https://www.metalinfo.ru/ru/news/176808",
       "https://www.metalinfo.ru/ru/news/176811",
-      "https://www.metalinfo.ru/ru/news/176805",
-      "https://www.metalinfo.ru/ru/news/176810",
-      "https://www.metalinfo.ru/ru/news/176800",
-      "https://www.metalinfo.ru/ru/news/176794",
       "https://www.metalinfo.ru/ru/news/176821",
       "https://www.metalinfo.ru/ru/news/176809",
       "https://www.metalinfo.ru/ru/news/176827",
@@ -2187,11 +2193,7 @@
       "https://www.metalinfo.ru/ru/news/176799",
       "https://www.metalinfo.ru/ru/news/176820",
       "https://www.metalinfo.ru/ru/news/176808",
-      "https://www.metalinfo.ru/ru/news/176811",
-      "https://www.metalinfo.ru/ru/news/176805",
-      "https://www.metalinfo.ru/ru/news/176810",
-      "https://www.metalinfo.ru/ru/news/176800",
-      "https://www.metalinfo.ru/ru/news/176794"
+      "https://www.metalinfo.ru/ru/news/176811"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/senatoram-predstavyat-prognoz-socialno-ekonomicheskogo-razvitiya-na-2026-2028-gody.html",
@@ -3076,27 +3078,43 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "ITUT8eugza2pnePl",
+          "value": "kXsnVFvl2wmud00b",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758684734
+          "expires": 1758685912
         },
         {
           "name": "__ddg10_",
-          "value": "1758683534",
+          "value": "1758684712",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758684734
+          "expires": 1758685912
         },
         {
           "name": "__ddg9_",
-          "value": "132.196.32.66",
+          "value": "57.151.137.149",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758684734
+          "expires": 1758685912
+        },
+        {
+          "name": "__ddg1_",
+          "value": "M2n2MYvmqjwEXp4FzpF9",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1790220712
+        },
+        {
+          "name": "PHPSESSID",
+          "value": "9931a38f1c22aa7e01cc56dfd7a06143",
+          "domain": "www.pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": null
         },
         {
           "name": "usr_abt_grp",
@@ -3112,17 +3130,17 @@
         "consecutive": 0
       },
       "warmup_done": true,
-      "last_success_path": "/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html"
+      "last_success_path": "/economics/"
     },
     "ria-stk.ru": {
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "xUu3IkLdUrizEIT0UPJKtKHqMJWvOjp8",
+          "value": "gj7UL52QeYvU4g1IvBZrrzax5M4fKV3Y",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758694435
+          "expires": 1758695515
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -3130,7 +3148,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1789787634
+          "expires": 1789788715
         }
       ],
       "failures": {
