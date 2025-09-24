@@ -20,6 +20,7 @@ try:
         RequestStrategy,
         SourceTemporarilyUnavailable,
         build_strategy_registry,
+        DEFAULT_USER_AGENT,
     )
 except ModuleNotFoundError:  # pragma: no cover - fallback when run as a script
     from http_client import (  # type: ignore
@@ -27,6 +28,7 @@ except ModuleNotFoundError:  # pragma: no cover - fallback when run as a script
         RequestStrategy,
         SourceTemporarilyUnavailable,
         build_strategy_registry,
+        DEFAULT_USER_AGENT,
     )
 
 # ---- Settings ----
@@ -38,7 +40,7 @@ STATE_FILE = CACHE_DIR / "state.json"
 OUT_JSON = DOCS_DIR / "unified.json"
 
 REQUEST_TIMEOUT = 30
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+USER_AGENT = DEFAULT_USER_AGENT
 MAX_LINKS_PER_SOURCE = 100
 FEED_MAX_ITEMS = int(os.environ.get("FEED_MAX_ITEMS", "2000"))
 ARGS = None  # будет заполнено в main()

@@ -26,6 +26,11 @@ except Exception:  # pragma: no cover - optional dependency during import stage
 
 LOGGER = logging.getLogger(__name__)
 
+DEFAULT_USER_AGENT = os.environ.get(
+    "NEWSFEED_USER_AGENT",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+)
+
 _DDOS_GUARD_COOKIE_PREFIXES = (
     "__ddg",
     "ddg2",
@@ -334,8 +339,21 @@ class HostClient:
         warmup_url = self.strategy.warmup.url or url
         timeout = self.strategy.warmup.timeout or self.strategy.timeout
         try:
+            warmup_headers = {
+                "User-Agent": DEFAULT_USER_AGENT,
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "ru,en;q=0.9",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Connection": "keep-alive",
+            }
+            warmup_headers.update(self.strategy.extra_headers)
             LOGGER.info("Warm-up %s using %s", self.host, warmup_url)
-            response = self._session.get(warmup_url, timeout=timeout, allow_redirects=True)
+            response = self._session.get(
+                warmup_url,
+                timeout=timeout,
+                allow_redirects=True,
+                headers=warmup_headers,
+            )
             LOGGER.debug("Warm-up response headers for %s: %s", self.host, response.headers)
             LOGGER.debug("Warm-up cookies for %s: %s", self.host, response.cookies.get_dict())
             protection_cookies = self._has_protection_cookies(response)

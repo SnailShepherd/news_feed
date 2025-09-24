@@ -9,6 +9,7 @@ from requests.cookies import RequestsCookieJar
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
 from scripts.http_client import (
+    DEFAULT_USER_AGENT,
     HostClient,
     RequestStrategy,
     SourceTemporarilyUnavailable,
@@ -126,6 +127,16 @@ def _cookie_jar_with(name: str) -> RequestsCookieJar:
     return jar
 
 
+class RecordingSession(DummySession):
+    def __init__(self, results):
+        super().__init__(results)
+        self.calls = []
+
+    def get(self, *args, **kwargs):
+        self.calls.append(kwargs)
+        return super().get(*args, **kwargs)
+
+
 def test_warmup_accepts_401_with_ddos_cookies(monkeypatch):
     state = {}
     warmup = WarmupConfig(url="https://example.com/warm", delay_range=(0.0, 0.0))
@@ -148,6 +159,26 @@ def test_warmup_accepts_401_with_ddos_cookies(monkeypatch):
     warmup_stats = state["stats"]["metrics"]["example.com"]["warmup"]
     assert warmup_stats["result"] == "http_4xx_with_cookies"
     assert "__ddg" in "".join(warmup_stats["cookies"])
+
+
+def test_warmup_uses_default_headers(monkeypatch):
+    state = {}
+    warmup = WarmupConfig(url="https://example.com/warm", delay_range=(0.0, 0.0))
+    strategy = RequestStrategy(warmup=warmup)
+    client = HostClient("example.com", strategy, state)
+    session = RecordingSession([DummyResponse(status_code=200), DummyResponse(status_code=200)])
+    client._session = session
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    response = client.get("https://example.com/data", headers={})
+
+    assert response.status_code == 200
+    assert session.calls
+    headers = session.calls[0].get("headers")
+    assert headers is not None
+    assert headers.get("User-Agent") == DEFAULT_USER_AGENT
+    assert headers.get("Accept")
+    assert headers.get("Accept-Language")
 
 
 def test_warmup_401_without_cookies_uses_selenium(monkeypatch):
