@@ -9,7 +9,7 @@
       "/article"
     ],
     "link_min_text_len": 16,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Минстрой России",
@@ -30,12 +30,18 @@
       "use_cloudscraper": true,
       "warmup": {
         "url": "https://minstroyrf.gov.ru/",
-        "delay": [5, 10],
+        "delay": [
+          5,
+          10
+        ],
         "timeout": 60
       },
       "selenium_fallback": true,
       "selenium_wait": 6,
-      "retry_statuses": [403, 503],
+      "retry_statuses": [
+        403,
+        503
+      ],
       "extra_headers": {
         "Referer": "https://minstroyrf.gov.ru/press/",
         "Cache-Control": "no-cache"
@@ -51,7 +57,7 @@
       "/article/"
     ],
     "link_min_text_len": 8,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Гостинформ",
@@ -67,7 +73,12 @@
       "read_timeout": 25,
       "max_attempts": 5,
       "backoff_factor": 1.5,
-      "retry_statuses": [500, 502, 503, 504],
+      "retry_statuses": [
+        500,
+        502,
+        503,
+        504
+      ],
       "capture_cookies": true
     }
   },
@@ -86,7 +97,7 @@
     "include_regex": "/press-(?:tsentr/novosti|center/news)/[^/?#]+/?$",
     "restrict_domain": true,
     "max_links": 50,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "АНЦБ",
@@ -103,7 +114,12 @@
       "read_timeout": 30,
       "max_attempts": 6,
       "backoff_factor": 1.8,
-      "retry_statuses": [500, 502, 503, 504],
+      "retry_statuses": [
+        500,
+        502,
+        503,
+        504
+      ],
       "proxies": [],
       "warmup_first": false
     }
@@ -123,7 +139,7 @@
     ],
     "link_min_text_len": 8,
     "restrict_domain": true,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Минфин России",
@@ -133,7 +149,7 @@
       "/press-center"
     ],
     "link_min_text_len": 8,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Интерфакс-Недвижимость",
@@ -143,7 +159,7 @@
       "/realty/news/"
     ],
     "link_min_text_len": 8,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Металлоснабжение и сбыт",
@@ -157,7 +173,7 @@
     "link_min_text_len": 8,
     "max_links": 20,
     "restrict_domain": true,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Парламентская газета: Экономика",
@@ -177,7 +193,9 @@
       "read_timeout": 30,
       "max_attempts": 4,
       "backoff_factor": 1.5,
-      "retry_statuses": [403],
+      "retry_statuses": [
+        403
+      ],
       "extra_headers": {
         "Accept-Language": "ru-RU,ru;q=0.9,en;q=0.8",
         "Referer": "https://www.pnp.ru/",
@@ -188,7 +206,10 @@
       },
       "warmup": {
         "url": "https://www.pnp.ru/economics/",
-        "delay": [2, 4],
+        "delay": [
+          2,
+          4
+        ],
         "timeout": 40
       },
       "selenium_fallback": true,
@@ -207,7 +228,7 @@
     "link_min_text_len": 8,
     "include_regex": "^https?://(?:www\\.)?erzrf\\.ru/news/[^?#/]+/?$",
     "restrict_domain": true,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "РИА СТК",
@@ -223,7 +244,12 @@
       "read_timeout": 25,
       "max_attempts": 5,
       "backoff_factor": 1.5,
-      "retry_statuses": [500, 502, 503, 504],
+      "retry_statuses": [
+        500,
+        502,
+        503,
+        504
+      ],
       "proxies": []
     }
   },
@@ -235,7 +261,7 @@
       "/news/"
     ],
     "link_min_text_len": 8,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Стройгаз.ру",
@@ -248,7 +274,7 @@
       "/news/[a-z0-9-]+/?$"
     ],
     "link_min_text_len": 8,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "РИА Недвижимость: лента",
@@ -258,7 +284,7 @@
       "/20"
     ],
     "link_min_text_len": 8,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Российская газета: Экономика",
@@ -268,18 +294,6 @@
       "/20"
     ],
     "link_min_text_len": 8,
-    "enabled": false
-  },
-  {
-    "name": "Главгосэкспертиза",
-    "base_url": "https://gge.ru",
-    "start_url": "https://gge.ru/press-center/news/",
-    "include_patterns": [
-      "/press-center/news"
-    ],
-    "exclude_regex": "/press-center/(?:publications|mediagallery|smi|open-events|.*\\?)",
-    "link_min_text_len": 8,
-    "max_links": 20,
-    "enabled": false
+    "enabled": true
   }
 ]
