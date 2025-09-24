@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 24 Sep 2025 19:23:57 GMT"
+      "Last-Modified": "Wed, 24 Sep 2025 21:15:21 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"2633b-1YnIVsyhXct4kEFG4acrvUFDWaw\""
+      "ETag": "W/\"25be7-KwAdBhe5PRBVJj8ZvAkMP7KGkkU\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"f7e4pmtzn63ogi\""
+      "ETag": "\"a4my8gqa0q3tt2\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -1866,6 +1866,19 @@
     },
     "https://rg.ru/2025/09/24/reg-szfo/otkroiut-turnikety.html": {
       "ETag": "\"16mmxqhzju01lfs\""
+    },
+    "http://ancb.ru/publication/read/20186": {},
+    "https://rg.ru/2025/09/24/reg-cfo/klient-povzroslel.html": {
+      "ETag": "\"zn3ve6zvk11rw2\""
+    },
+    "https://rg.ru/2025/09/24/reg-cfo/i-bulochnaia-ta-zhe.html": {
+      "ETag": "\"acxxo1a7va1sim\""
+    },
+    "https://rg.ru/2025/09/24/reg-cfo/v-moskve-i-regionah-nachali-vkliuchat-otoplenie.html": {
+      "ETag": "\"103x1kfkdfb20wv\""
+    },
+    "https://rg.ru/2025/09/24/reg-cfo/zovet-zavod.html": {
+      "ETag": "\"deu1bogynr1ryp\""
     }
   },
   "stats": {
@@ -2060,8 +2073,8 @@
         "status": "cached"
       }
     ],
-    "last_run": "2025-09-24T19:24:25.265586+00:00",
-    "items": 859,
+    "last_run": "2025-09-24T21:15:11.129340+00:00",
+    "items": 864,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -2073,56 +2086,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 737.018317000036,
-        "connect_ms": 109.8578949999478,
-        "response_ms": 846.8762119999838,
+        "dns_ms": 580.3893829999964,
+        "connect_ms": 590.0280049999934,
+        "response_ms": 1170.4173879999898,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9516dc5370>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 238.77832700000567,
+        "connect_ms": 157.7622299999888,
+        "response_ms": 396.54055699999446,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 1170.4625360000023,
+        "dns_ms": 5888.772437999989,
         "connect_ms": 0.0,
-        "response_ms": 1047.915890000013,
+        "response_ms": 1363.3911869999906,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9516dfa990>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 630.2379839999901,
+        "connect_ms": 199.17066499999692,
+        "response_ms": 829.408648999987,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "1b5fd813da81c391ec2d0ba735c14e7cda96b24dab1452a457fbd19b4622e900",
-    "https://ardexpert.ru/article": "b2d1c81bea8c21d95e1eb863b3aba00e4ccb92ba0db76e86901ea208c1730e6e",
+    "https://ardexpert.ru/article": "13f18ff10abc4330257a41f48c35a9930e947afb8c7efc3d66f4c868c2738de6",
     "https://www.gostinfo.ru/News/List": "f05f5ab936b11cd69576c6bc1f2c4e1e10124e06204907c7e1cd1e4ba0f3e394",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "326d8349e224c01317b22cb168bc59a1c5d2a82aafb445e65cde6d2398c2f037",
-    "https://eec.eaeunion.org/news/": "486f617ec0a73128bd1326ef8237abdb8a9569aba3f29caac7f269b7a425afbb",
-    "https://minfin.gov.ru/ru/press-center/": "9bf3686770aed7184c37fe2a787bff989fdde46931cea7dd7d1972d58c20aeb3",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "e9fe86fd8d9665aff3e362ca50147036eeae323cac043220975386eed9f35a8d",
+    "https://eec.eaeunion.org/news/": "dbf05f886d243831cf566b70ee21cff5a10a72eed8e595cdc2a31a8da493e5ad",
+    "https://minfin.gov.ru/ru/press-center/": "301ae5913efe9d7e131b0d01168d62037cff0c7b36ef598f0cf6ac07118bcaf2",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "613291fcaed59f5d869da5d35a6d3959736d21332fd261c086e82bf38c7d3e97",
     "https://www.metalinfo.ru/ru/news": "c1638730fa46d70c63e6f84418b31e4cdad8eec72f0c7ec02a3df6e468751bb8",
-    "https://www.pnp.ru/economics/": "9e844d0b4bb094f2a0864eb2f398a930fa47afe816fc6a455ca44b13dce5a4c3",
-    "https://erzrf.ru/news/": "63ae41374654e978b81467a6ac7bad81bd3bb848bb9dbba8f834d67e50c350a1",
-    "https://ria-stk.ru/news/vse-novosti.php": "ecc343d48ed33225961ba1588e333b4e684e5a96cffa91d2f3ff9b21f50af31a",
-    "http://government.ru/news/": "85b2bde08e38a50b3fc91059f892f329c1a8c42cc4da2bff16c88e597784b3db",
-    "https://stroygaz.ru/news/": "8c741a60d36af67fd9aa5fc889e22562b72fe7bc39ad7b166d857e2beb5d239e",
-    "https://realty.ria.ru/lenta/": "e8583ec95e537d8015caad1386fb91c316110df367307bae712cdea26afee8e1",
-    "https://rg.ru/tema/ekonomika": "f38907122d39421930cd9536dd82405a2ddeb35aa383aacde582c30e6090d055",
-    "http://ancb.ru/publication": "6fcda4f273b175f32ae25e2fe9d2a493a4fdd78c6ec3e78f7b6766bba7ec2179"
+    "https://www.pnp.ru/economics/": "82023268aeac05b020dfd994f430dac4ddf708821378aee1761be0ef0503afcf",
+    "https://erzrf.ru/news/": "f34417bb680c8100e7141fb2e78f6f52880caacd323d5a939f3e8352831fe716",
+    "https://ria-stk.ru/news/vse-novosti.php": "f3ec329e82d2c36402bb6ee5ff7273d20c66377cbd9de59b9a237cb20e98216f",
+    "http://government.ru/news/": "8189cc40a6be2f52a20df1ad4e62d124585fca02b3c2ac8e4e4114bfb5adb661",
+    "https://stroygaz.ru/news/": "2fb34a8b75f5f2b29437f94fb1ab02ff409d1113c380d6b185f9c3550b2eec8a",
+    "https://realty.ria.ru/lenta/": "057a2a6f8d45329285d5151f40c23fb2e4615aacbb0330a0b42b0a24814d5ed6",
+    "https://rg.ru/tema/ekonomika": "6e89363a45055584d0048d19ed683e30085ceab32d3ea04e8fb23383b283949e",
+    "http://ancb.ru/publication": "b193fdaf36ff5598fa6d93db345ae4d04269d6666cbce0b38a577c0887a00a1c"
   },
   "seen_urls": {
     "НОТИМ": [
@@ -2917,6 +2930,10 @@
       "https://realty.ria.ru/20250924/rossija-2043912993.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/09/24/reg-cfo/klient-povzroslel.html",
+      "https://rg.ru/2025/09/24/reg-cfo/i-bulochnaia-ta-zhe.html",
+      "https://rg.ru/2025/09/24/reg-cfo/v-moskve-i-regionah-nachali-vkliuchat-otoplenie.html",
+      "https://rg.ru/2025/09/24/reg-cfo/zovet-zavod.html",
       "https://rg.ru/2025/09/24/reg-szfo/otkroiut-turnikety.html",
       "https://rg.ru/2025/09/24/pochemu-banki-stali-chashche-proshchat-shtrafy-za-prosrochku-po-kreditam.html",
       "https://rg.ru/2025/09/24/v-ator-obiasnili-chto-delat-turistam-iz-rf-kotorye-posle-turcii-edut-v-kitaj.html",
@@ -2936,7 +2953,6 @@
       "https://rg.ru/2025/09/24/reg-skfo/stavropolskij-zastrojshchik-ne-smog-dokazat-chto-imenno-on-1.html",
       "https://rg.ru/2025/09/24/ekspert-goncharenko-novyj-biudzhet-zapuskaet-programmy-po-podderzhke-semej.html",
       "https://rg.ru/2025/09/24/oteli-vmesto-polia.html",
-      "https://rg.ru/2025/09/24/bank-rossii-ocenil-vliianie-vozmozhnogo-povysheniia-nds-na-infliaciiu.html",
       "https://rg.ru/2025/09/24/kabmin-odobril-proekt-federalnogo-biudzheta-na-2026-2028-gody.html",
       "https://rg.ru/2025/09/24/ekspert-savchishina-v-prioritetah-novogo-biudzheta-socialka-oborona-i-nacproekty.html",
       "https://rg.ru/2025/09/24/aeroporty-sochi-i-gelendzhika-vozobnovili-rabotu.html",
@@ -2946,9 +2962,6 @@
       "https://rg.ru/2025/09/24/putin-vystupit-na-globalnom-atomnom-forume.html",
       "https://rg.ru/2025/09/24/siluanov-ozvuchil-prognoz-po-deficitu-biudzheta-na-2026-2028-gody.html",
       "https://rg.ru/2025/09/24/putin-povysil-zarplaty-genprokurora-i-glavy-sledstvennogo-komiteta-s-oktiabria.html",
-      "https://rg.ru/2025/09/24/putin-ukazal-povysit-zarplaty-sudej-s-1-oktiabria.html",
-      "https://rg.ru/2025/09/24/v-minfine-zaplanirovali-privatizaciiu-krupnejshih-goskompanij.html",
-      "https://rg.ru/2025/09/24/pervyj-regionalnyj-festival-reklamy-obiavliaet-pobeditelej-iv-sezona.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
       "https://rg.ru/2025/09/17/v-moskve-otkrylas-desiataia-gmp-konferenciia-pod-devizom-reguliruia-segodnia-sozdaem-stabilnoe-zavtra.html",
@@ -2960,6 +2973,7 @@
       "https://rg.ru/2025/09/17/v-moskve-otkrylas-desiataia-gmp-konferenciia-pod-devizom-reguliruia-segodnia-sozdaem-stabilnoe-zavtra.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20186",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -2994,7 +3008,6 @@
       "http://ancb.ru/publication/read/19984",
       "http://ancb.ru/publication/read/19983",
       "http://ancb.ru/publication/read/19982",
-      "http://ancb.ru/publication/read/19977",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -3029,7 +3042,6 @@
       "http://ancb.ru/publication/read/19984",
       "http://ancb.ru/publication/read/19983",
       "http://ancb.ru/publication/read/19982",
-      "http://ancb.ru/publication/read/19977",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -3064,7 +3076,6 @@
       "http://ancb.ru/publication/read/19984",
       "http://ancb.ru/publication/read/19983",
       "http://ancb.ru/publication/read/19982",
-      "http://ancb.ru/publication/read/19977",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -3099,7 +3110,6 @@
       "http://ancb.ru/publication/read/19984",
       "http://ancb.ru/publication/read/19983",
       "http://ancb.ru/publication/read/19982",
-      "http://ancb.ru/publication/read/19977",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -3133,8 +3143,7 @@
       "http://ancb.ru/publication/read/19988",
       "http://ancb.ru/publication/read/19984",
       "http://ancb.ru/publication/read/19983",
-      "http://ancb.ru/publication/read/19982",
-      "http://ancb.ru/publication/read/19977"
+      "http://ancb.ru/publication/read/19982"
     ]
   },
   "first_seen": {
@@ -3255,7 +3264,8 @@
     "38d17d65e53a455efbca1f47b3508aa68e691b8cde028a2f0a87e6dca538bb1e": "2025-09-23T23:58:00+03:00",
     "e934a9aeb340f33aa8f7d7d5f0a8194d08b4ebabb4fa0086a401cb58830fa7ac": "2025-09-24T02:24:00+03:00",
     "b12259273d52a835fa440100968772a0215538e8b86f38a3fd1aabf0b7ed04cb": "2025-09-24T18:16:00+03:00",
-    "c0c7cdc76783a7ebf1d4eb4233a0948b10f6ca5e82e96aa074d4d9f156487d02": "2025-09-24T18:16:00+03:00"
+    "c0c7cdc76783a7ebf1d4eb4233a0948b10f6ca5e82e96aa074d4d9f156487d02": "2025-09-24T18:16:00+03:00",
+    "23f3912823b793ab1f5813d1ac3bfe4c637eb4d2ea75c92341fa6c19ae9d6cec": "2025-09-25T00:14:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -3285,8 +3295,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f95176bf490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1758741728.406744
       },
       "warmup_done": false,
@@ -3296,39 +3306,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "m4TnjXl92DmThXP8",
+          "value": "qDXfJ6nTzFUyNtP2",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758743004
+          "expires": 1758749689
         },
         {
           "name": "__ddg10_",
-          "value": "1758741804",
+          "value": "1758748489",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758743004
+          "expires": 1758749689
         },
         {
           "name": "__ddg9_",
-          "value": "52.159.247.151",
+          "value": "68.220.61.199",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758743004
-        },
-        {
-          "name": "__ddg1_",
-          "value": "2ElhHTTFetz9gvLN7Tft",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1790277804
+          "expires": 1758749689
         },
         {
           "name": "PHPSESSID",
-          "value": "a7efbdc512a384be7726d9116c87a960",
+          "value": "c8c467979b7066db64591ccccdbc1357",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -3354,11 +3356,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "mhYoVbUkVwHA6Ot7NdeGF2mHrinRrFWc",
+          "value": "wMxaOt1rtunKSHOArYe7x03bjctK1yMv",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758749039
+          "expires": 1758759293
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -3366,12 +3368,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1789842239
+          "expires": 1789852493
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9516dfa5d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1758741837.5039477
       },
       "warmup_done": false,
