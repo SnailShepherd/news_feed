@@ -5,10 +5,13 @@ from __future__ import annotations
 import contextlib
 import json
 import logging
+import os
 import random
+import shutil
 import socket
 import time
 from dataclasses import dataclass, field
+from http.cookies import SimpleCookie
 from typing import Any, Dict, Iterable, List, MutableMapping, Optional, Tuple
 
 import requests
@@ -23,6 +26,18 @@ except Exception:  # pragma: no cover - optional dependency during import stage
 
 
 LOGGER = logging.getLogger(__name__)
+
+_DDOS_GUARD_COOKIE_PREFIXES = (
+    "__ddg",
+    "ddg1",
+    "ddg2",
+    "ddg3",
+    "ddg4",
+    "ddg5",
+    "cf_clearance",
+    "cf_bm",
+    "cf_chl_",
+)
 
 
 class SourceTemporarilyUnavailable(RuntimeError):
@@ -276,7 +291,7 @@ class HostClient:
     def _store_cookies(self, response: Optional[Response] = None) -> None:
         if not self.strategy.capture_cookies:
             return
-        jar = response.cookies if response is not None else self._session.cookies
+        jar = response.cookies if response is not None and response.cookies else self._session.cookies
         cookies: List[Dict[str, Any]] = []
         for cookie in jar:
             cookies.append(
@@ -289,33 +304,144 @@ class HostClient:
                     "expires": cookie.expires,
                 }
             )
+        if not cookies:
+            return
         self.state_root["cookies"] = cookies
+
+    def _collect_cookie_names(self, response: Optional[Response] = None) -> List[str]:
+        names = set()
+        names.update(cookie.name.lower() for cookie in self._session.cookies)
+        if response is not None:
+            names.update(cookie.name.lower() for cookie in response.cookies)
+            header_values: List[str] = []
+            header = response.headers.get("Set-Cookie") if hasattr(response, "headers") else None
+            if header:
+                header_values.append(str(header))
+            raw_headers = getattr(getattr(response, "raw", None), "headers", None)
+            if raw_headers is not None:
+                for getter_name in ("get_all", "getall", "getlist"):
+                    getter = getattr(raw_headers, getter_name, None)
+                    if getter:
+                        try:
+                            values = getter("Set-Cookie")  # type: ignore[arg-type]
+                        except Exception:  # pragma: no cover - defensive for incompatible interfaces
+                            values = None
+                        if not values:
+                            continue
+                        if isinstance(values, (list, tuple)):
+                            header_values.extend(str(value) for value in values if value)
+                        else:
+                            header_values.append(str(values))
+            for value in header_values:
+                try:
+                    parsed = SimpleCookie()
+                    parsed.load(value)
+                except Exception:  # pragma: no cover - defensive for malformed cookies
+                    continue
+                for morsel in parsed.values():
+                    name = morsel.key.lower()
+                    if name:
+                        names.add(name)
+        return sorted(names)
+
+    def _has_protection_cookies(self, response: Optional[Response] = None) -> bool:
+        for name in self._collect_cookie_names(response):
+            for prefix in _DDOS_GUARD_COOKIE_PREFIXES:
+                if name.startswith(prefix):
+                    return True
+            if "ddos" in name and "guard" in name:
+                return True
+        return False
 
     def _ensure_warmup(self, url: str) -> None:
         if not self.strategy.warmup or self.state_root.get("warmup_done"):
             return
+        warmup_metrics = self.stats_root.setdefault("warmup", {})
+        if self.strategy.capture_cookies and self.state_root.get("cookies"):
+            if self._has_protection_cookies():
+                LOGGER.info("Warm-up for %s skipped: cached protection cookies present", self.host)
+                warmup_metrics.update({
+                    "mode": "cached",
+                    "result": "cached_cookies",
+                    "cookies": self._collect_cookie_names(),
+                })
+                warmup_metrics.pop("error", None)
+                self.state_root["warmup_done"] = True
+                return
         warmup_url = self.strategy.warmup.url or url
         timeout = self.strategy.warmup.timeout or self.strategy.timeout
         try:
             LOGGER.info("Warm-up %s using %s", self.host, warmup_url)
             response = self._session.get(warmup_url, timeout=timeout, allow_redirects=True)
-            if response.status_code >= 400:
+            LOGGER.debug("Warm-up response headers for %s: %s", self.host, response.headers)
+            LOGGER.debug("Warm-up cookies for %s: %s", self.host, response.cookies.get_dict())
+            protection_cookies = self._has_protection_cookies(response)
+            if response.status_code >= 400 and not protection_cookies:
+                warmup_metrics.update(
+                    {
+                        "mode": "http",
+                        "status_code": response.status_code,
+                        "result": "http_error",
+                        "cookies": self._collect_cookie_names(response),
+                    }
+                )
+                # Even if we think there are no protection cookies, persist what we saw to aid diagnostics.
+                self._store_cookies(response)
                 raise requests.HTTPError(f"warm-up failed with {response.status_code}")
+            if protection_cookies and response.status_code >= 400:
+                LOGGER.info(
+                    "Warm-up for %s solved protection with status %s", self.host, response.status_code
+                )
+                warmup_metrics.update(
+                    {
+                        "mode": "http",
+                        "status_code": response.status_code,
+                        "result": "http_4xx_with_cookies",
+                        "cookies": self._collect_cookie_names(response),
+                    }
+                )
+                warmup_metrics.pop("error", None)
+            else:
+                warmup_metrics.update(
+                    {
+                        "mode": "http",
+                        "status_code": response.status_code,
+                        "result": "http_success",
+                        "cookies": self._collect_cookie_names(response),
+                    }
+                )
+                warmup_metrics.pop("error", None)
             self._store_cookies(response)
             delay_min, delay_max = self.strategy.warmup.delay_range
             time.sleep(random.uniform(delay_min, delay_max))
             self.state_root["warmup_done"] = True
         except Exception as exc:
             LOGGER.warning("Warm-up for %s failed: %s", self.host, exc)
+            warmup_metrics.setdefault("mode", "http")
+            warmup_metrics.setdefault("cookies", self._collect_cookie_names())
+            warmup_metrics["error"] = str(exc)
+            warmup_metrics["result"] = "http_error"
             if self.strategy.selenium_fallback:
                 if self._selenium_warmup(warmup_url):
+                    warmup_metrics.update(
+                        {
+                            "mode": "selenium",
+                            "result": "selenium_success",
+                            "cookies": self._collect_cookie_names(),
+                        }
+                    )
+                    warmup_metrics.pop("error", None)
                     self.state_root["warmup_done"] = True
                     return
+                warmup_metrics.update({"mode": "selenium", "result": "selenium_failed"})
             raise SourceTemporarilyUnavailable(f"warm-up failed for {self.host}: {exc}")
 
     def _selenium_warmup(self, url: str) -> bool:
         if not self.strategy.selenium_fallback:
             return False
+        if self.strategy.capture_cookies and self._has_protection_cookies():
+            LOGGER.info("Skipping Selenium warm-up for %s: protection cookies already loaded", self.host)
+            return True
         try:
             from selenium import webdriver
             from selenium.webdriver.chrome.options import Options as ChromeOptions
@@ -327,6 +453,15 @@ class HostClient:
         options.add_argument("--headless=new")
         options.add_argument("--disable-gpu")
         options.add_argument("--no-sandbox")
+        binary_location = os.environ.get("CHROME_BINARY")
+        if not binary_location:
+            for candidate in ("chromium-browser", "chromium", "google-chrome", "google-chrome-stable"):
+                binary_location = shutil.which(candidate)
+                if binary_location:
+                    break
+        if binary_location:
+            options.binary_location = binary_location
+            LOGGER.debug("Using Chrome binary for %s: %s", self.host, binary_location)
         for extra in self.strategy.selenium_extra_options:
             options.add_argument(extra)
 

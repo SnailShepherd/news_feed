@@ -8,15 +8,33 @@ from requests.cookies import RequestsCookieJar
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
-from scripts.http_client import HostClient, RequestStrategy, SourceTemporarilyUnavailable, build_strategy_registry
+from scripts.http_client import (
+    HostClient,
+    RequestStrategy,
+    SourceTemporarilyUnavailable,
+    WarmupConfig,
+    build_strategy_registry,
+)
+
+
+class DummyRawHeaders:
+    def __init__(self, mapping=None):
+        self._mapping = {k.lower(): list(v) for k, v in (mapping or {}).items()}
+
+    def get_all(self, name):
+        return list(self._mapping.get(name.lower(), []))
+
+    def getlist(self, name):
+        return self.get_all(name)
 
 
 class DummyResponse:
-    def __init__(self, status_code=200, text="ok", headers=None, cookies=None):
+    def __init__(self, status_code=200, text="ok", headers=None, cookies=None, raw_headers=None):
         self.status_code = status_code
         self.text = text
         self.headers = headers or {}
         self.cookies = cookies or RequestsCookieJar()
+        self.raw = type("Raw", (), {"headers": DummyRawHeaders(raw_headers)})()
 
     def raise_for_status(self):
         if self.status_code >= 400:
@@ -112,3 +130,116 @@ def test_build_strategy_registry_skips_without_base_url():
 
     assert "ok.example" in strategies
     assert "Broken" not in strategies
+
+
+def _cookie_jar_with(name: str) -> RequestsCookieJar:
+    jar = RequestsCookieJar()
+    jar.set(name, "value", domain="example.com", path="/")
+    return jar
+
+
+def test_warmup_accepts_401_with_ddos_cookies(monkeypatch):
+    state = {}
+    warmup = WarmupConfig(url="https://example.com/warm", delay_range=(0.0, 0.0))
+    strategy = RequestStrategy(warmup=warmup, selenium_fallback=True)
+    client = HostClient("example.com", strategy, state)
+    response_cookies = _cookie_jar_with("__ddgid")
+    client._session = DummySession(
+        [
+            DummyResponse(status_code=401, cookies=response_cookies),
+            DummyResponse(status_code=200),
+        ]
+    )
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    response = client.get("https://example.com/data", headers={})
+
+    assert response.status_code == 200
+    assert client.state_root["warmup_done"] is True
+    assert client.state_root["cookies"]
+    warmup_stats = state["stats"]["metrics"]["example.com"]["warmup"]
+    assert warmup_stats["result"] == "http_4xx_with_cookies"
+    assert "__ddg" in "".join(warmup_stats["cookies"])
+
+
+def test_warmup_detects_cookies_from_headers(monkeypatch):
+    state = {}
+    warmup = WarmupConfig(url="https://example.com/warm", delay_range=(0.0, 0.0))
+    strategy = RequestStrategy(warmup=warmup, selenium_fallback=True)
+    client = HostClient("example.com", strategy, state)
+    header_value = "__ddg1_hash=value; Path=/; Domain=example.com; HttpOnly"
+    client._session = DummySession(
+        [
+            DummyResponse(
+                status_code=401,
+                headers={"Set-Cookie": header_value},
+                raw_headers={"Set-Cookie": [header_value]},
+            ),
+            DummyResponse(status_code=200),
+        ]
+    )
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    response = client.get("https://example.com/data", headers={})
+
+    assert response.status_code == 200
+    assert client.state_root["warmup_done"] is True
+    warmup_stats = state["stats"]["metrics"]["example.com"]["warmup"]
+    assert warmup_stats["result"] == "http_4xx_with_cookies"
+    assert any(name.startswith("__ddg1") for name in warmup_stats["cookies"])
+
+
+def test_warmup_401_without_cookies_uses_selenium(monkeypatch):
+    state = {}
+    warmup = WarmupConfig(url="https://example.com/warm", delay_range=(0.0, 0.0))
+    strategy = RequestStrategy(warmup=warmup, selenium_fallback=True)
+    client = HostClient("example.com", strategy, state)
+    client._session = DummySession(
+        [
+            DummyResponse(status_code=401),
+            DummyResponse(status_code=200),
+        ]
+    )
+    selenium_called = {"count": 0}
+
+    def fake_selenium(url):
+        selenium_called["count"] += 1
+        client._session.cookies.set("__ddgid", "value", domain="example.com", path="/")
+        client._store_cookies()
+        return True
+
+    monkeypatch.setattr(client, "_selenium_warmup", fake_selenium)
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    response = client.get("https://example.com/data", headers={})
+
+    assert response.status_code == 200
+    assert selenium_called["count"] == 1
+    assert client.state_root["warmup_done"] is True
+    warmup_stats = state["stats"]["metrics"]["example.com"]["warmup"]
+    assert warmup_stats["result"] == "selenium_success"
+
+
+def test_warmup_401_without_cookies_and_failed_selenium(monkeypatch):
+    state = {}
+    warmup = WarmupConfig(url="https://example.com/warm", delay_range=(0.0, 0.0))
+    strategy = RequestStrategy(warmup=warmup, selenium_fallback=True)
+    client = HostClient("example.com", strategy, state)
+    client._session = DummySession(
+        [
+            DummyResponse(status_code=401),
+        ]
+    )
+
+    def fake_selenium(url):
+        return False
+
+    monkeypatch.setattr(client, "_selenium_warmup", fake_selenium)
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    with pytest.raises(SourceTemporarilyUnavailable):
+        client.get("https://example.com/data", headers={})
+
+    warmup_stats = state["stats"]["metrics"]["example.com"]["warmup"]
+    assert warmup_stats["result"] == "selenium_failed"
+    assert client.state_root.get("warmup_done") is not True
