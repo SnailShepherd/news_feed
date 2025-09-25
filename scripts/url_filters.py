@@ -6,6 +6,16 @@ import re
 from urllib.parse import parse_qsl, urlparse
 
 _LISTING_SEGMENTS = {"tag", "category", "archive", "search", "page"}
+_SECTION_PREFIXES = {
+    "news",
+    "novosti",
+    "lenta",
+    "tema",
+    "topics",
+    "press",
+    "press-center",
+    "press-tsentr",
+}
 
 
 def _path_segments(path: str) -> list[str]:
@@ -25,6 +35,12 @@ def is_listing_url(url: str | None) -> bool:
     if segments:
         last_segment = segments[-1]
         if last_segment == "news":
+            return True
+        if (
+            len(segments) == 2
+            and segments[0] in _SECTION_PREFIXES
+            and not segments[1].isdigit()
+        ):
             return True
     if any(segment in _LISTING_SEGMENTS for segment in segments):
         return True
