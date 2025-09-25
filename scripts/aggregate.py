@@ -79,6 +79,38 @@ STATE.setdefault("host_state", {})
 HOST_STRATEGIES: dict[str, RequestStrategy] = {}
 HOST_CLIENTS: dict[str, HostClient] = {}
 
+LISTING_PATH_SEGMENTS = {"tag", "category", "archive", "search", "page"}
+LISTING_QUERY_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
+    (re.compile(r"(?i)(?:^|[&;])page=\d+(?:$|[&;])"), "query_page"),
+    (re.compile(r"(?:^|[&;])PAGEN_\d+=\d+(?:$|[&;])"), "query_pagen"),
+    (re.compile(r"(?:^|[&;])VOTE_ID=\d+(?:$|[&;])"), "query_vote"),
+)
+
+
+def is_listing_url(url: str) -> tuple[bool, str | None]:
+    parsed = urlparse(url)
+    path = parsed.path or ""
+    segments = [segment for segment in path.split("/") if segment]
+    if path.endswith("/") and segments and segments[-1] == "news":
+        return True, "path_news_tail"
+    for segment in segments:
+        if segment in LISTING_PATH_SEGMENTS:
+            return True, f"path_segment_{segment}"
+    query = parsed.query or ""
+    if query:
+        for pattern, reason in LISTING_QUERY_PATTERNS:
+            if pattern.search(query):
+                return True, reason
+    return False, None
+
+
+def log_filtered_url(url: str, reason: str | None) -> None:
+    if ARGS and getattr(ARGS, "debug", False):
+        if reason:
+            logging.debug("Filtered listing URL: %s (%s)", url, reason)
+        else:
+            logging.debug("Filtered listing URL: %s", url)
+
 def save_state():
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -314,6 +346,54 @@ def _normalize_whitespace(text: str) -> str:
     lines = [line for line in lines if line]
     return "\n".join(lines)
 
+
+def html_fragment_to_text(raw: str | None) -> str:
+    if not raw:
+        return ""
+    soup = BeautifulSoup(raw, "html.parser")
+    for junk in soup.find_all(["script", "style", "noscript", "form", "iframe"]):
+        junk.decompose()
+    text = soup.get_text("\n", strip=True)
+    return _normalize_whitespace(text)
+
+
+def create_base_item(
+    url: str,
+    source_name: str,
+    *,
+    title: str | None = None,
+    date_published: datetime | str | None = None,
+    content_text: str | None = None,
+):
+    item_id = hashlib.sha256(url.encode("utf-8")).hexdigest()
+    if isinstance(date_published, datetime):
+        date_value = date_published.isoformat()
+    else:
+        date_value = date_published
+    item = {
+        "id": item_id,
+        "url": url,
+        "title": (title or "").strip() or url,
+        "date_published": date_value,
+        "content_text": content_text,
+        "tags": [],
+        "source": source_name,
+    }
+
+    if not item["date_published"]:
+        first_seen_map = STATE.setdefault("first_seen", {})
+        cached = first_seen_map.get(item_id)
+        if cached:
+            item["date_published"] = cached
+        else:
+            seen_dt = make_aware_msk(datetime.now(MSK)).replace(second=0, microsecond=0)
+            iso = seen_dt.isoformat()
+            first_seen_map[item_id] = iso
+            item["date_published"] = iso
+
+    return item
+
+
 def extract_content_text(soup: BeautifulSoup, selectors=None):
     if isinstance(selectors, str):
         selectors = [selectors]
@@ -495,29 +575,15 @@ def build_item(url: str, source_name: str, html: str, content_selectors=None):
             except ValueError:
                 dt = None
 
-    item_id = hashlib.sha256(url.encode("utf-8")).hexdigest()
     content_text = extract_content_text(soup, selectors=content_selectors)
 
-    item = {
-        "id": item_id,
-        "url": url,
-        "title": title,
-        "date_published": dt.isoformat() if dt else None,
-        "content_text": content_text,
-        "tags": [],
-        "source": source_name,
-    }
-
-    if not item["date_published"]:
-        first_seen_map = STATE.setdefault("first_seen", {})
-        cached = first_seen_map.get(item_id)
-        if cached:
-            item["date_published"] = cached
-        else:
-            seen_dt = make_aware_msk(datetime.now(MSK)).replace(second=0, microsecond=0)
-            iso = seen_dt.isoformat()
-            first_seen_map[item_id] = iso
-            item["date_published"] = iso
+    item = create_base_item(
+        url,
+        source_name,
+        title=title,
+        date_published=dt,
+        content_text=content_text,
+    )
 
     return item
 
@@ -592,6 +658,10 @@ def harvest_json_source(src: dict, force: bool = False):
             url = link
         if url in seen_links:
             continue
+        skip, reason = is_listing_url(url)
+        if skip:
+            log_filtered_url(url, reason)
+            continue
         seen_links.add(url)
         entries.append((url, entry))
         if len(entries) >= max_links:
@@ -610,8 +680,37 @@ def harvest_json_source(src: dict, force: bool = False):
     items = []
     for url, entry in new_entries:
         try:
-            html = fetch_page(url)
-            item = build_item(url, src["name"], html, content_selectors=src.get("content_selectors"))
+            content_from_api = ""
+            for key in ("content", "text", "body"):
+                raw_value = entry.get(key)
+                if isinstance(raw_value, str):
+                    content_from_api = html_fragment_to_text(raw_value)
+                elif isinstance(raw_value, list):
+                    joined = "\n".join(str(part) for part in raw_value if part)
+                    content_from_api = html_fragment_to_text(joined)
+                else:
+                    content_from_api = ""
+                if content_from_api:
+                    break
+
+            item = None
+            if content_from_api:
+                item = create_base_item(
+                    url,
+                    src["name"],
+                    content_text=content_from_api,
+                )
+
+            if not item or not item.get("content_text"):
+                html = fetch_page(url)
+                item = build_item(
+                    url,
+                    src["name"],
+                    html,
+                    content_selectors=src.get("content_selectors"),
+                )
+                if content_from_api and not item.get("content_text"):
+                    item["content_text"] = content_from_api
             title = entry.get("name") or entry.get("title")
             if title:
                 item["title"] = title.strip()
@@ -854,6 +953,10 @@ def harvest_source(src: dict, force: bool = False):
         if not href:
             continue
         href = urljoin(src["base_url"], href)
+        skip, reason = is_listing_url(href)
+        if skip:
+            log_filtered_url(href, reason)
+            continue
         if src.get("restrict_domain"):
             h = urlparse(href).netloc.replace("www.", "")
             if h != base_host:
@@ -1062,7 +1165,11 @@ def main():
     parser = argparse.ArgumentParser(description="Aggregate news feed")
     parser.add_argument("--rebuild", action="store_true", help="Force rebuild: ignore index unchanged and seen-URL filters; always rewrite unified.json")
     parser.add_argument("--dry-run", action="store_true", help="Run without writing unified.json/state")
+    parser.add_argument("--debug", action="store_true", help="Enable verbose debug logging")
     ARGS = parser.parse_args()
+
+    if ARGS.debug:
+        logging.getLogger().setLevel(logging.DEBUG)
 
     sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
     HOST_STRATEGIES.update(build_strategy_registry(sources))
