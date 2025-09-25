@@ -15,6 +15,11 @@ from dateutil import parser as dparser
 import pytz
 
 try:
+    from scripts.url_filters import is_listing_url
+except ModuleNotFoundError:  # pragma: no cover - fallback when run as a script
+    from url_filters import is_listing_url  # type: ignore
+
+try:
     from scripts.http_client import (
         HostClient,
         RequestStrategy,
@@ -39,11 +44,23 @@ PAGES_DIR = CACHE_DIR / "pages"
 STATE_FILE = CACHE_DIR / "state.json"
 OUT_JSON = DOCS_DIR / "unified.json"
 
-REQUEST_TIMEOUT = 30
+CONNECT_TIMEOUT = 5.0
+READ_TIMEOUT = 10.0
+REQUEST_TIMEOUT = (CONNECT_TIMEOUT, READ_TIMEOUT)
 USER_AGENT = DEFAULT_USER_AGENT
 MAX_LINKS_PER_SOURCE = 100
 FEED_MAX_ITEMS = int(os.environ.get("FEED_MAX_ITEMS", "2000"))
 ARGS = None  # будет заполнено в main()
+SMOKE_DEFAULT_SOURCES = {
+    "НОТИМ",
+    "АРД: статьи",
+    "ЕЭК ЕАЭС",
+    "Минфин России",
+    "Российская газета: Экономика",
+}
+START_TIME = time.monotonic()
+RUNTIME_EXCEEDED = False
+_RUNTIME_LOGGED = False
 
 # Перехваты ошибок/429 и паузы между запросами к одному хосту
 SESSION = requests.Session()
@@ -61,7 +78,14 @@ _last_req_at = defaultdict(lambda: 0.0)
 
 MSK = pytz.timezone("Europe/Moscow")
 
+LOG_PATH = pathlib.Path("/tmp/rebuild.log")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+try:
+    file_handler = logging.FileHandler(LOG_PATH, mode="a", encoding="utf-8")
+    file_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
+    logging.getLogger().addHandler(file_handler)
+except OSError:
+    logging.warning("Unable to attach log file handler at %s", LOG_PATH)
 
 # ---- State ----
 CACHE_DIR.mkdir(exist_ok=True)
@@ -81,6 +105,27 @@ HOST_CLIENTS: dict[str, HostClient] = {}
 
 def save_state():
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def runtime_expired() -> bool:
+    """Check whether the max runtime threshold has been reached."""
+
+    global RUNTIME_EXCEEDED, _RUNTIME_LOGGED
+    if not ARGS or not getattr(ARGS, "max_runtime", None):
+        return False
+    if RUNTIME_EXCEEDED:
+        return True
+    elapsed = time.monotonic() - START_TIME
+    if elapsed >= ARGS.max_runtime:
+        RUNTIME_EXCEEDED = True
+        if not _RUNTIME_LOGGED:
+            logging.warning(
+                "Max runtime of %ss reached — stopping after current source",
+                ARGS.max_runtime,
+            )
+            _RUNTIME_LOGGED = True
+        return True
+    return False
 
 # ---- HTTP ----
 def _get_host_for_source(src: dict | None) -> str | None:
@@ -134,7 +179,7 @@ def http_get(url: str, allow_conditional: bool = True, src: dict | None = None):
     client = get_host_client(url, src)
     try:
         if client:
-            timeout_value = None if client.strategy.timeout else (REQUEST_TIMEOUT, REQUEST_TIMEOUT)
+            timeout_value = None if client.strategy.timeout else REQUEST_TIMEOUT
             resp = client.get(
                 url,
                 headers=hdrs,
@@ -142,7 +187,12 @@ def http_get(url: str, allow_conditional: bool = True, src: dict | None = None):
                 timeout=timeout_value,
             )
         else:
-            resp = SESSION.get(url, headers=hdrs, timeout=REQUEST_TIMEOUT, allow_redirects=True)
+            resp = SESSION.get(
+                url,
+                headers=hdrs,
+                timeout=REQUEST_TIMEOUT,
+                allow_redirects=True,
+            )
     except SourceTemporarilyUnavailable:
         raise
     except requests.exceptions.RequestException as exc:
@@ -156,7 +206,12 @@ def http_get(url: str, allow_conditional: bool = True, src: dict | None = None):
             wait = 5
         logging.warning("429 Too Many Requests: %s -> sleep %ss", url, wait)
         time.sleep(wait)
-        resp = SESSION.get(url, headers=hdrs, timeout=REQUEST_TIMEOUT, allow_redirects=True)
+        resp = SESSION.get(
+            url,
+            headers=hdrs,
+            timeout=REQUEST_TIMEOUT,
+            allow_redirects=True,
+        )
         _last_req_at[host] = time.time()
     if resp.status_code == 304:
         logging.info("304 Not Modified: %s", url)
@@ -210,7 +265,11 @@ def fetch_page(url: str, src: dict | None = None) -> str:
         return page_path.read_text(encoding="utf-8")
     if content is None:
         # No cached file (first run) but server returned 304 (edge case) -> force GET
-        content = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=REQUEST_TIMEOUT).text
+        content = requests.get(
+            url,
+            headers={"User-Agent": USER_AGENT},
+            timeout=REQUEST_TIMEOUT,
+        ).text
     page_path.write_text(content, encoding="utf-8")
     return content
 
@@ -313,6 +372,16 @@ def _normalize_whitespace(text: str) -> str:
     lines = [line.strip() for line in text.splitlines()]
     lines = [line for line in lines if line]
     return "\n".join(lines)
+
+
+def html_fragment_to_text(fragment: str) -> str:
+    if not fragment:
+        return ""
+    soup = BeautifulSoup(fragment, "html.parser")
+    for junk in soup.find_all(["script", "style", "noscript", "form", "iframe"]):
+        junk.decompose()
+    text = soup.get_text("\n", strip=True)
+    return _normalize_whitespace(text)
 
 def extract_content_text(soup: BeautifulSoup, selectors=None):
     if isinstance(selectors, str):
@@ -590,6 +659,10 @@ def harvest_json_source(src: dict, force: bool = False):
             url = urljoin(base_url, link)
         else:
             url = link
+        if is_listing_url(url):
+            if ARGS and getattr(ARGS, "debug", False):
+                logging.debug("Filtered listing URL: %s", url)
+            continue
         if url in seen_links:
             continue
         seen_links.add(url)
@@ -608,10 +681,52 @@ def harvest_json_source(src: dict, force: bool = False):
             return []
 
     items = []
-    for url, entry in new_entries:
+    processed_links = []
+    for idx, (url, entry) in enumerate(new_entries):
+        if runtime_expired():
+            logging.info(
+                "  stop fetching more API items for %s due to max-runtime",
+                src.get("name"),
+            )
+            break
+        if (
+            ARGS
+            and getattr(ARGS, "smoke", False)
+            and ARGS.limit_per_source is not None
+            and idx >= ARGS.limit_per_source
+        ):
+            if getattr(ARGS, "debug", False):
+                logging.debug(
+                    "Skip deep fetch for %s (limit-per-source)",
+                    url,
+                )
+            break
         try:
-            html = fetch_page(url)
-            item = build_item(url, src["name"], html, content_selectors=src.get("content_selectors"))
+            api_text = None
+            for key in ("content", "text", "body"):
+                raw_val = entry.get(key)
+                if isinstance(raw_val, str) and raw_val.strip():
+                    api_text = html_fragment_to_text(raw_val)
+                    if api_text:
+                        break
+
+            if api_text:
+                html = ""
+                item = build_item(
+                    url,
+                    src["name"],
+                    html,
+                    content_selectors=src.get("content_selectors"),
+                )
+                item["content_text"] = api_text
+            else:
+                html = fetch_page(url)
+                item = build_item(
+                    url,
+                    src["name"],
+                    html,
+                    content_selectors=src.get("content_selectors"),
+                )
             title = entry.get("name") or entry.get("title")
             if title:
                 item["title"] = title.strip()
@@ -628,12 +743,13 @@ def harvest_json_source(src: dict, force: bool = False):
                 if dt:
                     item["date_published"] = dt.isoformat()
             items.append(item)
+            processed_links.append(url)
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
 
     keep = 500
     tail = [u for u in already_seen_list if u in entry_urls]
-    seen_map[src["name"]] = ([url for url, _ in new_entries] + tail)[:keep]
+    seen_map[src["name"]] = (processed_links + tail)[:keep]
 
     return items
 
@@ -854,6 +970,10 @@ def harvest_source(src: dict, force: bool = False):
         if not href:
             continue
         href = urljoin(src["base_url"], href)
+        if is_listing_url(href):
+            if ARGS and getattr(ARGS, "debug", False):
+                logging.debug("Filtered listing URL: %s", href)
+            continue
         if src.get("restrict_domain"):
             h = urlparse(href).netloc.replace("www.", "")
             if h != base_host:
@@ -903,7 +1023,26 @@ def harvest_source(src: dict, force: bool = False):
             return []
 
     items = []
-    for url in new_links:
+    processed_links = []
+    for idx, url in enumerate(new_links):
+        if runtime_expired():
+            logging.info(
+                "  stop fetching more items for %s due to max-runtime",
+                src.get("name"),
+            )
+            break
+        if (
+            ARGS
+            and getattr(ARGS, "smoke", False)
+            and ARGS.limit_per_source is not None
+            and idx >= ARGS.limit_per_source
+        ):
+            if getattr(ARGS, "debug", False):
+                logging.debug(
+                    "Skip deep fetch for %s (limit-per-source)",
+                    url,
+                )
+            break
         try:
             if use_only_cache:
                 page_path = PAGES_DIR / cache_key_for(url)
@@ -916,6 +1055,7 @@ def harvest_source(src: dict, force: bool = False):
             item = build_item(url, src["name"], html, content_selectors=src.get("content_selectors"))
             if item:
                 items.append(item)
+                processed_links.append(url)
         except SourceTemporarilyUnavailable as exc:
             page_path = PAGES_DIR / cache_key_for(url)
             if page_path.exists():
@@ -931,6 +1071,7 @@ def harvest_source(src: dict, force: bool = False):
                 )
                 if item:
                     items.append(item)
+                    processed_links.append(url)
             else:
                 logging.warning("  skip %s: %s", url, exc)
         except Exception as e:
@@ -941,7 +1082,7 @@ def harvest_source(src: dict, force: bool = False):
     # сначала — новые (в порядке обхода), затем часть старых, которые ещё встречаются в uniq
     tail = [u for u in already_seen_list if u in uniq]
     # при rebuild тоже обновляем, чтобы после форс-прогона обычные запуски работали эффективно
-    seen_map[src["name"]] = (new_links + tail)[:keep]
+    seen_map[src["name"]] = (processed_links + tail)[:keep]
 
     return items
 
@@ -1014,10 +1155,18 @@ def merge_items(existing, new):
         u = it.get("url")
         if not u:
             continue
+        if is_listing_url(u):
+            if ARGS and getattr(ARGS, "debug", False):
+                logging.debug("Drop listing URL from existing feed: %s", u)
+            continue
         by_url[u] = it
     for it in new:
         u = it.get("url")
         if not u:
+            continue
+        if is_listing_url(u):
+            if ARGS and getattr(ARGS, "debug", False):
+                logging.debug("Skip listing URL from new items: %s", u)
             continue
         old = by_url.get(u)
         if not old:
@@ -1058,19 +1207,59 @@ def merge_items(existing, new):
     return merged
 
 def main():
-    global ARGS
+    global ARGS, CONNECT_TIMEOUT, READ_TIMEOUT, REQUEST_TIMEOUT, START_TIME, RUNTIME_EXCEEDED, _RUNTIME_LOGGED
     parser = argparse.ArgumentParser(description="Aggregate news feed")
     parser.add_argument("--rebuild", action="store_true", help="Force rebuild: ignore index unchanged and seen-URL filters; always rewrite unified.json")
     parser.add_argument("--dry-run", action="store_true", help="Run without writing unified.json/state")
+    parser.add_argument("--smoke", "--ci-fast", dest="smoke", action="store_true", help="Fast smoke run with limited sources")
+    parser.add_argument("--sources", type=str, help="Comma-separated source names to include")
+    parser.add_argument("--limit-per-source", type=int, default=None, help="Limit number of deep-parsed items per source in smoke mode")
+    parser.add_argument("--connect-timeout", type=float, default=5.0, help="Connection timeout in seconds")
+    parser.add_argument("--read-timeout", type=float, default=10.0, help="Read timeout in seconds")
+    parser.add_argument("--max-runtime", type=int, default=None, help="Maximum runtime in seconds before stopping gracefully")
+    parser.add_argument("--debug", action="store_true", help="Enable verbose debug logging")
     ARGS = parser.parse_args()
+
+    if ARGS.debug:
+        logging.getLogger().setLevel(logging.DEBUG)
+
+    CONNECT_TIMEOUT = max(0.1, float(ARGS.connect_timeout))
+    READ_TIMEOUT = max(0.1, float(ARGS.read_timeout))
+    REQUEST_TIMEOUT = (CONNECT_TIMEOUT, READ_TIMEOUT)
+
+    START_TIME = time.monotonic()
+    RUNTIME_EXCEEDED = False
+    _RUNTIME_LOGGED = False
+
+    if ARGS.smoke:
+        logging.info("===== SMOKE MODE =====")
+        if ARGS.limit_per_source is None:
+            ARGS.limit_per_source = 3
 
     sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
     HOST_STRATEGIES.update(build_strategy_registry(sources))
+
+    selected_sources = None
+    if ARGS.sources:
+        selected_sources = {name.strip() for name in ARGS.sources.split(",") if name.strip()}
+    elif ARGS.smoke:
+        selected_sources = set(SMOKE_DEFAULT_SOURCES)
+
+    if selected_sources:
+        logging.info("Selected sources: %s", ", ".join(sorted(selected_sources)))
+
     all_items = []
+    seen_source_names = set()
     for src in sources:
+        if runtime_expired():
+            logging.info("Stop processing further sources due to max-runtime limit")
+            break
         if not src.get('enabled', True):
             logging.info("Skip disabled source: %s — %s", src.get('name'), src.get('start_url'))
             continue
+        if selected_sources and src.get("name") not in selected_sources:
+            continue
+        seen_source_names.add(src.get("name"))
         try:
             if src.get("mode") == "api":
                 items = harvest_json_source(src, force=ARGS.rebuild)
@@ -1081,6 +1270,11 @@ def main():
         except Exception as e:
             logging.error("  !! Failed: %s (%s)", src.get("name"), e)
             STATE.setdefault("stats", {}).setdefault("errors", []).append({"source": src.get("name"), "url": src.get("start_url"), "error": str(e)})
+
+    if selected_sources and ARGS.sources:
+        missing = selected_sources - seen_source_names
+        if missing:
+            logging.warning("Requested sources not found or disabled: %s", ", ".join(sorted(missing)))
 
     if not all_items and not ARGS.rebuild:
         # Нет новых карточек — ленту не переписываем, чтобы не обнулять историю
@@ -1123,6 +1317,11 @@ def main():
     if not ARGS.dry_run:
         save_state()
     logging.info("Saved feed to %s (%d items)", OUT_JSON, len(feed["items"]))
+
+    if RUNTIME_EXCEEDED and os.environ.get("CI"):
+        return 1
+    return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
