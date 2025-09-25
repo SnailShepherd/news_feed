@@ -135,7 +135,13 @@
     "link_min_text_len": 8,
     "max_links": 20,
     "restrict_domain": true,
-    "enabled": true
+    "enabled": true,
+    "content_selectors": [
+      ".newsText",
+      ".news-detail",
+      "[itemprop='articleBody']",
+      "article"
+    ]
   },
   {
     "name": "Парламентская газета: Экономика",
@@ -201,6 +207,9 @@
     ],
     "link_min_text_len": 8,
     "enabled": true,
+    "exclude_regex": [
+      "^https?://(?:www\\.)?ria-stk\\.ru/news/?$"
+    ],
     "request_strategy": {
       "connect_timeout": 5,
       "read_timeout": 25,
@@ -223,7 +232,10 @@
       "/news/"
     ],
     "link_min_text_len": 8,
-    "enabled": true
+    "enabled": true,
+    "exclude_regex": [
+      "\\?page=\\d+$"
+    ]
   },
   {
     "name": "Стройгаз.ру",
@@ -232,11 +244,16 @@
     "include_regex": "^https?://(?:www\\.)?stroygaz\\.ru/news/[a-z0-9-]+/[a-z0-9-]+/(?:[a-z0-9-]+/)*$",
     "exclude_regex": [
       "\\?",
-      "/news/?$",
-      "/news/[a-z0-9-]+/?$"
+      "/news/?$"
     ],
     "link_min_text_len": 8,
-    "enabled": true
+    "enabled": true,
+    "content_selectors": [
+      ".content",
+      ".news-detail",
+      ".article",
+      ".news-text"
+    ]
   },
   {
     "name": "РИА Недвижимость: лента",
@@ -246,7 +263,12 @@
       "/20"
     ],
     "link_min_text_len": 8,
-    "enabled": true
+    "enabled": true,
+    "content_selectors": [
+      "[itemprop='articleBody']",
+      ".article__content",
+      "article"
+    ]
   },
   {
     "name": "Российская газета: Экономика",
@@ -256,6 +278,13 @@
       "/20"
     ],
     "link_min_text_len": 8,
-    "enabled": true
+    "enabled": true,
+    "content_selectors": [
+      "article .article__body",
+      ".article__text",
+      ".b-material-body__content",
+      "[itemprop='articleBody']",
+      "main article"
+    ]
   }
 ]
