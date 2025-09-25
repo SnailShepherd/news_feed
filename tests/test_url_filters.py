@@ -12,6 +12,9 @@ from scripts.url_filters import is_listing_url
         "https://example.com/path/?page=2",
         "https://example.com/list/?PAGEN_1=3",
         "https://example.com/poll/?VOTE_ID=12",
+        "https://stroygaz.ru/news/regulation/",
+        "https://stroygaz.ru/news/official/",
+        "https://eec.eaeunion.org/news/speech/",
     ],
 )
 def test_is_listing_url_positive(url):

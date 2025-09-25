@@ -61,6 +61,16 @@ SMOKE_DEFAULT_SOURCES = {
 START_TIME = time.monotonic()
 RUNTIME_EXCEEDED = False
 _RUNTIME_LOGGED = False
+SOURCE_SUMMARY: dict[str, dict[str, int]] = defaultdict(
+    lambda: {
+        "total": 0,
+        "no_text": 0,
+        "short": 0,
+        "listing_filtered": 0,
+        "api_text": 0,
+    }
+)
+SOURCE_MIN_WORDS: dict[str, int] = {}
 
 # Перехваты ошибок/429 и паузы между запросами к одному хосту
 SESSION = requests.Session()
@@ -245,6 +255,19 @@ def cache_key_with_suffix(base_key: str, suffix: str) -> str:
         return f"{base_key[:-5]}{suffix}.html"
     return f"{base_key}{suffix}"
 
+
+AMP_APPEND_WHITELIST = {"rg.ru", "ria.ru", "realty.ria.ru"}
+
+
+def _amp_append_allowed(host: str) -> bool:
+    if not host:
+        return False
+    host = host.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    return host in AMP_APPEND_WHITELIST
+
+
 def fetch_page(url: str, src: dict | None = None) -> str:
     page_path = PAGES_DIR / cache_key_for(url)
     use_conditional = not (ARGS and getattr(ARGS, 'rebuild', False))
@@ -272,6 +295,36 @@ def fetch_page(url: str, src: dict | None = None) -> str:
         ).text
     page_path.write_text(content, encoding="utf-8")
     return content
+
+
+def fetch_amp_if_available(url: str, soup: BeautifulSoup, src: dict | None = None) -> str | None:
+    amp_href = None
+    for link in soup.find_all("link"):
+        rel = link.get("rel")
+        if not rel:
+            continue
+        if isinstance(rel, (list, tuple)):
+            rels = [str(r).lower() for r in rel]
+        else:
+            rels = [part.lower() for part in str(rel).split() if part]
+        if "amphtml" in rels:
+            href = link.get("href")
+            if href:
+                amp_href = urljoin(url, href)
+                break
+    if amp_href is None:
+        host = urlparse(url).netloc
+        if _amp_append_allowed(host):
+            base = url.rstrip("/")
+            if base and not base.endswith("/amp"):
+                amp_href = f"{base}/amp"
+    if not amp_href or amp_href == url:
+        return None
+    try:
+        return fetch_page(amp_href, src=src)
+    except Exception as exc:
+        logging.debug("AMP fetch failed for %s: %s", amp_href, exc)
+        return None
 
 # ---- Date parsing helpers ----
 RU_MONTHS = {
@@ -372,6 +425,12 @@ def _normalize_whitespace(text: str) -> str:
     lines = [line.strip() for line in text.splitlines()]
     lines = [line for line in lines if line]
     return "\n".join(lines)
+
+
+def _word_count(text: str) -> int:
+    if not text:
+        return 0
+    return len(re.findall(r"\w+", text, flags=re.UNICODE))
 
 
 def html_fragment_to_text(fragment: str) -> str:
@@ -548,7 +607,7 @@ def extract_title(soup: BeautifulSoup):
         return soup.title.string.strip()
     return None
 
-def build_item(url: str, source_name: str, html: str, content_selectors=None):
+def build_item(url: str, source_name: str, html: str, content_selectors=None, src: dict | None = None):
     soup = BeautifulSoup(html, "html.parser")
     title = extract_title(soup) or url
     cands = extract_date_candidates(soup)
@@ -566,6 +625,11 @@ def build_item(url: str, source_name: str, html: str, content_selectors=None):
 
     item_id = hashlib.sha256(url.encode("utf-8")).hexdigest()
     content_text = extract_content_text(soup, selectors=content_selectors)
+    if not content_text and html.strip():
+        amp_html = fetch_amp_if_available(url, soup, src=src)
+        if amp_html:
+            amp_soup = BeautifulSoup(amp_html, "html.parser")
+            content_text = extract_content_text(amp_soup, selectors=content_selectors)
 
     item = {
         "id": item_id,
@@ -590,13 +654,28 @@ def build_item(url: str, source_name: str, html: str, content_selectors=None):
 
     return item
 
+API_CONTENT_KEYS = [
+    "content",
+    "text",
+    "body",
+    "content_html",
+    "text_html",
+    "fullText",
+    "full_text",
+    "contentHtml",
+    "html",
+    "description",
+]
+
+
 def harvest_json_source(src: dict, force: bool = False):
     endpoint = src.get("api_endpoint")
     if not endpoint:
         logging.warning("  missing api_endpoint for %s", src.get("name"))
         return []
 
-    logging.info("Harvest API: %s — %s", src.get("name"), endpoint)
+    src_name = src.get("name", "")
+    logging.info("Harvest API: %s — %s", src_name, endpoint)
 
     headers = {
         "User-Agent": USER_AGENT,
@@ -645,6 +724,7 @@ def harvest_json_source(src: dict, force: bool = False):
 
     base_url = src.get("base_url") or endpoint
     max_links = int(src.get("max_links", MAX_LINKS_PER_SOURCE))
+    min_words = int(src.get("min_words", 0) or 0)
     seen_map = STATE.setdefault("seen_urls", {})
     already_seen_list = list(seen_map.get(src["name"], []))
     already_seen = set(already_seen_list)
@@ -660,6 +740,7 @@ def harvest_json_source(src: dict, force: bool = False):
         else:
             url = link
         if is_listing_url(url):
+            SOURCE_SUMMARY[src_name]["listing_filtered"] += 1
             if ARGS and getattr(ARGS, "debug", False):
                 logging.debug("Filtered listing URL: %s", url)
             continue
@@ -703,29 +784,47 @@ def harvest_json_source(src: dict, force: bool = False):
             break
         try:
             api_text = None
-            for key in ("content", "text", "body"):
-                raw_val = entry.get(key)
-                if isinstance(raw_val, str) and raw_val.strip():
-                    api_text = html_fragment_to_text(raw_val)
-                    if api_text:
+            containers = [entry]
+            attributes = entry.get("attributes")
+            if isinstance(attributes, dict):
+                containers.append(attributes)
+            for container in containers:
+                for key in API_CONTENT_KEYS:
+                    raw_val = container.get(key)
+                    if not isinstance(raw_val, str):
+                        continue
+                    val = raw_val.strip()
+                    if not val:
+                        continue
+                    if "<" in val and ">" in val and re.search(r"<[a-zA-Z][^>]*>", val):
+                        text_val = html_fragment_to_text(val)
+                    else:
+                        text_val = _normalize_whitespace(val)
+                    if text_val:
+                        api_text = text_val
                         break
+                if api_text:
+                    break
 
             if api_text:
                 html = ""
                 item = build_item(
                     url,
-                    src["name"],
+                    src_name,
                     html,
                     content_selectors=src.get("content_selectors"),
+                    src=src,
                 )
                 item["content_text"] = api_text
+                SOURCE_SUMMARY[src_name]["api_text"] += 1
             else:
-                html = fetch_page(url)
+                html = fetch_page(url, src=src)
                 item = build_item(
                     url,
-                    src["name"],
+                    src_name,
                     html,
                     content_selectors=src.get("content_selectors"),
+                    src=src,
                 )
             title = entry.get("name") or entry.get("title")
             if title:
@@ -742,6 +841,14 @@ def harvest_json_source(src: dict, force: bool = False):
                 dt = try_parse_any_date([entry["publishDateRus"]])
                 if dt:
                     item["date_published"] = dt.isoformat()
+            content_text = item.get("content_text") or ""
+            if not content_text.strip():
+                SOURCE_SUMMARY[src_name]["no_text"] += 1
+            if min_words and _word_count(content_text) < min_words:
+                SOURCE_SUMMARY[src_name]["short"] += 1
+                processed_links.append(url)
+                continue
+            SOURCE_SUMMARY[src_name]["total"] += 1
             items.append(item)
             processed_links.append(url)
         except Exception as e:
@@ -759,7 +866,9 @@ def harvest_source(src: dict, force: bool = False):
     cooldowns = stats.setdefault("cooldowns", {})
     errors = stats.setdefault("errors", [])
 
+    src_name = src.get("name", "")
     start_url = src["start_url"]
+    min_words = int(src.get("min_words", 0) or 0)
     cache_path = PAGES_DIR / cache_key_for(start_url)
     cooldown_until = cooldowns.get(start_url)
     now = time.time()
@@ -971,6 +1080,7 @@ def harvest_source(src: dict, force: bool = False):
             continue
         href = urljoin(src["base_url"], href)
         if is_listing_url(href):
+            SOURCE_SUMMARY[src_name]["listing_filtered"] += 1
             if ARGS and getattr(ARGS, "debug", False):
                 logging.debug("Filtered listing URL: %s", href)
             continue
@@ -1024,6 +1134,21 @@ def harvest_source(src: dict, force: bool = False):
 
     items = []
     processed_links = []
+
+    def handle_item(item: dict | None, url: str) -> None:
+        if not item:
+            return
+        content_text = item.get("content_text") or ""
+        if not content_text.strip():
+            SOURCE_SUMMARY[src_name]["no_text"] += 1
+        if min_words and _word_count(content_text) < min_words:
+            SOURCE_SUMMARY[src_name]["short"] += 1
+            processed_links.append(url)
+            return
+        SOURCE_SUMMARY[src_name]["total"] += 1
+        items.append(item)
+        processed_links.append(url)
+
     for idx, url in enumerate(new_links):
         if runtime_expired():
             logging.info(
@@ -1052,10 +1177,14 @@ def harvest_source(src: dict, force: bool = False):
                     raise FileNotFoundError("cached copy missing during cooldown")
             else:
                 html = fetch_page(url, src=src)
-            item = build_item(url, src["name"], html, content_selectors=src.get("content_selectors"))
-            if item:
-                items.append(item)
-                processed_links.append(url)
+            item = build_item(
+                url,
+                src_name,
+                html,
+                content_selectors=src.get("content_selectors"),
+                src=src,
+            )
+            handle_item(item, url)
         except SourceTemporarilyUnavailable as exc:
             page_path = PAGES_DIR / cache_key_for(url)
             if page_path.exists():
@@ -1065,13 +1194,12 @@ def harvest_source(src: dict, force: bool = False):
                 html = page_path.read_text(encoding="utf-8")
                 item = build_item(
                     url,
-                    src["name"],
+                    src_name,
                     html,
                     content_selectors=src.get("content_selectors"),
+                    src=src,
                 )
-                if item:
-                    items.append(item)
-                    processed_links.append(url)
+                handle_item(item, url)
             else:
                 logging.warning("  skip %s: %s", url, exc)
         except Exception as e:
@@ -1085,6 +1213,25 @@ def harvest_source(src: dict, force: bool = False):
     seen_map[src["name"]] = (processed_links + tail)[:keep]
 
     return items
+
+
+def log_source_summary() -> None:
+    if not SOURCE_SUMMARY:
+        logging.info("Summary: no sources processed")
+        return
+    for name in sorted(SOURCE_SUMMARY):
+        summary = SOURCE_SUMMARY[name]
+        min_words = SOURCE_MIN_WORDS.get(name, 0)
+        logging.info(
+            "%s | total: %d | no_text: %d | short(<%d): %d | listing_filtered: %d",
+            name,
+            summary.get("total", 0),
+            summary.get("no_text", 0),
+            min_words,
+            summary.get("short", 0),
+            summary.get("listing_filtered", 0),
+        )
+
 
 def build_feed(all_items):
     # Deduplicate by URL (keep newest date if available)
@@ -1220,6 +1367,9 @@ def main():
     parser.add_argument("--debug", action="store_true", help="Enable verbose debug logging")
     ARGS = parser.parse_args()
 
+    SOURCE_SUMMARY.clear()
+    SOURCE_MIN_WORDS.clear()
+
     if ARGS.debug:
         logging.getLogger().setLevel(logging.DEBUG)
 
@@ -1251,6 +1401,8 @@ def main():
     all_items = []
     seen_source_names = set()
     for src in sources:
+        src_name = src.get("name", "")
+        SOURCE_MIN_WORDS[src_name] = int(src.get("min_words", 0) or 0)
         if runtime_expired():
             logging.info("Stop processing further sources due to max-runtime limit")
             break
@@ -1259,7 +1411,7 @@ def main():
             continue
         if selected_sources and src.get("name") not in selected_sources:
             continue
-        seen_source_names.add(src.get("name"))
+        seen_source_names.add(src_name)
         try:
             if src.get("mode") == "api":
                 items = harvest_json_source(src, force=ARGS.rebuild)
@@ -1275,6 +1427,8 @@ def main():
         missing = selected_sources - seen_source_names
         if missing:
             logging.warning("Requested sources not found or disabled: %s", ", ".join(sorted(missing)))
+
+    log_source_summary()
 
     if not all_items and not ARGS.rebuild:
         # Нет новых карточек — ленту не переписываем, чтобы не обнулять историю
