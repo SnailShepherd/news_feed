@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 26 Sep 2025 00:40:50 GMT"
+      "Last-Modified": "Fri, 26 Sep 2025 01:09:59 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -2630,7 +2630,7 @@
         "status": "cached"
       }
     ],
-    "last_run": "2025-09-26T00:48:35.321446+00:00",
+    "last_run": "2025-09-26T01:09:41.932749+00:00",
     "items": 1020,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -2643,33 +2643,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 2.3730080000063936,
-        "connect_ms": 362.7211310000007,
-        "response_ms": 365.0941390000071,
+        "dns_ms": 800.9403610000163,
+        "connect_ms": 822.1200039999417,
+        "response_ms": 1623.060364999958,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f27e93f7bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 647.8260869999986,
+        "connect_ms": 0.0,
+        "response_ms": 412.5187619999906,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 2.601002000005792,
-        "connect_ms": 483.93090299998676,
-        "response_ms": 486.53190499999255,
+        "dns_ms": 5175.759382000024,
+        "connect_ms": 0.0,
+        "response_ms": 856.2689180000689,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.7156799999847863,
-        "connect_ms": 408.36691799995606,
-        "response_ms": 409.08259799994084,
+        "dns_ms": 4460.21574100007,
+        "connect_ms": 0.0,
+        "response_ms": 788.3850480000092,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -2678,21 +2678,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "1b5fd813da81c391ec2d0ba735c14e7cda96b24dab1452a457fbd19b4622e900",
-    "https://ardexpert.ru/article": "b329e2abdcbf987251bc398d530ce0617f1c3fe4cbb3f8a0d435136f8716d3f7",
+    "https://ardexpert.ru/article": "a42c7c7023c5355282bd5ef88e36366c0eb40b2ad6b1ad1f876d59bdb8874a46",
     "https://www.gostinfo.ru/News/List": "f05f5ab936b11cd69576c6bc1f2c4e1e10124e06204907c7e1cd1e4ba0f3e394",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "0e56bc837eae2f7e50db14a4a5de72825d17000abbc3522e82cdff40b3c8bc88",
-    "https://eec.eaeunion.org/news/": "c932648b8d6d642855840971ab4706006d21d154c90898fa890a03bc958a87d2",
-    "https://minfin.gov.ru/ru/press-center/": "194201f258dfbf69b802b9204c9dbf392b31d3a9bf1ecc7fa2e2ea1bb4f92b1a",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "5fdda3ee240089c606d0392feeee1b12d5a3c3d195f47f0109ab801354c082a1",
-    "https://www.metalinfo.ru/ru/news": "34c8e5475d30973c88f6474e34eb33045e9a1e66ccfd5059e866d622a9bfd654",
-    "https://www.pnp.ru/economics/": "3074cb470dfc5fe8e87262f2607fd035ced6c2146a2482a736377bae4dde8680",
+    "https://eec.eaeunion.org/news/": "fef9a8a3fbf1855ee251b2c28d55901a3af50d43aa285a7ed5e1cbb3918cc5b4",
+    "https://minfin.gov.ru/ru/press-center/": "2362302d06029f7be6139d931bb706cdcf7713ea53caa3deaaad6eea05dc4fe4",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "75f73013ca645d5012011ef9c046ebef9e12638e09faee2880cb98f50077b085",
+    "https://www.metalinfo.ru/ru/news": "b608066a655a2376840b15dc5f27b12bb3bd79521e718108ad8a0d987f0d4fb1",
+    "https://www.pnp.ru/economics/": "4f871197338583c0bfda70146da7406b2229b93e7fdc737458690cda8a4c0f83",
     "https://erzrf.ru/news/": "60218b70aee0053f7fc3fe7544418e338b865b035c0e1bff16002105493e6ce7",
-    "https://ria-stk.ru/news/vse-novosti.php": "e983822c5670a44c3c58ece78a4c821b9f8b53f1a94aeffb8eb0b360fe09eb71",
-    "http://government.ru/news/": "90cf7ea9fc20b3ac48b615fa928231f39abc7bdd570307aafe5a7651225894ba",
-    "https://stroygaz.ru/news/": "1e2860fdb10f0b318df4c80fe170f3a674573fde6356e02d7c82d7e8472a5e6d",
-    "https://realty.ria.ru/lenta/": "f2be286f205c76d31c3d741d8027ef04763632ed396a7d84ae37b996e0e916e6",
+    "https://ria-stk.ru/news/vse-novosti.php": "4a689f1c4cf6deb333d129e230aad847f6519b92741e159d01cb59254a16073b",
+    "http://government.ru/news/": "2603cd68cbd35a206ec8ea92a4c411984186bd4f78b8e8d9c2ab498e6e656bc3",
+    "https://stroygaz.ru/news/": "4161110387fbe31eb8b9859994dcb8437eef11ec5506c58412afca4f29f7c079",
+    "https://realty.ria.ru/lenta/": "1ce8284eaeca57b6dfd4b77641838dc65694bc503363bad416058c170e07a4a6",
     "https://rg.ru/tema/ekonomika": "17d8b8a73d4511968375019b70a6ba16d3a4720b2defd2ad9c13d30b31f1dfa5",
-    "http://ancb.ru/publication": "b66dccf819b601b53876b8e39a4cc36c7d87a4651249c3cf9c9f1f91ab8dcd18"
+    "http://ancb.ru/publication": "c5d9d9667d0e8a8f7e09015356e0be47b66c70c7c2f76681ed93b62cc66a36df"
   },
   "seen_urls": {
     "НОТИМ": [
@@ -3762,6 +3762,10 @@
       "https://rg.ru/2025/09/17/v-moskve-otkrylas-desiataia-gmp-konferenciia-pod-devizom-reguliruia-segodnia-sozdaem-stabilnoe-zavtra.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20193",
+      "http://ancb.ru/publication/read/20192",
+      "http://ancb.ru/publication/read/20191",
+      "http://ancb.ru/publication/read/20190",
       "http://ancb.ru/publication/read/20186",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
@@ -3793,10 +3797,6 @@
       "http://ancb.ru/publication/read/20000",
       "http://ancb.ru/publication/read/19998",
       "http://ancb.ru/publication/read/19997",
-      "http://ancb.ru/publication/read/19988",
-      "http://ancb.ru/publication/read/19984",
-      "http://ancb.ru/publication/read/19983",
-      "http://ancb.ru/publication/read/19982",
       "http://ancb.ru/publication/read/20186",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
@@ -4140,8 +4140,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f27e9b5cb00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1758846839.27439
       },
       "warmup_done": false,
@@ -4151,27 +4151,43 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "3BtDXY9Jqp1uBxZr",
+          "value": "xVjAqncl7gRILVGt",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758848566
+          "expires": 1758850167
         },
         {
           "name": "__ddg10_",
-          "value": "1758847366",
+          "value": "1758848967",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758848566
+          "expires": 1758850167
         },
         {
           "name": "__ddg9_",
-          "value": "172.208.153.4",
+          "value": "68.220.62.146",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758848566
+          "expires": 1758850167
+        },
+        {
+          "name": "__ddg1_",
+          "value": "qNl6D0meRyKrKLOON77I",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1790384967
+        },
+        {
+          "name": "PHPSESSID",
+          "value": "9c3d6d2b80c855988ac4d182687cfbad",
+          "domain": "www.pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": null
         },
         {
           "name": "usr_abt_grp",
@@ -4187,17 +4203,17 @@
         "consecutive": 0
       },
       "warmup_done": true,
-      "last_success_path": "/economics/cb-planiruet-poetapnoe-uvelichenie-minimalnogo-kapitala-bankov.html"
+      "last_success_path": "/economics/"
     },
     "ria-stk.ru": {
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "A0I0shyORCmgKWFcWqLFqm83P86F71MX",
+          "value": "wxOup2TWU85PR9SQVtfyhtM6O25kiuj2",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1758858215
+          "expires": 1758859774
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -4205,7 +4221,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1789951415
+          "expires": 1789952973
         }
       ],
       "failures": {
