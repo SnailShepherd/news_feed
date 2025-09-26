@@ -433,6 +433,107 @@ def _word_count(text: str) -> int:
     return len(re.findall(r"\w+", text, flags=re.UNICODE))
 
 
+def _clone_soup(doc: BeautifulSoup | str | None) -> BeautifulSoup:
+    if isinstance(doc, BeautifulSoup):
+        return BeautifulSoup(str(doc), "html.parser")
+    return BeautifulSoup(doc or "", "html.parser")
+
+
+def _clean_for_content(soup: BeautifulSoup) -> None:
+    for junk in soup.find_all(["script", "style", "nav", "footer", "aside", "form", "noscript", "iframe"]):
+        junk.decompose()
+
+
+def _drop_leading_title(text: str, title: str | None) -> str:
+    if not text:
+        return ""
+    if not title:
+        return text.strip()
+    title_norm = re.sub(r"\s+", " ", title).strip()
+    if not title_norm:
+        return text.strip()
+    trimmed = text.lstrip()
+    pattern = re.compile(rf"^{re.escape(title_norm)}[\s\-–—:]*", re.IGNORECASE)
+    new_text = pattern.sub("", trimmed, count=1)
+    if new_text != trimmed:
+        return new_text.strip()
+    lines = trimmed.splitlines()
+    if lines:
+        first = re.sub(r"\s+", " ", lines[0]).strip().lower()
+        if first == title_norm.lower():
+            return "\n".join(lines[1:]).strip()
+    return trimmed.strip()
+
+
+def extract_content_with_fallback(doc, selectors, title: str | None):
+    if isinstance(selectors, str):
+        selectors = [selectors]
+    ordered_selectors = []
+    for sel in selectors or []:
+        if sel and sel not in ordered_selectors:
+            ordered_selectors.append(sel)
+    for sel in DEFAULT_CONTENT_SELECTORS:
+        if sel not in ordered_selectors:
+            ordered_selectors.append(sel)
+
+    soup = _clone_soup(doc)
+    _clean_for_content(soup)
+
+    candidates: list[tuple[int, str]] = []
+    candidate_nodes = []
+
+    for sel in ordered_selectors:
+        try:
+            nodes = soup.select(sel)
+        except Exception:
+            continue
+        for node in nodes:
+            if node in candidate_nodes:
+                continue
+            text = _normalize_whitespace(node.get_text("\n", strip=True))
+            if not text:
+                continue
+            candidates.append((len(text), text))
+            candidate_nodes.append(node)
+
+    article_node = soup.find("article")
+    if article_node and article_node not in candidate_nodes:
+        candidate_nodes.append(article_node)
+    if soup.body and soup.body not in candidate_nodes:
+        candidate_nodes.append(soup.body)
+
+    best_text = ""
+    if candidates:
+        best_text = max(candidates, key=lambda item: item[0])[1]
+
+    best_density_text = ""
+    best_density_score = 0
+    for node in candidate_nodes:
+        parts = []
+        for sub in node.find_all(["p", "li", "h2", "h3"]):
+            fragment = _normalize_whitespace(sub.get_text(" ", strip=True))
+            if fragment:
+                parts.append(fragment)
+        if not parts:
+            continue
+        joined = "\n\n".join(parts)
+        score = len("".join(parts))
+        if score > best_density_score:
+            best_density_score = score
+            best_density_text = joined
+
+    if best_density_text and len(best_density_text) > len(best_text):
+        best_text = best_density_text
+
+    final_text = _drop_leading_title(best_text, title)
+    final_text = _normalize_whitespace(final_text)
+
+    if not final_text:
+        return None
+
+    return final_text
+
+
 def html_fragment_to_text(fragment: str) -> str:
     if not fragment:
         return ""
@@ -625,11 +726,39 @@ def build_item(url: str, source_name: str, html: str, content_selectors=None, sr
 
     item_id = hashlib.sha256(url.encode("utf-8")).hexdigest()
     content_text = extract_content_text(soup, selectors=content_selectors)
+    normalized_title = _normalize_whitespace(title)
+    fallback_needed = False
+    if not content_text:
+        fallback_needed = True
+    else:
+        cmp_title = re.sub(r"\s+", " ", normalized_title).strip().lower()
+        cmp_text = re.sub(r"\s+", " ", content_text).strip().lower()
+        if cmp_title and cmp_text == cmp_title:
+            fallback_needed = True
+        elif len(content_text) < 160:
+            fallback_needed = True
+
+    if fallback_needed:
+        fallback_text = extract_content_with_fallback(soup, content_selectors, title)
+        if fallback_text:
+            content_text = fallback_text
+
     if not content_text and html.strip():
         amp_html = fetch_amp_if_available(url, soup, src=src)
         if amp_html:
             amp_soup = BeautifulSoup(amp_html, "html.parser")
             content_text = extract_content_text(amp_soup, selectors=content_selectors)
+            if content_text:
+                cmp_title = re.sub(r"\s+", " ", normalized_title).strip().lower()
+                cmp_text = re.sub(r"\s+", " ", content_text).strip().lower()
+                if (cmp_title and cmp_text == cmp_title) or len(content_text) < 160:
+                    fallback_text = extract_content_with_fallback(amp_soup, content_selectors, title)
+                    if fallback_text:
+                        content_text = fallback_text
+            else:
+                fallback_text = extract_content_with_fallback(amp_soup, content_selectors, title)
+                if fallback_text:
+                    content_text = fallback_text
 
     item = {
         "id": item_id,
