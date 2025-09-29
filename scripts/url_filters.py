@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from urllib.parse import parse_qsl, urlparse
 
-_LISTING_SEGMENTS = {"tag", "category", "archive", "search", "page"}
+_LISTING_SEGMENTS = {"tag", "category", "archive", "search", "page", "article-archive"}
 _SECTION_PREFIXES = {
     "news",
     "novosti",
@@ -113,6 +113,7 @@ def is_listing_url(url: str | None) -> bool:
         return True
 
     segments = [segment.lower() for segment in _path_segments(path)]
+    is_eec_news = host_no_www in {"eec.eaeunion.org"} and segments[:1] == ["news"]
     if segments:
         last_segment = segments[-1]
         if last_segment == "news":
@@ -121,6 +122,7 @@ def is_listing_url(url: str | None) -> bool:
             len(segments) == 2
             and segments[0] in _SECTION_PREFIXES
             and not segments[1].isdigit()
+            and not is_eec_news
         ):
             return True
     if any(segment in _LISTING_SEGMENTS for segment in segments):
@@ -137,6 +139,8 @@ def is_listing_url(url: str | None) -> bool:
         if re.fullmatch(r"PAGEN_\d+", key, re.IGNORECASE):
             return True
         if key.upper() == "VOTE_ID":
+            return True
+        if key.lower() == "view_result" and value.lower() == "y":
             return True
 
     return False

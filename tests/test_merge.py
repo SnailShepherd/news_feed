@@ -1,3 +1,4 @@
+import hashlib
 import pathlib
 import sys
 import unittest
@@ -23,7 +24,7 @@ class MergeItemsTests(unittest.TestCase):
             {
                 "url": "https://example.com/news/1",
                 "title": "Old title",
-                "date_published": None,
+                "published_at": None,
                 "content_text": "Existing full text",
             }
         ]
@@ -31,7 +32,7 @@ class MergeItemsTests(unittest.TestCase):
             {
                 "url": "https://example.com/news/1",
                 "title": "Updated title",
-                "date_published": "2024-09-23T10:00:00+03:00",
+                "published_at": "2024-09-23T10:00:00+03:00",
                 "content_text": None,
             }
         ]
@@ -41,7 +42,7 @@ class MergeItemsTests(unittest.TestCase):
         self.assertEqual(len(merged), 1)
         item = merged[0]
         self.assertEqual(item["title"], "Updated title")
-        self.assertEqual(item["date_published"], "2024-09-23T10:00:00+03:00")
+        self.assertEqual(item.get("published_at"), "2024-09-23T10:00:00+03:00")
         self.assertEqual(item["content_text"], "Existing full text")
 
     def test_retains_original_date_when_new_uses_first_seen_fallback(self):
@@ -54,7 +55,7 @@ class MergeItemsTests(unittest.TestCase):
                 "id": item_id,
                 "url": "https://example.com/news/1",
                 "title": "First crawl",
-                "date_published": "2024-09-20T09:00:00+03:00",
+                "published_at": "2024-09-20T09:00:00+03:00",
             }
         ]
         new = [
@@ -62,7 +63,7 @@ class MergeItemsTests(unittest.TestCase):
                 "id": item_id,
                 "url": "https://example.com/news/1",
                 "title": "Second crawl",
-                "date_published": fallback_iso,
+                "published_at": fallback_iso,
             }
         ]
 
@@ -70,8 +71,62 @@ class MergeItemsTests(unittest.TestCase):
 
         self.assertEqual(len(merged), 1)
         item = merged[0]
-        self.assertEqual(item["date_published"], "2024-09-20T09:00:00+03:00")
+        self.assertEqual(item.get("published_at"), "2024-09-20T09:00:00+03:00")
         self.assertEqual(item["title"], "Second crawl")
+
+    def test_alias_preserves_identity_and_original_timestamps(self):
+        canonical_url = "https://example.com/articles/canonical-story"
+        item_id = hashlib.sha256(canonical_url.encode("utf-8")).hexdigest()
+        url_a = canonical_url
+        url_b = f"{canonical_url}?from=hub"
+
+        existing_first_seen = "2024-09-20T08:15:00+03:00"
+        existing_bucketed = "2024-09-20T08:00:00+03:00"
+        existing_published = "2024-09-19T18:00:00+03:00"
+        STATE.setdefault("first_seen", {})[item_id] = existing_first_seen
+
+        existing = [
+            {
+                "id": item_id,
+                "source": "Example Source",
+                "title": "First crawl",
+                "url": url_a,
+                "content_text": "Short text.",
+                "first_seen": existing_first_seen,
+                "bucketed_at": existing_bucketed,
+                "published_at": existing_published,
+                "fetched_at": "2024-09-20T08:20:00+03:00",
+                "canonical_url": canonical_url,
+            }
+        ]
+
+        new = [
+            {
+                "id": item_id,
+                "source": "Example Source",
+                "title": "Updated crawl",
+                "url": url_b,
+                "content_text": "Short text with a few extra words to be longer.",
+                "first_seen": "2024-09-20T09:45:00+03:00",
+                "bucketed_at": "2024-09-20T09:00:00+03:00",
+                "published_at": existing_first_seen,
+                "fetched_at": "2024-09-20T09:50:00+03:00",
+                "canonical_url": canonical_url,
+            }
+        ]
+
+        merged = merge_items(existing, new)
+
+        self.assertEqual(len(merged), 1)
+        item = merged[0]
+        self.assertEqual(item["id"], item_id)
+        self.assertEqual(item["first_seen"], existing_first_seen)
+        self.assertEqual(item["bucketed_at"], existing_bucketed)
+        self.assertEqual(item["published_at"], existing_published)
+        self.assertEqual(
+            item["content_text"], "Short text with a few extra words to be longer."
+        )
+        self.assertEqual(item["url"], url_b)
 
 
 if __name__ == "__main__":

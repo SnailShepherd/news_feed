@@ -64,13 +64,26 @@ _RUNTIME_LOGGED = False
 SOURCE_SUMMARY: dict[str, dict[str, int]] = defaultdict(
     lambda: {
         "total": 0,
-        "no_text": 0,
+        "empty": 0,
         "short": 0,
-        "listing_filtered": 0,
-        "api_text": 0,
+        "listing": 0,
+        "api": 0,
+        "amp": 0,
     }
 )
 SOURCE_MIN_WORDS: dict[str, int] = {}
+
+ESSENTIAL_ITEM_FIELDS = (
+    "id",
+    "source",
+    "title",
+    "url",
+    "content_text",
+    "first_seen",
+    "bucketed_at",
+    "fetched_at",
+)
+OPTIONAL_ITEM_FIELDS = ("published_at", "canonical_url")
 
 # Перехваты ошибок/429 и паузы между запросами к одному хосту
 SESSION = requests.Session()
@@ -109,9 +122,56 @@ else:
 
 STATE.setdefault("first_seen", {})
 STATE.setdefault("host_state", {})
+STATE.setdefault("aliases", {})
+STATE.setdefault("content_hashes", {})
 
 HOST_STRATEGIES: dict[str, RequestStrategy] = {}
 HOST_CLIENTS: dict[str, HostClient] = {}
+
+DENY_PHRASES = [
+    "Актуально",
+    "Опрос",
+    "Подписка",
+    "Архив",
+    "Версия для печати",
+    "Государственные программы",
+    "Creative Commons",
+]
+_DENY_PATTERNS = [
+    re.compile(rf"\b{re.escape(phrase.lower())}\b") for phrase in DENY_PHRASES
+]
+_MIN_PARAGRAPH_CLUSTER = 3
+
+HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
+    "stroygaz.ru": [
+        ".news-detail__content",
+        ".news-detail__text",
+        ".news-detail",
+        "article .content",
+        "article .article__content",
+        "article",
+    ],
+    "government.ru": [
+        ".news__article-body",
+        ".page-content",
+        ".layout-two-columns .main-column",
+        "article",
+    ],
+    "minfin.gov.ru": [
+        ".press-reliz-detail__content",
+        ".news-detail__content",
+        ".article__content",
+        ".content",
+        "article",
+    ],
+    "faufcc.ru": [
+        "[data-element='content']",
+        ".press-center__detail",
+        ".news-detail",
+        ".article__body",
+        "article",
+    ],
+}
 
 def save_state():
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -433,6 +493,18 @@ def _word_count(text: str) -> int:
     return len(re.findall(r"\w+", text, flags=re.UNICODE))
 
 
+def _finalize_item_schema(item: dict[str, object]) -> dict[str, object]:
+    cleaned: dict[str, object] = {}
+    for key in ESSENTIAL_ITEM_FIELDS:
+        if key in item:
+            cleaned[key] = item[key]
+    for key in OPTIONAL_ITEM_FIELDS:
+        value = item.get(key)
+        if value not in (None, ""):
+            cleaned[key] = value
+    return cleaned
+
+
 def _clone_soup(doc: BeautifulSoup | str | None) -> BeautifulSoup:
     if isinstance(doc, BeautifulSoup):
         return BeautifulSoup(str(doc), "html.parser")
@@ -442,6 +514,51 @@ def _clone_soup(doc: BeautifulSoup | str | None) -> BeautifulSoup:
 def _clean_for_content(soup: BeautifulSoup) -> None:
     for junk in soup.find_all(["script", "style", "nav", "footer", "aside", "form", "noscript", "iframe"]):
         junk.decompose()
+
+
+def _strip_deny_phrases(text: str) -> str:
+    if not text:
+        return ""
+    blocks: list[list[str]] = []
+    current: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            if current:
+                blocks.append(current)
+                current = []
+            continue
+        if _contains_deny_phrase(stripped):
+            continue
+        current.append(stripped)
+    if current:
+        blocks.append(current)
+    if not blocks:
+        return ""
+    paragraphs = [" ".join(chunk) for chunk in blocks if chunk]
+    return "\n\n".join(paragraphs).strip()
+
+
+def _contains_deny_phrase(text: str) -> bool:
+    if not text:
+        return False
+    lowered = text.lower()
+    return any(pattern.search(lowered) for pattern in _DENY_PATTERNS)
+
+
+def _selectors_for_url(url: str, selectors: list[str] | None) -> list[str]:
+    combined: list[str] = []
+    parsed = urlparse(url)
+    host = parsed.netloc.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    for sel in HOST_CONTENT_SELECTORS.get(host, []):
+        if sel and sel not in combined:
+            combined.append(sel)
+    for sel in selectors or []:
+        if sel and sel not in combined:
+            combined.append(sel)
+    return combined
 
 
 def _drop_leading_title(text: str, title: str | None) -> str:
@@ -493,7 +610,10 @@ def extract_content_with_fallback(doc, selectors, title: str | None):
             text = _normalize_whitespace(node.get_text("\n", strip=True))
             if not text:
                 continue
-            candidates.append((len(text), text))
+            cleaned_text = _strip_deny_phrases(text)
+            if not cleaned_text:
+                continue
+            candidates.append((len(cleaned_text), cleaned_text))
             candidate_nodes.append(node)
 
     article_node = soup.find("article")
@@ -513,6 +633,8 @@ def extract_content_with_fallback(doc, selectors, title: str | None):
         for sub in node.find_all(["p", "li", "h2", "h3"]):
             fragment = _normalize_whitespace(sub.get_text(" ", strip=True))
             if fragment:
+                if _contains_deny_phrase(fragment):
+                    continue
                 parts.append(fragment)
         if not parts:
             continue
@@ -525,7 +647,34 @@ def extract_content_with_fallback(doc, selectors, title: str | None):
     if best_density_text and len(best_density_text) > len(best_text):
         best_text = best_density_text
 
+    readability_text = ""
+    readability_score = 0
+    search_nodes = list(candidate_nodes)
+    for extra in soup.find_all(["article", "section", "main", "div", "body"]):
+        if extra not in search_nodes:
+            search_nodes.append(extra)
+    for node in search_nodes:
+        paragraphs = []
+        for p in node.find_all("p"):
+            fragment = _normalize_whitespace(p.get_text(" ", strip=True))
+            if not fragment:
+                continue
+            if _contains_deny_phrase(fragment):
+                continue
+            paragraphs.append(fragment)
+        if len(paragraphs) < _MIN_PARAGRAPH_CLUSTER:
+            continue
+        joined = "\n\n".join(paragraphs)
+        score = len(joined)
+        if score > readability_score:
+            readability_score = score
+            readability_text = joined
+
+    if not best_text and readability_text:
+        best_text = readability_text
+
     final_text = _drop_leading_title(best_text, title)
+    final_text = _strip_deny_phrases(final_text)
     final_text = _normalize_whitespace(final_text)
 
     if not final_text:
@@ -577,6 +726,8 @@ def extract_content_text(soup: BeautifulSoup, selectors=None):
         for p in container.find_all(["p", "li"]):
             txt = _normalize_whitespace(p.get_text(" ", strip=True))
             if len(txt) >= 20:
+                if _contains_deny_phrase(txt):
+                    continue
                 paragraphs.append(txt)
         if paragraphs:
             return "\n\n".join(paragraphs)
@@ -708,13 +859,132 @@ def extract_title(soup: BeautifulSoup):
         return soup.title.string.strip()
     return None
 
-def build_item(url: str, source_name: str, html: str, content_selectors=None, src: dict | None = None):
-    soup = BeautifulSoup(html, "html.parser")
-    title = extract_title(soup) or url
+
+def _normalize_canonical_url(url: str | None) -> str | None:
+    if not url:
+        return None
+    parsed = urlparse(url)
+    if not parsed.scheme or parsed.scheme not in {"http", "https"}:
+        return None
+    path = parsed.path or "/"
+    path = re.sub(r"/+", "/", path)
+    if path != "/":
+        path = path.rstrip("/")
+        if not path:
+            path = "/"
+    normalized = parsed._replace(path=path, query="", fragment="")
+    return normalized.geturl()
+
+
+def _content_fingerprint(text: str | None) -> str | None:
+    if not text:
+        return None
+    normalized = re.sub(r"\s+", " ", text).strip().lower()
+    if not normalized:
+        return None
+    if len(normalized) > 4000:
+        normalized = normalized[:4000]
+    return hashlib.sha1(normalized.encode("utf-8")).hexdigest()
+
+
+def extract_canonical_url(soup: BeautifulSoup, base_url: str) -> str | None:
+    if not soup:
+        return None
+    for link in soup.find_all("link"):
+        rel = link.get("rel")
+        if not rel:
+            continue
+        if isinstance(rel, (list, tuple)):
+            rels = [str(r).lower() for r in rel]
+        else:
+            rels = [part.lower() for part in str(rel).split() if part]
+        if "canonical" in rels:
+            href = link.get("href")
+            if href:
+                return _normalize_canonical_url(urljoin(base_url, href.strip()))
+    for sel in ["meta[property='og:url']", "meta[name='og:url']"]:
+        tag = soup.select_one(sel)
+        if tag:
+            href = tag.get("content")
+            if href:
+                return _normalize_canonical_url(urljoin(base_url, href.strip()))
+    return None
+
+
+def extract_article_content(
+    url: str,
+    html: str,
+    selectors: list[str] | str | None = None,
+    title: str | None = None,
+):
+    soup = BeautifulSoup(html or "", "html.parser")
+    if title is None:
+        title = extract_title(soup) or url
+    if isinstance(selectors, str):
+        selector_list = [selectors]
+    else:
+        selector_list = list(selectors or [])
+    combined_selectors = _selectors_for_url(url, selector_list)
+
+    primary_soup = _clone_soup(soup)
+    text = extract_content_text(primary_soup, selectors=combined_selectors)
+    if text:
+        text = _drop_leading_title(text, title)
+        text = _strip_deny_phrases(text)
+        text = _normalize_whitespace(text)
+    else:
+        fallback_text = extract_content_with_fallback(soup, combined_selectors, title)
+        if fallback_text:
+            fallback_text = _drop_leading_title(fallback_text, title)
+            text = _strip_deny_phrases(fallback_text)
+            text = _normalize_whitespace(text)
+        else:
+            text = None
+
+    return text, soup, title
+
+
+def build_item(
+    url: str,
+    source_name: str,
+    html: str,
+    content_selectors=None,
+    src: dict | None = None,
+    pre_extracted_content: str | None = None,
+):
+    amp_used = False
+    selectors = content_selectors
+    content_text: str | None
+    title: str
+    if pre_extracted_content is not None:
+        soup = BeautifulSoup(html or "", "html.parser")
+        title = extract_title(soup) or url
+        content_text = _strip_deny_phrases(_normalize_whitespace(pre_extracted_content))
+        content_text = _normalize_whitespace(content_text)
+    else:
+        content_text, soup, title = extract_article_content(
+            url,
+            html,
+            selectors=selectors,
+            title=None,
+        )
+
+    if not content_text and html.strip():
+        amp_html = fetch_amp_if_available(url, soup, src=src)
+        if amp_html:
+            amp_text, _, _ = extract_article_content(
+                url,
+                amp_html,
+                selectors=selectors,
+                title=title,
+            )
+            if amp_text:
+                content_text = amp_text
+                amp_used = True
+
     cands = extract_date_candidates(soup)
     dt = try_parse_any_date(cands)
 
-    # Fallback: URL like /2024/09/21/
     if dt is None:
         m = re.search(r"/(20\d{2})/([01]\d)/([0-3]\d)/", url)
         if m:
@@ -724,62 +994,60 @@ def build_item(url: str, source_name: str, html: str, content_selectors=None, sr
             except ValueError:
                 dt = None
 
-    item_id = hashlib.sha256(url.encode("utf-8")).hexdigest()
-    content_text = extract_content_text(soup, selectors=content_selectors)
-    normalized_title = _normalize_whitespace(title)
-    fallback_needed = False
-    if not content_text:
-        fallback_needed = True
-    else:
-        cmp_title = re.sub(r"\s+", " ", normalized_title).strip().lower()
-        cmp_text = re.sub(r"\s+", " ", content_text).strip().lower()
-        if cmp_title and cmp_text == cmp_title:
-            fallback_needed = True
-        elif len(content_text) < 160:
-            fallback_needed = True
+    canonical_url = extract_canonical_url(soup, url)
+    url_key = _normalize_canonical_url(url) or url
+    alias_map = STATE.setdefault("aliases", {})
+    content_hashes = STATE.setdefault("content_hashes", {})
+    canonical_key = canonical_url or alias_map.get(url_key) or url_key
 
-    if fallback_needed:
-        fallback_text = extract_content_with_fallback(soup, content_selectors, title)
-        if fallback_text:
-            content_text = fallback_text
-
-    if not content_text and html.strip():
-        amp_html = fetch_amp_if_available(url, soup, src=src)
-        if amp_html:
-            amp_soup = BeautifulSoup(amp_html, "html.parser")
-            content_text = extract_content_text(amp_soup, selectors=content_selectors)
-            if content_text:
-                cmp_title = re.sub(r"\s+", " ", normalized_title).strip().lower()
-                cmp_text = re.sub(r"\s+", " ", content_text).strip().lower()
-                if (cmp_title and cmp_text == cmp_title) or len(content_text) < 160:
-                    fallback_text = extract_content_with_fallback(amp_soup, content_selectors, title)
-                    if fallback_text:
-                        content_text = fallback_text
-            else:
-                fallback_text = extract_content_with_fallback(amp_soup, content_selectors, title)
-                if fallback_text:
-                    content_text = fallback_text
-
-    item = {
-        "id": item_id,
-        "url": url,
-        "title": title,
-        "date_published": dt.isoformat() if dt else None,
-        "content_text": content_text,
-        "tags": [],
-        "source": source_name,
-    }
-
-    if not item["date_published"]:
-        first_seen_map = STATE.setdefault("first_seen", {})
-        cached = first_seen_map.get(item_id)
-        if cached:
-            item["date_published"] = cached
+    fingerprint = _content_fingerprint(content_text)
+    if fingerprint:
+        existing = content_hashes.get(fingerprint)
+        if existing:
+            canonical_key = existing
         else:
-            seen_dt = make_aware_msk(datetime.now(MSK)).replace(second=0, microsecond=0)
-            iso = seen_dt.isoformat()
-            first_seen_map[item_id] = iso
-            item["date_published"] = iso
+            content_hashes[fingerprint] = canonical_key
+
+    alias_map[url_key] = canonical_key
+    alias_map[canonical_key] = canonical_key
+    if fingerprint:
+        content_hashes[fingerprint] = canonical_key
+
+    id_source = canonical_key or url
+    item_id = hashlib.sha256(id_source.encode("utf-8")).hexdigest()
+
+    now_msk = make_aware_msk(datetime.now(MSK)).replace(second=0, microsecond=0)
+    first_seen_map = STATE.setdefault("first_seen", {})
+    cached_first_seen = first_seen_map.get(item_id)
+    if cached_first_seen:
+        try:
+            first_seen_dt = datetime.fromisoformat(cached_first_seen)
+        except ValueError:
+            first_seen_dt = now_msk
+            first_seen_map[item_id] = first_seen_dt.isoformat()
+    else:
+        first_seen_dt = now_msk
+        first_seen_map[item_id] = first_seen_dt.isoformat()
+
+    bucketed_at = first_seen_dt.replace(minute=0, second=0, microsecond=0)
+    fetched_at = now_msk
+
+    item: dict[str, object] = {
+        "id": item_id,
+        "source": source_name,
+        "title": title,
+        "url": url,
+        "content_text": content_text,
+        "first_seen": first_seen_dt.isoformat(),
+        "bucketed_at": bucketed_at.isoformat(),
+        "fetched_at": fetched_at.isoformat(),
+    }
+    if dt:
+        item["published_at"] = dt.isoformat()
+    if canonical_url and canonical_url != url:
+        item["canonical_url"] = canonical_url
+    if amp_used:
+        item["_amp_used"] = True
 
     return item
 
@@ -869,7 +1137,7 @@ def harvest_json_source(src: dict, force: bool = False):
         else:
             url = link
         if is_listing_url(url):
-            SOURCE_SUMMARY[src_name]["listing_filtered"] += 1
+            SOURCE_SUMMARY[src_name]["listing"] += 1
             if ARGS and getattr(ARGS, "debug", False):
                 logging.debug("Filtered listing URL: %s", url)
             continue
@@ -943,9 +1211,9 @@ def harvest_json_source(src: dict, force: bool = False):
                     html,
                     content_selectors=src.get("content_selectors"),
                     src=src,
+                    pre_extracted_content=api_text,
                 )
-                item["content_text"] = api_text
-                SOURCE_SUMMARY[src_name]["api_text"] += 1
+                SOURCE_SUMMARY[src_name]["api"] += 1
             else:
                 html = fetch_page(url, src=src)
                 item = build_item(
@@ -963,22 +1231,22 @@ def harvest_json_source(src: dict, force: bool = False):
                 try:
                     dt = finalize_datetime(dparser.isoparse(date_val))
                     if dt:
-                        item["date_published"] = dt.isoformat()
+                        item["published_at"] = dt.isoformat()
                 except Exception:
                     pass
             elif entry.get("publishDateRus"):
                 dt = try_parse_any_date([entry["publishDateRus"]])
                 if dt:
-                    item["date_published"] = dt.isoformat()
+                    item["published_at"] = dt.isoformat()
             content_text = item.get("content_text") or ""
             if not content_text.strip():
-                SOURCE_SUMMARY[src_name]["no_text"] += 1
+                SOURCE_SUMMARY[src_name]["empty"] += 1
             if min_words and _word_count(content_text) < min_words:
                 SOURCE_SUMMARY[src_name]["short"] += 1
                 processed_links.append(url)
                 continue
             SOURCE_SUMMARY[src_name]["total"] += 1
-            items.append(item)
+            items.append(_finalize_item_schema(item))
             processed_links.append(url)
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
@@ -1209,7 +1477,7 @@ def harvest_source(src: dict, force: bool = False):
             continue
         href = urljoin(src["base_url"], href)
         if is_listing_url(href):
-            SOURCE_SUMMARY[src_name]["listing_filtered"] += 1
+            SOURCE_SUMMARY[src_name]["listing"] += 1
             if ARGS and getattr(ARGS, "debug", False):
                 logging.debug("Filtered listing URL: %s", href)
             continue
@@ -1269,13 +1537,15 @@ def harvest_source(src: dict, force: bool = False):
             return
         content_text = item.get("content_text") or ""
         if not content_text.strip():
-            SOURCE_SUMMARY[src_name]["no_text"] += 1
+            SOURCE_SUMMARY[src_name]["empty"] += 1
         if min_words and _word_count(content_text) < min_words:
             SOURCE_SUMMARY[src_name]["short"] += 1
             processed_links.append(url)
             return
         SOURCE_SUMMARY[src_name]["total"] += 1
-        items.append(item)
+        if item.pop("_amp_used", False):
+            SOURCE_SUMMARY[src_name]["amp"] += 1
+        items.append(_finalize_item_schema(item))
         processed_links.append(url)
 
     for idx, url in enumerate(new_links):
@@ -1350,44 +1620,44 @@ def log_source_summary() -> None:
         return
     for name in sorted(SOURCE_SUMMARY):
         summary = SOURCE_SUMMARY[name]
-        min_words = SOURCE_MIN_WORDS.get(name, 0)
         logging.info(
-            "%s | total: %d | no_text: %d | short(<%d): %d | listing_filtered: %d",
+            "%s | total=%d empty=%d short=%d listing=%d api=%d amp=%d",
             name,
             summary.get("total", 0),
-            summary.get("no_text", 0),
-            min_words,
+            summary.get("empty", 0),
             summary.get("short", 0),
-            summary.get("listing_filtered", 0),
+            summary.get("listing", 0),
+            summary.get("api", 0),
+            summary.get("amp", 0),
         )
 
 
 def build_feed(all_items):
-    # Deduplicate by URL (keep newest date if available)
-    by_url = {}
+    by_id: dict[str, dict] = {}
     for it in all_items:
-        u = it["url"]
-        if u in by_url:
-            a = by_url[u]
-            if (not a.get("date_published")) and it.get("date_published"):
-                by_url[u] = it
-        else:
-            by_url[u] = it
-    items = []
-    for it in by_url.values():
+        item_id = it.get("id")
+        if not item_id:
+            continue
         title = (it.get("title") or "").strip()
         url = it.get("url") or ""
         if ('SKIP_KEYWORDS' in globals() and SKIP_KEYWORDS and (SKIP_KEYWORDS.search(title) or SKIP_KEYWORDS.search(url))):
             continue
-        if not it.get("date_published"):
+        if is_listing_url(url):
             continue
-        items.append(it)
+        existing = by_id.get(item_id)
+        if not existing:
+            by_id[item_id] = _finalize_item_schema(dict(it))
+            continue
+        old_fetched = existing.get("fetched_at") or ""
+        new_fetched = it.get("fetched_at") or ""
+        if new_fetched > old_fetched:
+            by_id[item_id] = _finalize_item_schema(dict(it))
 
-    # Sort by date desc (новые сверху), nulls-last (но мы null уже отфильтровали)
-    def sort_key(x):
-        dp = x.get("date_published")
-        return (0, dp) if dp else (1, "")
-    items.sort(key=sort_key, reverse=True)
+    items = list(by_id.values())
+    items.sort(
+        key=lambda x: x.get("published_at") or x.get("first_seen") or "",
+        reverse=True,
+    )
 
     feed = {
         "version": "https://jsonfeed.org/version/1.1",
@@ -1415,72 +1685,84 @@ def load_existing_feed_items():
     return []
 
 def merge_items(existing, new):
-    """Склеить items, убрать дубликаты по URL, предпочитая новые записи и записи с заполненной датой."""
+    """Merge items preferring the freshest content per stable item id."""
 
-    def has_rich_value(value):
-        if value is None:
-            return False
-        if isinstance(value, str):
-            return value.strip() != ""
-        return True
-
-    rich_fields = {"content_text", "content_html", "summary"}
-
-    by_url = {}
+    by_key: dict[str, dict] = {}
     for it in existing:
-        u = it.get("url")
-        if not u:
+        key = it.get("id") or it.get("url")
+        if not key:
             continue
-        if is_listing_url(u):
+        url = it.get("url") or ""
+        if is_listing_url(url):
             if ARGS and getattr(ARGS, "debug", False):
-                logging.debug("Drop listing URL from existing feed: %s", u)
+                logging.debug("Drop listing URL from existing feed: %s", url)
             continue
-        by_url[u] = it
+        by_key[key] = _finalize_item_schema(dict(it))
+
     for it in new:
-        u = it.get("url")
-        if not u:
+        key = it.get("id") or it.get("url")
+        if not key:
             continue
-        if is_listing_url(u):
+        url = it.get("url") or ""
+        if is_listing_url(url):
             if ARGS and getattr(ARGS, "debug", False):
-                logging.debug("Skip listing URL from new items: %s", u)
+                logging.debug("Skip listing URL from new items: %s", url)
             continue
-        old = by_url.get(u)
+        old = by_key.get(key)
         if not old:
-            by_url[u] = it
+            by_key[key] = _finalize_item_schema(dict(it))
             continue
 
         merged = dict(old)
-        for key, value in it.items():
-            if key == "date_published":
-                old_date = old.get("date_published")
-                new_date = value
-                if old_date and new_date:
-                    item_id = it.get("id") or old.get("id")
-                    if item_id:
-                        first_seen_map = STATE.get("first_seen", {})
-                        fallback_date = first_seen_map.get(item_id)
-                        if fallback_date and fallback_date == new_date:
-                            # The new value comes from the first-seen fallback; keep the
-                            # previously stored publication date instead of overwriting it
-                            # with the crawl timestamp.
+        for field in [
+            "source",
+            "title",
+            "url",
+            "content_text",
+            "first_seen",
+            "bucketed_at",
+            "published_at",
+            "fetched_at",
+            "canonical_url",
+        ]:
+            value = it.get(field)
+            if field == "content_text":
+                old_value = old.get(field) or ""
+                new_value = value or ""
+                if new_value and (not old_value or len(new_value) >= len(old_value)):
+                    merged[field] = new_value
+            elif field == "published_at":
+                old_value = old.get(field) or old.get("date_published")
+                if value and old_value:
+                    item_identifier = it.get("id") or old.get("id")
+                    if item_identifier:
+                        fallback_date = STATE.get("first_seen", {}).get(item_identifier)
+                        if fallback_date and fallback_date == value:
                             continue
-            if key in rich_fields and not has_rich_value(value):
-                continue
-            merged[key] = value
+                if value and (not old_value or str(value) > str(old_value)):
+                    merged[field] = value
+            elif field == "fetched_at":
+                old_value = old.get(field)
+                if value and (not old_value or str(value) > str(old_value)):
+                    merged[field] = value
+            elif field == "first_seen":
+                if not merged.get(field) and value:
+                    merged[field] = value
+            elif field == "bucketed_at":
+                if not merged.get(field) and value:
+                    merged[field] = value
+            elif value not in (None, ""):
+                merged[field] = value
 
-        by_url[u] = merged
+        by_key[key] = _finalize_item_schema(merged)
 
-    merged = list(by_url.values())
+    merged_items = list(by_key.values())
+    merged_items.sort(key=lambda x: x.get("published_at") or x.get("first_seen") or "", reverse=True)
 
-    # Сортировка по дате у нас окончательно произойдёт в build_feed,
-    # но слегка подсортируем тут, чтобы ограничение по размеру не «съело» самые новые.
-    merged.sort(key=lambda x: x.get("date_published") or "", reverse=True)
+    if FEED_MAX_ITEMS and len(merged_items) > FEED_MAX_ITEMS:
+        merged_items = merged_items[:FEED_MAX_ITEMS]
 
-    # Обрезка по размеру
-    if FEED_MAX_ITEMS and len(merged) > FEED_MAX_ITEMS:
-        merged = merged[:FEED_MAX_ITEMS]
-
-    return merged
+    return merged_items
 
 def main():
     global ARGS, CONNECT_TIMEOUT, READ_TIMEOUT, REQUEST_TIMEOUT, START_TIME, RUNTIME_EXCEEDED, _RUNTIME_LOGGED

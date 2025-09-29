@@ -59,7 +59,8 @@
     "include_regex": "/press-(?:tsentr/novosti|center/news)/[^/?#]+/?$",
     "restrict_domain": true,
     "max_links": 50,
-    "enabled": true
+    "enabled": true,
+    "min_words": 90
   },
   {
     "name": "АНЦБ",
@@ -111,7 +112,13 @@
       "/press-center"
     ],
     "link_min_text_len": 8,
-    "enabled": true
+    "enabled": true,
+    "content_selectors": [
+      ".press-reliz-detail__content",
+      ".news-detail__content",
+      ".article__content",
+      "[itemprop='articleBody']"
+    ]
   },
   {
     "name": "Интерфакс-Недвижимость",
@@ -206,6 +213,7 @@
       "/news/"
     ],
     "link_min_text_len": 8,
+    "min_words": 90,
     "enabled": true,
     "exclude_regex": [
       "^https?://(?:www\\.)?ria-stk\\.ru/news/?$"
@@ -235,6 +243,12 @@
     "enabled": true,
     "exclude_regex": [
       "\\?page=\\d+$"
+    ],
+    "content_selectors": [
+      ".news__article-body",
+      ".page-content",
+      ".article__content",
+      ".content"
     ]
   },
   {
