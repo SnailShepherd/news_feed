@@ -61,7 +61,7 @@ SMOKE_DEFAULT_SOURCES = {
 START_TIME = time.monotonic()
 RUNTIME_EXCEEDED = False
 _RUNTIME_LOGGED = False
-SOURCE_SUMMARY: dict[str, dict[str, int]] = defaultdict(
+SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
     lambda: {
         "total": 0,
         "empty": 0,
@@ -69,6 +69,7 @@ SOURCE_SUMMARY: dict[str, dict[str, int]] = defaultdict(
         "listing": 0,
         "api": 0,
         "amp": 0,
+        "min_words": DEFAULT_MIN_WORDS,
     }
 )
 SOURCE_MIN_WORDS: dict[str, int] = {}
@@ -78,7 +79,7 @@ HOST_MIN_WORD_OVERRIDES = {
     "realty.interfax.ru": 120,
     "stroygaz.ru": 120,
     "rg.ru": 150,
-    "faufcc.ru": 90,
+    "faufcc.ru": 70,
 }
 
 ESSENTIAL_ITEM_FIELDS = (
@@ -123,15 +124,36 @@ CACHE_DIR.mkdir(exist_ok=True)
 PAGES_DIR.mkdir(exist_ok=True)
 DOCS_DIR.mkdir(exist_ok=True)
 
+def ensure_state_keys(state: dict) -> dict:
+    required_defaults = {
+        "headers": {},
+        "stats": {},
+        "index_hash": {},
+        "seen_urls": {},
+        "first_seen": {},
+        "host_state": {},
+        "aliases": {},
+        "content_hashes": {},
+        "canonical_item_ids": {},
+    }
+    for key, default in required_defaults.items():
+        val = state.get(key)
+        if not isinstance(val, dict):
+            state[key] = dict(default)
+    return state
+
+
 if STATE_FILE.exists():
     STATE = json.loads(STATE_FILE.read_text(encoding="utf-8"))
 else:
-    STATE = {"headers": {}, "stats": {}, "index_hash": {}, "seen_urls": {}}
+    STATE = {
+        "headers": {},
+        "stats": {},
+        "index_hash": {},
+        "seen_urls": {},
+    }
 
-STATE.setdefault("first_seen", {})
-STATE.setdefault("host_state", {})
-STATE.setdefault("aliases", {})
-STATE.setdefault("content_hashes", {})
+STATE = ensure_state_keys(STATE)
 
 HOST_STRATEGIES: dict[str, RequestStrategy] = {}
 HOST_CLIENTS: dict[str, HostClient] = {}
@@ -175,6 +197,13 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
         ".press-center__detail",
         ".news-detail",
         ".article__body",
+        "article",
+    ],
+    "pnp.ru": [
+        ".article__content",
+        ".article-body",
+        ".news__article-body",
+        ".article__text",
         "article",
     ],
 }
@@ -322,8 +351,8 @@ def cache_key_with_suffix(base_key: str, suffix: str) -> str:
     return f"{base_key}{suffix}"
 
 
-AMP_APPEND_WHITELIST = {"rg.ru", "ria.ru", "realty.ria.ru"}
-AMP_QUERY_WHITELIST = {"ria.ru", "realty.ria.ru", "realty.interfax.ru"}
+AMP_APPEND_WHITELIST = {"rg.ru", "ria.ru", "realty.ria.ru", "interfax-russia.ru"}
+AMP_QUERY_WHITELIST = {"ria.ru", "realty.ria.ru", "realty.interfax.ru", "interfax-russia.ru"}
 
 SHORT_CONTENT_WORDS = 60
 
@@ -370,8 +399,18 @@ def fetch_page(url: str, src: dict | None = None) -> str:
     return content
 
 
-def fetch_amp_if_available(url: str, soup: BeautifulSoup, src: dict | None = None) -> str | None:
-    candidates: list[str] = []
+def fetch_amp_if_available(
+    url: str, soup: BeautifulSoup, src: dict | None = None
+) -> tuple[str | None, str | None]:
+    candidates: list[tuple[str, str]] = []
+
+    def add_candidate(raw: str | None, label: str) -> None:
+        if not raw:
+            return
+        absolute = urljoin(url, raw)
+        if absolute and absolute != url:
+            candidates.append((absolute, label))
+
     for link in soup.find_all("link"):
         rel = link.get("rel")
         if not rel:
@@ -381,31 +420,28 @@ def fetch_amp_if_available(url: str, soup: BeautifulSoup, src: dict | None = Non
         else:
             rels = [part.lower() for part in str(rel).split() if part]
         if "amphtml" in rels:
-            href = link.get("href")
-            if href:
-                candidates.append(urljoin(url, href))
-                break
+            add_candidate(link.get("href"), "amp")
+            break
     host = urlparse(url).netloc
     if not candidates and _amp_append_allowed(host):
         base = url.rstrip("/")
         if base and not base.endswith("/amp"):
-            candidates.append(f"{base}/amp")
+            candidates.append((f"{base}/amp", "amp"))
     normalized_host = host.lower().lstrip("www.")
     if normalized_host in AMP_QUERY_WHITELIST and "?amp" not in url:
         sep = "&" if "?" in url else "?"
-        candidates.append(f"{url}{sep}amp")
+        candidates.append((f"{url}{sep}amp", "amp"))
     if normalized_host == "realty.interfax.ru" and "mobile=1" not in url:
         sep = "&" if "?" in url else "?"
-        candidates.append(f"{url}{sep}mobile=1")
+        candidates.append((f"{url}{sep}mobile=1", "mobile"))
 
-    for candidate in candidates:
-        if not candidate or candidate == url:
-            continue
+    for candidate, label in candidates:
         try:
-            return fetch_page(candidate, src=src)
+            html = fetch_page(candidate, src=src)
+            return html, label
         except Exception as exc:
             logging.debug("AMP/mobile fetch failed for %s: %s", candidate, exc)
-    return None
+    return None, None
 
 # ---- Date parsing helpers ----
 RU_MONTHS = {
@@ -520,9 +556,11 @@ _CONTENT_LINE_PATTERNS = [
     re.compile(r"^поделиться", re.IGNORECASE),
     re.compile(r"поделиться$", re.IGNORECASE),
     re.compile(r"^подпис", re.IGNORECASE),
-    re.compile(r"^читайте нас", re.IGNORECASE),
+    re.compile(r"^чита(?:йте|ть) нас", re.IGNORECASE),
     re.compile(r"^подписывайтесь", re.IGNORECASE),
     re.compile(r"^рассылк", re.IGNORECASE),
+    re.compile(r"^автор(?:[:\s]|$)", re.IGNORECASE),
+    re.compile(r"^комментар", re.IGNORECASE),
     re.compile(r"^©", re.IGNORECASE),
     re.compile(r"^\s*email\b", re.IGNORECASE),
     re.compile(r"^\s*телефон\b", re.IGNORECASE),
@@ -537,6 +575,11 @@ _CONTENT_LINE_CONTAINS = [
     "rss",
     "социальных сетях",
     "подписка",
+    "telegram",
+    "t.me/",
+    "vk.com",
+    "ok.ru",
+    "автор:",
     "share",
     "bookmark",
 ]
@@ -974,7 +1017,8 @@ def _iter_json_ld_nodes(payload) -> list[dict]:
 
 
 def extract_json_ld_article_body(soup: BeautifulSoup) -> str | None:
-    bodies: list[str] = []
+    candidates: list[tuple[int, int, str]] = []
+    priority_map = {"articlebody": 0, "article_body": 0, "text": 1, "description": 2}
     for script in soup.find_all("script"):
         script_type = script.get("type") or ""
         if "ld+json" not in script_type.lower():
@@ -1004,11 +1048,18 @@ def extract_json_ld_article_body(soup: BeautifulSoup) -> str | None:
                 value = node.get(key)
                 if isinstance(value, str) and value.strip():
                     text = html_fragment_to_text(value)
-                    if _word_count(text) >= 40:
-                        bodies.append(text)
-    if not bodies:
+                    cleaned = clean_content_text(text)
+                    if not cleaned:
+                        continue
+                    words = _word_count(cleaned)
+                    if words < 40:
+                        continue
+                    priority = priority_map.get(key.lower(), 3)
+                    candidates.append((priority, words, cleaned))
+    if not candidates:
         return None
-    return max(bodies, key=lambda body: len(body))
+    best = max(candidates, key=lambda entry: (entry[1], -entry[0]))
+    return best[2]
 
 META_DATE_KEYS = [
     ("meta", "property", "article:published_time"),
@@ -1086,6 +1137,17 @@ def try_parse_any_date(candidates):
     default_base = make_aware_msk(datetime.now(MSK).replace(month=1, day=1, hour=0, minute=0, second=0, microsecond=0))
     for raw in candidates:
         s = raw.strip()
+        low = s.lower()
+        if "сегодня" in low or "today" in low:
+            m = re.search(r"(\d{1,2}):(\d{2})", low)
+            hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
+            dt = make_aware_msk(datetime.now(MSK)).replace(hour=hh, minute=mm, second=0, microsecond=0)
+            return dt
+        if "вчера" in low or "yesterday" in low:
+            m = re.search(r"(\d{1,2}):(\d{2})", low)
+            hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
+            dt = make_aware_msk(datetime.now(MSK) - timedelta(days=1)).replace(hour=hh, minute=mm, second=0, microsecond=0)
+            return dt
         # Try ISO-like first
         try:
             dt = finalize_datetime(dparser.isoparse(s))
@@ -1108,18 +1170,6 @@ def try_parse_any_date(candidates):
         if dt:
             dt = finalize_datetime(dt)
             if dt: return dt
-        # Relative dates
-        low = s.lower()
-        if "сегодня" in low or "today" in low:
-            m = re.search(r"(\d{1,2}):(\d{2})", low)
-            hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
-            dt = make_aware_msk(datetime.now(MSK)).replace(hour=hh, minute=mm, second=0, microsecond=0)
-            return dt
-        if "вчера" in low or "yesterday" in low:
-            m = re.search(r"(\d{1,2}):(\d{2})", low)
-            hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
-            dt = make_aware_msk(datetime.now(MSK) - timedelta(days=1)).replace(hour=hh, minute=mm, second=0, microsecond=0)
-            return dt
     return None
 
 
@@ -1254,7 +1304,7 @@ def extract_title(soup: BeautifulSoup):
 
 
 CANONICAL_QUERY_DROP_PREFIXES = ("utm_",)
-CANONICAL_QUERY_DROP_KEYS = {"ysclid", "fbclid", "per-page", "page"}
+CANONICAL_QUERY_DROP_KEYS = {"ysclid", "yclid", "fbclid", "gclid", "per-page", "page", "utm_referrer"}
 
 
 def _normalize_canonical_url(url: str | None) -> str | None:
@@ -1337,6 +1387,7 @@ def extract_article_content(
 
     primary_soup = _clone_soup(soup)
     raw_text = extract_content_text(primary_soup, selectors=combined_selectors)
+    content_source = "primary_selectors" if raw_text else ""
     content_text = clean_content_text(raw_text, title=title)
 
     if _is_short_content(content_text):
@@ -1344,6 +1395,7 @@ def extract_article_content(
         json_ld_clean = clean_content_text(json_ld_body, title=title)
         if json_ld_clean and _word_count(json_ld_clean) > _word_count(content_text or ""):
             content_text = json_ld_clean
+            content_source = "jsonld"
 
     if not content_text:
         fallback_text = extract_content_with_fallback(soup, combined_selectors, title)
@@ -1354,8 +1406,12 @@ def extract_article_content(
                 fallback_clean = ""
             if fallback_clean:
                 content_text = fallback_clean
+                content_source = "fallback_selectors"
 
-    return content_text, soup, title
+    if not content_source:
+        content_source = "primary_selectors"
+
+    return content_text, soup, title, content_source
 
 
 def build_item(
@@ -1370,12 +1426,14 @@ def build_item(
     selectors = content_selectors
     content_text: str | None
     title: str
+    content_source = "primary_selectors"
     if pre_extracted_content is not None:
         soup = BeautifulSoup(html or "", "html.parser")
         title = extract_title(soup) or url
         content_text = clean_content_text(pre_extracted_content, title=title)
+        content_source = "api"
     else:
-        content_text, soup, title = extract_article_content(
+        content_text, soup, title, content_source = extract_article_content(
             url,
             html,
             selectors=selectors,
@@ -1384,9 +1442,9 @@ def build_item(
         )
 
     if (not content_text or _is_short_content(content_text)) and html.strip():
-        amp_html = fetch_amp_if_available(url, soup, src=src)
+        amp_html, amp_label = fetch_amp_if_available(url, soup, src=src)
         if amp_html:
-            amp_text, _, _ = extract_article_content(
+            amp_text, _, _, amp_source = extract_article_content(
                 url,
                 amp_html,
                 selectors=selectors,
@@ -1395,6 +1453,7 @@ def build_item(
             )
             if amp_text and not _is_short_content(amp_text):
                 content_text = amp_text
+                content_source = amp_label or amp_source or "amp"
                 amp_used = True
 
     dt = extract_published_datetime(soup, url)
@@ -1427,8 +1486,16 @@ def build_item(
     if fingerprint:
         content_hashes[fingerprint] = canonical_key
 
+    canonical_ids = STATE.setdefault("canonical_item_ids", {})
     id_source = canonical_key or url
-    item_id = hashlib.sha256(id_source.encode("utf-8")).hexdigest()
+    item_id = canonical_ids.get(id_source)
+    if not item_id:
+        item_id = hashlib.sha256(id_source.encode("utf-8")).hexdigest()
+        canonical_ids[id_source] = item_id
+    canonical_ids[url] = item_id
+    canonical_ids[url_key] = item_id
+    if canonical_key and canonical_key != url_key:
+        canonical_ids[canonical_key] = item_id
 
     now_msk = make_aware_msk(datetime.now(MSK)).replace(second=0, microsecond=0)
     first_seen_map = STATE.setdefault("first_seen", {})
@@ -1456,6 +1523,7 @@ def build_item(
         "bucketed_at": bucketed_at.isoformat(),
         "fetched_at": fetched_at.isoformat(),
     }
+    item["_content_source"] = content_source
     if dt:
         item["published_at"] = dt.isoformat()
     if canonical_url and canonical_url != url:
@@ -1465,8 +1533,16 @@ def build_item(
 
     return item
 
-API_URL_KEYS = ["url", "link", "slug", "path", "permalink"]
-API_TITLE_KEYS = ["title", "name", "headline", "caption", "subject"]
+API_URL_KEYS = [
+    "url",
+    "link",
+    "slug",
+    "path",
+    "permalink",
+    "full_url",
+    "fullUrl",
+]
+API_TITLE_KEYS = ["title", "name", "headline", "caption", "subject", "heading"]
 API_DATE_KEYS = [
     "published_at",
     "publishedAt",
@@ -1493,8 +1569,12 @@ API_CONTENT_KEYS = [
     "contentHtml",
     "html",
     "description",
+    "content_text",
+    "contentText",
+    "bodyText",
+    "body_text",
 ]
-API_FALLBACK_CONTENT_KEYS = ["excerpt", "summary", "lead"]
+API_FALLBACK_CONTENT_KEYS = ["excerpt", "summary", "lead", "teaser"]
 
 
 def _first_non_empty(containers: list[dict], keys: list[str]) -> str | None:
@@ -1567,6 +1647,14 @@ def harvest_json_source(src: dict, force: bool = False):
     base_url = src.get("base_url") or endpoint
     max_links = int(src.get("max_links", MAX_LINKS_PER_SOURCE))
     min_words = SOURCE_MIN_WORDS.get(src_name, DEFAULT_MIN_WORDS)
+    SOURCE_SUMMARY[src_name]["min_words"] = min_words
+    summary_total_before = SOURCE_SUMMARY[src_name]["total"]
+
+    if not data:
+        if src.get("html_fallback_on_empty_api"):
+            logging.info("API empty/too short for %s — falling back to HTML index", src_name)
+            return harvest_source(src, force=ARGS.rebuild if ARGS else False)
+        return []
     seen_map = STATE.setdefault("seen_urls", {})
     already_seen_list = list(seen_map.get(src["name"], []))
     already_seen = set(already_seen_list)
@@ -1677,7 +1765,16 @@ def harvest_json_source(src: dict, force: bool = False):
                     src=src,
                     pre_extracted_content=api_text,
                 )
-                if _is_short_content(item.get("content_text")):
+                content_text = item.get("content_text") or ""
+                word_count = _word_count(content_text)
+                if (not content_text.strip()) or (min_words and word_count < min_words):
+                    if ARGS and getattr(ARGS, "debug", False):
+                        logging.debug(
+                            "API fallback to HTML for %s (words=%d, min=%d)",
+                            url,
+                            word_count,
+                            min_words,
+                        )
                     html = fetch_page(url, src=src)
                     item = build_item(
                         url,
@@ -1686,6 +1783,8 @@ def harvest_json_source(src: dict, force: bool = False):
                         content_selectors=src.get("content_selectors"),
                         src=src,
                     )
+                    content_text = item.get("content_text") or ""
+                    word_count = _word_count(content_text)
                 else:
                     used_api_payload = True
             else:
@@ -1697,6 +1796,8 @@ def harvest_json_source(src: dict, force: bool = False):
                     content_selectors=src.get("content_selectors"),
                     src=src,
                 )
+                content_text = item.get("content_text") or ""
+                word_count = _word_count(content_text)
             if used_api_payload:
                 SOURCE_SUMMARY[src_name]["api"] += 1
             title = _first_non_empty(containers, API_TITLE_KEYS)
@@ -1713,9 +1814,34 @@ def harvest_json_source(src: dict, force: bool = False):
             if parsed_dt:
                 item["published_at"] = parsed_dt.isoformat()
             content_text = item.get("content_text") or ""
+            word_count = _word_count(content_text)
+            content_source_label = item.pop("_content_source", None)
+            drop_source = content_source_label or ("api" if used_api_payload else "html")
+            if ARGS and getattr(ARGS, "debug", False):
+                logging.debug(
+                    "Content source for %s: %s (%d words)",
+                    url,
+                    drop_source,
+                    word_count,
+                )
+            amp_flag = item.pop("_amp_used", False)
             if not content_text.strip():
+                logging.debug("drop empty: %s source=%s", url, drop_source)
                 SOURCE_SUMMARY[src_name]["empty"] += 1
-            if min_words and _word_count(content_text) < min_words:
+                if amp_flag:
+                    SOURCE_SUMMARY[src_name]["amp"] += 1
+                processed_links.append(url)
+                continue
+            if amp_flag:
+                SOURCE_SUMMARY[src_name]["amp"] += 1
+            if min_words and word_count < min_words:
+                logging.debug(
+                    "drop short: %s words=%d min=%d source=%s",
+                    url,
+                    word_count,
+                    min_words,
+                    drop_source,
+                )
                 SOURCE_SUMMARY[src_name]["short"] += 1
                 processed_links.append(url)
                 continue
@@ -1724,6 +1850,16 @@ def harvest_json_source(src: dict, force: bool = False):
             processed_links.append(url)
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
+
+    attempted_links = bool(processed_links)
+
+    if (
+        src.get("html_fallback_on_empty_api")
+        and attempted_links
+        and SOURCE_SUMMARY[src_name]["total"] == summary_total_before
+    ):
+        logging.info("API empty/too short for %s — falling back to HTML index", src_name)
+        return harvest_source(src, force=ARGS.rebuild if ARGS else False)
 
     keep = 500
     tail = [u for u in already_seen_list if u in entry_urls]
@@ -1740,6 +1876,7 @@ def harvest_source(src: dict, force: bool = False):
     src_name = src.get("name", "")
     start_url = src["start_url"]
     min_words = SOURCE_MIN_WORDS.get(src_name, DEFAULT_MIN_WORDS)
+    SOURCE_SUMMARY[src_name]["min_words"] = min_words
     cache_path = PAGES_DIR / cache_key_for(start_url)
     cooldown_until = cooldowns.get(start_url)
     now = time.time()
@@ -2013,15 +2150,38 @@ def harvest_source(src: dict, force: bool = False):
         if not item:
             return
         content_text = item.get("content_text") or ""
+        word_count = _word_count(content_text)
+        content_source_label = item.pop("_content_source", None)
+        drop_source = content_source_label or "html"
+        if ARGS and getattr(ARGS, "debug", False):
+            logging.debug(
+                "Content source for %s: %s (%d words)",
+                url,
+                drop_source,
+                word_count,
+            )
+        amp_flag = item.pop("_amp_used", False)
         if not content_text.strip():
+            logging.debug("drop empty: %s source=%s", url, drop_source)
             SOURCE_SUMMARY[src_name]["empty"] += 1
-        if min_words and _word_count(content_text) < min_words:
+            if amp_flag:
+                SOURCE_SUMMARY[src_name]["amp"] += 1
+            processed_links.append(url)
+            return
+        if amp_flag:
+            SOURCE_SUMMARY[src_name]["amp"] += 1
+        if min_words and word_count < min_words:
+            logging.debug(
+                "drop short: %s words=%d min=%d source=%s",
+                url,
+                word_count,
+                min_words,
+                drop_source,
+            )
             SOURCE_SUMMARY[src_name]["short"] += 1
             processed_links.append(url)
             return
         SOURCE_SUMMARY[src_name]["total"] += 1
-        if item.pop("_amp_used", False):
-            SOURCE_SUMMARY[src_name]["amp"] += 1
         items.append(_finalize_item_schema(item))
         processed_links.append(url)
 
@@ -2098,7 +2258,7 @@ def log_source_summary() -> None:
     for name in sorted(SOURCE_SUMMARY):
         summary = SOURCE_SUMMARY[name]
         logging.info(
-            "%s | total=%d empty=%d short=%d listing=%d api=%d amp=%d",
+            "%s | total=%d empty=%d short=%d listing=%d api=%d amp=%d min_words=%d",
             name,
             summary.get("total", 0),
             summary.get("empty", 0),
@@ -2106,6 +2266,7 @@ def log_source_summary() -> None:
             summary.get("listing", 0),
             summary.get("api", 0),
             summary.get("amp", 0),
+            int(summary.get("min_words", DEFAULT_MIN_WORDS) or 0),
         )
 
 
@@ -2290,11 +2451,10 @@ def main():
     seen_source_names = set()
     for src in sources:
         src_name = src.get("name", "")
-        configured_min = int(src.get("min_words", 0) or 0)
-        if configured_min <= 0:
-            configured_min = DEFAULT_MIN_WORDS
-        else:
-            configured_min = max(configured_min, DEFAULT_MIN_WORDS)
+        configured_min = DEFAULT_MIN_WORDS
+        source_defined = int(src.get("min_words", 0) or 0)
+        if source_defined > 0:
+            configured_min = max(source_defined, DEFAULT_MIN_WORDS)
         host = _get_host_for_source(src)
         if host:
             normalized_host = host.lower().lstrip("www.")

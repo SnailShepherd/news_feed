@@ -72,3 +72,21 @@ def test_minfin_press_center_listing():
         "https://minfin.gov.ru/ru/press-center", start_url="https://minfin.gov.ru/ru/press-center/"
     )
     assert not is_listing_url("https://minfin.gov.ru/ru/press-center/news/test-article/")
+    assert not is_listing_url("https://www.minfin.gov.ru/ru/press-center/press-relizy/2024/10/01/test/")
+    assert is_listing_url("https://minfin.gov.ru/ru/press-center/contacts/")
+    assert is_listing_url("https://minfin.gov.ru/ru/press-center/tags/finance/")
+
+
+@pytest.mark.parametrize(
+    "url, expected",
+    [
+        ("https://minfin.gov.ru/ru/press-center/news/test-article/", False),
+        ("https://minfin.gov.ru/ru/press-center/press-relizy/test-release/", False),
+        ("https://minfin.gov.ru/ru/press-center/news/test-article/?ysclid=123", True),
+        ("https://minfin.gov.ru/ru/press-center/press-relizy/test-release/?fbclid=abc", True),
+        ("https://minfin.gov.ru/ru/press-center/news/?search=1", True),
+        ("https://minfin.gov.ru/ru/press-center/press-relizy/tags/investments/", True),
+    ],
+)
+def test_minfin_allow_deny_matrix(url, expected):
+    assert is_listing_url(url) is expected

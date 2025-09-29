@@ -21,7 +21,32 @@ FIXTURES = {
 def test_body_extraction_clean_text(url, fixture_name):
     fixture_path = pathlib.Path(__file__).resolve().parent / "fixtures" / fixture_name
     html = fixture_path.read_text(encoding="utf-8")
-    text, _soup, _title = extract_article_content(url, html, selectors=None, title=None, src=None)
+    text, _soup, _title, source_label = extract_article_content(
+        url, html, selectors=None, title=None, src=None
+    )
     assert text, f"Expected extracted text for {url}"
     assert _word_count(text) >= 25
     assert not _contains_deny_phrase(text)
+    assert source_label in {"primary_selectors", "jsonld", "fallback_selectors"}
+
+
+def test_pnp_boilerplate_removed_and_body_nonempty():
+    url = "https://www.pnp.ru/economics/test-article.html"
+    html = """
+    <html>
+      <body>
+        <article class="article__content">
+          <p>Экономика развивается ускоренными темпами.</p>
+          <p>Автор: Редакция</p>
+          <p>Читайте нас в Telegram t.me/pnpdaily</p>
+          <p>Следите за обновлениями: vk.com/pnp</p>
+        </article>
+      </body>
+    </html>
+    """
+    text, _soup, _title, source_label = extract_article_content(url, html, selectors=None, title=None, src=None)
+    assert source_label in {"primary_selectors", "jsonld", "fallback_selectors"}
+    assert _word_count(text) >= 4
+    assert "Автор" not in text
+    assert "Читайте нас" not in text
+    assert "vk.com" not in text
