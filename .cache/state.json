@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 29 Sep 2025 19:57:50 GMT"
+      "Last-Modified": "Mon, 29 Sep 2025 21:15:06 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"24724-fFhIhyCLRl3oP8UOzhdTds3rp1Q\""
+      "ETag": "W/\"24724-QuUZ1xHWMwcEn6gku7sX0ycZOEE\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"130kcry1caj3y7l\""
+      "ETag": "\"cpaxjeuyj140n8\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -3481,6 +3481,11 @@
     },
     "https://rg.ru/2025/09/29/novak-poruchil-prorabotat-osobye-nalogovye-rezhimy-dlia-legkoj-promyshlennosti.html": {
       "ETag": "\"3mofdwnr2o1n2v\""
+    },
+    "https://notim.ru": {},
+    "http://ancb.ru/publication/read/20207": {},
+    "https://rg.ru/2025/09/29/kuda-otpravitsia-na-noiabrskie-prazdniki-i-vo-skolko-obojdetsia-otdyh.html": {
+      "ETag": "\"16g8xy6jtcd1qy3\""
     }
   },
   "stats": {
@@ -3890,8 +3895,8 @@
         "status": "cached"
       }
     ],
-    "last_run": "2025-09-29T20:05:48.506263+00:00",
-    "items": 1084,
+    "last_run": "2025-09-29T21:14:43.573615+00:00",
+    "items": 1086,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -3903,33 +3908,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 1038.4173399999952,
-        "connect_ms": 0.0,
-        "response_ms": 378.6277099999893,
+        "dns_ms": 713.0551449999984,
+        "connect_ms": 189.34856300001002,
+        "response_ms": 902.4037080000085,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f140ea4dfd0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 240.020856000001,
+        "connect_ms": 42.70808500001522,
+        "response_ms": 282.7289410000162,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 2.1144260000482973,
-        "connect_ms": 516.8857969999863,
-        "response_ms": 519.0002230000346,
+        "dns_ms": 8801.162596000011,
+        "connect_ms": 0.0,
+        "response_ms": 4974.135874000012,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.5895909999935611,
-        "connect_ms": 933.7184419999858,
-        "response_ms": 934.3080329999793,
+        "dns_ms": 499.354932000017,
+        "connect_ms": 108.86775999998122,
+        "response_ms": 608.2226919999982,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -3938,21 +3943,22 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "c40df58b696c38ab83ea1bcffe8a56d71aae95904e633a4247f5924f473edba5",
+    "https://ardexpert.ru/article": "35001139cce938345f2496eabac35c9ccf3a3aecdf03153d706eeaa3725eef3c",
     "https://www.gostinfo.ru/News/List": "9a87f3e0de453dd0cbcb8fe77d4915133d2180e8a2c300f236acab1b51da8818",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "0e56bc837eae2f7e50db14a4a5de72825d17000abbc3522e82cdff40b3c8bc88",
-    "https://eec.eaeunion.org/news/": "5394151d5e0de741b2643811b8d19cfe9c60ee0ce806f6322da9f95dba2a2443",
-    "https://minfin.gov.ru/ru/press-center/": "24644bcc8b42bf1ea91e796c532e747e23ebd7f53d6f3677d313c5060760e92a",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "ace2f23431a89e1d47a08be3ba66472f970cef17a686fb7d65164c8e0f1981f3",
-    "https://www.metalinfo.ru/ru/news": "9d7298dee25086c1d4907b3951dad089fb784327c88c37278e3f4efa686571b3",
-    "https://www.pnp.ru/economics/": "e09438f0948cb7b350fb2a04214200fbd81ec96067bbaf175a9c6d848ff942d2",
-    "https://erzrf.ru/news/": "324abbadd97d1875011329c658481657e661bdaddae3cea7867da8195812c70a",
-    "https://ria-stk.ru/news/vse-novosti.php": "a9273c62af279cf61a603beeadedd6b717b19b764aad6d38499212d1af519796",
-    "http://government.ru/news/": "c446ad195f892e4db79a636a1869d68b9677f15243d5c163f27fdc65af0c1bcd",
-    "https://stroygaz.ru/news/": "dbbb6f03b7a34574c3dd867cf70f7e08024ea4aeb27ca0264df3386b8be6b9b2",
-    "https://realty.ria.ru/lenta/": "3e6981cf0ebcc0ff3be571d1ce5d5f913a63c6fc0cd04293fa414a8aa0a96bdc",
-    "https://rg.ru/tema/ekonomika": "49d8d26d3d6e13ee4f6f7fc5cdfa4c5ffe993a8670b4a9c56bf323114c666e80",
-    "http://ancb.ru/publication": "5f2bdc45534d770b58fdd17570ff5792329462b77cae72d8261760cdf3c6cb58"
+    "https://eec.eaeunion.org/news/": "1ee5c317dedf76e44093114609824ab3a11b0c1a4e62847c49ac07fad91c8d40",
+    "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "ff8542b96594161982f86dc3cccf3e46d3ae32e8bac2ae35e66e4666af960d0e",
+    "https://www.metalinfo.ru/ru/news": "8a4805753ce871b971af225aa6aebcce54ce0ea863e6bd791862dd6534570a0f",
+    "https://www.pnp.ru/economics/": "1835fd4b39e38d7de4c295a0874d261797707863840b304bedb4505d38f6a917",
+    "https://erzrf.ru/news/": "00637509ec9741fc2f1d666fd09558a1c3b21c49be8c4c617f3489cc8e9e2f89",
+    "https://ria-stk.ru/news/vse-novosti.php": "2b830a7c20355a3d3ee7e0ec559ffb73b5b9029d7382784474f7e7b96dbab5a8",
+    "http://government.ru/news/": "19efd854711927af5d3371a0b91b55c2e5c2d734624e2f91ee2432c6a22a0252",
+    "https://stroygaz.ru/news/": "fb95e58bcc468b3594f7519080a8839b01f059456c251f465b7a24d2f9f79789",
+    "https://realty.ria.ru/lenta/": "d60c62ad5d479abc47b970bc648f5a087593f3f5e954fe95f5ec9d7cbf7a56a8",
+    "https://rg.ru/tema/ekonomika": "d6bf38ba9efd15c838c1776b9954dda8c2ed894509297b623b8cd66cbf90c6a7",
+    "http://ancb.ru/publication": "540aaf0685340cefef42788bd3ac180758631a1d1b094575727ba5a44f9bd07e",
+    "https://notim.ru": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94"
   },
   "seen_urls": {
     "НОТИМ": [
@@ -5085,6 +5091,7 @@
       "https://realty.ria.ru/20250929/minfin-2045054201.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/09/29/kuda-otpravitsia-na-noiabrskie-prazdniki-i-vo-skolko-obojdetsia-otdyh.html",
       "https://rg.ru/2025/09/29/ekspert-granina-rasskazala-kak-sekonomit-v-remonte-bez-poteri-kachestva.html",
       "https://rg.ru/2025/09/29/valiuta-sygraet-na-interes.html",
       "https://rg.ru/2025/09/29/pomogaj-no-proveriaj.html",
@@ -5119,7 +5126,6 @@
       "https://rg.ru/2025/09/29/srednij-razmer-socialnoj-pensii-v-2026-godu-sostavit-16-590-rublej.html",
       "https://rg.ru/2025/09/29/reg-ufo/v-krymu-vveli-ogranicheniia-na-prodazhi-topliva-v-odni-ruki-i-fiksirovannye-ceny.html",
       "https://rg.ru/2025/09/29/v-roskachestve-rekomendovali-ne-derzhat-telefon-na-zariadke-vsiu-noch.html",
-      "https://rg.ru/2025/09/29/inostrannyh-agentov-ogranichat-v-nalogovyh-preferenciiah.html",
       "https://rg.ru/2025/09/29/v-gosdume-rasskazali-u-kogo-s-1-oktiabria-vyrastut-zarplaty.html",
       "https://rg.ru/2025/09/29/valiuta-sygraet-na-interes.html",
       "https://rg.ru/2025/09/29/pomogaj-no-proveriaj.html",
@@ -5152,7 +5158,6 @@
       "https://rg.ru/2025/09/29/srednij-razmer-socialnoj-pensii-v-2026-godu-sostavit-16-590-rublej.html",
       "https://rg.ru/2025/09/29/reg-ufo/v-krymu-vveli-ogranicheniia-na-prodazhi-topliva-v-odni-ruki-i-fiksirovannye-ceny.html",
       "https://rg.ru/2025/09/29/v-roskachestve-rekomendovali-ne-derzhat-telefon-na-zariadke-vsiu-noch.html",
-      "https://rg.ru/2025/09/29/inostrannyh-agentov-ogranichat-v-nalogovyh-preferenciiah.html",
       "https://rg.ru/2025/09/29/litr-poterialsia.html",
       "https://rg.ru/2025/09/29/multimodalnye-puteshestviia-pomogut-ekonomit-vremia-v-otpuske.html",
       "https://rg.ru/2025/09/29/u-lizingovyh-kompanij-voznikli-problemy-s-aktivami.html",
@@ -5160,7 +5165,6 @@
       "https://rg.ru/2025/09/29/srednij-razmer-socialnoj-pensii-v-2026-godu-sostavit-16-590-rublej.html",
       "https://rg.ru/2025/09/29/reg-ufo/v-krymu-vveli-ogranicheniia-na-prodazhi-topliva-v-odni-ruki-i-fiksirovannye-ceny.html",
       "https://rg.ru/2025/09/29/v-roskachestve-rekomendovali-ne-derzhat-telefon-na-zariadke-vsiu-noch.html",
-      "https://rg.ru/2025/09/29/inostrannyh-agentov-ogranichat-v-nalogovyh-preferenciiah.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
       "https://rg.ru/2025/09/17/v-moskve-otkrylas-desiataia-gmp-konferenciia-pod-devizom-reguliruia-segodnia-sozdaem-stabilnoe-zavtra.html",
@@ -5178,6 +5182,7 @@
       "https://rg.ru/2025/09/17/v-moskve-otkrylas-desiataia-gmp-konferenciia-pod-devizom-reguliruia-segodnia-sozdaem-stabilnoe-zavtra.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20207",
       "http://ancb.ru/publication/read/20197",
       "http://ancb.ru/publication/read/20193",
       "http://ancb.ru/publication/read/20192",
@@ -5212,7 +5217,6 @@
       "http://ancb.ru/publication/read/20017",
       "http://ancb.ru/publication/read/20008",
       "http://ancb.ru/publication/read/20000",
-      "http://ancb.ru/publication/read/19998",
       "http://ancb.ru/publication/read/20197",
       "http://ancb.ru/publication/read/20193",
       "http://ancb.ru/publication/read/20192",
@@ -5247,7 +5251,6 @@
       "http://ancb.ru/publication/read/20017",
       "http://ancb.ru/publication/read/20008",
       "http://ancb.ru/publication/read/20000",
-      "http://ancb.ru/publication/read/19998",
       "http://ancb.ru/publication/read/20197",
       "http://ancb.ru/publication/read/20193",
       "http://ancb.ru/publication/read/20192",
@@ -5282,7 +5285,6 @@
       "http://ancb.ru/publication/read/20017",
       "http://ancb.ru/publication/read/20008",
       "http://ancb.ru/publication/read/20000",
-      "http://ancb.ru/publication/read/19998",
       "http://ancb.ru/publication/read/20186",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
@@ -5312,7 +5314,6 @@
       "http://ancb.ru/publication/read/20017",
       "http://ancb.ru/publication/read/20008",
       "http://ancb.ru/publication/read/20000",
-      "http://ancb.ru/publication/read/19998",
       "http://ancb.ru/publication/read/20186",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
@@ -5342,7 +5343,6 @@
       "http://ancb.ru/publication/read/20017",
       "http://ancb.ru/publication/read/20008",
       "http://ancb.ru/publication/read/20000",
-      "http://ancb.ru/publication/read/19998",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -5371,7 +5371,6 @@
       "http://ancb.ru/publication/read/20017",
       "http://ancb.ru/publication/read/20008",
       "http://ancb.ru/publication/read/20000",
-      "http://ancb.ru/publication/read/19998",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -5400,7 +5399,6 @@
       "http://ancb.ru/publication/read/20017",
       "http://ancb.ru/publication/read/20008",
       "http://ancb.ru/publication/read/20000",
-      "http://ancb.ru/publication/read/19998",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -5429,7 +5427,6 @@
       "http://ancb.ru/publication/read/20017",
       "http://ancb.ru/publication/read/20008",
       "http://ancb.ru/publication/read/20000",
-      "http://ancb.ru/publication/read/19998",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -5457,8 +5454,7 @@
       "http://ancb.ru/publication/read/20020",
       "http://ancb.ru/publication/read/20017",
       "http://ancb.ru/publication/read/20008",
-      "http://ancb.ru/publication/read/20000",
-      "http://ancb.ru/publication/read/19998"
+      "http://ancb.ru/publication/read/20000"
     ]
   },
   "first_seen": {
@@ -5865,7 +5861,9 @@
     "6bf3790181780f8446de80f2312b0426aaa61b94c23ce528414324d2d95cb84b": "2025-09-29T23:01:00+03:00",
     "7c2fa24cb52fe332e6aac1e502eb19dc357978b70119e27d87316907982a3b0f": "2025-09-29T23:01:00+03:00",
     "b13c57bec70f73e40835f50decb00a0610623e4d2f6a2f622437baa176272d35": "2025-09-29T23:04:00+03:00",
-    "b3c7d037e128fd7241ed71f177e814e618e6326da6ff5c70f54401359bab1915": "2025-09-29T23:04:00+03:00"
+    "b3c7d037e128fd7241ed71f177e814e618e6326da6ff5c70f54401359bab1915": "2025-09-29T23:04:00+03:00",
+    "07fea7d3f417f6e6ebfac75cb95afb3030fbadba5a2dfa2a37618c5683803ea0": "2025-09-30T00:14:00+03:00",
+    "5aa8c94c8fe5a56d72e3421e2d5cb93164b1d6ac19bb1a07adf0ed4ecc89992c": "2025-09-30T00:14:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -5895,8 +5893,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f140f44c640>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759175487.5932448
       },
       "warmup_done": false,
@@ -5906,27 +5904,43 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "ZgVEmxWzaCnBWgeJ",
+          "value": "yEsa5rHYdmwi2Drx",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759177194
+          "expires": 1759181673
         },
         {
           "name": "__ddg10_",
-          "value": "1759175994",
+          "value": "1759180473",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759177194
+          "expires": 1759181673
         },
         {
           "name": "__ddg9_",
-          "value": "172.182.213.66",
+          "value": "4.246.135.38",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759177194
+          "expires": 1759181673
+        },
+        {
+          "name": "__ddg1_",
+          "value": "W56CAahj5CMSQjXgOs9D",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1790716473
+        },
+        {
+          "name": "PHPSESSID",
+          "value": "61b8ed73ef0858d81bcf9119f4ee89ce",
+          "domain": "www.pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": null
         },
         {
           "name": "usr_abt_grp",
@@ -5942,17 +5956,17 @@
         "consecutive": 0
       },
       "warmup_done": true,
-      "last_success_path": "/economics/v-gosdumu-vnesli-zakonoproekt-o-povyshenii-mrot.html"
+      "last_success_path": "/economics/"
     },
     "ria-stk.ru": {
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "22ZWit4KO8CIWKoHPvQms408QGmVnViV",
+          "value": "EvLFwiCkU3M4AkP0Dnfw1xQSwNSGMZpr",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759186849
+          "expires": 1759191276
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -5960,7 +5974,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790280049
+          "expires": 1790284476
         }
       ],
       "failures": {
@@ -6374,7 +6388,9 @@
     "http://government.ru/news/56369": "http://government.ru/news/56369",
     "http://government.ru/news/56367": "http://government.ru/news/56367",
     "https://rg.ru/2025/09/29/ekspert-granina-rasskazala-kak-sekonomit-v-remonte-bez-poteri-kachestva.html": "https://rg.ru/2025/09/29/ekspert-granina-rasskazala-kak-sekonomit-v-remonte-bez-poteri-kachestva.html",
-    "https://rg.ru/2025/09/29/novak-poruchil-prorabotat-osobye-nalogovye-rezhimy-dlia-legkoj-promyshlennosti.html": "https://rg.ru/2025/09/29/novak-poruchil-prorabotat-osobye-nalogovye-rezhimy-dlia-legkoj-promyshlennosti.html"
+    "https://rg.ru/2025/09/29/novak-poruchil-prorabotat-osobye-nalogovye-rezhimy-dlia-legkoj-promyshlennosti.html": "https://rg.ru/2025/09/29/novak-poruchil-prorabotat-osobye-nalogovye-rezhimy-dlia-legkoj-promyshlennosti.html",
+    "http://ancb.ru/publication/read/20207": "http://ancb.ru/publication/read/20207",
+    "https://rg.ru/2025/09/29/kuda-otpravitsia-na-noiabrskie-prazdniki-i-vo-skolko-obojdetsia-otdyh.html": "https://rg.ru/2025/09/29/kuda-otpravitsia-na-noiabrskie-prazdniki-i-vo-skolko-obojdetsia-otdyh.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -6974,6 +6990,8 @@
     "48c09400851008f7ce2a0024e56ac97c4adb9d9a": "https://rg.ru/2025/09/29/srednij-razmer-socialnoj-pensii-v-2026-godu-sostavit-16-590-rublej.html",
     "84a79a937cc96f9f6ad51079a4ff1ce3edad40eb": "https://rg.ru/2025/09/29/reg-ufo/v-krymu-vveli-ogranicheniia-na-prodazhi-topliva-v-odni-ruki-i-fiksirovannye-ceny.html",
     "3e4d2ead41b0d78229faa366a3fc29753e90e8c4": "https://rg.ru/2025/09/29/v-roskachestve-rekomendovali-ne-derzhat-telefon-na-zariadke-vsiu-noch.html",
-    "e3bc6e537035eeddb3af7b56b0b72ac0d819e35b": "https://rg.ru/2025/09/29/inostrannyh-agentov-ogranichat-v-nalogovyh-preferenciiah.html"
+    "e3bc6e537035eeddb3af7b56b0b72ac0d819e35b": "https://rg.ru/2025/09/29/inostrannyh-agentov-ogranichat-v-nalogovyh-preferenciiah.html",
+    "dc1f46a50121c4e67ed836e3b9a58f51bd9e71ca": "http://ancb.ru/publication/read/20207",
+    "98b51fe10f6d5cadc3e9f779d1a790e48ccd2e14": "https://rg.ru/2025/09/29/kuda-otpravitsia-na-noiabrskie-prazdniki-i-vo-skolko-obojdetsia-otdyh.html"
   }
 }
