@@ -3,7 +3,7 @@
 
 import os, re, json, logging, pathlib, sys, hashlib, argparse, random
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, parse_qsl, urlencode
 
 import requests
 import time
@@ -72,6 +72,14 @@ SOURCE_SUMMARY: dict[str, dict[str, int]] = defaultdict(
     }
 )
 SOURCE_MIN_WORDS: dict[str, int] = {}
+DEFAULT_MIN_WORDS = 100
+HOST_MIN_WORD_OVERRIDES = {
+    "realty.ria.ru": 120,
+    "realty.interfax.ru": 120,
+    "stroygaz.ru": 120,
+    "rg.ru": 150,
+    "faufcc.ru": 90,
+}
 
 ESSENTIAL_ITEM_FIELDS = (
     "id",
@@ -153,9 +161,7 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
     ],
     "government.ru": [
         ".news__article-body",
-        ".page-content",
-        ".layout-two-columns .main-column",
-        "article",
+        ".article__content",
     ],
     "minfin.gov.ru": [
         ".press-reliz-detail__content",
@@ -317,6 +323,13 @@ def cache_key_with_suffix(base_key: str, suffix: str) -> str:
 
 
 AMP_APPEND_WHITELIST = {"rg.ru", "ria.ru", "realty.ria.ru"}
+AMP_QUERY_WHITELIST = {"ria.ru", "realty.ria.ru", "realty.interfax.ru"}
+
+SHORT_CONTENT_WORDS = 60
+
+
+def _is_short_content(text: str | None) -> bool:
+    return _word_count(text or "") < SHORT_CONTENT_WORDS
 
 
 def _amp_append_allowed(host: str) -> bool:
@@ -358,7 +371,7 @@ def fetch_page(url: str, src: dict | None = None) -> str:
 
 
 def fetch_amp_if_available(url: str, soup: BeautifulSoup, src: dict | None = None) -> str | None:
-    amp_href = None
+    candidates: list[str] = []
     for link in soup.find_all("link"):
         rel = link.get("rel")
         if not rel:
@@ -370,21 +383,29 @@ def fetch_amp_if_available(url: str, soup: BeautifulSoup, src: dict | None = Non
         if "amphtml" in rels:
             href = link.get("href")
             if href:
-                amp_href = urljoin(url, href)
+                candidates.append(urljoin(url, href))
                 break
-    if amp_href is None:
-        host = urlparse(url).netloc
-        if _amp_append_allowed(host):
-            base = url.rstrip("/")
-            if base and not base.endswith("/amp"):
-                amp_href = f"{base}/amp"
-    if not amp_href or amp_href == url:
-        return None
-    try:
-        return fetch_page(amp_href, src=src)
-    except Exception as exc:
-        logging.debug("AMP fetch failed for %s: %s", amp_href, exc)
-        return None
+    host = urlparse(url).netloc
+    if not candidates and _amp_append_allowed(host):
+        base = url.rstrip("/")
+        if base and not base.endswith("/amp"):
+            candidates.append(f"{base}/amp")
+    normalized_host = host.lower().lstrip("www.")
+    if normalized_host in AMP_QUERY_WHITELIST and "?amp" not in url:
+        sep = "&" if "?" in url else "?"
+        candidates.append(f"{url}{sep}amp")
+    if normalized_host == "realty.interfax.ru" and "mobile=1" not in url:
+        sep = "&" if "?" in url else "?"
+        candidates.append(f"{url}{sep}mobile=1")
+
+    for candidate in candidates:
+        if not candidate or candidate == url:
+            continue
+        try:
+            return fetch_page(candidate, src=src)
+        except Exception as exc:
+            logging.debug("AMP/mobile fetch failed for %s: %s", candidate, exc)
+    return None
 
 # ---- Date parsing helpers ----
 RU_MONTHS = {
@@ -482,9 +503,125 @@ DEFAULT_CONTENT_SELECTORS = [
 def _normalize_whitespace(text: str) -> str:
     if not text:
         return ""
-    lines = [line.strip() for line in text.splitlines()]
-    lines = [line for line in lines if line]
-    return "\n".join(lines)
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = text.replace("\u00a0", " ")
+    text = re.sub(r"[ \t]+", " ", text)
+    paragraphs = []
+    for block in re.split(r"\n{2,}", text):
+        block = block.strip()
+        if not block:
+            continue
+        block = re.sub(r"\s*\n\s*", " ", block)
+        paragraphs.append(block)
+    return "\n\n".join(paragraphs).strip()
+
+
+_CONTENT_LINE_PATTERNS = [
+    re.compile(r"^поделиться", re.IGNORECASE),
+    re.compile(r"поделиться$", re.IGNORECASE),
+    re.compile(r"^подпис", re.IGNORECASE),
+    re.compile(r"^читайте нас", re.IGNORECASE),
+    re.compile(r"^подписывайтесь", re.IGNORECASE),
+    re.compile(r"^рассылк", re.IGNORECASE),
+    re.compile(r"^©", re.IGNORECASE),
+    re.compile(r"^\s*email\b", re.IGNORECASE),
+    re.compile(r"^\s*телефон\b", re.IGNORECASE),
+]
+
+_CONTENT_LINE_CONTAINS = [
+    "поделиться",
+    "подписывайтесь",
+    "подписаться",
+    "следите за нами",
+    "читайте нас",
+    "rss",
+    "социальных сетях",
+    "подписка",
+    "share",
+    "bookmark",
+]
+
+_BREADCRUMB_PATTERN = re.compile(r"^(главная|home)\b.*\/", re.IGNORECASE)
+
+
+def _looks_like_breadcrumb(line: str) -> bool:
+    if not line:
+        return False
+    if _BREADCRUMB_PATTERN.match(line.strip()):
+        return True
+    if line.count("/") >= 2 and len(line) <= 160:
+        parts = [p.strip() for p in line.split("/") if p.strip()]
+        if parts and parts[0].lower() in {"главная", "новости", "press-center", "пресс-центр"}:
+            return True
+    return False
+
+
+def _smart_quotes(text: str) -> str:
+    if "\"" not in text:
+        return text
+
+    def repl(match: re.Match[str]) -> str:
+        inner = match.group(1)
+        if "«" in inner or "»" in inner:
+            return match.group(0)
+        return f"«{inner}»"
+
+    return re.sub(r"\"([^\"]+)\"", repl, text)
+
+
+def clean_content_text(text: str | None, title: str | None = None) -> str:
+    if not text:
+        return ""
+
+    raw_text = text.replace("\r\n", "\n").replace("\r", "\n").replace("\u00a0", " ")
+    if title:
+        raw_text = _drop_leading_title(raw_text, title)
+
+    cleaned_lines = []
+    for raw_line in raw_text.split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        lowered = line.lower()
+        if title and lowered == title.lower():
+            continue
+        if _contains_deny_phrase(line):
+            parts = [
+                chunk.strip()
+                for chunk in re.split(r"(?<=[.!?])\s+", line)
+                if chunk.strip()
+            ]
+            parts = [chunk for chunk in parts if not _contains_deny_phrase(chunk)]
+            line = " ".join(parts).strip()
+            if not line:
+                continue
+        if any(pattern.search(line) for pattern in _CONTENT_LINE_PATTERNS):
+            continue
+        if any(token in lowered for token in _CONTENT_LINE_CONTAINS):
+            for token in _CONTENT_LINE_CONTAINS:
+                idx = lowered.find(token)
+                if idx != -1:
+                    line = line[:idx].strip()
+                    lowered = line.lower()
+            if not line:
+                continue
+        if _looks_like_breadcrumb(line):
+            continue
+        cleaned_lines.append(line)
+
+    if not cleaned_lines:
+        return ""
+
+    cleaned = "\n\n".join(cleaned_lines)
+    cleaned = _normalize_whitespace(cleaned)
+    cleaned = re.sub(r"\.\.\.+", "…", cleaned)
+    cleaned = re.sub(r"(?<=\w)\s+--\s+(?=\w)", " — ", cleaned)
+    cleaned = re.sub(r"(?<=\w)\s+-\s+(?=\w)", " — ", cleaned)
+    cleaned = _smart_quotes(cleaned)
+    cleaned = re.sub(r"\s*©[^\n]+", "", cleaned)
+    cleaned = _strip_deny_phrases(cleaned)
+    cleaned = _normalize_whitespace(cleaned)
+    return cleaned
 
 
 def _word_count(text: str) -> int:
@@ -493,7 +630,71 @@ def _word_count(text: str) -> int:
     return len(re.findall(r"\w+", text, flags=re.UNICODE))
 
 
+def _coerce_msk_datetime(value) -> datetime | None:
+    if isinstance(value, datetime):
+        return make_aware_msk(value)
+    if isinstance(value, str):
+        try:
+            dt = datetime.fromisoformat(value)
+        except ValueError:
+            try:
+                dt = dparser.isoparse(value)
+            except Exception:
+                return None
+        return make_aware_msk(dt)
+    return None
+
+
+def ensure_item_metadata(item: dict[str, object]) -> None:
+    now_msk = make_aware_msk(datetime.now(MSK)).replace(microsecond=0)
+
+    first_seen_val = item.get("first_seen")
+    first_seen_dt = _coerce_msk_datetime(first_seen_val)
+    if not first_seen_dt:
+        first_seen_dt = now_msk
+    item["first_seen"] = first_seen_dt.isoformat()
+
+    bucket_val = item.get("bucketed_at")
+    bucket_dt = _coerce_msk_datetime(bucket_val)
+    if not bucket_dt:
+        bucket_dt = first_seen_dt.replace(minute=0, second=0, microsecond=0)
+    else:
+        bucket_dt = bucket_dt.replace(minute=0, second=0, microsecond=0)
+    item["bucketed_at"] = bucket_dt.isoformat()
+
+    fetched_val = item.get("fetched_at")
+    fetched_dt = _coerce_msk_datetime(fetched_val)
+    if not fetched_dt:
+        fetched_dt = now_msk
+    item["fetched_at"] = fetched_dt.isoformat()
+
+    published_val = item.get("published_at")
+    if published_val:
+        published_dt = _coerce_msk_datetime(published_val)
+        if published_dt:
+            item["published_at"] = published_dt.isoformat()
+
+
+def _filter_by_min_words(items: list[dict]) -> list[dict]:
+    filtered: list[dict] = []
+    for item in items:
+        source = item.get("source") or ""
+        threshold = SOURCE_MIN_WORDS.get(source, DEFAULT_MIN_WORDS)
+        text = item.get("content_text") or ""
+        if _word_count(text) < threshold:
+            logging.debug(
+                "Drop item %s due to min_words threshold %s (%s words)",
+                item.get("id"),
+                threshold,
+                _word_count(text),
+            )
+            continue
+        filtered.append(item)
+    return filtered
+
+
 def _finalize_item_schema(item: dict[str, object]) -> dict[str, object]:
+    ensure_item_metadata(item)
     cleaned: dict[str, object] = {}
     for key in ESSENTIAL_ITEM_FIELDS:
         if key in item:
@@ -734,6 +935,81 @@ def extract_content_text(soup: BeautifulSoup, selectors=None):
 
     return None
 
+
+JSON_LD_ARTICLE_TYPES = {
+    "newsarticle",
+    "article",
+    "blogposting",
+    "report",
+}
+
+
+def _json_ld_types(node: dict) -> set[str]:
+    types: set[str] = set()
+    node_type = node.get("@type") or node.get("type")
+    if isinstance(node_type, str):
+        types.add(node_type.lower())
+    elif isinstance(node_type, (list, tuple, set)):
+        for entry in node_type:
+            if isinstance(entry, str):
+                types.add(entry.lower())
+    return types
+
+
+def _iter_json_ld_nodes(payload) -> list[dict]:
+    stack = [payload]
+    results: list[dict] = []
+    while stack:
+        current = stack.pop()
+        if isinstance(current, dict):
+            results.append(current)
+            for value in current.values():
+                if isinstance(value, (dict, list)):
+                    stack.append(value)
+        elif isinstance(current, list):
+            for item in current:
+                if isinstance(item, (dict, list)):
+                    stack.append(item)
+    return results
+
+
+def extract_json_ld_article_body(soup: BeautifulSoup) -> str | None:
+    bodies: list[str] = []
+    for script in soup.find_all("script"):
+        script_type = script.get("type") or ""
+        if "ld+json" not in script_type.lower():
+            continue
+        raw = script.string or script.get_text()
+        if not raw:
+            continue
+        raw = raw.strip()
+        if not raw:
+            continue
+        data = None
+        for candidate in (raw, raw.rstrip(";")):
+            try:
+                data = json.loads(candidate)
+                break
+            except Exception:
+                continue
+        if data is None:
+            continue
+        for node in _iter_json_ld_nodes(data):
+            if not isinstance(node, dict):
+                continue
+            types = _json_ld_types(node)
+            if types and not any(t in JSON_LD_ARTICLE_TYPES for t in types):
+                continue
+            for key in ("articleBody", "articlebody", "text", "description"):
+                value = node.get(key)
+                if isinstance(value, str) and value.strip():
+                    text = html_fragment_to_text(value)
+                    if _word_count(text) >= 40:
+                        bodies.append(text)
+    if not bodies:
+        return None
+    return max(bodies, key=lambda body: len(body))
+
 META_DATE_KEYS = [
     ("meta", "property", "article:published_time"),
     ("meta", "property", "article:modified_time"),
@@ -846,6 +1122,123 @@ def try_parse_any_date(candidates):
             return dt
     return None
 
+
+def _parse_datetime_signal(value: str | None, signal: str) -> datetime | None:
+    if not value:
+        return None
+    value = value.strip()
+    if not value:
+        return None
+    dt = None
+    try:
+        dt = finalize_datetime(dparser.isoparse(value))
+    except Exception:
+        dt = None
+    if dt is None:
+        try:
+            dt = finalize_datetime(
+                dparser.parse(
+                    value,
+                    dayfirst=True,
+                    fuzzy=True,
+                )
+            )
+        except Exception:
+            dt = None
+    if dt is None:
+        words_dt = parse_ru_date_words(value)
+        if words_dt:
+            dt = finalize_datetime(words_dt)
+    if dt:
+        logging.debug("Published time signal (%s): %s -> %s", signal, value, dt.isoformat())
+        return dt
+    return None
+
+
+def extract_published_datetime(soup: BeautifulSoup, url: str | None = None) -> datetime | None:
+    seen_candidates: set[tuple[str, str]] = set()
+
+    def attempt(value: str | None, signal: str) -> datetime | None:
+        if not value:
+            return None
+        candidate = value.strip()
+        if not candidate:
+            return None
+        key = (signal, candidate)
+        if key in seen_candidates:
+            return None
+        seen_candidates.add(key)
+        return _parse_datetime_signal(candidate, signal)
+
+    # Primary meta tags.
+    for tag in soup.find_all("meta", attrs={"property": "article:published_time"}):
+        dt = attempt(tag.get("content") or tag.get("value"), "meta[property=article:published_time]")
+        if dt:
+            return dt
+
+    for tag in soup.find_all("meta", attrs={"name": "pubdate"}):
+        dt = attempt(tag.get("content") or tag.get("value"), "meta[name=pubdate]")
+        if dt:
+            return dt
+
+    for node in soup.find_all(attrs={"itemprop": "datePublished"}):
+        dt = attempt(
+            node.get("content")
+            or node.get("datetime")
+            or node.get_text(" ", strip=True),
+            "[itemprop=datePublished]",
+        )
+        if dt:
+            return dt
+
+    # <time> elements
+    for t in soup.find_all("time"):
+        for candidate in (t.get("datetime"), t.get("content"), t.get_text(" ", strip=True)):
+            dt = attempt(candidate, "<time>")
+            if dt:
+                return dt
+
+    # JSON-LD datePublished/dateCreated.
+    for script in soup.find_all("script"):
+        script_type = script.get("type") or ""
+        if "ld+json" not in script_type.lower():
+            continue
+        raw = script.string or script.get_text()
+        if not raw:
+            continue
+        raw = raw.strip()
+        if not raw:
+            continue
+        data = None
+        for candidate in (raw, raw.rstrip(";")):
+            try:
+                data = json.loads(candidate)
+                break
+            except Exception:
+                continue
+        if data is None:
+            continue
+        for node in _iter_json_ld_nodes(data):
+            if not isinstance(node, dict):
+                continue
+            types = _json_ld_types(node)
+            if types and not any(t in JSON_LD_ARTICLE_TYPES for t in types):
+                continue
+            for key in ("datePublished", "dateCreated", "dateModified", "uploadDate"):
+                raw_val = node.get(key)
+                if isinstance(raw_val, str):
+                    dt = attempt(raw_val, f"json_ld:{key}")
+                    if dt:
+                        return dt
+
+    # Fallback heuristics.
+    for candidate in extract_date_candidates(soup):
+        dt = attempt(candidate, "heuristic")
+        if dt:
+            return dt
+
+    return None
+
 # ---- Parsing ----
 def extract_title(soup: BeautifulSoup):
     for sel in ["meta[property='og:title']", "meta[name='og:title']", "meta[name='title']"]:
@@ -860,6 +1253,10 @@ def extract_title(soup: BeautifulSoup):
     return None
 
 
+CANONICAL_QUERY_DROP_PREFIXES = ("utm_",)
+CANONICAL_QUERY_DROP_KEYS = {"ysclid", "fbclid", "per-page", "page"}
+
+
 def _normalize_canonical_url(url: str | None) -> str | None:
     if not url:
         return None
@@ -872,7 +1269,18 @@ def _normalize_canonical_url(url: str | None) -> str | None:
         path = path.rstrip("/")
         if not path:
             path = "/"
-    normalized = parsed._replace(path=path, query="", fragment="")
+    query_pairs = parse_qsl(parsed.query, keep_blank_values=True)
+    filtered: list[tuple[str, str]] = []
+    for key, value in query_pairs:
+        lowered = key.lower()
+        if any(lowered.startswith(prefix) for prefix in CANONICAL_QUERY_DROP_PREFIXES):
+            continue
+        if lowered in CANONICAL_QUERY_DROP_KEYS:
+            continue
+        filtered.append((key, value))
+    filtered.sort()
+    query = urlencode(filtered, doseq=True)
+    normalized = parsed._replace(path=path, query=query, fragment="")
     return normalized.geturl()
 
 
@@ -916,6 +1324,7 @@ def extract_article_content(
     html: str,
     selectors: list[str] | str | None = None,
     title: str | None = None,
+    src: dict | None = None,
 ):
     soup = BeautifulSoup(html or "", "html.parser")
     if title is None:
@@ -927,21 +1336,26 @@ def extract_article_content(
     combined_selectors = _selectors_for_url(url, selector_list)
 
     primary_soup = _clone_soup(soup)
-    text = extract_content_text(primary_soup, selectors=combined_selectors)
-    if text:
-        text = _drop_leading_title(text, title)
-        text = _strip_deny_phrases(text)
-        text = _normalize_whitespace(text)
-    else:
-        fallback_text = extract_content_with_fallback(soup, combined_selectors, title)
-        if fallback_text:
-            fallback_text = _drop_leading_title(fallback_text, title)
-            text = _strip_deny_phrases(fallback_text)
-            text = _normalize_whitespace(text)
-        else:
-            text = None
+    raw_text = extract_content_text(primary_soup, selectors=combined_selectors)
+    content_text = clean_content_text(raw_text, title=title)
 
-    return text, soup, title
+    if _is_short_content(content_text):
+        json_ld_body = extract_json_ld_article_body(soup)
+        json_ld_clean = clean_content_text(json_ld_body, title=title)
+        if json_ld_clean and _word_count(json_ld_clean) > _word_count(content_text or ""):
+            content_text = json_ld_clean
+
+    if not content_text:
+        fallback_text = extract_content_with_fallback(soup, combined_selectors, title)
+        fallback_clean = clean_content_text(fallback_text, title=title)
+        if fallback_clean:
+            host = urlparse(url).netloc.lower()
+            if host.endswith("government.ru") and _word_count(fallback_clean) < 100:
+                fallback_clean = ""
+            if fallback_clean:
+                content_text = fallback_clean
+
+    return content_text, soup, title
 
 
 def build_item(
@@ -959,17 +1373,17 @@ def build_item(
     if pre_extracted_content is not None:
         soup = BeautifulSoup(html or "", "html.parser")
         title = extract_title(soup) or url
-        content_text = _strip_deny_phrases(_normalize_whitespace(pre_extracted_content))
-        content_text = _normalize_whitespace(content_text)
+        content_text = clean_content_text(pre_extracted_content, title=title)
     else:
         content_text, soup, title = extract_article_content(
             url,
             html,
             selectors=selectors,
             title=None,
+            src=src,
         )
 
-    if not content_text and html.strip():
+    if (not content_text or _is_short_content(content_text)) and html.strip():
         amp_html = fetch_amp_if_available(url, soup, src=src)
         if amp_html:
             amp_text, _, _ = extract_article_content(
@@ -977,13 +1391,13 @@ def build_item(
                 amp_html,
                 selectors=selectors,
                 title=title,
+                src=src,
             )
-            if amp_text:
+            if amp_text and not _is_short_content(amp_text):
                 content_text = amp_text
                 amp_used = True
 
-    cands = extract_date_candidates(soup)
-    dt = try_parse_any_date(cands)
+    dt = extract_published_datetime(soup, url)
 
     if dt is None:
         m = re.search(r"/(20\d{2})/([01]\d)/([0-3]\d)/", url)
@@ -1051,10 +1465,27 @@ def build_item(
 
     return item
 
+API_URL_KEYS = ["url", "link", "slug", "path", "permalink"]
+API_TITLE_KEYS = ["title", "name", "headline", "caption", "subject"]
+API_DATE_KEYS = [
+    "published_at",
+    "publishedAt",
+    "publishDate",
+    "publish_date",
+    "date",
+    "createdAt",
+    "created_at",
+    "updatedAt",
+]
+API_DATE_HUMAN_KEYS = ["publishDateRus", "date_rus", "dateHuman"]
 API_CONTENT_KEYS = [
     "content",
     "text",
     "body",
+    "articleBody",
+    "article_body",
+    "articleText",
+    "article_text",
     "content_html",
     "text_html",
     "fullText",
@@ -1063,6 +1494,20 @@ API_CONTENT_KEYS = [
     "html",
     "description",
 ]
+API_FALLBACK_CONTENT_KEYS = ["excerpt", "summary", "lead"]
+
+
+def _first_non_empty(containers: list[dict], keys: list[str]) -> str | None:
+    for container in containers:
+        if not isinstance(container, dict):
+            continue
+        for key in keys:
+            val = container.get(key)
+            if isinstance(val, str):
+                stripped = val.strip()
+                if stripped:
+                    return stripped
+    return None
 
 
 def harvest_json_source(src: dict, force: bool = False):
@@ -1121,7 +1566,7 @@ def harvest_json_source(src: dict, force: bool = False):
 
     base_url = src.get("base_url") or endpoint
     max_links = int(src.get("max_links", MAX_LINKS_PER_SOURCE))
-    min_words = int(src.get("min_words", 0) or 0)
+    min_words = SOURCE_MIN_WORDS.get(src_name, DEFAULT_MIN_WORDS)
     seen_map = STATE.setdefault("seen_urls", {})
     already_seen_list = list(seen_map.get(src["name"], []))
     already_seen = set(already_seen_list)
@@ -1129,14 +1574,18 @@ def harvest_json_source(src: dict, force: bool = False):
     entries = []
     seen_links = set()
     for entry in data:
-        link = entry.get("link") or entry.get("url") or entry.get("slug")
-        if not link:
+        containers = [entry]
+        attributes = entry.get("attributes") if isinstance(entry, dict) else None
+        if isinstance(attributes, dict):
+            containers.append(attributes)
+        raw_link = _first_non_empty(containers, API_URL_KEYS)
+        if not raw_link:
             continue
-        if isinstance(link, str) and not link.startswith("http"):
-            url = urljoin(base_url, link)
+        if not raw_link.startswith("http"):
+            url = urljoin(base_url, raw_link)
         else:
-            url = link
-        if is_listing_url(url):
+            url = raw_link
+        if is_listing_url(url, start_url=src.get("start_url")):
             SOURCE_SUMMARY[src_name]["listing"] += 1
             if ARGS and getattr(ARGS, "debug", False):
                 logging.debug("Filtered listing URL: %s", url)
@@ -1144,11 +1593,11 @@ def harvest_json_source(src: dict, force: bool = False):
         if url in seen_links:
             continue
         seen_links.add(url)
-        entries.append((url, entry))
+        entries.append((url, entry, containers))
         if len(entries) >= max_links:
             break
 
-    entry_urls = [url for url, _ in entries]
+    entry_urls = [url for url, _, _ in entries]
 
     if force:
         new_entries = entries
@@ -1160,7 +1609,7 @@ def harvest_json_source(src: dict, force: bool = False):
 
     items = []
     processed_links = []
-    for idx, (url, entry) in enumerate(new_entries):
+    for idx, (url, entry, containers) in enumerate(new_entries):
         if runtime_expired():
             logging.info(
                 "  stop fetching more API items for %s due to max-runtime",
@@ -1181,11 +1630,10 @@ def harvest_json_source(src: dict, force: bool = False):
             break
         try:
             api_text = None
-            containers = [entry]
-            attributes = entry.get("attributes")
-            if isinstance(attributes, dict):
-                containers.append(attributes)
+            fallback_text = None
             for container in containers:
+                if not isinstance(container, dict):
+                    continue
                 for key in API_CONTENT_KEYS:
                     raw_val = container.get(key)
                     if not isinstance(raw_val, str):
@@ -1196,13 +1644,29 @@ def harvest_json_source(src: dict, force: bool = False):
                     if "<" in val and ">" in val and re.search(r"<[a-zA-Z][^>]*>", val):
                         text_val = html_fragment_to_text(val)
                     else:
-                        text_val = _normalize_whitespace(val)
+                        text_val = val
                     if text_val:
                         api_text = text_val
                         break
                 if api_text:
                     break
+                for key in API_FALLBACK_CONTENT_KEYS:
+                    raw_val = container.get(key)
+                    if not isinstance(raw_val, str):
+                        continue
+                    stripped = raw_val.strip()
+                    if stripped:
+                        if "<" in stripped and ">" in stripped and re.search(r"<[a-zA-Z][^>]*>", stripped):
+                            fallback_text = html_fragment_to_text(stripped)
+                        else:
+                            fallback_text = stripped
+                if api_text:
+                    break
 
+            if not api_text and fallback_text:
+                api_text = fallback_text
+
+            used_api_payload = False
             if api_text:
                 html = ""
                 item = build_item(
@@ -1213,7 +1677,17 @@ def harvest_json_source(src: dict, force: bool = False):
                     src=src,
                     pre_extracted_content=api_text,
                 )
-                SOURCE_SUMMARY[src_name]["api"] += 1
+                if _is_short_content(item.get("content_text")):
+                    html = fetch_page(url, src=src)
+                    item = build_item(
+                        url,
+                        src_name,
+                        html,
+                        content_selectors=src.get("content_selectors"),
+                        src=src,
+                    )
+                else:
+                    used_api_payload = True
             else:
                 html = fetch_page(url, src=src)
                 item = build_item(
@@ -1223,21 +1697,21 @@ def harvest_json_source(src: dict, force: bool = False):
                     content_selectors=src.get("content_selectors"),
                     src=src,
                 )
-            title = entry.get("name") or entry.get("title")
+            if used_api_payload:
+                SOURCE_SUMMARY[src_name]["api"] += 1
+            title = _first_non_empty(containers, API_TITLE_KEYS)
             if title:
                 item["title"] = title.strip()
-            date_val = entry.get("publishedAt") or entry.get("publishDate") or entry.get("publish_date")
+            date_val = _first_non_empty(containers, API_DATE_KEYS)
+            parsed_dt = None
             if date_val:
-                try:
-                    dt = finalize_datetime(dparser.isoparse(date_val))
-                    if dt:
-                        item["published_at"] = dt.isoformat()
-                except Exception:
-                    pass
-            elif entry.get("publishDateRus"):
-                dt = try_parse_any_date([entry["publishDateRus"]])
-                if dt:
-                    item["published_at"] = dt.isoformat()
+                parsed_dt = _parse_datetime_signal(date_val, "api:date")
+            if not parsed_dt:
+                human_date = _first_non_empty(containers, API_DATE_HUMAN_KEYS)
+                if human_date:
+                    parsed_dt = try_parse_any_date([human_date])
+            if parsed_dt:
+                item["published_at"] = parsed_dt.isoformat()
             content_text = item.get("content_text") or ""
             if not content_text.strip():
                 SOURCE_SUMMARY[src_name]["empty"] += 1
@@ -1265,7 +1739,7 @@ def harvest_source(src: dict, force: bool = False):
 
     src_name = src.get("name", "")
     start_url = src["start_url"]
-    min_words = int(src.get("min_words", 0) or 0)
+    min_words = SOURCE_MIN_WORDS.get(src_name, DEFAULT_MIN_WORDS)
     cache_path = PAGES_DIR / cache_key_for(start_url)
     cooldown_until = cooldowns.get(start_url)
     now = time.time()
@@ -1476,7 +1950,10 @@ def harvest_source(src: dict, force: bool = False):
         if not href:
             continue
         href = urljoin(src["base_url"], href)
-        if is_listing_url(href):
+        if href.rstrip("/") == start_url.rstrip("/"):
+            SOURCE_SUMMARY[src_name]["listing"] += 1
+            continue
+        if is_listing_url(href, start_url=start_url):
             SOURCE_SUMMARY[src_name]["listing"] += 1
             if ARGS and getattr(ARGS, "debug", False):
                 logging.debug("Filtered listing URL: %s", href)
@@ -1653,7 +2130,7 @@ def build_feed(all_items):
         if new_fetched > old_fetched:
             by_id[item_id] = _finalize_item_schema(dict(it))
 
-    items = list(by_id.values())
+    items = _filter_by_min_words(list(by_id.values()))
     items.sort(
         key=lambda x: x.get("published_at") or x.get("first_seen") or "",
         reverse=True,
@@ -1813,7 +2290,18 @@ def main():
     seen_source_names = set()
     for src in sources:
         src_name = src.get("name", "")
-        SOURCE_MIN_WORDS[src_name] = int(src.get("min_words", 0) or 0)
+        configured_min = int(src.get("min_words", 0) or 0)
+        if configured_min <= 0:
+            configured_min = DEFAULT_MIN_WORDS
+        else:
+            configured_min = max(configured_min, DEFAULT_MIN_WORDS)
+        host = _get_host_for_source(src)
+        if host:
+            normalized_host = host.lower().lstrip("www.")
+            override = HOST_MIN_WORD_OVERRIDES.get(normalized_host)
+            if override:
+                configured_min = max(configured_min, override)
+        SOURCE_MIN_WORDS[src_name] = configured_min
         if runtime_expired():
             logging.info("Stop processing further sources due to max-runtime limit")
             break

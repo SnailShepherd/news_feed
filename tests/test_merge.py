@@ -7,17 +7,25 @@ import unittest
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
 
-from scripts.aggregate import merge_items, STATE
+from scripts.aggregate import (
+    SOURCE_MIN_WORDS,
+    STATE,
+    _filter_by_min_words,
+    merge_items,
+)
 
 
 class MergeItemsTests(unittest.TestCase):
     def setUp(self):
         # Preserve the original first_seen map so tests can safely modify it.
         self._orig_first_seen = dict(STATE.get("first_seen", {}))
+        self._orig_min_words = dict(SOURCE_MIN_WORDS)
 
     def tearDown(self):
         STATE.setdefault("first_seen", {}).clear()
         STATE["first_seen"].update(self._orig_first_seen)
+        SOURCE_MIN_WORDS.clear()
+        SOURCE_MIN_WORDS.update(self._orig_min_words)
 
     def test_keeps_existing_content_text_when_new_is_missing(self):
         existing = [
@@ -127,6 +135,24 @@ class MergeItemsTests(unittest.TestCase):
             item["content_text"], "Short text with a few extra words to be longer."
         )
         self.assertEqual(item["url"], url_b)
+
+    def test_filter_by_min_words_threshold(self):
+        SOURCE_MIN_WORDS["Test Source"] = 120
+        base_item = {
+            "id": "1",
+            "source": "Test Source",
+            "title": "Short",
+            "url": "https://example.com/short",
+            "content_text": " ".join(["слово"] * 60),
+            "first_seen": "2024-10-01T09:00:00+03:00",
+            "bucketed_at": "2024-10-01T09:00:00+03:00",
+            "fetched_at": "2024-10-01T09:05:00+03:00",
+        }
+        self.assertEqual(_filter_by_min_words([base_item]), [])
+
+        base_item["content_text"] = " ".join(["слово"] * 140)
+        filtered = _filter_by_min_words([base_item])
+        self.assertEqual(len(filtered), 1)
 
 
 if __name__ == "__main__":

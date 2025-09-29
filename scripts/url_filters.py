@@ -6,6 +6,9 @@ import re
 from urllib.parse import parse_qsl, urlparse
 
 _LISTING_SEGMENTS = {"tag", "category", "archive", "search", "page", "article-archive"}
+LISTING_PATTERNS = (
+    re.compile(r"^https?://(?:www\.)?minfin.gov.ru/ru/press-center/?$", re.IGNORECASE),
+)
 _SECTION_PREFIXES = {
     "news",
     "novosti",
@@ -18,6 +21,18 @@ _SECTION_PREFIXES = {
 }
 
 _GENERIC_SECTION_PATHS = {"/press", "/press/", "/news-list", "/news-list/"}
+_KNOWN_TAXONOMY_PATHS = {
+    "/ru/press-center",
+    "/ru/press-center/",
+    "/ru/press-center/news",
+    "/ru/press-center/news/",
+    "/press-center",
+    "/press-center/",
+    "/press-tsentr",
+    "/press-tsentr/",
+    "/press-tsentr/novosti",
+    "/press-tsentr/novosti/",
+}
 _GENERIC_QUERY_KEYS = {
     "page",
     "pagen_1",
@@ -60,7 +75,7 @@ def _normalize_host(host: str) -> str:
     return host
 
 
-def is_listing_url(url: str | None) -> bool:
+def is_listing_url(url: str | None, start_url: str | None = None) -> bool:
     """Return True if the URL points to a listing/service page."""
 
     if not url:
@@ -73,6 +88,15 @@ def is_listing_url(url: str | None) -> bool:
     normalized_path = path.rstrip("/") or "/"
     lowered_path = path.lower()
     query_pairs = parse_qsl(parsed.query, keep_blank_values=True)
+
+    normalized_url = url.rstrip("/")
+    normalized_start = (start_url or "").rstrip("/")
+    if normalized_start and normalized_url == normalized_start:
+        return True
+
+    for pattern in LISTING_PATTERNS:
+        if pattern.match(url):
+            return True
 
     hub_patterns = _HOST_LISTING_HUBS.get(host) or _HOST_LISTING_HUBS.get(host_no_www)
     hub_match = False
@@ -96,6 +120,8 @@ def is_listing_url(url: str | None) -> bool:
 
     # Explicit listing hubs that should always be filtered.
     if normalized_path in {"/news"}:
+        return True
+    if normalized_path in _KNOWN_TAXONOMY_PATHS:
         return True
     if hub_match:
         return True
