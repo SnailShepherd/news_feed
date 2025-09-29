@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 29 Sep 2025 17:45:39 GMT"
+      "Last-Modified": "Mon, 29 Sep 2025 18:23:58 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"24c74-DsjHIlvL/wLNAoxr/MHj3Wfsox0\""
+      "ETag": "W/\"24725-2GPyn8V4cDOQ6X/B2Dfg7zfhj6g\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"akqun3fya042hr\""
+      "ETag": "\"97cuwvuyff40xl\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -3463,6 +3463,10 @@
     },
     "https://rg.ru/2025/09/29/zarplaty-biudzhetnikov-v-2026-godu-vyrastut-na-76.html": {
       "ETag": "\"cwqxau9d5k1lza\""
+    },
+    "http://government.ru/news/56366/": {},
+    "https://rg.ru/2025/09/29/v-gosdume-rasskazali-u-kogo-s-1-oktiabria-vyrastut-zarplaty.html": {
+      "ETag": "\"h7nhzdzu5m1mdg\""
     }
   },
   "stats": {
@@ -3866,8 +3870,8 @@
         "status": "cached"
       }
     ],
-    "last_run": "2025-09-29T17:53:41.133264+00:00",
-    "items": 1615,
+    "last_run": "2025-09-29T18:23:40.376702+00:00",
+    "items": 1617,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -3879,56 +3883,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 2.1643670000344173,
-        "connect_ms": 290.9726599999658,
-        "response_ms": 293.1370270000002,
+        "dns_ms": 579.489945000006,
+        "connect_ms": 8.38146199998846,
+        "response_ms": 587.8714069999944,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc0f15f4830>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 180.01116499999625,
+        "connect_ms": 974.1290970000023,
+        "response_ms": 1154.1402619999985,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 391.7235989999881,
-        "connect_ms": 35.5593909999925,
-        "response_ms": 427.2829899999806,
+        "dns_ms": 4972.553025000025,
+        "connect_ms": 0.0,
+        "response_ms": 4449.171769999993,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc0f1478910>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 1520.5309110000087,
+        "connect_ms": 0.0,
+        "response_ms": 628.6742279999942,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "65dea2c48a33af6c6e42c5350edfac792cb8893ba54494ba955471ea2f3ad8d5",
+    "https://ardexpert.ru/article": "013209ac0cb56d21d5581b3ac69773b1b6cc5077ecbfbc4fda9946e7ea8a8bbd",
     "https://www.gostinfo.ru/News/List": "9a87f3e0de453dd0cbcb8fe77d4915133d2180e8a2c300f236acab1b51da8818",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "0e56bc837eae2f7e50db14a4a5de72825d17000abbc3522e82cdff40b3c8bc88",
-    "https://eec.eaeunion.org/news/": "b1b986359e25f6d5979aeb54da45de3b77a316c3fdc39a01a24ca15811f2eef7",
-    "https://minfin.gov.ru/ru/press-center/": "494a87349e0e0c8310f56307ac659f48ef1932c87879f85d4b2b65f1237be715",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "0471f1243b0e81e0e97759fa17158c14c2a21be9ef5fd39e8e332c16ac406662",
-    "https://www.metalinfo.ru/ru/news": "41a1cb11446d8f424ddf64dbe38ded4f118f37068e3650c3f5338f71a5315c25",
-    "https://www.pnp.ru/economics/": "99f9a6957c75c7006a1450da130341d5a266aec0ccad76bcb88e4be52bd84b51",
-    "https://erzrf.ru/news/": "f923c3c708a5c4bfbdf0e1b0a95b9748d88293d596b0f61c3a9b6a52f89f2364",
-    "https://ria-stk.ru/news/vse-novosti.php": "f97797891fbfa7c1d04c64a18cb55cfb86b4cdf5e619132770730537f76f5ec9",
-    "http://government.ru/news/": "aef22e0fc828db406da2af437a312152527e96941e64e4ee303a6a3a811210ed",
-    "https://stroygaz.ru/news/": "4db14f0949abc6aac8cba41b5d2c47513903be72f466698218dd6950aa984884",
-    "https://realty.ria.ru/lenta/": "b7d3c6b6b91f6a7f9ad9b33838a4d265983a9d590858d9a959592e8ca0765025",
-    "https://rg.ru/tema/ekonomika": "384d242c3380f00dbd152945c2bbebd9d23d055118b2883372717b90e6797146",
-    "http://ancb.ru/publication": "5f2bdc45534d770b58fdd17570ff5792329462b77cae72d8261760cdf3c6cb58"
+    "https://eec.eaeunion.org/news/": "8414e990a2f0bf68d747dcc340f71f403cc454a72d4cf7c0332d624cb95b9bec",
+    "https://minfin.gov.ru/ru/press-center/": "f0d11243c130a6cfc877fe4032f409d346ac8ddd07a92808b9f0f37dcf68be22",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "90b0dec54b7ddee9186e144f6a23c2685726cfd6ff745bb0a22c14aff3db6aca",
+    "https://www.metalinfo.ru/ru/news": "8bdb5ee7782061ce576e09915ffcf1c1ba202c3728816f3c71ce0cc53f4fcc53",
+    "https://www.pnp.ru/economics/": "7b7cf8f1d2ade5747ce2c7c99dadda4867abf57ba84e2042a3d462f58bf90666",
+    "https://erzrf.ru/news/": "aa843b8bf0c276ce3b7d0b3ef913ffb26257fd81b9b617f335c649573f2a6025",
+    "https://ria-stk.ru/news/vse-novosti.php": "b0060f1db31420b0904ab143389e52d6be993710f47cfcd0506c2adaee479c99",
+    "http://government.ru/news/": "dad219421fcd5f01f2958007b2229b2d76c4a641d7f557e7704f182e4977f29f",
+    "https://stroygaz.ru/news/": "23366ed091ff599319ee74b63fd0a4af0043885623ad0ca85995cc1d4c73643a",
+    "https://realty.ria.ru/lenta/": "9c46d38961d34d2c538509d93503899b850844471da187ba924f72eb85c81b4c",
+    "https://rg.ru/tema/ekonomika": "d9cad6e0a9923a1bf673b667d60617f79ba9cc75c73164ba4d1afdfe730652e5",
+    "http://ancb.ru/publication": "46dae0463cf6213a6fab7dc917788fb179798bab6e4d19196b7e41146ebccd4b"
   },
   "seen_urls": {
     "НОТИМ": [
@@ -4737,6 +4741,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245027&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56366/",
       "http://government.ru/news/56368/",
       "http://government.ru/news/56365/",
       "http://government.ru/news/56363/",
@@ -4756,7 +4761,6 @@
       "http://government.ru/news/56352/",
       "http://government.ru/news/56351/",
       "http://government.ru/news/56349/",
-      "http://government.ru/news/56348/",
       "http://government.ru/news/56360/",
       "http://government.ru/news/56358/",
       "http://government.ru/news/56362/",
@@ -4771,8 +4775,7 @@
       "http://government.ru/news/56353/",
       "http://government.ru/news/56352/",
       "http://government.ru/news/56351/",
-      "http://government.ru/news/56349/",
-      "http://government.ru/news/56348/"
+      "http://government.ru/news/56349/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/rossiyane-stali-chashche-vybirat-kvartiry-v-povzroslevshikh-novostroykakh/",
@@ -4856,6 +4859,7 @@
       "https://realty.ria.ru/20250929/minfin-2045054201.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/09/29/v-gosdume-rasskazali-u-kogo-s-1-oktiabria-vyrastut-zarplaty.html",
       "https://rg.ru/2025/09/29/valiuta-sygraet-na-interes.html",
       "https://rg.ru/2025/09/29/pomogaj-no-proveriaj.html",
       "https://rg.ru/2025/09/29/mrot-v-2026-godu-prevysit-27-tysiach-rublej.html",
@@ -4890,7 +4894,6 @@
       "https://rg.ru/2025/09/29/inostrannyh-agentov-ogranichat-v-nalogovyh-preferenciiah.html",
       "https://rg.ru/2025/09/29/annuitetnyj-platezh-chto-eto-formula-raschet-pliusy-i-minusy.html",
       "https://rg.ru/2025/09/29/elitnaia-nedvizhimost-v-moskve-chego-zhdat-k-koncu-2025-goda.html",
-      "https://rg.ru/2025/09/29/reg-cfo/sobianin-nachalos-stroitelstvo-mosta-mezhdu-mnevnikovskoj-pojmoj-i-krylatskim.html",
       "https://rg.ru/2025/09/29/litr-poterialsia.html",
       "https://rg.ru/2025/09/29/multimodalnye-puteshestviia-pomogut-ekonomit-vremia-v-otpuske.html",
       "https://rg.ru/2025/09/29/u-lizingovyh-kompanij-voznikli-problemy-s-aktivami.html",
@@ -4901,7 +4904,6 @@
       "https://rg.ru/2025/09/29/inostrannyh-agentov-ogranichat-v-nalogovyh-preferenciiah.html",
       "https://rg.ru/2025/09/29/annuitetnyj-platezh-chto-eto-formula-raschet-pliusy-i-minusy.html",
       "https://rg.ru/2025/09/29/elitnaia-nedvizhimost-v-moskve-chego-zhdat-k-koncu-2025-goda.html",
-      "https://rg.ru/2025/09/29/reg-cfo/sobianin-nachalos-stroitelstvo-mosta-mezhdu-mnevnikovskoj-pojmoj-i-krylatskim.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
       "https://rg.ru/2025/09/17/v-moskve-otkrylas-desiataia-gmp-konferenciia-pod-devizom-reguliruia-segodnia-sozdaem-stabilnoe-zavtra.html",
@@ -5542,7 +5544,9 @@
     "2b0913bd96cd5502acbce1f7f8a47def69cf8fda130a55c387732395b303ad15": "2025-09-29T20:53:00+03:00",
     "d460e96a5f773aac19764d8c5364d2f241b7f7a348ed194174e89da1f48f7c5d": "2025-09-29T20:53:00+03:00",
     "8099d8c784c98e11e069bb08396419949f0822f67c3cfd3e2db817b25e1cde93": "2025-09-29T20:53:00+03:00",
-    "94366bba43be1e7e075df9bb21b28ad5fda97a7defe477efef06f90a5354f194": "2025-09-29T20:53:00+03:00"
+    "94366bba43be1e7e075df9bb21b28ad5fda97a7defe477efef06f90a5354f194": "2025-09-29T20:53:00+03:00",
+    "3b84ed09e7a686afd2ff3be3a405b1d55e5880995c2b243f1686c0f20cc2907e": "2025-09-29T21:23:00+03:00",
+    "2032ad0f7d86cfa4d62eeec927b89fbcb63ff145ac46746319f80309ccf85787": "2025-09-29T21:23:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -5572,8 +5576,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc0f28dfa80>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759167554.1015303
       },
       "warmup_done": false,
@@ -5583,27 +5587,43 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "rTD0dm3qjl1s7Ff0",
+          "value": "ebi3q80KOs1oDekf",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759169291
+          "expires": 1759171405
         },
         {
           "name": "__ddg10_",
-          "value": "1759168091",
+          "value": "1759170205",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759169291
+          "expires": 1759171405
         },
         {
           "name": "__ddg9_",
-          "value": "20.161.28.99",
+          "value": "64.236.201.54",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759169291
+          "expires": 1759171405
+        },
+        {
+          "name": "__ddg1_",
+          "value": "5WmLjWAvyry1Y0rzeSod",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1790706205
+        },
+        {
+          "name": "PHPSESSID",
+          "value": "ef4b38244e8e08ce505f9e9b89eb1629",
+          "domain": "www.pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": null
         },
         {
           "name": "usr_abt_grp",
@@ -5619,17 +5639,17 @@
         "consecutive": 0
       },
       "warmup_done": true,
-      "last_success_path": "/economics/primenenie-federalnogo-investicionnogo-nalogovogo-vycheta-rasshiryat.html"
+      "last_success_path": "/economics/"
     },
     "ria-stk.ru": {
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "1H3cZ8SP7zxcKJUAj6Eo6lcHo9MC8CZQ",
+          "value": "ECD5zzBUPdU4erLIf3B3DGFFTe3UtYq4",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759169881
+          "expires": 1759181008
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -5637,12 +5657,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790263081
+          "expires": 1790274208
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc0f1478e10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759168177.4831717
       },
       "warmup_done": false,
@@ -6022,7 +6042,9 @@
     "https://rg.ru/2025/09/29/inostrannyh-agentov-ogranichat-v-nalogovyh-preferenciiah.html": "https://rg.ru/2025/09/29/inostrannyh-agentov-ogranichat-v-nalogovyh-preferenciiah.html",
     "https://rg.ru/2025/09/29/annuitetnyj-platezh-chto-eto-formula-raschet-pliusy-i-minusy.html": "https://rg.ru/2025/09/29/annuitetnyj-platezh-chto-eto-formula-raschet-pliusy-i-minusy.html",
     "https://rg.ru/2025/09/29/elitnaia-nedvizhimost-v-moskve-chego-zhdat-k-koncu-2025-goda.html": "https://rg.ru/2025/09/29/elitnaia-nedvizhimost-v-moskve-chego-zhdat-k-koncu-2025-goda.html",
-    "https://rg.ru/2025/09/29/reg-cfo/sobianin-nachalos-stroitelstvo-mosta-mezhdu-mnevnikovskoj-pojmoj-i-krylatskim.html": "https://rg.ru/2025/09/29/reg-cfo/sobianin-nachalos-stroitelstvo-mosta-mezhdu-mnevnikovskoj-pojmoj-i-krylatskim.html"
+    "https://rg.ru/2025/09/29/reg-cfo/sobianin-nachalos-stroitelstvo-mosta-mezhdu-mnevnikovskoj-pojmoj-i-krylatskim.html": "https://rg.ru/2025/09/29/reg-cfo/sobianin-nachalos-stroitelstvo-mosta-mezhdu-mnevnikovskoj-pojmoj-i-krylatskim.html",
+    "http://government.ru/news/56366": "http://government.ru/news/56366",
+    "https://rg.ru/2025/09/29/v-gosdume-rasskazali-u-kogo-s-1-oktiabria-vyrastut-zarplaty.html": "https://rg.ru/2025/09/29/v-gosdume-rasskazali-u-kogo-s-1-oktiabria-vyrastut-zarplaty.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -6341,6 +6363,8 @@
     "4f089866ce1d3859512d679b0df939fe83c804d2": "https://rg.ru/2025/09/29/inostrannyh-agentov-ogranichat-v-nalogovyh-preferenciiah.html",
     "48d1f2ec71202930cb682bdc9bc3d7ad3e193ebe": "https://rg.ru/2025/09/29/annuitetnyj-platezh-chto-eto-formula-raschet-pliusy-i-minusy.html",
     "2e37b6f5d395d97a3f0b5ae9dfb33f0180c7ac0e": "https://rg.ru/2025/09/29/elitnaia-nedvizhimost-v-moskve-chego-zhdat-k-koncu-2025-goda.html",
-    "5ce450089bdaa2295ee775276410299359964039": "https://rg.ru/2025/09/29/reg-cfo/sobianin-nachalos-stroitelstvo-mosta-mezhdu-mnevnikovskoj-pojmoj-i-krylatskim.html"
+    "5ce450089bdaa2295ee775276410299359964039": "https://rg.ru/2025/09/29/reg-cfo/sobianin-nachalos-stroitelstvo-mosta-mezhdu-mnevnikovskoj-pojmoj-i-krylatskim.html",
+    "29c0ba5ec930a49d3f524cf73b30b5c5545251f8": "http://government.ru/news/56366",
+    "e12ff44f2cf2fb2b75dfc4cc2f6ed137265ac72f": "https://rg.ru/2025/09/29/v-gosdume-rasskazali-u-kogo-s-1-oktiabria-vyrastut-zarplaty.html"
   }
 }
