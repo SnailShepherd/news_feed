@@ -64,3 +64,11 @@ def test_host_specific_rules():
     assert is_listing_url("https://ria-stk.ru/news/vse-novosti.php")
     assert is_listing_url("https://ria-stk.ru/news/vse-novosti.php?PAGEN_1=2")
     assert not is_listing_url("https://ria-stk.ru/news/index.php?ELEMENT_ID=244992&all_news=Y")
+
+
+def test_minfin_press_center_listing():
+    assert is_listing_url("https://minfin.gov.ru/ru/press-center/")
+    assert is_listing_url(
+        "https://minfin.gov.ru/ru/press-center", start_url="https://minfin.gov.ru/ru/press-center/"
+    )
+    assert not is_listing_url("https://minfin.gov.ru/ru/press-center/news/test-article/")

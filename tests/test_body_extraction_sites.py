@@ -21,7 +21,7 @@ FIXTURES = {
 def test_body_extraction_clean_text(url, fixture_name):
     fixture_path = pathlib.Path(__file__).resolve().parent / "fixtures" / fixture_name
     html = fixture_path.read_text(encoding="utf-8")
-    text, _soup, _title = extract_article_content(url, html, selectors=None, title=None)
+    text, _soup, _title = extract_article_content(url, html, selectors=None, title=None, src=None)
     assert text, f"Expected extracted text for {url}"
     assert _word_count(text) >= 25
     assert not _contains_deny_phrase(text)
