@@ -8,6 +8,12 @@ from urllib.parse import parse_qsl, urlparse
 _LISTING_SEGMENTS = {"tag", "category", "archive", "search", "page", "article-archive"}
 LISTING_PATTERNS = (
     re.compile(r"^https?://(?:www\.)?minfin.gov.ru/ru/press-center/?$", re.IGNORECASE),
+    re.compile(r"^https?://(?:www\.)?minfin.gov.ru/ru/press-center/contacts/?$", re.IGNORECASE),
+    re.compile(r"^https?://(?:www\.)?minfin.gov.ru/ru/press-center/(?:tags|rubrics|authors|search|subscribe|about)/", re.IGNORECASE),
+    re.compile(
+        r"^https?://(?:www\.)?minfin.gov.ru/ru/press-center/(?:news|press-relizy)/(?:tags|rubrics|authors|search)/",
+        re.IGNORECASE,
+    ),
 )
 _SECTION_PREFIXES = {
     "news",
@@ -52,6 +58,12 @@ _HOST_ALLOW_LIST = {
     "www.eec.eaeunion.org": (re.compile(r"^/news/[^/?#]+/?$"),),
     "erzrf.ru": (re.compile(r"^/news/[^/?#]+/?$"),),
     "www.erzrf.ru": (re.compile(r"^/news/[^/?#]+/?$"),),
+    "minfin.gov.ru": (
+        re.compile(r"^/ru/press-center/(?:news|press-relizy)/[^/?#]+(?:/[^/?#]+)*/?$", re.IGNORECASE),
+    ),
+    "www.minfin.gov.ru": (
+        re.compile(r"^/ru/press-center/(?:news|press-relizy)/[^/?#]+(?:/[^/?#]+)*/?$", re.IGNORECASE),
+    ),
 }
 
 _HOST_LISTING_HUBS = {
@@ -93,6 +105,11 @@ def is_listing_url(url: str | None, start_url: str | None = None) -> bool:
     normalized_start = (start_url or "").rstrip("/")
     if normalized_start and normalized_url == normalized_start:
         return True
+
+    if host_no_www == "minfin.gov.ru":
+        for key, _ in query_pairs:
+            if key.lower() in {"ysclid", "yclid", "fbclid", "gclid", "search"}:
+                return True
 
     for pattern in LISTING_PATTERNS:
         if pattern.match(url):

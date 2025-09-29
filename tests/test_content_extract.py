@@ -40,6 +40,24 @@ def test_clean_content_text_removes_noise_and_formats():
     assert "слово — слово" in cleaned.lower()
 
 
+def test_clean_content_text_strips_social_boilerplate():
+    raw = (
+        "Главная / Экономика / Новость\n"
+        "Автор: Редакция\n"
+        "Читайте нас в Telegram: https://t.me/pnp\n"
+        "Основной текст новости.\n"
+        "Подписывайтесь на наши соцсети\n"
+        "Комментарии: 0\n"
+    )
+    cleaned = clean_content_text(raw, title="Неважно")
+    assert "Автор:" not in cleaned
+    assert "Telegram" not in cleaned
+    assert "Главная" not in cleaned
+    assert "Подписывайтесь" not in cleaned
+    assert "Комментарии" not in cleaned
+    assert "Основной текст" in cleaned
+
+
 def test_extract_published_datetime_priority_meta():
     html = (
         "<html><head>"

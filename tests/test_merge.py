@@ -11,6 +11,7 @@ from scripts.aggregate import (
     SOURCE_MIN_WORDS,
     STATE,
     _filter_by_min_words,
+    build_item,
     merge_items,
 )
 
@@ -20,10 +21,19 @@ class MergeItemsTests(unittest.TestCase):
         # Preserve the original first_seen map so tests can safely modify it.
         self._orig_first_seen = dict(STATE.get("first_seen", {}))
         self._orig_min_words = dict(SOURCE_MIN_WORDS)
+        self._orig_aliases = dict(STATE.get("aliases", {}))
+        self._orig_content_hashes = dict(STATE.get("content_hashes", {}))
+        self._orig_canonical_ids = dict(STATE.get("canonical_item_ids", {}))
 
     def tearDown(self):
         STATE.setdefault("first_seen", {}).clear()
         STATE["first_seen"].update(self._orig_first_seen)
+        STATE.setdefault("aliases", {}).clear()
+        STATE["aliases"].update(self._orig_aliases)
+        STATE.setdefault("content_hashes", {}).clear()
+        STATE["content_hashes"].update(self._orig_content_hashes)
+        STATE.setdefault("canonical_item_ids", {}).clear()
+        STATE["canonical_item_ids"].update(self._orig_canonical_ids)
         SOURCE_MIN_WORDS.clear()
         SOURCE_MIN_WORDS.update(self._orig_min_words)
 
@@ -153,6 +163,45 @@ class MergeItemsTests(unittest.TestCase):
         base_item["content_text"] = " ".join(["слово"] * 140)
         filtered = _filter_by_min_words([base_item])
         self.assertEqual(len(filtered), 1)
+
+    def test_build_item_reuses_canonical_id(self):
+        STATE.setdefault("aliases", {}).clear()
+        STATE.setdefault("content_hashes", {}).clear()
+        STATE.setdefault("canonical_item_ids", {}).clear()
+
+        body_text = " ".join(["Текст"] * 50)
+        html_template = (
+            "<html><head>"
+            "<link rel='canonical' href='https://minfin.gov.ru/ru/press-center/news/test-release/'>"
+            "<title>Новость</title>"
+            f"</head><body><article><p>{body_text}</p></article></body></html>"
+        )
+
+        item_a = build_item(
+            "https://minfin.gov.ru/ru/press-center/news/test-release/?ysclid=abcd",
+            "Минфин России",
+            html_template,
+            content_selectors=["article"],
+        )
+        item_b = build_item(
+            "https://minfin.gov.ru/ru/press-center/news/test-release/",
+            "Минфин России",
+            html_template,
+            content_selectors=["article"],
+        )
+
+        self.assertEqual(item_a["id"], item_b["id"])
+        canonical_ids = STATE.get("canonical_item_ids", {})
+        self.assertEqual(
+            canonical_ids.get("https://minfin.gov.ru/ru/press-center/news/test-release/"),
+            item_a["id"],
+        )
+        self.assertEqual(
+            canonical_ids.get(
+                "https://minfin.gov.ru/ru/press-center/news/test-release/?ysclid=abcd"
+            ),
+            item_a["id"],
+        )
 
 
 if __name__ == "__main__":

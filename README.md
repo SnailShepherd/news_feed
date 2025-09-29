@@ -24,6 +24,12 @@
 
 Состояние по каждому хосту (куки, метрики, статистика отказов) сохраняется в `.cache/state.json` и повторно используется в последующих прогонах.
 
+## Troubleshooting
+
+- В отладочном логе `scripts/aggregate.py` поле `_content_source` показывает, какой путь дал итоговый текст: `api`, `primary_selectors`, `jsonld`, `fallback_selectors`, `amp`, `mobile`.
+- Для хрупких API можно включить резервный сбор с HTML-ленты через `html_fallback_on_empty_api: true` в `sources.json`. При пустом или «коротком» ответе сборщик перейдёт на стандартный HTML-парсер.
+- Порог `min_words` считается как максимум между значением по умолчанию, настройкой источника и хостовым оверрайдом из `HOST_MIN_WORD_OVERRIDES`.
+
 ### Зависящие пакеты
 
 Для описанных стратегий требуется `selenium`. Webdriver (Chromium/Chrome) должен быть доступен, если используется selenium-фолбэк. По умолчанию клиент пытается найти бинарь в `CHROME_BINARY` или через `chromium-browser` / `chromium` / `google-chrome` в `$PATH`. В CI-пайплайне устанавливается `chromium-browser` + `chromium-chromedriver`.

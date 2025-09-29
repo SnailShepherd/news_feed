@@ -60,7 +60,8 @@
     "restrict_domain": true,
     "max_links": 50,
     "enabled": true,
-    "min_words": 90
+    "min_words": 70,
+    "html_fallback_on_empty_api": true
   },
   {
     "name": "АНЦБ",
@@ -107,9 +108,15 @@
   {
     "name": "Минфин России",
     "base_url": "https://minfin.gov.ru",
-    "start_url": "https://minfin.gov.ru/ru/press-center/",
+    "start_url": "https://minfin.gov.ru/ru/press-center/news/",
     "include_patterns": [
-      "/press-center"
+      "/press-center/news/",
+      "/press-center/press-relizy/"
+    ],
+    "include_regex": "^https?://(?:www\\.)?minfin\\.gov\\.ru/ru/press-center/(?:news|press-relizy)/[^/?#]+(?:/[^/?#]+)*/?$",
+    "exclude_regex": [
+      "^https?://(?:www\\.)?minfin\\.gov\\.ru/ru/press-center/(?:contacts|tags|rubrics|authors|search|subscribe|about|calendar|faq|glossary)/",
+      "^https?://(?:www\\.)?minfin\\.gov\\.ru/ru/press-center/(?:news|press-relizy)/(?:tags|rubrics|authors|search|archive|page)/"
     ],
     "link_min_text_len": 8,
     "enabled": true,
