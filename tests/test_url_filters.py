@@ -12,6 +12,8 @@ from scripts.url_filters import is_listing_url
         "https://example.com/path/?page=2",
         "https://example.com/list/?PAGEN_1=3",
         "https://example.com/poll/?VOTE_ID=12",
+        "https://example.com/news/?view_result=Y",
+        "https://ardexpert.ru/article/article-archive/",
         "https://stroygaz.ru/news/regulation/",
         "https://stroygaz.ru/news/official/",
         "https://eec.eaeunion.org/news/speech/",
@@ -30,6 +32,7 @@ def test_is_listing_url_positive(url):
         "https://example.com/breaking-news/",
         "https://example.com/path/?homepage=1",
         "https://example.com/path/?ref=page",
+        "https://eec.eaeunion.org/news/novoe-napravlenie-sotrudnichestva/",
     ],
 )
 def test_is_listing_url_negative(url):
