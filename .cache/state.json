@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 01 Oct 2025 18:24:49 GMT"
+      "Last-Modified": "Wed, 01 Oct 2025 21:14:39 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"33d36-RGJhk3RVzmZS+jewsvg4KDTqtIM\""
+      "ETag": "W/\"33d36-x8i9dorhPrTWSvc32J3Dq/TXmRY\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"51x55gol2l3uqc\""
+      "ETag": "\"x7vedigjra3vc0\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -4575,6 +4575,15 @@
     },
     "https://rg.ru/2025/10/01/siluanov-zaiavil-chto-socvyplaty-v-2026-godu-proindeksiruiut-po-infliacii.html": {
       "ETag": "\"6mkctw4az81l27\""
+    },
+    "https://realty.ria.ru/20251001/moskva-2045732542.html": {
+      "Last-Modified": "Wed, 01 Oct 2025 18:47:22 GMT"
+    },
+    "https://rg.ru/2025/10/01/reg-cfo/delo-tehniki.html": {
+      "ETag": "\"ur346w7g0q23c0\""
+    },
+    "https://rg.ru/2025/10/01/ekspert-sprognoziroval-kurs-dollara-na-fone-shatdauna-v-ssha.html": {
+      "ETag": "\"tuw8l6oud91l1e\""
     }
   },
   "stats": {
@@ -5157,10 +5166,15 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-01T18:24:57.308819+00:00",
-    "items": 1467,
+    "last_run": "2025-10-01T21:14:20.469116+00:00",
+    "items": 1469,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -5172,33 +5186,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 416.46477799997683,
-        "connect_ms": 623.7315610000564,
-        "response_ms": 1040.1963390000333,
+        "dns_ms": 647.3375950000104,
+        "connect_ms": 922.3508620000018,
+        "response_ms": 1569.6884570000122,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9074031370>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 413.61549499998773,
+        "connect_ms": 1104.771855000024,
+        "response_ms": 1518.3873500000118,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 416.40313200002765,
-        "connect_ms": 280.4299599999922,
-        "response_ms": 696.8330920000199,
+        "dns_ms": 3905.4694659999996,
+        "connect_ms": 0.0,
+        "response_ms": 747.5540049999836,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 129.33684200004336,
-        "connect_ms": 854.3304119999675,
-        "response_ms": 983.6672540000109,
+        "dns_ms": 375.01684500000465,
+        "connect_ms": 214.3278369999848,
+        "response_ms": 589.3446819999895,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -5207,21 +5221,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "4b8e5f501eaa2042aa4865a85b4ad70f646447856736564784a0709c656ccbcf",
+    "https://ardexpert.ru/article": "5fd1965bc343725a6baf74d88cd6194bb3915f84f6cae5bd4097cd6ca21eebe5",
     "https://www.gostinfo.ru/News/List": "0d4ddd2454460b13f35a43535e867e95650d4e629c736a8673c69938dcd5b82d",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "09e39f387f0219a7045348498eaf7c3b1deda88d083ab5b72393699c75852f33",
-    "https://eec.eaeunion.org/news/": "12e8b7f05fdccf029cfba060d2be551671b4d5d47a25a7dae6310a0ac760ec12",
+    "https://eec.eaeunion.org/news/": "1ccc2d46c9b70e3746d94c3aebd302c9d10eb1997b8fff83776ef30175898f51",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "dd7f25322e53ff71924964739dfd47b19aab4c2867dcf27ad91abb61f2cdc932",
-    "https://www.metalinfo.ru/ru/news": "9eb1ad5be9466b2a8bcc7bcab27c15fc04f9e7e70cc18a07c5c5db0639556d8d",
-    "https://www.pnp.ru/economics/": "99c6a08ad58c8baa32a7654d0e6b064dc0a08abe3bc6573b183afc51ffa76554",
-    "https://erzrf.ru/news/": "9b6104accf96dd0f5beb3079ca39abbdff572737a199c3fc9b1e2d657653db1d",
-    "https://ria-stk.ru/news/vse-novosti.php": "5b6b98566780bbc6297bebf03cb1cff5ca2927e657cc86f915309a151841bf9d",
-    "http://government.ru/news/": "511528342d0b0d00624eaf06bb6dd4af2d0f0c01b9efa6a39d6819fbd260e67e",
-    "https://stroygaz.ru/news/": "2712d1dc426267c47eed688790c2760101151be39164720a5e5a2e2a76e395fd",
-    "https://realty.ria.ru/lenta/": "ad468f5e4487e1ca3f533f80b8fd8d29f800286cf47263de55969586f224a473",
-    "https://rg.ru/tema/ekonomika": "695c9e8983ac7a0ec8227a2a6c9e7ccc4ad6bd4c79368a78fd48fef1cd28a793",
-    "http://ancb.ru/publication": "8076fccfa79a01f258edf45f87e1572ccc276f4bad5151157430fa29c6616e12",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "3ccf84ec6f32225cb739cad9367180af70d0057474f0f3331ee2ab91145cf89e",
+    "https://www.metalinfo.ru/ru/news": "708f6869ded76662da9fd79362550ef2a757529503394beb29ec7a9e948cc71a",
+    "https://www.pnp.ru/economics/": "245032f555f0e18689b4998df699b13cb15ad9372ec6e0c7aef8157978e2041f",
+    "https://erzrf.ru/news/": "4de503a17fc9e5242a2f600c81ff4f97afe49d16a62d85793abefff09a6b0260",
+    "https://ria-stk.ru/news/vse-novosti.php": "bb9831d0d848c4e5405161416bc491980ec843f11291daf87ccb2c3dec3c729a",
+    "http://government.ru/news/": "dd34b3b5ebb4793625eb5e4b789a4b1223221d96d233a454289dd6f2d1685cf6",
+    "https://stroygaz.ru/news/": "669e7001a8ea8dbcbf3505342a1a4e902064389ffe61086fb3675adeb30d33d1",
+    "https://realty.ria.ru/lenta/": "1a7300bf0e1220a7a61209d218933750e9ce44aa3b7791e902051d59bbb42491",
+    "https://rg.ru/tema/ekonomika": "d21d0fd9a38891d65215f82a764b8c4667f7b78248e0c8129580464cef8a707f",
+    "http://ancb.ru/publication": "21458a81a2b089f751633fa074e87e63aa64cc085a2cbfacf48b2920fa8c60c8",
     "https://notim.ru": "4c4d5428b4a0d2b3176995af60a58a4b0beedadc403b1e190da75b2e68ae2994",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -5662,6 +5676,7 @@
       "https://stroygaz.ru/news/info-partners-news/bolee-620-kompaniy-iz-rf-knr-i-ryada-drugikh-stran-primut-uchastie-v-metall-ekspo-2025/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251001/moskva-2045732542.html",
       "https://realty.ria.ru/20251001/rossija-2045671632.html",
       "https://realty.ria.ru/20251001/minstroj-2045656943.html",
       "https://realty.ria.ru/20251001/gals-development-2045587972.html",
@@ -5680,10 +5695,11 @@
       "https://realty.ria.ru/20250930/pokazateli-2045363834.html",
       "https://realty.ria.ru/20250930/dorogi-2045362736.html",
       "https://realty.ria.ru/20250930/putin-2045362677.html",
-      "https://realty.ria.ru/20250930/ekaterinburg-2045344759.html",
-      "https://realty.ria.ru/20250930/putin-2045342877.html"
+      "https://realty.ria.ru/20250930/ekaterinburg-2045344759.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/01/reg-cfo/delo-tehniki.html",
+      "https://rg.ru/2025/10/01/ekspert-sprognoziroval-kurs-dollara-na-fone-shatdauna-v-ssha.html",
       "https://rg.ru/2025/10/01/benzobank.html",
       "https://rg.ru/2025/10/01/zolotoj-fon.html",
       "https://rg.ru/2025/10/01/poluchateli-sverhothodov.html",
@@ -5710,8 +5726,6 @@
       "https://rg.ru/2025/10/01/kak-proshla-krupnejshaia-rossijskaia-vystavka-innoprom-v-belarusi.html",
       "https://rg.ru/2025/10/01/nikolaj-patrushev-v-rossii-budet-sozdan-arkticheskij-dnouglubitelnyj-flot.html",
       "https://rg.ru/2025/10/01/ekspert-korotkov-iz-za-perechnia-avto-dlia-taksi-poezdki-podorozhaiut-na-tret.html",
-      "https://rg.ru/2025/10/01/reg-szfo/sviaz-i-internet-na-vsm-mezhdu-moskvoj-i-peterburgom-budut-v-kazhdoj-tochke.html",
-      "https://rg.ru/2025/10/01/bolshinstvo-transportnyh-sistem-budut-priravneny-k-kii.html",
       "https://rg.ru/2025/10/01/prozrachnyj-rynok-kak-cifrovizaciia-sertifikacii-zashchishchaet-pokupatelej.html",
       "https://rg.ru/2025/10/01/fas-vozbudila-dela-v-otnoshenii-dvuh-distribiutorov-svetofora-v-moskve.html",
       "https://rg.ru/2025/10/01/glava-rzhd-prizval-k-perehodu-na-bespilotnye-poezda-v-blizhajshie-25-let.html",
@@ -6910,7 +6924,10 @@
     "4173fb15d2622ef19d035f8579ccabf7555c2444bf8e7433d3f2a9dd88470b9e": "2025-10-01T21:24:00+03:00",
     "5f23ede282f2dc29a4c4185f8454b1948cb3b66c9e32265fceead7aeac395825": "2025-10-01T21:24:00+03:00",
     "60fd80de80885a567068445ef55560ebabea2c533deb3ed13e942e4049722a9f": "2025-10-01T21:24:00+03:00",
-    "c21cbc2e4160f3638a1f0c1615806131bf9f0d1b664770b6f0268ddddc4ce0bb": "2025-10-01T21:24:00+03:00"
+    "c21cbc2e4160f3638a1f0c1615806131bf9f0d1b664770b6f0268ddddc4ce0bb": "2025-10-01T21:24:00+03:00",
+    "fd19d4777d150d8f0c91a9baa49adaf78bf6419ad4952d997ca0f8e624cf3cf1": "2025-10-02T00:14:00+03:00",
+    "b117c21213eca906b9dcaa2fd6f15f4888a6720b74e1eff23b477eb408727784": "2025-10-02T00:14:00+03:00",
+    "df64cec0d8786b5b771abc528b3ad7b367ac8385b8fc94e1df0b60dc627ca85a": "2025-10-02T00:14:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -6940,8 +6957,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9073d7c510>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759343009.5868626
       },
       "warmup_done": false,
@@ -6951,31 +6968,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "QCymHkm2rZg3H0Uy",
+          "value": "rYpftm7APSjSlYZR",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759344256
+          "expires": 1759354446
         },
         {
           "name": "__ddg10_",
-          "value": "1759343056",
+          "value": "1759353246",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759344256
+          "expires": 1759354446
         },
         {
           "name": "__ddg9_",
-          "value": "172.177.209.217",
+          "value": "145.132.102.250",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759344256
+          "expires": 1759354446
+        },
+        {
+          "name": "__ddg1_",
+          "value": "INCSaJ3sAqzBEPT0fdbO",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1790889246
         },
         {
           "name": "PHPSESSID",
-          "value": "d5aa3ea068dabf1de5bcea3512c714d6",
+          "value": "fdce2425b8e6d6d1be10b596520c9a01",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -7001,11 +7026,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "toBmlR8KpCNkmyLcyFonKPYIeDXlR2W7",
+          "value": "M2GiiBWAimzbRKCHJSCEH6z3fMlT9TVS",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759353859
+          "expires": 1759364048
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -7013,7 +7038,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790447059
+          "expires": 1790457248
         }
       ],
       "failures": {
@@ -8037,7 +8062,10 @@
     "https://rg.ru/2025/10/01/rosstat-za-nedeliu-benzin-na-azs-podorozhal-na-50-kopeek.html": "https://rg.ru/2025/10/01/rosstat-za-nedeliu-benzin-na-azs-podorozhal-na-50-kopeek.html",
     "https://rg.ru/2025/10/01/manturov-zaiavil-chto-v-rossii-postoiannoj-markirovkoj-ohvacheny-33-tovarnyh-gruppy.html": "https://rg.ru/2025/10/01/manturov-zaiavil-chto-v-rossii-postoiannoj-markirovkoj-ohvacheny-33-tovarnyh-gruppy.html",
     "https://rg.ru/2025/10/01/medvedev-rossiia-shatdaunov-ne-obiavliaet.html": "https://rg.ru/2025/10/01/medvedev-rossiia-shatdaunov-ne-obiavliaet.html",
-    "https://rg.ru/2025/10/01/siluanov-zaiavil-chto-socvyplaty-v-2026-godu-proindeksiruiut-po-infliacii.html": "https://rg.ru/2025/10/01/siluanov-zaiavil-chto-socvyplaty-v-2026-godu-proindeksiruiut-po-infliacii.html"
+    "https://rg.ru/2025/10/01/siluanov-zaiavil-chto-socvyplaty-v-2026-godu-proindeksiruiut-po-infliacii.html": "https://rg.ru/2025/10/01/siluanov-zaiavil-chto-socvyplaty-v-2026-godu-proindeksiruiut-po-infliacii.html",
+    "https://realty.ria.ru/20251001/moskva-2045732542.html": "https://realty.ria.ru/20251001/moskva-2045732542.html",
+    "https://rg.ru/2025/10/01/reg-cfo/delo-tehniki.html": "https://rg.ru/2025/10/01/reg-cfo/delo-tehniki.html",
+    "https://rg.ru/2025/10/01/ekspert-sprognoziroval-kurs-dollara-na-fone-shatdauna-v-ssha.html": "https://rg.ru/2025/10/01/ekspert-sprognoziroval-kurs-dollara-na-fone-shatdauna-v-ssha.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -9164,7 +9192,10 @@
     "0a8bdb3750fc4daaa4f7d32f971a5f2dfb9ea04f": "https://rg.ru/2025/10/01/rosstat-za-nedeliu-benzin-na-azs-podorozhal-na-50-kopeek.html",
     "c801287ef3e8295c45c92af69bfc202d92cdd5c2": "https://rg.ru/2025/10/01/manturov-zaiavil-chto-v-rossii-postoiannoj-markirovkoj-ohvacheny-33-tovarnyh-gruppy.html",
     "4511f7cbabdd6de26cbf340d31a7100e67aa758d": "https://rg.ru/2025/10/01/medvedev-rossiia-shatdaunov-ne-obiavliaet.html",
-    "5a4c486014095ac948e4bcf4904d4462b14caeee": "https://rg.ru/2025/10/01/siluanov-zaiavil-chto-socvyplaty-v-2026-godu-proindeksiruiut-po-infliacii.html"
+    "5a4c486014095ac948e4bcf4904d4462b14caeee": "https://rg.ru/2025/10/01/siluanov-zaiavil-chto-socvyplaty-v-2026-godu-proindeksiruiut-po-infliacii.html",
+    "db0fc6adc5ae3712a081b373da84359c60281145": "https://realty.ria.ru/20251001/moskva-2045732542.html",
+    "fedb7f837aa21ef06921487aac52ffe7f20892c8": "https://rg.ru/2025/10/01/reg-cfo/delo-tehniki.html",
+    "fb65e3d7d72f160eb106eb92da025a6fc0ed7111": "https://rg.ru/2025/10/01/ekspert-sprognoziroval-kurs-dollara-na-fone-shatdauna-v-ssha.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -10305,6 +10336,9 @@
     "https://rg.ru/2025/10/01/rosstat-za-nedeliu-benzin-na-azs-podorozhal-na-50-kopeek.html": "4173fb15d2622ef19d035f8579ccabf7555c2444bf8e7433d3f2a9dd88470b9e",
     "https://rg.ru/2025/10/01/manturov-zaiavil-chto-v-rossii-postoiannoj-markirovkoj-ohvacheny-33-tovarnyh-gruppy.html": "5f23ede282f2dc29a4c4185f8454b1948cb3b66c9e32265fceead7aeac395825",
     "https://rg.ru/2025/10/01/medvedev-rossiia-shatdaunov-ne-obiavliaet.html": "60fd80de80885a567068445ef55560ebabea2c533deb3ed13e942e4049722a9f",
-    "https://rg.ru/2025/10/01/siluanov-zaiavil-chto-socvyplaty-v-2026-godu-proindeksiruiut-po-infliacii.html": "c21cbc2e4160f3638a1f0c1615806131bf9f0d1b664770b6f0268ddddc4ce0bb"
+    "https://rg.ru/2025/10/01/siluanov-zaiavil-chto-socvyplaty-v-2026-godu-proindeksiruiut-po-infliacii.html": "c21cbc2e4160f3638a1f0c1615806131bf9f0d1b664770b6f0268ddddc4ce0bb",
+    "https://realty.ria.ru/20251001/moskva-2045732542.html": "fd19d4777d150d8f0c91a9baa49adaf78bf6419ad4952d997ca0f8e624cf3cf1",
+    "https://rg.ru/2025/10/01/reg-cfo/delo-tehniki.html": "b117c21213eca906b9dcaa2fd6f15f4888a6720b74e1eff23b477eb408727784",
+    "https://rg.ru/2025/10/01/ekspert-sprognoziroval-kurs-dollara-na-fone-shatdauna-v-ssha.html": "df64cec0d8786b5b771abc528b3ad7b367ac8385b8fc94e1df0b60dc627ca85a"
   }
 }
