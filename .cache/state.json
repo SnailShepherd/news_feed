@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 01 Oct 2025 15:04:36 GMT"
+      "Last-Modified": "Wed, 01 Oct 2025 15:18:29 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"33d36-t0x7U3M7szDIqBXxSmQ3RiKJtL0\""
+      "ETag": "W/\"33dee-F2Cc9zPwkPVdbgIlxJVtASk4x/Y\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Wed, 01 Oct 2025 14:30:30 GMT"
+      "Last-Modified": "Wed, 01 Oct 2025 15:07:16 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"r285w4il3i42uc\""
+      "ETag": "\"vdp4wsp1bq3y4g\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -4527,6 +4527,15 @@
     },
     "https://rg.ru/2025/10/01/kak-proshla-krupnejshaia-rossijskaia-vystavka-innoprom-v-belarusi.html": {
       "ETag": "\"1usz6znosu288n\""
+    },
+    "https://stroygaz.ru/news/srochno-v-nomer/na-forume-100-technobuild-rasskazali-kak-privlech-i-uderzhat-molodezh-v-stroitelstve/": {
+      "Last-Modified": "Wed, 01 Oct 2025 15:07:16 GMT"
+    },
+    "https://rg.ru/2025/10/01/novak-rasskazal-kak-reshaiut-problemu-s-nalichiem-topliva-v-regionah.html": {
+      "ETag": "\"ky3k4sa18r1mc6\""
+    },
+    "https://rg.ru/2025/10/01/reg-ufo/v-krymu-ogranichili-prodazhu-benzina-20-litrami-na-cheloveka.html": {
+      "ETag": "\"oyreoi47i11la6\""
     }
   },
   "stats": {
@@ -5087,10 +5096,21 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8bf7e9d940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8bf7c44910>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8bf7c44a50>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8bf79803e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8bf7980510>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8bf7c31370>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-01T15:05:08.579377+00:00",
-    "items": 1453,
+    "last_run": "2025-10-01T15:18:12.866925+00:00",
+    "items": 1454,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -5102,9 +5122,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 437.52782700005355,
-        "connect_ms": 561.6966599999387,
-        "response_ms": 999.2244869999922,
+        "dns_ms": 513.6503919999882,
+        "connect_ms": 204.50925199997982,
+        "response_ms": 718.159643999968,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -5115,20 +5135,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9d1b73fd10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8bf7c31370>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 8713.606161999962,
+        "dns_ms": 4498.742436999975,
         "connect_ms": 0.0,
-        "response_ms": 5324.185327999999,
+        "response_ms": 689.862890000029,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 266.36524500003134,
-        "connect_ms": 310.1617969999779,
-        "response_ms": 576.5270420000093,
+        "dns_ms": 239.75134400001252,
+        "connect_ms": 342.8508590000092,
+        "response_ms": 582.6022030000217,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -5137,20 +5157,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "9053211db07e57f16089059c023ae7374b4ff4d7dfc8799a4985271404141620",
+    "https://ardexpert.ru/article": "5d6006f3eb381330bb3ae6a5397fe03b7e5a16dcca76c60c0058785e5efeeec3",
     "https://www.gostinfo.ru/News/List": "0d4ddd2454460b13f35a43535e867e95650d4e629c736a8673c69938dcd5b82d",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "09e39f387f0219a7045348498eaf7c3b1deda88d083ab5b72393699c75852f33",
-    "https://eec.eaeunion.org/news/": "b9dc35931ffc77dbffd2a7980f49bcd18c0d2a0ad4c998baf1ed61bd4a48b964",
+    "https://eec.eaeunion.org/news/": "73a86361fae92a61daf1cb4573028cd9cc12bf0ae6f296f48a421c877aedd92e",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "f0a1968667cc7b4e88765fc6c248f461623ac917d07ca187630725fa5f8e1508",
-    "https://www.metalinfo.ru/ru/news": "b5d628e1644057b53521caaf5c5ab0005e65aaa1ced1eb7669b6f68013a64d72",
-    "https://www.pnp.ru/economics/": "977c6bb66dec7b6e75d9b6c72346b37ce66bd05fda75d79b2caba402be3abe95",
-    "https://erzrf.ru/news/": "36e84a7d05ff6248ae3e0ceca97df3102f2debc5c5bc70e476702a9f11ff679a",
-    "https://ria-stk.ru/news/vse-novosti.php": "02ac70904fd5f207a4a1bfb0b2dd3f77e4604d3dd2707d944e2832e67c386f81",
-    "http://government.ru/news/": "5ebb25cb6b7aaf319c3c7766a67034f435fbba190ac52993ae455209b19475d7",
-    "https://stroygaz.ru/news/": "94e46aba886f1ed83d0fbbfb72afac677b13b092b1c4cd96b7eb604bc74b2b1c",
-    "https://realty.ria.ru/lenta/": "901179d39dc363b1ef6d6e50784ff29090a4996d93335828b2edff1ee0bf2bbd",
-    "https://rg.ru/tema/ekonomika": "cb947ba51925e451573c873c0d4a7d9ebc0d5439714de68aa981a4495dade572",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "d94f4bdd9f382d563dd00aab6b11842fc4592d6eeb71c5b4203e698e3efa2d02",
+    "https://www.metalinfo.ru/ru/news": "708f6869ded76662da9fd79362550ef2a757529503394beb29ec7a9e948cc71a",
+    "https://www.pnp.ru/economics/": "894fafdc7ecc7e7d0223ebd5fc68893c412f9d8c53f0d557cd9b65cea48abf74",
+    "https://erzrf.ru/news/": "ef6c5a8fea336953c0f515750f00b5dbe6f6e508c1a1e27e86b8ac21788f5529",
+    "https://ria-stk.ru/news/vse-novosti.php": "1a995e2f1c61414f9727f82890a78582b40f8430e97534ee8598d2b71c744f57",
+    "http://government.ru/news/": "9c92e1d631486d50f0163cb5f8bc727a15ba096b28c2b48ffc508473c05cbeec",
+    "https://stroygaz.ru/news/": "e6baa5a71cdc33247108a1e72e37b56fe87669a6923efcd2fad9580de28871c9",
+    "https://realty.ria.ru/lenta/": "901bf692304bbb6ee8fbe4dad478b1882640822141e7624eaf2e6dd474d4567e",
+    "https://rg.ru/tema/ekonomika": "acad17596afd51e882b39dc18b94777427ba77a689cd97d1b352d49870fafde6",
     "http://ancb.ru/publication": "8076fccfa79a01f258edf45f87e1572ccc276f4bad5151157430fa29c6616e12",
     "https://notim.ru": "4c4d5428b4a0d2b3176995af60a58a4b0beedadc403b1e190da75b2e68ae2994",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -5572,6 +5592,7 @@
       "http://government.ru/news/56367/"
     ],
     "Стройгаз.ру": [
+      "https://stroygaz.ru/news/srochno-v-nomer/na-forume-100-technobuild-rasskazali-kak-privlech-i-uderzhat-molodezh-v-stroitelstve/",
       "https://stroygaz.ru/news/srochno-v-nomer/nostroy-i-akademiya-stroiteley-podpisali-dogovor-o-sotrudnichestve/",
       "https://stroygaz.ru/news/dwelling/s-nachala-goda-bolee-2-4-mln-rossiyskikh-semey-uluchshili-zhilishchnye-usloviya/",
       "https://stroygaz.ru/news/construction/v-zhilom-rayone-lia-pyataya-chast-kommercheskoy-infrastruktury-budet-vydelena-pod-detskie-profili-/",
@@ -5590,8 +5611,7 @@
       "https://stroygaz.ru/news/dwelling/na-severo-vostoke-moskvy-postroili-kvartal-zdorovoy-zhizni/",
       "https://stroygaz.ru/news/srochno-v-nomer/nostroy-i-std-petrovich-podpisali-soglashenie-o-sotrudnichestve/",
       "https://stroygaz.ru/news/materials/rossiyane-stali-chashche-doveryat-otechestvennym-proizvoditelyam-stroymaterialov/",
-      "https://stroygaz.ru/news/info-partners-news/bolee-620-kompaniy-iz-rf-knr-i-ryada-drugikh-stran-primut-uchastie-v-metall-ekspo-2025/",
-      "https://stroygaz.ru/news/kadry/stroiteli-okazalis-v-liderakh-po-zarplatam-sredi-rabochikh-i-proizvodstvennykh-professiy-v-peterburg/"
+      "https://stroygaz.ru/news/info-partners-news/bolee-620-kompaniy-iz-rf-knr-i-ryada-drugikh-stran-primut-uchastie-v-metall-ekspo-2025/"
     ],
     "РИА Недвижимость: лента": [
       "https://realty.ria.ru/20251001/rossija-2045671632.html",
@@ -5616,6 +5636,8 @@
       "https://realty.ria.ru/20250930/putin-2045342877.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/01/novak-rasskazal-kak-reshaiut-problemu-s-nalichiem-topliva-v-regionah.html",
+      "https://rg.ru/2025/10/01/reg-ufo/v-krymu-ogranichili-prodazhu-benzina-20-litrami-na-cheloveka.html",
       "https://rg.ru/2025/10/01/v-rossii-predlozhili-vvesti-pensionnyj-vozrast-dlia-obshchestvennogo-transporta.html",
       "https://rg.ru/2025/10/01/novak-zaiavil-chto-modernizirovannye-npz-dadut-dopolnitelnye-obemy-topliva.html",
       "https://rg.ru/2025/10/01/za-ianvar-avgust-2025-goda-v-rf-importirovali-bolee-110-t-chaia-s-pesticidami.html",
@@ -5646,8 +5668,6 @@
       "https://rg.ru/2025/10/01/reg-szfo/otopitelnyj-sezon-v-peterburge-nachnetsia-3-oktiabria.html",
       "https://rg.ru/2025/10/01/minpromtorg-opublikoval-spisok-avtomobilej-dlia-raboty-v-taksi-po-novomu-zakonu.html",
       "https://rg.ru/2025/10/01/reg-urfo/nostroj-predlozhil-v-rassrochku-pogashat-shtrafy-za-zaderzhku-vvoda-zhilia.html",
-      "https://rg.ru/2025/10/01/reg-pfo/rosaviaciia-ogranicheniia-v-aeroportu-orenburga-sniaty.html",
-      "https://rg.ru/2025/10/01/samye-uiutnye-malye-goroda-rossii-kuda-poehat-za-atmosferoj-i-krasotoj.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -6824,7 +6844,10 @@
     "ea64777fbceecdf052603b1a3843bc5596cab18dfb0fa717a88f128cc49f9b67": "2025-10-01T18:05:00+03:00",
     "11aa8ca2018163b38a73734a9a798ef635c6cf74207a2d883915f96d08e5ed1c": "2025-10-01T18:05:00+03:00",
     "66b3e9820d6af2cd40f7e84126446c615e8a4e2e1c239fb84f055b63f5a7d4f3": "2025-10-01T18:05:00+03:00",
-    "92f9a7fa780ac7d222f507645d7ca32e41ace45e867c0f38cf668eb4d3536801": "2025-10-01T18:05:00+03:00"
+    "92f9a7fa780ac7d222f507645d7ca32e41ace45e867c0f38cf668eb4d3536801": "2025-10-01T18:05:00+03:00",
+    "930baf7a568b6c6a4b0005f1ab426df6b8c0d8ca4d2c25eb7696b3c84452fd3e": "2025-10-01T18:18:00+03:00",
+    "1ca340ab726905f3d92771aa7ac5d724bb54e786abfff01897d7a7c4c26aaca2": "2025-10-01T18:18:00+03:00",
+    "1d1246619b9a09f15792e5f657b913170d1766d14e064465dfe9bcf8daf14c22": "2025-10-01T18:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -6854,9 +6877,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9d1bafce90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1759330911.4546497
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8bf7980510>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1759331825.488296
       },
       "warmup_done": false,
       "last_success_path": null
@@ -6865,35 +6888,35 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "QkrnEYuQ3aupGXBn",
+          "value": "cjOr2DELOt69JuFQ",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759332243
+          "expires": 1759333076
         },
         {
           "name": "__ddg10_",
-          "value": "1759331043",
+          "value": "1759331876",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759332243
+          "expires": 1759333076
         },
         {
           "name": "__ddg9_",
-          "value": "20.81.159.113",
+          "value": "20.55.15.233",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759332243
+          "expires": 1759333076
         },
         {
-          "name": "PHPSESSID",
-          "value": "2fd8842a959af75347bc1fbc9c8cbe7c",
-          "domain": "www.pnp.ru",
+          "name": "__ddg1_",
+          "value": "p7btJ93tOdQVK7eR5My8",
+          "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": null
+          "expires": 1790867876
         },
         {
           "name": "usr_abt_grp",
@@ -6915,11 +6938,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "S4rqyi6kFNDJuOyq49QJdsTVn9xNkbLQ",
+          "value": "XAkGzWIsK4b4vYnMuik3oCAitMX9c4TE",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759341854
+          "expires": 1759342679
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -6927,7 +6950,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790435054
+          "expires": 1790435879
         }
       ],
       "failures": {
@@ -7933,7 +7956,10 @@
     "https://rg.ru/2025/10/01/novak-godovaia-infliaciia-v-rf-po-itogam-sentiabria-sostavliaet-okolo-8.html": "https://rg.ru/2025/10/01/novak-godovaia-infliaciia-v-rf-po-itogam-sentiabria-sostavliaet-okolo-8.html",
     "https://rg.ru/2025/10/01/bolshoj-povorot.html": "https://rg.ru/2025/10/01/bolshoj-povorot.html",
     "https://rg.ru/2025/10/01/rossiiane-smogut-kupit-tovary-18-po-biometrii.html": "https://rg.ru/2025/10/01/rossiiane-smogut-kupit-tovary-18-po-biometrii.html",
-    "https://rg.ru/2025/10/01/kak-proshla-krupnejshaia-rossijskaia-vystavka-innoprom-v-belarusi.html": "https://rg.ru/2025/09/29/grigorenko-eksport-rossijskih-it-reshenij-v-respubliku-belarus-vyros-na-23.html"
+    "https://rg.ru/2025/10/01/kak-proshla-krupnejshaia-rossijskaia-vystavka-innoprom-v-belarusi.html": "https://rg.ru/2025/09/29/grigorenko-eksport-rossijskih-it-reshenij-v-respubliku-belarus-vyros-na-23.html",
+    "https://stroygaz.ru/news/srochno-v-nomer/na-forume-100-technobuild-rasskazali-kak-privlech-i-uderzhat-molodezh-v-stroitelstve": "https://stroygaz.ru/news/srochno-v-nomer/na-forume-100-technobuild-rasskazali-kak-privlech-i-uderzhat-molodezh-v-stroitelstve",
+    "https://rg.ru/2025/10/01/novak-rasskazal-kak-reshaiut-problemu-s-nalichiem-topliva-v-regionah.html": "https://rg.ru/2025/10/01/novak-rasskazal-kak-reshaiut-problemu-s-nalichiem-topliva-v-regionah.html",
+    "https://rg.ru/2025/10/01/reg-ufo/v-krymu-ogranichili-prodazhu-benzina-20-litrami-na-cheloveka.html": "https://rg.ru/2025/10/01/reg-ufo/v-krymu-ogranichili-prodazhu-benzina-20-litrami-na-cheloveka.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -9042,7 +9068,10 @@
     "4a36bd446a141d9a6d702b7d557bb25ace21f406": "https://rg.ru/2025/10/01/panelnyj-kirpichnyj-ili-monolitnyj-kakoj-dom-luchshe-dlia-zhizni-i-pochemu.html",
     "cf69ad4f12aecac1890816f4410f01c62605e903": "https://rg.ru/2025/10/01/novak-godovaia-infliaciia-v-rf-po-itogam-sentiabria-sostavliaet-okolo-8.html",
     "895a1c52e29faf0f3fc48d04fa26c046630e9012": "https://rg.ru/2025/10/01/bolshoj-povorot.html",
-    "5c3db99ee2a88fdbf0b229279445ed9a1e758e36": "https://rg.ru/2025/10/01/rossiiane-smogut-kupit-tovary-18-po-biometrii.html"
+    "5c3db99ee2a88fdbf0b229279445ed9a1e758e36": "https://rg.ru/2025/10/01/rossiiane-smogut-kupit-tovary-18-po-biometrii.html",
+    "496d83171bcf5084dd6b1d63522cfb08f744bb04": "https://stroygaz.ru/news/srochno-v-nomer/na-forume-100-technobuild-rasskazali-kak-privlech-i-uderzhat-molodezh-v-stroitelstve",
+    "69829f86bf47a39f2633a743f6cb5ebeb4928dd4": "https://rg.ru/2025/10/01/novak-rasskazal-kak-reshaiut-problemu-s-nalichiem-topliva-v-regionah.html",
+    "83c895c857de9c5350b41ac4eb9d1210dba007f9": "https://rg.ru/2025/10/01/reg-ufo/v-krymu-ogranichili-prodazhu-benzina-20-litrami-na-cheloveka.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -10160,6 +10189,10 @@
     "https://rg.ru/2025/10/01/novak-godovaia-infliaciia-v-rf-po-itogam-sentiabria-sostavliaet-okolo-8.html": "11aa8ca2018163b38a73734a9a798ef635c6cf74207a2d883915f96d08e5ed1c",
     "https://rg.ru/2025/10/01/bolshoj-povorot.html": "66b3e9820d6af2cd40f7e84126446c615e8a4e2e1c239fb84f055b63f5a7d4f3",
     "https://rg.ru/2025/10/01/rossiiane-smogut-kupit-tovary-18-po-biometrii.html": "92f9a7fa780ac7d222f507645d7ca32e41ace45e867c0f38cf668eb4d3536801",
-    "https://rg.ru/2025/10/01/kak-proshla-krupnejshaia-rossijskaia-vystavka-innoprom-v-belarusi.html": "27a6c790716a02beafa826026a4d59b7cbbaa527ed588250ed9662c286a48566"
+    "https://rg.ru/2025/10/01/kak-proshla-krupnejshaia-rossijskaia-vystavka-innoprom-v-belarusi.html": "27a6c790716a02beafa826026a4d59b7cbbaa527ed588250ed9662c286a48566",
+    "https://stroygaz.ru/news/srochno-v-nomer/na-forume-100-technobuild-rasskazali-kak-privlech-i-uderzhat-molodezh-v-stroitelstve": "930baf7a568b6c6a4b0005f1ab426df6b8c0d8ca4d2c25eb7696b3c84452fd3e",
+    "https://stroygaz.ru/news/srochno-v-nomer/na-forume-100-technobuild-rasskazali-kak-privlech-i-uderzhat-molodezh-v-stroitelstve/": "930baf7a568b6c6a4b0005f1ab426df6b8c0d8ca4d2c25eb7696b3c84452fd3e",
+    "https://rg.ru/2025/10/01/novak-rasskazal-kak-reshaiut-problemu-s-nalichiem-topliva-v-regionah.html": "1ca340ab726905f3d92771aa7ac5d724bb54e786abfff01897d7a7c4c26aaca2",
+    "https://rg.ru/2025/10/01/reg-ufo/v-krymu-ogranichili-prodazhu-benzina-20-litrami-na-cheloveka.html": "1d1246619b9a09f15792e5f657b913170d1766d14e064465dfe9bcf8daf14c22"
   }
 }
