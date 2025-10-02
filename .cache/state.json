@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 02 Oct 2025 18:24:24 GMT"
+      "Last-Modified": "Thu, 02 Oct 2025 21:14:52 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"25b14-q+vRtwlqTRGKnCJ1u2gJLeKIzTo\""
+      "ETag": "W/\"251c3-Vxzh2AHiWQXg5kRbIAkkym9bNY4\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"spged46lgz3pnv\""
+      "ETag": "\"11afw6yypyo3vtm\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -5115,7 +5115,28 @@
     },
     "https://rg.ru/2025/10/02/cb-na-platezhnom-rynke-rf-poiavilas-pervaia-samoreguliruemaia-organizaciia.html": {
       "ETag": "\"z7iu6iew3k1m0w\""
-    }
+    },
+    "http://ancb.ru/publication/read/20229": {},
+    "http://ancb.ru/publication/read/20227": {},
+    "https://rg.ru/2025/10/02/reg-cfo/na-volne-azhiotazha.html": {
+      "ETag": "\"epw85ejbns1op5\""
+    },
+    "https://rg.ru/2025/10/02/reg-sibfo/navostrili-lyzhi.html": {
+      "ETag": "\"36o5vmzgy1tzl\""
+    },
+    "https://rg.ru/2025/10/02/chernyshenko-v-2025-godu-s-gospodderzhkoj-vvedeno-187-tysiachi-gostinichnyh-nomerov.html": {
+      "ETag": "\"rjpemxduhi1qtg\""
+    },
+    "https://rg.ru/documents/2025/10/03/vozdushnyjkodeks-doc.html": {
+      "ETag": "\"15c182t9qv7e7p\""
+    },
+    "https://rg.ru/2025/10/02/reg-pfo/bronzovaia-pensiia.html": {
+      "ETag": "\"mlycjtn7661x23\""
+    },
+    "https://rg.ru/2025/10/02/reg-ufo/rosaviaciia-rabota-aeroportov-sochi-i-gelendzhika-vremenno-ogranichena.html": {
+      "ETag": "\"dr1l4pvo4g1l8z\""
+    },
+    "https://rg.ru/amp/2025/10/02/reg-ufo/rosaviaciia-rabota-aeroportov-sochi-i-gelendzhika-vremenno-ogranichena.html": {}
   },
   "stats": {
     "cooldowns": {},
@@ -5772,10 +5793,15 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-02T18:25:12.140730+00:00",
-    "items": 1655,
+    "last_run": "2025-10-02T21:14:42.148132+00:00",
+    "items": 1662,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -5787,33 +5813,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 609.7623879999787,
-        "connect_ms": 68.17725000001928,
-        "response_ms": 677.939637999998,
+        "dns_ms": 470.50955399998884,
+        "connect_ms": 713.884094000008,
+        "response_ms": 1184.3936479999968,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe500d25250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 2.5351680000085253,
+        "connect_ms": 826.2815759999853,
+        "response_ms": 828.8167439999938,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 8237.601653000012,
-        "connect_ms": 0.0,
-        "response_ms": 740.680789999999,
+        "dns_ms": 4797.425661999967,
+        "connect_ms": 477.0608070000435,
+        "response_ms": 5274.48646900001,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 276.87749599999734,
-        "connect_ms": 276.75272799996264,
-        "response_ms": 553.63022399996,
+        "dns_ms": 164.5255239999983,
+        "connect_ms": 427.8137720000359,
+        "response_ms": 592.3392960000342,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -5822,21 +5848,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "b5b17fbeae11a187a6c41de486bf8ad8df10180bfb44f1107a18fbeb7d24b688",
+    "https://ardexpert.ru/article": "4c541d521b69db9129539f63381b359646d01e430aec520485c33217c43a3f0a",
     "https://www.gostinfo.ru/News/List": "1199412c6856d50631c0e0f90eb707d7d2b7856f0ecfd13ce4186d6532e085a9",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2669191d7e33d8f6c706f4e8370b4d17801d04b92cfa12c671eee17ec3fe8ea7",
-    "https://eec.eaeunion.org/news/": "a1428ad071e678910b87d52a725bb64d63f21b7b2d1a5a2283d170ef7674e8de",
+    "https://eec.eaeunion.org/news/": "feb021711e1f3719afa25d6906e08ebb182b14d3a9539d618a0b621fd281e1e2",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "b2bdac6f71c71a524ca6b210c28dd7673f17beaaa9934df3c16c668f671bf1c8",
-    "https://www.metalinfo.ru/ru/news": "17f97daa461af4968c9d482654cee088934e9f91d436874867e0eb2de1524cbd",
-    "https://www.pnp.ru/economics/": "2d34686f6d7d47f8fc958f1ee702b4f039872d2122c7b9ff449a1249b9675bdd",
-    "https://erzrf.ru/news/": "5abad292f51c335ba2b80d1560344de84a612e8c81b90a21e06fb00a71511527",
-    "https://ria-stk.ru/news/vse-novosti.php": "5982474103412d8316040bcbbfeb7d5fbab446346fe625c74a9da8b380a19925",
-    "http://government.ru/news/": "136ae328622f40924866d8954fa071c8071d300d627f559f47cd25c1fc496c36",
-    "https://stroygaz.ru/news/": "47426bbf671fc047834e81ccff1b9579f9999f8d64bcd77521033728df62eba9",
-    "https://realty.ria.ru/lenta/": "8fc7480668367c147857a8c5dd85ec3ef2ba7e7fed5553b885cb63963fbf8581",
-    "https://rg.ru/tema/ekonomika": "1be53597c0eecb044f2700f059c4833488cf9327c06065b8cda60da66257aa97",
-    "http://ancb.ru/publication": "29530ba7b930556292b69415518546b696de821d028dc6d25c81d88b83998794",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "4968bd99316e22fe582e910b6be16db2e1eeaf3397a62ac0df49ccea71f842e5",
+    "https://www.metalinfo.ru/ru/news": "358c5b65a6db1a32f7b15eb32ba45cc3c27f926b2fd9da7bfe7ee51c828e6212",
+    "https://www.pnp.ru/economics/": "08bac7054b60061f505a5810fbfd0a562198f3d7ba34c42767af1b254c947e0e",
+    "https://erzrf.ru/news/": "69a0880f1a155bbaa1cb76e1158ded8a937d99f05cc5829bf9a3e900d06891e4",
+    "https://ria-stk.ru/news/vse-novosti.php": "109b627f00e2d958188eced0d3afaa7b417c8314551ac1958470ada0032a6d2a",
+    "http://government.ru/news/": "d51b540d2daf9345f4f0223967f0bc71c294c044174b6e746770ea14cff180e7",
+    "https://stroygaz.ru/news/": "45d793f7f438ccab38cbb9067a645666dad5c21a760d0939cea01908a807dbb4",
+    "https://realty.ria.ru/lenta/": "96ecb9dc485ef5f622fa0d2e866700b4c869b66e439a8b7598a314f37b6209a5",
+    "https://rg.ru/tema/ekonomika": "3970eaccf60cb4c9142f7667a0450766b59f9e404f3a34f30443c532a92b976c",
+    "http://ancb.ru/publication": "82fdfa84b359cabee7950f9dc56a208d9c6d2955bac564ee77846292907a0d1f",
     "https://notim.ru": "4c4d5428b4a0d2b3176995af60a58a4b0beedadc403b1e190da75b2e68ae2994",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -6255,6 +6281,12 @@
       "https://realty.ria.ru/20251001/minstroj-2045656943.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/02/reg-cfo/na-volne-azhiotazha.html",
+      "https://rg.ru/2025/10/02/reg-sibfo/navostrili-lyzhi.html",
+      "https://rg.ru/2025/10/02/chernyshenko-v-2025-godu-s-gospodderzhkoj-vvedeno-187-tysiachi-gostinichnyh-nomerov.html",
+      "https://rg.ru/documents/2025/10/03/vozdushnyjkodeks-doc.html",
+      "https://rg.ru/2025/10/02/reg-pfo/bronzovaia-pensiia.html",
+      "https://rg.ru/2025/10/02/reg-ufo/rosaviaciia-rabota-aeroportov-sochi-i-gelendzhika-vremenno-ogranichena.html",
       "https://rg.ru/2025/10/02/nazad-v-leto.html",
       "https://rg.ru/2025/10/02/kriptovaliuta-vybiraet-kurs.html",
       "https://rg.ru/2025/10/02/neraduzhnaia-obolochka.html",
@@ -6281,12 +6313,6 @@
       "https://rg.ru/2025/10/02/s-malyh-let-po-dokumentu.html",
       "https://rg.ru/2025/10/02/zaiavivshaia-o-roste-tarifov-na-vyvoz-musora-kompaniia-poluchila-predosterezhenie-fas.html",
       "https://rg.ru/2025/10/02/cb-na-platezhnom-rynke-rf-poiavilas-pervaia-samoreguliruemaia-organizaciia.html",
-      "https://rg.ru/2025/10/02/spch-okolo-2-millionov-uzbekistancev-rabotaiut-v-rossii-v-raznyh-sektorah-rynka.html",
-      "https://rg.ru/2025/10/02/warner-bros-podala-zaiavku-na-registraciiu-tovarnogo-znaka-v-rossii.html",
-      "https://rg.ru/2025/10/02/v-glavnyh-roliah.html",
-      "https://rg.ru/2025/10/02/centrobank-ponizil-oficialnyj-kurs-dollara-do-8101-rublia.html",
-      "https://rg.ru/2025/10/02/ator-v-2025-godu-interes-rossiian-k-kurortam-malajzii-vyros-v-razy.html",
-      "https://rg.ru/2025/10/02/itogi-mff-2025-na-iubilejnom-forume-obsudili-glavnye-temy-v-ekonomike-i-finansah.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -6306,6 +6332,8 @@
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20229",
+      "http://ancb.ru/publication/read/20227",
       "http://ancb.ru/publication/read/20221",
       "http://ancb.ru/publication/read/20218",
       "http://ancb.ru/publication/read/20213",
@@ -6339,8 +6367,6 @@
       "http://ancb.ru/publication/read/20033",
       "http://ancb.ru/publication/read/20031",
       "http://ancb.ru/publication/read/20030",
-      "http://ancb.ru/publication/read/20029",
-      "http://ancb.ru/publication/read/20023",
       "http://ancb.ru/publication/read/20207",
       "http://ancb.ru/publication/read/20197",
       "http://ancb.ru/publication/read/20193",
@@ -6370,8 +6396,6 @@
       "http://ancb.ru/publication/read/20033",
       "http://ancb.ru/publication/read/20031",
       "http://ancb.ru/publication/read/20030",
-      "http://ancb.ru/publication/read/20029",
-      "http://ancb.ru/publication/read/20023",
       "http://ancb.ru/publication/read/20197",
       "http://ancb.ru/publication/read/20193",
       "http://ancb.ru/publication/read/20192",
@@ -6400,8 +6424,6 @@
       "http://ancb.ru/publication/read/20033",
       "http://ancb.ru/publication/read/20031",
       "http://ancb.ru/publication/read/20030",
-      "http://ancb.ru/publication/read/20029",
-      "http://ancb.ru/publication/read/20023",
       "http://ancb.ru/publication/read/20197",
       "http://ancb.ru/publication/read/20193",
       "http://ancb.ru/publication/read/20192",
@@ -6430,8 +6452,6 @@
       "http://ancb.ru/publication/read/20033",
       "http://ancb.ru/publication/read/20031",
       "http://ancb.ru/publication/read/20030",
-      "http://ancb.ru/publication/read/20029",
-      "http://ancb.ru/publication/read/20023",
       "http://ancb.ru/publication/read/20186",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
@@ -6455,8 +6475,6 @@
       "http://ancb.ru/publication/read/20033",
       "http://ancb.ru/publication/read/20031",
       "http://ancb.ru/publication/read/20030",
-      "http://ancb.ru/publication/read/20029",
-      "http://ancb.ru/publication/read/20023",
       "http://ancb.ru/publication/read/20186",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
@@ -6480,8 +6498,6 @@
       "http://ancb.ru/publication/read/20033",
       "http://ancb.ru/publication/read/20031",
       "http://ancb.ru/publication/read/20030",
-      "http://ancb.ru/publication/read/20029",
-      "http://ancb.ru/publication/read/20023",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -6504,8 +6520,6 @@
       "http://ancb.ru/publication/read/20033",
       "http://ancb.ru/publication/read/20031",
       "http://ancb.ru/publication/read/20030",
-      "http://ancb.ru/publication/read/20029",
-      "http://ancb.ru/publication/read/20023",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -6528,8 +6542,6 @@
       "http://ancb.ru/publication/read/20033",
       "http://ancb.ru/publication/read/20031",
       "http://ancb.ru/publication/read/20030",
-      "http://ancb.ru/publication/read/20029",
-      "http://ancb.ru/publication/read/20023",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -6552,8 +6564,6 @@
       "http://ancb.ru/publication/read/20033",
       "http://ancb.ru/publication/read/20031",
       "http://ancb.ru/publication/read/20030",
-      "http://ancb.ru/publication/read/20029",
-      "http://ancb.ru/publication/read/20023",
       "http://ancb.ru/publication/read/20172",
       "http://ancb.ru/publication/read/20162",
       "http://ancb.ru/publication/read/20154",
@@ -6575,9 +6585,7 @@
       "http://ancb.ru/publication/read/20043",
       "http://ancb.ru/publication/read/20033",
       "http://ancb.ru/publication/read/20031",
-      "http://ancb.ru/publication/read/20030",
-      "http://ancb.ru/publication/read/20029",
-      "http://ancb.ru/publication/read/20023"
+      "http://ancb.ru/publication/read/20030"
     ]
   },
   "first_seen": {
@@ -7711,7 +7719,15 @@
     "0979942bb0a88196e239cfbccc920a5be37070e60e76e8e93992d70b0e9b5554": "2025-10-02T21:25:00+03:00",
     "5dfce0a08c5a20ca2d38d4bd08f5b3e045668964e664f72610e1319a1b4255f3": "2025-10-02T21:25:00+03:00",
     "210c2a6f5f0ed88703a1f45a5120acf339a1a3a6c2eb6214567b941ec5dbc319": "2025-10-02T21:25:00+03:00",
-    "d8e2fcb63489e1cc617c2ac50ad4efcfe0a56faf7b9b8f6e152cd7e43e5a08ce": "2025-10-02T21:25:00+03:00"
+    "d8e2fcb63489e1cc617c2ac50ad4efcfe0a56faf7b9b8f6e152cd7e43e5a08ce": "2025-10-02T21:25:00+03:00",
+    "5ed23d7dcb93516a05f3c5c1d58b2c54028782ad5e7e5e69d1416ab8327cbccd": "2025-10-03T00:13:00+03:00",
+    "48500e7a11ee6094f2133151a601e65000757bf07cfc141e3b4d1ed8daa0f404": "2025-10-03T00:13:00+03:00",
+    "efe012dd7da54b1a880e9825eaf348637a7c3e1aa67d36435594a52a92cb8dcd": "2025-10-03T00:14:00+03:00",
+    "ed74b00a7479da3830d5edf99f4c40adeaf4631428fba140905e7009f1aa931c": "2025-10-03T00:14:00+03:00",
+    "6502dff74c430bf804668b209741a809eb5a0a29186584eb0eb56d255964d3da": "2025-10-03T00:14:00+03:00",
+    "db5303c31fdecd3360b367753f9455f3ad1a268b0346cd95ce087cb377cc8e1c": "2025-10-03T00:14:00+03:00",
+    "ec9f8594c4c14129172802b76e126b21e89db979d058a9d5a20276246846d8b3": "2025-10-03T00:14:00+03:00",
+    "02df304d4aa12a9efdb0b071035ece1a1e66a40abb252b982a2cf47d1ee73fae": "2025-10-03T00:14:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -7741,8 +7757,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe500e30510>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759429378.6405473
       },
       "warmup_done": false,
@@ -7752,39 +7768,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "unO6yUZzga9VJIVq",
+          "value": "9yaUAScKAM9V5yeX",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759430631
+          "expires": 1759440860
         },
         {
           "name": "__ddg10_",
-          "value": "1759429431",
+          "value": "1759439660",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759430631
+          "expires": 1759440860
         },
         {
           "name": "__ddg9_",
-          "value": "135.119.236.50",
+          "value": "64.236.135.115",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759430631
-        },
-        {
-          "name": "__ddg1_",
-          "value": "zGJEZZRcCNosf01QQ8HN",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1790965431
+          "expires": 1759440860
         },
         {
           "name": "PHPSESSID",
-          "value": "ca301b6228ae961e077ed39d1fc8df19",
+          "value": "1c9930a1c6df18c579ca014a365f6111",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -7810,11 +7818,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "8XxU3BhiTfT2QVB7LsZ2mRIcSCJBmKpH",
+          "value": "HL5ZBUYYxTqOgETNI66rM9YAI5ipUwL8",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759440234
+          "expires": 1759450463
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -7822,7 +7830,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790533434
+          "expires": 1790543663
         }
       ],
       "failures": {
@@ -9151,7 +9159,15 @@
     "https://rg.ru/2025/10/02/v-nashih-domah-i-fasad-obshchij.html": "https://rg.ru/2025/10/02/v-nashih-domah-i-fasad-obshchij.html",
     "https://rg.ru/2025/10/02/s-malyh-let-po-dokumentu.html": "https://rg.ru/2025/10/02/s-malyh-let-po-dokumentu.html",
     "https://rg.ru/2025/10/02/zaiavivshaia-o-roste-tarifov-na-vyvoz-musora-kompaniia-poluchila-predosterezhenie-fas.html": "https://rg.ru/2025/10/02/zaiavivshaia-o-roste-tarifov-na-vyvoz-musora-kompaniia-poluchila-predosterezhenie-fas.html",
-    "https://rg.ru/2025/10/02/cb-na-platezhnom-rynke-rf-poiavilas-pervaia-samoreguliruemaia-organizaciia.html": "https://rg.ru/2025/10/02/cb-na-platezhnom-rynke-rf-poiavilas-pervaia-samoreguliruemaia-organizaciia.html"
+    "https://rg.ru/2025/10/02/cb-na-platezhnom-rynke-rf-poiavilas-pervaia-samoreguliruemaia-organizaciia.html": "https://rg.ru/2025/10/02/cb-na-platezhnom-rynke-rf-poiavilas-pervaia-samoreguliruemaia-organizaciia.html",
+    "http://ancb.ru/publication/read/20229": "http://ancb.ru/publication/read/20229",
+    "http://ancb.ru/publication/read/20227": "http://ancb.ru/publication/read/20227",
+    "https://rg.ru/2025/10/02/reg-cfo/na-volne-azhiotazha.html": "https://rg.ru/2025/10/02/reg-cfo/na-volne-azhiotazha.html",
+    "https://rg.ru/2025/10/02/reg-sibfo/navostrili-lyzhi.html": "https://rg.ru/2025/10/02/reg-sibfo/navostrili-lyzhi.html",
+    "https://rg.ru/2025/10/02/chernyshenko-v-2025-godu-s-gospodderzhkoj-vvedeno-187-tysiachi-gostinichnyh-nomerov.html": "https://rg.ru/2025/10/02/chernyshenko-v-2025-godu-s-gospodderzhkoj-vvedeno-187-tysiachi-gostinichnyh-nomerov.html",
+    "https://rg.ru/documents/2025/10/03/vozdushnyjkodeks-doc.html": "https://rg.ru/documents/2025/10/03/vozdushnyjkodeks-doc.html",
+    "https://rg.ru/2025/10/02/reg-pfo/bronzovaia-pensiia.html": "https://rg.ru/2025/10/02/reg-pfo/bronzovaia-pensiia.html",
+    "https://rg.ru/2025/10/02/reg-ufo/rosaviaciia-rabota-aeroportov-sochi-i-gelendzhika-vremenno-ogranichena.html": "https://rg.ru/2025/10/02/reg-ufo/rosaviaciia-rabota-aeroportov-sochi-i-gelendzhika-vremenno-ogranichena.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -10520,7 +10536,15 @@
     "a242716e99e708327f338e8ad4f61cb64ac134ef": "https://rg.ru/2025/10/02/v-nashih-domah-i-fasad-obshchij.html",
     "a333d771b364f6be3d64511b528909cc0793ea21": "https://rg.ru/2025/10/02/s-malyh-let-po-dokumentu.html",
     "8a0cebe8a749f22a486c41041179e4dfed289825": "https://rg.ru/2025/10/02/zaiavivshaia-o-roste-tarifov-na-vyvoz-musora-kompaniia-poluchila-predosterezhenie-fas.html",
-    "e3ffa39fd789e2424af005a6bd213ba603666f90": "https://rg.ru/2025/10/02/cb-na-platezhnom-rynke-rf-poiavilas-pervaia-samoreguliruemaia-organizaciia.html"
+    "e3ffa39fd789e2424af005a6bd213ba603666f90": "https://rg.ru/2025/10/02/cb-na-platezhnom-rynke-rf-poiavilas-pervaia-samoreguliruemaia-organizaciia.html",
+    "e9afef3b3688c46f16062a7aedc5808274f89d70": "http://ancb.ru/publication/read/20229",
+    "232f6bbef33dc26d73bb851ec5b15819b0cc04a2": "http://ancb.ru/publication/read/20227",
+    "25a1d24d0269e0984771425ce383f4e6fd746735": "https://rg.ru/2025/10/02/reg-cfo/na-volne-azhiotazha.html",
+    "b2d2a339a9ee31a0652885ccf1cc82de92c38383": "https://rg.ru/2025/10/02/reg-sibfo/navostrili-lyzhi.html",
+    "c9f8769ad160f4c9c908ccf7ef40f16a0a0424ae": "https://rg.ru/2025/10/02/chernyshenko-v-2025-godu-s-gospodderzhkoj-vvedeno-187-tysiachi-gostinichnyh-nomerov.html",
+    "f27c88718f497ab7d358ff1897394310ecc46e65": "https://rg.ru/documents/2025/10/03/vozdushnyjkodeks-doc.html",
+    "1611e86c02e43f83ee0d5187403d31674436959c": "https://rg.ru/2025/10/02/reg-pfo/bronzovaia-pensiia.html",
+    "dbc466339c02c17e719c54eec0f1fbd508ee30b7": "https://rg.ru/2025/10/02/reg-ufo/rosaviaciia-rabota-aeroportov-sochi-i-gelendzhika-vremenno-ogranichena.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -11999,6 +12023,14 @@
     "https://rg.ru/2025/10/02/v-nashih-domah-i-fasad-obshchij.html": "0979942bb0a88196e239cfbccc920a5be37070e60e76e8e93992d70b0e9b5554",
     "https://rg.ru/2025/10/02/s-malyh-let-po-dokumentu.html": "5dfce0a08c5a20ca2d38d4bd08f5b3e045668964e664f72610e1319a1b4255f3",
     "https://rg.ru/2025/10/02/zaiavivshaia-o-roste-tarifov-na-vyvoz-musora-kompaniia-poluchila-predosterezhenie-fas.html": "210c2a6f5f0ed88703a1f45a5120acf339a1a3a6c2eb6214567b941ec5dbc319",
-    "https://rg.ru/2025/10/02/cb-na-platezhnom-rynke-rf-poiavilas-pervaia-samoreguliruemaia-organizaciia.html": "d8e2fcb63489e1cc617c2ac50ad4efcfe0a56faf7b9b8f6e152cd7e43e5a08ce"
+    "https://rg.ru/2025/10/02/cb-na-platezhnom-rynke-rf-poiavilas-pervaia-samoreguliruemaia-organizaciia.html": "d8e2fcb63489e1cc617c2ac50ad4efcfe0a56faf7b9b8f6e152cd7e43e5a08ce",
+    "http://ancb.ru/publication/read/20229": "5ed23d7dcb93516a05f3c5c1d58b2c54028782ad5e7e5e69d1416ab8327cbccd",
+    "http://ancb.ru/publication/read/20227": "48500e7a11ee6094f2133151a601e65000757bf07cfc141e3b4d1ed8daa0f404",
+    "https://rg.ru/2025/10/02/reg-cfo/na-volne-azhiotazha.html": "efe012dd7da54b1a880e9825eaf348637a7c3e1aa67d36435594a52a92cb8dcd",
+    "https://rg.ru/2025/10/02/reg-sibfo/navostrili-lyzhi.html": "ed74b00a7479da3830d5edf99f4c40adeaf4631428fba140905e7009f1aa931c",
+    "https://rg.ru/2025/10/02/chernyshenko-v-2025-godu-s-gospodderzhkoj-vvedeno-187-tysiachi-gostinichnyh-nomerov.html": "6502dff74c430bf804668b209741a809eb5a0a29186584eb0eb56d255964d3da",
+    "https://rg.ru/documents/2025/10/03/vozdushnyjkodeks-doc.html": "db5303c31fdecd3360b367753f9455f3ad1a268b0346cd95ce087cb377cc8e1c",
+    "https://rg.ru/2025/10/02/reg-pfo/bronzovaia-pensiia.html": "ec9f8594c4c14129172802b76e126b21e89db979d058a9d5a20276246846d8b3",
+    "https://rg.ru/2025/10/02/reg-ufo/rosaviaciia-rabota-aeroportov-sochi-i-gelendzhika-vremenno-ogranichena.html": "02df304d4aa12a9efdb0b071035ece1a1e66a40abb252b982a2cf47d1ee73fae"
   }
 }
