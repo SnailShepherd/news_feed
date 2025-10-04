@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 04 Oct 2025 09:15:36 GMT"
+      "Last-Modified": "Sat, 04 Oct 2025 12:29:44 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"21fdb-u31nj4Uk7g3W+vsenM8YV1JrsfU\""
+      "ETag": "W/\"22616-4hzr9sP7FCDvdVUtJPm1XjuV8as\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"2xselgbshn3n34\""
+      "ETag": "\"cgh2n6kuk33nxm\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -5562,6 +5562,16 @@
     },
     "https://rg.ru/2025/10/04/na-kamchatke-na-viliuchinskom-vulkane-sorvalis-i-poluchili-travmy-tri-turista.html": {
       "ETag": "\"m3if0g6l1f1mw2\""
+    },
+    "http://government.ru/news/56432/": {},
+    "https://rg.ru/2025/10/04/reg-cfo/na-moskovskih-centralnyh-diametrah-nachnet-hodit-iubilejnaia-100-ia-ivolga.html": {
+      "ETag": "\"14k1c2kcdbt1rpc\""
+    },
+    "https://rg.ru/2025/10/04/reg-sibfo/v-kuzbasse-rasshirili-vozmozhnosti-obsluzhivaniia-tehniki-iz-belarusi.html": {
+      "ETag": "\"sbybivjf1t1xsh\""
+    },
+    "https://rg.ru/2025/10/04/prodazhi-lada-iskra-v-rossii-v-sentiabre-vyrosli-v-sem-raz.html": {
+      "ETag": "\"ti51e8i2pu25h7\""
     }
   },
   "stats": {
@@ -6367,10 +6377,21 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff888b81940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff888898410>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff888898550>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff88898c2b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff88898c770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff888881250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-04T09:15:30.184857+00:00",
-    "items": 1822,
+    "last_run": "2025-10-04T12:29:29.282093+00:00",
+    "items": 1825,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -6382,33 +6403,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 401.79168199995274,
-        "connect_ms": 275.1356649999934,
-        "response_ms": 676.9273469999462,
+        "dns_ms": 700.3250239999943,
+        "connect_ms": 330.72455799992895,
+        "response_ms": 1031.0495819999232,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 131.00297000005412,
-        "connect_ms": 851.2653909999699,
-        "response_ms": 982.268361000024,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff888881250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 5044.842094999922,
-        "connect_ms": 0.0,
-        "response_ms": 4473.928881000006,
+        "dns_ms": 1173.1118950000337,
+        "connect_ms": 580.5731749999268,
+        "response_ms": 1753.6850699999604,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 256.94035799995163,
-        "connect_ms": 320.6781390000515,
-        "response_ms": 577.6184970000031,
+        "dns_ms": 446.142512999927,
+        "connect_ms": 162.07548400007,
+        "response_ms": 608.217996999997,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -6417,21 +6438,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "7342a32120e2e0a42accbff5d52e4f9d2bf689c3a5456a85fd7e13fb510ca12e",
+    "https://ardexpert.ru/article": "5391f45a16d85032e6e36ff756b2d31d5578169f13b998c7af8d47c313ede74f",
     "https://www.gostinfo.ru/News/List": "d8dbd943fedd36eee4dcf43ac1873035f2119f3e2cb7d1e1e04169a0796bf0c4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2669191d7e33d8f6c706f4e8370b4d17801d04b92cfa12c671eee17ec3fe8ea7",
-    "https://eec.eaeunion.org/news/": "672a0ad303a8b3bfa375a94feae3793959fa7a97e270bb56b37af32624b8a0fa",
+    "https://eec.eaeunion.org/news/": "9e23d0da93ff4aadd50df8d4751a927d807c0e8b85f193c03488c16f234c416e",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "93137361fd3199659cde4a464159a129f1f0f97b2665de49a68a69fa89b404a6",
-    "https://www.metalinfo.ru/ru/news": "ded352246b00ddf72cc909a5d15c17720364cfaf1010fd8ef9a8893367bd386f",
-    "https://www.pnp.ru/economics/": "3db9e076e540940f808f41f63e0c84be70e02e5cf21ce4557dbf58ddd24a5873",
-    "https://erzrf.ru/news/": "11e53722ea5e0780191fef4b4730d7686acbbf5460e39739c85bd4e80c504f31",
-    "https://ria-stk.ru/news/vse-novosti.php": "17a099b2f60f9913605a10c33309c48d3540f7b029d90cee21b978682573675d",
-    "http://government.ru/news/": "e4f0c69af4cc93da3ce17e815c1d4c926891b4ed18fc1edc58ea3968ab46e155",
-    "https://stroygaz.ru/news/": "b52e02667fc901fb9cae9d8ab75740b448a40e5cca0fcf48e6c31e9a95d9a328",
-    "https://realty.ria.ru/lenta/": "2909921959abc8615af7c5f9ba0f86d2c7cee48dcdf8c3b9a65d008d75bef431",
-    "https://rg.ru/tema/ekonomika": "752b3afb404833c8a84b89ad98ff2701147b0a0db6811216221654648c53960b",
-    "http://ancb.ru/publication": "1d6f54ea6925dc93604a300a642a4d60ff78713086a656e325fff6d1b2e2c42c",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "3319333c1dc3712e56173d4153b0151ae84beb66a0971e0434db73759bb25104",
+    "https://www.metalinfo.ru/ru/news": "d55c43d305d76e0207d60826c372f9c10af38ec87206f152d68a1ec6d1872353",
+    "https://www.pnp.ru/economics/": "30eaad8ed138ec302dee808328d20428bd3617bff269f13c47631da89e941a6b",
+    "https://erzrf.ru/news/": "c87c08932f3d3c3bd4fedd9eee106b81de8a3192ebb0d59e4c356b8311956056",
+    "https://ria-stk.ru/news/vse-novosti.php": "f1597926cef08cf840392759a4908ff1a8e832d40ba2f5a778b1103dbfb8fb5b",
+    "http://government.ru/news/": "ed641858d9079746ab5e5d4403e5ce3a6f622e7640c784ee592e64782addac3e",
+    "https://stroygaz.ru/news/": "4fe18f249b799ff6ac7d696d8f67b7bf252bd68543c62f244a34056c53362055",
+    "https://realty.ria.ru/lenta/": "af2ee6f3f07fea6c4f2d6c571865c200aa4807c0bd4d8fa671bd087b7ad27022",
+    "https://rg.ru/tema/ekonomika": "8e45c2dbc179082677de88733507f73fff9f3b615ccd4b22440a3bcf342bc847",
+    "http://ancb.ru/publication": "0fdcadb5fb014ee3136d4f2bd3d57f0b6b4f0bfe89d74f9493289581a831db94",
     "https://notim.ru": "366317cc30aa9d7bcc76321def9f52efaa698b915a5d09eead1c14b4582d2b0b",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -6762,6 +6783,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245049&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56432/",
       "http://government.ru/news/56430/",
       "http://government.ru/news/56431/",
       "http://government.ru/news/56426/",
@@ -6780,8 +6802,7 @@
       "http://government.ru/news/56414/",
       "http://government.ru/news/56412/",
       "http://government.ru/news/56409/",
-      "http://government.ru/news/56404/",
-      "http://government.ru/news/56405/"
+      "http://government.ru/news/56404/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/nazvana-stoimost-samoy-deshevoy-kvartiry-na-krestovskom-ostrove-v-peterburge/",
@@ -6828,6 +6849,9 @@
       "https://realty.ria.ru/20251003/razdel-2045672250.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/04/reg-cfo/na-moskovskih-centralnyh-diametrah-nachnet-hodit-iubilejnaia-100-ia-ivolga.html",
+      "https://rg.ru/2025/10/04/reg-sibfo/v-kuzbasse-rasshirili-vozmozhnosti-obsluzhivaniia-tehniki-iz-belarusi.html",
+      "https://rg.ru/2025/10/04/prodazhi-lada-iskra-v-rossii-v-sentiabre-vyrosli-v-sem-raz.html",
       "https://rg.ru/2025/10/04/ekspert-nazval-oshibki-v-ekonomike-remonta-kotorye-sovershaet-prakticheski-kazhdyj.html",
       "https://rg.ru/2025/10/04/nomer-telefona-mozhno-budet-sohranit-pri-smene-operatora-v-drugom-regione.html",
       "https://rg.ru/2025/10/04/mishustin-vydelil-sredstva-na-doplaty-k-pensiiam-i-vyplaty-po-uhodu-za-invalidami.html",
@@ -6853,13 +6877,10 @@
       "https://rg.ru/2025/10/03/reg-hersonskaya/hersonskaia-oblast-spravliaetsia-s-toplivnym-krizisom-pri-podderzhke-kryma.html",
       "https://rg.ru/2025/10/03/rospatent-zaregistriroval-tovarnye-znaki-rolex.html",
       "https://rg.ru/2025/10/03/dmitriiu-grigorenko-pokazali-rabotu-biometricheskoj-sistemy-v-aeporortu-pulkovo.html",
-      "https://rg.ru/2025/10/03/deputat-chaplin-pri-trudoustrojstve-pensioner-mozhet-poteriat-socialnye-vyplaty.html",
       "https://rg.ru/2025/10/03/reg-szfo/korotkoj-tropoj.html",
       "https://rg.ru/2025/10/03/reg-cfo/v-parke-sokolniki-otkroetsia-shest-detskih-tematicheskih-igrovyh-zon.html",
       "https://rg.ru/2025/10/03/fpk-bilety-na-poezda-v-belarus-mozhno-pokupat-za-90-sutok.html",
       "https://rg.ru/2025/10/03/minpromtorg-luchshe-vsego-investirovat-v-himiiu-i-zdravoohranenie.html",
-      "https://rg.ru/2025/10/03/reg-ufo/sochi-posetili-65-milliona-turistov-s-nachala-goda.html",
-      "https://rg.ru/2025/10/03/reg-cfo/v-parke-fili-otkrylsia-novyj-regbijnyj-stadion.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -8464,7 +8485,11 @@
     "b27f15633caa01c5888a237ba65a831d2f7fde277135731166ee5feb844ac6ab": "2025-10-04T12:15:00+03:00",
     "a22ea9ed07a0de8a91bd415f116ef370eec1a57fbf8467bb8b443de7374be937": "2025-10-04T12:15:00+03:00",
     "9b074e71b63c8fe61ff61c5f4e661ffd457e5c6815ec33355aba950bbc105dd3": "2025-10-04T12:15:00+03:00",
-    "f3f902cee6875a1d8f53c8d7c86a957cc4a377bc3113a5d594d78390e02de8ca": "2025-10-04T12:15:00+03:00"
+    "f3f902cee6875a1d8f53c8d7c86a957cc4a377bc3113a5d594d78390e02de8ca": "2025-10-04T12:15:00+03:00",
+    "904f36df81e8788046f41dfeca3975e385e7074e6fb96900747e0af2a0367de2": "2025-10-04T15:29:00+03:00",
+    "2778addb4328ae7492af5093eefdd084b22918d976f80cadb1a76e4317cda1a7": "2025-10-04T15:29:00+03:00",
+    "70c629e44907a248f9848dcceb90e1624ead0c16dcb6173556cee09889b08c29": "2025-10-04T15:29:00+03:00",
+    "6e83e411c02c6e11dbe96fabeeb7a96887cfcd8d20739d364b7d34ec282021c2": "2025-10-04T15:29:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -8494,9 +8519,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1759558957.4167304
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff88898c770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1759580906.5792475
       },
       "warmup_done": false,
       "last_success_path": null
@@ -8505,31 +8530,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "NxLBOucbF3Dvwkv9",
+          "value": "dVgnJXOPfNCGFFIL",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759570503
+          "expires": 1759582151
         },
         {
           "name": "__ddg10_",
-          "value": "1759569303",
+          "value": "1759580951",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759570503
+          "expires": 1759582151
         },
         {
           "name": "__ddg9_",
-          "value": "68.154.37.67",
+          "value": "172.183.135.146",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759570503
+          "expires": 1759582151
+        },
+        {
+          "name": "__ddg1_",
+          "value": "agYl7L2EkwD4mGpkS9ur",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1791116951
         },
         {
           "name": "PHPSESSID",
-          "value": "0cd9e23e27c4d8a6adf5824125603299",
+          "value": "df51a7a2d345ffd2ab4453b14d5bdb8f",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -8555,11 +8588,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "5YWrAOHt6iJu7sB6KkTQrWPJA6JwB06y",
+          "value": "G1rC7FcXMhk2Z66nQ7YYIhqV3aHbHizi",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759580105
+          "expires": 1759591754
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -8567,7 +8600,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790673305
+          "expires": 1790684954
         }
       ],
       "failures": {
@@ -10181,7 +10214,11 @@
     "https://rg.ru/2025/10/04/ekspert-nazval-oshibki-v-ekonomike-remonta-kotorye-sovershaet-prakticheski-kazhdyj.html": "https://rg.ru/2025/10/04/ekspert-nazval-oshibki-v-ekonomike-remonta-kotorye-sovershaet-prakticheski-kazhdyj.html",
     "https://rg.ru/2025/10/04/nomer-telefona-mozhno-budet-sohranit-pri-smene-operatora-v-drugom-regione.html": "https://rg.ru/2025/10/04/nomer-telefona-mozhno-budet-sohranit-pri-smene-operatora-v-drugom-regione.html",
     "https://rg.ru/2025/10/04/mishustin-vydelil-sredstva-na-doplaty-k-pensiiam-i-vyplaty-po-uhodu-za-invalidami.html": "https://rg.ru/2025/10/04/mishustin-vydelil-sredstva-na-doplaty-k-pensiiam-i-vyplaty-po-uhodu-za-invalidami.html",
-    "https://rg.ru/2025/10/04/na-kamchatke-na-viliuchinskom-vulkane-sorvalis-i-poluchili-travmy-tri-turista.html": "https://rg.ru/2025/10/04/na-kamchatke-na-viliuchinskom-vulkane-sorvalis-i-poluchili-travmy-tri-turista.html"
+    "https://rg.ru/2025/10/04/na-kamchatke-na-viliuchinskom-vulkane-sorvalis-i-poluchili-travmy-tri-turista.html": "https://rg.ru/2025/10/04/na-kamchatke-na-viliuchinskom-vulkane-sorvalis-i-poluchili-travmy-tri-turista.html",
+    "http://government.ru/news/56432": "http://government.ru/news/56432",
+    "https://rg.ru/2025/10/04/reg-cfo/na-moskovskih-centralnyh-diametrah-nachnet-hodit-iubilejnaia-100-ia-ivolga.html": "https://rg.ru/2025/10/04/reg-cfo/na-moskovskih-centralnyh-diametrah-nachnet-hodit-iubilejnaia-100-ia-ivolga.html",
+    "https://rg.ru/2025/10/04/reg-sibfo/v-kuzbasse-rasshirili-vozmozhnosti-obsluzhivaniia-tehniki-iz-belarusi.html": "https://rg.ru/2025/10/04/reg-sibfo/v-kuzbasse-rasshirili-vozmozhnosti-obsluzhivaniia-tehniki-iz-belarusi.html",
+    "https://rg.ru/2025/10/04/prodazhi-lada-iskra-v-rossii-v-sentiabre-vyrosli-v-sem-raz.html": "https://rg.ru/2025/10/04/prodazhi-lada-iskra-v-rossii-v-sentiabre-vyrosli-v-sem-raz.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -11768,7 +11805,11 @@
     "cb98f9850c01e4f256b34c73f3571c2a24631719": "https://rg.ru/2025/10/04/ekspert-nazval-oshibki-v-ekonomike-remonta-kotorye-sovershaet-prakticheski-kazhdyj.html",
     "206bd1fa65424d081f866f9330589ccb4398e720": "https://rg.ru/2025/10/04/nomer-telefona-mozhno-budet-sohranit-pri-smene-operatora-v-drugom-regione.html",
     "ddfe5ddc28940fc558ed1038f22e4ab58054d90b": "https://rg.ru/2025/10/04/mishustin-vydelil-sredstva-na-doplaty-k-pensiiam-i-vyplaty-po-uhodu-za-invalidami.html",
-    "77022a409c0b815447812c6c9256173f356621f9": "https://rg.ru/2025/10/04/na-kamchatke-na-viliuchinskom-vulkane-sorvalis-i-poluchili-travmy-tri-turista.html"
+    "77022a409c0b815447812c6c9256173f356621f9": "https://rg.ru/2025/10/04/na-kamchatke-na-viliuchinskom-vulkane-sorvalis-i-poluchili-travmy-tri-turista.html",
+    "c2f56b7a4c64ec0191d2d8f3ee67bbda98b572a0": "http://government.ru/news/56432",
+    "680511e12d8b13005740c5640ec345d5a49c06c8": "https://rg.ru/2025/10/04/reg-cfo/na-moskovskih-centralnyh-diametrah-nachnet-hodit-iubilejnaia-100-ia-ivolga.html",
+    "eb4122076b71fa0c7dc47d9640db29227d68713a": "https://rg.ru/2025/10/04/reg-sibfo/v-kuzbasse-rasshirili-vozmozhnosti-obsluzhivaniia-tehniki-iz-belarusi.html",
+    "13bc36c1a50f42ac8983209d19e68aeaa4d893c6": "https://rg.ru/2025/10/04/prodazhi-lada-iskra-v-rossii-v-sentiabre-vyrosli-v-sem-raz.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -13577,6 +13618,11 @@
     "https://rg.ru/2025/10/04/ekspert-nazval-oshibki-v-ekonomike-remonta-kotorye-sovershaet-prakticheski-kazhdyj.html": "b27f15633caa01c5888a237ba65a831d2f7fde277135731166ee5feb844ac6ab",
     "https://rg.ru/2025/10/04/nomer-telefona-mozhno-budet-sohranit-pri-smene-operatora-v-drugom-regione.html": "a22ea9ed07a0de8a91bd415f116ef370eec1a57fbf8467bb8b443de7374be937",
     "https://rg.ru/2025/10/04/mishustin-vydelil-sredstva-na-doplaty-k-pensiiam-i-vyplaty-po-uhodu-za-invalidami.html": "9b074e71b63c8fe61ff61c5f4e661ffd457e5c6815ec33355aba950bbc105dd3",
-    "https://rg.ru/2025/10/04/na-kamchatke-na-viliuchinskom-vulkane-sorvalis-i-poluchili-travmy-tri-turista.html": "f3f902cee6875a1d8f53c8d7c86a957cc4a377bc3113a5d594d78390e02de8ca"
+    "https://rg.ru/2025/10/04/na-kamchatke-na-viliuchinskom-vulkane-sorvalis-i-poluchili-travmy-tri-turista.html": "f3f902cee6875a1d8f53c8d7c86a957cc4a377bc3113a5d594d78390e02de8ca",
+    "http://government.ru/news/56432": "904f36df81e8788046f41dfeca3975e385e7074e6fb96900747e0af2a0367de2",
+    "http://government.ru/news/56432/": "904f36df81e8788046f41dfeca3975e385e7074e6fb96900747e0af2a0367de2",
+    "https://rg.ru/2025/10/04/reg-cfo/na-moskovskih-centralnyh-diametrah-nachnet-hodit-iubilejnaia-100-ia-ivolga.html": "2778addb4328ae7492af5093eefdd084b22918d976f80cadb1a76e4317cda1a7",
+    "https://rg.ru/2025/10/04/reg-sibfo/v-kuzbasse-rasshirili-vozmozhnosti-obsluzhivaniia-tehniki-iz-belarusi.html": "70c629e44907a248f9848dcceb90e1624ead0c16dcb6173556cee09889b08c29",
+    "https://rg.ru/2025/10/04/prodazhi-lada-iskra-v-rossii-v-sentiabre-vyrosli-v-sem-raz.html": "6e83e411c02c6e11dbe96fabeeb7a96887cfcd8d20739d364b7d34ec282021c2"
   }
 }
