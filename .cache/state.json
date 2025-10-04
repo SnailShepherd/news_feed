@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"21fdb-TBe/gOlPKTS6hAY5FVLhNbMpUV4\""
+      "ETag": "W/\"22616-hEV+1QlJYF6hxIRAyhZrdvOzi24\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Fri, 03 Oct 2025 14:32:44 GMT"
+      "Last-Modified": "Fri, 03 Oct 2025 15:11:28 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"8p7qjl05ok3hci\""
+      "ETag": "\"12r8jwt7jxj3k9x\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -5533,6 +5533,18 @@
     },
     "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html": {
       "ETag": "\"pak4do62pk1k5y\""
+    },
+    "https://stroygaz.ru/news/dwelling/nazvana-stoimost-samoy-deshevoy-kvartiry-na-krestovskom-ostrove-v-peterburge/": {
+      "Last-Modified": "Fri, 03 Oct 2025 15:11:28 GMT"
+    },
+    "https://rg.ru/2025/10/04/maksimalnoe-posobie-po-beremennosti-i-rodam-prevysit-mln-rublej-v-2027-godu.html": {
+      "ETag": "\"ojpubsr1281ks4\""
+    },
+    "https://rg.ru/2025/10/04/v-rosaviacii-soobshchili-o-sniatii-ogranichenij-v-aeroportu-nizhnego-novgoroda.html": {
+      "ETag": "\"bnadri9yut1kuy\""
+    },
+    "https://rg.ru/2025/10/04/reg-szfo/festivali-oktiabria-vspominaem-vasiliia-shukshina-ivana-susanina-i-vasiliia-belova.html": {
+      "ETag": "\"6gvo6b8epg21nu\""
     }
   },
   "stats": {
@@ -6310,10 +6322,33 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbe6ff85940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbe6fca4410>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbe6fca4550>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbe6fd943e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbe6fd94510>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbe6fc8d250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Парламентская газета: Экономика",
+        "url": "https://www.pnp.ru/economics/",
+        "error": "temporary unavailable -> used cache: www.pnp.ru: 403 Client Error: Forbidden for url: https://www.pnp.ru/economics/",
+        "status": "cached"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe6fca47d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe6fca4b90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe6fca5950>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe6fca5d10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe6fca60d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-10-04T03:23:29.826509+00:00",
-    "items": 1814,
+    "last_run": "2025-10-04T06:25:05.571262+00:00",
+    "items": 1816,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -6325,56 +6360,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 1035.3119740000238,
+        "dns_ms": 989.4748589999836,
         "connect_ms": 0.0,
-        "response_ms": 831.1319889999709,
+        "response_ms": 838.4011299999656,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 428.6090830000262,
-        "connect_ms": 1469.880560999968,
-        "response_ms": 1898.4896439999943,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbe6fc8d250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 11990.265120000004,
-        "connect_ms": 0.0,
-        "response_ms": 5780.4458130000285,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": 2.2968640000726737,
+        "connect_ms": 124.84836500016172,
+        "response_ms": 127.1452290002344,
+        "attempts": 4,
+        "status": 403,
+        "error": "403 Client Error: Forbidden for url: https://www.pnp.ru/economics/"
       },
       "ria-stk.ru": {
-        "dns_ms": 846.1238670000171,
-        "connect_ms": 0.0,
-        "response_ms": 808.587781999961,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe6fca60d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "4573b1b64ec17edb5356fa9d8da001544efe0d0f37b903796d278af9490a3b22",
+    "https://ardexpert.ru/article": "367c3d4e4c4d7c9e532e12b1595dbea9d2e21d0b24a2c27326301017c08e74f1",
     "https://www.gostinfo.ru/News/List": "d8dbd943fedd36eee4dcf43ac1873035f2119f3e2cb7d1e1e04169a0796bf0c4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2669191d7e33d8f6c706f4e8370b4d17801d04b92cfa12c671eee17ec3fe8ea7",
-    "https://eec.eaeunion.org/news/": "dac4569250cfb9048bf9e580494123e6e0269edd5ab6358bde67db192c5e8297",
+    "https://eec.eaeunion.org/news/": "b2f2e4253ba07bcfa4c7e595284dc6c44aa7c729007f7d98ebcf32afa08d703b",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "769a8b8614a7a7cf1f25b7ae654939ea4b76b952ec628082760a1326f5fb4b6b",
-    "https://www.metalinfo.ru/ru/news": "d55c43d305d76e0207d60826c372f9c10af38ec87206f152d68a1ec6d1872353",
-    "https://www.pnp.ru/economics/": "6dfc4c7c87075a660994c849ae3d5f628462a1285420907d6a8a7ee810de2821",
-    "https://erzrf.ru/news/": "7aac47a72206d3d868a17bb5b5140f1fd65826b27cbf9afd9089f5cbf383f947",
-    "https://ria-stk.ru/news/vse-novosti.php": "aec6f1294fa9401dee7477dfbb06a6788cf06abc87fae08f096c7fa5f93854eb",
-    "http://government.ru/news/": "8a606f94f5fc214b58e560887a3d41be060bbb6bbe3895a1eecbf0f1d0d0b15b",
-    "https://stroygaz.ru/news/": "7f717fc537ea2ed0975421df21e44c510afa2d94473d7bf71f216519b42ab590",
-    "https://realty.ria.ru/lenta/": "74d46cabef47a7779434fffb27d254bdc8c85f6b4f1ec3da7df50c8b73236f2f",
-    "https://rg.ru/tema/ekonomika": "52be308c8ea1db23273f2e7ecbba19af91c5b0a8f7359c19461e745f65faa482",
-    "http://ancb.ru/publication": "1d6f54ea6925dc93604a300a642a4d60ff78713086a656e325fff6d1b2e2c42c",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "e6e9e7e6d6bb77640c615475efb636dfe3cd304f470af5e94ee647a087c55658",
+    "https://www.metalinfo.ru/ru/news": "a9dc6305a76b35ed454ec98bf74bcbe7c629a86c03d942c33b624458d3d85251",
+    "https://www.pnp.ru/economics/": "93776416127da09b0a8684846ec1da277dd13db9139ee6efc4d1828d6966e7a3",
+    "https://erzrf.ru/news/": "67ebc577f39bb5e959603b3ddf8e0e05ba199be1dc4002994a2a8e75691c8892",
+    "https://ria-stk.ru/news/vse-novosti.php": "f7b2bda271c5bd16d967a520448bd4adfa149557825f57efa494c1087868b8b6",
+    "http://government.ru/news/": "164d7157617447315462abfb6a12538cbf2447d7e63fb249f5188e72b3fda75d",
+    "https://stroygaz.ru/news/": "fdf64c565f5da45caf0ce802f21ad7dc7eab83a292cae37ba35b5c1ccdda0e3e",
+    "https://realty.ria.ru/lenta/": "ad6dbc686a1728eda504345be8a604b8f5752d62fc76b69e2dba14eca1a6c572",
+    "https://rg.ru/tema/ekonomika": "5191909a1d1f30b5e6120a696137754f26a21c804a3a7dbf772185fea840dc94",
+    "http://ancb.ru/publication": "0fdcadb5fb014ee3136d4f2bd3d57f0b6b4f0bfe89d74f9493289581a831db94",
     "https://notim.ru": "366317cc30aa9d7bcc76321def9f52efaa698b915a5d09eead1c14b4582d2b0b",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -6730,6 +6765,7 @@
       "http://government.ru/news/56400/"
     ],
     "Стройгаз.ру": [
+      "https://stroygaz.ru/news/dwelling/nazvana-stoimost-samoy-deshevoy-kvartiry-na-krestovskom-ostrove-v-peterburge/",
       "https://stroygaz.ru/news/materials/bolee-poloviny-rossiyan-vybirayut-tovary-s-soderzhaniem-vtorichnogo-syrya/",
       "https://stroygaz.ru/news/commercial/na-moskovskom-rynke-kommercheskoy-nedvizhimosti-snizilsya-obem-investitsiy/",
       "https://stroygaz.ru/news/dwelling/bolee-poloviny-moskvichey-pri-pokupke-kvartiry-gotovy-doplatit-za-fitnes-s-basseynom-v-zhk/",
@@ -6748,8 +6784,7 @@
       "https://stroygaz.ru/news/dwelling/spros-i-tseny-na-novostroyki-biznes-klassa-v-moskve-budut-rasti-eksperty/",
       "https://stroygaz.ru/news/dwelling/v-rossii-rastet-spros-na-planirovki-s-kukhney-gostinoy/",
       "https://stroygaz.ru/news/dwelling/chut-bolee-10-rossiyan-polzuyutsya-uslugami-rieltorov-dlya-poiska-nedvizhimosti/",
-      "https://stroygaz.ru/news/materials/rossiyskiy-proizvoditel-kupil-zavod-fasadnykh-paneley/",
-      "https://stroygaz.ru/news/dwelling/pochti-polovina-pokupateley-premialnykh-kvartir-v-moskve-gotovy-pereekhat-zagorod/"
+      "https://stroygaz.ru/news/materials/rossiyskiy-proizvoditel-kupil-zavod-fasadnykh-paneley/"
     ],
     "РИА Недвижимость: лента": [
       "https://realty.ria.ru/20251003/kortros-2046263322.html",
@@ -6774,6 +6809,9 @@
       "https://realty.ria.ru/20251003/razdel-2045672250.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/04/maksimalnoe-posobie-po-beremennosti-i-rodam-prevysit-mln-rublej-v-2027-godu.html",
+      "https://rg.ru/2025/10/04/v-rosaviacii-soobshchili-o-sniatii-ogranichenij-v-aeroportu-nizhnego-novgoroda.html",
+      "https://rg.ru/2025/10/04/reg-szfo/festivali-oktiabria-vspominaem-vasiliia-shukshina-ivana-susanina-i-vasiliia-belova.html",
       "https://rg.ru/2025/09/30/podarochnye-metry.html",
       "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html",
       "https://rg.ru/2025/10/01/moda-na-vysote.html",
@@ -6803,9 +6841,6 @@
       "https://rg.ru/2025/10/03/ekonomist-balynin-v-2026-godu-dlia-odnogo-ipk-nuzhna-zarplata-v-25-tysiach-rublej.html",
       "https://rg.ru/2025/10/03/chastnye-investory-vlozhili-v-cennye-bumagi-na-mosbirzhe-rekordnye-317-mlrd-rublej.html",
       "https://rg.ru/2025/10/03/minfin-predlozhil-vvesti-nds-na-importnye-tovary-s-marketplejsov.html",
-      "https://rg.ru/2025/10/03/reg-pfo/v-aeroportu-ufy-sniali-vremennye-ogranicheniia.html",
-      "https://rg.ru/2025/10/03/rossijskie-data-centry-narashchivaiut-moshchnosti-v-regionah.html",
-      "https://rg.ru/2025/10/03/kak-vybrat-idealnye-krossovki-muzhskie-zhenskie-dlia-bega-i-na-kazhdyj-den.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -8397,7 +8432,11 @@
     "61116e5dcf362c5bb2fb3bcb52c0788019f0701bd84cd92be8e5c9e472651468": "2025-10-04T00:13:00+03:00",
     "4777ec169e43b15e42d42dcd10f07dfad484fe1500fb13cdae2f85db658f64d0": "2025-10-04T04:08:00+03:00",
     "84c5ddf2b0c10fc637a9af7b5e22429fa403076e1e3bcd06bc3db1cb0d85f77b": "2025-10-04T06:23:00+03:00",
-    "706b7bee79584af03334a2e27ff01de59f46015d1ffb34c4269f77ab881579a6": "2025-10-04T06:23:00+03:00"
+    "706b7bee79584af03334a2e27ff01de59f46015d1ffb34c4269f77ab881579a6": "2025-10-04T06:23:00+03:00",
+    "8017a07388eca6091677cf842955faf81ba058cd0bb23657a7e5b97fecd99338": "2025-10-04T09:24:00+03:00",
+    "a0ce57a094452978b9e9cbbbfe443ff0aa09fa283c888cd55f5565ff7a7a5128": "2025-10-04T09:24:00+03:00",
+    "5afce01bcfcf6376dbcf8c08908961bc2a0a9c28e0cdeec1bcc39b474af4d773": "2025-10-04T09:25:00+03:00",
+    "8ab1bc0da4113312f28214079bf6e18a5eadfd7e0c14d5845fb6be7bec7a2163": "2025-10-04T09:25:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -8427,9 +8466,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1759539966.9196167
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbe6fd94510>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1759558957.4167304
       },
       "warmup_done": false,
       "last_success_path": null
@@ -8512,9 +8551,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1759540057.5580184
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe6fca5d10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 4,
+        "last_ts": 1759559069.2316654
       },
       "warmup_done": false,
       "last_success_path": null
@@ -10109,7 +10148,11 @@
     "https://rg.ru/2025/10/03/louis-vuitton-napravil-v-rospatent-zaiavki-na-registraciiu-tovarnyh-znakov.html": "https://rg.ru/2025/10/03/louis-vuitton-napravil-v-rospatent-zaiavki-na-registraciiu-tovarnyh-znakov.html",
     "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html": "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html",
     "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html": "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html",
-    "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html": "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html"
+    "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html": "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html",
+    "https://stroygaz.ru/news/dwelling/nazvana-stoimost-samoy-deshevoy-kvartiry-na-krestovskom-ostrove-v-peterburge": "https://stroygaz.ru/news/dwelling/nazvana-stoimost-samoy-deshevoy-kvartiry-na-krestovskom-ostrove-v-peterburge",
+    "https://rg.ru/2025/10/04/maksimalnoe-posobie-po-beremennosti-i-rodam-prevysit-mln-rublej-v-2027-godu.html": "https://rg.ru/2025/10/04/maksimalnoe-posobie-po-beremennosti-i-rodam-prevysit-mln-rublej-v-2027-godu.html",
+    "https://rg.ru/2025/10/04/v-rosaviacii-soobshchili-o-sniatii-ogranichenij-v-aeroportu-nizhnego-novgoroda.html": "https://rg.ru/2025/10/04/v-rosaviacii-soobshchili-o-sniatii-ogranichenij-v-aeroportu-nizhnego-novgoroda.html",
+    "https://rg.ru/2025/10/04/reg-szfo/festivali-oktiabria-vspominaem-vasiliia-shukshina-ivana-susanina-i-vasiliia-belova.html": "https://rg.ru/2025/10/04/reg-szfo/festivali-oktiabria-vspominaem-vasiliia-shukshina-ivana-susanina-i-vasiliia-belova.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -11683,7 +11726,11 @@
     "8903f6d80b8c9993504ca3e863bec3f6bc8d855e": "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html",
     "a3e25359c44bbe2320f74eaba24f6d89d349855f": "https://rg.ru/2025/09/30/podarochnye-metry.html",
     "a2cf310c8a16bc8e522d69931e9577f326651b6d": "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html",
-    "4bd190f93a6ab35231f232df252482202229de31": "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html"
+    "4bd190f93a6ab35231f232df252482202229de31": "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html",
+    "9ab962ea1fe4ee44df886808c41e36ca3f0d3075": "https://stroygaz.ru/news/dwelling/nazvana-stoimost-samoy-deshevoy-kvartiry-na-krestovskom-ostrove-v-peterburge",
+    "3ee05162179d064c7c69529ab49dd25220c0f1fe": "https://rg.ru/2025/10/04/maksimalnoe-posobie-po-beremennosti-i-rodam-prevysit-mln-rublej-v-2027-godu.html",
+    "49927b9aa767e3e3feadb46855187d44af05c73e": "https://rg.ru/2025/10/04/v-rosaviacii-soobshchili-o-sniatii-ogranichenij-v-aeroportu-nizhnego-novgoroda.html",
+    "1f8bcc9d6bd7edc884d02629efe35915d809cf21": "https://rg.ru/2025/10/04/reg-szfo/festivali-oktiabria-vspominaem-vasiliia-shukshina-ivana-susanina-i-vasiliia-belova.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -13474,6 +13521,11 @@
     "https://rg.ru/2025/10/03/louis-vuitton-napravil-v-rospatent-zaiavki-na-registraciiu-tovarnyh-znakov.html": "61116e5dcf362c5bb2fb3bcb52c0788019f0701bd84cd92be8e5c9e472651468",
     "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html": "4777ec169e43b15e42d42dcd10f07dfad484fe1500fb13cdae2f85db658f64d0",
     "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html": "84c5ddf2b0c10fc637a9af7b5e22429fa403076e1e3bcd06bc3db1cb0d85f77b",
-    "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html": "706b7bee79584af03334a2e27ff01de59f46015d1ffb34c4269f77ab881579a6"
+    "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html": "706b7bee79584af03334a2e27ff01de59f46015d1ffb34c4269f77ab881579a6",
+    "https://stroygaz.ru/news/dwelling/nazvana-stoimost-samoy-deshevoy-kvartiry-na-krestovskom-ostrove-v-peterburge": "8017a07388eca6091677cf842955faf81ba058cd0bb23657a7e5b97fecd99338",
+    "https://stroygaz.ru/news/dwelling/nazvana-stoimost-samoy-deshevoy-kvartiry-na-krestovskom-ostrove-v-peterburge/": "8017a07388eca6091677cf842955faf81ba058cd0bb23657a7e5b97fecd99338",
+    "https://rg.ru/2025/10/04/maksimalnoe-posobie-po-beremennosti-i-rodam-prevysit-mln-rublej-v-2027-godu.html": "a0ce57a094452978b9e9cbbbfe443ff0aa09fa283c888cd55f5565ff7a7a5128",
+    "https://rg.ru/2025/10/04/v-rosaviacii-soobshchili-o-sniatii-ogranichenij-v-aeroportu-nizhnego-novgoroda.html": "5afce01bcfcf6376dbcf8c08908961bc2a0a9c28e0cdeec1bcc39b474af4d773",
+    "https://rg.ru/2025/10/04/reg-szfo/festivali-oktiabria-vspominaem-vasiliia-shukshina-ivana-susanina-i-vasiliia-belova.html": "8ab1bc0da4113312f28214079bf6e18a5eadfd7e0c14d5845fb6be7bec7a2163"
   }
 }
