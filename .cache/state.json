@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 04 Oct 2025 01:07:36 GMT"
+      "Last-Modified": "Sat, 04 Oct 2025 03:23:38 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"22616-7Cr4PJdZd81pMvaPAFOKuFYHVJg\""
+      "ETag": "W/\"21fdb-TBe/gOlPKTS6hAY5FVLhNbMpUV4\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"7wdou1cwlg3c4q\""
+      "ETag": "\"8p7qjl05ok3hci\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -4090,7 +4090,7 @@
       "Last-Modified": "Tue, 30 Sep 2025 21:00:03 GMT"
     },
     "https://rg.ru/2025/10/01/moda-na-vysote.html": {
-      "ETag": "\"b0ng3wn9gc29oa\""
+      "ETag": "\"t8yweha9gq29ns\""
     },
     "https://rg.ru/2025/10/01/deputaty-predlozhili-vydavat-maloimushchim-prodovolstvennye-sertifikaty.html": {
       "ETag": "\"47n7bn70jt1rui\""
@@ -4108,7 +4108,7 @@
       "ETag": "\"e08y65xmv11s76\""
     },
     "https://rg.ru/2025/09/30/podarochnye-metry.html": {
-      "ETag": "\"fi4j3hy2bn1zky\""
+      "ETag": "\"h5xg0g5cqu200v\""
     },
     "https://rg.ru/2025/09/30/konsulstva-kipra-v-rossii-do-6-oktiabria-priostanovili-priem-zaiavok-na-vizy.html": {
       "ETag": "\"zx1eu5uze81mt9\""
@@ -5527,6 +5527,12 @@
     },
     "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html": {
       "ETag": "\"yd8k5jrs0n1jsd\""
+    },
+    "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html": {
+      "ETag": "\"l8c965tzqd1jzk\""
+    },
+    "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html": {
+      "ETag": "\"pak4do62pk1k5y\""
     }
   },
   "stats": {
@@ -6299,9 +6305,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc00dea47d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc00dea4b90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc00dea5950>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc00dea5d10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc00dea60d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-04T01:08:04.047562+00:00",
+    "last_run": "2025-10-04T03:23:29.826509+00:00",
     "items": 1814,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -6314,56 +6325,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 851.3706439999851,
-        "connect_ms": 679.1038169999979,
-        "response_ms": 1530.474460999983,
+        "dns_ms": 1035.3119740000238,
+        "connect_ms": 0.0,
+        "response_ms": 831.1319889999709,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc00de8d250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 428.6090830000262,
+        "connect_ms": 1469.880560999968,
+        "response_ms": 1898.4896439999943,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 5191.87297100001,
+        "dns_ms": 11990.265120000004,
         "connect_ms": 0.0,
-        "response_ms": 5134.476861999985,
+        "response_ms": 5780.4458130000285,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc00dea60d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 846.1238670000171,
+        "connect_ms": 0.0,
+        "response_ms": 808.587781999961,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "d2f728dfadb1befdf9b4dcd2ad1b360504033be44b9951b8b8e7114e553641c0",
+    "https://ardexpert.ru/article": "4573b1b64ec17edb5356fa9d8da001544efe0d0f37b903796d278af9490a3b22",
     "https://www.gostinfo.ru/News/List": "d8dbd943fedd36eee4dcf43ac1873035f2119f3e2cb7d1e1e04169a0796bf0c4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2669191d7e33d8f6c706f4e8370b4d17801d04b92cfa12c671eee17ec3fe8ea7",
-    "https://eec.eaeunion.org/news/": "ea0fcb139b12dc4c419d358ba7ed4077be3caf613a488f7d0cd21ae0e2b2f349",
+    "https://eec.eaeunion.org/news/": "dac4569250cfb9048bf9e580494123e6e0269edd5ab6358bde67db192c5e8297",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "b7b23aab52db4322b345cd9b03cac6eeb28ba42560177b966d86d45ed2b0acbf",
-    "https://www.metalinfo.ru/ru/news": "4c55ddedc96263e71d983047810b6d556d40db1293a6f1658ab48663950eaac9",
-    "https://www.pnp.ru/economics/": "f23d5a78f59a234a3a224ad91b3c7872c39fc47921c5ac0b1dfbaad3a5f144cd",
-    "https://erzrf.ru/news/": "6f4684b28b03724c66da5457ba32c79b98fe98f4d14a7a4351d70c62683a3e61",
-    "https://ria-stk.ru/news/vse-novosti.php": "646189220cd4b6f709e4c118373e7c151f2860496fe1a61b67ab412e0d8892f6",
-    "http://government.ru/news/": "853017d83bf6252ac415acc23dfd364eb3fd5c5bf4046ec6912b9854849ca58d",
-    "https://stroygaz.ru/news/": "33e419d762175f8a0724d5637c3243f04d8218d8b14d1be4e1e43baacc45b128",
-    "https://realty.ria.ru/lenta/": "17fc0ef25058bd228245a0bf07cc143476c3582604b39f987b44e9395d1c3012",
-    "https://rg.ru/tema/ekonomika": "a004f34b1c786ab7a2ef680447e621ea00452cd436062d0e963325db7e22475c",
-    "http://ancb.ru/publication": "0fdcadb5fb014ee3136d4f2bd3d57f0b6b4f0bfe89d74f9493289581a831db94",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "769a8b8614a7a7cf1f25b7ae654939ea4b76b952ec628082760a1326f5fb4b6b",
+    "https://www.metalinfo.ru/ru/news": "d55c43d305d76e0207d60826c372f9c10af38ec87206f152d68a1ec6d1872353",
+    "https://www.pnp.ru/economics/": "6dfc4c7c87075a660994c849ae3d5f628462a1285420907d6a8a7ee810de2821",
+    "https://erzrf.ru/news/": "7aac47a72206d3d868a17bb5b5140f1fd65826b27cbf9afd9089f5cbf383f947",
+    "https://ria-stk.ru/news/vse-novosti.php": "aec6f1294fa9401dee7477dfbb06a6788cf06abc87fae08f096c7fa5f93854eb",
+    "http://government.ru/news/": "8a606f94f5fc214b58e560887a3d41be060bbb6bbe3895a1eecbf0f1d0d0b15b",
+    "https://stroygaz.ru/news/": "7f717fc537ea2ed0975421df21e44c510afa2d94473d7bf71f216519b42ab590",
+    "https://realty.ria.ru/lenta/": "74d46cabef47a7779434fffb27d254bdc8c85f6b4f1ec3da7df50c8b73236f2f",
+    "https://rg.ru/tema/ekonomika": "52be308c8ea1db23273f2e7ecbba19af91c5b0a8f7359c19461e745f65faa482",
+    "http://ancb.ru/publication": "1d6f54ea6925dc93604a300a642a4d60ff78713086a656e325fff6d1b2e2c42c",
     "https://notim.ru": "366317cc30aa9d7bcc76321def9f52efaa698b915a5d09eead1c14b4582d2b0b",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -6763,6 +6774,10 @@
       "https://realty.ria.ru/20251003/razdel-2045672250.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/09/30/podarochnye-metry.html",
+      "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html",
+      "https://rg.ru/2025/10/01/moda-na-vysote.html",
+      "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html",
       "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html",
       "https://rg.ru/2025/10/03/louis-vuitton-napravil-v-rospatent-zaiavki-na-registraciiu-tovarnyh-znakov.html",
       "https://rg.ru/2025/10/03/cb-v-regionah-rossii-poiaviatsia-ipotechnye-mikrokreditnye-kompanii.html",
@@ -6786,15 +6801,11 @@
       "https://rg.ru/2025/10/03/reg-cfo/v-parke-fili-otkrylsia-novyj-regbijnyj-stadion.html",
       "https://rg.ru/2025/10/03/reg-cfo/sobianin-nakanune-dnia-uchitelia-otkryli-novoe-zdanie-shkoly-integral-v-bagrationovskom-proezde.html",
       "https://rg.ru/2025/10/03/ekonomist-balynin-v-2026-godu-dlia-odnogo-ipk-nuzhna-zarplata-v-25-tysiach-rublej.html",
-      "https://rg.ru/2025/10/03/rossiianam-nazvali-glavnye-sposoby-uvelicheniia-pensii.html",
       "https://rg.ru/2025/10/03/chastnye-investory-vlozhili-v-cennye-bumagi-na-mosbirzhe-rekordnye-317-mlrd-rublej.html",
       "https://rg.ru/2025/10/03/minfin-predlozhil-vvesti-nds-na-importnye-tovary-s-marketplejsov.html",
       "https://rg.ru/2025/10/03/reg-pfo/v-aeroportu-ufy-sniali-vremennye-ogranicheniia.html",
       "https://rg.ru/2025/10/03/rossijskie-data-centry-narashchivaiut-moshchnosti-v-regionah.html",
       "https://rg.ru/2025/10/03/kak-vybrat-idealnye-krossovki-muzhskie-zhenskie-dlia-bega-i-na-kazhdyj-den.html",
-      "https://rg.ru/2025/10/03/reg-pfo/v-aeroporte-ufy-ogranichili-polety.html",
-      "https://rg.ru/2025/10/03/v-moskve-proshel-iubilejnyj-forum-regionov-rf-razvitie-turistskoj-infrastruktury.html",
-      "https://rg.ru/2025/10/03/forum-innovacionnyh-finansovyh-tehnologij-finopolis-projdet-8-10-oktiabria.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -8384,7 +8395,9 @@
     "a95b2c5d984fd7419ddf0eb3537b68e392a40f764e78e5ae172deac58c0b1633": "2025-10-03T21:23:00+03:00",
     "47723121a25b2f37bc576c471644ae30240b6ad25b2b25b9d8bcc3a4b84736d9": "2025-10-03T21:23:00+03:00",
     "61116e5dcf362c5bb2fb3bcb52c0788019f0701bd84cd92be8e5c9e472651468": "2025-10-04T00:13:00+03:00",
-    "4777ec169e43b15e42d42dcd10f07dfad484fe1500fb13cdae2f85db658f64d0": "2025-10-04T04:08:00+03:00"
+    "4777ec169e43b15e42d42dcd10f07dfad484fe1500fb13cdae2f85db658f64d0": "2025-10-04T04:08:00+03:00",
+    "84c5ddf2b0c10fc637a9af7b5e22429fa403076e1e3bcd06bc3db1cb0d85f77b": "2025-10-04T06:23:00+03:00",
+    "706b7bee79584af03334a2e27ff01de59f46015d1ffb34c4269f77ab881579a6": "2025-10-04T06:23:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -8414,8 +8427,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc00df94510>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759539966.9196167
       },
       "warmup_done": false,
@@ -8425,31 +8438,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "jJRVhbKaYJHul3lT",
+          "value": "AwhzFjYleHLWlBck",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759541224
+          "expires": 1759549386
         },
         {
           "name": "__ddg10_",
-          "value": "1759540024",
+          "value": "1759548186",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759541224
+          "expires": 1759549386
         },
         {
           "name": "__ddg9_",
-          "value": "52.161.74.193",
+          "value": "68.220.60.146",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759541224
+          "expires": 1759549386
+        },
+        {
+          "name": "__ddg1_",
+          "value": "fHhOPDnDvlQJ6XQsk1Uk",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1791084186
         },
         {
           "name": "PHPSESSID",
-          "value": "0bd44931e6d6b1d841c2dc646edb1de2",
+          "value": "2cce6bea811608cafdd538d62444a4a4",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -8475,11 +8496,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "gn0F9ItnZYCdIsa0YVGBgz3Yh8qAvtnz",
+          "value": "E4cWxg3rSBc754gC2YgxSXrWyk5ac2Mr",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759536828
+          "expires": 1759558989
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -8487,12 +8508,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790630028
+          "expires": 1790652189
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc00dea5d10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759540057.5580184
       },
       "warmup_done": false,
@@ -10086,7 +10107,9 @@
     "https://rg.ru/2025/10/03/reg-hersonskaya/hersonskaia-oblast-spravliaetsia-s-toplivnym-krizisom-pri-podderzhke-kryma.html": "https://rg.ru/2025/10/03/reg-hersonskaya/hersonskaia-oblast-spravliaetsia-s-toplivnym-krizisom-pri-podderzhke-kryma.html",
     "https://rg.ru/2025/10/03/rospatent-zaregistriroval-tovarnye-znaki-rolex.html": "https://rg.ru/2025/10/03/rospatent-zaregistriroval-tovarnye-znaki-rolex.html",
     "https://rg.ru/2025/10/03/louis-vuitton-napravil-v-rospatent-zaiavki-na-registraciiu-tovarnyh-znakov.html": "https://rg.ru/2025/10/03/louis-vuitton-napravil-v-rospatent-zaiavki-na-registraciiu-tovarnyh-znakov.html",
-    "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html": "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html"
+    "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html": "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html",
+    "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html": "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html",
+    "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html": "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -11657,7 +11680,10 @@
     "5c751cddcee5446d26b052bf3d92741aa9baa422": "https://rg.ru/2025/10/03/reg-hersonskaya/hersonskaia-oblast-spravliaetsia-s-toplivnym-krizisom-pri-podderzhke-kryma.html",
     "c6e503f5d2cae7c93416f77df47f6e193c58deb5": "https://rg.ru/2025/10/03/rospatent-zaregistriroval-tovarnye-znaki-rolex.html",
     "fe1a4286beb0e1c7223c698637693fbb802f26bc": "https://rg.ru/2025/10/03/louis-vuitton-napravil-v-rospatent-zaiavki-na-registraciiu-tovarnyh-znakov.html",
-    "8903f6d80b8c9993504ca3e863bec3f6bc8d855e": "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html"
+    "8903f6d80b8c9993504ca3e863bec3f6bc8d855e": "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html",
+    "a3e25359c44bbe2320f74eaba24f6d89d349855f": "https://rg.ru/2025/09/30/podarochnye-metry.html",
+    "a2cf310c8a16bc8e522d69931e9577f326651b6d": "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html",
+    "4bd190f93a6ab35231f232df252482202229de31": "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -13446,6 +13472,8 @@
     "https://rg.ru/2025/10/03/reg-hersonskaya/hersonskaia-oblast-spravliaetsia-s-toplivnym-krizisom-pri-podderzhke-kryma.html": "a95b2c5d984fd7419ddf0eb3537b68e392a40f764e78e5ae172deac58c0b1633",
     "https://rg.ru/2025/10/03/rospatent-zaregistriroval-tovarnye-znaki-rolex.html": "47723121a25b2f37bc576c471644ae30240b6ad25b2b25b9d8bcc3a4b84736d9",
     "https://rg.ru/2025/10/03/louis-vuitton-napravil-v-rospatent-zaiavki-na-registraciiu-tovarnyh-znakov.html": "61116e5dcf362c5bb2fb3bcb52c0788019f0701bd84cd92be8e5c9e472651468",
-    "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html": "4777ec169e43b15e42d42dcd10f07dfad484fe1500fb13cdae2f85db658f64d0"
+    "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html": "4777ec169e43b15e42d42dcd10f07dfad484fe1500fb13cdae2f85db658f64d0",
+    "https://rg.ru/2025/10/04/v-rf-s-1-noiabria-izmeniatsia-pravila-vzyskaniia-dolgov-s-grazhdan.html": "84c5ddf2b0c10fc637a9af7b5e22429fa403076e1e3bcd06bc3db1cb0d85f77b",
+    "https://rg.ru/2025/10/04/v-2027-godu-zaplanirovana-dvuhetapnaia-indeksaciia-pensij-v-rf.html": "706b7bee79584af03334a2e27ff01de59f46015d1ffb34c4269f77ab881579a6"
   }
 }
