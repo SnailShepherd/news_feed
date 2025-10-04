@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 04 Oct 2025 15:16:25 GMT"
+      "Last-Modified": "Sat, 04 Oct 2025 18:21:59 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"22616-jizRsfUoSVsYs2GefAkH4ByfNEw\""
+      "ETag": "W/\"22616-YjbGC45VwXDj0fH8KG/vYxLIzHE\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"pp6i6glebf3nca\""
+      "ETag": "\"zadnjc5tjr3qll\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -5578,6 +5578,18 @@
     },
     "https://rg.ru/2025/10/04/v-otele-turcii-oprovergli-soobshcheniia-o-zarazhenii-gostej-virusom-koksaki.html": {
       "ETag": "\"qr0fu6012s1l0c\""
+    },
+    "https://rg.ru/2025/10/04/rospotrebnadzor-kontroliruet-situaciiu-s-virusom-koksaki-u-rossiian-v-turcii.html": {
+      "ETag": "\"14x62k01ec01nla\""
+    },
+    "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html": {
+      "ETag": "\"66o0d7awcs1llt\""
+    },
+    "https://rg.ru/2025/10/04/v-discord-soobshchili-ob-utechke-dannyh-i-dokumentov-polzovatelej.html": {
+      "ETag": "\"12s6i7e4m1b1wmi\""
+    },
+    "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html": {
+      "ETag": "\"d1s911nm1a1rdn\""
     }
   },
   "stats": {
@@ -6411,10 +6423,15 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3b78c56e90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3b789c4050>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3b789c47d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3b789c5090>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3b789c5a90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-04T15:16:58.433041+00:00",
-    "items": 1826,
+    "last_run": "2025-10-04T18:21:45.069445+00:00",
+    "items": 1827,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -6426,56 +6443,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 829.5423810000102,
-        "connect_ms": 0.0,
-        "response_ms": 746.4702479999232,
+        "dns_ms": 965.2396429999612,
+        "connect_ms": 263.7930200000369,
+        "response_ms": 1229.0326629999981,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3b789ad370>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 450.76753699999017,
+        "connect_ms": 918.6259400000267,
+        "response_ms": 1369.393477000017,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4271.534482999982,
-        "connect_ms": 895.8754180000597,
-        "response_ms": 5167.409901000042,
+        "dns_ms": 9614.698313000019,
+        "connect_ms": 0.0,
+        "response_ms": 6398.125449000019,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3b789c5a90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 427.6976760000366,
+        "connect_ms": 179.47446399995215,
+        "response_ms": 607.1721399999888,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "fb529f2421c9970ff6d8320137a01a687b7aa152d5814cbcea19084b2958a79d",
+    "https://ardexpert.ru/article": "36f2cde2f947c6073430ad75d3ec9e842f96d94036c4ecad91c2196fa047b89c",
     "https://www.gostinfo.ru/News/List": "d8dbd943fedd36eee4dcf43ac1873035f2119f3e2cb7d1e1e04169a0796bf0c4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2669191d7e33d8f6c706f4e8370b4d17801d04b92cfa12c671eee17ec3fe8ea7",
-    "https://eec.eaeunion.org/news/": "cbb1a3a0401761548a8ff7051dbea724f876bdf59f8fe9500ed865e6d4ab13d2",
+    "https://eec.eaeunion.org/news/": "40bbf00400b59e846bf9ce4b020ee345fb54759d506593c521322d4de00e693c",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "4f21dc9a3fd846e6bebe4f7b17a8420a94cc856a3c79d2626525528f55cf01f5",
-    "https://www.metalinfo.ru/ru/news": "4f221ee35702f66cd8b3e0058f84a671ed44875c64b0c190231b6fd0c76338d8",
-    "https://www.pnp.ru/economics/": "f15e16a77035a771c6fb0e99089143d1475b96b6bd622f65ffe81f1dea6b0a30",
-    "https://erzrf.ru/news/": "6d244a230cfd644354b5bdbe275b333cc3289c0d8926efa9e589d7f41713b8b6",
-    "https://ria-stk.ru/news/vse-novosti.php": "1db01e8bbf17eeb3940da7e1b334f27260b8f72a02b2fb23ac939babf8020246",
-    "http://government.ru/news/": "7e105786cd01e236dbe0c98df51fec4f161583ff6c57c642d44f1ef8ce1465e0",
-    "https://stroygaz.ru/news/": "d4affe6916fb942b6da6f3afa0b111d6bed0c1cff8f00223665d29c54f495ac6",
-    "https://realty.ria.ru/lenta/": "2eef9cbaebdde01b667c5ca3bc2639baf4a8a2d99a7c080bde1268fe622ae6d4",
-    "https://rg.ru/tema/ekonomika": "7eb297796b78e7c47ae8cbecb6cb7ad4c9ddf1d1bb9750a8b37565e70798e4d6",
-    "http://ancb.ru/publication": "0fdcadb5fb014ee3136d4f2bd3d57f0b6b4f0bfe89d74f9493289581a831db94",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "7f1fb9cb84e02f98119957bdd32aad639cb0466f647c48888ec6df6be93d3063",
+    "https://www.metalinfo.ru/ru/news": "a1b0a6706f0b5c7c3776c4c966b1b1b0edf175414c7f546c9f0fa433ca759950",
+    "https://www.pnp.ru/economics/": "c4909c67db7032dcda89059ec07ff318f539e047ad43f3e34b419a559ddac19f",
+    "https://erzrf.ru/news/": "a6e0c2aee6fcebcf1f571fa07415bd8b664585d6a55dcc79e7ac1b9dc854bb41",
+    "https://ria-stk.ru/news/vse-novosti.php": "f6f364e3b88f3350d10e54f4fff1b441e821b4b5a965aa9a204e8d00d97d9b1f",
+    "http://government.ru/news/": "a6f421cb627ed1629e9cbc872ca82eef626c3802bfee52cac32b414e63298d56",
+    "https://stroygaz.ru/news/": "f33a80643a386a2576e65c2b1ca605fe9c1235693747ed5409138d16987ece46",
+    "https://realty.ria.ru/lenta/": "ab8086efe7fe71f6081ff3c5ef8b7e4243eb335cf983b4807508b6a9a6b03a25",
+    "https://rg.ru/tema/ekonomika": "c0674865787c598419d12bf194734a5dbd113bf2480020fa5ec5d56d7ff41462",
+    "http://ancb.ru/publication": "1d6f54ea6925dc93604a300a642a4d60ff78713086a656e325fff6d1b2e2c42c",
     "https://notim.ru": "366317cc30aa9d7bcc76321def9f52efaa698b915a5d09eead1c14b4582d2b0b",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -6872,6 +6889,10 @@
       "https://realty.ria.ru/20251003/razdel-2045672250.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/04/rospotrebnadzor-kontroliruet-situaciiu-s-virusom-koksaki-u-rossiian-v-turcii.html",
+      "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html",
+      "https://rg.ru/2025/10/04/v-discord-soobshchili-ob-utechke-dannyh-i-dokumentov-polzovatelej.html",
+      "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html",
       "https://rg.ru/2025/10/04/senator-epishin-chast-zarplaty-mogut-uderzhat-v-schet-pogasheniia-dolga-po-nalogam.html",
       "https://rg.ru/2025/10/04/v-otele-turcii-oprovergli-soobshcheniia-o-zarazhenii-gostej-virusom-koksaki.html",
       "https://rg.ru/2025/10/04/reg-cfo/na-moskovskih-centralnyh-diametrah-nachnet-hodit-iubilejnaia-100-ia-ivolga.html",
@@ -6899,11 +6920,7 @@
       "https://rg.ru/2025/10/03/minenergo-zapret-eksporta-dizelia-dlia-ego-proizvoditelej-poka-ne-rassmatrivaetsia.html",
       "https://rg.ru/2025/10/03/reg-hersonskaya/hersonskaia-oblast-spravliaetsia-s-toplivnym-krizisom-pri-podderzhke-kryma.html",
       "https://rg.ru/2025/10/03/rospatent-zaregistriroval-tovarnye-znaki-rolex.html",
-      "https://rg.ru/2025/10/03/dmitriiu-grigorenko-pokazali-rabotu-biometricheskoj-sistemy-v-aeporortu-pulkovo.html",
       "https://rg.ru/2025/10/03/reg-szfo/korotkoj-tropoj.html",
-      "https://rg.ru/2025/10/03/reg-cfo/v-parke-sokolniki-otkroetsia-shest-detskih-tematicheskih-igrovyh-zon.html",
-      "https://rg.ru/2025/10/03/fpk-bilety-na-poezda-v-belarus-mozhno-pokupat-za-90-sutok.html",
-      "https://rg.ru/2025/10/03/minpromtorg-luchshe-vsego-investirovat-v-himiiu-i-zdravoohranenie.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -8514,7 +8531,11 @@
     "70c629e44907a248f9848dcceb90e1624ead0c16dcb6173556cee09889b08c29": "2025-10-04T15:29:00+03:00",
     "6e83e411c02c6e11dbe96fabeeb7a96887cfcd8d20739d364b7d34ec282021c2": "2025-10-04T15:29:00+03:00",
     "6beb393bb2c18b6214300d685028e4bf13e61210c5227712305e09bfc2749345": "2025-10-04T18:16:00+03:00",
-    "14d3ed455296bac1e34e11fcf7f2848409f2d7d9629ab9d6d774801e19b591bb": "2025-10-04T18:16:00+03:00"
+    "14d3ed455296bac1e34e11fcf7f2848409f2d7d9629ab9d6d774801e19b591bb": "2025-10-04T18:16:00+03:00",
+    "89cf01fa9cc4b36f29c7ba2542dcdaa4e9abb340ae4d672705039ca17cb07456": "2025-10-04T21:21:00+03:00",
+    "ccc6976c788507f8fcb8d1162673eb3ff2fd254fb8c859ee0c499b4a441f408b": "2025-10-04T21:21:00+03:00",
+    "3b1ab8680e732e27768f56350a26186ec17fd7d2a06d355895f17ebf1d74f76f": "2025-10-04T21:21:00+03:00",
+    "08fd1ad3fd363e04dd7e4be8a1717468a7ae4af80de8efba970836a53d8d0561": "2025-10-04T21:21:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -8544,8 +8565,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3b78ab8770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759590886.1618147
       },
       "warmup_done": false,
@@ -8555,31 +8576,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "DqDp4FYPbfAoNsq2",
+          "value": "6nRFifANVheDyA7B",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759592153
+          "expires": 1759603286
         },
         {
           "name": "__ddg10_",
-          "value": "1759590953",
+          "value": "1759602086",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759592153
+          "expires": 1759603286
         },
         {
           "name": "__ddg9_",
-          "value": "128.24.161.85",
+          "value": "64.236.153.86",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759592153
+          "expires": 1759603286
+        },
+        {
+          "name": "__ddg1_",
+          "value": "C4om1W2uih4IsqQZbexj",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1791138086
         },
         {
           "name": "PHPSESSID",
-          "value": "10ac494de84c55977c20988310562f94",
+          "value": "c8b7086fe9b20d077323a6ab17b3a383",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -8605,11 +8634,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "G1rC7FcXMhk2Z66nQ7YYIhqV3aHbHizi",
+          "value": "cAQy6T1DJRjBpe5AQjw8SpugvATGWNm9",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759591754
+          "expires": 1759612889
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -8617,12 +8646,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790684954
+          "expires": 1790706089
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3b789c5090>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759590986.9481347
       },
       "warmup_done": false,
@@ -10237,7 +10266,11 @@
     "https://rg.ru/2025/10/04/reg-sibfo/v-kuzbasse-rasshirili-vozmozhnosti-obsluzhivaniia-tehniki-iz-belarusi.html": "https://rg.ru/2025/10/04/reg-sibfo/v-kuzbasse-rasshirili-vozmozhnosti-obsluzhivaniia-tehniki-iz-belarusi.html",
     "https://rg.ru/2025/10/04/prodazhi-lada-iskra-v-rossii-v-sentiabre-vyrosli-v-sem-raz.html": "https://rg.ru/2025/10/04/prodazhi-lada-iskra-v-rossii-v-sentiabre-vyrosli-v-sem-raz.html",
     "https://rg.ru/2025/10/04/senator-epishin-chast-zarplaty-mogut-uderzhat-v-schet-pogasheniia-dolga-po-nalogam.html": "https://rg.ru/2025/10/04/senator-epishin-chast-zarplaty-mogut-uderzhat-v-schet-pogasheniia-dolga-po-nalogam.html",
-    "https://rg.ru/2025/10/04/v-otele-turcii-oprovergli-soobshcheniia-o-zarazhenii-gostej-virusom-koksaki.html": "https://rg.ru/2025/10/04/v-otele-turcii-oprovergli-soobshcheniia-o-zarazhenii-gostej-virusom-koksaki.html"
+    "https://rg.ru/2025/10/04/v-otele-turcii-oprovergli-soobshcheniia-o-zarazhenii-gostej-virusom-koksaki.html": "https://rg.ru/2025/10/04/v-otele-turcii-oprovergli-soobshcheniia-o-zarazhenii-gostej-virusom-koksaki.html",
+    "https://rg.ru/2025/10/04/rospotrebnadzor-kontroliruet-situaciiu-s-virusom-koksaki-u-rossiian-v-turcii.html": "https://rg.ru/2025/10/04/rospotrebnadzor-kontroliruet-situaciiu-s-virusom-koksaki-u-rossiian-v-turcii.html",
+    "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html": "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html",
+    "https://rg.ru/2025/10/04/v-discord-soobshchili-ob-utechke-dannyh-i-dokumentov-polzovatelej.html": "https://rg.ru/2025/10/04/v-discord-soobshchili-ob-utechke-dannyh-i-dokumentov-polzovatelej.html",
+    "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html": "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -11830,7 +11863,11 @@
     "eb4122076b71fa0c7dc47d9640db29227d68713a": "https://rg.ru/2025/10/04/reg-sibfo/v-kuzbasse-rasshirili-vozmozhnosti-obsluzhivaniia-tehniki-iz-belarusi.html",
     "13bc36c1a50f42ac8983209d19e68aeaa4d893c6": "https://rg.ru/2025/10/04/prodazhi-lada-iskra-v-rossii-v-sentiabre-vyrosli-v-sem-raz.html",
     "aec6c079f1d00baf4e6f2931c9bf2fb2492af3ad": "https://rg.ru/2025/10/04/senator-epishin-chast-zarplaty-mogut-uderzhat-v-schet-pogasheniia-dolga-po-nalogam.html",
-    "ba0949620693ed58fbf1cafc84913aaeb9acd0dc": "https://rg.ru/2025/10/04/v-otele-turcii-oprovergli-soobshcheniia-o-zarazhenii-gostej-virusom-koksaki.html"
+    "ba0949620693ed58fbf1cafc84913aaeb9acd0dc": "https://rg.ru/2025/10/04/v-otele-turcii-oprovergli-soobshcheniia-o-zarazhenii-gostej-virusom-koksaki.html",
+    "7f1167555072a0b11dd6411f5d2e4814d448b63c": "https://rg.ru/2025/10/04/rospotrebnadzor-kontroliruet-situaciiu-s-virusom-koksaki-u-rossiian-v-turcii.html",
+    "751a2641c1aa99ae40815594cf01d1f50019e8b1": "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html",
+    "c5f3a463093db4b5b73ec7ff19ff664cf5d7be1b": "https://rg.ru/2025/10/04/v-discord-soobshchili-ob-utechke-dannyh-i-dokumentov-polzovatelej.html",
+    "26083965fe08d6e470469d4e6dd22a39b84db6bc": "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -13646,6 +13683,10 @@
     "https://rg.ru/2025/10/04/reg-sibfo/v-kuzbasse-rasshirili-vozmozhnosti-obsluzhivaniia-tehniki-iz-belarusi.html": "70c629e44907a248f9848dcceb90e1624ead0c16dcb6173556cee09889b08c29",
     "https://rg.ru/2025/10/04/prodazhi-lada-iskra-v-rossii-v-sentiabre-vyrosli-v-sem-raz.html": "6e83e411c02c6e11dbe96fabeeb7a96887cfcd8d20739d364b7d34ec282021c2",
     "https://rg.ru/2025/10/04/senator-epishin-chast-zarplaty-mogut-uderzhat-v-schet-pogasheniia-dolga-po-nalogam.html": "6beb393bb2c18b6214300d685028e4bf13e61210c5227712305e09bfc2749345",
-    "https://rg.ru/2025/10/04/v-otele-turcii-oprovergli-soobshcheniia-o-zarazhenii-gostej-virusom-koksaki.html": "14d3ed455296bac1e34e11fcf7f2848409f2d7d9629ab9d6d774801e19b591bb"
+    "https://rg.ru/2025/10/04/v-otele-turcii-oprovergli-soobshcheniia-o-zarazhenii-gostej-virusom-koksaki.html": "14d3ed455296bac1e34e11fcf7f2848409f2d7d9629ab9d6d774801e19b591bb",
+    "https://rg.ru/2025/10/04/rospotrebnadzor-kontroliruet-situaciiu-s-virusom-koksaki-u-rossiian-v-turcii.html": "89cf01fa9cc4b36f29c7ba2542dcdaa4e9abb340ae4d672705039ca17cb07456",
+    "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html": "ccc6976c788507f8fcb8d1162673eb3ff2fd254fb8c859ee0c499b4a441f408b",
+    "https://rg.ru/2025/10/04/v-discord-soobshchili-ob-utechke-dannyh-i-dokumentov-polzovatelej.html": "3b1ab8680e732e27768f56350a26186ec17fd7d2a06d355895f17ebf1d74f76f",
+    "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html": "08fd1ad3fd363e04dd7e4be8a1717468a7ae4af80de8efba970836a53d8d0561"
   }
 }
