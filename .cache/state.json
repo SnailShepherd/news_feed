@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 04 Oct 2025 21:14:43 GMT"
+      "Last-Modified": "Sun, 05 Oct 2025 01:17:19 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"22616-wvTDYm5hpL0uIlmpHCkd8yASpsk\""
+      "ETag": "W/\"21fdb-dZ8yfsouzLhL3u7g2owqcFZHPOo\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"3i9mhn9tq23s0g\""
+      "ETag": "\"eik4u7hz453r0z\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -5593,6 +5593,12 @@
     },
     "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html": {
       "ETag": "\"a85sb9b7in2owv\""
+    },
+    "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html": {
+      "ETag": "\"shesjfos8f1mmv\""
+    },
+    "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html": {
+      "ETag": "\"1413rk43psb1p7o\""
     }
   },
   "stats": {
@@ -6436,10 +6442,26 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7078465940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7078194410>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7078194550>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f70782882b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7078288770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7078179250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "ЕЭК ЕАЭС",
+        "url": "https://eec.eaeunion.org/news/",
+        "error": "HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Max retries exceeded with url: /news/ (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Read timed out. (read timeout=10.0)\"))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-04T21:14:24.707485+00:00",
-    "items": 1828,
+    "last_run": "2025-10-05T01:16:58.352147+00:00",
+    "items": 1829,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -6451,33 +6473,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 547.0307759999855,
-        "connect_ms": 875.337246000015,
-        "response_ms": 1422.3680220000006,
+        "dns_ms": 549.9098049999986,
+        "connect_ms": 598.0317699999773,
+        "response_ms": 1147.941574999976,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 1726.5105519999793,
-        "connect_ms": 184.43914800002403,
-        "response_ms": 1910.9497000000033,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7078179250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 1040.637659999959,
-        "connect_ms": 168.63589700000148,
-        "response_ms": 1209.2735569999604,
+        "dns_ms": 4543.6261330000325,
+        "connect_ms": 0.0,
+        "response_ms": 771.5431280000189,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 418.3812009999883,
-        "connect_ms": 509.1202919999773,
-        "response_ms": 927.5014929999656,
+        "dns_ms": 141.104208999991,
+        "connect_ms": 401.82634100000314,
+        "response_ms": 542.9305499999941,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -6486,21 +6508,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "43aae6ee8f6f454814791a8f8412f0920472bd8df551c0bb07b2a16611c24131",
+    "https://ardexpert.ru/article": "23cd9db8b596db1b0d987b25d8211d75c20cf65c1d5872bcdaadb9ed2519d6b8",
     "https://www.gostinfo.ru/News/List": "d8dbd943fedd36eee4dcf43ac1873035f2119f3e2cb7d1e1e04169a0796bf0c4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2669191d7e33d8f6c706f4e8370b4d17801d04b92cfa12c671eee17ec3fe8ea7",
     "https://eec.eaeunion.org/news/": "fc13316e8f0c73f0137378879e311c4018dea0ec6dfb4970f766a46c66698927",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "2257e7e4f328808450ee4942e690c615e6a12741f63196383a77a58b19b45f5b",
-    "https://www.metalinfo.ru/ru/news": "d55c43d305d76e0207d60826c372f9c10af38ec87206f152d68a1ec6d1872353",
-    "https://www.pnp.ru/economics/": "88f72efd419d2b00720a1bce01cc4a8e434a7887642f2e5ff2e6d9b353adb43c",
-    "https://erzrf.ru/news/": "1723fff434ec444c81249864c94398bc388496985c4d980c7e7dcb4b3605b497",
-    "https://ria-stk.ru/news/vse-novosti.php": "b31cc52f7fd26745adebad30a1c0128b5c74a0a4b4ebf98fb864b4e29f09cf14",
-    "http://government.ru/news/": "291d823bd4948fc65e3df3dd7d0377b3af86b54c238c1a4c7bf76e3935778e2c",
-    "https://stroygaz.ru/news/": "de5e80f9206c7eb6f1156f82683b6fcb3e4650e8e5cc5ece608c017cfdbff322",
-    "https://realty.ria.ru/lenta/": "a685424a3c9f690451993f82a30747e17d14063664d59ebc3a4b81233d3e5e27",
-    "https://rg.ru/tema/ekonomika": "633996b6664ee9eb9c053b6344661b0d88698cd062c81dfbfcb2ee39cc48604f",
-    "http://ancb.ru/publication": "1d6f54ea6925dc93604a300a642a4d60ff78713086a656e325fff6d1b2e2c42c",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "22a381022a617a1eccfd29e8e570a61fb16ad65733d7232e3adf21172c888cee",
+    "https://www.metalinfo.ru/ru/news": "0a3aeab1d34b07036cb3ec60fb39cebf95bb29e3a861c107f13f77b88262fd96",
+    "https://www.pnp.ru/economics/": "906c75e5da1cbbdc2673fee992dba932c24a17f4907836adfda1d651f5a9c28a",
+    "https://erzrf.ru/news/": "674e8d87274e92b3e4bee5602dc067d9e363825e37055ffedf66919d770d7922",
+    "https://ria-stk.ru/news/vse-novosti.php": "8aab286fb64bea2a181336d59963950aa4749574b0848066e8bb45c376044b2f",
+    "http://government.ru/news/": "edf272476a6e82be9764cd6771c45cf4e77233a906a276513e229445eee26dfd",
+    "https://stroygaz.ru/news/": "dddee497e6ed227a335868511fadbfba4f0fa3b3bbf27c866fc008f30765fec5",
+    "https://realty.ria.ru/lenta/": "98f98536ac267030d63c8c4c942c44c30819d2cc1808d273f7fd65cb06efe789",
+    "https://rg.ru/tema/ekonomika": "46092d808552f305044b3c20b9887e140ad6b0f5ad459f4241b745ed943ba6f6",
+    "http://ancb.ru/publication": "0fdcadb5fb014ee3136d4f2bd3d57f0b6b4f0bfe89d74f9493289581a831db94",
     "https://notim.ru": "366317cc30aa9d7bcc76321def9f52efaa698b915a5d09eead1c14b4582d2b0b",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -6897,6 +6919,8 @@
       "https://realty.ria.ru/20251003/razdel-2045672250.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html",
+      "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html",
       "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html",
       "https://rg.ru/2025/10/04/rospotrebnadzor-kontroliruet-situaciiu-s-virusom-koksaki-u-rossiian-v-turcii.html",
       "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html",
@@ -6922,13 +6946,11 @@
       "https://rg.ru/2025/10/03/bolee-10-zaemshchikov-gotovy-obrashchatsia-k-nelegalnym-kreditoram.html",
       "https://rg.ru/2025/10/03/kak-postepennoe-priblizhenie-novogodnego-sezona-nachinaet-davit-na-kurs-rublia.html",
       "https://rg.ru/2025/10/03/zabotkin-prizyvy-snizhat-stavku-prepiatstvuiut-umensheniiu-infliacionnyh-ozhidanij.html",
-      "https://rg.ru/2025/10/03/fas-ustanovila-predelnye-tarify-na-svet-na-2026-god.html",
       "https://rg.ru/2025/10/03/rospotrebnadzor-dostup-k-kachestvennoj-produkcii-v-rf-za-piat-let-vyros-do-61.html",
       "https://rg.ru/2025/10/03/indeks-mosbirzhi-upal-nizhe-2600-punktov-vpervye-s-9-aprelia.html",
       "https://rg.ru/2025/10/03/mishustin-vydelil-bolee-4-mlrd-rublej-predpriiatiiam-prigranichnyh-regionov.html",
       "https://rg.ru/2025/10/03/minenergo-zapret-eksporta-dizelia-dlia-ego-proizvoditelej-poka-ne-rassmatrivaetsia.html",
       "https://rg.ru/2025/10/03/reg-hersonskaya/hersonskaia-oblast-spravliaetsia-s-toplivnym-krizisom-pri-podderzhke-kryma.html",
-      "https://rg.ru/2025/10/03/rospatent-zaregistriroval-tovarnye-znaki-rolex.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -8544,7 +8566,9 @@
     "ccc6976c788507f8fcb8d1162673eb3ff2fd254fb8c859ee0c499b4a441f408b": "2025-10-04T21:21:00+03:00",
     "3b1ab8680e732e27768f56350a26186ec17fd7d2a06d355895f17ebf1d74f76f": "2025-10-04T21:21:00+03:00",
     "08fd1ad3fd363e04dd7e4be8a1717468a7ae4af80de8efba970836a53d8d0561": "2025-10-04T21:21:00+03:00",
-    "d381a69037749f88b2fde82aae7a77dd1589260eb2be61549bccab577c7dc866": "2025-10-05T00:14:00+03:00"
+    "d381a69037749f88b2fde82aae7a77dd1589260eb2be61549bccab577c7dc866": "2025-10-05T00:14:00+03:00",
+    "5076b375431597abec3bb012f3a9c30007db6e88a4a1597f8fb4fce58b77e306": "2025-10-05T04:16:00+03:00",
+    "46ae30f01a139fd830ca67cd51fb2f979866a9cd24a3b1a8ea5987023ae5495d": "2025-10-05T04:16:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -8574,9 +8598,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1759590886.1618147
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7078288770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1759626911.9293437
       },
       "warmup_done": false,
       "last_success_path": null
@@ -8585,31 +8609,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "zp194pV3oc2iX0SF",
+          "value": "pHAkRngN7jjvKZIE",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759613651
+          "expires": 1759628207
         },
         {
           "name": "__ddg10_",
-          "value": "1759612451",
+          "value": "1759627007",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759613651
+          "expires": 1759628207
         },
         {
           "name": "__ddg9_",
-          "value": "68.220.61.179",
+          "value": "172.172.86.228",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759613651
+          "expires": 1759628207
+        },
+        {
+          "name": "__ddg1_",
+          "value": "PU6oXfFhuGhmKfGfGFEn",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1791163007
         },
         {
           "name": "PHPSESSID",
-          "value": "c04992b879a1b14ee240f6ebb2c16e7c",
+          "value": "bf6c4a16d11b7c839e3d8b73b8156eff",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -8635,11 +8667,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "uFUknC3gfnNBGkmOhQRRDC6G0eix5w1D",
+          "value": "6PksyXPGcNd6kx2tuIVOCP8vklRVX3kB",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759623254
+          "expires": 1759637809
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -8647,7 +8679,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790716454
+          "expires": 1790731009
         }
       ],
       "failures": {
@@ -10272,7 +10304,9 @@
     "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html": "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html",
     "https://rg.ru/2025/10/04/v-discord-soobshchili-ob-utechke-dannyh-i-dokumentov-polzovatelej.html": "https://rg.ru/2025/10/04/v-discord-soobshchili-ob-utechke-dannyh-i-dokumentov-polzovatelej.html",
     "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html": "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html",
-    "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html": "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html"
+    "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html": "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html",
+    "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html": "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html",
+    "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html": "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -11870,7 +11904,9 @@
     "751a2641c1aa99ae40815594cf01d1f50019e8b1": "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html",
     "c5f3a463093db4b5b73ec7ff19ff664cf5d7be1b": "https://rg.ru/2025/10/04/v-discord-soobshchili-ob-utechke-dannyh-i-dokumentov-polzovatelej.html",
     "26083965fe08d6e470469d4e6dd22a39b84db6bc": "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html",
-    "5480c3fe2485ff191380a776d62310012d28219f": "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html"
+    "5480c3fe2485ff191380a776d62310012d28219f": "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html",
+    "e0a7623419aed80cd3f0eab9d894cc9a9472a297": "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html",
+    "05b3c259a8b6b838307e92f7ae347b933abdbda1": "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -13691,6 +13727,8 @@
     "https://rg.ru/2025/10/04/reg-szfo/v-peterburge-poiaviatsia-priamye-aviarejsy-do-venesuely.html": "ccc6976c788507f8fcb8d1162673eb3ff2fd254fb8c859ee0c499b4a441f408b",
     "https://rg.ru/2025/10/04/v-discord-soobshchili-ob-utechke-dannyh-i-dokumentov-polzovatelej.html": "3b1ab8680e732e27768f56350a26186ec17fd7d2a06d355895f17ebf1d74f76f",
     "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html": "08fd1ad3fd363e04dd7e4be8a1717468a7ae4af80de8efba970836a53d8d0561",
-    "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html": "d381a69037749f88b2fde82aae7a77dd1589260eb2be61549bccab577c7dc866"
+    "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html": "d381a69037749f88b2fde82aae7a77dd1589260eb2be61549bccab577c7dc866",
+    "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html": "5076b375431597abec3bb012f3a9c30007db6e88a4a1597f8fb4fce58b77e306",
+    "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html": "46ae30f01a139fd830ca67cd51fb2f979866a9cd24a3b1a8ea5987023ae5495d"
   }
 }
