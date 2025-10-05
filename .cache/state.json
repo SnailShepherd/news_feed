@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 05 Oct 2025 01:17:19 GMT"
+      "Last-Modified": "Sun, 05 Oct 2025 03:36:04 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"21fdb-dZ8yfsouzLhL3u7g2owqcFZHPOo\""
+      "ETag": "W/\"22615-29E0iCoN+cwzGvf1eVoBW2mSPHE\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"eik4u7hz453r0z\""
+      "ETag": "\"i9cbu41qhk3u0t\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -4165,7 +4165,7 @@
       "ETag": "\"12psw1v3ebp26eo\""
     },
     "https://rg.ru/2025/10/01/v-ture-tolko-devushki.html": {
-      "ETag": "\"1qw2u1olce1xgj\""
+      "ETag": "\"112565st2m81xgj\""
     },
     "https://rg.ru/2025/10/01/rossiianam-napomnili-ob-istechenii-sroka-uplaty-imushchestvennyh-nalogov-za-2024-god.html": {
       "ETag": "\"pnyeua87ex1n38\""
@@ -5599,6 +5599,9 @@
     },
     "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html": {
       "ETag": "\"1413rk43psb1p7o\""
+    },
+    "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html": {
+      "ETag": "\"v99t593qtf1n4j\""
     }
   },
   "stats": {
@@ -6458,10 +6461,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "ЕЭК ЕАЭС",
+        "url": "https://eec.eaeunion.org/news/",
+        "error": "HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Max retries exceeded with url: /news/ (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Read timed out. (read timeout=10.0)\"))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-05T01:16:58.352147+00:00",
-    "items": 1829,
+    "last_run": "2025-10-05T03:35:42.867483+00:00",
+    "items": 1830,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -6473,33 +6486,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 549.9098049999986,
-        "connect_ms": 598.0317699999773,
-        "response_ms": 1147.941574999976,
+        "dns_ms": 543.6372620000043,
+        "connect_ms": 293.3427810000069,
+        "response_ms": 836.9800430000112,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7078179250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 150.9484000000043,
+        "connect_ms": 718.4099659999958,
+        "response_ms": 869.3583660000002,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4543.6261330000325,
+        "dns_ms": 992.2048569999902,
         "connect_ms": 0.0,
-        "response_ms": 771.5431280000189,
+        "response_ms": 877.5568920000296,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 141.104208999991,
-        "connect_ms": 401.82634100000314,
-        "response_ms": 542.9305499999941,
+        "dns_ms": 419.03678199997785,
+        "connect_ms": 150.46854500002382,
+        "response_ms": 569.5053270000017,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -6508,21 +6521,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "23cd9db8b596db1b0d987b25d8211d75c20cf65c1d5872bcdaadb9ed2519d6b8",
+    "https://ardexpert.ru/article": "88c381970828422bef15db2509dbdb016415e361e990d9c05c9b4024f9713525",
     "https://www.gostinfo.ru/News/List": "d8dbd943fedd36eee4dcf43ac1873035f2119f3e2cb7d1e1e04169a0796bf0c4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2669191d7e33d8f6c706f4e8370b4d17801d04b92cfa12c671eee17ec3fe8ea7",
     "https://eec.eaeunion.org/news/": "fc13316e8f0c73f0137378879e311c4018dea0ec6dfb4970f766a46c66698927",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "22a381022a617a1eccfd29e8e570a61fb16ad65733d7232e3adf21172c888cee",
-    "https://www.metalinfo.ru/ru/news": "0a3aeab1d34b07036cb3ec60fb39cebf95bb29e3a861c107f13f77b88262fd96",
-    "https://www.pnp.ru/economics/": "906c75e5da1cbbdc2673fee992dba932c24a17f4907836adfda1d651f5a9c28a",
-    "https://erzrf.ru/news/": "674e8d87274e92b3e4bee5602dc067d9e363825e37055ffedf66919d770d7922",
-    "https://ria-stk.ru/news/vse-novosti.php": "8aab286fb64bea2a181336d59963950aa4749574b0848066e8bb45c376044b2f",
-    "http://government.ru/news/": "edf272476a6e82be9764cd6771c45cf4e77233a906a276513e229445eee26dfd",
-    "https://stroygaz.ru/news/": "dddee497e6ed227a335868511fadbfba4f0fa3b3bbf27c866fc008f30765fec5",
-    "https://realty.ria.ru/lenta/": "98f98536ac267030d63c8c4c942c44c30819d2cc1808d273f7fd65cb06efe789",
-    "https://rg.ru/tema/ekonomika": "46092d808552f305044b3c20b9887e140ad6b0f5ad459f4241b745ed943ba6f6",
-    "http://ancb.ru/publication": "0fdcadb5fb014ee3136d4f2bd3d57f0b6b4f0bfe89d74f9493289581a831db94",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "1d0c2909bfd70298849df42699a591634ac6374bdd23ad5c34f17b6dfc92d255",
+    "https://www.metalinfo.ru/ru/news": "a9dc6305a76b35ed454ec98bf74bcbe7c629a86c03d942c33b624458d3d85251",
+    "https://www.pnp.ru/economics/": "f38bef149c7c954354381dca1ab22435444b0084c49ec272fb78306c40a30b53",
+    "https://erzrf.ru/news/": "189582492994e5c0ead9509f3ffe283d63c89483cd97f8b8bfaa65b0cdfda117",
+    "https://ria-stk.ru/news/vse-novosti.php": "579c1b3b03c6871b5b78c197ff00e5f592bc1548e7c18e1c5efe5b413dfa26bb",
+    "http://government.ru/news/": "1d21d28700e4f073e8ff0957cfb4a643f328e8aefdbbc42bb70edd0e70bf6b21",
+    "https://stroygaz.ru/news/": "d87c11404d18ed990da4296ae559a0bf41ba98c6ab672cc1b42a8a0001177f75",
+    "https://realty.ria.ru/lenta/": "805075d871e6de83f931b32e57c2872377da3f1635b1e200d3121c421456ffed",
+    "https://rg.ru/tema/ekonomika": "6d7c92904f9e892e947017cc2552c9ec813101950f97fd64ffd5757d07788172",
+    "http://ancb.ru/publication": "1d6f54ea6925dc93604a300a642a4d60ff78713086a656e325fff6d1b2e2c42c",
     "https://notim.ru": "366317cc30aa9d7bcc76321def9f52efaa698b915a5d09eead1c14b4582d2b0b",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -6919,6 +6932,8 @@
       "https://realty.ria.ru/20251003/razdel-2045672250.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/01/v-ture-tolko-devushki.html",
+      "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html",
       "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html",
       "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html",
       "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html",
@@ -6949,8 +6964,6 @@
       "https://rg.ru/2025/10/03/rospotrebnadzor-dostup-k-kachestvennoj-produkcii-v-rf-za-piat-let-vyros-do-61.html",
       "https://rg.ru/2025/10/03/indeks-mosbirzhi-upal-nizhe-2600-punktov-vpervye-s-9-aprelia.html",
       "https://rg.ru/2025/10/03/mishustin-vydelil-bolee-4-mlrd-rublej-predpriiatiiam-prigranichnyh-regionov.html",
-      "https://rg.ru/2025/10/03/minenergo-zapret-eksporta-dizelia-dlia-ego-proizvoditelej-poka-ne-rassmatrivaetsia.html",
-      "https://rg.ru/2025/10/03/reg-hersonskaya/hersonskaia-oblast-spravliaetsia-s-toplivnym-krizisom-pri-podderzhke-kryma.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -8568,7 +8581,8 @@
     "08fd1ad3fd363e04dd7e4be8a1717468a7ae4af80de8efba970836a53d8d0561": "2025-10-04T21:21:00+03:00",
     "d381a69037749f88b2fde82aae7a77dd1589260eb2be61549bccab577c7dc866": "2025-10-05T00:14:00+03:00",
     "5076b375431597abec3bb012f3a9c30007db6e88a4a1597f8fb4fce58b77e306": "2025-10-05T04:16:00+03:00",
-    "46ae30f01a139fd830ca67cd51fb2f979866a9cd24a3b1a8ea5987023ae5495d": "2025-10-05T04:16:00+03:00"
+    "46ae30f01a139fd830ca67cd51fb2f979866a9cd24a3b1a8ea5987023ae5495d": "2025-10-05T04:16:00+03:00",
+    "e399ddf4d83a3f7f643a1412708846b0df9a8165281e46c0eb9180a0beb9ed7e": "2025-10-05T06:35:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -8598,8 +8612,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7078288770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759626911.9293437
       },
       "warmup_done": false,
@@ -8609,39 +8623,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "pHAkRngN7jjvKZIE",
+          "value": "KMiWDCreq7skcDHn",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759628207
+          "expires": 1759636532
         },
         {
           "name": "__ddg10_",
-          "value": "1759627007",
+          "value": "1759635332",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759628207
+          "expires": 1759636532
         },
         {
           "name": "__ddg9_",
-          "value": "172.172.86.228",
+          "value": "9.234.149.179",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759628207
-        },
-        {
-          "name": "__ddg1_",
-          "value": "PU6oXfFhuGhmKfGfGFEn",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1791163007
+          "expires": 1759636532
         },
         {
           "name": "PHPSESSID",
-          "value": "bf6c4a16d11b7c839e3d8b73b8156eff",
+          "value": "feb8378a911ed6449921443b6301d647",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -8667,11 +8673,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "6PksyXPGcNd6kx2tuIVOCP8vklRVX3kB",
+          "value": "K6jygqLTudJqUYLZ1hPgIz9GZpebCQHl",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759637809
+          "expires": 1759646133
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -8679,7 +8685,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790731009
+          "expires": 1790739333
         }
       ],
       "failures": {
@@ -10306,7 +10312,8 @@
     "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html": "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html",
     "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html": "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html",
     "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html": "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html",
-    "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html": "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html"
+    "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html": "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html",
+    "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html": "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -11906,7 +11913,8 @@
     "26083965fe08d6e470469d4e6dd22a39b84db6bc": "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html",
     "5480c3fe2485ff191380a776d62310012d28219f": "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html",
     "e0a7623419aed80cd3f0eab9d894cc9a9472a297": "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html",
-    "05b3c259a8b6b838307e92f7ae347b933abdbda1": "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html"
+    "05b3c259a8b6b838307e92f7ae347b933abdbda1": "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html",
+    "be6374082568140161984e84bd2e89a7768504c5": "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -13729,6 +13737,7 @@
     "https://rg.ru/2025/10/04/reg-cfo/sobianin-moskvichi-nazvali-novuiu-perepravu-cherez-moskvu-reku-gagarinskij-most.html": "08fd1ad3fd363e04dd7e4be8a1717468a7ae4af80de8efba970836a53d8d0561",
     "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html": "d381a69037749f88b2fde82aae7a77dd1589260eb2be61549bccab577c7dc866",
     "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html": "5076b375431597abec3bb012f3a9c30007db6e88a4a1597f8fb4fce58b77e306",
-    "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html": "46ae30f01a139fd830ca67cd51fb2f979866a9cd24a3b1a8ea5987023ae5495d"
+    "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html": "46ae30f01a139fd830ca67cd51fb2f979866a9cd24a3b1a8ea5987023ae5495d",
+    "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html": "e399ddf4d83a3f7f643a1412708846b0df9a8165281e46c0eb9180a0beb9ed7e"
   }
 }
