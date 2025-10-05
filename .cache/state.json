@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 05 Oct 2025 06:22:52 GMT"
+      "Last-Modified": "Sun, 05 Oct 2025 09:17:40 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"22616-c9YYtdcInmcLmw3D3EPpCH7ooaQ\""
+      "ETag": "W/\"22616-onm8XmuRPhLOLcrCbRtwdLabZ90\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"uld51g2zzw3wu4\""
+      "ETag": "\"z554at8nis3yib\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -5617,6 +5617,26 @@
     },
     "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html": {
       "ETag": "\"uixgm4dnat1osd\""
+    },
+    "http://government.ru/news/56428/": {},
+    "http://government.ru/news/56421/": {},
+    "http://government.ru/news/56427/": {},
+    "http://government.ru/news/56433/": {},
+    "http://government.ru/news/56420/": {},
+    "https://rg.ru/2025/10/05/ekspert-melnichenko-rasskazal-podrobnosti-aviaproisshestvij-v-mire-za-sentiabr.html": {
+      "ETag": "\"9kpgjls7s2240d\""
+    },
+    "https://rg.ru/2025/10/05/v-rossii-snizhaetsia-spros-na-nedoroguiu-mebel.html": {
+      "ETag": "\"a8ecjxusan1p4d\""
+    },
+    "https://rg.ru/2025/10/05/glava-napf-beliakov-obiasnil-vygodu-ot-perevoda-pensii-v-dolgosrochnye-sberezheniia.html": {
+      "ETag": "\"k9ixt4mkht2jak\""
+    },
+    "https://rg.ru/2025/10/05/reg-cfo/dve-novye-konechnye-stancii-elektrobusov-zarabotali-v-iuzao-i-szao-v-moskve.html": {
+      "ETag": "\"174iqoa97us1oco\""
+    },
+    "https://rg.ru/2025/10/05/kurs-bitkoina-obnovil-istoricheskij-maksimum-prevysiv-125-tysiach-dollarov.html": {
+      "ETag": "\"7loccdwxxd1juh\""
     }
   },
   "stats": {
@@ -6496,10 +6516,26 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f867969d940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f86794c07d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f86794c0910>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f86794c42b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f86794c4770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f86793b5250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "ЕЭК ЕАЭС",
+        "url": "https://eec.eaeunion.org/news/",
+        "error": "HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Max retries exceeded with url: /news/ (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Read timed out. (read timeout=10.0)\"))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-05T06:22:37.875477+00:00",
-    "items": 1831,
+    "last_run": "2025-10-05T09:17:39.576026+00:00",
+    "items": 1840,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -6511,33 +6547,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 588.9809610000043,
-        "connect_ms": 38.69814899996982,
-        "response_ms": 627.6791099999741,
+        "dns_ms": 384.94737400000645,
+        "connect_ms": 809.4329539999876,
+        "response_ms": 1194.380327999994,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 175.24985000000015,
-        "connect_ms": 1207.0828690000326,
-        "response_ms": 1382.3327190000327,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f86793b5250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 5264.865172999976,
+        "dns_ms": 8468.567646000054,
         "connect_ms": 0.0,
-        "response_ms": 5239.648971999997,
+        "response_ms": 4396.355411000002,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 602.674181999987,
-        "connect_ms": 16.496969999991506,
-        "response_ms": 619.1711519999785,
+        "dns_ms": 252.97475600001462,
+        "connect_ms": 284.8874329999944,
+        "response_ms": 537.862189000009,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -6546,21 +6582,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "b8339c66dc8de86f5e13f97f3ed8d6dc59c60af5d986620c7f8b7f9941a6a1f3",
+    "https://ardexpert.ru/article": "2da3d02cec5d58e937d1d109710ea4d06b2e35c505b47d3ee5d35120e4451030",
     "https://www.gostinfo.ru/News/List": "d8dbd943fedd36eee4dcf43ac1873035f2119f3e2cb7d1e1e04169a0796bf0c4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2669191d7e33d8f6c706f4e8370b4d17801d04b92cfa12c671eee17ec3fe8ea7",
     "https://eec.eaeunion.org/news/": "fc13316e8f0c73f0137378879e311c4018dea0ec6dfb4970f766a46c66698927",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "7983c014a2aad9db7bee5e34023e4bf928bae5e3968b518b50f267a09535a01a",
-    "https://www.metalinfo.ru/ru/news": "4c55ddedc96263e71d983047810b6d556d40db1293a6f1658ab48663950eaac9",
-    "https://www.pnp.ru/economics/": "b64e3e2004e0bc4cd0bee1b3a8d6a8ec9f1455b57ae5f9115667b5ffea2de66a",
-    "https://erzrf.ru/news/": "9050a085c0bd11c427f7122beb4f77714e47661752b9429880c6b0fa3a14e7b8",
-    "https://ria-stk.ru/news/vse-novosti.php": "fe478ee95becc6ff87faee35f9bb35f484442193a16058847ee42a0ca3c74933",
-    "http://government.ru/news/": "3d09974699cb6628737f6a98a7af9963a05d9f9c02898abeffe7ff70a140aa4a",
-    "https://stroygaz.ru/news/": "8957f1c0702ba6c069544dc6375f461ce0268f893e9c368a76fee53504865fb8",
-    "https://realty.ria.ru/lenta/": "c6e280da28ee85fa6a1bb133ccf0631ec92e4ad8285faabd85149c00071697bb",
-    "https://rg.ru/tema/ekonomika": "18eb15b31a71882a19676255385e5a563b3ee6d3a3bb35035739b280beeb7a9b",
-    "http://ancb.ru/publication": "1d6f54ea6925dc93604a300a642a4d60ff78713086a656e325fff6d1b2e2c42c",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "88018cde1611a37ff2f6dcb4fc5a51360077895a5af4701658d1216a0f592fb4",
+    "https://www.metalinfo.ru/ru/news": "181c94552f6146c678ff5f8a440f45d9dd0d6b9703240fdaddecf8d7ed7df884",
+    "https://www.pnp.ru/economics/": "c2a321089aa7a1676f8577888766d0b6b7613cd8dcf162262bdd32f133341fdc",
+    "https://erzrf.ru/news/": "a0d7c43c7e9e78a300cc85d8525c3af3d59cb4e740eb2aca2607091fcda3401d",
+    "https://ria-stk.ru/news/vse-novosti.php": "71a17fb61bb7cf3a4e3d618677c7b5dba432407d0f16191a865a872f12c5ab72",
+    "http://government.ru/news/": "fad65d6ac087197c9a7c9fe47316f21a630cea2c613577723062db5eadbb113c",
+    "https://stroygaz.ru/news/": "3145a2de019f4a334ae51a8a7f1a203e331af7cfee8deffd6d27ca233b07892f",
+    "https://realty.ria.ru/lenta/": "63ca9102816e391acdb5c000feba15c469eb47396001dc66e55c0ed4b74a70cc",
+    "https://rg.ru/tema/ekonomika": "88df8cadb1aa19b6efce9256f67bc9cb635274af8e9a11de7bb8c7e5fa15cc4c",
+    "http://ancb.ru/publication": "0fdcadb5fb014ee3136d4f2bd3d57f0b6b4f0bfe89d74f9493289581a831db94",
     "https://notim.ru": "366317cc30aa9d7bcc76321def9f52efaa698b915a5d09eead1c14b4582d2b0b",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -6891,6 +6927,11 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245049&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56428/",
+      "http://government.ru/news/56421/",
+      "http://government.ru/news/56427/",
+      "http://government.ru/news/56433/",
+      "http://government.ru/news/56420/",
       "http://government.ru/news/56432/",
       "http://government.ru/news/56430/",
       "http://government.ru/news/56431/",
@@ -6905,12 +6946,7 @@
       "http://government.ru/news/56411/",
       "http://government.ru/news/56408/",
       "http://government.ru/news/56417/",
-      "http://government.ru/news/56416/",
-      "http://government.ru/news/56415/",
-      "http://government.ru/news/56414/",
-      "http://government.ru/news/56412/",
-      "http://government.ru/news/56409/",
-      "http://government.ru/news/56404/"
+      "http://government.ru/news/56416/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/nazvana-stoimost-samoy-deshevoy-kvartiry-na-krestovskom-ostrove-v-peterburge/",
@@ -6957,14 +6993,15 @@
       "https://realty.ria.ru/20251003/razdel-2045672250.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/05/ekspert-melnichenko-rasskazal-podrobnosti-aviaproisshestvij-v-mire-za-sentiabr.html",
+      "https://rg.ru/2025/10/05/v-rossii-snizhaetsia-spros-na-nedoroguiu-mebel.html",
+      "https://rg.ru/2025/10/05/glava-napf-beliakov-obiasnil-vygodu-ot-perevoda-pensii-v-dolgosrochnye-sberezheniia.html",
+      "https://rg.ru/2025/10/05/reg-cfo/dve-novye-konechnye-stancii-elektrobusov-zarabotali-v-iuzao-i-szao-v-moskve.html",
+      "https://rg.ru/2025/10/05/kurs-bitkoina-obnovil-istoricheskij-maksimum-prevysiv-125-tysiach-dollarov.html",
       "https://rg.ru/2025/10/05/eksperty-rasskazali-kak-tursbor-skazhetsia-na-cene-otdyha-v-tailande.html",
       "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html",
-      "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html",
-      "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html",
-      "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html",
       "https://rg.ru/2025/10/01/v-ture-tolko-devushki.html",
       "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html",
-      "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html",
       "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html",
       "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html",
       "https://rg.ru/2025/10/04/rospotrebnadzor-kontroliruet-situaciiu-s-virusom-koksaki-u-rossiian-v-turcii.html",
@@ -6988,7 +7025,6 @@
       "https://rg.ru/2025/10/04/nilov-nekotorye-pensionery-uzhe-v-dekabre-poluchat-povyshennuiu-na-76-pensiiu.html",
       "https://rg.ru/2025/10/03/louis-vuitton-napravil-v-rospatent-zaiavki-na-registraciiu-tovarnyh-znakov.html",
       "https://rg.ru/2025/10/03/cb-v-regionah-rossii-poiaviatsia-ipotechnye-mikrokreditnye-kompanii.html",
-      "https://rg.ru/2025/10/03/bolee-10-zaemshchikov-gotovy-obrashchatsia-k-nelegalnym-kreditoram.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -8612,7 +8648,17 @@
     "cf8ba85f2ad47a9dc770b4b3b73dd1d3e7d7d29c7877ccd85a62e1b1c4d69bdb": "2025-10-05T09:22:00+03:00",
     "032f80293bb379720949c12b4240ce293795bff12174aa77b67405e6408c82dd": "2025-10-05T09:22:00+03:00",
     "87b42371977deeb6006f4dcafa657346621ac6e5b7d950141846f58d22649343": "2025-10-05T09:22:00+03:00",
-    "bde3ac5767c9b151dd22f89c7b95ad1fa53bbdf72a3a9e2fbcef97d71ec968e1": "2025-10-05T09:22:00+03:00"
+    "bde3ac5767c9b151dd22f89c7b95ad1fa53bbdf72a3a9e2fbcef97d71ec968e1": "2025-10-05T09:22:00+03:00",
+    "60a2ed7d6858e836db1fb58718144e831676f02bbc1e04ff0452a708165a89ea": "2025-10-05T12:17:00+03:00",
+    "b66071a0a9b8d91d60614871c983ec372f64323bef20125c50690841131587ac": "2025-10-05T12:17:00+03:00",
+    "0f4754c9e26fbf1f923411b71aa61bbc2640d09af5c73b221fa304e5a6aa391a": "2025-10-05T12:17:00+03:00",
+    "750fc52afcbf3755dbd28e9d42757ed96ea6b6b968d2c1457c5a2eba23f4fcf0": "2025-10-05T12:17:00+03:00",
+    "73bd36dcf6ced9d23d3778a973586b683e898488eb367ac72aad9c23e81acfd7": "2025-10-05T12:17:00+03:00",
+    "eb46d1a9c7d9159ad4af48462260d8f755fdcb009358e1dfe224a9e36dbe82ff": "2025-10-05T12:17:00+03:00",
+    "aee1d503c39d8f65b75869cd51da7e56d6a38ca375c1c3fdfffe84cbbcc5b96e": "2025-10-05T12:17:00+03:00",
+    "731056ddbed7533ad278319b9cc830fe2440b76b39a17a47ca21ff6005b8895e": "2025-10-05T12:17:00+03:00",
+    "3ae660d5902b2e26cd92c31defc2c83fdd65c074a87528ef93e28096c81750ac": "2025-10-05T12:17:00+03:00",
+    "93157e87fe489b2072c0200c1b791c6e3d594af34c1e316a052ad371ee274021": "2025-10-05T12:17:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -8642,9 +8688,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1759626911.9293437
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f86794c4770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1759655725.8227212
       },
       "warmup_done": false,
       "last_success_path": null
@@ -8653,39 +8699,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "ZWzyyvKIosY2aWHK",
+          "value": "u4V4i2Od5nXbWvh7",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759646539
+          "expires": 1759657027
         },
         {
           "name": "__ddg10_",
-          "value": "1759645339",
+          "value": "1759655827",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759646539
+          "expires": 1759657027
         },
         {
           "name": "__ddg9_",
-          "value": "64.236.142.145",
+          "value": "20.55.13.165",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759646539
-        },
-        {
-          "name": "__ddg1_",
-          "value": "5jr6Sh93ONQP3AFQer2G",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1791181339
+          "expires": 1759657027
         },
         {
           "name": "PHPSESSID",
-          "value": "d3cbe7183a1feeaaeca660b90a616804",
+          "value": "c4b2a2e170d88e4186c5c6f3443059c0",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -8711,11 +8749,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "H32rrjaOTEjuEBlxpie30iTSToE8Dqx4",
+          "value": "P9Rq22W3S8eQ4FhzZBxpSqTga7Jzs5Yi",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759656142
+          "expires": 1759666629
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -8723,7 +8761,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790749342
+          "expires": 1790759829
         }
       ],
       "failures": {
@@ -10356,7 +10394,17 @@
     "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html": "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html",
     "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html": "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html",
     "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html": "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html",
-    "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html": "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html"
+    "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html": "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html",
+    "http://government.ru/news/56428": "http://government.ru/news/56428",
+    "http://government.ru/news/56421": "http://government.ru/news/56421",
+    "http://government.ru/news/56427": "http://government.ru/news/56427",
+    "http://government.ru/news/56433": "http://government.ru/news/56433",
+    "http://government.ru/news/56420": "http://government.ru/news/56420",
+    "https://rg.ru/2025/10/05/ekspert-melnichenko-rasskazal-podrobnosti-aviaproisshestvij-v-mire-za-sentiabr.html": "https://rg.ru/2025/10/05/ekspert-melnichenko-rasskazal-podrobnosti-aviaproisshestvij-v-mire-za-sentiabr.html",
+    "https://rg.ru/2025/10/05/v-rossii-snizhaetsia-spros-na-nedoroguiu-mebel.html": "https://rg.ru/2025/10/05/v-rossii-snizhaetsia-spros-na-nedoroguiu-mebel.html",
+    "https://rg.ru/2025/10/05/glava-napf-beliakov-obiasnil-vygodu-ot-perevoda-pensii-v-dolgosrochnye-sberezheniia.html": "https://rg.ru/2025/10/05/glava-napf-beliakov-obiasnil-vygodu-ot-perevoda-pensii-v-dolgosrochnye-sberezheniia.html",
+    "https://rg.ru/2025/10/05/reg-cfo/dve-novye-konechnye-stancii-elektrobusov-zarabotali-v-iuzao-i-szao-v-moskve.html": "https://rg.ru/2025/10/05/reg-cfo/dve-novye-konechnye-stancii-elektrobusov-zarabotali-v-iuzao-i-szao-v-moskve.html",
+    "https://rg.ru/2025/10/05/kurs-bitkoina-obnovil-istoricheskij-maksimum-prevysiv-125-tysiach-dollarov.html": "https://rg.ru/2025/10/05/kurs-bitkoina-obnovil-istoricheskij-maksimum-prevysiv-125-tysiach-dollarov.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -11962,7 +12010,17 @@
     "28fc79f45c7068e21de3b7e0da687339c9e9a4c9": "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html",
     "f4ffe52422695028895b5e3d2c27974c5960e2c2": "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html",
     "9585f9c662aceefba0ccea6606a8062e7f708a84": "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html",
-    "66e0b8ac7d3597215c97071c9e1fca13186c3c24": "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html"
+    "66e0b8ac7d3597215c97071c9e1fca13186c3c24": "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html",
+    "3f01fdec0f151d5798bf621bb9fcbbb4ebe6c1e7": "http://government.ru/news/56428",
+    "85f0062c5b3243c48ad62bc415c391672faa2f89": "http://government.ru/news/56421",
+    "469858609a6bf2f409746e4d3a285780cd6773e4": "http://government.ru/news/56427",
+    "60badfa6bf9106b407ce0bcdf331f70c361af369": "http://government.ru/news/56433",
+    "7584361f72167193f47fab28246854973c4daefb": "http://government.ru/news/56420",
+    "f7c053973003d63592d53e310438c564995ccd17": "https://rg.ru/2025/10/05/ekspert-melnichenko-rasskazal-podrobnosti-aviaproisshestvij-v-mire-za-sentiabr.html",
+    "d50d81bf8c878650fc7f707c2be81bb07dc30045": "https://rg.ru/2025/10/05/v-rossii-snizhaetsia-spros-na-nedoroguiu-mebel.html",
+    "b8143d708087258c6cbfa6b2c0f3b41b4cf9efed": "https://rg.ru/2025/10/05/glava-napf-beliakov-obiasnil-vygodu-ot-perevoda-pensii-v-dolgosrochnye-sberezheniia.html",
+    "4b7d099296e870c0ab8cbfa4a2345b9ac9d6a9bc": "https://rg.ru/2025/10/05/reg-cfo/dve-novye-konechnye-stancii-elektrobusov-zarabotali-v-iuzao-i-szao-v-moskve.html",
+    "f5146b04408e32d874c76eaa00f4e801890f2e9d": "https://rg.ru/2025/10/05/kurs-bitkoina-obnovil-istoricheskij-maksimum-prevysiv-125-tysiach-dollarov.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -13791,6 +13849,21 @@
     "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html": "cf8ba85f2ad47a9dc770b4b3b73dd1d3e7d7d29c7877ccd85a62e1b1c4d69bdb",
     "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html": "032f80293bb379720949c12b4240ce293795bff12174aa77b67405e6408c82dd",
     "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html": "87b42371977deeb6006f4dcafa657346621ac6e5b7d950141846f58d22649343",
-    "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html": "bde3ac5767c9b151dd22f89c7b95ad1fa53bbdf72a3a9e2fbcef97d71ec968e1"
+    "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html": "bde3ac5767c9b151dd22f89c7b95ad1fa53bbdf72a3a9e2fbcef97d71ec968e1",
+    "http://government.ru/news/56428": "60a2ed7d6858e836db1fb58718144e831676f02bbc1e04ff0452a708165a89ea",
+    "http://government.ru/news/56428/": "60a2ed7d6858e836db1fb58718144e831676f02bbc1e04ff0452a708165a89ea",
+    "http://government.ru/news/56421": "b66071a0a9b8d91d60614871c983ec372f64323bef20125c50690841131587ac",
+    "http://government.ru/news/56421/": "b66071a0a9b8d91d60614871c983ec372f64323bef20125c50690841131587ac",
+    "http://government.ru/news/56427": "0f4754c9e26fbf1f923411b71aa61bbc2640d09af5c73b221fa304e5a6aa391a",
+    "http://government.ru/news/56427/": "0f4754c9e26fbf1f923411b71aa61bbc2640d09af5c73b221fa304e5a6aa391a",
+    "http://government.ru/news/56433": "750fc52afcbf3755dbd28e9d42757ed96ea6b6b968d2c1457c5a2eba23f4fcf0",
+    "http://government.ru/news/56433/": "750fc52afcbf3755dbd28e9d42757ed96ea6b6b968d2c1457c5a2eba23f4fcf0",
+    "http://government.ru/news/56420": "73bd36dcf6ced9d23d3778a973586b683e898488eb367ac72aad9c23e81acfd7",
+    "http://government.ru/news/56420/": "73bd36dcf6ced9d23d3778a973586b683e898488eb367ac72aad9c23e81acfd7",
+    "https://rg.ru/2025/10/05/ekspert-melnichenko-rasskazal-podrobnosti-aviaproisshestvij-v-mire-za-sentiabr.html": "eb46d1a9c7d9159ad4af48462260d8f755fdcb009358e1dfe224a9e36dbe82ff",
+    "https://rg.ru/2025/10/05/v-rossii-snizhaetsia-spros-na-nedoroguiu-mebel.html": "aee1d503c39d8f65b75869cd51da7e56d6a38ca375c1c3fdfffe84cbbcc5b96e",
+    "https://rg.ru/2025/10/05/glava-napf-beliakov-obiasnil-vygodu-ot-perevoda-pensii-v-dolgosrochnye-sberezheniia.html": "731056ddbed7533ad278319b9cc830fe2440b76b39a17a47ca21ff6005b8895e",
+    "https://rg.ru/2025/10/05/reg-cfo/dve-novye-konechnye-stancii-elektrobusov-zarabotali-v-iuzao-i-szao-v-moskve.html": "3ae660d5902b2e26cd92c31defc2c83fdd65c074a87528ef93e28096c81750ac",
+    "https://rg.ru/2025/10/05/kurs-bitkoina-obnovil-istoricheskij-maksimum-prevysiv-125-tysiach-dollarov.html": "93157e87fe489b2072c0200c1b791c6e3d594af34c1e316a052ad371ee274021"
   }
 }
