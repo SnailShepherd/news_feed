@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 05 Oct 2025 03:36:04 GMT"
+      "Last-Modified": "Sun, 05 Oct 2025 06:22:52 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"22615-29E0iCoN+cwzGvf1eVoBW2mSPHE\""
+      "ETag": "W/\"22616-c9YYtdcInmcLmw3D3EPpCH7ooaQ\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"i9cbu41qhk3u0t\""
+      "ETag": "\"uld51g2zzw3wu4\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -5602,6 +5602,21 @@
     },
     "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html": {
       "ETag": "\"v99t593qtf1n4j\""
+    },
+    "https://rg.ru/2025/10/05/eksperty-rasskazali-kak-tursbor-skazhetsia-na-cene-otdyha-v-tailande.html": {
+      "ETag": "\"3oyxbobavv1uzf\""
+    },
+    "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html": {
+      "ETag": "\"ksaotfzqnn1mqk\""
+    },
+    "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html": {
+      "ETag": "\"pne9ueqvlx1okv\""
+    },
+    "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html": {
+      "ETag": "\"12to1e1jcvs1nb4\""
+    },
+    "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html": {
+      "ETag": "\"uixgm4dnat1osd\""
     }
   },
   "stats": {
@@ -6471,10 +6486,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "ЕЭК ЕАЭС",
+        "url": "https://eec.eaeunion.org/news/",
+        "error": "HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Max retries exceeded with url: /news/ (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Read timed out. (read timeout=10.0)\"))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-05T03:35:42.867483+00:00",
-    "items": 1830,
+    "last_run": "2025-10-05T06:22:37.875477+00:00",
+    "items": 1831,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -6486,33 +6511,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 543.6372620000043,
-        "connect_ms": 293.3427810000069,
-        "response_ms": 836.9800430000112,
+        "dns_ms": 588.9809610000043,
+        "connect_ms": 38.69814899996982,
+        "response_ms": 627.6791099999741,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 150.9484000000043,
-        "connect_ms": 718.4099659999958,
-        "response_ms": 869.3583660000002,
+        "dns_ms": 175.24985000000015,
+        "connect_ms": 1207.0828690000326,
+        "response_ms": 1382.3327190000327,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 992.2048569999902,
+        "dns_ms": 5264.865172999976,
         "connect_ms": 0.0,
-        "response_ms": 877.5568920000296,
+        "response_ms": 5239.648971999997,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 419.03678199997785,
-        "connect_ms": 150.46854500002382,
-        "response_ms": 569.5053270000017,
+        "dns_ms": 602.674181999987,
+        "connect_ms": 16.496969999991506,
+        "response_ms": 619.1711519999785,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -6521,20 +6546,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "88c381970828422bef15db2509dbdb016415e361e990d9c05c9b4024f9713525",
+    "https://ardexpert.ru/article": "b8339c66dc8de86f5e13f97f3ed8d6dc59c60af5d986620c7f8b7f9941a6a1f3",
     "https://www.gostinfo.ru/News/List": "d8dbd943fedd36eee4dcf43ac1873035f2119f3e2cb7d1e1e04169a0796bf0c4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2669191d7e33d8f6c706f4e8370b4d17801d04b92cfa12c671eee17ec3fe8ea7",
     "https://eec.eaeunion.org/news/": "fc13316e8f0c73f0137378879e311c4018dea0ec6dfb4970f766a46c66698927",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "1d0c2909bfd70298849df42699a591634ac6374bdd23ad5c34f17b6dfc92d255",
-    "https://www.metalinfo.ru/ru/news": "a9dc6305a76b35ed454ec98bf74bcbe7c629a86c03d942c33b624458d3d85251",
-    "https://www.pnp.ru/economics/": "f38bef149c7c954354381dca1ab22435444b0084c49ec272fb78306c40a30b53",
-    "https://erzrf.ru/news/": "189582492994e5c0ead9509f3ffe283d63c89483cd97f8b8bfaa65b0cdfda117",
-    "https://ria-stk.ru/news/vse-novosti.php": "579c1b3b03c6871b5b78c197ff00e5f592bc1548e7c18e1c5efe5b413dfa26bb",
-    "http://government.ru/news/": "1d21d28700e4f073e8ff0957cfb4a643f328e8aefdbbc42bb70edd0e70bf6b21",
-    "https://stroygaz.ru/news/": "d87c11404d18ed990da4296ae559a0bf41ba98c6ab672cc1b42a8a0001177f75",
-    "https://realty.ria.ru/lenta/": "805075d871e6de83f931b32e57c2872377da3f1635b1e200d3121c421456ffed",
-    "https://rg.ru/tema/ekonomika": "6d7c92904f9e892e947017cc2552c9ec813101950f97fd64ffd5757d07788172",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "7983c014a2aad9db7bee5e34023e4bf928bae5e3968b518b50f267a09535a01a",
+    "https://www.metalinfo.ru/ru/news": "4c55ddedc96263e71d983047810b6d556d40db1293a6f1658ab48663950eaac9",
+    "https://www.pnp.ru/economics/": "b64e3e2004e0bc4cd0bee1b3a8d6a8ec9f1455b57ae5f9115667b5ffea2de66a",
+    "https://erzrf.ru/news/": "9050a085c0bd11c427f7122beb4f77714e47661752b9429880c6b0fa3a14e7b8",
+    "https://ria-stk.ru/news/vse-novosti.php": "fe478ee95becc6ff87faee35f9bb35f484442193a16058847ee42a0ca3c74933",
+    "http://government.ru/news/": "3d09974699cb6628737f6a98a7af9963a05d9f9c02898abeffe7ff70a140aa4a",
+    "https://stroygaz.ru/news/": "8957f1c0702ba6c069544dc6375f461ce0268f893e9c368a76fee53504865fb8",
+    "https://realty.ria.ru/lenta/": "c6e280da28ee85fa6a1bb133ccf0631ec92e4ad8285faabd85149c00071697bb",
+    "https://rg.ru/tema/ekonomika": "18eb15b31a71882a19676255385e5a563b3ee6d3a3bb35035739b280beeb7a9b",
     "http://ancb.ru/publication": "1d6f54ea6925dc93604a300a642a4d60ff78713086a656e325fff6d1b2e2c42c",
     "https://notim.ru": "366317cc30aa9d7bcc76321def9f52efaa698b915a5d09eead1c14b4582d2b0b",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -6932,6 +6957,11 @@
       "https://realty.ria.ru/20251003/razdel-2045672250.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/05/eksperty-rasskazali-kak-tursbor-skazhetsia-na-cene-otdyha-v-tailande.html",
+      "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html",
+      "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html",
+      "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html",
+      "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html",
       "https://rg.ru/2025/10/01/v-ture-tolko-devushki.html",
       "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html",
       "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html",
@@ -6959,11 +6989,6 @@
       "https://rg.ru/2025/10/03/louis-vuitton-napravil-v-rospatent-zaiavki-na-registraciiu-tovarnyh-znakov.html",
       "https://rg.ru/2025/10/03/cb-v-regionah-rossii-poiaviatsia-ipotechnye-mikrokreditnye-kompanii.html",
       "https://rg.ru/2025/10/03/bolee-10-zaemshchikov-gotovy-obrashchatsia-k-nelegalnym-kreditoram.html",
-      "https://rg.ru/2025/10/03/kak-postepennoe-priblizhenie-novogodnego-sezona-nachinaet-davit-na-kurs-rublia.html",
-      "https://rg.ru/2025/10/03/zabotkin-prizyvy-snizhat-stavku-prepiatstvuiut-umensheniiu-infliacionnyh-ozhidanij.html",
-      "https://rg.ru/2025/10/03/rospotrebnadzor-dostup-k-kachestvennoj-produkcii-v-rf-za-piat-let-vyros-do-61.html",
-      "https://rg.ru/2025/10/03/indeks-mosbirzhi-upal-nizhe-2600-punktov-vpervye-s-9-aprelia.html",
-      "https://rg.ru/2025/10/03/mishustin-vydelil-bolee-4-mlrd-rublej-predpriiatiiam-prigranichnyh-regionov.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -8582,7 +8607,12 @@
     "d381a69037749f88b2fde82aae7a77dd1589260eb2be61549bccab577c7dc866": "2025-10-05T00:14:00+03:00",
     "5076b375431597abec3bb012f3a9c30007db6e88a4a1597f8fb4fce58b77e306": "2025-10-05T04:16:00+03:00",
     "46ae30f01a139fd830ca67cd51fb2f979866a9cd24a3b1a8ea5987023ae5495d": "2025-10-05T04:16:00+03:00",
-    "e399ddf4d83a3f7f643a1412708846b0df9a8165281e46c0eb9180a0beb9ed7e": "2025-10-05T06:35:00+03:00"
+    "e399ddf4d83a3f7f643a1412708846b0df9a8165281e46c0eb9180a0beb9ed7e": "2025-10-05T06:35:00+03:00",
+    "230165bb557256606721d933474e4340dd2549d3cb9d71096c19c14512ac1975": "2025-10-05T09:22:00+03:00",
+    "cf8ba85f2ad47a9dc770b4b3b73dd1d3e7d7d29c7877ccd85a62e1b1c4d69bdb": "2025-10-05T09:22:00+03:00",
+    "032f80293bb379720949c12b4240ce293795bff12174aa77b67405e6408c82dd": "2025-10-05T09:22:00+03:00",
+    "87b42371977deeb6006f4dcafa657346621ac6e5b7d950141846f58d22649343": "2025-10-05T09:22:00+03:00",
+    "bde3ac5767c9b151dd22f89c7b95ad1fa53bbdf72a3a9e2fbcef97d71ec968e1": "2025-10-05T09:22:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -8623,31 +8653,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "KMiWDCreq7skcDHn",
+          "value": "ZWzyyvKIosY2aWHK",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759636532
+          "expires": 1759646539
         },
         {
           "name": "__ddg10_",
-          "value": "1759635332",
+          "value": "1759645339",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759636532
+          "expires": 1759646539
         },
         {
           "name": "__ddg9_",
-          "value": "9.234.149.179",
+          "value": "64.236.142.145",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759636532
+          "expires": 1759646539
+        },
+        {
+          "name": "__ddg1_",
+          "value": "5jr6Sh93ONQP3AFQer2G",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1791181339
         },
         {
           "name": "PHPSESSID",
-          "value": "feb8378a911ed6449921443b6301d647",
+          "value": "d3cbe7183a1feeaaeca660b90a616804",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -8673,11 +8711,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "K6jygqLTudJqUYLZ1hPgIz9GZpebCQHl",
+          "value": "H32rrjaOTEjuEBlxpie30iTSToE8Dqx4",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759646133
+          "expires": 1759656142
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -8685,7 +8723,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790739333
+          "expires": 1790749342
         }
       ],
       "failures": {
@@ -10313,7 +10351,12 @@
     "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html": "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html",
     "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html": "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html",
     "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html": "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html",
-    "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html": "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html"
+    "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html": "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html",
+    "https://rg.ru/2025/10/05/eksperty-rasskazali-kak-tursbor-skazhetsia-na-cene-otdyha-v-tailande.html": "https://rg.ru/2025/10/05/eksperty-rasskazali-kak-tursbor-skazhetsia-na-cene-otdyha-v-tailande.html",
+    "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html": "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html",
+    "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html": "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html",
+    "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html": "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html",
+    "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html": "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -11914,7 +11957,12 @@
     "5480c3fe2485ff191380a776d62310012d28219f": "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html",
     "e0a7623419aed80cd3f0eab9d894cc9a9472a297": "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html",
     "05b3c259a8b6b838307e92f7ae347b933abdbda1": "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html",
-    "be6374082568140161984e84bd2e89a7768504c5": "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html"
+    "be6374082568140161984e84bd2e89a7768504c5": "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html",
+    "5b7322c5fba432f2f650c679d9a9aac7d0e799d3": "https://rg.ru/2025/10/05/eksperty-rasskazali-kak-tursbor-skazhetsia-na-cene-otdyha-v-tailande.html",
+    "28fc79f45c7068e21de3b7e0da687339c9e9a4c9": "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html",
+    "f4ffe52422695028895b5e3d2c27974c5960e2c2": "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html",
+    "9585f9c662aceefba0ccea6606a8062e7f708a84": "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html",
+    "66e0b8ac7d3597215c97071c9e1fca13186c3c24": "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -13738,6 +13786,11 @@
     "https://rg.ru/2025/10/04/georgij-bovt-o-spiske-avto-dlia-taksi-budem-ezdit-na-svoih-no-ne-srazu.html": "d381a69037749f88b2fde82aae7a77dd1589260eb2be61549bccab577c7dc866",
     "https://rg.ru/2025/10/05/na-kamchatke-vyzhivshuiu-turistku-spustili-s-viliuchinskogo-vulkana-i-peredali-vracham.html": "5076b375431597abec3bb012f3a9c30007db6e88a4a1597f8fb4fce58b77e306",
     "https://rg.ru/2025/10/05/deputat-bessarab-rasskazala-o-edinovremennoj-vyplate-nakopitelnoj-pensii-v-rf.html": "46ae30f01a139fd830ca67cd51fb2f979866a9cd24a3b1a8ea5987023ae5495d",
-    "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html": "e399ddf4d83a3f7f643a1412708846b0df9a8165281e46c0eb9180a0beb9ed7e"
+    "https://rg.ru/2025/10/05/iakubovskij-s-marta-2026-goda-izmenitsia-srok-polucheniia-kvitancij-za-uslugi-zhkh.html": "e399ddf4d83a3f7f643a1412708846b0df9a8165281e46c0eb9180a0beb9ed7e",
+    "https://rg.ru/2025/10/05/eksperty-rasskazali-kak-tursbor-skazhetsia-na-cene-otdyha-v-tailande.html": "230165bb557256606721d933474e4340dd2549d3cb9d71096c19c14512ac1975",
+    "https://rg.ru/2025/10/05/reg-pfo/vozobnovili-rabotu-aeroporty-nizhnego-novgoroda-tambova-i-iaroslavlia.html": "cf8ba85f2ad47a9dc770b4b3b73dd1d3e7d7d29c7877ccd85a62e1b1c4d69bdb",
+    "https://rg.ru/2025/10/05/na-kamchatke-vozbuzhdeno-ugolovnoe-delo-iz-za-gibeli-liudej-na-viliuchinskom-vulkane.html": "032f80293bb379720949c12b4240ce293795bff12174aa77b67405e6408c82dd",
+    "https://rg.ru/2025/10/05/reg-dfo/sostoianie-vyzhivshej-na-viliuchinskom-vulkane-alpinistki-nazvali-stabilno-tiazhelym.html": "87b42371977deeb6006f4dcafa657346621ac6e5b7d950141846f58d22649343",
+    "https://rg.ru/2025/10/05/mchs-pokazalo-kadry-s-mesta-poiskovo-spasatelnoj-operacii-na-viliuchinskom-vulkane.html": "bde3ac5767c9b151dd22f89c7b95ad1fa53bbdf72a3a9e2fbcef97d71ec968e1"
   }
 }
