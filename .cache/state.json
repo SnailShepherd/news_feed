@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 07 Oct 2025 01:10:46 GMT"
+      "Last-Modified": "Tue, 07 Oct 2025 03:32:22 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"23b3c-1xJ+JGO35tTsO61ZoMtbWW/poCE\""
+      "ETag": "W/\"2304f-Hfm8lt7yqygSlg9M1kr3KrupO/Y\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"q4k29e7pv433p\""
+      "ETag": "\"kqsl61yuqs4316\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -6233,6 +6233,17 @@
     },
     "https://rg.ru/2025/10/07/tass-v-gosdume-hotiat-kazhdyj-god-indeksirovat-zarplaty-vseh-rossiian.html": {
       "ETag": "\"nljb4g9ygf1mi0\""
+    },
+    "https://www.metalinfo.ru/ru/news/177248": {},
+    "https://www.metalinfo.ru/ru/news/177239": {},
+    "https://www.metalinfo.ru/ru/news/177253": {},
+    "https://www.metalinfo.ru/ru/news/177240": {},
+    "https://www.metalinfo.ru/ru/news/177247": {},
+    "https://realty.ria.ru/20251007/moskva-2046630040.html": {
+      "Last-Modified": "Tue, 07 Oct 2025 02:00:00 GMT"
+    },
+    "https://rg.ru/2025/10/07/deputaty-gd-predlozhili-provesti-pereraschet-pensii-dlia-rabotaiushchih-pensionerov.html": {
+      "ETag": "\"ls4jbbrzgk1mue\""
     }
   },
   "stats": {
@@ -7312,9 +7323,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8071d7d940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8071bd1090>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8071bd11d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8071be02b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8071be0770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8071ad1370>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-07T01:10:44.367833+00:00",
+    "last_run": "2025-10-07T03:32:02.849378+00:00",
     "items": 2000,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -7327,9 +7349,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 930.6442820000029,
-        "connect_ms": 391.34370499999704,
-        "response_ms": 1321.987987,
+        "dns_ms": 374.96326699999827,
+        "connect_ms": 515.6479359999935,
+        "response_ms": 890.6112029999917,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -7340,20 +7362,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f64444e1250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8071ad1370>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 4978.69968500001,
-        "connect_ms": 110.02965299999778,
-        "response_ms": 5088.729338000007,
+        "dns_ms": 4721.34156900006,
+        "connect_ms": 0.0,
+        "response_ms": 902.6364879999846,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.5494370000178606,
-        "connect_ms": 825.0189209999803,
-        "response_ms": 825.5683579999982,
+        "dns_ms": 0.521665000064786,
+        "connect_ms": 557.4720260000277,
+        "response_ms": 557.9936910000924,
         "attempts": 2,
         "status": 200,
         "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
@@ -7362,20 +7384,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "969997547f915348f95247f8937428cef9b93d85665ce35c3b91560eab6987e1",
+    "https://ardexpert.ru/article": "96042dadb4dcf19ac867900b260725299a1ac539b1c7d7a896736d9183fbd962",
     "https://www.gostinfo.ru/News/List": "9466c807ff9386157e3de0b932f1b02a73bc31da3f43c5644885bedd0000d93c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "13e4c2adad7071a2bdb946f11a92eea26012ab572ac30b843c26458c576767a8",
-    "https://eec.eaeunion.org/news/": "747f59808b2ea10b1b7948171a57f50665207bf305c30d7b455390a960470d55",
+    "https://eec.eaeunion.org/news/": "bf14bf47de349b74bfd1bc435428315bcadfe3cc8d30a8c6add027dddc90a59a",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "50234a422db7be99f1148ec4aab947504299ff9561f6bf6c5c8a27a8ff3f92b1",
-    "https://www.metalinfo.ru/ru/news": "000876999aa6251bfac61f0998c2ba6fecaf419c1ac5543ad945145ba9aad52a",
-    "https://www.pnp.ru/economics/": "1054262c69d94a5f50b9b7eda0e94675d7827704bffd8df9c58cc06548ef17b6",
-    "https://erzrf.ru/news/": "85f26767fcb936bd809e0f7a05b5613a294291d97d0fa041a437c77db7094509",
-    "https://ria-stk.ru/news/vse-novosti.php": "9ce6a4e9dc31219fcb4f380002e43e77bc3e6746f9ab144ba1c9faf472e77455",
-    "http://government.ru/news/": "fa5f80ead49aa835234628bce88dc2d598be23b7408fd4f270a1dcc79a006791",
-    "https://stroygaz.ru/news/": "c8b9b9d08fed272e0026ddec89a54c2d3df017a654bea2b5b6a7569097505661",
-    "https://realty.ria.ru/lenta/": "16ceb0976c2c9a71a7cf97e5eecd99c378f57bf2c33cde37afe7786623a646d5",
-    "https://rg.ru/tema/ekonomika": "c1344b1b79526a5d6c9f615d0660feb2995b6c3808f1652df7706b67897d1b31",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "39fa716889b02e6893776fa3154a6751659fdd3d15deafcd8235f0957f4e26f1",
+    "https://www.metalinfo.ru/ru/news": "47df73af9e6452765ee35e1cb969994aec33386014811e6edd93b303b7345226",
+    "https://www.pnp.ru/economics/": "5950f698073ca83ae3364525e83bff17e82dc0c27bbe47189dd18e50944a1fd8",
+    "https://erzrf.ru/news/": "77645275cb8b69b1e3939b25be5379a4c3a3dbf23f0545bca51880aa4ee3de6d",
+    "https://ria-stk.ru/news/vse-novosti.php": "eed19f7acaae02132cfe384bb10e1e63142485f4dd8a0ce1dd43f15b3fd14214",
+    "http://government.ru/news/": "6460814b2a680c6ed27a8e065c518a2e475bd7233a6dfa65d685194a23fa22ae",
+    "https://stroygaz.ru/news/": "31888ab1772a65224a63078a87fbedf45c9e36210ec3e0465b54173fc68da977",
+    "https://realty.ria.ru/lenta/": "a30cf6dd144a0ed62f01b3c95de8893ba3a07afdd799fea2ca3ff13f68dabfb3",
+    "https://rg.ru/tema/ekonomika": "c97d2616b8397fa4c937ef7e5af463cfb26ebcbe4dfbc1b907218f908b908ee8",
     "http://ancb.ru/publication": "f161d536c3044cb796214f9248a98c1ac6f863f21b51a3dbdf12de7490ca2288",
     "https://notim.ru": "ebc3ac117c6ab2c38bf16064eb6d5f5542fefb406ac77e931c27c7e0720d5920",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -7562,6 +7584,11 @@
       "https://www.interfax-russia.ru/realty/news/vozbuzhdeno-delo-po-faktu-chastichnogo-obrusheniya-zdaniya-kolledzha-vo-vladivostoke"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/177248",
+      "https://www.metalinfo.ru/ru/news/177239",
+      "https://www.metalinfo.ru/ru/news/177253",
+      "https://www.metalinfo.ru/ru/news/177240",
+      "https://www.metalinfo.ru/ru/news/177247",
       "https://www.metalinfo.ru/ru/news/177243",
       "https://www.metalinfo.ru/ru/news/177246",
       "https://www.metalinfo.ru/ru/news/177244",
@@ -7576,12 +7603,7 @@
       "https://www.metalinfo.ru/ru/news/177233",
       "https://www.metalinfo.ru/ru/news/177231",
       "https://www.metalinfo.ru/ru/news/177229",
-      "https://www.metalinfo.ru/ru/news/177227",
-      "https://www.metalinfo.ru/ru/news/177228",
-      "https://www.metalinfo.ru/ru/news/177226",
-      "https://www.metalinfo.ru/ru/news/177225",
-      "https://www.metalinfo.ru/ru/news/177221",
-      "https://www.metalinfo.ru/ru/news/177218"
+      "https://www.metalinfo.ru/ru/news/177227"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -7729,6 +7751,7 @@
       "https://stroygaz.ru/news/hypothec/sentyabr-pobil-rekordy-po-chislu-ipotechnykh-zayavok-s-nachala-goda/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251007/moskva-2046630040.html",
       "https://realty.ria.ru/20251007/obschepit-2046126849.html",
       "https://realty.ria.ru/20251006/moskva-2046698812.html",
       "https://realty.ria.ru/20251006/kursk-2046685885.html",
@@ -7747,10 +7770,10 @@
       "https://realty.ria.ru/20251006/pravda-2046583013.html",
       "https://realty.ria.ru/20251006/regiony-2046573587.html",
       "https://realty.ria.ru/20251006/dolschiki-2046118569.html",
-      "https://realty.ria.ru/20251003/kortros-2046263322.html",
-      "https://realty.ria.ru/20251003/tejlor-2046250787.html"
+      "https://realty.ria.ru/20251003/kortros-2046263322.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/07/deputaty-gd-predlozhili-provesti-pereraschet-pensii-dlia-rabotaiushchih-pensionerov.html",
       "https://rg.ru/2025/10/07/reg-szfo/uchastok-po-zaiavke-regiony-szfo-uvelichivaiut-kolichestvo-arkticheskih-gektarov.html",
       "https://rg.ru/2025/10/07/life-v-rf-rabotodateli-stali-chashche-otkazyvat-kurilshchikam-v-trudoustrojstve.html",
       "https://rg.ru/2025/10/07/tass-v-gosdume-hotiat-kazhdyj-god-indeksirovat-zarplaty-vseh-rossiian.html",
@@ -7782,7 +7805,6 @@
       "https://rg.ru/2025/10/06/cifry-s-muskulami.html",
       "https://rg.ru/2025/10/06/siluanov-nalogovye-izmeneniia-dopolnitelno-prinesut-biudzhetu-23-trln-rublej.html",
       "https://rg.ru/2025/10/06/reg-ufo/v-rossii-v-etom-godu-otkrylos-bolee-500-fitnes-klubov.html",
-      "https://rg.ru/2025/10/06/reg-ufo/v-sochi-zapustili-novuiu-podstanciiu-dlia-novogo-dorozhnogo-obhoda-adlera.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -9652,7 +9674,14 @@
     "8524c9f8216565bf3fcf4eb2966b3ee19587afb75d86440d9e0062b755c63e05": "2025-10-07T04:10:00+03:00",
     "31232806297e71af76a67c7049952bb14771c85727696c6c4f15afb280323cc7": "2025-10-07T04:10:00+03:00",
     "75231f05ba342711fe6f1dff8284c6d60c6fb5132756fbf01757d83866a87e0c": "2025-10-07T04:10:00+03:00",
-    "86d8137efa93971346f5f42aa67dbe3b211ebddd4a389a03b59fa574c63a540b": "2025-10-07T04:10:00+03:00"
+    "86d8137efa93971346f5f42aa67dbe3b211ebddd4a389a03b59fa574c63a540b": "2025-10-07T04:10:00+03:00",
+    "186b32a7016761f285912357c43f819b31dbaf7fa2473643ac1ba8f6e11d3d49": "2025-10-07T06:31:00+03:00",
+    "5d0da54e11918120c9ba9fc4c0e6c9465cb4c526addc45a0cb520980e0ff9239": "2025-10-07T06:31:00+03:00",
+    "a758f870e37cc17814c3b2fbe30c89514452c09f82e53bf217191ec85e30953f": "2025-10-07T06:31:00+03:00",
+    "3328f26189d32d00e16938a245ef4501d75ed4a6e9ad8ecca53549bfe3c0c42f": "2025-10-07T06:31:00+03:00",
+    "5e61209fec26d0ee24565a7fdeb3ce635280f9e050a506ffe3b5c9f6d697ff12": "2025-10-07T06:31:00+03:00",
+    "ec7e73d63fac3ad7e6dc2bb75320b9e3c981cf7ae675d2bd9bde674bf45cbcb8": "2025-10-07T06:31:00+03:00",
+    "e6d690fa0fe46a43e54c3be5d704cc3704e6b58fb007879eb04b049d596851af": "2025-10-07T06:32:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -9682,9 +9711,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f64445f0770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1759799360.7149637
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8071be0770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1759807807.9229817
       },
       "warmup_done": false,
       "last_success_path": null
@@ -9693,31 +9722,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "MiKdlzHJkS4Myulg",
+          "value": "BEX2tgpmiBnzA9vV",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759800613
+          "expires": 1759809110
         },
         {
           "name": "__ddg10_",
-          "value": "1759799413",
+          "value": "1759807910",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759800613
+          "expires": 1759809110
         },
         {
           "name": "__ddg9_",
-          "value": "172.182.194.211",
+          "value": "172.214.44.5",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759800613
+          "expires": 1759809110
+        },
+        {
+          "name": "__ddg1_",
+          "value": "5MYyrX4COkh2MF4y32wo",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1791343910
         },
         {
           "name": "PHPSESSID",
-          "value": "cbf06cf88a554345f22f083651773356",
+          "value": "36ff4a6ff48ce137cafb3eced8abd1ae",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -9743,11 +9780,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "etT4rA91MQhXiVRROoyRyl052pJGQtOt",
+          "value": "lUUSH9epmGEwdaJQeVnLF87Fmi57GNrE",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759810218
+          "expires": 1759818713
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -9755,13 +9792,13 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790903418
+          "expires": 1790911913
         }
       ],
       "failures": {
         "last_error": null,
         "consecutive": 0,
-        "last_ts": 1759799416.0557325
+        "last_ts": 1759807911.717873
       },
       "warmup_done": false,
       "last_success_path": null
@@ -11740,7 +11777,19 @@
     "https://realty.ria.ru/20251007/obschepit-2046126849.html": "https://realty.ria.ru/20251007/obschepit-2046126849.html",
     "https://rg.ru/2025/10/07/reg-szfo/uchastok-po-zaiavke-regiony-szfo-uvelichivaiut-kolichestvo-arkticheskih-gektarov.html": "https://rg.ru/2025/10/07/reg-szfo/uchastok-po-zaiavke-regiony-szfo-uvelichivaiut-kolichestvo-arkticheskih-gektarov.html",
     "https://rg.ru/2025/10/07/life-v-rf-rabotodateli-stali-chashche-otkazyvat-kurilshchikam-v-trudoustrojstve.html": "https://rg.ru/2025/10/07/life-v-rf-rabotodateli-stali-chashche-otkazyvat-kurilshchikam-v-trudoustrojstve.html",
-    "https://rg.ru/2025/10/07/tass-v-gosdume-hotiat-kazhdyj-god-indeksirovat-zarplaty-vseh-rossiian.html": "https://rg.ru/2025/10/07/tass-v-gosdume-hotiat-kazhdyj-god-indeksirovat-zarplaty-vseh-rossiian.html"
+    "https://rg.ru/2025/10/07/tass-v-gosdume-hotiat-kazhdyj-god-indeksirovat-zarplaty-vseh-rossiian.html": "https://rg.ru/2025/10/07/tass-v-gosdume-hotiat-kazhdyj-god-indeksirovat-zarplaty-vseh-rossiian.html",
+    "https://www.metalinfo.ru/ru/news/177248": "http://www.metalinfo.ru/ru/news/177248",
+    "http://www.metalinfo.ru/ru/news/177248": "http://www.metalinfo.ru/ru/news/177248",
+    "https://www.metalinfo.ru/ru/news/177239": "http://www.metalinfo.ru/ru/news/177239",
+    "http://www.metalinfo.ru/ru/news/177239": "http://www.metalinfo.ru/ru/news/177239",
+    "https://www.metalinfo.ru/ru/news/177253": "http://www.metalinfo.ru/ru/news/177253",
+    "http://www.metalinfo.ru/ru/news/177253": "http://www.metalinfo.ru/ru/news/177253",
+    "https://www.metalinfo.ru/ru/news/177240": "http://www.metalinfo.ru/ru/news/177240",
+    "http://www.metalinfo.ru/ru/news/177240": "http://www.metalinfo.ru/ru/news/177240",
+    "https://www.metalinfo.ru/ru/news/177247": "http://www.metalinfo.ru/ru/news/177247",
+    "http://www.metalinfo.ru/ru/news/177247": "http://www.metalinfo.ru/ru/news/177247",
+    "https://realty.ria.ru/20251007/moskva-2046630040.html": "https://realty.ria.ru/20251007/moskva-2046630040.html",
+    "https://rg.ru/2025/10/07/deputaty-gd-predlozhili-provesti-pereraschet-pensii-dlia-rabotaiushchih-pensionerov.html": "https://rg.ru/2025/10/07/deputaty-gd-predlozhili-provesti-pereraschet-pensii-dlia-rabotaiushchih-pensionerov.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -13629,7 +13678,14 @@
     "263784913a89c2db3d56e284a14afa243989c535": "https://realty.ria.ru/20251007/obschepit-2046126849.html",
     "850c1a62f304704a975a6ae5e33dcdfd85525328": "https://rg.ru/2025/10/07/reg-szfo/uchastok-po-zaiavke-regiony-szfo-uvelichivaiut-kolichestvo-arkticheskih-gektarov.html",
     "a9ac7a0ecbded4b54514eeaf987c1b1e14d6c34d": "https://rg.ru/2025/10/07/life-v-rf-rabotodateli-stali-chashche-otkazyvat-kurilshchikam-v-trudoustrojstve.html",
-    "e094b3169a6c4df746211cfdcaa12cf5c5384a9a": "https://rg.ru/2025/10/07/tass-v-gosdume-hotiat-kazhdyj-god-indeksirovat-zarplaty-vseh-rossiian.html"
+    "e094b3169a6c4df746211cfdcaa12cf5c5384a9a": "https://rg.ru/2025/10/07/tass-v-gosdume-hotiat-kazhdyj-god-indeksirovat-zarplaty-vseh-rossiian.html",
+    "bcef92d3c10260e16a5228a1f14947a2c61675b1": "http://www.metalinfo.ru/ru/news/177248",
+    "5bd1383ee9c5387bf058f4c05520a45d6ab05ac5": "http://www.metalinfo.ru/ru/news/177239",
+    "39aac29fda31b04211ef78e988cd3e2212ba79f9": "http://www.metalinfo.ru/ru/news/177253",
+    "2a1427865686582fda98ba5c8a080ad2877d18d1": "http://www.metalinfo.ru/ru/news/177240",
+    "c7ee712d181cc65ddcaab4ca891ae244c3e7aebc": "http://www.metalinfo.ru/ru/news/177247",
+    "467c3a42e7e929b9fd22291e4f84085fd201009c": "https://realty.ria.ru/20251007/moskva-2046630040.html",
+    "ca24b60aa15b984c890a8ecaf68940f330f8aa8b": "https://rg.ru/2025/10/07/deputaty-gd-predlozhili-provesti-pereraschet-pensii-dlia-rabotaiushchih-pensionerov.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -15851,6 +15907,18 @@
     "https://realty.ria.ru/20251007/obschepit-2046126849.html": "8524c9f8216565bf3fcf4eb2966b3ee19587afb75d86440d9e0062b755c63e05",
     "https://rg.ru/2025/10/07/reg-szfo/uchastok-po-zaiavke-regiony-szfo-uvelichivaiut-kolichestvo-arkticheskih-gektarov.html": "31232806297e71af76a67c7049952bb14771c85727696c6c4f15afb280323cc7",
     "https://rg.ru/2025/10/07/life-v-rf-rabotodateli-stali-chashche-otkazyvat-kurilshchikam-v-trudoustrojstve.html": "75231f05ba342711fe6f1dff8284c6d60c6fb5132756fbf01757d83866a87e0c",
-    "https://rg.ru/2025/10/07/tass-v-gosdume-hotiat-kazhdyj-god-indeksirovat-zarplaty-vseh-rossiian.html": "86d8137efa93971346f5f42aa67dbe3b211ebddd4a389a03b59fa574c63a540b"
+    "https://rg.ru/2025/10/07/tass-v-gosdume-hotiat-kazhdyj-god-indeksirovat-zarplaty-vseh-rossiian.html": "86d8137efa93971346f5f42aa67dbe3b211ebddd4a389a03b59fa574c63a540b",
+    "http://www.metalinfo.ru/ru/news/177248": "186b32a7016761f285912357c43f819b31dbaf7fa2473643ac1ba8f6e11d3d49",
+    "https://www.metalinfo.ru/ru/news/177248": "186b32a7016761f285912357c43f819b31dbaf7fa2473643ac1ba8f6e11d3d49",
+    "http://www.metalinfo.ru/ru/news/177239": "5d0da54e11918120c9ba9fc4c0e6c9465cb4c526addc45a0cb520980e0ff9239",
+    "https://www.metalinfo.ru/ru/news/177239": "5d0da54e11918120c9ba9fc4c0e6c9465cb4c526addc45a0cb520980e0ff9239",
+    "http://www.metalinfo.ru/ru/news/177253": "a758f870e37cc17814c3b2fbe30c89514452c09f82e53bf217191ec85e30953f",
+    "https://www.metalinfo.ru/ru/news/177253": "a758f870e37cc17814c3b2fbe30c89514452c09f82e53bf217191ec85e30953f",
+    "http://www.metalinfo.ru/ru/news/177240": "3328f26189d32d00e16938a245ef4501d75ed4a6e9ad8ecca53549bfe3c0c42f",
+    "https://www.metalinfo.ru/ru/news/177240": "3328f26189d32d00e16938a245ef4501d75ed4a6e9ad8ecca53549bfe3c0c42f",
+    "http://www.metalinfo.ru/ru/news/177247": "5e61209fec26d0ee24565a7fdeb3ce635280f9e050a506ffe3b5c9f6d697ff12",
+    "https://www.metalinfo.ru/ru/news/177247": "5e61209fec26d0ee24565a7fdeb3ce635280f9e050a506ffe3b5c9f6d697ff12",
+    "https://realty.ria.ru/20251007/moskva-2046630040.html": "ec7e73d63fac3ad7e6dc2bb75320b9e3c981cf7ae675d2bd9bde674bf45cbcb8",
+    "https://rg.ru/2025/10/07/deputaty-gd-predlozhili-provesti-pereraschet-pensii-dlia-rabotaiushchih-pensionerov.html": "e6d690fa0fe46a43e54c3be5d704cc3704e6b58fb007879eb04b049d596851af"
   }
 }
