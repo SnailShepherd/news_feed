@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 07 Oct 2025 18:25:30 GMT"
+      "Last-Modified": "Tue, 07 Oct 2025 21:14:51 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"23256-lgl/OtC47vVJsxAZgJFehc6V0AA\""
+      "ETag": "W/\"23256-LPZQwCiB0wsFH7C2J7QIQmELAzw\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"rzxjhr1z803t72\""
+      "ETag": "\"16rw8nqf5cb40rl\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -6730,6 +6730,25 @@
     },
     "https://rg.ru/2025/10/07/soiuz-miasopererabotchikov-vvedenie-markirovki-kolbas-udarit-po-potrebiteliam.html": {
       "ETag": "\"e4ux6hdr1j1qi0\""
+    },
+    "http://government.ru/news/56459/": {},
+    "https://rg.ru/2025/10/07/reg-cfo/s-vidom-na-trotuar.html": {
+      "ETag": "\"wgj3v4e3tc1pbd\""
+    },
+    "https://rg.ru/2025/10/07/reg-cfo/svoi-lekarstva-nadezhnee.html": {
+      "ETag": "\"s48tp6jndn1yrq\""
+    },
+    "https://rg.ru/2025/10/07/mesta-do-18.html": {
+      "ETag": "\"8av897p3nx1pmv\""
+    },
+    "https://rg.ru/2025/10/07/reg-cfo/moskvichu-vernuli-31-tys-rublej-pereplaty-za-vodu.html": {
+      "ETag": "\"tsks1ylwes1sgn\""
+    },
+    "https://rg.ru/2025/10/07/energii-iz-vozobnovliaemyh-istochnikov-vpervye-proizveli-bolshe-chem-iz-iskopaemyh.html": {
+      "ETag": "\"qe5oo1fv601nq6\""
+    },
+    "https://rg.ru/2025/10/07/znaki-vnimaniia.html": {
+      "ETag": "\"10ykgmidcyw1smw\""
     }
   },
   "stats": {
@@ -7868,9 +7887,14 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-07T18:25:57.320030+00:00",
+    "last_run": "2025-10-07T21:14:42.787407+00:00",
     "items": 2000,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -7883,33 +7907,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 613.609112000006,
-        "connect_ms": 542.4218409999924,
-        "response_ms": 1156.0309529999984,
+        "dns_ms": 407.11688499999354,
+        "connect_ms": 315.9236860000192,
+        "response_ms": 723.0405710000127,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdf59bf6210>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 133.80989600000248,
+        "connect_ms": 878.6857089999955,
+        "response_ms": 1012.495604999998,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4667.858230000007,
+        "dns_ms": 8190.559007000019,
         "connect_ms": 0.0,
-        "response_ms": 664.7018209999942,
+        "response_ms": 797.8852870000139,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 324.8104099999978,
-        "connect_ms": 452.4409809999952,
-        "response_ms": 777.251390999993,
+        "dns_ms": 258.2203070000162,
+        "connect_ms": 324.58659299999226,
+        "response_ms": 582.8069000000085,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -7918,21 +7942,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "cab57f12328283315356e9cf66cc71f212509d7a5c093b5d019795386145979d",
+    "https://ardexpert.ru/article": "20d5c2ba8626ca72c091fb6ff9b43c268a36104a75ee6cacfb8c5c8d5f8e33db",
     "https://www.gostinfo.ru/News/List": "9466c807ff9386157e3de0b932f1b02a73bc31da3f43c5644885bedd0000d93c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "85d7a854f5241d6505ef61d186065e3b5df577c2d94e5850897b6c0a6e24c070",
-    "https://eec.eaeunion.org/news/": "f3872a4ba868956e3604a06a9b9617ee717a0bf997e0671c90f928ac9860a62c",
+    "https://eec.eaeunion.org/news/": "0c730e50251f1cbabee97bf6a034e800520381c1541d95cf781e0e965e3a2e8a",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "0406ccc3a9268539dc37423a01e212d51e3b18264e34bebea08eb9269e2ef9cc",
-    "https://www.metalinfo.ru/ru/news": "92cfb67651fdceb9cd78a64025eec84d3c136d342bdc79e1066506f6de592471",
-    "https://www.pnp.ru/economics/": "c5e03fba8d6ac0937f9ca23f54228d72a56c7a5892facba37a6603f3684937ea",
-    "https://erzrf.ru/news/": "0c7285e15f0b3e5c5134e23c2dcad8581ca0e8d55bb1ba36d72660c31af0b25c",
-    "https://ria-stk.ru/news/vse-novosti.php": "883d16d6c255cb248278fff130b0c896a2c5442a7e21271e7966d5cccba69c5c",
-    "http://government.ru/news/": "1f18c29969c67d8b257327deb793fc2a2707dde3959e1ab26320f117c159c062",
-    "https://stroygaz.ru/news/": "412589a58032647d19328158363c2a66121488b4e57da3ff82a9843a62c63615",
-    "https://realty.ria.ru/lenta/": "d64eef473837f3a244f037e89caa17bc68a078bb9f7ca5d9377a604e47d2d390",
-    "https://rg.ru/tema/ekonomika": "679a8587f2a4496e6c8c1f7a544b3c20786ec8a33c1e79f0cb91399bc25bbcb0",
-    "http://ancb.ru/publication": "f161d536c3044cb796214f9248a98c1ac6f863f21b51a3dbdf12de7490ca2288",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "d9b2d8ba203de641f22a349eba3d11951c72c3595f57f60e225e3a50f239b9a3",
+    "https://www.metalinfo.ru/ru/news": "bd48a95f660f18d123f0e84638da3e2ae077ed1c94633205f3bf4f7d721798a7",
+    "https://www.pnp.ru/economics/": "7971193725639e89d8f47430d1ebb2c7e7d3dc6bc806e5f6166fa78300d5a3e4",
+    "https://erzrf.ru/news/": "7866a7c257825e6a82be8e06db7fab5ba84ac105263505026b8ad25926bfa9ef",
+    "https://ria-stk.ru/news/vse-novosti.php": "d78e5a19ac858f5e6a313083a46bf9f183bc126f673fba63f3f16f35dd649e38",
+    "http://government.ru/news/": "c39c9675e0acc0b42d1caba278227b4c0a85bd84d759fb4055b40036f68c8d14",
+    "https://stroygaz.ru/news/": "e0ac7573835d61d58e6ac8af9c509dea8b2b2119309db37fed9811e4d87d3dc1",
+    "https://realty.ria.ru/lenta/": "61b098e2a88a13ac5bff4fbb478c5bcd82566149359c363ceebd964a7541d9a6",
+    "https://rg.ru/tema/ekonomika": "ff79408d887fa29795fc7b1957696fa232fc432a4200e42a3bf4a38489a53e98",
+    "http://ancb.ru/publication": "5542c5101e7a0b027bd6f1fb48fb028e29580cf2a6e7eacdd78120cb7120a5ea",
     "https://notim.ru": "a62b2b7d4d87a77948fdb700df49bd7859253adfd1ca3614beb5d666b033a7ad",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -8241,6 +8265,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245091&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56459/",
       "http://government.ru/news/56458/",
       "http://government.ru/news/56456/",
       "http://government.ru/news/56455/",
@@ -8259,8 +8284,7 @@
       "http://government.ru/news/56439/",
       "http://government.ru/news/56434/",
       "http://government.ru/news/56440/",
-      "http://government.ru/news/56437/",
-      "http://government.ru/news/56436/"
+      "http://government.ru/news/56437/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/v-rossii-pochti-na-tret-vyros-spros-na-arendnye-doma-v-regionakh-s-agroturizmom/",
@@ -8307,6 +8331,12 @@
       "https://realty.ria.ru/20251007/samolet-2046772788.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/07/reg-cfo/s-vidom-na-trotuar.html",
+      "https://rg.ru/2025/10/07/reg-cfo/svoi-lekarstva-nadezhnee.html",
+      "https://rg.ru/2025/10/07/mesta-do-18.html",
+      "https://rg.ru/2025/10/07/reg-cfo/moskvichu-vernuli-31-tys-rublej-pereplaty-za-vodu.html",
+      "https://rg.ru/2025/10/07/energii-iz-vozobnovliaemyh-istochnikov-vpervye-proizveli-bolshe-chem-iz-iskopaemyh.html",
+      "https://rg.ru/2025/10/07/znaki-vnimaniia.html",
       "https://rg.ru/2025/10/07/kak-zhit-so-sluhami.html",
       "https://rg.ru/2025/10/07/stopka-signal.html",
       "https://rg.ru/2025/10/07/schitat-mezhdu-strok.html",
@@ -8328,17 +8358,11 @@
       "https://rg.ru/2025/10/07/soiuz-miasopererabotchikov-vvedenie-markirovki-kolbas-udarit-po-potrebiteliam.html",
       "https://rg.ru/2025/10/07/otkazali-tormoza.html",
       "https://rg.ru/2025/10/07/opasnoe-zaniatie.html",
-      "https://rg.ru/2025/10/07/superdzhet-100-c-inostrannymi-dvigateliami-smogut-letat-eshche-dva-tri-goda.html",
       "https://rg.ru/2025/10/07/turizm-stal-odnoj-iz-samyh-bystrorastushchih-sfer-rossijskoj-ekonomiki.html",
       "https://rg.ru/2025/10/07/v-fas-zaiavili-o-vysokom-urovne-monopolizacii-rynka-marketplejsov.html",
       "https://rg.ru/2025/10/07/vyhodnye-v-tveri-chto-posmotret-gde-poguliat-i-kak-otdohnut.html",
       "https://rg.ru/2025/10/07/reg-cfo/na-moskovskih-iarmarkah-vyhodnogo-dnia-budut-torgovat-okolo-tysiachi-fermerov.html",
       "https://rg.ru/2025/10/07/reg-szfo/bolshaia-chast-dohodov-v-turizme-prihoditsia-na-msp.html",
-      "https://rg.ru/2025/10/07/eabr-nazval-prioritetnye-otrasli-dlia-ekonomik-evrazijskogo-regiona.html",
-      "https://rg.ru/2025/10/07/reg-cfo/v-moskve-na-teatralnoj-ploshchadi-pomyli-odin-iz-starejshih-fontanov-stolicy.html",
-      "https://rg.ru/2025/10/07/v-rosaviacii-zaiavili-o-snizhenii-chisla-proisshestvij-s-grazhdanskimi-samoletami.html",
-      "https://rg.ru/2025/10/07/oreshkin-simpozium-sozdavaia-budushchee-eto-chast-globalnoj-ekosistemy-otkrytogo-dialoga.html",
-      "https://rg.ru/2025/10/07/mishustin-na-razvitie-turotrasli-napraviat-okolo-400-mlrd-rublej.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -10437,7 +10461,14 @@
     "a715ec5ad6d002bea0f0f286c18a4fe16ea7da1adf113c994fd9d3e9b9450c88": "2025-10-07T21:25:00+03:00",
     "6301ce58ba2654ec9600dd72de8e49a308f1f75bc54f5ce3ed233d4d9fec7315": "2025-10-07T21:25:00+03:00",
     "64e7cfc087001f1514e8b0e58815efcff3daba474382b182adba748e284029c1": "2025-10-07T21:25:00+03:00",
-    "ac873c50606dc9d532d168de04714e7366dddfa80e171d47a11180b16bf2be0d": "2025-10-07T21:25:00+03:00"
+    "ac873c50606dc9d532d168de04714e7366dddfa80e171d47a11180b16bf2be0d": "2025-10-07T21:25:00+03:00",
+    "e15c1fca92ed63f04d4165e3c7fb59d186ff7f6cae8f246c1c9f43dbab362f83": "2025-10-08T00:14:00+03:00",
+    "4e8d9154ee2a6b74b383291d2816dca18b64e07f30e6d47e4667760da80ed41c": "2025-10-08T00:14:00+03:00",
+    "00eef43a589f9a7924cecefb9370b754e39c24ebe12bb3b9dfd7de5f4ed76842": "2025-10-08T00:14:00+03:00",
+    "fc967b20fec2d2d6bc28fe9f082ec6dec14d490c7805f5463723350632c6065a": "2025-10-08T00:14:00+03:00",
+    "bd85162c1a6178957653f7c414d1139e4f96a476e7ea251d1552ba3638721caa": "2025-10-08T00:14:00+03:00",
+    "5a6a706302fbee0d9eb43caffff5c7dcdfbab66ff3e275c432ddbed3965313b9": "2025-10-08T00:14:00+03:00",
+    "b04f6a2f35a6aa81e2875429220b8b6f0594b56782c465b51939f3ec183c378c": "2025-10-08T00:14:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -10467,8 +10498,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdf59c04770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1759861447.9575698
       },
       "warmup_done": false,
@@ -10478,31 +10509,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "wyWiwU0hn2r6pCem",
+          "value": "Y4FB9QNaiA9rKSFD",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759862698
+          "expires": 1759872859
         },
         {
           "name": "__ddg10_",
-          "value": "1759861498",
+          "value": "1759871659",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759862698
+          "expires": 1759872859
         },
         {
           "name": "__ddg9_",
-          "value": "20.98.23.162",
+          "value": "48.214.54.35",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759862698
+          "expires": 1759872859
+        },
+        {
+          "name": "__ddg1_",
+          "value": "XIVEx1rCWK091hcPg1qf",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1791407659
         },
         {
           "name": "PHPSESSID",
-          "value": "a10d355da6bead58468e445863af8ca5",
+          "value": "86fe44c100e9b2bf9e6f47f27b206f4a",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -10529,11 +10568,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "3npmQ4Xv02M46ntfo7tjgZBD2wwkpwDG",
+          "value": "piNYA1EU6DW8ep4gIvOK3wIgc2HyVDb6",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1759872303
+          "expires": 1759882461
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -10541,7 +10580,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1790965503
+          "expires": 1790975661
         }
       ],
       "failures": {
@@ -12813,7 +12852,14 @@
     "https://rg.ru/2025/10/07/cb-obnovil-perechen-sistemno-znachimyh-bankov.html": "https://rg.ru/2025/10/07/cb-obnovil-perechen-sistemno-znachimyh-bankov.html",
     "https://rg.ru/2025/10/07/narodnaia-programma-i-biudzhet.html": "https://rg.ru/2025/10/07/narodnaia-programma-i-biudzhet.html",
     "https://rg.ru/2025/10/07/v-rossii-nachali-prodavat-bilety-v-detskie-kupe-vo-vseh-poezdah-fpk.html": "https://rg.ru/2025/10/07/v-rossii-nachali-prodavat-bilety-v-detskie-kupe-vo-vseh-poezdah-fpk.html",
-    "https://rg.ru/2025/10/07/soiuz-miasopererabotchikov-vvedenie-markirovki-kolbas-udarit-po-potrebiteliam.html": "https://rg.ru/2025/10/07/soiuz-miasopererabotchikov-vvedenie-markirovki-kolbas-udarit-po-potrebiteliam.html"
+    "https://rg.ru/2025/10/07/soiuz-miasopererabotchikov-vvedenie-markirovki-kolbas-udarit-po-potrebiteliam.html": "https://rg.ru/2025/10/07/soiuz-miasopererabotchikov-vvedenie-markirovki-kolbas-udarit-po-potrebiteliam.html",
+    "http://government.ru/news/56459": "http://government.ru/news/56459",
+    "https://rg.ru/2025/10/07/reg-cfo/s-vidom-na-trotuar.html": "https://rg.ru/2025/10/07/reg-cfo/s-vidom-na-trotuar.html",
+    "https://rg.ru/2025/10/07/reg-cfo/svoi-lekarstva-nadezhnee.html": "https://rg.ru/2025/10/07/reg-cfo/svoi-lekarstva-nadezhnee.html",
+    "https://rg.ru/2025/10/07/mesta-do-18.html": "https://rg.ru/2025/10/07/mesta-do-18.html",
+    "https://rg.ru/2025/10/07/reg-cfo/moskvichu-vernuli-31-tys-rublej-pereplaty-za-vodu.html": "https://rg.ru/2025/10/07/reg-cfo/moskvichu-vernuli-31-tys-rublej-pereplaty-za-vodu.html",
+    "https://rg.ru/2025/10/07/energii-iz-vozobnovliaemyh-istochnikov-vpervye-proizveli-bolshe-chem-iz-iskopaemyh.html": "https://rg.ru/2025/10/07/energii-iz-vozobnovliaemyh-istochnikov-vpervye-proizveli-bolshe-chem-iz-iskopaemyh.html",
+    "https://rg.ru/2025/10/07/znaki-vnimaniia.html": "https://rg.ru/2025/10/07/znaki-vnimaniia.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -14931,7 +14977,14 @@
     "a9578bbf9d056451682b124d3810fc5212759c02": "https://rg.ru/2025/10/07/cb-obnovil-perechen-sistemno-znachimyh-bankov.html",
     "bdd8fd33f1a615fbc02c755665fea1b2decc457d": "https://rg.ru/2025/10/07/narodnaia-programma-i-biudzhet.html",
     "b0e648ceb18b8b678e68d13609222299d01acee9": "https://rg.ru/2025/10/07/v-rossii-nachali-prodavat-bilety-v-detskie-kupe-vo-vseh-poezdah-fpk.html",
-    "b63935df3904db80fcc83d40f6e64045fecb163a": "https://rg.ru/2025/10/07/soiuz-miasopererabotchikov-vvedenie-markirovki-kolbas-udarit-po-potrebiteliam.html"
+    "b63935df3904db80fcc83d40f6e64045fecb163a": "https://rg.ru/2025/10/07/soiuz-miasopererabotchikov-vvedenie-markirovki-kolbas-udarit-po-potrebiteliam.html",
+    "1357f0f7229b36dcb83eeef082de547823e65653": "http://government.ru/news/56459",
+    "0e5772a98020083a1aecf295b38518931d5f2043": "https://rg.ru/2025/10/07/reg-cfo/s-vidom-na-trotuar.html",
+    "25508030f36baa5dfcf2ce1b7da34da3cd0caad6": "https://rg.ru/2025/10/07/reg-cfo/svoi-lekarstva-nadezhnee.html",
+    "f0cc695157f13f4a33fefbe4c79859fad6ba4879": "https://rg.ru/2025/10/07/mesta-do-18.html",
+    "613bc4a2b52c4894d66832812ba6ac9ee70c8edd": "https://rg.ru/2025/10/07/reg-cfo/moskvichu-vernuli-31-tys-rublej-pereplaty-za-vodu.html",
+    "111c77b7243d4329407e7176fc6fec75c766d8f9": "https://rg.ru/2025/10/07/energii-iz-vozobnovliaemyh-istochnikov-vpervye-proizveli-bolshe-chem-iz-iskopaemyh.html",
+    "4d55370f1661556eb230be1718997fe14e444ca1": "https://rg.ru/2025/10/07/znaki-vnimaniia.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -17468,6 +17521,14 @@
     "https://rg.ru/2025/10/07/cb-obnovil-perechen-sistemno-znachimyh-bankov.html": "a715ec5ad6d002bea0f0f286c18a4fe16ea7da1adf113c994fd9d3e9b9450c88",
     "https://rg.ru/2025/10/07/narodnaia-programma-i-biudzhet.html": "6301ce58ba2654ec9600dd72de8e49a308f1f75bc54f5ce3ed233d4d9fec7315",
     "https://rg.ru/2025/10/07/v-rossii-nachali-prodavat-bilety-v-detskie-kupe-vo-vseh-poezdah-fpk.html": "64e7cfc087001f1514e8b0e58815efcff3daba474382b182adba748e284029c1",
-    "https://rg.ru/2025/10/07/soiuz-miasopererabotchikov-vvedenie-markirovki-kolbas-udarit-po-potrebiteliam.html": "ac873c50606dc9d532d168de04714e7366dddfa80e171d47a11180b16bf2be0d"
+    "https://rg.ru/2025/10/07/soiuz-miasopererabotchikov-vvedenie-markirovki-kolbas-udarit-po-potrebiteliam.html": "ac873c50606dc9d532d168de04714e7366dddfa80e171d47a11180b16bf2be0d",
+    "http://government.ru/news/56459": "e15c1fca92ed63f04d4165e3c7fb59d186ff7f6cae8f246c1c9f43dbab362f83",
+    "http://government.ru/news/56459/": "e15c1fca92ed63f04d4165e3c7fb59d186ff7f6cae8f246c1c9f43dbab362f83",
+    "https://rg.ru/2025/10/07/reg-cfo/s-vidom-na-trotuar.html": "4e8d9154ee2a6b74b383291d2816dca18b64e07f30e6d47e4667760da80ed41c",
+    "https://rg.ru/2025/10/07/reg-cfo/svoi-lekarstva-nadezhnee.html": "00eef43a589f9a7924cecefb9370b754e39c24ebe12bb3b9dfd7de5f4ed76842",
+    "https://rg.ru/2025/10/07/mesta-do-18.html": "fc967b20fec2d2d6bc28fe9f082ec6dec14d490c7805f5463723350632c6065a",
+    "https://rg.ru/2025/10/07/reg-cfo/moskvichu-vernuli-31-tys-rublej-pereplaty-za-vodu.html": "bd85162c1a6178957653f7c414d1139e4f96a476e7ea251d1552ba3638721caa",
+    "https://rg.ru/2025/10/07/energii-iz-vozobnovliaemyh-istochnikov-vpervye-proizveli-bolshe-chem-iz-iskopaemyh.html": "5a6a706302fbee0d9eb43caffff5c7dcdfbab66ff3e275c432ddbed3965313b9",
+    "https://rg.ru/2025/10/07/znaki-vnimaniia.html": "b04f6a2f35a6aa81e2875429220b8b6f0594b56782c465b51939f3ec183c378c"
   }
 }
