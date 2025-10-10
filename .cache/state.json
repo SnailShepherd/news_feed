@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 10 Oct 2025 01:11:30 GMT"
+      "Last-Modified": "Fri, 10 Oct 2025 03:33:35 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"8edec-ZUEDE7/Vh0+usr04FOijK0gaOJI\""
+      "ETag": "W/\"8eded-EMeMC8NJMmqAHOcc0dqZ/VPqNPo\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"s7z4rvhk5a3h6f\""
+      "ETag": "\"15de97cr86v3j5f\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -7727,6 +7727,21 @@
     },
     "https://rg.ru/2025/10/10/deputat-aksenenko-s-marta-krajnij-srok-oplaty-uslug-zhkh-perenesut-na-15-e-chislo.html": {
       "ETag": "\"e3y4bqorvu1ocl\""
+    },
+    "https://ardexpert.ru/article/28389": {},
+    "https://www.metalinfo.ru/ru/news/177399": {},
+    "https://www.metalinfo.ru/ru/news/177397": {},
+    "https://www.metalinfo.ru/ru/news/177402": {},
+    "https://www.metalinfo.ru/ru/news/177351": {},
+    "https://www.metalinfo.ru/ru/news/177357": {},
+    "https://realty.ria.ru/20251010/arenda-2047338849.html": {
+      "Last-Modified": "Fri, 10 Oct 2025 02:00:02 GMT"
+    },
+    "https://rg.ru/2025/10/10/glava-napf-beliakov-nalogovyj-vychet-po-pds-dlia-semej-vyrastet-do-1-mln-rublej.html": {
+      "ETag": "\"161rn1rr4nn1xuz\""
+    },
+    "https://rg.ru/2025/10/10/ekspert-shirokova-rynok-servisnyh-apartamentov-postepenno-peretekaet-na-kurorty.html": {
+      "ETag": "\"e3ooggfnun1yl8\""
     }
   },
   "stats": {
@@ -9100,9 +9115,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f35a0c1fd90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f35a0984a50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f35a0986850>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f35a0986c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f35a0986fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-10T01:11:57.883059+00:00",
+    "last_run": "2025-10-10T03:33:16.375607+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -9115,56 +9135,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 788.7308699999949,
-        "connect_ms": 671.5652120000186,
-        "response_ms": 1460.2960820000135,
+        "dns_ms": 565.4832299999839,
+        "connect_ms": 542.0966540000052,
+        "response_ms": 1107.579883999989,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f35a0889250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 395.6040269999903,
+        "connect_ms": 982.8968019999991,
+        "response_ms": 1378.5008289999894,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 1646.4769000000388,
+        "dns_ms": 10007.397257999997,
         "connect_ms": 0.0,
-        "response_ms": 1037.4328660000174,
+        "response_ms": 5004.618862999991,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f35a0986fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 578.9868979999824,
+        "connect_ms": 10.162607000012258,
+        "response_ms": 589.1495049999946,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "2db3215387b790a112217b4e445edbae08634008200b517960f50eba2ec733a4",
+    "https://ardexpert.ru/article": "b8ad12cdfe978ac2b05db2172812969a967b7754ba8b95b07b9102c986d2c828",
     "https://www.gostinfo.ru/News/List": "fed006d307e875fddc4fb45854cb226cacd321246a521bf13cf490c2efd327a4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "85d7a854f5241d6505ef61d186065e3b5df577c2d94e5850897b6c0a6e24c070",
-    "https://eec.eaeunion.org/news/": "8e6294e8eb158dfb41c3545cf7a104492b4c5f08cace61251b98ea3458b56164",
+    "https://eec.eaeunion.org/news/": "f486982c0d7800f11810af6e363ca580de6898300abcc2a6d8cb16f450a67955",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "ce40de85301ae87ff367ba8eddd0331dbd84910e4ed67966e2f3e56aad1f7871",
-    "https://www.metalinfo.ru/ru/news": "9b46a8828b6cfa75148acfb61a4f4dff8d693022b7f1e7fe0b70a7bb9cc4ed17",
-    "https://www.pnp.ru/economics/": "32c254a73b3629769120426edf96401f90e34511991584614f572559d14c9da7",
-    "https://erzrf.ru/news/": "0db755e45cb462375ec9cbcb86145be78b48eee3847cf566be0130b6339d17c7",
-    "https://ria-stk.ru/news/vse-novosti.php": "b8256219a2cc4c9a4518f117f8a68f8c501b90099109fc00a8769100ccc2b954",
-    "http://government.ru/news/": "e6abd06f1e119f9cf27e6cddaebace7777c3aaea4454faa2365e87180a0ddec8",
-    "https://stroygaz.ru/news/": "8a8f9ce5d9e05c2451cdf8d32b400717800daa31c3e18ed5872d98e63280f1f2",
-    "https://realty.ria.ru/lenta/": "301e81e42d82b29cd49d577652bd34ed02a69e84804e071e8c4ed0c15ce34b02",
-    "https://rg.ru/tema/ekonomika": "1efff07ffe58cbea3b4c8c2a76dbb5832c7e31c686ea8f60edc94c8d61497077",
-    "http://ancb.ru/publication": "5e9224aa43f49cf97db30d112c21a9d45feba1cb953b4653150068e30074f258",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "b67860e7f9520e3ad41b103ae20682cc5994f28d4f44cc06d5898d42ef8f13cc",
+    "https://www.metalinfo.ru/ru/news": "0bc04def93d0013feefef71b84071680b8ae9b373ced516ba3841350b79b4fb2",
+    "https://www.pnp.ru/economics/": "2740d1146b5200942655b8d1eb6c5536b5eff189ba973b7da41a92f085ab7acf",
+    "https://erzrf.ru/news/": "8133387fc4ed07fcb6ec07b114517bc691831a35db6222fbcd8b37efd7dbdf00",
+    "https://ria-stk.ru/news/vse-novosti.php": "3aa240d657000e81851dc235bfa90b4d9d21c3890be0f74ab05feed7af460657",
+    "http://government.ru/news/": "2d2b79ad64e3a9c744b3a469b9ee6d4a5b5fbaa793fbbe19a7759ba1eaf6d9a1",
+    "https://stroygaz.ru/news/": "0bc765905fcd99bf0f1809d05563e7d8cae23b6c097b4276dd4377f9bc948f8a",
+    "https://realty.ria.ru/lenta/": "86058175607aa51c5b2e82180fc4123244e828fc17dc7f058aefc5696a646e03",
+    "https://rg.ru/tema/ekonomika": "9bfeecf08ff2db4160c7e4e5b42b91332ad8d262e3c44acc09dd9a96f6e7f456",
+    "http://ancb.ru/publication": "0258f8cec34e60ae07fd18eae62b1bed29439f8b484c675b6a03fd938730bdb4",
     "https://notim.ru": "b51ce9afa2b27a2b0e63efb7810ee4fa2ebac51c7648cbe754f67218496a49af",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -9213,11 +9233,11 @@
       "https://notim.ru/news-partners/"
     ],
     "АРД: статьи": [
+      "https://ardexpert.ru/article/28389",
       "https://ardexpert.ru/article/28387",
       "https://ardexpert.ru/article/28386",
       "https://ardexpert.ru/article/28385",
       "https://ardexpert.ru/article/28384",
-      "https://ardexpert.ru/article/28383",
       "https://ardexpert.ru/article/28382",
       "https://ardexpert.ru/article/28381",
       "https://ardexpert.ru/article/28380",
@@ -9226,8 +9246,7 @@
       "https://ardexpert.ru/article/28376",
       "https://ardexpert.ru/article/28375",
       "https://ardexpert.ru/article/28373/?erid=2Vtzqw3mydF ",
-      "https://ardexpert.ru/article/28374",
-      "https://ardexpert.ru/article/28372"
+      "https://ardexpert.ru/article/28374"
     ],
     "Гостинформ": [
       "https://www.gostinfo.ru/News/Details/1999",
@@ -9334,6 +9353,11 @@
       "https://www.interfax-russia.ru/realty/news/bolee-40-tys-specialistov-stroyotrasli-proshli-ocenku-kvalifikacii-s-nachala-goda"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/177399",
+      "https://www.metalinfo.ru/ru/news/177397",
+      "https://www.metalinfo.ru/ru/news/177402",
+      "https://www.metalinfo.ru/ru/news/177351",
+      "https://www.metalinfo.ru/ru/news/177357",
       "https://www.metalinfo.ru/ru/news/177403",
       "https://www.metalinfo.ru/ru/news/177383",
       "https://www.metalinfo.ru/ru/news/177384",
@@ -9348,12 +9372,7 @@
       "https://www.metalinfo.ru/ru/news/177378",
       "https://www.metalinfo.ru/ru/news/177388",
       "https://www.metalinfo.ru/ru/news/177387",
-      "https://www.metalinfo.ru/ru/news/177363",
-      "https://www.metalinfo.ru/ru/news/177385",
-      "https://www.metalinfo.ru/ru/news/177375",
-      "https://www.metalinfo.ru/ru/news/177376",
-      "https://www.metalinfo.ru/ru/news/177358",
-      "https://www.metalinfo.ru/ru/news/177372"
+      "https://www.metalinfo.ru/ru/news/177363"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -9501,6 +9520,7 @@
       "https://stroygaz.ru/news/dwelling/pochti-polovina-pokupateley-premium-segmenta-obrashchayut-vnimanie-na-nalichie-spa-v-dome/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251010/arenda-2047338849.html",
       "https://realty.ria.ru/20251009/stroykontrol-2047357179.html",
       "https://realty.ria.ru/20251009/rosseti-2047331709.html",
       "https://realty.ria.ru/20251009/evropa-2047329915.html",
@@ -9519,10 +9539,11 @@
       "https://realty.ria.ru/20251009/kabmin-2047214649.html",
       "https://realty.ria.ru/20251009/nkr-2047105004.html",
       "https://realty.ria.ru/20251008/birzha-2047113981.html",
-      "https://realty.ria.ru/20251008/domklik-2047104312.html",
-      "https://realty.ria.ru/20251008/sovet-2047097719.html"
+      "https://realty.ria.ru/20251008/domklik-2047104312.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/10/glava-napf-beliakov-nalogovyj-vychet-po-pds-dlia-semej-vyrastet-do-1-mln-rublej.html",
+      "https://rg.ru/2025/10/10/ekspert-shirokova-rynok-servisnyh-apartamentov-postepenno-peretekaet-na-kurorty.html",
       "https://rg.ru/2025/10/10/deputat-aksenenko-s-marta-krajnij-srok-oplaty-uslug-zhkh-perenesut-na-15-e-chislo.html",
       "https://rg.ru/2025/10/09/reg-ufo/v-aeroportu-krasnodara-vveli-vremennye-ogranicheniia-na-polety.html",
       "https://rg.ru/2025/10/09/reg-cfo/doroga-v-kletochku.html",
@@ -9553,8 +9574,6 @@
       "https://rg.ru/2025/10/09/cb-mezhdunarodnye-rezervy-rossii-dostigli-rekordnyh-7225-mlrd-dollarov.html",
       "https://rg.ru/2025/10/09/energovooruzhennost-v-apk-rastet-no-prodazhi-selhoztehniki-snizhaiutsia.html",
       "https://rg.ru/2025/10/09/otkryta-registraciia-na-xi-forum-nsk.html",
-      "https://rg.ru/2025/10/09/fas-rabotaet-nad-mehanizmom-diftarifov-v-elektroenergetike.html",
-      "https://rg.ru/2025/10/09/reg-cfo/lvenok-edet-na-vokzal.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html",
       "https://rg.ru/2025/09/23/pochyotnyj-himik-rf-aleksandr-shamsutdinov-nagrazhden-za-zaslugi-pered-regionom.html",
       "https://rg.ru/2025/09/22/tiumenskij-vuz-udostoen-ordena-pocheta.html",
@@ -12077,7 +12096,16 @@
     "04879135584595051c93ef8e1f5f496d22a806b58f6d2de6c5b00743c70b0f19": "2025-10-10T00:15:00+03:00",
     "e808a399a3fcfa80ea0fd4a69a15adfc27ff9bfde8a59e6957b29f292d8cf7be": "2025-10-10T00:15:00+03:00",
     "90593d81a238299d91ab4673dc53e8bf3e26a93610fb0fbd1a30e8d098f62289": "2025-10-10T00:15:00+03:00",
-    "1e5072f16e5b5aa3677c9f0754514acca9389b05f762b0f40634d356eb7db8a6": "2025-10-10T04:11:00+03:00"
+    "1e5072f16e5b5aa3677c9f0754514acca9389b05f762b0f40634d356eb7db8a6": "2025-10-10T04:11:00+03:00",
+    "1db063787bc0e1cfda4028a33df3e0c66619b6642017e7510e1b4b06e1460d59": "2025-10-10T06:31:00+03:00",
+    "b456d1bfd435186b8c4a5e086f2c81bc6cb202ebc833356a7bcc181c8fa079f2": "2025-10-10T06:32:00+03:00",
+    "853ace08a4eac24df68116dd70ef82f090d6f06796237523e1edfe11db935c90": "2025-10-10T06:32:00+03:00",
+    "b7c5a736bfcd38a4920695c2684ad68d95136b95c463e594878336c5bed2cbde": "2025-10-10T06:32:00+03:00",
+    "798a580144c34c662cf7339bf70fe9ab778aa5324ac7ec3edb58953ca7ba8a0d": "2025-10-10T06:32:00+03:00",
+    "d2387101437cf13faa0b8aedc9a414bbe1e2e2dcc11f5306920d6027b7b15555": "2025-10-10T06:32:00+03:00",
+    "4504a74d7e6fdb862f17c25f875f9cff1ea852e3a5bac6eab8898550767f36d7": "2025-10-10T06:33:00+03:00",
+    "2ad83b5691a39418d5999f08acf99999354c733b9d98c139632d328fcf8cf0bb": "2025-10-10T06:33:00+03:00",
+    "15427e2249b89b0f017ba2e28407d12e5a1ee2dac7f86bc2352b73057fd88507": "2025-10-10T06:33:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -12107,8 +12135,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f35a0990640>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1760058599.176827
       },
       "warmup_done": false,
@@ -12118,31 +12146,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "5hFv7I9tXxNBmDht",
+          "value": "PVadH5ecRFmGTArR",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760059857
+          "expires": 1760068382
         },
         {
           "name": "__ddg10_",
-          "value": "1760058657",
+          "value": "1760067182",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760059857
+          "expires": 1760068382
         },
         {
           "name": "__ddg9_",
-          "value": "52.159.228.215",
+          "value": "135.232.232.71",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760059857
+          "expires": 1760068382
+        },
+        {
+          "name": "__ddg1_",
+          "value": "jmTaO6JuqDn0GP2Y8697",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1791603182
         },
         {
           "name": "PHPSESSID",
-          "value": "911595fecb44925072d6b9e1cd24edd8",
+          "value": "f657f9276ce13529f0c56c5e2cac4f63",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -12169,11 +12205,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "Tlcp0nZzzsZ7pUC7ukRRBRBr4JPmLi0w",
+          "value": "xqTL544cwPNEQk54i6zv9DXZzO48118F",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760055314
+          "expires": 1760077984
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -12181,12 +12217,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1791148514
+          "expires": 1791171184
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f35a0986c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1760058690.5971217
       },
       "warmup_done": false,
@@ -15029,7 +15065,21 @@
     "https://rg.ru/2025/10/09/reg-cfo/doroga-v-kletochku.html": "https://rg.ru/2025/10/09/reg-cfo/doroga-v-kletochku.html",
     "https://rg.ru/2025/10/09/novak-poruchil-minenergo-sledit-za-situaciej-na-rynke-nefteproduktov.html": "https://rg.ru/2025/10/09/novak-poruchil-minenergo-sledit-za-situaciej-na-rynke-nefteproduktov.html",
     "https://rg.ru/2025/10/09/reg-cfo/kvartiry-poehali.html": "https://rg.ru/2025/10/09/reg-cfo/kvartiry-poehali.html",
-    "https://rg.ru/2025/10/10/deputat-aksenenko-s-marta-krajnij-srok-oplaty-uslug-zhkh-perenesut-na-15-e-chislo.html": "https://rg.ru/2025/10/10/deputat-aksenenko-s-marta-krajnij-srok-oplaty-uslug-zhkh-perenesut-na-15-e-chislo.html"
+    "https://rg.ru/2025/10/10/deputat-aksenenko-s-marta-krajnij-srok-oplaty-uslug-zhkh-perenesut-na-15-e-chislo.html": "https://rg.ru/2025/10/10/deputat-aksenenko-s-marta-krajnij-srok-oplaty-uslug-zhkh-perenesut-na-15-e-chislo.html",
+    "https://ardexpert.ru/article/28389": "https://ardexpert.ru/article/28389",
+    "https://www.metalinfo.ru/ru/news/177399": "http://www.metalinfo.ru/ru/news/177399",
+    "http://www.metalinfo.ru/ru/news/177399": "http://www.metalinfo.ru/ru/news/177399",
+    "https://www.metalinfo.ru/ru/news/177397": "http://www.metalinfo.ru/ru/news/177397",
+    "http://www.metalinfo.ru/ru/news/177397": "http://www.metalinfo.ru/ru/news/177397",
+    "https://www.metalinfo.ru/ru/news/177402": "http://www.metalinfo.ru/ru/news/177402",
+    "http://www.metalinfo.ru/ru/news/177402": "http://www.metalinfo.ru/ru/news/177402",
+    "https://www.metalinfo.ru/ru/news/177351": "http://www.metalinfo.ru/ru/news/177351",
+    "http://www.metalinfo.ru/ru/news/177351": "http://www.metalinfo.ru/ru/news/177351",
+    "https://www.metalinfo.ru/ru/news/177357": "http://www.metalinfo.ru/ru/news/177357",
+    "http://www.metalinfo.ru/ru/news/177357": "http://www.metalinfo.ru/ru/news/177357",
+    "https://realty.ria.ru/20251010/arenda-2047338849.html": "https://realty.ria.ru/20251010/arenda-2047338849.html",
+    "https://rg.ru/2025/10/10/glava-napf-beliakov-nalogovyj-vychet-po-pds-dlia-semej-vyrastet-do-1-mln-rublej.html": "https://rg.ru/2025/10/10/glava-napf-beliakov-nalogovyj-vychet-po-pds-dlia-semej-vyrastet-do-1-mln-rublej.html",
+    "https://rg.ru/2025/10/10/ekspert-shirokova-rynok-servisnyh-apartamentov-postepenno-peretekaet-na-kurorty.html": "https://rg.ru/2025/10/10/ekspert-shirokova-rynok-servisnyh-apartamentov-postepenno-peretekaet-na-kurorty.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -17600,7 +17650,16 @@
     "d2b3f7fe55fc302cdfaa76381346a935c27dc848": "https://rg.ru/2025/10/09/reg-cfo/doroga-v-kletochku.html",
     "5025621e33a305c5795ee6ed5bdeac0a39497862": "https://rg.ru/2025/10/09/novak-poruchil-minenergo-sledit-za-situaciej-na-rynke-nefteproduktov.html",
     "36e6ef589a335b219c4ee9e4d172c8c73f5fa086": "https://rg.ru/2025/10/09/reg-cfo/kvartiry-poehali.html",
-    "cce95ee0b55e959bb0367275bcc1665d2507e8a3": "https://rg.ru/2025/10/10/deputat-aksenenko-s-marta-krajnij-srok-oplaty-uslug-zhkh-perenesut-na-15-e-chislo.html"
+    "cce95ee0b55e959bb0367275bcc1665d2507e8a3": "https://rg.ru/2025/10/10/deputat-aksenenko-s-marta-krajnij-srok-oplaty-uslug-zhkh-perenesut-na-15-e-chislo.html",
+    "dc0123944f895c386eff1b3de89dfb828a95313e": "https://ardexpert.ru/article/28389",
+    "98075be3f1244fa69d0bdf0e099cd299f2e397c8": "http://www.metalinfo.ru/ru/news/177399",
+    "b472be49f1e2369379f40900dc9ebac981132f12": "http://www.metalinfo.ru/ru/news/177397",
+    "eb77b159fc62604cca0c752e5fdd24790e906f9b": "http://www.metalinfo.ru/ru/news/177402",
+    "88f505ae45f6ccff2453e2b4d519bc93202a5da3": "http://www.metalinfo.ru/ru/news/177351",
+    "a5c89b96c4e8f3bbd074d0aad71eb76b86d80524": "http://www.metalinfo.ru/ru/news/177357",
+    "c90bfcc845c2747c6e522529d72839ca4b50358b": "https://realty.ria.ru/20251010/arenda-2047338849.html",
+    "96a8ec0ae2b8b0126b0ede30ca7d04e27b0ec34e": "https://rg.ru/2025/10/10/glava-napf-beliakov-nalogovyj-vychet-po-pds-dlia-semej-vyrastet-do-1-mln-rublej.html",
+    "2a029dd9c60c5046ad6eab64713f9ad91b78c5c0": "https://rg.ru/2025/10/10/ekspert-shirokova-rynok-servisnyh-apartamentov-postepenno-peretekaet-na-kurorty.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -20773,6 +20832,20 @@
     "https://rg.ru/2025/10/09/reg-cfo/doroga-v-kletochku.html": "04879135584595051c93ef8e1f5f496d22a806b58f6d2de6c5b00743c70b0f19",
     "https://rg.ru/2025/10/09/novak-poruchil-minenergo-sledit-za-situaciej-na-rynke-nefteproduktov.html": "e808a399a3fcfa80ea0fd4a69a15adfc27ff9bfde8a59e6957b29f292d8cf7be",
     "https://rg.ru/2025/10/09/reg-cfo/kvartiry-poehali.html": "90593d81a238299d91ab4673dc53e8bf3e26a93610fb0fbd1a30e8d098f62289",
-    "https://rg.ru/2025/10/10/deputat-aksenenko-s-marta-krajnij-srok-oplaty-uslug-zhkh-perenesut-na-15-e-chislo.html": "1e5072f16e5b5aa3677c9f0754514acca9389b05f762b0f40634d356eb7db8a6"
+    "https://rg.ru/2025/10/10/deputat-aksenenko-s-marta-krajnij-srok-oplaty-uslug-zhkh-perenesut-na-15-e-chislo.html": "1e5072f16e5b5aa3677c9f0754514acca9389b05f762b0f40634d356eb7db8a6",
+    "https://ardexpert.ru/article/28389": "1db063787bc0e1cfda4028a33df3e0c66619b6642017e7510e1b4b06e1460d59",
+    "http://www.metalinfo.ru/ru/news/177399": "b456d1bfd435186b8c4a5e086f2c81bc6cb202ebc833356a7bcc181c8fa079f2",
+    "https://www.metalinfo.ru/ru/news/177399": "b456d1bfd435186b8c4a5e086f2c81bc6cb202ebc833356a7bcc181c8fa079f2",
+    "http://www.metalinfo.ru/ru/news/177397": "853ace08a4eac24df68116dd70ef82f090d6f06796237523e1edfe11db935c90",
+    "https://www.metalinfo.ru/ru/news/177397": "853ace08a4eac24df68116dd70ef82f090d6f06796237523e1edfe11db935c90",
+    "http://www.metalinfo.ru/ru/news/177402": "b7c5a736bfcd38a4920695c2684ad68d95136b95c463e594878336c5bed2cbde",
+    "https://www.metalinfo.ru/ru/news/177402": "b7c5a736bfcd38a4920695c2684ad68d95136b95c463e594878336c5bed2cbde",
+    "http://www.metalinfo.ru/ru/news/177351": "798a580144c34c662cf7339bf70fe9ab778aa5324ac7ec3edb58953ca7ba8a0d",
+    "https://www.metalinfo.ru/ru/news/177351": "798a580144c34c662cf7339bf70fe9ab778aa5324ac7ec3edb58953ca7ba8a0d",
+    "http://www.metalinfo.ru/ru/news/177357": "d2387101437cf13faa0b8aedc9a414bbe1e2e2dcc11f5306920d6027b7b15555",
+    "https://www.metalinfo.ru/ru/news/177357": "d2387101437cf13faa0b8aedc9a414bbe1e2e2dcc11f5306920d6027b7b15555",
+    "https://realty.ria.ru/20251010/arenda-2047338849.html": "4504a74d7e6fdb862f17c25f875f9cff1ea852e3a5bac6eab8898550767f36d7",
+    "https://rg.ru/2025/10/10/glava-napf-beliakov-nalogovyj-vychet-po-pds-dlia-semej-vyrastet-do-1-mln-rublej.html": "2ad83b5691a39418d5999f08acf99999354c733b9d98c139632d328fcf8cf0bb",
+    "https://rg.ru/2025/10/10/ekspert-shirokova-rynok-servisnyh-apartamentov-postepenno-peretekaet-na-kurorty.html": "15427e2249b89b0f017ba2e28407d12e5a1ee2dac7f86bc2352b73057fd88507"
   }
 }
