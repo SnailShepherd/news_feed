@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 11 Oct 2025 06:23:02 GMT"
+      "Last-Modified": "Sat, 11 Oct 2025 09:17:10 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"22cac-2y6GjIVVcMIVdx7QxSrJKfrrGxI\""
+      "ETag": "W/\"22cac-xbqf6aK6BCX6r1hRbODoW/Mnvcw\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"g2jy3cng5u3gyc\""
+      "ETag": "\"130p2wg0egy3bi8\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -8086,6 +8086,22 @@
     },
     "https://rg.ru/2025/10/11/deputat-govyrin-rasskazal-kakim-kategoriiam-grazhdan-povysiat-pensiiu-v-noiabre.html": {
       "ETag": "\"swr5zp65hb1psp\""
+    },
+    "http://government.ru/news/56488/": {},
+    "https://rg.ru/2025/10/11/ushedshij-iz-rossii-tehnologicheskij-gigant-zaregistriroval-v-strane-tovarnyj-znak.html": {
+      "ETag": "\"928eovnxrz1owz\""
+    },
+    "https://rg.ru/2025/10/11/stoimost-bitkoina-upala-nizhe-105-tysiach-vpervye-s-iiunia.html": {
+      "ETag": "\"tas1tjxjfx1mx5\""
+    },
+    "https://rg.ru/2025/10/11/reg-cfo/v-iaroslavle-firma-dolzhna-kupit-dom-za-999-kvintillionov-rublej.html": {
+      "ETag": "\"9k5tu41vhy1q4b\""
+    },
+    "https://rg.ru/2025/10/11/iurist-iusupova-rasskazala-kogda-za-perevody-na-kartu-mogut-donachislit-nalog.html": {
+      "ETag": "\"ya29a2212u1o4p\""
+    },
+    "https://rg.ru/2025/10/11/senator-predlozhil-uvelichit-ne-oblagaemuiu-nalogom-matpomoshch-ot-rabotodatelia.html": {
+      "ETag": "\"u1i3hdwp2r1p0t\""
     }
   },
   "stats": {
@@ -9583,9 +9599,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f43bc0a5940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f43bbded450>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f43bbded590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f43bbdf83e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f43bbdf8b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f43bbcf1490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-11T06:22:46.005150+00:00",
+    "last_run": "2025-10-11T09:17:03.972604+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -9598,33 +9625,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 537.9421730000047,
-        "connect_ms": 554.4749439999919,
-        "response_ms": 1092.4171169999966,
+        "dns_ms": 388.1382210000197,
+        "connect_ms": 639.8593389999405,
+        "response_ms": 1027.9975599999602,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 133.22238000000652,
-        "connect_ms": 862.8542280000033,
-        "response_ms": 996.0766080000099,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f43bbcf1490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 600.5244249999748,
-        "connect_ms": 170.3578060000268,
-        "response_ms": 770.8822310000016,
+        "dns_ms": 5178.093633000003,
+        "connect_ms": 0.0,
+        "response_ms": 1050.312434000034,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 588.9412169999844,
-        "connect_ms": 125.057293000026,
-        "response_ms": 713.9985100000104,
+        "dns_ms": 365.85174900000084,
+        "connect_ms": 457.01018500000146,
+        "response_ms": 822.8619340000023,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -9633,21 +9660,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "097aa96aa56b281497737d47ccd10d87c6cf19dbbdcbee8757925415cffbb5ed",
+    "https://ardexpert.ru/article": "9d20f11ce238e699fa539c64fccf512f0bf9c296d59ea62de8ace2848d24fe4e",
     "https://www.gostinfo.ru/News/List": "fed006d307e875fddc4fb45854cb226cacd321246a521bf13cf490c2efd327a4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3d79f660b01c5f6a62be4397896073c841c923da40639a2a09b92b5c54074e12",
-    "https://eec.eaeunion.org/news/": "54a2dba0cc9b02d632e92b42009709e0f7e74d736fcbeb993fedc37b2800ad68",
+    "https://eec.eaeunion.org/news/": "f31ee3ceab6281fe7663d16d009a95b28b7594f73189d14bf3db8e9c549fd64d",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "f0ebdc7a6b4f24d6da15b1c57d3c49a6e972481c524e667784267ea63e478d77",
-    "https://www.metalinfo.ru/ru/news": "f4182af404b18df20f711fb4b237149e5f7b5b6ecf445fba5173dbbacd252a5d",
-    "https://www.pnp.ru/economics/": "fcafbb0fc3a0e33629210c71fbf3bccd8690e98c9c750c5fb61dbc7e0ceced19",
-    "https://erzrf.ru/news/": "cb80f836f8c52d291f02dc0aabf19c70f601b2201cb01caaa55628cea6bb3fa4",
-    "https://ria-stk.ru/news/vse-novosti.php": "7f50199e20c8a0538394d1f15db1d31d1c2364e0659a7888b4829614dfd5a619",
-    "http://government.ru/news/": "125e9bb4042396b53de73936ea64b7aaeb317fdc3fe61b69b963cfa845ce5be0",
-    "https://stroygaz.ru/news/": "6dfc9ecf38a9e416606717be70f1edac146b3e2eff8f128ad5d97647e61e4e53",
-    "https://realty.ria.ru/lenta/": "eb7acb9daa492bb4b479b11ead4b4971ad2d929cff5b1c8d0e964ddbba91bd26",
-    "https://rg.ru/tema/ekonomika": "de33d1f5eec4d9c44e6a62d24274606b734f81df6b6537341d8126966931375b",
-    "http://ancb.ru/publication": "2c8eb05169f5842268a8adbc2e6a77d52e2efa16bc3900190151ba3cd64be571",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "84a2de5c55db5fc57075423eb9fcb59029af9c7a5442fe91f9fa47cc9f49e04b",
+    "https://www.metalinfo.ru/ru/news": "35f76b49d68766acfb65260df558b48c423afd4bd96b9d4c89a679da2ea165b2",
+    "https://www.pnp.ru/economics/": "a38ca94099dd5b580abc4bcf575280b6f9272640d576cb45daa968bfdfb8c9e6",
+    "https://erzrf.ru/news/": "6938b7bcc6e67e3d8ad90ba54e7258eddc24fd1ab399a27f495cdd2a225eb7cc",
+    "https://ria-stk.ru/news/vse-novosti.php": "7c8db73e858a89334b8cf48356f8957fe8ff8189813a08b09867745b2383be44",
+    "http://government.ru/news/": "2f06666eb60436f20cd52fa7c01c3cc2aecf2c15e15fe7acd68e007b373ea2a2",
+    "https://stroygaz.ru/news/": "c9489bf64de7956202fd6855018bc8c8d857994741f7473d52986f540d73c83a",
+    "https://realty.ria.ru/lenta/": "95c36daa2a7a89271d419524584a1e8b3c4c32c653723d67db247e4eaef38af8",
+    "https://rg.ru/tema/ekonomika": "c016f87f1e8dc5bc95184b49d6e40a6f6c47c19023fbc602346133f5e14d131a",
+    "http://ancb.ru/publication": "96d127b5d0f9f188ea74fcd2cb3b5eb76673f91d92c301b71fe750dbcb01e3d6",
     "https://notim.ru": "66aff853611546f83d81d6478deee3db75c15761d68670aba13c30cfcde874ed",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -9939,6 +9966,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245467&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56488/",
       "http://government.ru/news/56497/",
       "http://government.ru/news/56495/",
       "http://government.ru/news/56494/",
@@ -9957,8 +9985,7 @@
       "http://government.ru/news/56471/",
       "http://government.ru/news/56466/",
       "http://government.ru/news/56468/",
-      "http://government.ru/news/56467/",
-      "http://government.ru/news/56465/"
+      "http://government.ru/news/56467/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/infrastructure/novosibirtsy-rasskazali-o-prioritetakh-blagoustroystva-dvorov-v-zhilykh-kompleksakh/",
@@ -10005,6 +10032,11 @@
       "https://realty.ria.ru/20251009/evropa-2047329915.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/11/ushedshij-iz-rossii-tehnologicheskij-gigant-zaregistriroval-v-strane-tovarnyj-znak.html",
+      "https://rg.ru/2025/10/11/stoimost-bitkoina-upala-nizhe-105-tysiach-vpervye-s-iiunia.html",
+      "https://rg.ru/2025/10/11/reg-cfo/v-iaroslavle-firma-dolzhna-kupit-dom-za-999-kvintillionov-rublej.html",
+      "https://rg.ru/2025/10/11/iurist-iusupova-rasskazala-kogda-za-perevody-na-kartu-mogut-donachislit-nalog.html",
+      "https://rg.ru/2025/10/11/senator-predlozhil-uvelichit-ne-oblagaemuiu-nalogom-matpomoshch-ot-rabotodatelia.html",
       "https://rg.ru/2025/10/11/bloomberg-rynok-kriptovaliuty-ssha-za-sutki-poterial-desiat-milliardov-dollarov.html",
       "https://rg.ru/2025/10/11/v-rossii-vpervye-poiavilis-otrasli-so-srednej-zarplatoj-vyshe-200-tysiach-rublej.html",
       "https://rg.ru/2025/10/11/deputat-govyrin-rasskazal-kakim-kategoriiam-grazhdan-povysiat-pensiiu-v-noiabre.html",
@@ -10029,16 +10061,11 @@
       "https://rg.ru/2025/10/10/kabmin-uvelichili-nalogovyj-vychet-po-dolgosrochnym-sberezheniiam-do-1-mln-rublej.html",
       "https://rg.ru/2025/10/10/v-rosstate-rasskazali-o-snizhenii-cen-na-produkty-pitaniia.html",
       "https://rg.ru/2025/10/10/v-gosdumu-vnesli-zakonoproekt-ob-ogranichenii-kolichestva-zhivotnyh-v-kvartire.html",
-      "https://rg.ru/2025/10/10/pokupka-kormov-dlia-zhivotnyh-voshla-v-zelenuiu-zonu-rashodov-rossiian.html",
-      "https://rg.ru/2025/10/10/reg-cfo/doma-pohudeli.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
       "https://rg.ru/2025/10/10/v-moskve-sostoialas-mezhdunarodnaia-konferenciia-po-ocenochnoj-deiatelnosti-mkod-2025.html",
       "https://rg.ru/2025/10/10/reg-cfo/v-moskve-probki-dostigli-semi-ballov.html",
       "https://rg.ru/2025/10/10/reg-ufo/passazhiropotok-aeroporta-elisty-dostig-pochti-49-tysiach-chelovek.html",
       "https://rg.ru/2025/10/10/reg-szfo/s-15-oktiabria-v-peterburge-vvoditsia-vilka-tarifov-na-platnuiu-parkovku.html",
-      "https://rg.ru/2025/10/10/kpru-poschitala-kakuiu-pensiiu-poluchaet-uehavshaia-iz-rossii-alla-pugacheva.html",
-      "https://rg.ru/2025/10/10/reg-urfo/iuridicheskoe-soobshchestvo-obsudilo-na-urale-advokatskuiu-monopoliiu.html",
-      "https://rg.ru/2025/10/10/t-bank-zapustit-akselerator-dlia-podderzhki-shkolnyh-iniciativ.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html"
     ],
     "АНЦБ": [
@@ -12710,7 +12737,13 @@
     "413b1b712a5b834df4791ae474cd38607ff504dbecec09d2111ca4c7a422a3e4": "2025-10-11T09:22:00+03:00",
     "d2563bfaf840bdd0faecf4b456180776364cc3edcb17a451d62ffb356cf34e24": "2025-10-11T09:22:00+03:00",
     "2cd4fb69a6c4d6fce31119411cf13c5926fad2bb89c4b39291ed3e8736bc12b6": "2025-10-11T09:22:00+03:00",
-    "b532ef22655cf0b15664024ef628b242c5c1694945d45e837018d5b04fc87ccd": "2025-10-11T09:22:00+03:00"
+    "b532ef22655cf0b15664024ef628b242c5c1694945d45e837018d5b04fc87ccd": "2025-10-11T09:22:00+03:00",
+    "56948c8c3e4c13cacab4f144fa7e906d0cd9776d9f1601a2ce4f4b2f8668de2e": "2025-10-11T12:16:00+03:00",
+    "4dc0852c92d0ea0cbc3f671d94abd45859c6729f89709eccf38fe6f8c5d5eb57": "2025-10-11T12:16:00+03:00",
+    "4ac1114222dbf93b7742419eed4d7cf51bdfbb0ec87f68f3e69680a5ab8e2504": "2025-10-11T12:16:00+03:00",
+    "d69c9e161b13757612e3a03c8efdb46a1b0f95316583cd34c9ae5fa042109c1c": "2025-10-11T12:16:00+03:00",
+    "5a9d01e848e5d45e4363b21f532b400396354fbeec8d289dc05bdcc6aed7c9f2": "2025-10-11T12:17:00+03:00",
+    "2d98bbbaf80151b59782e002dc8ba52d944d869ef6021eb2a5534f69ba86e442": "2025-10-11T12:17:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -12740,9 +12773,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1760153109.868978
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f43bbdf8b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1760174150.2316499
       },
       "warmup_done": false,
       "last_success_path": null
@@ -12751,31 +12784,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "M4bSTQgiITreXGfc",
+          "value": "wiCFLcd7aqJA9Riy",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760164949
+          "expires": 1760175398
         },
         {
           "name": "__ddg10_",
-          "value": "1760163749",
+          "value": "1760174198",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760164949
+          "expires": 1760175398
         },
         {
           "name": "__ddg9_",
-          "value": "48.214.53.181",
+          "value": "172.184.211.85",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760164949
+          "expires": 1760175398
+        },
+        {
+          "name": "__ddg1_",
+          "value": "Pi9dSOIJINA4Orudj3Ku",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1791710198
         },
         {
           "name": "PHPSESSID",
-          "value": "6845d23879d1d6d14e9eaada1c984222",
+          "value": "4cbbfcc73194a7080e5f59325558bdcb",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -12802,11 +12843,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "xf2VFv57rqeHxOaCgrhOIuhGHu2OBw6S",
+          "value": "ELntvYQ8dfu3Tfqa6Rdas4QccwWi21ij",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760174553
+          "expires": 1760185001
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -12814,7 +12855,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1791267753
+          "expires": 1791278201
         }
       ],
       "failures": {
@@ -15903,7 +15944,13 @@
     "https://ardexpert.ru/article/28391": "https://ardexpert.ru/article/28391",
     "https://rg.ru/2025/10/11/bloomberg-rynok-kriptovaliuty-ssha-za-sutki-poterial-desiat-milliardov-dollarov.html": "https://rg.ru/2025/10/11/bloomberg-rynok-kriptovaliuty-ssha-za-sutki-poterial-desiat-milliardov-dollarov.html",
     "https://rg.ru/2025/10/11/v-rossii-vpervye-poiavilis-otrasli-so-srednej-zarplatoj-vyshe-200-tysiach-rublej.html": "https://rg.ru/2025/10/11/v-rossii-vpervye-poiavilis-otrasli-so-srednej-zarplatoj-vyshe-200-tysiach-rublej.html",
-    "https://rg.ru/2025/10/11/deputat-govyrin-rasskazal-kakim-kategoriiam-grazhdan-povysiat-pensiiu-v-noiabre.html": "https://rg.ru/2025/10/11/deputat-govyrin-rasskazal-kakim-kategoriiam-grazhdan-povysiat-pensiiu-v-noiabre.html"
+    "https://rg.ru/2025/10/11/deputat-govyrin-rasskazal-kakim-kategoriiam-grazhdan-povysiat-pensiiu-v-noiabre.html": "https://rg.ru/2025/10/11/deputat-govyrin-rasskazal-kakim-kategoriiam-grazhdan-povysiat-pensiiu-v-noiabre.html",
+    "http://government.ru/news/56488": "http://government.ru/news/56488",
+    "https://rg.ru/2025/10/11/ushedshij-iz-rossii-tehnologicheskij-gigant-zaregistriroval-v-strane-tovarnyj-znak.html": "https://rg.ru/2025/10/11/ushedshij-iz-rossii-tehnologicheskij-gigant-zaregistriroval-v-strane-tovarnyj-znak.html",
+    "https://rg.ru/2025/10/11/stoimost-bitkoina-upala-nizhe-105-tysiach-vpervye-s-iiunia.html": "https://rg.ru/2025/10/11/stoimost-bitkoina-upala-nizhe-105-tysiach-vpervye-s-iiunia.html",
+    "https://rg.ru/2025/10/11/reg-cfo/v-iaroslavle-firma-dolzhna-kupit-dom-za-999-kvintillionov-rublej.html": "https://rg.ru/2025/10/11/reg-cfo/v-iaroslavle-firma-dolzhna-kupit-dom-za-999-kvintillionov-rublej.html",
+    "https://rg.ru/2025/10/11/iurist-iusupova-rasskazala-kogda-za-perevody-na-kartu-mogut-donachislit-nalog.html": "https://rg.ru/2025/10/11/iurist-iusupova-rasskazala-kogda-za-perevody-na-kartu-mogut-donachislit-nalog.html",
+    "https://rg.ru/2025/10/11/senator-predlozhil-uvelichit-ne-oblagaemuiu-nalogom-matpomoshch-ot-rabotodatelia.html": "https://rg.ru/2025/10/11/senator-predlozhil-uvelichit-ne-oblagaemuiu-nalogom-matpomoshch-ot-rabotodatelia.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -18658,7 +18705,13 @@
     "f48df52fe56521c7ef2a4b3b1f58ae62e765fd98": "https://ardexpert.ru/article/28391",
     "7d882d57bd104152c09b9065c0e16f7678bb765a": "https://rg.ru/2025/10/11/bloomberg-rynok-kriptovaliuty-ssha-za-sutki-poterial-desiat-milliardov-dollarov.html",
     "6b9a17cfa0761331cec484bfd15bee4a73a936bb": "https://rg.ru/2025/10/11/v-rossii-vpervye-poiavilis-otrasli-so-srednej-zarplatoj-vyshe-200-tysiach-rublej.html",
-    "97921d5d4b011969b20c92679b34ce90be8c35f3": "https://rg.ru/2025/10/11/deputat-govyrin-rasskazal-kakim-kategoriiam-grazhdan-povysiat-pensiiu-v-noiabre.html"
+    "97921d5d4b011969b20c92679b34ce90be8c35f3": "https://rg.ru/2025/10/11/deputat-govyrin-rasskazal-kakim-kategoriiam-grazhdan-povysiat-pensiiu-v-noiabre.html",
+    "589e2b9e61a4ee5ba6d72acb66508e9e36515609": "http://government.ru/news/56488",
+    "b64ca0613cd5ca29ea0cdef45c213c3831e36821": "https://rg.ru/2025/10/11/ushedshij-iz-rossii-tehnologicheskij-gigant-zaregistriroval-v-strane-tovarnyj-znak.html",
+    "1d3e2ffa133afbc9e978ed634ed9470c268c1bb5": "https://rg.ru/2025/10/11/stoimost-bitkoina-upala-nizhe-105-tysiach-vpervye-s-iiunia.html",
+    "4c8a8bfda609f5a6e61a0e78c4cde2202818a441": "https://rg.ru/2025/10/11/reg-cfo/v-iaroslavle-firma-dolzhna-kupit-dom-za-999-kvintillionov-rublej.html",
+    "f84b2037318b8ebe4d504d41ddf548fb5a1756cc": "https://rg.ru/2025/10/11/iurist-iusupova-rasskazala-kogda-za-perevody-na-kartu-mogut-donachislit-nalog.html",
+    "70d8831bed2555ec7e82d00d189bb421cfc31d16": "https://rg.ru/2025/10/11/senator-predlozhil-uvelichit-ne-oblagaemuiu-nalogom-matpomoshch-ot-rabotodatelia.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -22085,6 +22138,13 @@
     "https://ardexpert.ru/article/28391": "413b1b712a5b834df4791ae474cd38607ff504dbecec09d2111ca4c7a422a3e4",
     "https://rg.ru/2025/10/11/bloomberg-rynok-kriptovaliuty-ssha-za-sutki-poterial-desiat-milliardov-dollarov.html": "d2563bfaf840bdd0faecf4b456180776364cc3edcb17a451d62ffb356cf34e24",
     "https://rg.ru/2025/10/11/v-rossii-vpervye-poiavilis-otrasli-so-srednej-zarplatoj-vyshe-200-tysiach-rublej.html": "2cd4fb69a6c4d6fce31119411cf13c5926fad2bb89c4b39291ed3e8736bc12b6",
-    "https://rg.ru/2025/10/11/deputat-govyrin-rasskazal-kakim-kategoriiam-grazhdan-povysiat-pensiiu-v-noiabre.html": "b532ef22655cf0b15664024ef628b242c5c1694945d45e837018d5b04fc87ccd"
+    "https://rg.ru/2025/10/11/deputat-govyrin-rasskazal-kakim-kategoriiam-grazhdan-povysiat-pensiiu-v-noiabre.html": "b532ef22655cf0b15664024ef628b242c5c1694945d45e837018d5b04fc87ccd",
+    "http://government.ru/news/56488": "56948c8c3e4c13cacab4f144fa7e906d0cd9776d9f1601a2ce4f4b2f8668de2e",
+    "http://government.ru/news/56488/": "56948c8c3e4c13cacab4f144fa7e906d0cd9776d9f1601a2ce4f4b2f8668de2e",
+    "https://rg.ru/2025/10/11/ushedshij-iz-rossii-tehnologicheskij-gigant-zaregistriroval-v-strane-tovarnyj-znak.html": "4dc0852c92d0ea0cbc3f671d94abd45859c6729f89709eccf38fe6f8c5d5eb57",
+    "https://rg.ru/2025/10/11/stoimost-bitkoina-upala-nizhe-105-tysiach-vpervye-s-iiunia.html": "4ac1114222dbf93b7742419eed4d7cf51bdfbb0ec87f68f3e69680a5ab8e2504",
+    "https://rg.ru/2025/10/11/reg-cfo/v-iaroslavle-firma-dolzhna-kupit-dom-za-999-kvintillionov-rublej.html": "d69c9e161b13757612e3a03c8efdb46a1b0f95316583cd34c9ae5fa042109c1c",
+    "https://rg.ru/2025/10/11/iurist-iusupova-rasskazala-kogda-za-perevody-na-kartu-mogut-donachislit-nalog.html": "5a9d01e848e5d45e4363b21f532b400396354fbeec8d289dc05bdcc6aed7c9f2",
+    "https://rg.ru/2025/10/11/senator-predlozhil-uvelichit-ne-oblagaemuiu-nalogom-matpomoshch-ot-rabotodatelia.html": "2d98bbbaf80151b59782e002dc8ba52d944d869ef6021eb2a5534f69ba86e442"
   }
 }
