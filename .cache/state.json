@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 16 Oct 2025 01:12:35 GMT"
+      "Last-Modified": "Thu, 16 Oct 2025 03:36:55 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"2223d-zeR88SQJG32A2cAJwodqTVhtwPk\""
+      "ETag": "W/\"2223e-X5qN029CTDLvtd4IvP2RW5kYgTk\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"bo21b5busm3njj\""
+      "ETag": "\"16zpu29cbni3t2y\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -9730,6 +9730,26 @@
     },
     "https://realty.ria.ru/20251016/skorost-2048422103.html": {
       "Last-Modified": "Thu, 16 Oct 2025 00:00:03 GMT"
+    },
+    "https://www.metalinfo.ru/ru/news/177581": {},
+    "https://www.metalinfo.ru/ru/news/177574": {},
+    "https://www.metalinfo.ru/ru/news/177576": {},
+    "https://www.metalinfo.ru/ru/news/177579": {},
+    "https://www.metalinfo.ru/ru/news/177571": {},
+    "https://realty.ria.ru/20251016/regiony-2048426655.html": {
+      "Last-Modified": "Thu, 16 Oct 2025 02:00:00 GMT"
+    },
+    "https://rg.ru/2025/10/16/reg-ufo/naibolshuiu-plotnost-novostroek-zafiksirovali-na-iuge-rossii-i-na-urale.html": {
+      "ETag": "\"11u1v03kxuk22sb\""
+    },
+    "https://rg.ru/2025/10/16/reg-dfo/ujti-ot-syrevogo-uklada.html": {
+      "ETag": "\"skqi7pt9m421ju\""
+    },
+    "https://rg.ru/2025/10/16/reg-dfo/paradoksalno-no-fakt.html": {
+      "ETag": "\"hk4s4vjwii21i7\""
+    },
+    "https://rg.ru/2025/10/16/reg-dfo/najti-svoj-put.html": {
+      "ETag": "\"9gwtl4526u20cf\""
     }
   },
   "stats": {
@@ -11626,9 +11646,14 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "HTTPSConnectionPool(host='minfin.gov.ru', port=443): Max retries exceeded with url: /ru/press-center/news/ (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='minfin.gov.ru', port=443): Read timed out. (read timeout=10.0)\"))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-16T01:12:34.234058+00:00",
+    "last_run": "2025-10-16T03:36:45.266060+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -11641,33 +11666,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 601.8276660000055,
-        "connect_ms": 645.6754639999928,
-        "response_ms": 1247.5031299999982,
+        "dns_ms": 759.6145950000164,
+        "connect_ms": 454.75973099996736,
+        "response_ms": 1214.3743259999837,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 175.06348099999514,
-        "connect_ms": 121.3911229999951,
-        "response_ms": 296.45460399999024,
+        "dns_ms": 560.2205339999955,
+        "connect_ms": 1110.1060000000018,
+        "response_ms": 1670.3265339999973,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4002.4104070000135,
-        "connect_ms": 370.16339099997685,
-        "response_ms": 4372.57379799999,
+        "dns_ms": 1043.0273040000202,
+        "connect_ms": 3990.5840739999976,
+        "response_ms": 5033.611378000018,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 180.41174300000762,
-        "connect_ms": 9931.442455999984,
-        "response_ms": 10111.854198999992,
+        "dns_ms": 197.75331300002108,
+        "connect_ms": 629.6207109999727,
+        "response_ms": 827.3740239999938,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -11676,20 +11701,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "83f0d9c01dbda553e119ccaf1e945ae669bd60d313f9d8bf630ee31b11c64dfc",
+    "https://ardexpert.ru/article": "fed225892fb6a279b9d646766b602e8b7e2cd50b99d555aeb54b3ef0ec10a54c",
     "https://www.gostinfo.ru/News/List": "a498c98a2a1243255cceb2538255054452aaf8e40505388192e2a4a96992815a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3d79f660b01c5f6a62be4397896073c841c923da40639a2a09b92b5c54074e12",
-    "https://eec.eaeunion.org/news/": "0f507d3c863ee276e590b31f82c70241386b0d4a2414d7e00a9fcf5895dcb3a7",
+    "https://eec.eaeunion.org/news/": "19ebccfe58144c95eb7369b6303da7f266485433f7f2ea5d13cb8bc692f60e60",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "a74abb473845ad3709bccba032695f088975eb2e8c9ccec16aaca7ff6540d6ef",
-    "https://www.metalinfo.ru/ru/news": "6af387e6ef009d051ae0a4377a224b3c970f5e055faa9fe280f98f7f0df3cd30",
-    "https://www.pnp.ru/economics/": "8724db9d165d516767cb2fa1a7946cae912d7e99ce594662ec09ab9ba31afa78",
-    "https://erzrf.ru/news/": "dc5180a0feccf5dd6df84c40e6890e38c6cf67ed373b8592fea31b5d95a33098",
-    "https://ria-stk.ru/news/vse-novosti.php": "2f32e2d4463ccfefe46c957a6fe471aa8d9131bbae91d84d053931c5e5e521f2",
-    "http://government.ru/news/": "d1f4094eff63936a16c7572d6149d2f00f81033f7fc8aba4ca94e6f2371bb7b0",
-    "https://stroygaz.ru/news/": "5f94ab0eabf8cce7c1a9e908caa657ddb2eb0bec1708055e5f84e8e9d1074914",
-    "https://realty.ria.ru/lenta/": "448fb5f0667ac2a0920be604e3092a5347452f52555b447efe2b3e85134a58d2",
-    "https://rg.ru/tema/ekonomika": "6dbd76d9d116109d29304a09f32c2ccaf038938c6a3927273875d5ab9f3a0c9b",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "c81b51b1af072285e248d234e082f8d660c94bee6cdca541ef11b509884a63bb",
+    "https://www.metalinfo.ru/ru/news": "175755ba601a95ef2279b39f94ae22580c441c8e1c9bbdd88e60c174220eaa59",
+    "https://www.pnp.ru/economics/": "b8c6633c6a54e601735d0a480d914f393278479acb91aa99838b22e1ed5c6e10",
+    "https://erzrf.ru/news/": "5980241779ca6c7669240ce95ab411b607c50d954b4c4ff88adfa42e8c981b9b",
+    "https://ria-stk.ru/news/vse-novosti.php": "a00bc2cc70d3a694e30311ccbefd698afdf1dc9a545ce4c7f6bc1eeaffce2caf",
+    "http://government.ru/news/": "75de7ae13dd6f4f1f6bfe6a3c9fe95814a8d9df77ec90655c36faaf5ad22c46f",
+    "https://stroygaz.ru/news/": "14e9f6dbdbf72959f599980b23d2706680792cacdcacc84e54fb316677ceae17",
+    "https://realty.ria.ru/lenta/": "ebcdc8c891a4d331ddd78b55d4b7da540d71d6d8e1b9fd84c76a2565a756336b",
+    "https://rg.ru/tema/ekonomika": "ab3ebdd89fdd40be50c21f87277d54e94daa7e87851deca41b4934012afd4dc5",
     "http://ancb.ru/publication": "f2331706e65abb6030960f5b066d54958643ef6eaae2306b15b1ddab5fedc01a",
     "https://notim.ru": "a61bc5c3945f8245db6cc83cf60e3e7aa7db8725de21fe8c5ee7942fa781d010",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -11830,6 +11855,11 @@
       "https://www.interfax-russia.ru/realty/news/okonchatelnogo-resheniya-ob-izmenenii-parametrov-semeynoy-ipoteki-net-minstroy"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/177581",
+      "https://www.metalinfo.ru/ru/news/177574",
+      "https://www.metalinfo.ru/ru/news/177576",
+      "https://www.metalinfo.ru/ru/news/177579",
+      "https://www.metalinfo.ru/ru/news/177571",
       "https://www.metalinfo.ru/ru/news/177587",
       "https://www.metalinfo.ru/ru/news/177570",
       "https://www.metalinfo.ru/ru/news/177584",
@@ -11844,12 +11874,7 @@
       "https://www.metalinfo.ru/ru/news/177568",
       "https://www.metalinfo.ru/ru/news/177550",
       "https://www.metalinfo.ru/ru/news/177559",
-      "https://www.metalinfo.ru/ru/news/177558",
-      "https://www.metalinfo.ru/ru/news/177564",
-      "https://www.metalinfo.ru/ru/news/177561",
-      "https://www.metalinfo.ru/ru/news/177562",
-      "https://www.metalinfo.ru/ru/news/177560",
-      "https://www.metalinfo.ru/ru/news/177556"
+      "https://www.metalinfo.ru/ru/news/177558"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -11997,6 +12022,7 @@
       "https://stroygaz.ru/news/hypothec/sredniy-dokhod-uchastnika-ipotechnykh-sdelok-v-novostroykakh-biznes-klassa-sostavlyaet-450-tysyach-e/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251016/regiony-2048426655.html",
       "https://realty.ria.ru/20251016/standart-2048423110.html",
       "https://realty.ria.ru/20251016/kredity-2048425077.html",
       "https://realty.ria.ru/20251016/skorost-2048422103.html",
@@ -12015,10 +12041,13 @@
       "https://realty.ria.ru/20251015/dokhody-2048213788.html",
       "https://realty.ria.ru/20251015/sberbank-2048212852.html",
       "https://realty.ria.ru/20251014/gosduma-2048238179.html",
-      "https://realty.ria.ru/20251014/gosduma-2048206124.html",
-      "https://realty.ria.ru/20251014/putin-2048193329.html"
+      "https://realty.ria.ru/20251014/gosduma-2048206124.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/16/reg-ufo/naibolshuiu-plotnost-novostroek-zafiksirovali-na-iuge-rossii-i-na-urale.html",
+      "https://rg.ru/2025/10/16/reg-dfo/ujti-ot-syrevogo-uklada.html",
+      "https://rg.ru/2025/10/16/reg-dfo/paradoksalno-no-fakt.html",
+      "https://rg.ru/2025/10/16/reg-dfo/najti-svoj-put.html",
       "https://rg.ru/2025/10/15/trassy-vyshli-na-start.html",
       "https://rg.ru/2025/10/16/za-tri-goda-finuniversitet-ne-ispolzoval-26-mlrd-rublej-subsidij-na-goszadanie.html",
       "https://rg.ru/2025/10/15/reg-cfo/ih-znaiut-v-lico.html",
@@ -12039,7 +12068,6 @@
       "https://rg.ru/2025/10/15/rosstat-na-proshloj-nedele-ceny-na-azs-prodolzhili-rost.html",
       "https://rg.ru/2025/10/15/sehali-v-ten.html",
       "https://rg.ru/2025/10/15/v-akort-nazvali-prichiny-podorozhaniia-seldi.html",
-      "https://rg.ru/2025/10/15/reg-szfo/zhilye-ne-zhivye.html",
       "https://rg.ru/2025/10/15/lut-s-nachala-goda-v-rossii-sobrali-okolo-132-mln-tonn-zerna.html",
       "https://rg.ru/2025/10/15/civilev-kabmin-obnulil-importnye-poshliny-na-nefteprodukty-do-serediny-2026-goda.html",
       "https://rg.ru/2025/10/15/civilev-energosistema-rossii-gotova-k-zimnim-maksimumam.html",
@@ -12048,9 +12076,6 @@
       "https://rg.ru/2025/10/15/husnullin-stroitelstvo-i-remont-dorog-v-rf-idut-s-operezheniem-na-29.html",
       "https://rg.ru/2025/10/15/kartofelnyj-soiuz-rasskazal-o-roste-urozhaia-v-rossii.html",
       "https://rg.ru/2025/10/15/fas-proverit-nacenki-na-29-kategorij-prodovolstvennyh-tovarov.html",
-      "https://rg.ru/2025/10/15/kurs-dollara-na-mezhbanke-upal-nizhe-77-rublej-vpervye-s-2023-goda.html",
-      "https://rg.ru/2025/10/15/rosstat-infliaciia-v-oktiabre-razgoniaetsia-vtoruiu-nedeliu-podriad.html",
-      "https://rg.ru/2025/10/15/rosselhoznadzor-rossiia-gotova-zakupat-v-indii-300-500-tys-tonn-bananov-ezhegodno.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
       "https://rg.ru/2025/10/10/v-moskve-sostoialas-mezhdunarodnaia-konferenciia-po-ocenochnoj-deiatelnosti-mkod-2025.html",
       "https://rg.ru/2025/09/30/tiumency-privlekli-v-proekt-po-reinzhiniringu-prirody-mezhdunarodnuiu-komandu.html"
@@ -15416,7 +15441,17 @@
     "28487ad8855dc8161854005f6f55be8453b3ab4fce3cc149fe5a1b2e907fb64a": "2025-10-16T04:12:00+03:00",
     "2067f1515ef6f3284d2593cf0319608536d302f4d2ce6a9d51cd7195c13285bc": "2025-10-16T04:12:00+03:00",
     "eef6afa906c80e23d565980d883be1a17ed3b7e8c9bd65afd942c2e969d547c7": "2025-10-16T04:12:00+03:00",
-    "27ca5d17d5f461df3ab8f6d3f7bc586afe846ca4995f180ec0ca9e49a0ebe34e": "2025-10-16T04:12:00+03:00"
+    "27ca5d17d5f461df3ab8f6d3f7bc586afe846ca4995f180ec0ca9e49a0ebe34e": "2025-10-16T04:12:00+03:00",
+    "7437660bc304498ac22af6f3817c31deafa2b0ddc73aaad856a5f17dacaf671c": "2025-10-16T06:35:00+03:00",
+    "91aefc17bf0b636b44165432ee30de12583f0c76f52e7fe9610df9590e5f792a": "2025-10-16T06:35:00+03:00",
+    "04987ab788f552b83a74f7cde2c29fb873e87bd2cae8e9913f5c80c4871276d3": "2025-10-16T06:35:00+03:00",
+    "c32fc0177a5c38e8f966f7c8770c95ef07327883e162684ed0597a41047594e9": "2025-10-16T06:36:00+03:00",
+    "0e2b32de3f72007121c1a756cb76541d8e5fabdc7529e6ca65b7924c25c9de9b": "2025-10-16T06:36:00+03:00",
+    "a99d6f70ca86c9c28b429a2350ff21a0b235c4b91de5637c841ec839a9cd476b": "2025-10-16T06:36:00+03:00",
+    "148ba5a7b50ab0ae2616db9dcf94685f8c568049f1dc3fadaa37d414da34e16e": "2025-10-16T06:36:00+03:00",
+    "958aa17a92cd1e6d455cdfcc2a7556a0c9d8bf04c16fb0cfded53fd46a0f2d2d": "2025-10-16T06:36:00+03:00",
+    "5f3e92783582464f8f6b35c5f9860a8dcbf750e5f9f59511651b4fd7673cbb93": "2025-10-16T06:36:00+03:00",
+    "5ae84826f03725599737946e38214f6e7f052838294f0450389a29f42485e88b": "2025-10-16T06:36:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -15457,39 +15492,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "TFREk9SdjiFQxz6f",
+          "value": "gWCqIRqKRKRJ1x76",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760578323
+          "expires": 1760586982
         },
         {
           "name": "__ddg10_",
-          "value": "1760577123",
+          "value": "1760585782",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760578323
+          "expires": 1760586982
         },
         {
           "name": "__ddg9_",
-          "value": "64.236.134.228",
+          "value": "68.220.59.53",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760578323
-        },
-        {
-          "name": "__ddg1_",
-          "value": "lZFyZLcdiLwAfDqQ37F8",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1792113123
+          "expires": 1760586982
         },
         {
           "name": "PHPSESSID",
-          "value": "1291368726dfd891b7b8aaeeb6757abd",
+          "value": "34f2ac7abfb4ec74ae51521caf8db7da",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -15516,11 +15543,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "WMTZhAbvEUxxdh8EDDSsoV3DSlSjId0e",
+          "value": "TIbjEgavf5nf3HVnyi30aaC0WQGIQSqt",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760587935
+          "expires": 1760596584
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -15528,7 +15555,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1791681134
+          "expires": 1791689784
         }
       ],
       "failures": {
@@ -19532,7 +19559,22 @@
     "https://stroygaz.ru/news/info-partners-news/premiya-lidery-proektirovaniya-podderzhivaet-proektirovshchikov-rabotayushchikh-s-msp": "https://stroygaz.ru/news/info-partners-news/premiya-lidery-proektirovaniya-podderzhivaet-proektirovshchikov-rabotayushchikh-s-msp",
     "https://realty.ria.ru/20251016/standart-2048423110.html": "https://realty.ria.ru/20251016/standart-2048423110.html",
     "https://realty.ria.ru/20251016/kredity-2048425077.html": "https://realty.ria.ru/20251016/kredity-2048425077.html",
-    "https://realty.ria.ru/20251016/skorost-2048422103.html": "https://realty.ria.ru/20251016/skorost-2048422103.html"
+    "https://realty.ria.ru/20251016/skorost-2048422103.html": "https://realty.ria.ru/20251016/skorost-2048422103.html",
+    "https://www.metalinfo.ru/ru/news/177581": "http://www.metalinfo.ru/ru/news/177581",
+    "http://www.metalinfo.ru/ru/news/177581": "http://www.metalinfo.ru/ru/news/177581",
+    "https://www.metalinfo.ru/ru/news/177574": "http://www.metalinfo.ru/ru/news/177574",
+    "http://www.metalinfo.ru/ru/news/177574": "http://www.metalinfo.ru/ru/news/177574",
+    "https://www.metalinfo.ru/ru/news/177576": "http://www.metalinfo.ru/ru/news/177576",
+    "http://www.metalinfo.ru/ru/news/177576": "http://www.metalinfo.ru/ru/news/177576",
+    "https://www.metalinfo.ru/ru/news/177579": "http://www.metalinfo.ru/ru/news/177579",
+    "http://www.metalinfo.ru/ru/news/177579": "http://www.metalinfo.ru/ru/news/177579",
+    "https://www.metalinfo.ru/ru/news/177571": "http://www.metalinfo.ru/ru/news/177571",
+    "http://www.metalinfo.ru/ru/news/177571": "http://www.metalinfo.ru/ru/news/177571",
+    "https://realty.ria.ru/20251016/regiony-2048426655.html": "https://realty.ria.ru/20251016/regiony-2048426655.html",
+    "https://rg.ru/2025/10/16/reg-ufo/naibolshuiu-plotnost-novostroek-zafiksirovali-na-iuge-rossii-i-na-urale.html": "https://rg.ru/2025/10/16/reg-ufo/naibolshuiu-plotnost-novostroek-zafiksirovali-na-iuge-rossii-i-na-urale.html",
+    "https://rg.ru/2025/10/16/reg-dfo/ujti-ot-syrevogo-uklada.html": "https://rg.ru/2025/10/16/reg-dfo/ujti-ot-syrevogo-uklada.html",
+    "https://rg.ru/2025/10/16/reg-dfo/paradoksalno-no-fakt.html": "https://rg.ru/2025/10/16/reg-dfo/paradoksalno-no-fakt.html",
+    "https://rg.ru/2025/10/16/reg-dfo/najti-svoj-put.html": "https://rg.ru/2025/10/16/reg-dfo/najti-svoj-put.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -23031,7 +23073,17 @@
     "16fbf52fbb1e323671443eff73db4cca642605f4": "https://stroygaz.ru/news/info-partners-news/premiya-lidery-proektirovaniya-podderzhivaet-proektirovshchikov-rabotayushchikh-s-msp",
     "94269d0f2b097a6a1cc29a1e187ed0f6f568e1ee": "https://realty.ria.ru/20251016/standart-2048423110.html",
     "4c12a96f4c2eb8a299089cdf0341be51b5e3b5b7": "https://realty.ria.ru/20251016/kredity-2048425077.html",
-    "aed3d022922daf63391d423228dd968e8d38157e": "https://realty.ria.ru/20251016/skorost-2048422103.html"
+    "aed3d022922daf63391d423228dd968e8d38157e": "https://realty.ria.ru/20251016/skorost-2048422103.html",
+    "951774885de883a9b26aa6f15380e66c289ab71c": "http://www.metalinfo.ru/ru/news/177581",
+    "d9d1e7c471af12c5dcd02fdd472ae13c4870de79": "http://www.metalinfo.ru/ru/news/177574",
+    "a9bd4f7b9b46ef2205d35c21c179ce3e54125889": "http://www.metalinfo.ru/ru/news/177576",
+    "8ee879a39c8b63fccdae7639ad912005905a6559": "http://www.metalinfo.ru/ru/news/177579",
+    "3e902446a8dedc5d62a4cb69fb6473c0c63a0b38": "http://www.metalinfo.ru/ru/news/177571",
+    "973ca75fa7a2ee320ad20bb8036d6e0a3e632634": "https://realty.ria.ru/20251016/regiony-2048426655.html",
+    "d64948f4c5e5ff776893ddcc4698f31826598b81": "https://rg.ru/2025/10/16/reg-ufo/naibolshuiu-plotnost-novostroek-zafiksirovali-na-iuge-rossii-i-na-urale.html",
+    "ccad33e83f42101644642fdc0f55e8394ebaac71": "https://rg.ru/2025/10/16/reg-dfo/ujti-ot-syrevogo-uklada.html",
+    "4fc021974c0f90a6d8b73dbc368fce7f84c8989e": "https://rg.ru/2025/10/16/reg-dfo/paradoksalno-no-fakt.html",
+    "3e9ea38eb4a940321420477af920446e837290e4": "https://rg.ru/2025/10/16/reg-dfo/najti-svoj-put.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -27499,6 +27551,21 @@
     "https://stroygaz.ru/news/info-partners-news/premiya-lidery-proektirovaniya-podderzhivaet-proektirovshchikov-rabotayushchikh-s-msp/": "28487ad8855dc8161854005f6f55be8453b3ab4fce3cc149fe5a1b2e907fb64a",
     "https://realty.ria.ru/20251016/standart-2048423110.html": "2067f1515ef6f3284d2593cf0319608536d302f4d2ce6a9d51cd7195c13285bc",
     "https://realty.ria.ru/20251016/kredity-2048425077.html": "eef6afa906c80e23d565980d883be1a17ed3b7e8c9bd65afd942c2e969d547c7",
-    "https://realty.ria.ru/20251016/skorost-2048422103.html": "27ca5d17d5f461df3ab8f6d3f7bc586afe846ca4995f180ec0ca9e49a0ebe34e"
+    "https://realty.ria.ru/20251016/skorost-2048422103.html": "27ca5d17d5f461df3ab8f6d3f7bc586afe846ca4995f180ec0ca9e49a0ebe34e",
+    "http://www.metalinfo.ru/ru/news/177581": "7437660bc304498ac22af6f3817c31deafa2b0ddc73aaad856a5f17dacaf671c",
+    "https://www.metalinfo.ru/ru/news/177581": "7437660bc304498ac22af6f3817c31deafa2b0ddc73aaad856a5f17dacaf671c",
+    "http://www.metalinfo.ru/ru/news/177574": "91aefc17bf0b636b44165432ee30de12583f0c76f52e7fe9610df9590e5f792a",
+    "https://www.metalinfo.ru/ru/news/177574": "91aefc17bf0b636b44165432ee30de12583f0c76f52e7fe9610df9590e5f792a",
+    "http://www.metalinfo.ru/ru/news/177576": "04987ab788f552b83a74f7cde2c29fb873e87bd2cae8e9913f5c80c4871276d3",
+    "https://www.metalinfo.ru/ru/news/177576": "04987ab788f552b83a74f7cde2c29fb873e87bd2cae8e9913f5c80c4871276d3",
+    "http://www.metalinfo.ru/ru/news/177579": "c32fc0177a5c38e8f966f7c8770c95ef07327883e162684ed0597a41047594e9",
+    "https://www.metalinfo.ru/ru/news/177579": "c32fc0177a5c38e8f966f7c8770c95ef07327883e162684ed0597a41047594e9",
+    "http://www.metalinfo.ru/ru/news/177571": "0e2b32de3f72007121c1a756cb76541d8e5fabdc7529e6ca65b7924c25c9de9b",
+    "https://www.metalinfo.ru/ru/news/177571": "0e2b32de3f72007121c1a756cb76541d8e5fabdc7529e6ca65b7924c25c9de9b",
+    "https://realty.ria.ru/20251016/regiony-2048426655.html": "a99d6f70ca86c9c28b429a2350ff21a0b235c4b91de5637c841ec839a9cd476b",
+    "https://rg.ru/2025/10/16/reg-ufo/naibolshuiu-plotnost-novostroek-zafiksirovali-na-iuge-rossii-i-na-urale.html": "148ba5a7b50ab0ae2616db9dcf94685f8c568049f1dc3fadaa37d414da34e16e",
+    "https://rg.ru/2025/10/16/reg-dfo/ujti-ot-syrevogo-uklada.html": "958aa17a92cd1e6d455cdfcc2a7556a0c9d8bf04c16fb0cfded53fd46a0f2d2d",
+    "https://rg.ru/2025/10/16/reg-dfo/paradoksalno-no-fakt.html": "5f3e92783582464f8f6b35c5f9860a8dcbf750e5f9f59511651b4fd7673cbb93",
+    "https://rg.ru/2025/10/16/reg-dfo/najti-svoj-put.html": "5ae84826f03725599737946e38214f6e7f052838294f0450389a29f42485e88b"
   }
 }
