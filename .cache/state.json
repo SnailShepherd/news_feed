@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 17 Oct 2025 15:22:52 GMT"
+      "Last-Modified": "Fri, 17 Oct 2025 18:22:05 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"2257c-UfdUb6mP/RWe2FrB7G2eiKe3NHo\""
+      "ETag": "W/\"2257c-8NinIH/f+E1o1zeIlj2F1PaDYxI\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Fri, 17 Oct 2025 13:49:44 GMT"
+      "Last-Modified": "Fri, 17 Oct 2025 16:01:57 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"1390d5gzxaa3nnq\""
+      "ETag": "\"12dyumy1zn23poi\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -10717,6 +10717,24 @@
     },
     "https://rg.ru/2025/10/17/rossiiane-smogut-sovershat-sdelki-s-nedvizhimostiu-po-biometrii-s-iiulia-2026-goda.html": {
       "ETag": "\"2ypbwabk821kaj\""
+    },
+    "https://ardexpert.ru/article/28412": {},
+    "https://ardexpert.ru/article/28411": {},
+    "http://ancb.ru/publication/read/20325": {},
+    "http://ancb.ru/publication/read/20324": {},
+    "http://ancb.ru/publication/read/20323": {},
+    "http://ancb.ru/publication/read/20322": {},
+    "http://ancb.ru/publication/read/20321": {},
+    "http://government.ru/news/56571/": {},
+    "http://government.ru/news/56572/": {},
+    "https://stroygaz.ru/news/dwelling/nazvan-top-malykh-gorodov-i-naselennykh-punktov-po-rostu-bronirovaniy-posutochnogo-zhilya/": {
+      "Last-Modified": "Fri, 17 Oct 2025 16:01:57 GMT"
+    },
+    "https://stroygaz.ru/news/dwelling/srednyaya-tsena-vtorichki-v-peterburge-pochti-dostigla-11-millionov/": {
+      "Last-Modified": "Fri, 17 Oct 2025 15:35:28 GMT"
+    },
+    "https://rg.ru/2025/10/17/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-20-po-26-oktiabria.html": {
+      "ETag": "\"nkf95yyegd27an\""
     }
   },
   "stats": {
@@ -12726,9 +12744,14 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-17T15:23:26.363980+00:00",
+    "last_run": "2025-10-17T18:21:51.797546+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -12741,33 +12764,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 598.0916130000082,
-        "connect_ms": 710.4362599999945,
-        "response_ms": 1308.5278730000027,
+        "dns_ms": 390.1117940000063,
+        "connect_ms": 553.3218510000211,
+        "response_ms": 943.4336450000274,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff191d9a9f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 2.12723200002074,
+        "connect_ms": 277.39391199997954,
+        "response_ms": 279.5211440000003,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 9362.507252,
+        "dns_ms": 5047.554505999983,
         "connect_ms": 0.0,
-        "response_ms": 1285.5996430000118,
+        "response_ms": 588.4464960000173,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 681.8781279999939,
-        "connect_ms": 0.0,
-        "response_ms": 674.5344969999678,
+        "dns_ms": 282.7402170000255,
+        "connect_ms": 277.53094600001305,
+        "response_ms": 560.2711630000385,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -12776,21 +12799,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "756d0dbaf127ee01c0269d721f2fa84436291dc1dc250eb5b8678b0de3c92f08",
+    "https://ardexpert.ru/article": "542a35534f60e830f9807fa1704810f323877b7618b3a3e4de2dc508c39cc30c",
     "https://www.gostinfo.ru/News/List": "c7d03e3b664639ad6319d3c260998af358c9150c0d23f7ef0068303b718f28ad",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4c796580abaa6c0883a1c75263cbfeedd2f8868bfe4eba3df0a8c2c489525dea",
-    "https://eec.eaeunion.org/news/": "0110b723645d665dbbb6a2b0ff542d93e3f141406ca1a72956e77b659b902f19",
+    "https://eec.eaeunion.org/news/": "565e693bf252a9742675e3a622066cc60d75107ae044aa37330d6f2200fca793",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "f6c14e511965fdb93785484ccbf2e567f1faa25533195f586e336d45ccc51b85",
-    "https://www.metalinfo.ru/ru/news": "f1162687cbe7dd5972809ac338676faeb7c5578ae18e13900e78ea48cecb47a2",
-    "https://www.pnp.ru/economics/": "96c411287654f764ee0cec56e19166405eaf6925eff0e4790d36d65117c265f9",
-    "https://erzrf.ru/news/": "56376b72b78ae1621493c36d1a1796905978642d0b450ee910c37abb918e6be3",
-    "https://ria-stk.ru/news/vse-novosti.php": "f8dd20d1537f2d0215f764bbe513b99be6545fd0adfd1f751d543954d8722ec3",
-    "http://government.ru/news/": "d0c6313fdc993db43e82d6334f02e08c6839c6ad58428c6855d9a7f4775977d5",
-    "https://stroygaz.ru/news/": "6219f8d23711fb4ab9e8cba6244ce9cc9db1fad0adb273903d9e6598d1892fbb",
-    "https://realty.ria.ru/lenta/": "0ac3087de07882b7882c542b76c777daa70465cb08d763bfb6f837f6a329b4d2",
-    "https://rg.ru/tema/ekonomika": "52cf7213a9af8b19182c0586b5642a7932474639ce6a9d6b5d67ff08c680c478",
-    "http://ancb.ru/publication": "979ccf5566c8615cad0a7226439c7812339efd73d03e9122823e27596cdd7570",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "eaa78fbad5d9274174eba54c9439a5e70f0db55b89a0ccf2be1e8a78f5be468e",
+    "https://www.metalinfo.ru/ru/news": "e5089d260f358a720405a62c91abb55bca58e8ff96ae092392d85018f3410150",
+    "https://www.pnp.ru/economics/": "f9bc349f88d048437f854274a97beaa4110f5b3f29e2260535199db6a94a26f8",
+    "https://erzrf.ru/news/": "477e66ca700a1679c905e22dca935b1886ba59b407ab66a8680987ae630d67e7",
+    "https://ria-stk.ru/news/vse-novosti.php": "bb6dd04084cb10da1467793a6a72cb7f3c629703b64e782703f89d8f9c41e587",
+    "http://government.ru/news/": "d297e4ab9b47d614b3ffdbd370f19add7d2c37f8f9121efaec13b1606c2dee09",
+    "https://stroygaz.ru/news/": "9be492db86c01c964474c4ee71395042063e20d3b2816df22e7124fed334ef9c",
+    "https://realty.ria.ru/lenta/": "2234dec6b9fd2898b53987d0690210696a2076b0bc24f18a26b65f365a631952",
+    "https://rg.ru/tema/ekonomika": "11bba21382f980754024a94b860dd83d6ae32384adc5c80f5b55bd5cab0142ec",
+    "http://ancb.ru/publication": "06c79cafbd5b3ae4c4047f178de3f5f1038125c6ecf90297f7e3e1aad619f843",
     "https://notim.ru": "a61bc5c3945f8245db6cc83cf60e3e7aa7db8725de21fe8c5ee7942fa781d010",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -12836,6 +12859,8 @@
       "https://notim.ru/news-partners/"
     ],
     "АРД: статьи": [
+      "https://ardexpert.ru/article/28412",
+      "https://ardexpert.ru/article/28411",
       "https://ardexpert.ru/article/28410",
       "https://ardexpert.ru/article/28409",
       "https://ardexpert.ru/article/28408",
@@ -12847,9 +12872,7 @@
       "https://ardexpert.ru/article/28398",
       "https://ardexpert.ru/article/28397",
       "https://ardexpert.ru/article/28396",
-      "https://ardexpert.ru/article/28366",
-      "https://ardexpert.ru/article/28393",
-      "https://ardexpert.ru/article/28392"
+      "https://ardexpert.ru/article/28393"
     ],
     "Гостинформ": [
       "https://www.gostinfo.ru/News/Details/2005",
@@ -13053,6 +13076,8 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245625&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56571/",
+      "http://government.ru/news/56572/",
       "http://government.ru/news/56570/",
       "http://government.ru/news/56569/",
       "http://government.ru/news/56567/",
@@ -13070,11 +13095,11 @@
       "http://government.ru/news/56552/",
       "http://government.ru/news/56555/",
       "http://government.ru/news/56554/",
-      "http://government.ru/news/56549/",
-      "http://government.ru/news/56544/",
-      "http://government.ru/news/56548/"
+      "http://government.ru/news/56549/"
     ],
     "Стройгаз.ру": [
+      "https://stroygaz.ru/news/dwelling/nazvan-top-malykh-gorodov-i-naselennykh-punktov-po-rostu-bronirovaniy-posutochnogo-zhilya/",
+      "https://stroygaz.ru/news/dwelling/srednyaya-tsena-vtorichki-v-peterburge-pochti-dostigla-11-millionov/",
       "https://stroygaz.ru/news/commercial/48-zdaniy-bylo-realizovano-na-torgakh-s-nachala-2025-goda-v-moskve/",
       "https://stroygaz.ru/news/commercial/obem-nomernogo-fonda-oteley-v-rossii-blizitsya-k-rekordu/",
       "https://stroygaz.ru/news/dwelling/v-moskve-prodazhi-klubnykh-domov-sokratilis-pochti-na-tret/",
@@ -13092,9 +13117,7 @@
       "https://stroygaz.ru/news/infrastructure/tolko-30-vvedennykh-ochistnykh-sooruzheniy-na-volge-i-baykale-rabotayut-effektivno/",
       "https://stroygaz.ru/news/official/pravitelstvo-okazhet-dopolnitelnuyu-podderzhku-regionam/",
       "https://stroygaz.ru/news/dwelling/podschitano-kolichestvo-kvartir-eksponiruemykh-v-starinnykh-domakh-peterburga/",
-      "https://stroygaz.ru/news/kadry/evraz-steel-box-podderzhit-proektirovshchikov-rabotayushchikh-dlya-malogo-i-srednego-biznesa/",
-      "https://stroygaz.ru/news/infrastructure/v-buryatii-postroyat-novyy-kampus-baykal-/",
-      "https://stroygaz.ru/news/dwelling/spros-na-vtorichnoe-zhile-v-peterburge-snizilsya-na-40-za-god/"
+      "https://stroygaz.ru/news/kadry/evraz-steel-box-podderzhit-proektirovshchikov-rabotayushchikh-dlya-malogo-i-srednego-biznesa/"
     ],
     "РИА Недвижимость: лента": [
       "https://realty.ria.ru/20251017/sud-2048939423.html",
@@ -13119,6 +13142,7 @@
       "https://realty.ria.ru/20251017/pvz-2047967294.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/17/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-20-po-26-oktiabria.html",
       "https://rg.ru/2025/10/17/indiia-zakupit-4-mln-barrelej-gajanskoj-nefti-u-amerikanskoj-kompanii-exxonmobil.html",
       "https://rg.ru/2025/10/17/reg-szfo/dacha-na-kryshe.html",
       "https://rg.ru/2025/10/17/kak-budet-rabotat-ekg-rejting-nacionalnaia-sistema-ocenki-delovoj-reputacii.html",
@@ -13149,13 +13173,17 @@
       "https://rg.ru/2025/10/17/rossiia-uspeshno-nalazhivaet-vypusk-polnostiu-otechestvennyh-dvigatelej.html",
       "https://rg.ru/2025/10/17/kabmin-razreshil-zakliuchat-soglasheniia-o-stabilizacii-cen-na-produkty-do-2029-goda.html",
       "https://rg.ru/2025/10/17/reg-cfo/v-moskve-otkroiut-11-kruglogodichnyh-sportivnyh-ploshchadok-novogo-formata.html",
-      "https://rg.ru/2025/10/17/v-cb-rossiianam-porekomendovali-derzhat-dengi-na-rublevyh-depozitah.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/16/v-sbere-rasskazali-o-tonkostiah-finansirovaniia-energeticheskoj-otrasli.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
       "https://rg.ru/2025/10/10/v-moskve-sostoialas-mezhdunarodnaia-konferenciia-po-ocenochnoj-deiatelnosti-mkod-2025.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20325",
+      "http://ancb.ru/publication/read/20324",
+      "http://ancb.ru/publication/read/20323",
+      "http://ancb.ru/publication/read/20322",
+      "http://ancb.ru/publication/read/20321",
       "http://ancb.ru/publication/read/20309",
       "http://ancb.ru/publication/read/20300",
       "http://ancb.ru/publication/read/20299",
@@ -13186,11 +13214,6 @@
       "http://ancb.ru/publication/read/20191",
       "http://ancb.ru/publication/read/20190",
       "http://ancb.ru/publication/read/20186",
-      "http://ancb.ru/publication/read/20172",
-      "http://ancb.ru/publication/read/20162",
-      "http://ancb.ru/publication/read/20154",
-      "http://ancb.ru/publication/read/20151",
-      "http://ancb.ru/publication/read/20147",
       "http://ancb.ru/publication/read/20207",
       "http://ancb.ru/publication/read/20197",
       "http://ancb.ru/publication/read/20193",
@@ -13198,65 +13221,20 @@
       "http://ancb.ru/publication/read/20191",
       "http://ancb.ru/publication/read/20190",
       "http://ancb.ru/publication/read/20186",
-      "http://ancb.ru/publication/read/20172",
-      "http://ancb.ru/publication/read/20162",
-      "http://ancb.ru/publication/read/20154",
-      "http://ancb.ru/publication/read/20151",
-      "http://ancb.ru/publication/read/20147",
       "http://ancb.ru/publication/read/20197",
       "http://ancb.ru/publication/read/20193",
       "http://ancb.ru/publication/read/20192",
       "http://ancb.ru/publication/read/20191",
       "http://ancb.ru/publication/read/20190",
       "http://ancb.ru/publication/read/20186",
-      "http://ancb.ru/publication/read/20172",
-      "http://ancb.ru/publication/read/20162",
-      "http://ancb.ru/publication/read/20154",
-      "http://ancb.ru/publication/read/20151",
-      "http://ancb.ru/publication/read/20147",
       "http://ancb.ru/publication/read/20197",
       "http://ancb.ru/publication/read/20193",
       "http://ancb.ru/publication/read/20192",
       "http://ancb.ru/publication/read/20191",
       "http://ancb.ru/publication/read/20190",
       "http://ancb.ru/publication/read/20186",
-      "http://ancb.ru/publication/read/20172",
-      "http://ancb.ru/publication/read/20162",
-      "http://ancb.ru/publication/read/20154",
-      "http://ancb.ru/publication/read/20151",
-      "http://ancb.ru/publication/read/20147",
       "http://ancb.ru/publication/read/20186",
-      "http://ancb.ru/publication/read/20172",
-      "http://ancb.ru/publication/read/20162",
-      "http://ancb.ru/publication/read/20154",
-      "http://ancb.ru/publication/read/20151",
-      "http://ancb.ru/publication/read/20147",
-      "http://ancb.ru/publication/read/20186",
-      "http://ancb.ru/publication/read/20172",
-      "http://ancb.ru/publication/read/20162",
-      "http://ancb.ru/publication/read/20154",
-      "http://ancb.ru/publication/read/20151",
-      "http://ancb.ru/publication/read/20147",
-      "http://ancb.ru/publication/read/20172",
-      "http://ancb.ru/publication/read/20162",
-      "http://ancb.ru/publication/read/20154",
-      "http://ancb.ru/publication/read/20151",
-      "http://ancb.ru/publication/read/20147",
-      "http://ancb.ru/publication/read/20172",
-      "http://ancb.ru/publication/read/20162",
-      "http://ancb.ru/publication/read/20154",
-      "http://ancb.ru/publication/read/20151",
-      "http://ancb.ru/publication/read/20147",
-      "http://ancb.ru/publication/read/20172",
-      "http://ancb.ru/publication/read/20162",
-      "http://ancb.ru/publication/read/20154",
-      "http://ancb.ru/publication/read/20151",
-      "http://ancb.ru/publication/read/20147",
-      "http://ancb.ru/publication/read/20172",
-      "http://ancb.ru/publication/read/20162",
-      "http://ancb.ru/publication/read/20154",
-      "http://ancb.ru/publication/read/20151",
-      "http://ancb.ru/publication/read/20147"
+      "http://ancb.ru/publication/read/20186"
     ]
   },
   "first_seen": {
@@ -16952,7 +16930,19 @@
     "12d213af78a7c3fb4804f28cd077b52edbfcd4be0a20354b93cf93b9137754c7": "2025-10-17T18:23:00+03:00",
     "6f732aa3e61c75cba56b63901f5883dce5c60b37f3be85dedbece5d4b6433384": "2025-10-17T18:23:00+03:00",
     "01a1ff79f67037eee5e5f51184f37003bbee57cd7c10061213373a282428ea46": "2025-10-17T18:23:00+03:00",
-    "a571e4594e778970e456c23552279cc51e4570eeb85fca152b9ff71b91ac12b3": "2025-10-17T18:23:00+03:00"
+    "a571e4594e778970e456c23552279cc51e4570eeb85fca152b9ff71b91ac12b3": "2025-10-17T18:23:00+03:00",
+    "5e9ca82692658ac32702f5324377cf70859e5260001d1f028db93822df358e80": "2025-10-17T21:21:00+03:00",
+    "a39abbda61c1df7ccd605b4238f881b7941f6c28efcd09e72de63a2c7ba3547f": "2025-10-17T21:21:00+03:00",
+    "70c6e8be7592f8a2e1573dc94dde5e616495c2911fc66e7bfb24011e23696293": "2025-10-17T21:21:00+03:00",
+    "6bdec30cbbe69bdd2083069f67c7a19f2c929755044495a295dd18ff1074a142": "2025-10-17T21:21:00+03:00",
+    "6ce40716f8d91c55d41988de14bd86452eededb4f0e851dcc8b4a0e18fdf6766": "2025-10-17T21:21:00+03:00",
+    "468e960e47e443578b36713aa5daeb45a19207fcc2e9cb32d4cd4718afbd60b6": "2025-10-17T21:21:00+03:00",
+    "64412e50812c088da6134cb8d77a8e9eb43222408623407164059b1c6d1d784b": "2025-10-17T21:21:00+03:00",
+    "9b9a87e166636a9dea02d017910be54f2c224100a3c480285b6fdb42e7ba8cd1": "2025-10-17T21:21:00+03:00",
+    "d3ce61a8babc3e1afe51aa7f878d793034f9576e4c65987dd3f8019beefc6769": "2025-10-17T21:21:00+03:00",
+    "51bbeeadb703f7b958f417b23c0a5dadc3ec2140588a4257a9c271d8a6551fd9": "2025-10-17T21:21:00+03:00",
+    "71837e54ecac2f998ee1d1f5d810605a439c3345e1fcfd477f74570fe2dc2fe3": "2025-10-17T21:21:00+03:00",
+    "82be588dd5124fcd31d4777ad7d99a046328bddc0562a245bb88672446e82bf5": "2025-10-17T21:21:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -16982,8 +16972,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff191f049d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1760714421.2963903
       },
       "warmup_done": false,
@@ -16993,31 +16983,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "G5rUwAwAkbWv640r",
+          "value": "MFfFWxR4gKtSZ8yl",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760715739
+          "expires": 1760726492
         },
         {
           "name": "__ddg10_",
-          "value": "1760714539",
+          "value": "1760725292",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760715739
+          "expires": 1760726492
         },
         {
           "name": "__ddg9_",
-          "value": "172.212.163.27",
+          "value": "172.200.23.69",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760715739
+          "expires": 1760726492
+        },
+        {
+          "name": "__ddg1_",
+          "value": "tuTD9DlBxuumqAeW7XQp",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1792261292
         },
         {
           "name": "PHPSESSID",
-          "value": "0b5ace6885a161f40f772b41a56ff24e",
+          "value": "af673906e83e3d6dffb5cc0d124e36f1",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -17044,11 +17042,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "P7WhdbnmHYyFddbtRhfPV5XJ8jJP8DEa",
+          "value": "t2P8ipiUKjr6h6v5ogbYt4IX5cFeUv0Y",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760725356
+          "expires": 1760736095
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -17056,7 +17054,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1791818556
+          "expires": 1791829295
         }
       ],
       "failures": {
@@ -21647,7 +21645,19 @@
     "https://rg.ru/2025/10/17/reg-pfo/v-kazani-nachnut-vypuskat-vertolet-mi-34.html": "https://rg.ru/2025/10/17/reg-pfo/v-kazani-nachnut-vypuskat-vertolet-mi-34.html",
     "https://rg.ru/2025/10/17/putin-dal-razreshenie-dochke-sinopec-iz-gonkonga-kupit-akcii-sibura.html": "https://rg.ru/2025/10/17/putin-dal-razreshenie-dochke-sinopec-iz-gonkonga-kupit-akcii-sibura.html",
     "https://rg.ru/2025/10/17/rzhd-planiruiut-sokratit-vakansii-i-ogranichit-priem-novyh-sotrudnikov.html": "https://rg.ru/2025/10/17/rzhd-planiruiut-sokratit-vakansii-i-ogranichit-priem-novyh-sotrudnikov.html",
-    "https://rg.ru/2025/10/17/rossiiane-smogut-sovershat-sdelki-s-nedvizhimostiu-po-biometrii-s-iiulia-2026-goda.html": "https://rg.ru/2025/10/17/rossiiane-smogut-sovershat-sdelki-s-nedvizhimostiu-po-biometrii-s-iiulia-2026-goda.html"
+    "https://rg.ru/2025/10/17/rossiiane-smogut-sovershat-sdelki-s-nedvizhimostiu-po-biometrii-s-iiulia-2026-goda.html": "https://rg.ru/2025/10/17/rossiiane-smogut-sovershat-sdelki-s-nedvizhimostiu-po-biometrii-s-iiulia-2026-goda.html",
+    "https://ardexpert.ru/article/28412": "https://ardexpert.ru/article/28412",
+    "https://ardexpert.ru/article/28411": "https://ardexpert.ru/article/28411",
+    "http://ancb.ru/publication/read/20325": "http://ancb.ru/publication/read/20325",
+    "http://ancb.ru/publication/read/20324": "http://ancb.ru/publication/read/20324",
+    "http://ancb.ru/publication/read/20323": "http://ancb.ru/publication/read/20323",
+    "http://ancb.ru/publication/read/20322": "http://ancb.ru/publication/read/20322",
+    "http://ancb.ru/publication/read/20321": "http://ancb.ru/publication/read/20321",
+    "http://government.ru/news/56571": "http://government.ru/news/56571",
+    "http://government.ru/news/56572": "http://government.ru/news/56572",
+    "https://stroygaz.ru/news/dwelling/nazvan-top-malykh-gorodov-i-naselennykh-punktov-po-rostu-bronirovaniy-posutochnogo-zhilya": "https://stroygaz.ru/news/dwelling/nazvan-top-malykh-gorodov-i-naselennykh-punktov-po-rostu-bronirovaniy-posutochnogo-zhilya",
+    "https://stroygaz.ru/news/dwelling/srednyaya-tsena-vtorichki-v-peterburge-pochti-dostigla-11-millionov": "https://stroygaz.ru/news/dwelling/srednyaya-tsena-vtorichki-v-peterburge-pochti-dostigla-11-millionov",
+    "https://rg.ru/2025/10/17/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-20-po-26-oktiabria.html": "https://rg.ru/2025/10/17/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-20-po-26-oktiabria.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -25592,7 +25602,19 @@
     "dc65890604ec7370cf51fbf3af20aa327730b632": "https://rg.ru/2025/10/17/reg-pfo/v-kazani-nachnut-vypuskat-vertolet-mi-34.html",
     "fd5ad44ab97da5d469b31ec69973ad79cc23fdce": "https://rg.ru/2025/10/17/putin-dal-razreshenie-dochke-sinopec-iz-gonkonga-kupit-akcii-sibura.html",
     "09f86761d5b8d1c552f3143959e75ad8a9c789cb": "https://rg.ru/2025/10/17/rzhd-planiruiut-sokratit-vakansii-i-ogranichit-priem-novyh-sotrudnikov.html",
-    "5d173cb7919394d29eb190c54698048ef645c35e": "https://rg.ru/2025/10/17/rossiiane-smogut-sovershat-sdelki-s-nedvizhimostiu-po-biometrii-s-iiulia-2026-goda.html"
+    "5d173cb7919394d29eb190c54698048ef645c35e": "https://rg.ru/2025/10/17/rossiiane-smogut-sovershat-sdelki-s-nedvizhimostiu-po-biometrii-s-iiulia-2026-goda.html",
+    "4fc268a417409c15bca49181092cd41a7a51436b": "https://ardexpert.ru/article/28412",
+    "bf5b75a0570d23ef4c9c14a18c718c9dba585559": "https://ardexpert.ru/article/28411",
+    "a530795a331a0f8724fdad522a519f8ad0432749": "http://ancb.ru/publication/read/20325",
+    "cd77c2227e0c8f8b460300af67c140b676f32721": "http://ancb.ru/publication/read/20324",
+    "ae1969fd4672d15f4de8af2bdbbb5da8882d980b": "http://ancb.ru/publication/read/20323",
+    "d6f0046e325536bded89078c37df2ee1378c22f4": "http://ancb.ru/publication/read/20322",
+    "93ffd4c48b0f8ee00d5900516f9c480ef8dabc58": "http://ancb.ru/publication/read/20321",
+    "a7a4124c93cf177f2dbd40f332d2c1d7effa8ef7": "http://government.ru/news/56571",
+    "f242199811b8862f435d1206f993bb8ba0eb9704": "http://government.ru/news/56572",
+    "9a0a17ff52760e5e80a0fc38861c2ff80865d8fe": "https://stroygaz.ru/news/dwelling/nazvan-top-malykh-gorodov-i-naselennykh-punktov-po-rostu-bronirovaniy-posutochnogo-zhilya",
+    "6d7c30c87a44718f2019c15759e7fa9eec429087": "https://stroygaz.ru/news/dwelling/srednyaya-tsena-vtorichki-v-peterburge-pochti-dostigla-11-millionov",
+    "deaf0a24cf7d85fef596643ab1fe1898202456af": "https://rg.ru/2025/10/17/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-20-po-26-oktiabria.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -30710,6 +30732,22 @@
     "https://rg.ru/2025/10/17/reg-pfo/v-kazani-nachnut-vypuskat-vertolet-mi-34.html": "12d213af78a7c3fb4804f28cd077b52edbfcd4be0a20354b93cf93b9137754c7",
     "https://rg.ru/2025/10/17/putin-dal-razreshenie-dochke-sinopec-iz-gonkonga-kupit-akcii-sibura.html": "6f732aa3e61c75cba56b63901f5883dce5c60b37f3be85dedbece5d4b6433384",
     "https://rg.ru/2025/10/17/rzhd-planiruiut-sokratit-vakansii-i-ogranichit-priem-novyh-sotrudnikov.html": "01a1ff79f67037eee5e5f51184f37003bbee57cd7c10061213373a282428ea46",
-    "https://rg.ru/2025/10/17/rossiiane-smogut-sovershat-sdelki-s-nedvizhimostiu-po-biometrii-s-iiulia-2026-goda.html": "a571e4594e778970e456c23552279cc51e4570eeb85fca152b9ff71b91ac12b3"
+    "https://rg.ru/2025/10/17/rossiiane-smogut-sovershat-sdelki-s-nedvizhimostiu-po-biometrii-s-iiulia-2026-goda.html": "a571e4594e778970e456c23552279cc51e4570eeb85fca152b9ff71b91ac12b3",
+    "https://ardexpert.ru/article/28412": "5e9ca82692658ac32702f5324377cf70859e5260001d1f028db93822df358e80",
+    "https://ardexpert.ru/article/28411": "a39abbda61c1df7ccd605b4238f881b7941f6c28efcd09e72de63a2c7ba3547f",
+    "http://ancb.ru/publication/read/20325": "70c6e8be7592f8a2e1573dc94dde5e616495c2911fc66e7bfb24011e23696293",
+    "http://ancb.ru/publication/read/20324": "6bdec30cbbe69bdd2083069f67c7a19f2c929755044495a295dd18ff1074a142",
+    "http://ancb.ru/publication/read/20323": "6ce40716f8d91c55d41988de14bd86452eededb4f0e851dcc8b4a0e18fdf6766",
+    "http://ancb.ru/publication/read/20322": "468e960e47e443578b36713aa5daeb45a19207fcc2e9cb32d4cd4718afbd60b6",
+    "http://ancb.ru/publication/read/20321": "64412e50812c088da6134cb8d77a8e9eb43222408623407164059b1c6d1d784b",
+    "http://government.ru/news/56571": "9b9a87e166636a9dea02d017910be54f2c224100a3c480285b6fdb42e7ba8cd1",
+    "http://government.ru/news/56571/": "9b9a87e166636a9dea02d017910be54f2c224100a3c480285b6fdb42e7ba8cd1",
+    "http://government.ru/news/56572": "d3ce61a8babc3e1afe51aa7f878d793034f9576e4c65987dd3f8019beefc6769",
+    "http://government.ru/news/56572/": "d3ce61a8babc3e1afe51aa7f878d793034f9576e4c65987dd3f8019beefc6769",
+    "https://stroygaz.ru/news/dwelling/nazvan-top-malykh-gorodov-i-naselennykh-punktov-po-rostu-bronirovaniy-posutochnogo-zhilya": "51bbeeadb703f7b958f417b23c0a5dadc3ec2140588a4257a9c271d8a6551fd9",
+    "https://stroygaz.ru/news/dwelling/nazvan-top-malykh-gorodov-i-naselennykh-punktov-po-rostu-bronirovaniy-posutochnogo-zhilya/": "51bbeeadb703f7b958f417b23c0a5dadc3ec2140588a4257a9c271d8a6551fd9",
+    "https://stroygaz.ru/news/dwelling/srednyaya-tsena-vtorichki-v-peterburge-pochti-dostigla-11-millionov": "71837e54ecac2f998ee1d1f5d810605a439c3345e1fcfd477f74570fe2dc2fe3",
+    "https://stroygaz.ru/news/dwelling/srednyaya-tsena-vtorichki-v-peterburge-pochti-dostigla-11-millionov/": "71837e54ecac2f998ee1d1f5d810605a439c3345e1fcfd477f74570fe2dc2fe3",
+    "https://rg.ru/2025/10/17/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-20-po-26-oktiabria.html": "82be588dd5124fcd31d4777ad7d99a046328bddc0562a245bb88672446e82bf5"
   }
 }
