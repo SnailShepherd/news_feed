@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 16 Oct 2025 21:16:21 GMT"
+      "Last-Modified": "Fri, 17 Oct 2025 01:12:19 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"25587-yjUcS+m6/bdgY2J53z2jI7QYcHM\""
+      "ETag": "W/\"25587-FcohfbBiRwMlvXc2xqBqCyylztM\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"166ewc6ld953oh5\""
+      "ETag": "\"8sqhzkhros3ody\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -10304,6 +10304,15 @@
     },
     "https://rg.ru/2025/10/16/samozaniatye-prorabotat-vopros.html": {
       "ETag": "\"he4j8uh4kc2idr\""
+    },
+    "https://realty.ria.ru/20251017/danilova-2048678987.html": {
+      "Last-Modified": "Thu, 16 Oct 2025 22:35:01 GMT"
+    },
+    "https://rg.ru/2025/10/17/bolee-10-rossijskih-aeroportov-ogranichili-priem-i-vypusk-samoletov.html": {
+      "ETag": "\"9v3hqrxu5e1mfb\""
+    },
+    "https://rg.ru/2025/10/17/senator-melnikova-zarplata-v-100-tysiach-rublej-prineset-43-pensionnyh-balla.html": {
+      "ETag": "\"s2o57g7cuc1oe9\""
     }
   },
   "stats": {
@@ -12247,9 +12256,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3a84895be0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3a844e9450>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3a844e9590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3a844ec640>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3a844ecd60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3a843e9250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-16T21:16:06.604185+00:00",
+    "last_run": "2025-10-17T01:11:59.812387+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -12262,33 +12282,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 802.9691380000088,
-        "connect_ms": 264.3095649999907,
-        "response_ms": 1067.2787029999995,
+        "dns_ms": 534.3576369999994,
+        "connect_ms": 164.35814499999424,
+        "response_ms": 698.7157819999936,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 176.35289500000795,
-        "connect_ms": 251.57527799999002,
-        "response_ms": 427.92817299999797,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3a843e9250>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 8368.668865999978,
+        "dns_ms": 4760.697590000007,
         "connect_ms": 0.0,
-        "response_ms": 1116.869869999988,
+        "response_ms": 781.0368239999832,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 378.7093809999931,
-        "connect_ms": 230.6065860000217,
-        "response_ms": 609.3159670000148,
+        "dns_ms": 130.73253099997828,
+        "connect_ms": 431.4384440000367,
+        "response_ms": 562.170975000015,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -12297,21 +12317,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "5d93bf96df8bcbe7a26d8ecf4be61ff37017b87c64558038b39d5e8f41e58348",
+    "https://ardexpert.ru/article": "8b0b0df5c64d7963ab3071e5c5ea8d42219c7c59afd25981de7d6b3557f42a72",
     "https://www.gostinfo.ru/News/List": "a498c98a2a1243255cceb2538255054452aaf8e40505388192e2a4a96992815a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4c796580abaa6c0883a1c75263cbfeedd2f8868bfe4eba3df0a8c2c489525dea",
-    "https://eec.eaeunion.org/news/": "7431914ffe54f3c15eb8de70f8542c56def69833fbec30dbfb8ac77fbc0f6ebc",
+    "https://eec.eaeunion.org/news/": "d7f78ece39bb4362386aa8d13c4cd981b90601e685f5f56b4ed09189ed4c34e1",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "42e59050052e90440d6577f05ee1867c6c1118906014e6b581899842aa53b616",
-    "https://www.metalinfo.ru/ru/news": "8c12c69e2d682e8963f7def1f7f691e9e816b89780ec3b0189a060681f6c5c23",
-    "https://www.pnp.ru/economics/": "d38229773774e468ee3741f992c4c802a619ec557650fa413962de3fe67a854e",
-    "https://erzrf.ru/news/": "6f278e9e84ae9e5012bf6bb921cffe714426787e61888b947e240c4c7d457145",
-    "https://ria-stk.ru/news/vse-novosti.php": "9f6f74eda96b69417d9d7822d78503585960e8b9da699af2b803db9ab542f15f",
-    "http://government.ru/news/": "4c25499df0e5d21ad75a5af607348dc6061b619744f9814c1710bbf76ce53e9d",
-    "https://stroygaz.ru/news/": "c237bfc46ef77902fb4a4f461a6a3b861ce2f366d518fad810b64b28af2ac5dc",
-    "https://realty.ria.ru/lenta/": "3db230060e6a2099558fb5ab17c248bd159d1c4854e3fbda60d7740215618af7",
-    "https://rg.ru/tema/ekonomika": "d2c0db56f0412f62920158155df3385488c0f1ee42af6d3edcb3b3aaabf22492",
-    "http://ancb.ru/publication": "7a382afd6c817f4c0eed2abe0dd3a9e8bf78c68c5510da8d1b244c65151c0234",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "df5d959ff5055b7b3c6ea88a8815da769aa43766341e6e4e27bf3968484c7a29",
+    "https://www.metalinfo.ru/ru/news": "692516c4415fb25224799eea7b451876c72e23e5703c15907be40dd1f58682e1",
+    "https://www.pnp.ru/economics/": "84659e5b96ad17703c61bacecfdbcc73d02c2bf15abd87c0b7f9f5785f87b679",
+    "https://erzrf.ru/news/": "b9c9ac23ce2d13cd4f3673e9bb73ec2841cb492c944e33a15ac84c1b368552ee",
+    "https://ria-stk.ru/news/vse-novosti.php": "e6ae9b07edf10fd1e08c34b409973975ef02f594f6b8dc1a7d4e18b6b82ae29e",
+    "http://government.ru/news/": "712cd5c11512fe59d0244884dd75f88362e4b38831009681628b20caca37c970",
+    "https://stroygaz.ru/news/": "a4d2034276b551a2acfa169172048cc8630e5e5d073a78eafa3ad4987f2b93ad",
+    "https://realty.ria.ru/lenta/": "503990ca210c9cd1dc3c41a94203b029b086186dfbeac393652efe18a0a14434",
+    "https://rg.ru/tema/ekonomika": "2b7be0e40b5f35f967556f37e7e9b4bd642f225302ae01d6026114c2f2874efc",
+    "http://ancb.ru/publication": "979ccf5566c8615cad0a7226439c7812339efd73d03e9122823e27596cdd7570",
     "https://notim.ru": "a61bc5c3945f8245db6cc83cf60e3e7aa7db8725de21fe8c5ee7942fa781d010",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -12623,6 +12643,7 @@
       "https://stroygaz.ru/news/info-partners-news/premiya-lidery-proektirovaniya-podderzhivaet-proektirovshchikov-rabotayushchikh-s-msp/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251017/danilova-2048678987.html",
       "https://realty.ria.ru/20251016/tsian-2048700412.html",
       "https://realty.ria.ru/20251016/zhilinspektsiya-2048699857.html",
       "https://realty.ria.ru/20251016/gals-develoment-2048678423.html",
@@ -12641,10 +12662,11 @@
       "https://realty.ria.ru/20251016/ljudi-2048606416.html",
       "https://realty.ria.ru/20251016/rosset-2048604240.html",
       "https://realty.ria.ru/20251016/most-2048597623.html",
-      "https://realty.ria.ru/20251016/novostrojki-2048592224.html",
-      "https://realty.ria.ru/20251016/donstroy-2048587747.html"
+      "https://realty.ria.ru/20251016/novostrojki-2048592224.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/17/bolee-10-rossijskih-aeroportov-ogranichili-priem-i-vypusk-samoletov.html",
+      "https://rg.ru/2025/10/17/senator-melnikova-zarplata-v-100-tysiach-rublej-prineset-43-pensionnyh-balla.html",
       "https://rg.ru/2025/10/16/eksperty-obiasnili-rekordnyj-rost-mezhdunarodnyh-rezervov-rossii.html",
       "https://rg.ru/2025/10/17/sp-vyiavila-neobhodimost-optimizacii-sistemy-filialov-terfondov-oms.html",
       "https://rg.ru/2025/10/16/murashko-dolia-rossijskih-lekarstv-na-farmrynke-dostigla-70.html",
@@ -12676,8 +12698,6 @@
       "https://rg.ru/2025/10/16/v-sbere-rasskazali-o-tonkostiah-finansirovaniia-energeticheskoj-otrasli.html",
       "https://rg.ru/2025/10/16/reg-cfo/sobianin-v-moskve-sozdaetsia-edinaia-set-upravleniia-energoresursami.html",
       "https://rg.ru/2025/10/16/dmitriev-evropa-poteriala-bolee-13-trln-evro-iz-za-otkaza-ot-rossijskogo-gaz.html",
-      "https://rg.ru/2025/10/16/reg-szfo/s-noiabria-peterburg-i-kubinskij-varadero-sviazhet-priamoj-aviarejs.html",
-      "https://rg.ru/2025/10/16/vosmietazhnyj-parking-postroiat-v-podmoskovnyh-mytishchah.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
       "https://rg.ru/2025/10/10/v-moskve-sostoialas-mezhdunarodnaia-konferenciia-po-ocenochnoj-deiatelnosti-mkod-2025.html"
     ],
@@ -16282,7 +16302,10 @@
     "b44d56d8d1735d28ea3345c093c6604997d1c059aa4238e94bbbba897f15cdde": "2025-10-17T00:16:00+03:00",
     "68dd064706d7836bd22aeeeed54e77145bc513cf46be02f610b8bf99f8ed1d93": "2025-10-17T00:16:00+03:00",
     "6e42c197c614977068a441bf411490b1a1e78a0f5791c25fb3e9a983404d335d": "2025-10-17T00:16:00+03:00",
-    "31fb1f0a5253a589c60f4b7bb51bf286a3a31e3950bc7e947f49e638540b71d5": "2025-10-17T00:16:00+03:00"
+    "31fb1f0a5253a589c60f4b7bb51bf286a3a31e3950bc7e947f49e638540b71d5": "2025-10-17T00:16:00+03:00",
+    "d455201075ca7dafbca1d2cc87c85030cb8064d07bec750ab909663faf0f3e17": "2025-10-17T04:11:00+03:00",
+    "5b1296dc5d7d223ec927a68a7972dbda50b505aa2bf35e14b643f4e659ba548e": "2025-10-17T04:11:00+03:00",
+    "c64139f060ef25712fab0e333d10eda9b027019f0478fad2ad0fb2ed710b8b85": "2025-10-17T04:11:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -16312,9 +16335,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1760618108.4842458
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3a844ecd60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1760663457.9587023
       },
       "warmup_done": false,
       "last_success_path": null
@@ -16323,31 +16346,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "w24uTB98gWDl3ZGX",
+          "value": "IA4AxE7bDX3rT8L3",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760650548
+          "expires": 1760664707
         },
         {
           "name": "__ddg10_",
-          "value": "1760649348",
+          "value": "1760663507",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760650548
+          "expires": 1760664707
         },
         {
           "name": "__ddg9_",
-          "value": "64.236.201.54",
+          "value": "20.81.183.81",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760650548
+          "expires": 1760664707
+        },
+        {
+          "name": "__ddg1_",
+          "value": "8Eg7SZwmTMHccYASbPvr",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1792199507
         },
         {
           "name": "PHPSESSID",
-          "value": "d74b6001047e60c28979e4f9e37f30aa",
+          "value": "5b14dd272875c3f6b14a7427d94ec192",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -16374,11 +16405,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "vXl1aiHiNUgZXQyBOsA8cvvVrgqde2MS",
+          "value": "q3B0LbCWf5iryoip6RcLvdmtFFbK8w2S",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760649813
+          "expires": 1760674309
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -16386,7 +16417,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1791743012
+          "expires": 1791767509
         }
       ],
       "failures": {
@@ -20701,7 +20732,10 @@
     "https://rg.ru/2025/10/17/sp-vyiavila-neobhodimost-optimizacii-sistemy-filialov-terfondov-oms.html": "https://rg.ru/2025/10/17/sp-vyiavila-neobhodimost-optimizacii-sistemy-filialov-terfondov-oms.html",
     "https://rg.ru/2025/10/16/murashko-dolia-rossijskih-lekarstv-na-farmrynke-dostigla-70.html": "https://rg.ru/2025/10/16/murashko-dolia-rossijskih-lekarstv-na-farmrynke-dostigla-70.html",
     "https://rg.ru/2025/10/16/reg-cfo/skorost-naprokat.html": "https://rg.ru/2025/10/16/reg-cfo/skorost-naprokat.html",
-    "https://rg.ru/2025/10/16/samozaniatye-prorabotat-vopros.html": "https://rg.ru/2025/10/16/samozaniatye-prorabotat-vopros.html"
+    "https://rg.ru/2025/10/16/samozaniatye-prorabotat-vopros.html": "https://rg.ru/2025/10/16/samozaniatye-prorabotat-vopros.html",
+    "https://realty.ria.ru/20251017/danilova-2048678987.html": "https://realty.ria.ru/20251017/danilova-2048678987.html",
+    "https://rg.ru/2025/10/17/bolee-10-rossijskih-aeroportov-ogranichili-priem-i-vypusk-samoletov.html": "https://rg.ru/2025/10/17/bolee-10-rossijskih-aeroportov-ogranichili-priem-i-vypusk-samoletov.html",
+    "https://rg.ru/2025/10/17/senator-melnikova-zarplata-v-100-tysiach-rublej-prineset-43-pensionnyh-balla.html": "https://rg.ru/2025/10/17/senator-melnikova-zarplata-v-100-tysiach-rublej-prineset-43-pensionnyh-balla.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -24449,7 +24483,10 @@
     "4bb52d74a2994e5869d1b8dfe9c783ce11068620": "https://rg.ru/2025/10/17/sp-vyiavila-neobhodimost-optimizacii-sistemy-filialov-terfondov-oms.html",
     "ec85d6285cca14f48a5d4e34d81ef922bb3b4609": "https://rg.ru/2025/10/16/murashko-dolia-rossijskih-lekarstv-na-farmrynke-dostigla-70.html",
     "6af91b7041bdfebb3ea1bfd7c543c82fd06a0edc": "https://rg.ru/2025/10/16/reg-cfo/skorost-naprokat.html",
-    "b9f77254eacab15aeb22b108864ac52334f6c711": "https://rg.ru/2025/10/16/samozaniatye-prorabotat-vopros.html"
+    "b9f77254eacab15aeb22b108864ac52334f6c711": "https://rg.ru/2025/10/16/samozaniatye-prorabotat-vopros.html",
+    "757647c66bd58ad8a578571360ad795a48ad269a": "https://realty.ria.ru/20251017/danilova-2048678987.html",
+    "d92b76009556d997f8cd661a041e2acb8130b36a": "https://rg.ru/2025/10/17/bolee-10-rossijskih-aeroportov-ogranichili-priem-i-vypusk-samoletov.html",
+    "ecfb748df8080c868b53bf4ccbc2ee5cbb1e7607": "https://rg.ru/2025/10/17/senator-melnikova-zarplata-v-100-tysiach-rublej-prineset-43-pensionnyh-balla.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -29265,6 +29302,9 @@
     "https://rg.ru/2025/10/17/sp-vyiavila-neobhodimost-optimizacii-sistemy-filialov-terfondov-oms.html": "b44d56d8d1735d28ea3345c093c6604997d1c059aa4238e94bbbba897f15cdde",
     "https://rg.ru/2025/10/16/murashko-dolia-rossijskih-lekarstv-na-farmrynke-dostigla-70.html": "68dd064706d7836bd22aeeeed54e77145bc513cf46be02f610b8bf99f8ed1d93",
     "https://rg.ru/2025/10/16/reg-cfo/skorost-naprokat.html": "6e42c197c614977068a441bf411490b1a1e78a0f5791c25fb3e9a983404d335d",
-    "https://rg.ru/2025/10/16/samozaniatye-prorabotat-vopros.html": "31fb1f0a5253a589c60f4b7bb51bf286a3a31e3950bc7e947f49e638540b71d5"
+    "https://rg.ru/2025/10/16/samozaniatye-prorabotat-vopros.html": "31fb1f0a5253a589c60f4b7bb51bf286a3a31e3950bc7e947f49e638540b71d5",
+    "https://realty.ria.ru/20251017/danilova-2048678987.html": "d455201075ca7dafbca1d2cc87c85030cb8064d07bec750ab909663faf0f3e17",
+    "https://rg.ru/2025/10/17/bolee-10-rossijskih-aeroportov-ogranichili-priem-i-vypusk-samoletov.html": "5b1296dc5d7d223ec927a68a7972dbda50b505aa2bf35e14b643f4e659ba548e",
+    "https://rg.ru/2025/10/17/senator-melnikova-zarplata-v-100-tysiach-rublej-prineset-43-pensionnyh-balla.html": "c64139f060ef25712fab0e333d10eda9b027019f0478fad2ad0fb2ed710b8b85"
   }
 }
