@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 18 Oct 2025 12:29:46 GMT"
+      "Last-Modified": "Sat, 18 Oct 2025 15:16:56 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"2257c-DO8vKHngl4Q5DyXaLtV8YTFfu+Y\""
+      "ETag": "W/\"22bb7-1/PyjwqfJR30MkHmE1OSKFDfIfQ\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"phjvw31dz53fvg\""
+      "ETag": "\"ehb2zftb23hxx\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -10795,6 +10795,15 @@
     },
     "https://rg.ru/2025/10/18/chehiia-v-avguste-uvelichila-postavki-piva-v-rossiiu-na-10.html": {
       "ETag": "\"e3s47k1rp21ni3\""
+    },
+    "https://rg.ru/2025/10/18/ekspert-shcherbachenko-nazval-5-mest-v-rossii-kotorye-stoit-posetit-oseniu.html": {
+      "ETag": "\"83fhfhicnt1ydy\""
+    },
+    "https://rg.ru/2025/10/18/gosposhlina-za-registraciiu-prava-sobstvennosti-razmer-oplata-i-rekvizity.html": {
+      "ETag": "\"13qbh1bmoeb2ecr\""
+    },
+    "https://rg.ru/2025/10/18/penthaus-chto-eto-osobennosti-pliusy-i-minusy.html": {
+      "ETag": "\"16i1q4bstu93fai\""
     }
   },
   "stats": {
@@ -12875,9 +12884,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2a2bc61be0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2a2b6f1450>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2a2b6f1590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2a2b6f4640>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2a2b6f4d60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2a2b5f9490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-18T12:29:29.086547+00:00",
+    "last_run": "2025-10-18T15:16:42.401191+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -12890,33 +12910,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 618.0401910000057,
-        "connect_ms": 694.214211000002,
-        "response_ms": 1312.2544020000078,
+        "dns_ms": 940.2279720000024,
+        "connect_ms": 2070.4945570000177,
+        "response_ms": 3010.72252900002,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 402.32856299999753,
-        "connect_ms": 657.6368959999854,
-        "response_ms": 1059.965458999983,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2a2b5f9490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 768.8254589999985,
-        "connect_ms": 969.0131950000023,
-        "response_ms": 1737.8386540000008,
+        "dns_ms": 6407.120963000011,
+        "connect_ms": 0.0,
+        "response_ms": 994.7589749999679,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 183.4705750000012,
-        "connect_ms": 453.8533099999995,
-        "response_ms": 637.3238850000007,
+        "dns_ms": 1292.7092990000233,
+        "connect_ms": 0.0,
+        "response_ms": 768.2074509999666,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -12925,21 +12945,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "9b305e9e0879e0e833fe6e40e5ca7ab8f1ff200167c6f8ace8d3b9b4d9426ee4",
+    "https://ardexpert.ru/article": "01e80556a101b7afee92cb212d7703bab8adb5709a51aa69c38da15a873d50de",
     "https://www.gostinfo.ru/News/List": "c7d03e3b664639ad6319d3c260998af358c9150c0d23f7ef0068303b718f28ad",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4c796580abaa6c0883a1c75263cbfeedd2f8868bfe4eba3df0a8c2c489525dea",
-    "https://eec.eaeunion.org/news/": "006857aa46fe4d3c2fa5760f6edef42144a0be4c48f998fe831d0d82dce6a5ea",
+    "https://eec.eaeunion.org/news/": "c8620c32799bf453549f5b10800114d2622ea8725520cae24fed1d3413eabfb6",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "c3663b1a7cc799bd9ee213f41ba2ec75e9f67a7f97936fc2e381df9b1a7a8e02",
-    "https://www.metalinfo.ru/ru/news": "ab1ba2e9c94702926d032cbb97b25ae1bfd816145dcc221af06699800813d36c",
-    "https://www.pnp.ru/economics/": "ba1219e866387b189ec2bad1b1e0a44aa0a367352e4ed79accb1c1b98a1a1416",
-    "https://erzrf.ru/news/": "d3512ff190177fca287551f2775e8a4ff2305f9f3a763e4f7d83e4039bbd9034",
-    "https://ria-stk.ru/news/vse-novosti.php": "f61370de33b6c2da0a26b9edd9668429a68f1201dd03bb335afa10a361e770ad",
-    "http://government.ru/news/": "5f8e8a1add157912452ebc64322091cf4598ffee4189800b6bcbcbd9fcb34c8a",
-    "https://stroygaz.ru/news/": "8dba5ac3c22c3b25db3e1ffd31ffd034e29d16aec0585f043a154354928024fa",
-    "https://realty.ria.ru/lenta/": "63fee94488023f38aa37373b40654739e39957e7b4ec984d2646ea37a00cc08c",
-    "https://rg.ru/tema/ekonomika": "c41bea55da2818558c9bd2910e76489a71a0715beb96a5b8a61123253ffb71ee",
-    "http://ancb.ru/publication": "06c79cafbd5b3ae4c4047f178de3f5f1038125c6ecf90297f7e3e1aad619f843",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "768bd900d12b37605dc2d492e32086371c0fc7bdf095731e87a94ffc7cb6120a",
+    "https://www.metalinfo.ru/ru/news": "9d64b826bdc74463bb113b386fc025d4ad8c418ee84587e4552f160a4bc14115",
+    "https://www.pnp.ru/economics/": "ff86b4b639e1945cd441e96e2f4cca6515d5acd36a98fbb54c3da77b7be3f271",
+    "https://erzrf.ru/news/": "090a44a7d51dcb568bbc1ccd5136b1af8f5e656d0041d3fb2f4b02dd6b2da2a5",
+    "https://ria-stk.ru/news/vse-novosti.php": "a054dfa892184638b8f2a9d104387cd46df546ed739e7331894c83909c79db0c",
+    "http://government.ru/news/": "3416a83a1a89908af47c90ae6c428382c980a6586e6c1e6d1a750db751356a81",
+    "https://stroygaz.ru/news/": "91d48d19d6b0cc6c4d6f34b4440a8a9a78e66a261c485840f1f499659ce1b5ae",
+    "https://realty.ria.ru/lenta/": "e8d0eceee8ae536edc9630e29d9b62530e3e0ddd1e5ae12ba68228f93f8529d8",
+    "https://rg.ru/tema/ekonomika": "d1139d4a935d77a0c9eaa73642393adc63305530015e18cd352e9c56ab13fb35",
+    "http://ancb.ru/publication": "4cba97171ad068144713cfadb4335efd31f55f666f1fba2f6e6b35559aba39e4",
     "https://notim.ru": "a61bc5c3945f8245db6cc83cf60e3e7aa7db8725de21fe8c5ee7942fa781d010",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -13268,6 +13288,9 @@
       "https://realty.ria.ru/20251017/prodazhi-2048575685.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/18/ekspert-shcherbachenko-nazval-5-mest-v-rossii-kotorye-stoit-posetit-oseniu.html",
+      "https://rg.ru/2025/10/18/gosposhlina-za-registraciiu-prava-sobstvennosti-razmer-oplata-i-rekvizity.html",
+      "https://rg.ru/2025/10/18/penthaus-chto-eto-osobennosti-pliusy-i-minusy.html",
       "https://rg.ru/2025/10/18/iurist-rasskazala-kak-pokupateliam-zhilia-ne-popast-v-aferu-po-precedentu-dolinoj.html",
       "https://rg.ru/2025/10/18/kamchatka-poluchit-svyshe-1-mlrd-rublej-na-pokupku-topochnogo-mazuta.html",
       "https://rg.ru/2025/10/18/reg-cfo/v-moskve-startovala-reabilitaciia-verhnego-i-nizhnego-kuzminskih-prudov.html",
@@ -13296,9 +13319,6 @@
       "https://rg.ru/2025/10/17/reg-pfo/v-kazani-nachnut-vypuskat-vertolet-mi-34.html",
       "https://rg.ru/2025/10/17/putin-dal-razreshenie-dochke-sinopec-iz-gonkonga-kupit-akcii-sibura.html",
       "https://rg.ru/2025/10/17/rzhd-planiruiut-sokratit-vakansii-i-ogranichit-priem-novyh-sotrudnikov.html",
-      "https://rg.ru/2025/10/17/rossiiane-smogut-sovershat-sdelki-s-nedvizhimostiu-po-biometrii-s-iiulia-2026-goda.html",
-      "https://rg.ru/2025/10/17/reg-cfo/kolbasu-v-podmoskove-nachali-delat-roboty.html",
-      "https://rg.ru/2025/10/17/reg-cfo/sobianin-rasskazal-chto-eshche-na-5-marshrutah-nachalis-ispytaniia-bespilotnyh-tramvaev.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/16/v-sbere-rasskazali-o-tonkostiah-finansirovaniia-energeticheskoj-otrasli.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
@@ -17091,7 +17111,10 @@
     "b74e8caeb09d551d840d1b3c9343e696eca10b130207b0593e27023f227d994d": "2025-10-18T15:29:00+03:00",
     "537ec7630209cb4b0a788d5bac51e882eec45a5d59ea2e740dec525aeb60db2b": "2025-10-18T15:29:00+03:00",
     "e3b514c4f77cee20711d988c60c40c926e6583473d4a34a7d9e52c7bd0458a90": "2025-10-18T15:29:00+03:00",
-    "cdd6dbbeb663cc1057d4e131d1052f8da7877d448fc5221d6b12ff922107abb3": "2025-10-18T15:29:00+03:00"
+    "cdd6dbbeb663cc1057d4e131d1052f8da7877d448fc5221d6b12ff922107abb3": "2025-10-18T15:29:00+03:00",
+    "bb996c1c234a955e9027813aad8221d79b49e8be7a4988b96f80bf047cb47efc": "2025-10-18T18:16:00+03:00",
+    "9373f467b6585aa7a51662838661475f9a552fa4891543033d608f829b762b0e": "2025-10-18T18:16:00+03:00",
+    "81761d088c480bf04fa16a5ede7e7ea29b9a8275303e2abb04fa9f6dc2937549": "2025-10-18T18:16:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -17121,9 +17144,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1760778960.4983876
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2a2b6f4d60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1760800531.8552752
       },
       "warmup_done": false,
       "last_success_path": null
@@ -17132,31 +17155,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "vKcEZRK2Iwgk32mc",
+          "value": "oSaihukdpvNWvL2l",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760791753
+          "expires": 1760801783
         },
         {
           "name": "__ddg10_",
-          "value": "1760790553",
+          "value": "1760800583",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760791753
+          "expires": 1760801783
         },
         {
           "name": "__ddg9_",
-          "value": "64.236.142.130",
+          "value": "172.182.202.196",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760791753
+          "expires": 1760801783
+        },
+        {
+          "name": "__ddg1_",
+          "value": "vJ83d7c22aWkw4uAcUfA",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1792336583
         },
         {
           "name": "PHPSESSID",
-          "value": "7d55d585708e79667964b3b21c10cadd",
+          "value": "da5bd75055fe9e795a95e45bef7cb604",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -17183,11 +17214,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "rgKTY0Cxa2XXtm3j9Rg6yKc8PyD8xvXn",
+          "value": "jbbEnIXwXLzvGlTRdWOrV32CA45xLqxr",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760801355
+          "expires": 1760811387
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -17195,7 +17226,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1791894555
+          "expires": 1791904587
         }
       ],
       "failures": {
@@ -21823,7 +21854,10 @@
     "https://rg.ru/2025/10/18/iurist-rasskazala-kak-pokupateliam-zhilia-ne-popast-v-aferu-po-precedentu-dolinoj.html": "https://rg.ru/2025/10/18/iurist-rasskazala-kak-pokupateliam-zhilia-ne-popast-v-aferu-po-precedentu-dolinoj.html",
     "https://rg.ru/2025/10/18/kamchatka-poluchit-svyshe-1-mlrd-rublej-na-pokupku-topochnogo-mazuta.html": "https://rg.ru/2025/10/18/kamchatka-poluchit-svyshe-1-mlrd-rublej-na-pokupku-topochnogo-mazuta.html",
     "https://rg.ru/2025/10/18/reg-cfo/v-moskve-startovala-reabilitaciia-verhnego-i-nizhnego-kuzminskih-prudov.html": "https://rg.ru/2025/10/18/reg-cfo/v-moskve-startovala-reabilitaciia-verhnego-i-nizhnego-kuzminskih-prudov.html",
-    "https://rg.ru/2025/10/18/chehiia-v-avguste-uvelichila-postavki-piva-v-rossiiu-na-10.html": "https://rg.ru/2025/10/18/chehiia-v-avguste-uvelichila-postavki-piva-v-rossiiu-na-10.html"
+    "https://rg.ru/2025/10/18/chehiia-v-avguste-uvelichila-postavki-piva-v-rossiiu-na-10.html": "https://rg.ru/2025/10/18/chehiia-v-avguste-uvelichila-postavki-piva-v-rossiiu-na-10.html",
+    "https://rg.ru/2025/10/18/ekspert-shcherbachenko-nazval-5-mest-v-rossii-kotorye-stoit-posetit-oseniu.html": "https://rg.ru/2025/10/18/ekspert-shcherbachenko-nazval-5-mest-v-rossii-kotorye-stoit-posetit-oseniu.html",
+    "https://rg.ru/2025/10/18/gosposhlina-za-registraciiu-prava-sobstvennosti-razmer-oplata-i-rekvizity.html": "https://rg.ru/2025/10/18/gosposhlina-za-registraciiu-prava-sobstvennosti-razmer-oplata-i-rekvizity.html",
+    "https://rg.ru/2025/10/18/penthaus-chto-eto-osobennosti-pliusy-i-minusy.html": "https://rg.ru/2025/10/18/penthaus-chto-eto-osobennosti-pliusy-i-minusy.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -25803,7 +25837,10 @@
     "3d267fd78ba140ed8c0bd26b5c020f0277f9d185": "https://rg.ru/2025/10/18/iurist-rasskazala-kak-pokupateliam-zhilia-ne-popast-v-aferu-po-precedentu-dolinoj.html",
     "5c194ae5a9428096fce59177d936a2cbd7e84471": "https://rg.ru/2025/10/18/kamchatka-poluchit-svyshe-1-mlrd-rublej-na-pokupku-topochnogo-mazuta.html",
     "9485453d8bb28d97de6ba0b17916aa0848845790": "https://rg.ru/2025/10/18/reg-cfo/v-moskve-startovala-reabilitaciia-verhnego-i-nizhnego-kuzminskih-prudov.html",
-    "acb6f1b35c46d7f791e8baf9d4d0264040fb789c": "https://rg.ru/2025/10/18/chehiia-v-avguste-uvelichila-postavki-piva-v-rossiiu-na-10.html"
+    "acb6f1b35c46d7f791e8baf9d4d0264040fb789c": "https://rg.ru/2025/10/18/chehiia-v-avguste-uvelichila-postavki-piva-v-rossiiu-na-10.html",
+    "90d876ce2ee013615b7ea189f80d5f7f535a1d10": "https://rg.ru/2025/10/18/ekspert-shcherbachenko-nazval-5-mest-v-rossii-kotorye-stoit-posetit-oseniu.html",
+    "494cad5f091505b75020b625716c3c056b9e4dcc": "https://rg.ru/2025/10/18/gosposhlina-za-registraciiu-prava-sobstvennosti-razmer-oplata-i-rekvizity.html",
+    "c56333eaac8853a7952187f79133c315c33969b9": "https://rg.ru/2025/10/18/penthaus-chto-eto-osobennosti-pliusy-i-minusy.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -30968,6 +31005,9 @@
     "https://rg.ru/2025/10/18/iurist-rasskazala-kak-pokupateliam-zhilia-ne-popast-v-aferu-po-precedentu-dolinoj.html": "b74e8caeb09d551d840d1b3c9343e696eca10b130207b0593e27023f227d994d",
     "https://rg.ru/2025/10/18/kamchatka-poluchit-svyshe-1-mlrd-rublej-na-pokupku-topochnogo-mazuta.html": "537ec7630209cb4b0a788d5bac51e882eec45a5d59ea2e740dec525aeb60db2b",
     "https://rg.ru/2025/10/18/reg-cfo/v-moskve-startovala-reabilitaciia-verhnego-i-nizhnego-kuzminskih-prudov.html": "e3b514c4f77cee20711d988c60c40c926e6583473d4a34a7d9e52c7bd0458a90",
-    "https://rg.ru/2025/10/18/chehiia-v-avguste-uvelichila-postavki-piva-v-rossiiu-na-10.html": "cdd6dbbeb663cc1057d4e131d1052f8da7877d448fc5221d6b12ff922107abb3"
+    "https://rg.ru/2025/10/18/chehiia-v-avguste-uvelichila-postavki-piva-v-rossiiu-na-10.html": "cdd6dbbeb663cc1057d4e131d1052f8da7877d448fc5221d6b12ff922107abb3",
+    "https://rg.ru/2025/10/18/ekspert-shcherbachenko-nazval-5-mest-v-rossii-kotorye-stoit-posetit-oseniu.html": "bb996c1c234a955e9027813aad8221d79b49e8be7a4988b96f80bf047cb47efc",
+    "https://rg.ru/2025/10/18/gosposhlina-za-registraciiu-prava-sobstvennosti-razmer-oplata-i-rekvizity.html": "9373f467b6585aa7a51662838661475f9a552fa4891543033d608f829b762b0e",
+    "https://rg.ru/2025/10/18/penthaus-chto-eto-osobennosti-pliusy-i-minusy.html": "81761d088c480bf04fa16a5ede7e7ea29b9a8275303e2abb04fa9f6dc2937549"
   }
 }
