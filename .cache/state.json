@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 19 Oct 2025 09:16:51 GMT"
+      "Last-Modified": "Sun, 19 Oct 2025 12:30:51 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"2257c-EZkc0x44kO0hvI63mvjzgNaELFM\""
+      "ETag": "W/\"2257c-Yin66yQO5q1r1Z/+S9e4HqhDqPc\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"4xlipxf4ln3pb5\""
+      "ETag": "\"uyyu16i8mr3oxu\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -10832,6 +10832,19 @@
     },
     "https://rg.ru/2025/10/19/reg-ufo/krym-perezhivaet-bum-svadebnogo-turizma.html": {
       "ETag": "\"cwdggn1vnl1uxb\""
+    },
+    "http://government.ru/news/56600/": {},
+    "https://rg.ru/2025/10/19/reg-cfo/zammera-moskvy-biriukov-pozdravil-dorozhnikov-s-professionalnym-prazdnikom.html": {
+      "ETag": "\"c08k6lc1hd1prh\""
+    },
+    "https://rg.ru/2025/10/19/reg-cfo/sobianin-pozdravil-moskvichej-s-dnem-rabotnikov-dorozhnogo-hoziajstva.html": {
+      "ETag": "\"5ja40c980v1owi\""
+    },
+    "https://rg.ru/2025/10/19/v-noiabre-vyrastut-pensii-u-treh-kategorij-grazhdan.html": {
+      "ETag": "\"d36002neig1q4r\""
+    },
+    "https://rg.ru/2025/10/19/ekspert-girinskij-nazval-srednij-razmer-strahovoj-pensii-v-2025-godu.html": {
+      "ETag": "\"157jxdkyskl1oph\""
     }
   },
   "stats": {
@@ -12984,9 +12997,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5420991be0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5420415450>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5420415590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5420418640>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5420418d60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f54203215b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-19T09:16:42.185561+00:00",
+    "last_run": "2025-10-19T12:30:35.223986+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -12999,9 +13023,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 563.9417129999913,
-        "connect_ms": 1162.9406880000063,
-        "response_ms": 1726.8824009999976,
+        "dns_ms": 389.1339429999334,
+        "connect_ms": 904.610066000032,
+        "response_ms": 1293.7440089999654,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -13012,20 +13036,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1bd6a4d5b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f54203215b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 6461.01146800001,
+        "dns_ms": 4965.152912000008,
         "connect_ms": 0.0,
-        "response_ms": 4707.079295,
+        "response_ms": 795.4347170000347,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 1788.7526260000186,
-        "connect_ms": 0.0,
-        "response_ms": 599.8012710000182,
+        "dns_ms": 274.858547000008,
+        "connect_ms": 297.34840200001145,
+        "response_ms": 572.2069490000194,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -13034,20 +13058,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "6259a47b449e2242f329391a83bf9715bb5b153d1727dee8ec0fc809a5e29e6c",
+    "https://ardexpert.ru/article": "f4fda78f61bb59848dd87cc3b7d96ab35d271ae20756b3bdcc6915c1efcf1797",
     "https://www.gostinfo.ru/News/List": "c7d03e3b664639ad6319d3c260998af358c9150c0d23f7ef0068303b718f28ad",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4c796580abaa6c0883a1c75263cbfeedd2f8868bfe4eba3df0a8c2c489525dea",
-    "https://eec.eaeunion.org/news/": "e6d3797bca292f0b9110fd39754ea95f6b6a324095eb1cbd48f92c82995de7aa",
+    "https://eec.eaeunion.org/news/": "0d02230cc9b6d9b88566193099c62dc1ed202466d03303fd7de53ecc9b440c4d",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "3908df84330a5be13708f449537f5a5bd9fad35a18ef47b3179897bf8d9dce0a",
-    "https://www.metalinfo.ru/ru/news": "5eeb12a5a0cc93ae155a284df563d08a6974f0b50c6c4aec681c800817a2b2ba",
-    "https://www.pnp.ru/economics/": "2d609f8aa3b659b6d29b3610adc008e47e8a946d3d884d57c86189dca43f2366",
-    "https://erzrf.ru/news/": "8ee9a891c8050cca827397b3073f27e65e185a35697a0eea9cfa98d58ef19eb8",
-    "https://ria-stk.ru/news/vse-novosti.php": "73190c82e8feed2fe7e2ea9f638d4ed0e62bfc8287822790c637f7c97973257b",
-    "http://government.ru/news/": "6ac6850403fffa8870f0836e248cb56268feff17ae784790c562b9df68175bc8",
-    "https://stroygaz.ru/news/": "8b2abc4e4eec30a6bf6e412eb1ddc386bd44b65007a34c7c55dd7d1c9eb2d81e",
-    "https://realty.ria.ru/lenta/": "080726e958f2b5c348e8586f0d032215c70c4edc7243683af738d64bc25de4c6",
-    "https://rg.ru/tema/ekonomika": "bc7a0d0dc2c444e4c96730804776dc6d88d2bdf9a6f7bd1a15021dd39beff484",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "3396525f6f550ba7c707e0ece0a25b2242c2fdf61171b0e5c2f26965bb58816e",
+    "https://www.metalinfo.ru/ru/news": "c29f784a6bb1afb9b3a2760923f85600a174f147d8e1dd3020a4a808d8454b09",
+    "https://www.pnp.ru/economics/": "7e9abd0c2a1f662cceee98fbd9fbb22147750fb2b0643ed079d6f74c88e0bc9b",
+    "https://erzrf.ru/news/": "acbbec592cf941537f7251f2227555d07eedffd9ea6fd94ff3fbc73238db23e3",
+    "https://ria-stk.ru/news/vse-novosti.php": "e29fcc417c197f3903c77a53a86cd6077ca984c9df89b643afe91cc0900e9ddf",
+    "http://government.ru/news/": "6516f67997bcd2a8585d726be25f0c0f5d0b775f79f07d3ad7162f7904b77058",
+    "https://stroygaz.ru/news/": "41758ca1d96c0f64484fed1d89b3bf376cb5b251d4d5b400f475f5d9d1f64c38",
+    "https://realty.ria.ru/lenta/": "5d80ef61e8f8021646bd276593544f9ab5d04e6654695fed2edc72c53a10bae1",
+    "https://rg.ru/tema/ekonomika": "1a47702f90ce83cc2889d96d5ec1cd11adf62d90025db7bfbe29fa725b5a0eca",
     "http://ancb.ru/publication": "4cba97171ad068144713cfadb4335efd31f55f666f1fba2f6e6b35559aba39e4",
     "https://notim.ru": "a61bc5c3945f8245db6cc83cf60e3e7aa7db8725de21fe8c5ee7942fa781d010",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -13311,6 +13335,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245625&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56600/",
       "http://government.ru/news/56578/",
       "http://government.ru/news/56577/",
       "http://government.ru/news/56576/",
@@ -13329,8 +13354,7 @@
       "http://government.ru/news/56564/",
       "http://government.ru/news/56565/",
       "http://government.ru/news/56562/",
-      "http://government.ru/news/56558/",
-      "http://government.ru/news/56557/"
+      "http://government.ru/news/56558/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/minimalnaya-stavka-arendy-kvartiry-v-moskve-podnyalas-do-rekordnogo-znacheniya/",
@@ -13377,6 +13401,10 @@
       "https://realty.ria.ru/20251017/prodazhi-2048575685.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/19/reg-cfo/zammera-moskvy-biriukov-pozdravil-dorozhnikov-s-professionalnym-prazdnikom.html",
+      "https://rg.ru/2025/10/19/reg-cfo/sobianin-pozdravil-moskvichej-s-dnem-rabotnikov-dorozhnogo-hoziajstva.html",
+      "https://rg.ru/2025/10/19/v-noiabre-vyrastut-pensii-u-treh-kategorij-grazhdan.html",
+      "https://rg.ru/2025/10/19/ekspert-girinskij-nazval-srednij-razmer-strahovoj-pensii-v-2025-godu.html",
       "https://rg.ru/2025/10/19/uchenye-vyiasnili-kak-bezalkogolnaia-gazirovka-mozhet-isportit-nastroenie.html",
       "https://rg.ru/2025/10/19/reg-ufo/krym-perezhivaet-bum-svadebnogo-turizma.html",
       "https://rg.ru/2025/10/19/ekspert-rogaleva-vse-bolshe-otcov-v-rossii-uhodiat-v-dekret.html",
@@ -13404,10 +13432,6 @@
       "https://rg.ru/2025/10/18/reg-dfo/na-chukotke-obsudili-perspektivy-stroitelstva-novoj-aes.html",
       "https://rg.ru/2025/10/18/standart-proverki-prodavca-kvartiry-zashchitit-ot-moshennichestv-pri-sdelkah.html",
       "https://rg.ru/2025/10/18/renovaciia-domov-pamiatnikov-daet-developeram-riad-preimushchestv.html",
-      "https://rg.ru/2025/10/18/v-rosaviacii-soobshchili-ob-ogranichenii-poletov-v-deviati-aeroportah-rossii.html",
-      "https://rg.ru/2025/10/17/posledstviia-stolknoveniia-dvuh-poezdov-v-nizhegorodskoj-oblasti-sniali-na-foto.html",
-      "https://rg.ru/2025/10/17/v-nizhegorodskoj-oblasti-na-stancii-sergach-stolknulis-dva-poezda.html",
-      "https://rg.ru/2025/10/17/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-20-po-26-oktiabria.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/16/v-sbere-rasskazali-o-tonkostiah-finansirovaniia-energeticheskoj-otrasli.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
@@ -17215,7 +17239,12 @@
     "cbf972e8f7f15fc305606c4534fbde4728ef457a7d1d3afc0f5328a7fa55c5e8": "2025-10-19T12:16:00+03:00",
     "e6e6f8b8810936f069a4006fb2bc19cda71f96bc7211076fe0f91847d177339d": "2025-10-19T12:16:00+03:00",
     "9aa5800eff853648fdf1a8d9d6c074da3fdfadfc65c435dc74f540852f30d2a6": "2025-10-19T12:16:00+03:00",
-    "89b5a85c8c65efb563dff6ec9c26c720d683c317876438458b8acedfe2564ab3": "2025-10-19T12:16:00+03:00"
+    "89b5a85c8c65efb563dff6ec9c26c720d683c317876438458b8acedfe2564ab3": "2025-10-19T12:16:00+03:00",
+    "3979c7f8bf8b3e5e61795ffe0fe28ac6332ccd7d64d679f99e2a4bdaa7eac663": "2025-10-19T15:30:00+03:00",
+    "93aaf8c450295d4fc181f2e1cebbbcf2dd8bba60c21301f2cb882ecf29500911": "2025-10-19T15:30:00+03:00",
+    "87c8f4f8bfdfbb99b49effda1fc2477a55e8aa07cfe9a2ea4fda6a33af35ea33": "2025-10-19T15:30:00+03:00",
+    "410018a35890796cf0f6ee35804e468b1a3a30fc7fd8b5c5a2eef6b2d2b656ec": "2025-10-19T15:30:00+03:00",
+    "fe44b6322b3fdbc42363d4efb2d99697f9ecb374ac40e7d0d0ccdfc9a78eaea0": "2025-10-19T15:30:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -17245,9 +17274,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1bd6b3cd60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
-        "last_ts": 1760865326.5388703
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5420418d60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 15,
+        "last_ts": 1760876972.685548
       },
       "warmup_done": false,
       "last_success_path": null
@@ -17256,31 +17285,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "Nd8zlYlNpxpbxkWw",
+          "value": "vhVeUXTgoV2xCGGd",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760866578
+          "expires": 1760878218
         },
         {
           "name": "__ddg10_",
-          "value": "1760865378",
+          "value": "1760877018",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760866578
+          "expires": 1760878218
         },
         {
           "name": "__ddg9_",
-          "value": "172.183.134.177",
+          "value": "135.119.235.81",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760866578
+          "expires": 1760878218
+        },
+        {
+          "name": "__ddg1_",
+          "value": "txBH0yxDWeM9qg1GrdUG",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1792413018
         },
         {
           "name": "PHPSESSID",
-          "value": "9685e89bf35d1f97eefe9ee10a07639b",
+          "value": "cceeeac8799813ddee47cb9098097114",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -17307,11 +17344,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "6RftRTaC8izmK1NlK5ILSa9e6AaMcQM5",
+          "value": "SA2c6HOYdzbQGDH47MOfpyWND07oYgnb",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760876182
+          "expires": 1760887820
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -17319,7 +17356,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1791969382
+          "expires": 1791981020
         }
       ],
       "failures": {
@@ -21962,7 +21999,12 @@
     "http://government.ru/news/56577": "http://government.ru/news/56577",
     "http://government.ru/news/56576": "http://government.ru/news/56576",
     "https://rg.ru/2025/10/19/uchenye-vyiasnili-kak-bezalkogolnaia-gazirovka-mozhet-isportit-nastroenie.html": "https://rg.ru/2025/10/19/uchenye-vyiasnili-kak-bezalkogolnaia-gazirovka-mozhet-isportit-nastroenie.html",
-    "https://rg.ru/2025/10/19/reg-ufo/krym-perezhivaet-bum-svadebnogo-turizma.html": "https://rg.ru/2025/10/19/reg-ufo/krym-perezhivaet-bum-svadebnogo-turizma.html"
+    "https://rg.ru/2025/10/19/reg-ufo/krym-perezhivaet-bum-svadebnogo-turizma.html": "https://rg.ru/2025/10/19/reg-ufo/krym-perezhivaet-bum-svadebnogo-turizma.html",
+    "http://government.ru/news/56600": "http://government.ru/news/56600",
+    "https://rg.ru/2025/10/19/reg-cfo/zammera-moskvy-biriukov-pozdravil-dorozhnikov-s-professionalnym-prazdnikom.html": "https://rg.ru/2025/10/19/reg-cfo/zammera-moskvy-biriukov-pozdravil-dorozhnikov-s-professionalnym-prazdnikom.html",
+    "https://rg.ru/2025/10/19/reg-cfo/sobianin-pozdravil-moskvichej-s-dnem-rabotnikov-dorozhnogo-hoziajstva.html": "https://rg.ru/2025/10/19/reg-cfo/sobianin-pozdravil-moskvichej-s-dnem-rabotnikov-dorozhnogo-hoziajstva.html",
+    "https://rg.ru/2025/10/19/v-noiabre-vyrastut-pensii-u-treh-kategorij-grazhdan.html": "https://rg.ru/2025/10/19/v-noiabre-vyrastut-pensii-u-treh-kategorij-grazhdan.html",
+    "https://rg.ru/2025/10/19/ekspert-girinskij-nazval-srednij-razmer-strahovoj-pensii-v-2025-godu.html": "https://rg.ru/2025/10/19/ekspert-girinskij-nazval-srednij-razmer-strahovoj-pensii-v-2025-godu.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -25958,7 +26000,12 @@
     "66607f86fee2069fa55450d5eeabc90a6356de22": "http://government.ru/news/56577",
     "59af2368c190bf435a9b7f8f1ba06488321d4e45": "http://government.ru/news/56576",
     "b3a56d0363a657b6387ec2a79f394245012d8d0b": "https://rg.ru/2025/10/19/uchenye-vyiasnili-kak-bezalkogolnaia-gazirovka-mozhet-isportit-nastroenie.html",
-    "8c6057a5d9914dd28995c47c64b9329bb0d7a045": "https://rg.ru/2025/10/19/reg-ufo/krym-perezhivaet-bum-svadebnogo-turizma.html"
+    "8c6057a5d9914dd28995c47c64b9329bb0d7a045": "https://rg.ru/2025/10/19/reg-ufo/krym-perezhivaet-bum-svadebnogo-turizma.html",
+    "16f83c2f8b4a9d810fe0ee2794d45485ee30f3f1": "http://government.ru/news/56600",
+    "72fade701a23417fb15fdac82101116027655f47": "https://rg.ru/2025/10/19/reg-cfo/zammera-moskvy-biriukov-pozdravil-dorozhnikov-s-professionalnym-prazdnikom.html",
+    "b068d000314d943e12e4d23c911a7adb3170941e": "https://rg.ru/2025/10/19/reg-cfo/sobianin-pozdravil-moskvichej-s-dnem-rabotnikov-dorozhnogo-hoziajstva.html",
+    "df754a885688a71e7983ca6f138e35632f58aad4": "https://rg.ru/2025/10/19/v-noiabre-vyrastut-pensii-u-treh-kategorij-grazhdan.html",
+    "79e4403eae299a10addc1d28f2445be82e4de8a1": "https://rg.ru/2025/10/19/ekspert-girinskij-nazval-srednij-razmer-strahovoj-pensii-v-2025-godu.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -31142,6 +31189,12 @@
     "http://government.ru/news/56576": "e6e6f8b8810936f069a4006fb2bc19cda71f96bc7211076fe0f91847d177339d",
     "http://government.ru/news/56576/": "e6e6f8b8810936f069a4006fb2bc19cda71f96bc7211076fe0f91847d177339d",
     "https://rg.ru/2025/10/19/uchenye-vyiasnili-kak-bezalkogolnaia-gazirovka-mozhet-isportit-nastroenie.html": "9aa5800eff853648fdf1a8d9d6c074da3fdfadfc65c435dc74f540852f30d2a6",
-    "https://rg.ru/2025/10/19/reg-ufo/krym-perezhivaet-bum-svadebnogo-turizma.html": "89b5a85c8c65efb563dff6ec9c26c720d683c317876438458b8acedfe2564ab3"
+    "https://rg.ru/2025/10/19/reg-ufo/krym-perezhivaet-bum-svadebnogo-turizma.html": "89b5a85c8c65efb563dff6ec9c26c720d683c317876438458b8acedfe2564ab3",
+    "http://government.ru/news/56600": "3979c7f8bf8b3e5e61795ffe0fe28ac6332ccd7d64d679f99e2a4bdaa7eac663",
+    "http://government.ru/news/56600/": "3979c7f8bf8b3e5e61795ffe0fe28ac6332ccd7d64d679f99e2a4bdaa7eac663",
+    "https://rg.ru/2025/10/19/reg-cfo/zammera-moskvy-biriukov-pozdravil-dorozhnikov-s-professionalnym-prazdnikom.html": "93aaf8c450295d4fc181f2e1cebbbcf2dd8bba60c21301f2cb882ecf29500911",
+    "https://rg.ru/2025/10/19/reg-cfo/sobianin-pozdravil-moskvichej-s-dnem-rabotnikov-dorozhnogo-hoziajstva.html": "87c8f4f8bfdfbb99b49effda1fc2477a55e8aa07cfe9a2ea4fda6a33af35ea33",
+    "https://rg.ru/2025/10/19/v-noiabre-vyrastut-pensii-u-treh-kategorij-grazhdan.html": "410018a35890796cf0f6ee35804e468b1a3a30fc7fd8b5c5a2eef6b2d2b656ec",
+    "https://rg.ru/2025/10/19/ekspert-girinskij-nazval-srednij-razmer-strahovoj-pensii-v-2025-godu.html": "fe44b6322b3fdbc42363d4efb2d99697f9ecb374ac40e7d0d0ccdfc9a78eaea0"
   }
 }
