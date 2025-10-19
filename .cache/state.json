@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 19 Oct 2025 03:45:09 GMT"
+      "Last-Modified": "Sun, 19 Oct 2025 06:25:20 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"2257c-i9yazVYFVlC1S+VRB4AsDRspsh0\""
+      "ETag": "W/\"22bb7-NzqWmOJnxqkROiav3lCrO1GgvGg\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"boaxl4ufpb3hzo\""
+      "ETag": "\"m8lergdz2e3kyd\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -10692,7 +10692,7 @@
       "ETag": "\"bvrea8wb681zmm\""
     },
     "https://rg.ru/2025/10/17/reg-szfo/dacha-na-kryshe.html": {
-      "ETag": "\"13w9bhjykrf2133\""
+      "ETag": "\"5hk60khtbh21ni\""
     },
     "https://rg.ru/2025/10/17/kak-budet-rabotat-ekg-rejting-nacionalnaia-sistema-ocenki-delovoj-reputacii.html": {
       "ETag": "\"b24kfamu5d1spx\""
@@ -10814,6 +10814,15 @@
     },
     "https://rg.ru/2025/10/18/reg-cfo/kabmin-vydelil-dvum-regionam-35-mlrd-rublej-na-energorezervy.html": {
       "ETag": "\"49k9l21lov1phi\""
+    },
+    "https://rg.ru/2025/10/19/ekspert-rogaleva-vse-bolshe-otcov-v-rossii-uhodiat-v-dekret.html": {
+      "ETag": "\"457l82u5pa25v3\""
+    },
+    "https://rg.ru/2025/10/19/podvodnyj-tonnel-mezhdu-chukotkoj-i-aliaskoj-budet-v-2-raza-dlinnee-evrotonnelia.html": {
+      "ETag": "\"14azp12yr221ncy\""
+    },
+    "https://rg.ru/2025/10/19/sniaty-ogranicheniia-v-aeroportah-samary-saratova-i-ufy.html": {
+      "ETag": "\"18126zymtru1lwq\""
     }
   },
   "stats": {
@@ -12944,9 +12953,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f66492a5be0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6648d39450>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6648d39590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6648d3c640>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6648d3cd60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6648c49490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-19T03:44:45.219349+00:00",
+    "last_run": "2025-10-19T06:25:12.680937+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -12959,33 +12979,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 600.0085470000016,
-        "connect_ms": 1409.8593370000003,
-        "response_ms": 2009.867884000002,
+        "dns_ms": 975.809924999993,
+        "connect_ms": 9796.52782300002,
+        "response_ms": 10772.337748000013,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 282.59036199999343,
-        "connect_ms": 704.5246020000206,
-        "response_ms": 987.1149640000141,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6648c49490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 8511.662274999991,
+        "dns_ms": 5274.99733900001,
         "connect_ms": 0.0,
-        "response_ms": 4683.261880000004,
+        "response_ms": 2005.6563379999943,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 356.9517880000035,
-        "connect_ms": 295.1252670000031,
-        "response_ms": 652.0770550000066,
+        "dns_ms": 695.8253479999996,
+        "connect_ms": 159.21713399998794,
+        "response_ms": 855.0424819999876,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -12994,21 +13014,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "0398d156e291e66dd098ca2b64a48418ac9373b81dbb5657f94b5d778bacb128",
+    "https://ardexpert.ru/article": "fa3c5aeae634a6cda8a5d20bf07f9915152132b59547902aefc9a0949bb58f99",
     "https://www.gostinfo.ru/News/List": "c7d03e3b664639ad6319d3c260998af358c9150c0d23f7ef0068303b718f28ad",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4c796580abaa6c0883a1c75263cbfeedd2f8868bfe4eba3df0a8c2c489525dea",
-    "https://eec.eaeunion.org/news/": "9a99994cd2557fda735e9525701d9e7830cdc7cfdb9febc7165e5e5e6b735e6f",
+    "https://eec.eaeunion.org/news/": "320dd2684a935c5d08b5c64b01f3af4e6f0471c6875ef00415c0121badcc3b13",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "fcd5f535353c4f59401f76064df7f5e3aa2e50d1454900b42ffda74640f85b78",
-    "https://www.metalinfo.ru/ru/news": "03c816789b8ee250d96aa4ab564faf28710fdba70187c8fb179a4bff6999909e",
-    "https://www.pnp.ru/economics/": "1e34fb2e2152b5ab9b2dcc9ea6ca9bf39ae60fd506b8832f091aa95ad76d3426",
-    "https://erzrf.ru/news/": "d23a43bebabe76a37a815e4aa6bfc127b659c5a12637fdb0ce46b26fec85dba5",
-    "https://ria-stk.ru/news/vse-novosti.php": "b8b349e90e7ad35717d3b73bd37c9afbb4bad67ea86e4f4360b354fc3e9d71b9",
-    "http://government.ru/news/": "c7b4d06abac844ff4e4f8515603df040979f450ba371e732d0a77c306cd2c36a",
-    "https://stroygaz.ru/news/": "2d75fe22d7297b497ecca4f8f3fc866d1dd4945c495cee31c704a6e513494844",
-    "https://realty.ria.ru/lenta/": "4e16c1a5a11ab9a7c154e5acaac603283c91abeb3d40cf959de79cd1bbdbe47e",
-    "https://rg.ru/tema/ekonomika": "35863163aadbef9d54efa78c4df5ad0ff91a490bfad12d756161c1e832cc07ef",
-    "http://ancb.ru/publication": "06c79cafbd5b3ae4c4047f178de3f5f1038125c6ecf90297f7e3e1aad619f843",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "8c87a379520d436e20421f5aaaf844ca9af0ddb1121326c4bbc386d486d39fa8",
+    "https://www.metalinfo.ru/ru/news": "c29f784a6bb1afb9b3a2760923f85600a174f147d8e1dd3020a4a808d8454b09",
+    "https://www.pnp.ru/economics/": "011d2595f7482bffd6c90d20d7c69ef4262e758563d8339ab2eede11061373b0",
+    "https://erzrf.ru/news/": "78b06cfa863df907e312a301d5571e485566262f84380bb4887064d6bdea3d0c",
+    "https://ria-stk.ru/news/vse-novosti.php": "98a483bd2d74ffdbaee854ee1ab3e32fdf6dd7f2b65fcaec66f0bb29b1bdb3f3",
+    "http://government.ru/news/": "500df6284dae953f0b3430acc0379d2018ef8ad3ebb0d8c82eba42cd21d0d675",
+    "https://stroygaz.ru/news/": "6b4927c1e0367a66095c6cf399b45e041686988a46916fc4360956843eac9dd4",
+    "https://realty.ria.ru/lenta/": "109584e3d00c3f144be954c55fabf221c3588298404d29cd0b53f61d8244b2be",
+    "https://rg.ru/tema/ekonomika": "5ad09ddba5cc891cc1da227e195d8ffe94d5ee9c04a25f7495898ee6ed45e373",
+    "http://ancb.ru/publication": "4cba97171ad068144713cfadb4335efd31f55f666f1fba2f6e6b35559aba39e4",
     "https://notim.ru": "a61bc5c3945f8245db6cc83cf60e3e7aa7db8725de21fe8c5ee7942fa781d010",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -13337,6 +13357,10 @@
       "https://realty.ria.ru/20251017/prodazhi-2048575685.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/19/ekspert-rogaleva-vse-bolshe-otcov-v-rossii-uhodiat-v-dekret.html",
+      "https://rg.ru/2025/10/19/podvodnyj-tonnel-mezhdu-chukotkoj-i-aliaskoj-budet-v-2-raza-dlinnee-evrotonnelia.html",
+      "https://rg.ru/2025/10/19/sniaty-ogranicheniia-v-aeroportah-samary-saratova-i-ufy.html",
+      "https://rg.ru/2025/10/17/reg-szfo/dacha-na-kryshe.html",
       "https://rg.ru/2025/10/18/ekspert-vasilev-rasskazal-kak-uluchshit-semnoe-zhile-bez-remonta.html",
       "https://rg.ru/2025/10/18/reg-cfo/kabmin-vydelil-dvum-regionam-35-mlrd-rublej-na-energorezervy.html",
       "https://rg.ru/2025/10/18/s-1-dekabria-biometriiu-u-inostrancev-budut-sobirat-na-vseh-pogranpunktah.html",
@@ -13364,10 +13388,6 @@
       "https://rg.ru/2025/10/17/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-20-po-26-oktiabria.html",
       "https://rg.ru/2025/10/17/indiia-zakupit-4-mln-barrelej-gajanskoj-nefti-u-amerikanskoj-kompanii-exxonmobil.html",
       "https://rg.ru/2025/10/17/kak-budet-rabotat-ekg-rejting-nacionalnaia-sistema-ocenki-delovoj-reputacii.html",
-      "https://rg.ru/2025/10/17/borba-za-kadry-stanet-opredeliaiushchim-faktorom-effektivnosti-proizvodstva.html",
-      "https://rg.ru/2025/10/17/britanskij-bank-ozhidaet-preodolenie-ceny-na-zoloto-vyshe-5-tys-doll-v-2026-godu.html",
-      "https://rg.ru/2025/10/17/minpromtorg-zaprosil-259-mlrd-rublej-na-razvitie-rossijskogo-aviaproma.html",
-      "https://rg.ru/2025/10/17/reg-pfo/v-kazani-nachnut-vypuskat-vertolet-mi-34.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/16/v-sbere-rasskazali-o-tonkostiah-finansirovaniia-energeticheskoj-otrasli.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
@@ -17167,7 +17187,10 @@
     "0692e7e0ad9c3e98522cc3a363f8f4b62e13d2467b15058c341dee4692edc91b": "2025-10-18T21:23:00+03:00",
     "41496496f4b052129540f2406b5da4ca8cbdc2ce597e6f76071b4414be6e36dd": "2025-10-18T21:23:00+03:00",
     "0387ef6302821bd638c65c395cb17083f4481b90290114dcf762c0ac961f0527": "2025-10-19T04:21:00+03:00",
-    "bf8424f1dd88c85b9f6da9b2f1111af87acdb3d543eb40a9abd34c736c979438": "2025-10-19T04:21:00+03:00"
+    "bf8424f1dd88c85b9f6da9b2f1111af87acdb3d543eb40a9abd34c736c979438": "2025-10-19T04:21:00+03:00",
+    "a34e4b821729f1d031ff8b312e08f9be6dae1ab8bd739ef2ad1990f29cb6267f": "2025-10-19T09:25:00+03:00",
+    "d108c91010f5c4052f3ee80ca08730e7d528df84844ce3bbab2a1e87530739ed": "2025-10-19T09:25:00+03:00",
+    "b5faf50401477ae6b1ffaf3778c4005207672f987a61ac4bc92b12348e3eef73": "2025-10-19T09:25:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -17197,9 +17220,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1760836768.8076968
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6648d3cd60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1760855036.1616492
       },
       "warmup_done": false,
       "last_success_path": null
@@ -17208,31 +17231,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "j3t0uSPbxUAe2M8e",
+          "value": "579K60E9ftehW2vL",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760846676
+          "expires": 1760856287
         },
         {
           "name": "__ddg10_",
-          "value": "1760845476",
+          "value": "1760855087",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760846676
+          "expires": 1760856287
         },
         {
           "name": "__ddg9_",
-          "value": "132.196.32.69",
+          "value": "172.182.209.53",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760846676
+          "expires": 1760856287
+        },
+        {
+          "name": "__ddg1_",
+          "value": "3TQlfdIvp9Ww2eGoVBPh",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1792391087
         },
         {
           "name": "PHPSESSID",
-          "value": "8be8672dc708fb694d3f6829ef298fa9",
+          "value": "2f98110febb5c1c4f202b1cf433616bb",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -17259,11 +17290,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "YlOJfdjq2YGkqwPVDxcGCPfmUYkAvsd6",
+          "value": "nQZma8VMRrUI1O7tvjKxDStlqy6waaxd",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760856279
+          "expires": 1760865891
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -17271,7 +17302,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1791949479
+          "expires": 1791959091
         }
       ],
       "failures": {
@@ -21906,7 +21937,10 @@
     "http://government.ru/news/56599": "http://government.ru/news/56599",
     "https://rg.ru/2025/10/18/s-1-dekabria-biometriiu-u-inostrancev-budut-sobirat-na-vseh-pogranpunktah.html": "https://rg.ru/2025/10/18/s-1-dekabria-biometriiu-u-inostrancev-budut-sobirat-na-vseh-pogranpunktah.html",
     "https://rg.ru/2025/10/18/ekspert-vasilev-rasskazal-kak-uluchshit-semnoe-zhile-bez-remonta.html": "https://rg.ru/2025/10/18/ekspert-vasilev-rasskazal-kak-uluchshit-semnoe-zhile-bez-remonta.html",
-    "https://rg.ru/2025/10/18/reg-cfo/kabmin-vydelil-dvum-regionam-35-mlrd-rublej-na-energorezervy.html": "https://rg.ru/2025/10/18/reg-cfo/kabmin-vydelil-dvum-regionam-35-mlrd-rublej-na-energorezervy.html"
+    "https://rg.ru/2025/10/18/reg-cfo/kabmin-vydelil-dvum-regionam-35-mlrd-rublej-na-energorezervy.html": "https://rg.ru/2025/10/18/reg-cfo/kabmin-vydelil-dvum-regionam-35-mlrd-rublej-na-energorezervy.html",
+    "https://rg.ru/2025/10/19/ekspert-rogaleva-vse-bolshe-otcov-v-rossii-uhodiat-v-dekret.html": "https://rg.ru/2025/10/19/ekspert-rogaleva-vse-bolshe-otcov-v-rossii-uhodiat-v-dekret.html",
+    "https://rg.ru/2025/10/19/podvodnyj-tonnel-mezhdu-chukotkoj-i-aliaskoj-budet-v-2-raza-dlinnee-evrotonnelia.html": "https://rg.ru/2025/10/19/podvodnyj-tonnel-mezhdu-chukotkoj-i-aliaskoj-budet-v-2-raza-dlinnee-evrotonnelia.html",
+    "https://rg.ru/2025/10/19/sniaty-ogranicheniia-v-aeroportah-samary-saratova-i-ufy.html": "https://rg.ru/2025/10/19/sniaty-ogranicheniia-v-aeroportah-samary-saratova-i-ufy.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -25893,7 +25927,11 @@
     "a462fbf47e9934e46482f84256fd6b09451fcbc2": "http://government.ru/news/56599",
     "f502126fa41cdb74077ef0e5a6656e24acf64d69": "https://rg.ru/2025/10/18/s-1-dekabria-biometriiu-u-inostrancev-budut-sobirat-na-vseh-pogranpunktah.html",
     "afe6d09fc1a91c9abfc3eef0052e407fd3d1c690": "https://rg.ru/2025/10/18/ekspert-vasilev-rasskazal-kak-uluchshit-semnoe-zhile-bez-remonta.html",
-    "0e127e6c98bc27ecdcd52a33cfa329bd164b0d5f": "https://rg.ru/2025/10/18/reg-cfo/kabmin-vydelil-dvum-regionam-35-mlrd-rublej-na-energorezervy.html"
+    "0e127e6c98bc27ecdcd52a33cfa329bd164b0d5f": "https://rg.ru/2025/10/18/reg-cfo/kabmin-vydelil-dvum-regionam-35-mlrd-rublej-na-energorezervy.html",
+    "324814e28d45570969c5c49e37b3490e1b93a319": "https://rg.ru/2025/10/19/ekspert-rogaleva-vse-bolshe-otcov-v-rossii-uhodiat-v-dekret.html",
+    "1a69e58494ee9251e446fa244107bddd759c9c65": "https://rg.ru/2025/10/19/podvodnyj-tonnel-mezhdu-chukotkoj-i-aliaskoj-budet-v-2-raza-dlinnee-evrotonnelia.html",
+    "2d0968b40794f82a4f50c967b46a03d10fc210f2": "https://rg.ru/2025/10/19/sniaty-ogranicheniia-v-aeroportah-samary-saratova-i-ufy.html",
+    "1066f98019e71c704b4720703cc953cbf6d6c8dd": "https://rg.ru/2025/10/17/reg-szfo/dacha-na-kryshe.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -31066,6 +31104,9 @@
     "http://government.ru/news/56599/": "0692e7e0ad9c3e98522cc3a363f8f4b62e13d2467b15058c341dee4692edc91b",
     "https://rg.ru/2025/10/18/s-1-dekabria-biometriiu-u-inostrancev-budut-sobirat-na-vseh-pogranpunktah.html": "41496496f4b052129540f2406b5da4ca8cbdc2ce597e6f76071b4414be6e36dd",
     "https://rg.ru/2025/10/18/ekspert-vasilev-rasskazal-kak-uluchshit-semnoe-zhile-bez-remonta.html": "0387ef6302821bd638c65c395cb17083f4481b90290114dcf762c0ac961f0527",
-    "https://rg.ru/2025/10/18/reg-cfo/kabmin-vydelil-dvum-regionam-35-mlrd-rublej-na-energorezervy.html": "bf8424f1dd88c85b9f6da9b2f1111af87acdb3d543eb40a9abd34c736c979438"
+    "https://rg.ru/2025/10/18/reg-cfo/kabmin-vydelil-dvum-regionam-35-mlrd-rublej-na-energorezervy.html": "bf8424f1dd88c85b9f6da9b2f1111af87acdb3d543eb40a9abd34c736c979438",
+    "https://rg.ru/2025/10/19/ekspert-rogaleva-vse-bolshe-otcov-v-rossii-uhodiat-v-dekret.html": "a34e4b821729f1d031ff8b312e08f9be6dae1ab8bd739ef2ad1990f29cb6267f",
+    "https://rg.ru/2025/10/19/podvodnyj-tonnel-mezhdu-chukotkoj-i-aliaskoj-budet-v-2-raza-dlinnee-evrotonnelia.html": "d108c91010f5c4052f3ee80ca08730e7d528df84844ce3bbab2a1e87530739ed",
+    "https://rg.ru/2025/10/19/sniaty-ogranicheniia-v-aeroportah-samary-saratova-i-ufy.html": "b5faf50401477ae6b1ffaf3778c4005207672f987a61ac4bc92b12348e3eef73"
   }
 }
