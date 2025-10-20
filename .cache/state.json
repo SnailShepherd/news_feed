@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 20 Oct 2025 01:18:05 GMT"
+      "Last-Modified": "Mon, 20 Oct 2025 03:48:07 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"2257c-F/hIb5jUhNE+NSuoGAlucpnTS1g\""
+      "ETag": "W/\"2257c-2c03LZ8qX/wZBOYbkKSF5k+Anjc\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"141wbc39oav3wrs\""
+      "ETag": "\"4a2nu5harl3wmv\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -10928,6 +10928,17 @@
     },
     "https://rg.ru/2025/10/20/deputat-govyrin-predupredil-chto-pensii-v-noiabre-vyplatiat-ranshe-iz-za-prazdnika.html": {
       "ETag": "\"aedltbijph1n4x\""
+    },
+    "https://www.metalinfo.ru/ru/news/177673": {},
+    "https://www.metalinfo.ru/ru/news/177696": {},
+    "https://www.metalinfo.ru/ru/news/177651": {},
+    "https://www.metalinfo.ru/ru/news/177687": {},
+    "https://www.metalinfo.ru/ru/news/177667": {},
+    "https://realty.ria.ru/20251020/zapakhi-2048581732.html": {
+      "Last-Modified": "Mon, 20 Oct 2025 02:00:03 GMT"
+    },
+    "https://rg.ru/2025/10/20/reg-szfo/aeroport-pulkovo-vozobnovil-rabotu-posle-chp-s-samoletom.html": {
+      "ETag": "\"ayci9yabkq1pcw\""
     }
   },
   "stats": {
@@ -13129,9 +13140,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f15ff053d90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f15feb4aad0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f15feb4a490>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f15feb49590>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f15ff053d90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-20T01:18:33.561964+00:00",
+    "last_run": "2025-10-20T03:47:46.390620+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -13144,56 +13160,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 640.1550840000141,
-        "connect_ms": 4156.754898000003,
-        "response_ms": 4796.9099820000165,
+        "dns_ms": 174.22346400000777,
+        "connect_ms": 1035.4914440000016,
+        "response_ms": 1209.7149080000095,
+        "attempts": 2,
+        "status": 200,
+        "error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fb744a211d0>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))"
+      },
+      "ancb.ru": {
+        "dns_ms": 242.49053799999842,
+        "connect_ms": 970.1256590000041,
+        "response_ms": 1212.6161970000026,
         "attempts": 1,
         "status": 200,
         "error": null
       },
-      "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f15fea4d5b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
-      },
       "www.pnp.ru": {
-        "dns_ms": 5232.9130460000215,
-        "connect_ms": 0.0,
-        "response_ms": 5179.69078799996,
+        "dns_ms": 708.8980799999831,
+        "connect_ms": 132.9468840000061,
+        "response_ms": 841.8449639999892,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f15ff053d90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 632.8550590000077,
+        "connect_ms": 0.0,
+        "response_ms": 556.3476050000133,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "68e2750520103a94b2acbf82de5e470c64ae9b713e750252c91b583aa01af7f1",
+    "https://ardexpert.ru/article": "23e00365e4be01b7424b76778b6a876a14119d0c56b452f4263223c5d4c50420",
     "https://www.gostinfo.ru/News/List": "c7d03e3b664639ad6319d3c260998af358c9150c0d23f7ef0068303b718f28ad",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4c796580abaa6c0883a1c75263cbfeedd2f8868bfe4eba3df0a8c2c489525dea",
-    "https://eec.eaeunion.org/news/": "3873c64d8b82d15f204bf608c3e110b64f6fe57fd7d5289227860262075375da",
+    "https://eec.eaeunion.org/news/": "870fbffa7f50c38e3a77daf91ed8641142baed9fa8cb4931029f9fabf8675939",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "1b8562703b14ccf899ba0cdbecb2f069043a8c700710d137d576df670c96047c",
-    "https://www.metalinfo.ru/ru/news": "a9335028a2c01dbcaf4190b872d648848a7cfe0354d23bc5fc434b75f5a24a85",
-    "https://www.pnp.ru/economics/": "0352e43c851088f90ae6db0b304f1b3d5ca6f03552a693a023aa7c6d8b81ea62",
-    "https://erzrf.ru/news/": "95b80f4924a12ccbb530c8598bf2eeec3fdd5b317a7fb91e72e3ea1412b927aa",
-    "https://ria-stk.ru/news/vse-novosti.php": "b2a667e2ba8808528d9b62e24cee816cc4b6af3fbaad53a0840f843e997d36e4",
-    "http://government.ru/news/": "883e9b5487cab7df736a5502e8f2579d08a2f1bd3e13dbd875a1b61cf4c7d5c7",
-    "https://stroygaz.ru/news/": "687a6b67b92c5760bef5c854ca690aa8914d135da57853a3037ced5c0fd10209",
-    "https://realty.ria.ru/lenta/": "bc316c017421581d1d68edacfbe726de9cf4c539ae49c455d452eaae3f39b5a1",
-    "https://rg.ru/tema/ekonomika": "5738a5372ccd32fddd348c12387b4358c97927b334e7475ea71f453f93f71b9b",
-    "http://ancb.ru/publication": "4cba97171ad068144713cfadb4335efd31f55f666f1fba2f6e6b35559aba39e4",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "039927d15b8de26f598ee50392641484a4272d703458cbfa3bc79c70311385b4",
+    "https://www.metalinfo.ru/ru/news": "b41cf1055f027089b9a014bf9dac9fc8da91bce68189e0e817b1aa839565f95f",
+    "https://www.pnp.ru/economics/": "4531d4d30f0f4242edc259e6b3d1c8bb65d8bab0345a41e418ce2fffb73ae6ec",
+    "https://erzrf.ru/news/": "e8696201a7ab364f4507c766b9c403ee5f365b18ff6ba101c86f4c899a1c4a4f",
+    "https://ria-stk.ru/news/vse-novosti.php": "06434a580be3905f7188e641e1f4f076126744b452a1f34a606647042d856489",
+    "http://government.ru/news/": "de190d5d5b51081633a66ef9724a35028cd2642559780ac4e3b1e8da1f839eaf",
+    "https://stroygaz.ru/news/": "f4d97a76e920e1382c3f998ab4de196e6969bf88331ef00d429aa7e533a99bda",
+    "https://realty.ria.ru/lenta/": "ecf067c3956177b88ac8d03b9726141a6dbf77603590f9d15eaa083b3f135d8d",
+    "https://rg.ru/tema/ekonomika": "6b9a4c6f4a4fa2992bbaef4093797ccae7b73e73eaf37684345302b1b448f8e9",
+    "http://ancb.ru/publication": "06c79cafbd5b3ae4c4047f178de3f5f1038125c6ecf90297f7e3e1aad619f843",
     "https://notim.ru": "acf399aca0cdae9195eddc66c15f9ac520767d9ad309a56822623f825aa9a5b9",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -13333,6 +13349,11 @@
       "https://www.interfax-russia.ru/realty/news/za-100-mln-rub-v-moskve-mozhno-kupit-46-kv-m-elitnogo-zhilya-issledovanie"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/177673",
+      "https://www.metalinfo.ru/ru/news/177696",
+      "https://www.metalinfo.ru/ru/news/177651",
+      "https://www.metalinfo.ru/ru/news/177687",
+      "https://www.metalinfo.ru/ru/news/177667",
       "https://www.metalinfo.ru/ru/news/177626",
       "https://www.metalinfo.ru/ru/news/177683",
       "https://www.metalinfo.ru/ru/news/177660",
@@ -13347,12 +13368,7 @@
       "https://www.metalinfo.ru/ru/news/177675",
       "https://www.metalinfo.ru/ru/news/177671",
       "https://www.metalinfo.ru/ru/news/177670",
-      "https://www.metalinfo.ru/ru/news/177659",
-      "https://www.metalinfo.ru/ru/news/177669",
-      "https://www.metalinfo.ru/ru/news/177668",
-      "https://www.metalinfo.ru/ru/news/177646",
-      "https://www.metalinfo.ru/ru/news/177654",
-      "https://www.metalinfo.ru/ru/news/177663"
+      "https://www.metalinfo.ru/ru/news/177659"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -13500,6 +13516,7 @@
       "https://stroygaz.ru/news/dwelling/podschitano-kolichestvo-kvartir-eksponiruemykh-v-starinnykh-domakh-peterburga/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251020/zapakhi-2048581732.html",
       "https://realty.ria.ru/20251020/parkovka-2048024307.html",
       "https://realty.ria.ru/20251018/kvartiry-2048860029.html",
       "https://realty.ria.ru/20251017/sud-2048939423.html",
@@ -13518,10 +13535,10 @@
       "https://realty.ria.ru/20251017/prodazhi-2048783874.html",
       "https://realty.ria.ru/20251017/sud-2048781570.html",
       "https://realty.ria.ru/20251017/chislo-2048779774.html",
-      "https://realty.ria.ru/20251017/tsb-2048778557.html",
-      "https://realty.ria.ru/20251017/vydacha-2048775768.html"
+      "https://realty.ria.ru/20251017/tsb-2048778557.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/20/reg-szfo/aeroport-pulkovo-vozobnovil-rabotu-posle-chp-s-samoletom.html",
       "https://rg.ru/2025/10/20/deputat-govyrin-predupredil-chto-pensii-v-noiabre-vyplatiat-ranshe-iz-za-prazdnika.html",
       "https://rg.ru/2025/10/19/iurist-romanova-o-pokupke-duhov-v-rozliv-sozdaiut-ugrozu-dlia-dyhatelnyh-putej.html",
       "https://rg.ru/2025/10/20/v-gosdume-predlagaiut-uvelichit-neoblagaemuiu-nalogom-summu-materialnoj-pomoshchi.html",
@@ -13552,7 +13569,6 @@
       "https://rg.ru/2025/10/19/rossiia-sokratila-postavki-chernyh-metallov-v-iuzhnuiu-koreiu-v-sentiabre.html",
       "https://rg.ru/2025/10/19/zolotoj-zapas-rossii-vyros-bolee-chem-v-dva-raza-s-2023-goda.html",
       "https://rg.ru/2025/10/19/reg-cfo/zammera-moskvy-biriukov-pozdravil-dorozhnikov-s-professionalnym-prazdnikom.html",
-      "https://rg.ru/2025/10/19/reg-cfo/sobianin-pozdravil-moskvichej-s-dnem-rabotnikov-dorozhnogo-hoziajstva.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/16/v-sbere-rasskazali-o-tonkostiah-finansirovaniia-energeticheskoj-otrasli.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
@@ -17393,7 +17409,14 @@
     "12cfab8e23c2d11630e35996f18ef544111782d541d3be3913522f4547371349": "2025-10-20T00:16:00+03:00",
     "51b9524e9a62ae1cc36f7ec69d9ec3313c4361de64a36a2b0b50ed019c571f3d": "2025-10-20T00:16:00+03:00",
     "1fb8ce01a121177103915a6898aba7ea2d2f8c8afb0c5538986559dd65566836": "2025-10-20T04:18:00+03:00",
-    "4d9a28a128963e4489a9d3a92dab7ed8ae38679f10af02da34788e9d4b53b2c6": "2025-10-20T04:18:00+03:00"
+    "4d9a28a128963e4489a9d3a92dab7ed8ae38679f10af02da34788e9d4b53b2c6": "2025-10-20T04:18:00+03:00",
+    "a4047cbc3eeef5c3b04c2c22277084da0e9fae056f6a2c41c61c639b7b1a7084": "2025-10-20T06:47:00+03:00",
+    "4a535bdac37349c49e1a0b5ea79718a1718b5dbfd5b2e9803a7ad6dc25281270": "2025-10-20T06:47:00+03:00",
+    "3de98fe6c1610e4d3e54867af8b12621759578853e3081b87c84296006066c3b": "2025-10-20T06:47:00+03:00",
+    "72e909ded4950b3d29de99a35a6210c17869314e81efcc23154a9fbbe9cbe52e": "2025-10-20T06:47:00+03:00",
+    "1057464fc693c07f3f5a1cea28bec8613f527174f87616eb016d3af97e7f9f09": "2025-10-20T06:47:00+03:00",
+    "d96edf8b6842674c0c2774092348605be3ef42f0cf72114e9c3bfc430863a4f4": "2025-10-20T06:47:00+03:00",
+    "b12013e4a66576cd5c6feede5fb161181411b5d037dcb10216c8e6cd9c0b6fc8": "2025-10-20T06:47:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -17407,7 +17430,7 @@
       "failures": {
         "last_error": null,
         "consecutive": 0,
-        "last_ts": 1760908443.046366
+        "last_ts": 1760932001.0999458
       },
       "warmup_done": false,
       "last_success_path": null
@@ -17424,8 +17447,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f15feb44d60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1760922997.2941961
       },
       "warmup_done": false,
@@ -17435,39 +17458,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "Spxzw66aTaxuBkhd",
+          "value": "mPEzCeChrX3fAPVJ",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760924252
+          "expires": 1760933254
         },
         {
           "name": "__ddg10_",
-          "value": "1760923052",
+          "value": "1760932054",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760924252
+          "expires": 1760933254
         },
         {
           "name": "__ddg9_",
-          "value": "52.173.163.132",
+          "value": "68.154.54.33",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760924252
-        },
-        {
-          "name": "__ddg1_",
-          "value": "tyPWG0GJGuYILTarMhUm",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1792459052
+          "expires": 1760933254
         },
         {
           "name": "PHPSESSID",
-          "value": "7ceafd9f1950ccc7cff72ede02a7ed70",
+          "value": "16b0bac4bc1dd9c8e1a878704b241d1e",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -17494,11 +17509,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "P1Qr3FKQgZxzEGuvrflzSK2LhyrsXgNS",
+          "value": "24TuEAzuquVLqFUkq5E4qk2uM1MFVm9h",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760919351
+          "expires": 1760942856
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -17506,12 +17521,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1792012551
+          "expires": 1792036056
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f15feb49590>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1760923085.973983
       },
       "warmup_done": false,
@@ -22182,7 +22197,19 @@
     "https://rg.ru/2025/10/19/na-vas-postupil-zakaz.html": "https://rg.ru/2025/10/19/na-vas-postupil-zakaz.html",
     "https://rg.ru/2025/10/19/rst-poezdki-v-rossiiu-stali-modnymi-v-saudovskoj-aravii.html": "https://rg.ru/2025/10/19/rst-poezdki-v-rossiiu-stali-modnymi-v-saudovskoj-aravii.html",
     "https://realty.ria.ru/20251020/parkovka-2048024307.html": "https://realty.ria.ru/20251020/parkovka-2048024307.html",
-    "https://rg.ru/2025/10/20/deputat-govyrin-predupredil-chto-pensii-v-noiabre-vyplatiat-ranshe-iz-za-prazdnika.html": "https://rg.ru/2025/10/20/deputat-govyrin-predupredil-chto-pensii-v-noiabre-vyplatiat-ranshe-iz-za-prazdnika.html"
+    "https://rg.ru/2025/10/20/deputat-govyrin-predupredil-chto-pensii-v-noiabre-vyplatiat-ranshe-iz-za-prazdnika.html": "https://rg.ru/2025/10/20/deputat-govyrin-predupredil-chto-pensii-v-noiabre-vyplatiat-ranshe-iz-za-prazdnika.html",
+    "https://www.metalinfo.ru/ru/news/177673": "http://www.metalinfo.ru/ru/news/177673",
+    "http://www.metalinfo.ru/ru/news/177673": "http://www.metalinfo.ru/ru/news/177673",
+    "https://www.metalinfo.ru/ru/news/177696": "http://www.metalinfo.ru/ru/news/177696",
+    "http://www.metalinfo.ru/ru/news/177696": "http://www.metalinfo.ru/ru/news/177696",
+    "https://www.metalinfo.ru/ru/news/177651": "http://www.metalinfo.ru/ru/news/177651",
+    "http://www.metalinfo.ru/ru/news/177651": "http://www.metalinfo.ru/ru/news/177651",
+    "https://www.metalinfo.ru/ru/news/177687": "http://www.metalinfo.ru/ru/news/177687",
+    "http://www.metalinfo.ru/ru/news/177687": "http://www.metalinfo.ru/ru/news/177687",
+    "https://www.metalinfo.ru/ru/news/177667": "http://www.metalinfo.ru/ru/news/177667",
+    "http://www.metalinfo.ru/ru/news/177667": "http://www.metalinfo.ru/ru/news/177667",
+    "https://realty.ria.ru/20251020/zapakhi-2048581732.html": "https://realty.ria.ru/20251020/zapakhi-2048581732.html",
+    "https://rg.ru/2025/10/20/reg-szfo/aeroport-pulkovo-vozobnovil-rabotu-posle-chp-s-samoletom.html": "https://rg.ru/2025/10/20/reg-szfo/aeroport-pulkovo-vozobnovil-rabotu-posle-chp-s-samoletom.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -26214,7 +26241,14 @@
     "3d3ce3572ac8602e2a5a46a219e1aba8ce86eff4": "https://rg.ru/2025/10/19/na-vas-postupil-zakaz.html",
     "2f950b9368e674f74ec2e35af825e7ddc145082d": "https://rg.ru/2025/10/19/rst-poezdki-v-rossiiu-stali-modnymi-v-saudovskoj-aravii.html",
     "37b3d4ec84a2abdfc5d2bdf5f6df447bc860ec5c": "https://realty.ria.ru/20251020/parkovka-2048024307.html",
-    "58ca62b86c57d8c31eb455454007905d0d2def30": "https://rg.ru/2025/10/20/deputat-govyrin-predupredil-chto-pensii-v-noiabre-vyplatiat-ranshe-iz-za-prazdnika.html"
+    "58ca62b86c57d8c31eb455454007905d0d2def30": "https://rg.ru/2025/10/20/deputat-govyrin-predupredil-chto-pensii-v-noiabre-vyplatiat-ranshe-iz-za-prazdnika.html",
+    "638888d5b4e552b66dd77ee966511f622d35523f": "http://www.metalinfo.ru/ru/news/177673",
+    "f47339c280763b4eda8b02892eb2cdc2dffe5fe4": "http://www.metalinfo.ru/ru/news/177696",
+    "a575d9c944a5498ca3c2682949e3edecec6c020f": "http://www.metalinfo.ru/ru/news/177651",
+    "ffb0b397a93bded5f86f520c5a4787995e091a6d": "http://www.metalinfo.ru/ru/news/177687",
+    "b35af878ad6c5c35ad7f114e3e7eda411d71768e": "http://www.metalinfo.ru/ru/news/177667",
+    "31a0a36a178f68ba57743a3cf0c840693c29a4d5": "https://realty.ria.ru/20251020/zapakhi-2048581732.html",
+    "80f49b3588618de2fc6f8e3a5bcf2dc8b1884f10": "https://rg.ru/2025/10/20/reg-szfo/aeroport-pulkovo-vozobnovil-rabotu-posle-chp-s-samoletom.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -31433,6 +31467,18 @@
     "https://rg.ru/2025/10/19/na-vas-postupil-zakaz.html": "12cfab8e23c2d11630e35996f18ef544111782d541d3be3913522f4547371349",
     "https://rg.ru/2025/10/19/rst-poezdki-v-rossiiu-stali-modnymi-v-saudovskoj-aravii.html": "51b9524e9a62ae1cc36f7ec69d9ec3313c4361de64a36a2b0b50ed019c571f3d",
     "https://realty.ria.ru/20251020/parkovka-2048024307.html": "1fb8ce01a121177103915a6898aba7ea2d2f8c8afb0c5538986559dd65566836",
-    "https://rg.ru/2025/10/20/deputat-govyrin-predupredil-chto-pensii-v-noiabre-vyplatiat-ranshe-iz-za-prazdnika.html": "4d9a28a128963e4489a9d3a92dab7ed8ae38679f10af02da34788e9d4b53b2c6"
+    "https://rg.ru/2025/10/20/deputat-govyrin-predupredil-chto-pensii-v-noiabre-vyplatiat-ranshe-iz-za-prazdnika.html": "4d9a28a128963e4489a9d3a92dab7ed8ae38679f10af02da34788e9d4b53b2c6",
+    "http://www.metalinfo.ru/ru/news/177673": "a4047cbc3eeef5c3b04c2c22277084da0e9fae056f6a2c41c61c639b7b1a7084",
+    "https://www.metalinfo.ru/ru/news/177673": "a4047cbc3eeef5c3b04c2c22277084da0e9fae056f6a2c41c61c639b7b1a7084",
+    "http://www.metalinfo.ru/ru/news/177696": "4a535bdac37349c49e1a0b5ea79718a1718b5dbfd5b2e9803a7ad6dc25281270",
+    "https://www.metalinfo.ru/ru/news/177696": "4a535bdac37349c49e1a0b5ea79718a1718b5dbfd5b2e9803a7ad6dc25281270",
+    "http://www.metalinfo.ru/ru/news/177651": "3de98fe6c1610e4d3e54867af8b12621759578853e3081b87c84296006066c3b",
+    "https://www.metalinfo.ru/ru/news/177651": "3de98fe6c1610e4d3e54867af8b12621759578853e3081b87c84296006066c3b",
+    "http://www.metalinfo.ru/ru/news/177687": "72e909ded4950b3d29de99a35a6210c17869314e81efcc23154a9fbbe9cbe52e",
+    "https://www.metalinfo.ru/ru/news/177687": "72e909ded4950b3d29de99a35a6210c17869314e81efcc23154a9fbbe9cbe52e",
+    "http://www.metalinfo.ru/ru/news/177667": "1057464fc693c07f3f5a1cea28bec8613f527174f87616eb016d3af97e7f9f09",
+    "https://www.metalinfo.ru/ru/news/177667": "1057464fc693c07f3f5a1cea28bec8613f527174f87616eb016d3af97e7f9f09",
+    "https://realty.ria.ru/20251020/zapakhi-2048581732.html": "d96edf8b6842674c0c2774092348605be3ef42f0cf72114e9c3bfc430863a4f4",
+    "https://rg.ru/2025/10/20/reg-szfo/aeroport-pulkovo-vozobnovil-rabotu-posle-chp-s-samoletom.html": "b12013e4a66576cd5c6feede5fb161181411b5d037dcb10216c8e6cd9c0b6fc8"
   }
 }
