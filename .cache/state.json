@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 20 Oct 2025 21:16:47 GMT"
+      "Last-Modified": "Tue, 21 Oct 2025 01:15:06 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"23aee-GEwUVG3SUQ2AQsePCCSrAjOrIZI\""
+      "ETag": "W/\"23aee-WRUTLaXctjGpbsFZA8J42Lypuvw\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Mon, 20 Oct 2025 16:08:58 GMT"
+      "Last-Modified": "Mon, 20 Oct 2025 23:01:43 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"ul0gud2uea4b83\""
+      "ETag": "\"iw8qfzgvjp4bv4\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -11414,6 +11414,12 @@
     },
     "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html": {
       "ETag": "\"in38cxbf581srk\""
+    },
+    "https://realty.ria.ru/20251021/arenda-2049448074.html": {
+      "Last-Modified": "Tue, 21 Oct 2025 00:00:05 GMT"
+    },
+    "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html": {
+      "ETag": "\"16rvv6ily4c246z\""
     }
   },
   "stats": {
@@ -13686,9 +13692,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4adad89a90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4ada861450>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4ada861590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4ada8643e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4ada864b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4ada761910>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-20T21:16:46.767554+00:00",
+    "last_run": "2025-10-21T01:14:48.104455+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -13701,33 +13718,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 753.1837029999906,
-        "connect_ms": 1079.8689170000557,
-        "response_ms": 1833.0526200000463,
+        "dns_ms": 942.7282720000676,
+        "connect_ms": 277.58859499988375,
+        "response_ms": 1220.3168669999513,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 1.9151239999928293,
-        "connect_ms": 394.9815400000034,
-        "response_ms": 396.89666399999624,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4ada761910>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 4855.1120930000025,
+        "dns_ms": 1179.3306160000157,
         "connect_ms": 0.0,
-        "response_ms": 1319.8381050000307,
+        "response_ms": 637.6054940000131,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 643.5229360000108,
-        "connect_ms": 156.2444399999663,
-        "response_ms": 799.767375999977,
+        "dns_ms": 500.26492800009237,
+        "connect_ms": 335.3662689999055,
+        "response_ms": 835.6311969999979,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -13736,21 +13753,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "c9031b9b28515953b6ea0c61476ef56496e0c1f7201f6e95aa8d89955a2ff2f3",
+    "https://ardexpert.ru/article": "a94cfa8999b01d2a344dbbd69665ef3077d9104d4ffc69df445e26238a2c12a6",
     "https://www.gostinfo.ru/News/List": "967125893cc06b7a4c2e2de7954d08e87d03aa9509f747407c112148b5382662",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "56266eb6fc21c41b2901c594177adaf137d49eb6c49b627344ef7c0ebb902eac",
-    "https://eec.eaeunion.org/news/": "e2616f824da6952598913ceef561818b7df34192135a9aee6004cd217fb63d06",
+    "https://eec.eaeunion.org/news/": "4a4af043e87f3ab292db39e64776693f29f84a6d9ee7cadc8bbb14f5c190d354",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "9983cb482c04bfa333231bf41ef980afb4602354a5a7cf995e03cf15141ade4d",
-    "https://www.metalinfo.ru/ru/news": "21556a4c202b5b3bbe5f7c717844b09f4aa1d138187c1fa7b6723251d2462fb7",
-    "https://www.pnp.ru/economics/": "ee3ad76cbd47f91d41b4b6f0c05fe84f85371d32cec206e8b1d12866cdaf4132",
-    "https://erzrf.ru/news/": "2be95ef68a7dfcb265debc852f80b4c11b4f1ed12f3606840b8d40d6d50e9947",
-    "https://ria-stk.ru/news/vse-novosti.php": "7ea25e6ec44a62cfe34068fbf35f5c8de2903f9e7349f2d814d71de9f52e5629",
-    "http://government.ru/news/": "1def37e7147d4947ffcde3141a038a99cd82273af616994d991c3cb47cf31e48",
-    "https://stroygaz.ru/news/": "6208dabe8d3a9c2796153d76031e6cc80c06eb1991f168b002f75326d7ba3bd2",
-    "https://realty.ria.ru/lenta/": "128daf855451460b9a5d6b60b9afc69461d815b7748a9722908fb37bbec85a02",
-    "https://rg.ru/tema/ekonomika": "b3f24f3e035c1b046005614ede12d00d809887925a9f75f6cb6e73c16327ec5a",
-    "http://ancb.ru/publication": "101f570ebc0a64376d3fb2ee8fdb40cadbb86e39d50dbd39cfd9cda3a61f049e",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "b2b490737333654cbf3c96b4e93d77ed5415891a95a2d23dbffcf215dc03d761",
+    "https://www.metalinfo.ru/ru/news": "77af4f8a6aa396235f8d1405a71c2be082093b0944508b6c4734d461943c7bac",
+    "https://www.pnp.ru/economics/": "743e647a3390b74e405f45294d98eb14be23fae1cfc7d5d71bb62e064350d4f0",
+    "https://erzrf.ru/news/": "c1763d84cc3703296f398e7c26593b51e050572cbad2825d7d6ce4f973233bb8",
+    "https://ria-stk.ru/news/vse-novosti.php": "9dd7f94755b3074702991beca0bc51c9e3a55951f70d17ea7405c10dbecb3efe",
+    "http://government.ru/news/": "ffabc55be0e1beedbe303978bfb074e3a2760cddc40c95d67cc25f90ce5091e3",
+    "https://stroygaz.ru/news/": "761c6b807d4bb125b15f351260f1e60cd75d886955b191c4e9dd8e26a8b4b917",
+    "https://realty.ria.ru/lenta/": "1d3969506935200cf390cfe8f6b361bfaee74dd66192ac3d1a34c06ed7a3dce4",
+    "https://rg.ru/tema/ekonomika": "6398cd4f235cc0382f1f50022dcdf01c37def2c5c2c0ad9b4f0d60b220cde566",
+    "http://ancb.ru/publication": "dfaff5110cbd8089399aa0b6c5a26d744e397ff80bd48bf1daddba031ed7d304",
     "https://notim.ru": "acf399aca0cdae9195eddc66c15f9ac520767d9ad309a56822623f825aa9a5b9",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -14057,6 +14074,7 @@
       "https://stroygaz.ru/news/info-partners-news/stroitelnyy-forum-tsement-beton-sukhie-smesi-proydet-v-moskve-29-31-oktyabrya-2025/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251021/arenda-2049448074.html",
       "https://realty.ria.ru/20251020/domklik-2049433257.html",
       "https://realty.ria.ru/20251020/konkurs-2049412031.html",
       "https://realty.ria.ru/20251020/gosduma-2049399382.html",
@@ -14075,10 +14093,10 @@
       "https://realty.ria.ru/20251020/gostinitsa-2049302855.html",
       "https://realty.ria.ru/20251020/moskva-2049300629.html",
       "https://realty.ria.ru/20251020/sberbank-2049298358.html",
-      "https://realty.ria.ru/20251020/eksperty-2049288182.html",
-      "https://realty.ria.ru/20251020/moskva-2049284389.html"
+      "https://realty.ria.ru/20251020/eksperty-2049288182.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html",
       "https://rg.ru/2025/10/20/analitik-potavin-skachki-cen-na-serebro-obiasniaiutsia-deficitom-syria-na-rynke.html",
       "https://rg.ru/2025/10/20/reg-cfo/poka-vse-spiat.html",
       "https://rg.ru/2025/10/20/reg-cfo/prostoit-do-vesny.html",
@@ -14107,7 +14125,6 @@
       "https://rg.ru/2025/10/20/eksperty-ocenili-resheniia-es-po-povodu-importa-i-tranzita-rossijskogo-gaza.html",
       "https://rg.ru/2025/10/20/uchet-ip-adresov-mozhet-usilit-kiberbezopasnost-v-rossii.html",
       "https://rg.ru/2025/10/20/sdelki-s-pokupkoj-zhilia-predlagaiut-provodit-po-novomu.html",
-      "https://rg.ru/2025/10/20/kak-ne-ustroit-pozhar-samolete-7-pravil-perevozki-vneshnih-akkumuliatorov.html",
       "https://rg.ru/2025/10/20/opredeleny-kliuchevye-tochki-rosta-rossijskogo-biznesa.html",
       "https://rg.ru/2025/10/20/kak-sibur-reshaet-sistemnye-problemy-gornoj-otrasli.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
@@ -18167,7 +18184,9 @@
     "a66fe8552cc6633b56e97a006cf341317988f8c1bca65ce825b4247e113ce36d": "2025-10-21T00:16:00+03:00",
     "c5e55873c0174e65daabb3376961eca559c731f6ea67d1f235ee758769af3477": "2025-10-21T00:16:00+03:00",
     "f98c0938c6396a99fd699b6efafafddb32500d4e862e11113d5eeab22a7c074a": "2025-10-21T00:16:00+03:00",
-    "6e0889f2047c52a143e83f0ec8d372d3b20758471d7e9b71d38aafa96ae03e3f": "2025-10-21T00:16:00+03:00"
+    "6e0889f2047c52a143e83f0ec8d372d3b20758471d7e9b71d38aafa96ae03e3f": "2025-10-21T00:16:00+03:00",
+    "5876fe1a2cb98b31eca45da83fbb0553cff8b0989c911ea781092f2aa97a503f": "2025-10-21T04:14:00+03:00",
+    "a55b2a57ae2dc4469b138a735b733431346f3e851cb177f2dbf2b7f286b175b6": "2025-10-21T04:14:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -18198,9 +18217,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1760984724.482516
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4ada864b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1761009223.340913
       },
       "warmup_done": false,
       "last_success_path": null
@@ -18209,31 +18228,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "8IGC4O4mpf4FLk7r",
+          "value": "ZQZkf80hTCiTLzui",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760996174
+          "expires": 1761010473
         },
         {
           "name": "__ddg10_",
-          "value": "1760994974",
+          "value": "1761009273",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760996174
+          "expires": 1761010473
         },
         {
           "name": "__ddg9_",
-          "value": "52.238.26.246",
+          "value": "172.184.219.208",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1760996174
+          "expires": 1761010473
+        },
+        {
+          "name": "__ddg1_",
+          "value": "CgocubpySBWmb8MTcciH",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1792545273
         },
         {
           "name": "PHPSESSID",
-          "value": "0ac419041853d61407eee179389b1c97",
+          "value": "6b6f0bf22dc36cb5abe5c4b120f85848",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -18260,11 +18287,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "1Ts9qtu6WOBD5PImMuDJwE0MtYRAyBc9",
+          "value": "Pvhj2MEDMSb5azmLK0sh1spaRkq3LJ08",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761005777
+          "expires": 1761020076
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -18272,7 +18299,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1792098977
+          "expires": 1792113276
         }
       ],
       "failures": {
@@ -23232,7 +23259,9 @@
     "https://rg.ru/2025/10/20/reg-cfo/trenazhernoe-vremia.html": "https://rg.ru/2025/10/20/reg-cfo/trenazhernoe-vremia.html",
     "https://rg.ru/2025/10/20/reg-szfo/vnutrennij-turpotok-po-rossii-za-10-let-vyros-v-2-raza.html": "https://rg.ru/2025/10/20/reg-szfo/vnutrennij-turpotok-po-rossii-za-10-let-vyros-v-2-raza.html",
     "https://rg.ru/2025/10/20/reg-szfo/shassi-podvelo.html": "https://rg.ru/2025/10/20/reg-szfo/shassi-podvelo.html",
-    "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html": "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html"
+    "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html": "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html",
+    "https://realty.ria.ru/20251021/arenda-2049448074.html": "https://realty.ria.ru/20251021/arenda-2049448074.html",
+    "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html": "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -27488,7 +27517,9 @@
     "800ba12f882c5783d02d9a7707289214e64b59b8": "https://rg.ru/2025/10/20/reg-cfo/trenazhernoe-vremia.html",
     "f749a3118481ee96a7389370550083adf0937501": "https://rg.ru/2025/10/20/reg-szfo/vnutrennij-turpotok-po-rossii-za-10-let-vyros-v-2-raza.html",
     "23000a8d75f5fd8005471abd1a0011e894afbb08": "https://rg.ru/2025/10/20/reg-szfo/shassi-podvelo.html",
-    "40caa999121aab994c31593967c7a164423ae806": "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html"
+    "40caa999121aab994c31593967c7a164423ae806": "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html",
+    "24ac7bc3323bbfae74b418836bec65541c1852d8": "https://realty.ria.ru/20251021/arenda-2049448074.html",
+    "780384d37381864a21df205c5b7b84492aa9e75c": "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -33025,6 +33056,8 @@
     "https://rg.ru/2025/10/20/reg-cfo/trenazhernoe-vremia.html": "a66fe8552cc6633b56e97a006cf341317988f8c1bca65ce825b4247e113ce36d",
     "https://rg.ru/2025/10/20/reg-szfo/vnutrennij-turpotok-po-rossii-za-10-let-vyros-v-2-raza.html": "c5e55873c0174e65daabb3376961eca559c731f6ea67d1f235ee758769af3477",
     "https://rg.ru/2025/10/20/reg-szfo/shassi-podvelo.html": "f98c0938c6396a99fd699b6efafafddb32500d4e862e11113d5eeab22a7c074a",
-    "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html": "6e0889f2047c52a143e83f0ec8d372d3b20758471d7e9b71d38aafa96ae03e3f"
+    "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html": "6e0889f2047c52a143e83f0ec8d372d3b20758471d7e9b71d38aafa96ae03e3f",
+    "https://realty.ria.ru/20251021/arenda-2049448074.html": "5876fe1a2cb98b31eca45da83fbb0553cff8b0989c911ea781092f2aa97a503f",
+    "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html": "a55b2a57ae2dc4469b138a735b733431346f3e851cb177f2dbf2b7f286b175b6"
   }
 }
