@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 21 Oct 2025 01:15:06 GMT"
+      "Last-Modified": "Tue, 21 Oct 2025 03:40:20 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"23aee-WRUTLaXctjGpbsFZA8J42Lypuvw\""
+      "ETag": "W/\"23aee-lEsVNkS0oYtL4TAuw37kfro4JDI\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"iw8qfzgvjp4bv4\""
+      "ETag": "\"tikygykw2z4c7z\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -11420,6 +11420,17 @@
     },
     "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html": {
       "ETag": "\"16rvv6ily4c246z\""
+    },
+    "https://www.metalinfo.ru/ru/news/177732": {},
+    "https://www.metalinfo.ru/ru/news/177718": {},
+    "https://www.metalinfo.ru/ru/news/177720": {},
+    "https://www.metalinfo.ru/ru/news/177681": {},
+    "https://www.metalinfo.ru/ru/news/177734": {},
+    "https://realty.ria.ru/20251021/rayony-2048821407.html": {
+      "Last-Modified": "Tue, 21 Oct 2025 02:00:03 GMT"
+    },
+    "https://rg.ru/2025/10/21/reg-dfo/v-iakutii-vveli-novuiu-sistemu-oplaty-perepravy-na-parome-iakutsk-nizhnij-bestiah.html": {
+      "ETag": "\"9luhtwykdq1opr\""
     }
   },
   "stats": {
@@ -13703,9 +13714,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdfd26a5a90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdfd2191450>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdfd2191590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdfd21983e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdfd2198b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdfd2099a30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-21T01:14:48.104455+00:00",
+    "last_run": "2025-10-21T03:40:06.624605+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -13718,9 +13740,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 942.7282720000676,
-        "connect_ms": 277.58859499988375,
-        "response_ms": 1220.3168669999513,
+        "dns_ms": 774.7004450000077,
+        "connect_ms": 945.0383869999825,
+        "response_ms": 1719.7388319999902,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -13731,20 +13753,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4ada761910>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdfd2099a30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 1179.3306160000157,
-        "connect_ms": 0.0,
-        "response_ms": 637.6054940000131,
+        "dns_ms": 1144.7620399999892,
+        "connect_ms": 253.83748699999842,
+        "response_ms": 1398.5995269999876,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 500.26492800009237,
-        "connect_ms": 335.3662689999055,
-        "response_ms": 835.6311969999979,
+        "dns_ms": 807.4422469999831,
+        "connect_ms": 16.009495000048446,
+        "response_ms": 823.4517420000316,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -13753,20 +13775,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "a94cfa8999b01d2a344dbbd69665ef3077d9104d4ffc69df445e26238a2c12a6",
+    "https://ardexpert.ru/article": "27f6a9e93976743b6617506d7b7c20fc533d6d3d9b8fe118b64751866ec2789b",
     "https://www.gostinfo.ru/News/List": "967125893cc06b7a4c2e2de7954d08e87d03aa9509f747407c112148b5382662",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "56266eb6fc21c41b2901c594177adaf137d49eb6c49b627344ef7c0ebb902eac",
-    "https://eec.eaeunion.org/news/": "4a4af043e87f3ab292db39e64776693f29f84a6d9ee7cadc8bbb14f5c190d354",
+    "https://eec.eaeunion.org/news/": "684bd69f11cc0ce0774128f8e24acbac578f0ad0194d493ab948e973e560b1e1",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "b2b490737333654cbf3c96b4e93d77ed5415891a95a2d23dbffcf215dc03d761",
-    "https://www.metalinfo.ru/ru/news": "77af4f8a6aa396235f8d1405a71c2be082093b0944508b6c4734d461943c7bac",
-    "https://www.pnp.ru/economics/": "743e647a3390b74e405f45294d98eb14be23fae1cfc7d5d71bb62e064350d4f0",
-    "https://erzrf.ru/news/": "c1763d84cc3703296f398e7c26593b51e050572cbad2825d7d6ce4f973233bb8",
-    "https://ria-stk.ru/news/vse-novosti.php": "9dd7f94755b3074702991beca0bc51c9e3a55951f70d17ea7405c10dbecb3efe",
-    "http://government.ru/news/": "ffabc55be0e1beedbe303978bfb074e3a2760cddc40c95d67cc25f90ce5091e3",
-    "https://stroygaz.ru/news/": "761c6b807d4bb125b15f351260f1e60cd75d886955b191c4e9dd8e26a8b4b917",
-    "https://realty.ria.ru/lenta/": "1d3969506935200cf390cfe8f6b361bfaee74dd66192ac3d1a34c06ed7a3dce4",
-    "https://rg.ru/tema/ekonomika": "6398cd4f235cc0382f1f50022dcdf01c37def2c5c2c0ad9b4f0d60b220cde566",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "e8594138311be8f7966deac549d3995dc9a02f7e8cfa6356c145e24b5352700b",
+    "https://www.metalinfo.ru/ru/news": "3bf22a4c6a01a840497d6d3851c11ff043066d4fa42131558755bb0f40cbcd17",
+    "https://www.pnp.ru/economics/": "bbe1bdcfe38101c0858c628dc18307654992715c521bb0653473b1bdde78ee5b",
+    "https://erzrf.ru/news/": "b98e96cd3302cd4458e80db56051430eedb98d9376f46896cba7e47a1596131c",
+    "https://ria-stk.ru/news/vse-novosti.php": "5acff1efddae3d5a8a7c27074fb58b1ec0ec67e0eac723742b0b74b9816d8c71",
+    "http://government.ru/news/": "3c3d7838b1ecb6518eebc3c4a0b70eccfebd2ab4ec031038b3758b486592ce2a",
+    "https://stroygaz.ru/news/": "c95996ce7e753629ca3f0bc4af0ab2ea7cc484a63d8caf6557e620eb7adab707",
+    "https://realty.ria.ru/lenta/": "aac72d7e3050d401b4a9f376e4ea4c5a25e2102e9302183bdba09c028f556150",
+    "https://rg.ru/tema/ekonomika": "88c8de1e72e8202c214014e4d639c526f0b458eb8704e95fa9cf2fa224d41085",
     "http://ancb.ru/publication": "dfaff5110cbd8089399aa0b6c5a26d744e397ff80bd48bf1daddba031ed7d304",
     "https://notim.ru": "acf399aca0cdae9195eddc66c15f9ac520767d9ad309a56822623f825aa9a5b9",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -13906,6 +13928,11 @@
       "https://www.interfax-russia.ru/realty/news/pochti-31-tys-ipotechnyh-dogovorov-zaklyuchili-v-moskve-v-iii-kvartale"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/177732",
+      "https://www.metalinfo.ru/ru/news/177718",
+      "https://www.metalinfo.ru/ru/news/177720",
+      "https://www.metalinfo.ru/ru/news/177681",
+      "https://www.metalinfo.ru/ru/news/177734",
       "https://www.metalinfo.ru/ru/news/177731",
       "https://www.metalinfo.ru/ru/news/177706",
       "https://www.metalinfo.ru/ru/news/177728",
@@ -13920,12 +13947,7 @@
       "https://www.metalinfo.ru/ru/news/177713",
       "https://www.metalinfo.ru/ru/news/177716",
       "https://www.metalinfo.ru/ru/news/177714",
-      "https://www.metalinfo.ru/ru/news/177686",
-      "https://www.metalinfo.ru/ru/news/177712",
-      "https://www.metalinfo.ru/ru/news/177711",
-      "https://www.metalinfo.ru/ru/news/177708",
-      "https://www.metalinfo.ru/ru/news/177688",
-      "https://www.metalinfo.ru/ru/news/177709"
+      "https://www.metalinfo.ru/ru/news/177686"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -14074,6 +14096,7 @@
       "https://stroygaz.ru/news/info-partners-news/stroitelnyy-forum-tsement-beton-sukhie-smesi-proydet-v-moskve-29-31-oktyabrya-2025/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251021/rayony-2048821407.html",
       "https://realty.ria.ru/20251021/arenda-2049448074.html",
       "https://realty.ria.ru/20251020/domklik-2049433257.html",
       "https://realty.ria.ru/20251020/konkurs-2049412031.html",
@@ -14092,10 +14115,10 @@
       "https://realty.ria.ru/20251020/tekhnopark-2049307994.html",
       "https://realty.ria.ru/20251020/gostinitsa-2049302855.html",
       "https://realty.ria.ru/20251020/moskva-2049300629.html",
-      "https://realty.ria.ru/20251020/sberbank-2049298358.html",
-      "https://realty.ria.ru/20251020/eksperty-2049288182.html"
+      "https://realty.ria.ru/20251020/sberbank-2049298358.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/21/reg-dfo/v-iakutii-vveli-novuiu-sistemu-oplaty-perepravy-na-parome-iakutsk-nizhnij-bestiah.html",
       "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html",
       "https://rg.ru/2025/10/20/analitik-potavin-skachki-cen-na-serebro-obiasniaiutsia-deficitom-syria-na-rynke.html",
       "https://rg.ru/2025/10/20/reg-cfo/poka-vse-spiat.html",
@@ -14124,7 +14147,6 @@
       "https://rg.ru/2025/10/20/reg-pfo/v-ator-rasskazali-kuda-poedut-rossiiane-na-noiabrskie-prazdniki.html",
       "https://rg.ru/2025/10/20/eksperty-ocenili-resheniia-es-po-povodu-importa-i-tranzita-rossijskogo-gaza.html",
       "https://rg.ru/2025/10/20/uchet-ip-adresov-mozhet-usilit-kiberbezopasnost-v-rossii.html",
-      "https://rg.ru/2025/10/20/sdelki-s-pokupkoj-zhilia-predlagaiut-provodit-po-novomu.html",
       "https://rg.ru/2025/10/20/opredeleny-kliuchevye-tochki-rosta-rossijskogo-biznesa.html",
       "https://rg.ru/2025/10/20/kak-sibur-reshaet-sistemnye-problemy-gornoj-otrasli.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
@@ -18186,7 +18208,14 @@
     "f98c0938c6396a99fd699b6efafafddb32500d4e862e11113d5eeab22a7c074a": "2025-10-21T00:16:00+03:00",
     "6e0889f2047c52a143e83f0ec8d372d3b20758471d7e9b71d38aafa96ae03e3f": "2025-10-21T00:16:00+03:00",
     "5876fe1a2cb98b31eca45da83fbb0553cff8b0989c911ea781092f2aa97a503f": "2025-10-21T04:14:00+03:00",
-    "a55b2a57ae2dc4469b138a735b733431346f3e851cb177f2dbf2b7f286b175b6": "2025-10-21T04:14:00+03:00"
+    "a55b2a57ae2dc4469b138a735b733431346f3e851cb177f2dbf2b7f286b175b6": "2025-10-21T04:14:00+03:00",
+    "d3c1efd6feb2a451fddbfc07f112fb67b7b63ef2ad9bb0c0464675634cf30048": "2025-10-21T06:39:00+03:00",
+    "c6cf4c3f22f77f91397a6f79abafe11b680aaae2ef88f1ff72112825c68a6fcb": "2025-10-21T06:39:00+03:00",
+    "655fb84e189ba187b4d0c38e166315b331a0ad461c35577bef94855cc5809969": "2025-10-21T06:39:00+03:00",
+    "dcc6ab4163dd2decd9a1f55b7b9db2c6e2a449932f63711f7cd1cac8e345dac9": "2025-10-21T06:39:00+03:00",
+    "1fc033174fac322a35af40ba0d9a313245b2da2e0c0d15041a77410a5e1b9a4c": "2025-10-21T06:39:00+03:00",
+    "3dfcee8563e92c154391e5ac990b7eb54136b13c6073e705ced05bd935140bed": "2025-10-21T06:39:00+03:00",
+    "3f4e2e73ff28b6441c744faccb9bf938f31888d97d3e0c4ffd3a4bac21824450": "2025-10-21T06:40:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -18217,9 +18246,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4ada864b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1761009223.340913
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdfd2198b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1761017897.9045181
       },
       "warmup_done": false,
       "last_success_path": null
@@ -18228,39 +18257,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "ZQZkf80hTCiTLzui",
+          "value": "w5AmMAA6qAr9X2Kh",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761010473
+          "expires": 1761019187
         },
         {
           "name": "__ddg10_",
-          "value": "1761009273",
+          "value": "1761017987",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761010473
+          "expires": 1761019187
         },
         {
           "name": "__ddg9_",
-          "value": "172.184.219.208",
+          "value": "172.184.174.149",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761010473
-        },
-        {
-          "name": "__ddg1_",
-          "value": "CgocubpySBWmb8MTcciH",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1792545273
+          "expires": 1761019187
         },
         {
           "name": "PHPSESSID",
-          "value": "6b6f0bf22dc36cb5abe5c4b120f85848",
+          "value": "873a165f11bf638e17d8347c5dc91a89",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -23261,7 +23282,19 @@
     "https://rg.ru/2025/10/20/reg-szfo/shassi-podvelo.html": "https://rg.ru/2025/10/20/reg-szfo/shassi-podvelo.html",
     "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html": "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html",
     "https://realty.ria.ru/20251021/arenda-2049448074.html": "https://realty.ria.ru/20251021/arenda-2049448074.html",
-    "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html": "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html"
+    "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html": "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html",
+    "https://www.metalinfo.ru/ru/news/177732": "http://www.metalinfo.ru/ru/news/177732",
+    "http://www.metalinfo.ru/ru/news/177732": "http://www.metalinfo.ru/ru/news/177732",
+    "https://www.metalinfo.ru/ru/news/177718": "http://www.metalinfo.ru/ru/news/177718",
+    "http://www.metalinfo.ru/ru/news/177718": "http://www.metalinfo.ru/ru/news/177718",
+    "https://www.metalinfo.ru/ru/news/177720": "http://www.metalinfo.ru/ru/news/177720",
+    "http://www.metalinfo.ru/ru/news/177720": "http://www.metalinfo.ru/ru/news/177720",
+    "https://www.metalinfo.ru/ru/news/177681": "http://www.metalinfo.ru/ru/news/177681",
+    "http://www.metalinfo.ru/ru/news/177681": "http://www.metalinfo.ru/ru/news/177681",
+    "https://www.metalinfo.ru/ru/news/177734": "http://www.metalinfo.ru/ru/news/177734",
+    "http://www.metalinfo.ru/ru/news/177734": "http://www.metalinfo.ru/ru/news/177734",
+    "https://realty.ria.ru/20251021/rayony-2048821407.html": "https://realty.ria.ru/20251021/rayony-2048821407.html",
+    "https://rg.ru/2025/10/21/reg-dfo/v-iakutii-vveli-novuiu-sistemu-oplaty-perepravy-na-parome-iakutsk-nizhnij-bestiah.html": "https://rg.ru/2025/10/21/reg-dfo/v-iakutii-vveli-novuiu-sistemu-oplaty-perepravy-na-parome-iakutsk-nizhnij-bestiah.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -27519,7 +27552,14 @@
     "23000a8d75f5fd8005471abd1a0011e894afbb08": "https://rg.ru/2025/10/20/reg-szfo/shassi-podvelo.html",
     "40caa999121aab994c31593967c7a164423ae806": "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html",
     "24ac7bc3323bbfae74b418836bec65541c1852d8": "https://realty.ria.ru/20251021/arenda-2049448074.html",
-    "780384d37381864a21df205c5b7b84492aa9e75c": "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html"
+    "780384d37381864a21df205c5b7b84492aa9e75c": "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html",
+    "fdaec753fc42c8f33efa435093a84765c39ee4e8": "http://www.metalinfo.ru/ru/news/177732",
+    "b7353e2153b72167af40aa6f026cddd2cd1431e5": "http://www.metalinfo.ru/ru/news/177718",
+    "e318a6485e727352d32db074cd7692106408f858": "http://www.metalinfo.ru/ru/news/177720",
+    "121934842507fdc774fcd969ca7b28e1249a49aa": "http://www.metalinfo.ru/ru/news/177681",
+    "b6d42785804bc44b0824d355f1db61e39af7c92c": "http://www.metalinfo.ru/ru/news/177734",
+    "158be3e75455506794893a99ce3852a33bb8bd31": "https://realty.ria.ru/20251021/rayony-2048821407.html",
+    "0c162d923072008dc02b3bcf803fb90690808a3e": "https://rg.ru/2025/10/21/reg-dfo/v-iakutii-vveli-novuiu-sistemu-oplaty-perepravy-na-parome-iakutsk-nizhnij-bestiah.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -33058,6 +33098,18 @@
     "https://rg.ru/2025/10/20/reg-szfo/shassi-podvelo.html": "f98c0938c6396a99fd699b6efafafddb32500d4e862e11113d5eeab22a7c074a",
     "https://rg.ru/2025/10/20/reg-szfo/procent-stabilnyj.html": "6e0889f2047c52a143e83f0ec8d372d3b20758471d7e9b71d38aafa96ae03e3f",
     "https://realty.ria.ru/20251021/arenda-2049448074.html": "5876fe1a2cb98b31eca45da83fbb0553cff8b0989c911ea781092f2aa97a503f",
-    "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html": "a55b2a57ae2dc4469b138a735b733431346f3e851cb177f2dbf2b7f286b175b6"
+    "https://rg.ru/2025/10/21/deputat-nilov-pensionery-v-dekabre-poluchat-uvelichennye-pensii.html": "a55b2a57ae2dc4469b138a735b733431346f3e851cb177f2dbf2b7f286b175b6",
+    "http://www.metalinfo.ru/ru/news/177732": "d3c1efd6feb2a451fddbfc07f112fb67b7b63ef2ad9bb0c0464675634cf30048",
+    "https://www.metalinfo.ru/ru/news/177732": "d3c1efd6feb2a451fddbfc07f112fb67b7b63ef2ad9bb0c0464675634cf30048",
+    "http://www.metalinfo.ru/ru/news/177718": "c6cf4c3f22f77f91397a6f79abafe11b680aaae2ef88f1ff72112825c68a6fcb",
+    "https://www.metalinfo.ru/ru/news/177718": "c6cf4c3f22f77f91397a6f79abafe11b680aaae2ef88f1ff72112825c68a6fcb",
+    "http://www.metalinfo.ru/ru/news/177720": "655fb84e189ba187b4d0c38e166315b331a0ad461c35577bef94855cc5809969",
+    "https://www.metalinfo.ru/ru/news/177720": "655fb84e189ba187b4d0c38e166315b331a0ad461c35577bef94855cc5809969",
+    "http://www.metalinfo.ru/ru/news/177681": "dcc6ab4163dd2decd9a1f55b7b9db2c6e2a449932f63711f7cd1cac8e345dac9",
+    "https://www.metalinfo.ru/ru/news/177681": "dcc6ab4163dd2decd9a1f55b7b9db2c6e2a449932f63711f7cd1cac8e345dac9",
+    "http://www.metalinfo.ru/ru/news/177734": "1fc033174fac322a35af40ba0d9a313245b2da2e0c0d15041a77410a5e1b9a4c",
+    "https://www.metalinfo.ru/ru/news/177734": "1fc033174fac322a35af40ba0d9a313245b2da2e0c0d15041a77410a5e1b9a4c",
+    "https://realty.ria.ru/20251021/rayony-2048821407.html": "3dfcee8563e92c154391e5ac990b7eb54136b13c6073e705ced05bd935140bed",
+    "https://rg.ru/2025/10/21/reg-dfo/v-iakutii-vveli-novuiu-sistemu-oplaty-perepravy-na-parome-iakutsk-nizhnij-bestiah.html": "3f4e2e73ff28b6441c744faccb9bf938f31888d97d3e0c4ffd3a4bac21824450"
   }
 }
