@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 22 Oct 2025 21:15:51 GMT"
+      "Last-Modified": "Thu, 23 Oct 2025 01:12:51 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"17b46-0ZXIdRs7pl3P2DZetd9jj3HXqcQ\""
+      "ETag": "W/\"17b46-E6TW22jziRolJQZPlAhtNraRlzA\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Wed, 22 Oct 2025 15:57:39 GMT"
+      "Last-Modified": "Wed, 22 Oct 2025 21:51:58 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"16lrtty2opc3xfu\""
+      "ETag": "\"wni7zkvzyc3vxb\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -12348,6 +12348,12 @@
     },
     "https://rg.ru/2025/10/22/minek-pochti-50-regionov-rf-vystupaiut-za-vovlechenie-zemel-pod-investproekty.html": {
       "ETag": "\"r3g1j92lc71pjq\""
+    },
+    "http://ancb.ru/publication/read/20339": {},
+    "http://ancb.ru/publication/read/20338": {},
+    "http://ancb.ru/publication/read/20334": {},
+    "https://rg.ru/2025/10/23/ekspert-hachaturian-limity-na-sniatie-nalichnyh-v-bankomate-izmenilis-s-1-sentiabria.html": {
+      "ETag": "\"moy3pyuhnw1mkm\""
     }
   },
   "stats": {
@@ -14796,9 +14802,14 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-22T21:15:53.904315+00:00",
+    "last_run": "2025-10-23T01:12:30.426157+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -14811,33 +14822,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 366.56881500002214,
-        "connect_ms": 758.548994999984,
-        "response_ms": 1125.117810000006,
+        "dns_ms": 635.3004800000122,
+        "connect_ms": 673.510513999986,
+        "response_ms": 1308.8109939999981,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7feac5af1a30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 2.311411999983193,
+        "connect_ms": 292.38181800002394,
+        "response_ms": 294.69323000000713,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 5425.8391640000245,
+        "dns_ms": 4761.393791000018,
         "connect_ms": 0.0,
-        "response_ms": 5413.01058800002,
+        "response_ms": 932.7686999999969,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.612620000026709,
-        "connect_ms": 450.34488999999667,
-        "response_ms": 450.9575100000234,
+        "dns_ms": 1643.048001000011,
+        "connect_ms": 0.0,
+        "response_ms": 612.1717770000146,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -14846,21 +14857,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "bae27f2e1a67a9d69afdaa1f52fc85fe6d9223feba23f71d3ca6fc123edd5b85",
+    "https://ardexpert.ru/article": "d5317bd4e4692b3c62b3a22a072e638582211bceea70f81023508b67501ad114",
     "https://www.gostinfo.ru/News/List": "14e25cf61017b37ac7a10a088ca099dd4f1eaa43effdb20278f23c849a8be083",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "56266eb6fc21c41b2901c594177adaf137d49eb6c49b627344ef7c0ebb902eac",
-    "https://eec.eaeunion.org/news/": "d94b47e92c1ebfad15a1ef3ed2a11f11a2e9cb2b0f969dc3a226cbb5dcf51ceb",
+    "https://eec.eaeunion.org/news/": "02123c0d6e08f357e41ac485d02e5e16f16d4ee6dc18fdd2cd2247b588d93e34",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "f55988dcbc7bb420a95ed947ebc313b3f5d23a1e7ce47ab6db4c8a910ed88e50",
-    "https://www.metalinfo.ru/ru/news": "fe4a0d11901d8e1d2f76437565ff2a1fe64138baea5e11d08ed0073c0700157d",
-    "https://www.pnp.ru/economics/": "a0da36f953d463cd6ed97f7ce5b3f1a69bae340559ec35dd165be3236837459c",
-    "https://erzrf.ru/news/": "d3e5167d6fb47cface510d2fce4da2c1145aa5a4b5c6a12a6e416d34374606c0",
-    "https://ria-stk.ru/news/vse-novosti.php": "860d2dc2ca7edab2c5e08f90afeb092caeee834134c1bb82aedf153e1f3f063a",
-    "http://government.ru/news/": "1e6f3c2308b9fb691c012c8a074c045d8e4fc5e15b336d8a891c354bc493be5e",
-    "https://stroygaz.ru/news/": "866f1891f79f1c9641414a600462c409c3840239e0c8808b1282d798ac96a027",
-    "https://realty.ria.ru/lenta/": "ba88fc63275bf426988c4e05fe80d6cbeed7ab196c27680d4665b5da2b0f822d",
-    "https://rg.ru/tema/ekonomika": "247996019c08481265fc9ebc7295ea2cf54ec31968c5efb75885e54a6fc5526a",
-    "http://ancb.ru/publication": "88ba43e05f7a934274536cbc95458b53a91c40bc83ac33b0aa4e593cf5c05e60",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "ceeded5b381f649b9d1b64dfc29cd4fbd3f846f11c3ad6e4f9c299ac4161428b",
+    "https://www.metalinfo.ru/ru/news": "02fe2a085ebdf5b9b7f2eee5ae79eee8f6f715268334749984094073cba15330",
+    "https://www.pnp.ru/economics/": "7308680720b066ff97ebd0d828608cd0062effc82f30cf4b725e9e6d795e1f4f",
+    "https://erzrf.ru/news/": "92d08b4e8dbf50853ca24acc2bdae9d0cc92377cf39c76190258610de3fd3c26",
+    "https://ria-stk.ru/news/vse-novosti.php": "5811075d1750402a996a68466b351d1714cb30ad8377e9f3c05afe4b69954d3c",
+    "http://government.ru/news/": "c2e6efbd2b7f05fab478e3baadf959402bb2fdece1d001098e9c48fd7a82ce9b",
+    "https://stroygaz.ru/news/": "45ef6429e6245b514b0f188b0fa6cf001d18bed9fe225b5a5d492f1ecd6a2e2c",
+    "https://realty.ria.ru/lenta/": "796e727d0275fe62fcc91584c897b5cf474a9a318d9614de56fab67611b5f36f",
+    "https://rg.ru/tema/ekonomika": "8f6ba8adf84ad3524c79925847eccba380432e0285971576e4cf00406c7ea442",
+    "http://ancb.ru/publication": "ea093a960434cb5517082bd532d9965248616278632add2272a6ecc135561ca2",
     "https://notim.ru": "acf399aca0cdae9195eddc66c15f9ac520767d9ad309a56822623f825aa9a5b9",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -15169,6 +15180,7 @@
       "https://realty.ria.ru/20251021/moszhilinspektsija-2049665518.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/23/ekspert-hachaturian-limity-na-sniatie-nalichnyh-v-bankomate-izmenilis-s-1-sentiabria.html",
       "https://rg.ru/2025/10/22/iurist-rusiaev-raziasnil-kak-budet-rabotat-nalogovyj-keshbek-dlia-semej.html",
       "https://rg.ru/2025/10/22/reg-cfo/narisujte-steny.html",
       "https://rg.ru/2025/10/22/reg-cfo/stavim-na-bega.html",
@@ -15193,7 +15205,6 @@
       "https://rg.ru/2025/10/22/reg-ufo/v-aeroportu-krasnodara-tushili-zagorevshijsia-pri-posadke-passazhirskij-boeing.html",
       "https://rg.ru/2025/10/22/minek-razrabatyvaet-shkalu-ocenki-dlia-zhelaiushchih-vernutsia-v-rf-kompanij.html",
       "https://rg.ru/2025/10/22/kurs-rublia.html",
-      "https://rg.ru/2025/10/22/gosduma-povysila-mrot-do-27-093-rublej.html",
       "https://rg.ru/2025/10/22/v-rossii-projdet-eksperiment-po-markirovke-udobrenij-v-potrebitelskoj-upakovke.html",
       "https://rg.ru/2025/10/22/v-sovfede-predlozhili-sdelat-podakciznymi-napitki-s-zameniteliami-sahara.html",
       "https://rg.ru/2025/10/22/reg-ufo/v-krymu-raschishchaiut-populiarnyj-turisticheskij-marshrut-posle-obrusheniia-gornoj-porody.html",
@@ -15206,6 +15217,9 @@
       "https://rg.ru/2025/10/10/v-moskve-sostoialas-mezhdunarodnaia-konferenciia-po-ocenochnoj-deiatelnosti-mkod-2025.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20339",
+      "http://ancb.ru/publication/read/20338",
+      "http://ancb.ru/publication/read/20334",
       "http://ancb.ru/publication/read/20331",
       "http://ancb.ru/publication/read/20330",
       "http://ancb.ru/publication/read/20329",
@@ -15238,19 +15252,7 @@
       "http://ancb.ru/publication/read/20213",
       "http://ancb.ru/publication/read/20211",
       "http://ancb.ru/publication/read/20207",
-      "http://ancb.ru/publication/read/20197",
-      "http://ancb.ru/publication/read/20193",
-      "http://ancb.ru/publication/read/20192",
-      "http://ancb.ru/publication/read/20207",
-      "http://ancb.ru/publication/read/20197",
-      "http://ancb.ru/publication/read/20193",
-      "http://ancb.ru/publication/read/20192",
-      "http://ancb.ru/publication/read/20197",
-      "http://ancb.ru/publication/read/20193",
-      "http://ancb.ru/publication/read/20192",
-      "http://ancb.ru/publication/read/20197",
-      "http://ancb.ru/publication/read/20193",
-      "http://ancb.ru/publication/read/20192"
+      "http://ancb.ru/publication/read/20207"
     ]
   },
   "first_seen": {
@@ -19663,7 +19665,11 @@
     "200444e736fe5bc3fc0f7de185be1d20d782d363d05043efd76af994747f3898": "2025-10-23T00:15:00+03:00",
     "ce980ec01f860dd8cfeb542e0dcaf1dde69728e2ad53ea8342053f5b3a84cf9f": "2025-10-23T00:15:00+03:00",
     "12eef5fab00d0d459953d1460d129a6cbd65037a8d90a930a3e6481ac11dbc89": "2025-10-23T00:15:00+03:00",
-    "38ecd0471c800c98368975b08d3d424eb8198d0ad9c95483e00daf4793cd9441": "2025-10-23T00:15:00+03:00"
+    "38ecd0471c800c98368975b08d3d424eb8198d0ad9c95483e00daf4793cd9441": "2025-10-23T00:15:00+03:00",
+    "a8ae25ec1852eeaa16b73bc7cf0c116940a93a026f6be7ca89e7e60a4a8a7b0a": "2025-10-23T04:11:00+03:00",
+    "f15a782fbb57802dfba780194c8b9023a28bce7c9a1ad65d2b5a0be8c4853187": "2025-10-23T04:12:00+03:00",
+    "1dd0381aa7c7c659e979e0f2660a8429c6c965521e85f259a23700a0350be93f": "2025-10-23T04:12:00+03:00",
+    "21a28948fcc185b7b785e44da9ff6134d225b00136a14701c9c8248f75b7a7d6": "2025-10-23T04:12:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -19694,8 +19700,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7feac5bf4b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 35,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1761167662.7001371
       },
       "warmup_done": false,
@@ -19705,31 +19711,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "v03hcvNnccrtR3GD",
+          "value": "eTxrkz80gnEedkq7",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761168918
+          "expires": 1761183138
         },
         {
           "name": "__ddg10_",
-          "value": "1761167718",
+          "value": "1761181938",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761168918
+          "expires": 1761183138
         },
         {
           "name": "__ddg9_",
-          "value": "172.182.225.168",
+          "value": "64.236.140.165",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761168918
+          "expires": 1761183138
+        },
+        {
+          "name": "__ddg1_",
+          "value": "iqulakZ2hkfo9HILuwBo",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1792717938
         },
         {
           "name": "PHPSESSID",
-          "value": "c7e3a185bae25451a698d4a4cfc10a3e",
+          "value": "67791bb79289feeca02be31f5956cd08",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -19756,11 +19770,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "fbbUsAAcBhqcOMw21Gp0GJeIB4Q46liv",
+          "value": "hImFrZsYYNd39jK12h7YRGNp6lHxBtRp",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761178527
+          "expires": 1761192743
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -19768,7 +19782,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1792271727
+          "expires": 1792285943
         }
       ],
       "failures": {
@@ -25251,7 +25265,11 @@
     "https://rg.ru/2025/10/22/stoimost-nefti-brent-prevysila-63-dollara-za-barrel-vpervye-s-15-oktiabria.html": "https://rg.ru/2025/10/22/stoimost-nefti-brent-prevysila-63-dollara-za-barrel-vpervye-s-15-oktiabria.html",
     "https://rg.ru/2025/10/22/reg-skfo/klubni-po-interesam.html": "https://rg.ru/2025/09/29/grigorenko-eksport-rossijskih-it-reshenij-v-respubliku-belarus-vyros-na-23.html",
     "https://rg.ru/2025/10/22/pochta-soiuza.html": "https://rg.ru/2025/09/29/grigorenko-eksport-rossijskih-it-reshenij-v-respubliku-belarus-vyros-na-23.html",
-    "https://rg.ru/2025/10/22/minek-pochti-50-regionov-rf-vystupaiut-za-vovlechenie-zemel-pod-investproekty.html": "https://rg.ru/2025/10/22/minek-pochti-50-regionov-rf-vystupaiut-za-vovlechenie-zemel-pod-investproekty.html"
+    "https://rg.ru/2025/10/22/minek-pochti-50-regionov-rf-vystupaiut-za-vovlechenie-zemel-pod-investproekty.html": "https://rg.ru/2025/10/22/minek-pochti-50-regionov-rf-vystupaiut-za-vovlechenie-zemel-pod-investproekty.html",
+    "http://ancb.ru/publication/read/20339": "http://ancb.ru/publication/read/20339",
+    "http://ancb.ru/publication/read/20338": "http://ancb.ru/publication/read/20338",
+    "http://ancb.ru/publication/read/20334": "http://ancb.ru/publication/read/20334",
+    "https://rg.ru/2025/10/23/ekspert-hachaturian-limity-na-sniatie-nalichnyh-v-bankomate-izmenilis-s-1-sentiabria.html": "https://rg.ru/2025/10/23/ekspert-hachaturian-limity-na-sniatie-nalichnyh-v-bankomate-izmenilis-s-1-sentiabria.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -29923,7 +29941,11 @@
     "d1a06d6d052f096293b6f391c8453a7d4f157aea": "https://rg.ru/2025/10/22/reg-cfo/narisujte-steny.html",
     "c3cabbe62588bc2cb8cb93b1078234c70efcda84": "https://rg.ru/2025/10/22/reg-cfo/stavim-na-bega.html",
     "981aaa3a38832417b04aba3fc7868f58df21ed90": "https://rg.ru/2025/10/22/stoimost-nefti-brent-prevysila-63-dollara-za-barrel-vpervye-s-15-oktiabria.html",
-    "428a8c4ab423433aaaadcdfba187ac652950c7b3": "https://rg.ru/2025/10/22/minek-pochti-50-regionov-rf-vystupaiut-za-vovlechenie-zemel-pod-investproekty.html"
+    "428a8c4ab423433aaaadcdfba187ac652950c7b3": "https://rg.ru/2025/10/22/minek-pochti-50-regionov-rf-vystupaiut-za-vovlechenie-zemel-pod-investproekty.html",
+    "4872289835c114fe0a1fc1ca0aea53e6020f5c58": "http://ancb.ru/publication/read/20339",
+    "5fefae130d3963ebbbb1aa4d90cbe2382c4d7979": "http://ancb.ru/publication/read/20338",
+    "190b197536d7b5f6a5840fb69348940799fbc21e": "http://ancb.ru/publication/read/20334",
+    "bc4168cdc15a9c9fd4f846bf892b9b3bc6eac425": "https://rg.ru/2025/10/23/ekspert-hachaturian-limity-na-sniatie-nalichnyh-v-bankomate-izmenilis-s-1-sentiabria.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -36049,6 +36071,10 @@
     "https://rg.ru/2025/10/22/stoimost-nefti-brent-prevysila-63-dollara-za-barrel-vpervye-s-15-oktiabria.html": "12eef5fab00d0d459953d1460d129a6cbd65037a8d90a930a3e6481ac11dbc89",
     "https://rg.ru/2025/10/22/reg-skfo/klubni-po-interesam.html": "27a6c790716a02beafa826026a4d59b7cbbaa527ed588250ed9662c286a48566",
     "https://rg.ru/2025/10/22/pochta-soiuza.html": "27a6c790716a02beafa826026a4d59b7cbbaa527ed588250ed9662c286a48566",
-    "https://rg.ru/2025/10/22/minek-pochti-50-regionov-rf-vystupaiut-za-vovlechenie-zemel-pod-investproekty.html": "38ecd0471c800c98368975b08d3d424eb8198d0ad9c95483e00daf4793cd9441"
+    "https://rg.ru/2025/10/22/minek-pochti-50-regionov-rf-vystupaiut-za-vovlechenie-zemel-pod-investproekty.html": "38ecd0471c800c98368975b08d3d424eb8198d0ad9c95483e00daf4793cd9441",
+    "http://ancb.ru/publication/read/20339": "a8ae25ec1852eeaa16b73bc7cf0c116940a93a026f6be7ca89e7e60a4a8a7b0a",
+    "http://ancb.ru/publication/read/20338": "f15a782fbb57802dfba780194c8b9023a28bce7c9a1ad65d2b5a0be8c4853187",
+    "http://ancb.ru/publication/read/20334": "1dd0381aa7c7c659e979e0f2660a8429c6c965521e85f259a23700a0350be93f",
+    "https://rg.ru/2025/10/23/ekspert-hachaturian-limity-na-sniatie-nalichnyh-v-bankomate-izmenilis-s-1-sentiabria.html": "21a28948fcc185b7b785e44da9ff6134d225b00136a14701c9c8248f75b7a7d6"
   }
 }
