@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 24 Oct 2025 18:25:38 GMT"
+      "Last-Modified": "Fri, 24 Oct 2025 21:16:57 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"18278-C+e48XbBcK5N40II+zVM4egHXmc\""
+      "ETag": "W/\"18278-wGYIV0qobm1LdevFC33mJx+6ZmA\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"11bfk02u3173ha6\""
+      "ETag": "\"5735jcp3xw3jj3\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -13217,6 +13217,20 @@
     },
     "https://rg.ru/2025/10/24/reg-szfo/na-ladozhskom-vokzale-peterburga-krysha-parkovku-obrushilas-na-platformu.html": {
       "ETag": "\"ukwvnjad8d1pwe\""
+    },
+    "http://government.ru/news/56659/": {},
+    "http://government.ru/news/56658/": {},
+    "https://rg.ru/2025/10/24/grigorenko-pochti-90-tysiach-specialistov-v-sfere-ii-potrebuetsia-v-rf-k-2030-godu.html": {
+      "ETag": "\"gbtrzfgfnn1yfc\""
+    },
+    "https://rg.ru/2025/10/24/eksperty-ocenili-ostorozhnoe-reshenie-cb-snizit-stavku-tolko-na-polprocenta.html": {
+      "ETag": "\"qgrm762fw523tm\""
+    },
+    "https://rg.ru/2025/10/24/kliuchevaia-stavka-pomozhet-rubliu-neftianomu-rynku-grozit-deficit-predlozheniia.html": {
+      "ETag": "\"8obh5rbtf6258l\""
+    },
+    "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html": {
+      "ETag": "\"skyn3r7ogo1o39\""
     }
   },
   "stats": {
@@ -15829,9 +15843,26 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f90bc2a5a90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f90bbc69590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f90bbc696d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f90bbc703e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f90bbc70b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f90bbb79d90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f90bbc6a710>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f90bbc69bd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f90bbc69e50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f90bbc68050>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f90bbc6ac10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-10-24T18:25:29.866400+00:00",
+    "last_run": "2025-10-24T21:17:38.064236+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -15844,9 +15875,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 513.7419829999885,
-        "connect_ms": 1088.7482800000043,
-        "response_ms": 1602.4902629999929,
+        "dns_ms": 551.1140030000092,
+        "connect_ms": 213.8095759999885,
+        "response_ms": 764.9235789999977,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -15857,42 +15888,42 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4365775d90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f90bbb79d90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 2020.1526510000178,
-        "connect_ms": 0.0,
-        "response_ms": 1005.2517430000023,
+        "dns_ms": 4409.942924000006,
+        "connect_ms": 476.6377290000037,
+        "response_ms": 4886.58065300001,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 335.5206669999973,
-        "connect_ms": 310.0096649999955,
-        "response_ms": 645.5303319999928,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f90bbc6ac10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "31277316a6703eb4b78a5b2d306719dd830375ca4fd92571bb9ac5515120af27",
+    "https://ardexpert.ru/article": "aa1232105c2fdd31950803d711d869bbe8b84b8453d88ad3943545450e483827",
     "https://www.gostinfo.ru/News/List": "14e25cf61017b37ac7a10a088ca099dd4f1eaa43effdb20278f23c849a8be083",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2237ba5e154de0290fa6ee16352283e6a105460fb1bda0afb19468e5ebad069b",
-    "https://eec.eaeunion.org/news/": "0a89783c6b3fedd1a06e80bfb0335a212d7990bed4e2d6180e8b752109816570",
+    "https://eec.eaeunion.org/news/": "5de2ddab44a3a75f8b7712880fdcee683d1bd924259491ffb61134510b913f1e",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "5e0f13adad54aa184681a608cf744e559ea79db5c00a23b98b49ffc02fb14df8",
-    "https://www.metalinfo.ru/ru/news": "c5459ec114a37d2ca0d0f720aedb42ebf317e2a1f2f43614e9176981fd7b0740",
-    "https://www.pnp.ru/economics/": "c3e7f795ae46b86f50a6eeb21e96f7d36cf498850fe9f5cd0fad3084b7bc6b76",
-    "https://erzrf.ru/news/": "ead11f57f19ac2a63e13cd2075dde93ffc4d2d726ff4bfb40838eaa6ff46a9e4",
-    "https://ria-stk.ru/news/vse-novosti.php": "1482c9da7df6af7ef1cf845890ba1faf26a80979ce87a99d33e0419e9e6d090d",
-    "http://government.ru/news/": "c618417a815bef3526afa6f80a6584b6d99a4391c29e30f3d5a80af65eb598ef",
-    "https://stroygaz.ru/news/": "5ec24b710ab41380ea00e7b192e261733047699f83f79f17024833ba49e792a1",
-    "https://realty.ria.ru/lenta/": "e7595c69548f829b86e3ae73031380da1b36d3789f36538efd479b194685c804",
-    "https://rg.ru/tema/ekonomika": "9d4c034dbfd115df6ae3a141a8312882260307f9bc1140ccc70beaa8cef43db5",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "6f93120df61497da302921caf3444c796aa27bf4183cdeb31a1c4e5b6633282f",
+    "https://www.metalinfo.ru/ru/news": "88339e57ea69f0015dac7b6c3ba2ce62c9a341d98b80b81f2d93e47c398ddeae",
+    "https://www.pnp.ru/economics/": "80f3cb323159bcca4d1f64312d9a2dc47619668de7873e68fb506b8049337815",
+    "https://erzrf.ru/news/": "ede27c0b69fe6b3f22c16717d0fd649006196b0515d6583159443b05e705c50c",
+    "https://ria-stk.ru/news/vse-novosti.php": "e7a6c688306ea5bd37557968dca6403e93326acfb0f745b150c403d1c1989709",
+    "http://government.ru/news/": "6aea14a9862724b78699d0edffd157044ad20ecc20be7ded55ae9051934c46bf",
+    "https://stroygaz.ru/news/": "b20bd8ef6404aace97cbf096b1d6e5e59213b95939c201d4e33161eaf83845d4",
+    "https://realty.ria.ru/lenta/": "fc712a8e6b5cb75482ea69cc6c812f7417fcbce16e2a7c96605044d2bac9ed20",
+    "https://rg.ru/tema/ekonomika": "c145ad662a2c8c2280bc61b6b8f6976ea55c9178bcb72f6d0f5eb5de7982cfce",
     "http://ancb.ru/publication": "aeffc86d91acbb529890078c81174735be479ec7a46f2af394d0837b92ceb5aa",
     "https://notim.ru": "231e0ec4be3b2121513fdf38021223b6db955a1265afdfa37252883b1d30fe4e",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -16136,6 +16167,8 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245732&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56659/",
+      "http://government.ru/news/56658/",
       "http://government.ru/news/56653/",
       "http://government.ru/news/56651/",
       "http://government.ru/news/56649/",
@@ -16153,9 +16186,7 @@
       "http://government.ru/news/56633/",
       "http://government.ru/news/56634/",
       "http://government.ru/news/56632/",
-      "http://government.ru/news/56629/",
-      "http://government.ru/news/56628/",
-      "http://government.ru/news/56627/"
+      "http://government.ru/news/56629/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/commercial/v-rossii-vyros-spros-na-investitsii-v-nedvizhimost/",
@@ -16202,6 +16233,10 @@
       "https://realty.ria.ru/20251024/sud-2050288676.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/24/grigorenko-pochti-90-tysiach-specialistov-v-sfere-ii-potrebuetsia-v-rf-k-2030-godu.html",
+      "https://rg.ru/2025/10/24/eksperty-ocenili-ostorozhnoe-reshenie-cb-snizit-stavku-tolko-na-polprocenta.html",
+      "https://rg.ru/2025/10/24/kliuchevaia-stavka-pomozhet-rubliu-neftianomu-rynku-grozit-deficit-predlozheniia.html",
+      "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html",
       "https://rg.ru/2025/10/24/pochemu-stavki-po-vkladam-i-kreditam-ne-sniziatsia-vsled-za-kliuchevoj.html",
       "https://rg.ru/2025/10/24/arenda-avtomobilej-prinosit-na-26-bolshe-dohoda-chem-sdacha-kvartir.html",
       "https://rg.ru/2025/10/24/reg-pfo/puteshestvie-iz-astrahani-v-kazan.html",
@@ -16230,10 +16265,6 @@
       "https://rg.ru/2025/10/24/rossiia-ostaetsia-krupnejshim-v-mire-eksporterom-morozhenoj-ryby-i-krabov.html",
       "https://rg.ru/2025/10/24/v-cb-soobshchili-o-sohranenii-napriazhennosti-na-rossijskom-rynke-truda.html",
       "https://rg.ru/2025/10/24/glava-rosrybolovstva-rasskazal-kak-obespechit-vse-naselenie-ryboj.html",
-      "https://rg.ru/2025/10/24/reg-pfo/zhiteli-mordovskih-sel-nachali-torgovat-tykvami.html",
-      "https://rg.ru/2025/10/24/dmitrij-patrushev-rf-sohraniaet-pozicii-v-chisle-mirovyh-liderov-rybnoj-otrasli.html",
-      "https://rg.ru/2025/10/24/detskij-mir-igrushki-v-rf-ne-podorozhaiut-posle-novyh-sankcij-es.html",
-      "https://rg.ru/2025/10/24/chernyshenko-sankcii-es-ne-okazhut-vliianiia-na-rossijskij-turizm.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
       "https://rg.ru/2025/10/10/v-moskve-sostoialas-mezhdunarodnaia-konferenciia-po-ocenochnoj-deiatelnosti-mkod-2025.html"
@@ -21093,7 +21124,13 @@
     "23f7056e33319e3ab7b84966b3d0c67afa94ce8324e67b03032ddf452d0ebff5": "2025-10-24T21:25:00+03:00",
     "79b04f5b671d7d0755d5c979a1db667c60fb7a47fc751130a9918170b00d0bc3": "2025-10-24T21:25:00+03:00",
     "4ed6b6028db28e99a6919485f827bed8958ada2b54c826430ea2d31edd20c646": "2025-10-24T21:25:00+03:00",
-    "6d01ee6f17e2469336c5064277485a8f4e174c80b885e403633949aa486cf65d": "2025-10-24T21:25:00+03:00"
+    "6d01ee6f17e2469336c5064277485a8f4e174c80b885e403633949aa486cf65d": "2025-10-24T21:25:00+03:00",
+    "5b7f78b8250b23ef31f237f9e5c57f4d4abb687eb4853ef73720fe3a10eb8b09": "2025-10-25T00:17:00+03:00",
+    "749786612178d8edc869eb56c2f2231425cdcc8aa0a94e091fa931788d7ea5b5": "2025-10-25T00:17:00+03:00",
+    "fd8652aaadcae944404380d15eb5f058a0484fdb61d0dfb0eb3e81bae0f681d2": "2025-10-25T00:17:00+03:00",
+    "bc02ec9fafeea7528e663cdef58308b59670bd2fad0e4fdf0ff3b05419aa3880": "2025-10-25T00:17:00+03:00",
+    "2bed49a09d9e330c278fec7ae7bf5d366e07ff353c476987384de467dc6c976b": "2025-10-25T00:17:00+03:00",
+    "9b0803280e0a16c529d0701b4e924502d8ac452b2bf4afef3ee91cbff7917e77": "2025-10-25T00:17:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -21124,9 +21161,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4365870b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
-        "last_ts": 1761330249.1282265
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f90bbc70b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 20,
+        "last_ts": 1761340532.3810887
       },
       "warmup_done": false,
       "last_success_path": null
@@ -21135,31 +21172,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "DgPEDjChpwriOFeQ",
+          "value": "VI7ZpP14NnM7wyoN",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761331505
+          "expires": 1761341783
         },
         {
           "name": "__ddg10_",
-          "value": "1761330305",
+          "value": "1761340583",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761331505
+          "expires": 1761341783
         },
         {
           "name": "__ddg9_",
-          "value": "172.212.171.147",
+          "value": "52.157.2.244",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761331505
+          "expires": 1761341783
+        },
+        {
+          "name": "__ddg1_",
+          "value": "HBovLih0MtIJdCvOURUh",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1792876583
         },
         {
           "name": "PHPSESSID",
-          "value": "bad01dde016d0a3393a52a5d7b3cf91d",
+          "value": "a3e6c74ed38c62de4fe7c32776135473",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -21202,9 +21247,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1761319248.90234
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f90bbc68050>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 4,
+        "last_ts": 1761340618.166871
       },
       "warmup_done": false,
       "last_success_path": null
@@ -27188,7 +27233,13 @@
     "https://rg.ru/2025/10/24/pochemu-stavki-po-vkladam-i-kreditam-ne-sniziatsia-vsled-za-kliuchevoj.html": "https://rg.ru/2025/10/24/pochemu-stavki-po-vkladam-i-kreditam-ne-sniziatsia-vsled-za-kliuchevoj.html",
     "https://rg.ru/2025/10/24/arenda-avtomobilej-prinosit-na-26-bolshe-dohoda-chem-sdacha-kvartir.html": "https://rg.ru/2025/10/24/arenda-avtomobilej-prinosit-na-26-bolshe-dohoda-chem-sdacha-kvartir.html",
     "https://rg.ru/2025/10/24/reg-pfo/puteshestvie-iz-astrahani-v-kazan.html": "https://rg.ru/2025/10/24/reg-pfo/puteshestvie-iz-astrahani-v-kazan.html",
-    "https://rg.ru/2025/10/24/reg-szfo/na-ladozhskom-vokzale-peterburga-krysha-parkovku-obrushilas-na-platformu.html": "https://rg.ru/2025/10/24/reg-szfo/na-ladozhskom-vokzale-peterburga-krysha-parkovku-obrushilas-na-platformu.html"
+    "https://rg.ru/2025/10/24/reg-szfo/na-ladozhskom-vokzale-peterburga-krysha-parkovku-obrushilas-na-platformu.html": "https://rg.ru/2025/10/24/reg-szfo/na-ladozhskom-vokzale-peterburga-krysha-parkovku-obrushilas-na-platformu.html",
+    "http://government.ru/news/56659": "http://government.ru/news/56659",
+    "http://government.ru/news/56658": "http://government.ru/news/56658",
+    "https://rg.ru/2025/10/24/grigorenko-pochti-90-tysiach-specialistov-v-sfere-ii-potrebuetsia-v-rf-k-2030-godu.html": "https://rg.ru/2025/10/24/grigorenko-pochti-90-tysiach-specialistov-v-sfere-ii-potrebuetsia-v-rf-k-2030-godu.html",
+    "https://rg.ru/2025/10/24/eksperty-ocenili-ostorozhnoe-reshenie-cb-snizit-stavku-tolko-na-polprocenta.html": "https://rg.ru/2025/10/24/eksperty-ocenili-ostorozhnoe-reshenie-cb-snizit-stavku-tolko-na-polprocenta.html",
+    "https://rg.ru/2025/10/24/kliuchevaia-stavka-pomozhet-rubliu-neftianomu-rynku-grozit-deficit-predlozheniia.html": "https://rg.ru/2025/10/24/kliuchevaia-stavka-pomozhet-rubliu-neftianomu-rynku-grozit-deficit-predlozheniia.html",
+    "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html": "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -32267,7 +32318,13 @@
     "844afb712a64e21da81b5dc6f13ef068f83d540d": "https://rg.ru/2025/10/24/pochemu-stavki-po-vkladam-i-kreditam-ne-sniziatsia-vsled-za-kliuchevoj.html",
     "77083204f6ba587226513f12019b126105dc7b4d": "https://rg.ru/2025/10/24/arenda-avtomobilej-prinosit-na-26-bolshe-dohoda-chem-sdacha-kvartir.html",
     "fe510f98e717ae1f7357d5639073d682b148862c": "https://rg.ru/2025/10/24/reg-pfo/puteshestvie-iz-astrahani-v-kazan.html",
-    "1d2a89cfb272025a64492df57a7556d158cc61ab": "https://rg.ru/2025/10/24/reg-szfo/na-ladozhskom-vokzale-peterburga-krysha-parkovku-obrushilas-na-platformu.html"
+    "1d2a89cfb272025a64492df57a7556d158cc61ab": "https://rg.ru/2025/10/24/reg-szfo/na-ladozhskom-vokzale-peterburga-krysha-parkovku-obrushilas-na-platformu.html",
+    "9e933616e847577a4e2b316082c194cb7265e2c1": "http://government.ru/news/56659",
+    "59cd0c71827014541c2f785e7bf590a3480a04c2": "http://government.ru/news/56658",
+    "b9c2f288da86623486c17da8b110d4de08d74a9b": "https://rg.ru/2025/10/24/grigorenko-pochti-90-tysiach-specialistov-v-sfere-ii-potrebuetsia-v-rf-k-2030-godu.html",
+    "067f3ebad0db1767de2869cd3779026916b78688": "https://rg.ru/2025/10/24/eksperty-ocenili-ostorozhnoe-reshenie-cb-snizit-stavku-tolko-na-polprocenta.html",
+    "7c1d5536d87fd14b19c5ed779a17e83c5822adbb": "https://rg.ru/2025/10/24/kliuchevaia-stavka-pomozhet-rubliu-neftianomu-rynku-grozit-deficit-predlozheniia.html",
+    "45ef7417b576f6c0917a316bca08e15d2a2b078f": "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -38950,6 +39007,14 @@
     "https://rg.ru/2025/10/24/pochemu-stavki-po-vkladam-i-kreditam-ne-sniziatsia-vsled-za-kliuchevoj.html": "23f7056e33319e3ab7b84966b3d0c67afa94ce8324e67b03032ddf452d0ebff5",
     "https://rg.ru/2025/10/24/arenda-avtomobilej-prinosit-na-26-bolshe-dohoda-chem-sdacha-kvartir.html": "79b04f5b671d7d0755d5c979a1db667c60fb7a47fc751130a9918170b00d0bc3",
     "https://rg.ru/2025/10/24/reg-pfo/puteshestvie-iz-astrahani-v-kazan.html": "4ed6b6028db28e99a6919485f827bed8958ada2b54c826430ea2d31edd20c646",
-    "https://rg.ru/2025/10/24/reg-szfo/na-ladozhskom-vokzale-peterburga-krysha-parkovku-obrushilas-na-platformu.html": "6d01ee6f17e2469336c5064277485a8f4e174c80b885e403633949aa486cf65d"
+    "https://rg.ru/2025/10/24/reg-szfo/na-ladozhskom-vokzale-peterburga-krysha-parkovku-obrushilas-na-platformu.html": "6d01ee6f17e2469336c5064277485a8f4e174c80b885e403633949aa486cf65d",
+    "http://government.ru/news/56659": "5b7f78b8250b23ef31f237f9e5c57f4d4abb687eb4853ef73720fe3a10eb8b09",
+    "http://government.ru/news/56659/": "5b7f78b8250b23ef31f237f9e5c57f4d4abb687eb4853ef73720fe3a10eb8b09",
+    "http://government.ru/news/56658": "749786612178d8edc869eb56c2f2231425cdcc8aa0a94e091fa931788d7ea5b5",
+    "http://government.ru/news/56658/": "749786612178d8edc869eb56c2f2231425cdcc8aa0a94e091fa931788d7ea5b5",
+    "https://rg.ru/2025/10/24/grigorenko-pochti-90-tysiach-specialistov-v-sfere-ii-potrebuetsia-v-rf-k-2030-godu.html": "fd8652aaadcae944404380d15eb5f058a0484fdb61d0dfb0eb3e81bae0f681d2",
+    "https://rg.ru/2025/10/24/eksperty-ocenili-ostorozhnoe-reshenie-cb-snizit-stavku-tolko-na-polprocenta.html": "bc02ec9fafeea7528e663cdef58308b59670bd2fad0e4fdf0ff3b05419aa3880",
+    "https://rg.ru/2025/10/24/kliuchevaia-stavka-pomozhet-rubliu-neftianomu-rynku-grozit-deficit-predlozheniia.html": "2bed49a09d9e330c278fec7ae7bf5d366e07ff353c476987384de467dc6c976b",
+    "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html": "9b0803280e0a16c529d0701b4e924502d8ac452b2bf4afef3ee91cbff7917e77"
   }
 }
