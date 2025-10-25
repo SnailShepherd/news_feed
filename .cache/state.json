@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 25 Oct 2025 01:10:18 GMT"
+      "Last-Modified": "Sat, 25 Oct 2025 03:36:49 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"17fb2-5LwKuFvIweBJjcFUchhgsGPqy34\""
+      "ETag": "W/\"17fb2-EiJeNF4NCZOAv5IlkRQ9NN8szLQ\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"des9bo2gy63hwg\""
+      "ETag": "\"q4x2n2b5fv3i0u\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -13236,6 +13236,9 @@
     "http://ancb.ru/publication/read/20346": {},
     "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html": {
       "ETag": "\"qoybzsq7oh1n7i\""
+    },
+    "https://rg.ru/2025/10/25/reg-dfo/mintrans-iakutii-raziasnil-vzlet-tarifov-na-pereprave-cherez-reku-lena.html": {
+      "ETag": "\"re7v9atzwx1p6c\""
     }
   },
   "stats": {
@@ -15870,9 +15873,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3dd32a5a90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3dd2c6d590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3dd2c6d6d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3dd2c743e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3dd2c74b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3dd2b79c70>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-25T01:09:54.434745+00:00",
+    "last_run": "2025-10-25T03:36:30.000378+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -15885,33 +15899,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 507.7607059999991,
-        "connect_ms": 307.09677999999485,
-        "response_ms": 814.857485999994,
+        "dns_ms": 575.5789450000179,
+        "connect_ms": 909.3231230000072,
+        "response_ms": 1484.902068000025,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 120.61403299998119,
-        "connect_ms": 146.15948000002277,
-        "response_ms": 266.77351300000396,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3dd2b79c70>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 433.73715199999197,
-        "connect_ms": 4227.994686000016,
-        "response_ms": 4661.731838000009,
+        "dns_ms": 9778.60399100001,
+        "connect_ms": 0.0,
+        "response_ms": 1220.0679799999534,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 131.74801299999217,
-        "connect_ms": 412.6906760000111,
-        "response_ms": 544.4386890000033,
+        "dns_ms": 536.3305399999945,
+        "connect_ms": 214.03467699997236,
+        "response_ms": 750.3652169999668,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -15920,21 +15934,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "174979be9b68e90a901d2dc252705487f3e3b9d1da589537d30d09fcf40c35f9",
+    "https://ardexpert.ru/article": "3e99bdbf3214d0931d38dcc019a372b0bffffa3ebdec0d44efd13c2a7e243643",
     "https://www.gostinfo.ru/News/List": "14e25cf61017b37ac7a10a088ca099dd4f1eaa43effdb20278f23c849a8be083",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2237ba5e154de0290fa6ee16352283e6a105460fb1bda0afb19468e5ebad069b",
-    "https://eec.eaeunion.org/news/": "48d99de352d8db6c735d871e28f28e55a81253d505342503ac9b42f32ef23f9f",
+    "https://eec.eaeunion.org/news/": "c62130236f66f44641d6ec77c3eadefc962aa8e9e4350965e2ccda0ec77aaed0",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "2bef9e0f2d1b0f9fb8896994034270abb0963eee01a8860a9854bb39d193da7d",
-    "https://www.metalinfo.ru/ru/news": "58fe7c92dc368b6391ffad4412885bc06f0bf30971b31bea5d6009bbedb903bc",
-    "https://www.pnp.ru/economics/": "2533eecdb623f8c55fd76c2c27de69bc59ea975f42118feff9ed55d31134fb24",
-    "https://erzrf.ru/news/": "f74144a913e150dfa26f4c9aeb1d72047145e23e90eda8212128c93bb1199627",
-    "https://ria-stk.ru/news/vse-novosti.php": "22d7f1ac9de650e0690f99f5b5b8fe9d57caa9457bb4f52102c2f4cc05a137f6",
-    "http://government.ru/news/": "a3cb4556967f0f59cfe9ff5722a15183b4a4c4964b691d90d93f7a844425bbb2",
-    "https://stroygaz.ru/news/": "1a41b8f64e841447236eae6493c54e7c3e3ec90e63465bd4041294afacb0f67f",
-    "https://realty.ria.ru/lenta/": "de5b44cd40c05e63f25050024c3dd9fc48f66eb449ff89da30c33fda37ec74d3",
-    "https://rg.ru/tema/ekonomika": "b17fb366d81e2186840e74a27755ccd8f74e63839fb92228ca33a9310367b418",
-    "http://ancb.ru/publication": "b767cb56dd544ebb8baf500f979086ad4eb3a0ba5e06f26da17fee462aa71d4b",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "791ec940ad1288d4eb3060725b90c61ff050c8ab14bd53a73fbb5d7e7b0bb740",
+    "https://www.metalinfo.ru/ru/news": "c5459ec114a37d2ca0d0f720aedb42ebf317e2a1f2f43614e9176981fd7b0740",
+    "https://www.pnp.ru/economics/": "9dd8746c4c84766edcac5ef6d36f38b0d06c1a7ed86919a541738593c2bf56c9",
+    "https://erzrf.ru/news/": "c0d52bd342dd8104132c6118986f1af3d73bef9cde3879caf6fa1645a0c0f3f4",
+    "https://ria-stk.ru/news/vse-novosti.php": "4fae53e6345dc4bf26253530e8779ffa5532ed13359baeff617ad290b4e79b98",
+    "http://government.ru/news/": "ef77be8fd896f3eeb677fced0912812569c65a4f7f5fe05cd66323c7678049c9",
+    "https://stroygaz.ru/news/": "f3cb25e2a4c06536e1c9ff344bf65f0f2db069f62077ee9bb40ac57c9c71e22d",
+    "https://realty.ria.ru/lenta/": "1a20a95074d791469e21f023f460258a98ec761cde957108fd81a76de416fec1",
+    "https://rg.ru/tema/ekonomika": "fa0797c5032a54789a4a9a0b67269a62e04a1d9e86ad419821eceababd614c37",
+    "http://ancb.ru/publication": "d30af347f100b620bba29694d32c8988f62eae8082b314a248fb75c79b8daf81",
     "https://notim.ru": "231e0ec4be3b2121513fdf38021223b6db955a1265afdfa37252883b1d30fe4e",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -16243,6 +16257,7 @@
       "https://realty.ria.ru/20251024/sud-2050288676.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/25/reg-dfo/mintrans-iakutii-raziasnil-vzlet-tarifov-na-pereprave-cherez-reku-lena.html",
       "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html",
       "https://rg.ru/2025/10/24/grigorenko-pochti-90-tysiach-specialistov-v-sfere-ii-potrebuetsia-v-rf-k-2030-godu.html",
       "https://rg.ru/2025/10/24/eksperty-ocenili-ostorozhnoe-reshenie-cb-snizit-stavku-tolko-na-polprocenta.html",
@@ -16274,7 +16289,6 @@
       "https://rg.ru/2025/10/24/reg-ufo/na-kubani-oprovergli-informaciiu-o-zavoze-tbo-na-zakrytyj-musornyj-poligon.html",
       "https://rg.ru/2025/10/24/rossiia-ostaetsia-krupnejshim-v-mire-eksporterom-morozhenoj-ryby-i-krabov.html",
       "https://rg.ru/2025/10/24/v-cb-soobshchili-o-sohranenii-napriazhennosti-na-rossijskom-rynke-truda.html",
-      "https://rg.ru/2025/10/24/glava-rosrybolovstva-rasskazal-kak-obespechit-vse-naselenie-ryboj.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
       "https://rg.ru/2025/10/10/v-moskve-sostoialas-mezhdunarodnaia-konferenciia-po-ocenochnoj-deiatelnosti-mkod-2025.html"
@@ -21143,7 +21157,8 @@
     "9b0803280e0a16c529d0701b4e924502d8ac452b2bf4afef3ee91cbff7917e77": "2025-10-25T00:17:00+03:00",
     "6b0fab2017f298fb0cd56e0cd2133bbc9e03796cc0507e6327637dff053e9c9a": "2025-10-25T04:09:00+03:00",
     "7205a9fcdbfbbc23e100d692ba9d855679bfe248abd8ff2a63f8ec4c327693c8": "2025-10-25T04:09:00+03:00",
-    "e2263e6067316fb1871e120226053e5cc0c93a91b76b48a3a0d0dbbff777f54e": "2025-10-25T04:09:00+03:00"
+    "e2263e6067316fb1871e120226053e5cc0c93a91b76b48a3a0d0dbbff777f54e": "2025-10-25T04:09:00+03:00",
+    "5c7396dee91ff4f13a1f64dc3cb6eda05a121fbfd32ea61379aeb324b05c6e6e": "2025-10-25T06:36:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -21174,9 +21189,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1761340532.3810887
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3dd2c74b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1761363323.5264053
       },
       "warmup_done": false,
       "last_success_path": null
@@ -21185,31 +21200,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "k30L3WdB09SMgar3",
+          "value": "dUceM6KwmwBe5lN8",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761355785
+          "expires": 1761364576
         },
         {
           "name": "__ddg10_",
-          "value": "1761354585",
+          "value": "1761363376",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761355785
+          "expires": 1761364576
         },
         {
           "name": "__ddg9_",
-          "value": "48.217.140.228",
+          "value": "172.182.193.137",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761355785
+          "expires": 1761364576
+        },
+        {
+          "name": "__ddg1_",
+          "value": "EvoCjDOByDDLJYxfIwPY",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1792899376
         },
         {
           "name": "PHPSESSID",
-          "value": "21d14e42c8422651ab62635123f84db7",
+          "value": "8da8188f895eeaeaa5d7b7c54f152a57",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -21236,11 +21259,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "wt19d8pfTZ8fdWzbrSp7pATDjQrvP14s",
+          "value": "YMxjFp2yB0xZ5SqN6H1gCZMK3wxajcPS",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761365387
+          "expires": 1761374180
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -21248,7 +21271,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1792458587
+          "expires": 1792467380
         }
       ],
       "failures": {
@@ -27247,7 +27270,8 @@
     "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html": "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html",
     "http://ancb.ru/publication/read/20348": "http://ancb.ru/publication/read/20348",
     "http://ancb.ru/publication/read/20346": "http://ancb.ru/publication/read/20346",
-    "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html": "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html"
+    "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html": "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html",
+    "https://rg.ru/2025/10/25/reg-dfo/mintrans-iakutii-raziasnil-vzlet-tarifov-na-pereprave-cherez-reku-lena.html": "https://rg.ru/2025/10/25/reg-dfo/mintrans-iakutii-raziasnil-vzlet-tarifov-na-pereprave-cherez-reku-lena.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -32335,7 +32359,8 @@
     "45ef7417b576f6c0917a316bca08e15d2a2b078f": "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html",
     "58a9274885a3eacd7ae4aa684ce1f79b837d0184": "http://ancb.ru/publication/read/20348",
     "249739a2f529b882998668c53c06d81b823af467": "http://ancb.ru/publication/read/20346",
-    "396339b48762834819e8123ccaed7a0db83d4830": "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html"
+    "396339b48762834819e8123ccaed7a0db83d4830": "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html",
+    "7c0edf0b6db8926b2335c0a6e4cbc894db49a57e": "https://rg.ru/2025/10/25/reg-dfo/mintrans-iakutii-raziasnil-vzlet-tarifov-na-pereprave-cherez-reku-lena.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -39029,6 +39054,7 @@
     "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html": "9b0803280e0a16c529d0701b4e924502d8ac452b2bf4afef3ee91cbff7917e77",
     "http://ancb.ru/publication/read/20348": "6b0fab2017f298fb0cd56e0cd2133bbc9e03796cc0507e6327637dff053e9c9a",
     "http://ancb.ru/publication/read/20346": "7205a9fcdbfbbc23e100d692ba9d855679bfe248abd8ff2a63f8ec4c327693c8",
-    "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html": "e2263e6067316fb1871e120226053e5cc0c93a91b76b48a3a0d0dbbff777f54e"
+    "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html": "e2263e6067316fb1871e120226053e5cc0c93a91b76b48a3a0d0dbbff777f54e",
+    "https://rg.ru/2025/10/25/reg-dfo/mintrans-iakutii-raziasnil-vzlet-tarifov-na-pereprave-cherez-reku-lena.html": "5c7396dee91ff4f13a1f64dc3cb6eda05a121fbfd32ea61379aeb324b05c6e6e"
   }
 }
