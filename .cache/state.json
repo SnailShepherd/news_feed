@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 26 Oct 2025 03:42:10 GMT"
+      "Last-Modified": "Sun, 26 Oct 2025 06:24:38 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"17fb2-vxWEyrHH5qVJpIQfxjlPALCptTM\""
+      "ETag": "W/\"18278-ag6EdzaXc7hC4a6nEAvx1THd9i0\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"10xusqa4q3a3bte\""
+      "ETag": "\"1062sxeo4ot3bqx\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -13322,6 +13322,12 @@
     },
     "https://rg.ru/2025/10/26/ria-novosti-ashan-zaregistriroval-v-rf-novyj-tovarnyj-znak.html": {
       "ETag": "\"13pfpfce02u1nw6\""
+    },
+    "https://rg.ru/2025/10/26/reg-dfo/v-iakutske-zavershaetsia-tradicionnaia-iarmarka-ryba-iakutii.html": {
+      "ETag": "\"ut5wmjjj3h1ql3\""
+    },
+    "https://rg.ru/2025/10/26/ekspert-shcherbachenko-poiasnil-kak-kliuchevaia-stavka-v-165-skazhetsia-na-kurse-rublia.html": {
+      "ETag": "\"k54mws8t7s1nw8\""
     }
   },
   "stats": {
@@ -16037,9 +16043,31 @@
         "source": "Стройгаз.ру",
         "url": "https://stroygaz.ru/news/",
         "error": "cooldown active until 2025-10-26T07:17:42.147347+00:00 -> used cache"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f921228da90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9211c71590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9211c716d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9211c743e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9211c74b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9211b75d90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9211c72350>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9211c71a90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9211c72490>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9211c71f90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9211c72c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
+      },
+      {
+        "source": "Стройгаз.ру",
+        "url": "https://stroygaz.ru/news/",
+        "error": "cooldown active until 2025-10-26T07:17:42.147347+00:00 -> used cache"
       }
     ],
-    "last_run": "2025-10-26T03:41:50.467629+00:00",
+    "last_run": "2025-10-26T06:25:02.790989+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -16052,9 +16080,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 700.7225419999941,
-        "connect_ms": 938.9836959999798,
-        "response_ms": 1639.7062379999738,
+        "dns_ms": 509.2291280000154,
+        "connect_ms": 727.087610999888,
+        "response_ms": 1236.3167389999035,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -16065,42 +16093,42 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f00351c70>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9211b75d90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 1395.1070699999946,
-        "connect_ms": 0.0,
-        "response_ms": 1183.1928830000038,
+        "dns_ms": 1869.5408749999842,
+        "connect_ms": 3187.259766000011,
+        "response_ms": 5056.800640999995,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 345.70206700004746,
-        "connect_ms": 419.3142639999792,
-        "response_ms": 765.0163310000266,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9211c72c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "598338b1fd279518530b6d4f5a139b1da8982748f03c021ac906da8da4b9622b",
+    "https://ardexpert.ru/article": "0c2b42705e0fdf86dd6d114cef0a043ae5547c697169153ad1aef0c6aec9f0ff",
     "https://www.gostinfo.ru/News/List": "14e25cf61017b37ac7a10a088ca099dd4f1eaa43effdb20278f23c849a8be083",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2237ba5e154de0290fa6ee16352283e6a105460fb1bda0afb19468e5ebad069b",
-    "https://eec.eaeunion.org/news/": "963863bb38ed1151c94db4e4e2eae66817d1d4d5094e3c65103f7d9ce3abae5a",
+    "https://eec.eaeunion.org/news/": "b5e164f00c139be20e10c54182c2116123412779b7d8e3998d2c29a6d3212327",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "c3032ab7faa3c3aadb5aa001e61eddc7060fe97c9abb8fc3add11ee0b0aa38d0",
-    "https://www.metalinfo.ru/ru/news": "aa5f0c2781dcfae68107b0d01864461c70b5ce876f57216e9bd9619e30e340a2",
-    "https://www.pnp.ru/economics/": "359a296b1aea802993e0c6f6902e8453b52d365b92d6069578edc2b7f778aa54",
-    "https://erzrf.ru/news/": "ce35bb1d90f327833b4663801403d75bb6c0df23692b3600416c8cc63a3f3862",
-    "https://ria-stk.ru/news/vse-novosti.php": "351612b9e349d65be28bcda3b0a355e9cf48392b7a8a2231ce0e46a14dbaf0fe",
-    "http://government.ru/news/": "2657aab0556ca44bb86c70f738ebef5b8109c7404eaee4124f64abb0bc030117",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "04b75d90907b285b21fd0a4611f43771902e1395d39309fad182549acdb8b24a",
+    "https://www.metalinfo.ru/ru/news": "111a9380845516be14ae4412aeba3a089f1efe972676b8a5c1c648abf6bdc9f1",
+    "https://www.pnp.ru/economics/": "6593b1e22b67ca3801ce5b403b04e07d433b3dff3d617bda54f1a96bb1ccbe2c",
+    "https://erzrf.ru/news/": "28e387df66ee3c391879ff4d4f5594f3c580cd1f7e2498006141cd40794cf468",
+    "https://ria-stk.ru/news/vse-novosti.php": "5b3debf43d569985afa56d95bcd9fe21ba8bb359e165d27d1c71ba1bcba121d4",
+    "http://government.ru/news/": "f6c4c5d57eeec5a6c797fb2f3ff2c920fe0f506f08c93e39fde5ae5458649a94",
     "https://stroygaz.ru/news/": "006ceee2200a54b761131b2c5b54eb6344faaed0ec28a624b04765bb3357819c",
-    "https://realty.ria.ru/lenta/": "daa4ebe9f01dc6a520b430fdbdc26f4163ded1d813176528fcb5dc6a49d883e2",
-    "https://rg.ru/tema/ekonomika": "f63d08c29b14f5a22cd3347c4dfde1d1614747459e0409f7ad23a2493df04c7c",
+    "https://realty.ria.ru/lenta/": "523cb5f1b8b3b78d989b1be9c1ca1749c8dca198592df9ceaa68343c74b9574d",
+    "https://rg.ru/tema/ekonomika": "343bfed5529b82bea08219446bfcebf92296301d338d590ae533c642075f4ee8",
     "http://ancb.ru/publication": "d30af347f100b620bba29694d32c8988f62eae8082b314a248fb75c79b8daf81",
     "https://notim.ru": "231e0ec4be3b2121513fdf38021223b6db955a1265afdfa37252883b1d30fe4e",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -16411,6 +16439,8 @@
       "https://realty.ria.ru/20251024/sud-2050288676.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/26/reg-dfo/v-iakutske-zavershaetsia-tradicionnaia-iarmarka-ryba-iakutii.html",
+      "https://rg.ru/2025/10/26/ekspert-shcherbachenko-poiasnil-kak-kliuchevaia-stavka-v-165-skazhetsia-na-kurse-rublia.html",
       "https://rg.ru/2025/10/21/ne-primut-na-chuzhoj-schet.html",
       "https://rg.ru/2025/10/26/ria-novosti-ashan-zaregistriroval-v-rf-novyj-tovarnyj-znak.html",
       "https://rg.ru/2025/10/26/v-gosdume-napomnili-komu-polozheny-subsidii-na-pokupku-kvartir.html",
@@ -16440,8 +16470,6 @@
       "https://rg.ru/2025/10/25/rosaviaciia-sniala-ogranicheniia-v-aeroportu-gelendzhika.html",
       "https://rg.ru/2025/10/25/reg-dfo/mintrans-iakutii-raziasnil-vzlet-tarifov-na-pereprave-cherez-reku-lena.html",
       "https://rg.ru/2025/10/25/ekspert-gareev-perechislil-strany-kuda-mozhno-vehat-bez-zagranpasporta.html",
-      "https://rg.ru/2025/10/24/grigorenko-pochti-90-tysiach-specialistov-v-sfere-ii-potrebuetsia-v-rf-k-2030-godu.html",
-      "https://rg.ru/2025/10/24/eksperty-ocenili-ostorozhnoe-reshenie-cb-snizit-stavku-tolko-na-polprocenta.html",
       "https://rg.ru/2025/10/24/iurist-nazvala-piat-sposobov-izbezhat-shestidnevnoj-rabochej-nedeli-v-konce-oktiabria.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
@@ -21343,7 +21371,9 @@
     "f313d2e2f1d75458ae72326ad86dd4a97dedb8c09a039ac32e39569b92acd023": "2025-10-26T00:13:00+03:00",
     "4b935a9693c39b42f47017b0908ab71c1fed01cbd8e4a694104740580b8bf629": "2025-10-26T00:14:00+03:00",
     "de1d3a573278c8051a380381d4ff72264fc7fcfa40824e1a4c56806bca77ac17": "2025-10-26T04:17:00+03:00",
-    "80cf2f84a1c09bca1d3e25c80317256167b339d96abb0a9de14417e0d1c34a95": "2025-10-26T06:41:00+03:00"
+    "80cf2f84a1c09bca1d3e25c80317256167b339d96abb0a9de14417e0d1c34a95": "2025-10-26T06:41:00+03:00",
+    "e42341c1feada7d917fe79c94eec7f891e1a1ce36e8cc6c976fb57946141db39": "2025-10-26T09:25:00+03:00",
+    "b02f2158c46a9fc6803ff3eab11e4983f4e7badefe69bb7e70f6eb72a338cb5a": "2025-10-26T09:25:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -21374,9 +21404,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f0044cb00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1761450052.7861645
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9211c74b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1761459798.0535607
       },
       "warmup_done": false,
       "last_success_path": null
@@ -21385,39 +21415,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "S86frTS0726trzLb",
+          "value": "8XjdfZgw0vemEjMP",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761451296
+          "expires": 1761461045
         },
         {
           "name": "__ddg10_",
-          "value": "1761450096",
+          "value": "1761459845",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761451296
+          "expires": 1761461045
         },
         {
           "name": "__ddg9_",
-          "value": "172.182.225.196",
+          "value": "52.176.139.88",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761451296
-        },
-        {
-          "name": "__ddg1_",
-          "value": "NIzmYTDpfXfph1TL7rUx",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1792986096
+          "expires": 1761461045
         },
         {
           "name": "PHPSESSID",
-          "value": "f5de7d58e40f5ef907215dc6369d2acb",
+          "value": "5c1f29782d2da243d8921faf975cebc5",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -21460,9 +21482,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1761383839.9279
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9211c71f90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 4,
+        "last_ts": 1761459877.8062086
       },
       "warmup_done": false,
       "last_success_path": null
@@ -27487,7 +27509,9 @@
     "https://rg.ru/2025/10/25/v-aeroportu-krasnodara-ogranichili-polety.html": "https://rg.ru/2025/10/25/v-aeroportu-krasnodara-ogranichili-polety.html",
     "https://rg.ru/2025/10/25/advokat-nazval-spisok-dokumentov-dlia-dareniia-kvartiry-i-nazval-glavnuiu-lovushku.html": "https://rg.ru/2025/10/25/advokat-nazval-spisok-dokumentov-dlia-dareniia-kvartiry-i-nazval-glavnuiu-lovushku.html",
     "https://rg.ru/2025/10/26/v-gosdume-napomnili-komu-polozheny-subsidii-na-pokupku-kvartir.html": "https://rg.ru/2025/10/26/v-gosdume-napomnili-komu-polozheny-subsidii-na-pokupku-kvartir.html",
-    "https://rg.ru/2025/10/26/ria-novosti-ashan-zaregistriroval-v-rf-novyj-tovarnyj-znak.html": "https://rg.ru/2025/10/26/ria-novosti-ashan-zaregistriroval-v-rf-novyj-tovarnyj-znak.html"
+    "https://rg.ru/2025/10/26/ria-novosti-ashan-zaregistriroval-v-rf-novyj-tovarnyj-znak.html": "https://rg.ru/2025/10/26/ria-novosti-ashan-zaregistriroval-v-rf-novyj-tovarnyj-znak.html",
+    "https://rg.ru/2025/10/26/reg-dfo/v-iakutske-zavershaetsia-tradicionnaia-iarmarka-ryba-iakutii.html": "https://rg.ru/2025/10/26/reg-dfo/v-iakutske-zavershaetsia-tradicionnaia-iarmarka-ryba-iakutii.html",
+    "https://rg.ru/2025/10/26/ekspert-shcherbachenko-poiasnil-kak-kliuchevaia-stavka-v-165-skazhetsia-na-kurse-rublia.html": "https://rg.ru/2025/10/26/ekspert-shcherbachenko-poiasnil-kak-kliuchevaia-stavka-v-165-skazhetsia-na-kurse-rublia.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -32608,7 +32632,9 @@
     "f8e4e440f2bb5af803e8b810c394b649f9753665": "https://rg.ru/2025/10/25/v-aeroportu-krasnodara-ogranichili-polety.html",
     "ac304ba3cbc9b9dfd6e3c47226892259deb73c3a": "https://rg.ru/2025/10/25/advokat-nazval-spisok-dokumentov-dlia-dareniia-kvartiry-i-nazval-glavnuiu-lovushku.html",
     "4b6e8b700b36eff5ed7bd8a659a0f286aa24e3a8": "https://rg.ru/2025/10/26/v-gosdume-napomnili-komu-polozheny-subsidii-na-pokupku-kvartir.html",
-    "9fa9becf51dbf9da5dc6b13a279b265fdc49ede5": "https://rg.ru/2025/10/26/ria-novosti-ashan-zaregistriroval-v-rf-novyj-tovarnyj-znak.html"
+    "9fa9becf51dbf9da5dc6b13a279b265fdc49ede5": "https://rg.ru/2025/10/26/ria-novosti-ashan-zaregistriroval-v-rf-novyj-tovarnyj-znak.html",
+    "b1c44ddc217f5085a2367e33a6efbd4b8cedd2aa": "https://rg.ru/2025/10/26/reg-dfo/v-iakutske-zavershaetsia-tradicionnaia-iarmarka-ryba-iakutii.html",
+    "c36136f6cb805e4b4d4be62835cb8b02b4946cb5": "https://rg.ru/2025/10/26/ekspert-shcherbachenko-poiasnil-kak-kliuchevaia-stavka-v-165-skazhetsia-na-kurse-rublia.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -39340,6 +39366,8 @@
     "https://rg.ru/2025/10/25/v-aeroportu-krasnodara-ogranichili-polety.html": "f313d2e2f1d75458ae72326ad86dd4a97dedb8c09a039ac32e39569b92acd023",
     "https://rg.ru/2025/10/25/advokat-nazval-spisok-dokumentov-dlia-dareniia-kvartiry-i-nazval-glavnuiu-lovushku.html": "4b935a9693c39b42f47017b0908ab71c1fed01cbd8e4a694104740580b8bf629",
     "https://rg.ru/2025/10/26/v-gosdume-napomnili-komu-polozheny-subsidii-na-pokupku-kvartir.html": "de1d3a573278c8051a380381d4ff72264fc7fcfa40824e1a4c56806bca77ac17",
-    "https://rg.ru/2025/10/26/ria-novosti-ashan-zaregistriroval-v-rf-novyj-tovarnyj-znak.html": "80cf2f84a1c09bca1d3e25c80317256167b339d96abb0a9de14417e0d1c34a95"
+    "https://rg.ru/2025/10/26/ria-novosti-ashan-zaregistriroval-v-rf-novyj-tovarnyj-znak.html": "80cf2f84a1c09bca1d3e25c80317256167b339d96abb0a9de14417e0d1c34a95",
+    "https://rg.ru/2025/10/26/reg-dfo/v-iakutske-zavershaetsia-tradicionnaia-iarmarka-ryba-iakutii.html": "e42341c1feada7d917fe79c94eec7f891e1a1ce36e8cc6c976fb57946141db39",
+    "https://rg.ru/2025/10/26/ekspert-shcherbachenko-poiasnil-kak-kliuchevaia-stavka-v-165-skazhetsia-na-kurse-rublia.html": "b02f2158c46a9fc6803ff3eab11e4983f4e7badefe69bb7e70f6eb72a338cb5a"
   }
 }
