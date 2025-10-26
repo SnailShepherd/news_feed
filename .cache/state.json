@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 26 Oct 2025 12:32:00 GMT"
+      "Last-Modified": "Sun, 26 Oct 2025 15:15:47 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"17fb2-GV4byU6fyQZCMdMpzFmGbU1+2CM\""
+      "ETag": "W/\"180e6-muBH9Z+rjwd+YbYAuIgV10u782Q\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"53kzz4yknn3c5x\""
+      "ETag": "\"sd0z7xgllw397v\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -13353,6 +13353,19 @@
     },
     "https://rg.ru/2025/10/26/rossijskie-aviakompanii-pereshli-na-zimnee-raspisanie.html": {
       "ETag": "\"m852ufeyhg1nff\""
+    },
+    "https://rg.ru/2025/10/26/dmitriev-nazval-horoshim-sostoianie-rossijskoj-ekonomiki.html": {
+      "ETag": "\"4uqge1yaq21oln\""
+    },
+    "https://rg.ru/2025/10/26/civilev-rossijskie-kompanii-uzhe-nachali-raboty-po-stroitelstvu-novyh-ges.html": {
+      "ETag": "\"16dalfc6xn1pi5\""
+    },
+    "https://rg.ru/2025/10/26/reg-cfo/rosaviaciia-vvela-ogranicheniia-v-aeroportu-kalugi.html": {
+      "ETag": "\"4df89uew3s1nxc\""
+    },
+    "https://rg.ru/amp/2025/10/26/reg-cfo/rosaviaciia-vvela-ogranicheniia-v-aeroportu-kalugi.html": {},
+    "https://rg.ru/2025/10/26/civilev-zaiavil-o-minimalnyh-riskah-toplivnyh-krizisov-v-rf-v-budushchem.html": {
+      "ETag": "\"14wimerupwm1p9o\""
     }
   },
   "stats": {
@@ -16128,9 +16141,19 @@
         "source": "Стройгаз.ру",
         "url": "https://stroygaz.ru/news/",
         "error": "cooldown active until 2025-10-26T15:17:39.075255+00:00 -> used cache"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Стройгаз.ру",
+        "url": "https://stroygaz.ru/news/",
+        "error": "cooldown active until 2025-10-26T15:17:39.075255+00:00 -> used cache"
       }
     ],
-    "last_run": "2025-10-26T12:32:34.433306+00:00",
+    "last_run": "2025-10-26T15:15:29.087791+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -16143,56 +16166,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 849.9488660000054,
-        "connect_ms": 396.38135699999566,
-        "response_ms": 1246.330223000001,
+        "dns_ms": 386.54138200001853,
+        "connect_ms": 292.9237459999854,
+        "response_ms": 679.4651280000039,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9bd9d55d90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 125.24374399998806,
+        "connect_ms": 1067.3958810000386,
+        "response_ms": 1192.6396250000266,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 6567.292167000005,
+        "dns_ms": 833.4044140000287,
         "connect_ms": 0.0,
-        "response_ms": 5790.05657800002,
+        "response_ms": 712.8748760000008,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9bd9e4ac10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 135.6419910000568,
+        "connect_ms": 408.4062560000348,
+        "response_ms": 544.0482470000916,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "8ca59bcb918de317ef352eea8f1cffe7dfc4db68c6e75464abb881e4ace08e9f",
+    "https://ardexpert.ru/article": "61c0b4ecdeeb53d831cc761aa8ba62751228b396d55a156071ef83aae2ca0678",
     "https://www.gostinfo.ru/News/List": "14e25cf61017b37ac7a10a088ca099dd4f1eaa43effdb20278f23c849a8be083",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2237ba5e154de0290fa6ee16352283e6a105460fb1bda0afb19468e5ebad069b",
-    "https://eec.eaeunion.org/news/": "18193cc22dcc454ea49e92d4527ef4b19271604d896d6b3489e1b66aecb0205e",
+    "https://eec.eaeunion.org/news/": "b4e70ef61e5f8cd8470bf238fd2a3168ce06a324bb982736c22c8cf256a363c3",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "96f4be5053094c18accc41da0680fab1d1e7c4f9af5213285c115d90b0a06254",
-    "https://www.metalinfo.ru/ru/news": "111a9380845516be14ae4412aeba3a089f1efe972676b8a5c1c648abf6bdc9f1",
-    "https://www.pnp.ru/economics/": "db4d98f6c1a22a2de26d50ab143a264175b914317e1f00455605daed80388ebb",
-    "https://erzrf.ru/news/": "44ede6e7e0a8cdf2b0f144584ca69a3ba91bba6e9c5b93d3a9441d5267484146",
-    "https://ria-stk.ru/news/vse-novosti.php": "fde31e10128d60b93fa312cbf55575b7a21c2bfaa38c1d155c588d94b0793171",
-    "http://government.ru/news/": "0703d6eb1b7529d9c40a7e23e7e43b9be600dab5ec7ee3c0576aac7cf809de6d",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "9b9ec4528eb3eaed813a4efbf83a7f56e8b08020cd4a72dacedef3c198cb8128",
+    "https://www.metalinfo.ru/ru/news": "aa5f0c2781dcfae68107b0d01864461c70b5ce876f57216e9bd9619e30e340a2",
+    "https://www.pnp.ru/economics/": "ddd294ce2e207555faf3b12efc387f6d72752c3085fd6e16fa01a9258d29b07a",
+    "https://erzrf.ru/news/": "ef73881b43f01a507ac61f107efb35ae90323ef5963b7ab20e48d050cceb7565",
+    "https://ria-stk.ru/news/vse-novosti.php": "7097e77dc424a154c1320de8492c491b454ca3f7dfd154477447ba33f0d3e93c",
+    "http://government.ru/news/": "3839ea691320ffb112eaf84d96f3d34b2d0cffae75efb1e148098f3f047d8092",
     "https://stroygaz.ru/news/": "006ceee2200a54b761131b2c5b54eb6344faaed0ec28a624b04765bb3357819c",
-    "https://realty.ria.ru/lenta/": "3b656092a3d90c49657871556793762c3f3c309956b857d3d8f0529eb35ee0f3",
-    "https://rg.ru/tema/ekonomika": "e11f175bcb46f414eceeb850aa99edcb9d548f69295b583c5aaca7501fcbb291",
-    "http://ancb.ru/publication": "d30af347f100b620bba29694d32c8988f62eae8082b314a248fb75c79b8daf81",
+    "https://realty.ria.ru/lenta/": "87e929cab9fd3d51b8b4413934fcdeba0303281774c59126ccf6cd6789e3016d",
+    "https://rg.ru/tema/ekonomika": "6e0752a901f70bd812df171676f75502c961c5ff2025fc9d336697b3b4e40e58",
+    "http://ancb.ru/publication": "b767cb56dd544ebb8baf500f979086ad4eb3a0ba5e06f26da17fee462aa71d4b",
     "https://notim.ru": "231e0ec4be3b2121513fdf38021223b6db955a1265afdfa37252883b1d30fe4e",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -16502,6 +16525,10 @@
       "https://realty.ria.ru/20251024/sud-2050288676.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/26/dmitriev-nazval-horoshim-sostoianie-rossijskoj-ekonomiki.html",
+      "https://rg.ru/2025/10/26/civilev-rossijskie-kompanii-uzhe-nachali-raboty-po-stroitelstvu-novyh-ges.html",
+      "https://rg.ru/2025/10/26/reg-cfo/rosaviaciia-vvela-ogranicheniia-v-aeroportu-kalugi.html",
+      "https://rg.ru/2025/10/26/civilev-zaiavil-o-minimalnyh-riskah-toplivnyh-krizisov-v-rf-v-budushchem.html",
       "https://rg.ru/2025/10/26/s-1-ianvaria-v-rossii-izmeniatsia-stavki-tamozhennyh-sborov-na-vvozimye-tovary.html",
       "https://rg.ru/2025/10/26/civilev-dlia-stroitelstva-krupnyh-ges-energokompaniiam-nuzhna-gospodderzhka.html",
       "https://rg.ru/2025/10/26/rossijskie-aviakompanii-pereshli-na-zimnee-raspisanie.html",
@@ -16530,10 +16557,6 @@
       "https://rg.ru/2025/10/25/rosaviaciia-sniala-vremennye-ogranicheniia-v-aeroportu-uhty.html",
       "https://rg.ru/2025/10/25/reg-ufo/kak-kurort-roza-hutor-vystraivaet-dobrososedstvo-s-ekosistemoj-kavkaza.html",
       "https://rg.ru/2025/10/25/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-uhty.html",
-      "https://rg.ru/2025/10/25/civilev-rf-pereorientirovala-eksport-gaza-nefti-i-uglia-s-zapada-na-vostok-i-iug.html",
-      "https://rg.ru/2025/10/25/aeroporty-kalugi-i-iaroslavlia-vozobnovili-obsluzhivanie-rejsov.html",
-      "https://rg.ru/2025/10/25/mishustin-napravil-12-mlrd-rublej-na-gornolyzhnuiu-infrastrukturu-severnogo-kavkaza.html",
-      "https://rg.ru/2025/10/25/tass-kitaj-i-belarus-lidiruiut-po-rostu-sprosa-na-otdyh-na-noiabrskie-prazdniki.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html",
       "https://rg.ru/2025/10/10/v-moskve-sostoialas-mezhdunarodnaia-konferenciia-po-ocenochnoj-deiatelnosti-mkod-2025.html"
@@ -21446,7 +21469,11 @@
     "1ccba772c41ec933ae3606dab313d0a8fcddcde8125c7d02bc3dc948ef44bd17": "2025-10-26T15:32:00+03:00",
     "53369c66f3112b86f9bff94f8702716c9e0721ef63293415fc9460b9ab02570b": "2025-10-26T15:32:00+03:00",
     "55e40c428fddb063b11ccec6d8d7614be50154e55c06aa6bac2b80a59e8abcaa": "2025-10-26T15:32:00+03:00",
-    "5d8b5794f0740b716050f495e2d3f78498c65b1699a1e6de80ea8e5363c1dffb": "2025-10-26T15:32:00+03:00"
+    "5d8b5794f0740b716050f495e2d3f78498c65b1699a1e6de80ea8e5363c1dffb": "2025-10-26T15:32:00+03:00",
+    "30bb8bd28f5114f84b86392de65aa6432db0b83a136ae2526111bf60fd7ff567": "2025-10-26T18:15:00+03:00",
+    "9616f4f391f644127ec611e27ea7201e76e704b7d2ef2f96b6824870c5043e0e": "2025-10-26T18:15:00+03:00",
+    "b957e8ccd723cfd7e287e269bde273ddcb97d86644b4cca7aa94fccb607c3b9a": "2025-10-26T18:15:00+03:00",
+    "684cc4fa9a0c2fa068da20d5271666a678177bcd8c89cfb533f52246d95ec702": "2025-10-26T18:15:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -21477,8 +21504,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9bd9e50b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 20,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1761481831.119414
       },
       "warmup_done": false,
@@ -21488,31 +21515,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "JSAfFOrLKakF4ekD",
+          "value": "3sSM9hionfBW7piI",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761483087
+          "expires": 1761492914
         },
         {
           "name": "__ddg10_",
-          "value": "1761481887",
+          "value": "1761491714",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761483087
+          "expires": 1761492914
         },
         {
           "name": "__ddg9_",
-          "value": "20.168.119.85",
+          "value": "4.227.173.118",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761483087
+          "expires": 1761492914
+        },
+        {
+          "name": "__ddg1_",
+          "value": "ABhm9bNJNfiJuhmmHmiD",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1793027714
         },
         {
           "name": "PHPSESSID",
-          "value": "85c19315dd7d7886aaf24dc0a32e7920",
+          "value": "338b585cd2f312200f7497758440fd51",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -21539,11 +21574,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "11x96sYUmiL3FONqSoxY1H3UurJb31xp",
+          "value": "EKRFe7q3QiQbP9st3wNAGud5KfEJNWS1",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761481006
+          "expires": 1761502516
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -21551,12 +21586,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1792574206
+          "expires": 1792595716
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9bd9e49f90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1761481920.2149153
       },
       "warmup_done": false,
@@ -27594,7 +27629,11 @@
     "http://government.ru/news/56664": "http://government.ru/news/56664",
     "https://rg.ru/2025/10/26/s-1-ianvaria-v-rossii-izmeniatsia-stavki-tamozhennyh-sborov-na-vvozimye-tovary.html": "https://rg.ru/2025/10/26/s-1-ianvaria-v-rossii-izmeniatsia-stavki-tamozhennyh-sborov-na-vvozimye-tovary.html",
     "https://rg.ru/2025/10/26/civilev-dlia-stroitelstva-krupnyh-ges-energokompaniiam-nuzhna-gospodderzhka.html": "https://rg.ru/2025/10/26/civilev-dlia-stroitelstva-krupnyh-ges-energokompaniiam-nuzhna-gospodderzhka.html",
-    "https://rg.ru/2025/10/26/rossijskie-aviakompanii-pereshli-na-zimnee-raspisanie.html": "https://rg.ru/2025/10/26/rossijskie-aviakompanii-pereshli-na-zimnee-raspisanie.html"
+    "https://rg.ru/2025/10/26/rossijskie-aviakompanii-pereshli-na-zimnee-raspisanie.html": "https://rg.ru/2025/10/26/rossijskie-aviakompanii-pereshli-na-zimnee-raspisanie.html",
+    "https://rg.ru/2025/10/26/dmitriev-nazval-horoshim-sostoianie-rossijskoj-ekonomiki.html": "https://rg.ru/2025/10/26/dmitriev-nazval-horoshim-sostoianie-rossijskoj-ekonomiki.html",
+    "https://rg.ru/2025/10/26/civilev-rossijskie-kompanii-uzhe-nachali-raboty-po-stroitelstvu-novyh-ges.html": "https://rg.ru/2025/10/26/civilev-rossijskie-kompanii-uzhe-nachali-raboty-po-stroitelstvu-novyh-ges.html",
+    "https://rg.ru/2025/10/26/reg-cfo/rosaviaciia-vvela-ogranicheniia-v-aeroportu-kalugi.html": "https://rg.ru/2025/10/26/reg-cfo/rosaviaciia-vvela-ogranicheniia-v-aeroportu-kalugi.html",
+    "https://rg.ru/2025/10/26/civilev-zaiavil-o-minimalnyh-riskah-toplivnyh-krizisov-v-rf-v-budushchem.html": "https://rg.ru/2025/10/26/civilev-zaiavil-o-minimalnyh-riskah-toplivnyh-krizisov-v-rf-v-budushchem.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -32727,7 +32766,11 @@
     "bc98a6d7cef3a98cd19f7d07bb4b2b487c30d28e": "http://government.ru/news/56664",
     "912634cf937389fbd20a4037bc2e0eaebb9e8fb1": "https://rg.ru/2025/10/26/s-1-ianvaria-v-rossii-izmeniatsia-stavki-tamozhennyh-sborov-na-vvozimye-tovary.html",
     "3e498c53018348b71ca35d7c21abb3481863a378": "https://rg.ru/2025/10/26/civilev-dlia-stroitelstva-krupnyh-ges-energokompaniiam-nuzhna-gospodderzhka.html",
-    "3bad0cf7c404b3530f8d3d4a15c2d19a4b7561c3": "https://rg.ru/2025/10/26/rossijskie-aviakompanii-pereshli-na-zimnee-raspisanie.html"
+    "3bad0cf7c404b3530f8d3d4a15c2d19a4b7561c3": "https://rg.ru/2025/10/26/rossijskie-aviakompanii-pereshli-na-zimnee-raspisanie.html",
+    "e1fe2a601fd084c1de8ea37099bebec0c1124a75": "https://rg.ru/2025/10/26/dmitriev-nazval-horoshim-sostoianie-rossijskoj-ekonomiki.html",
+    "fc8586ab567a8e4ba775ef22c371c3d6e0338270": "https://rg.ru/2025/10/26/civilev-rossijskie-kompanii-uzhe-nachali-raboty-po-stroitelstvu-novyh-ges.html",
+    "25a0e89ee17caadb577d0be19d23f3bf7308067f": "https://rg.ru/2025/10/26/reg-cfo/rosaviaciia-vvela-ogranicheniia-v-aeroportu-kalugi.html",
+    "2956a085d92ba864ef9bed39afb9fb0073ecee3d": "https://rg.ru/2025/10/26/civilev-zaiavil-o-minimalnyh-riskah-toplivnyh-krizisov-v-rf-v-budushchem.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -39474,6 +39517,10 @@
     "http://government.ru/news/56664/": "1ccba772c41ec933ae3606dab313d0a8fcddcde8125c7d02bc3dc948ef44bd17",
     "https://rg.ru/2025/10/26/s-1-ianvaria-v-rossii-izmeniatsia-stavki-tamozhennyh-sborov-na-vvozimye-tovary.html": "53369c66f3112b86f9bff94f8702716c9e0721ef63293415fc9460b9ab02570b",
     "https://rg.ru/2025/10/26/civilev-dlia-stroitelstva-krupnyh-ges-energokompaniiam-nuzhna-gospodderzhka.html": "55e40c428fddb063b11ccec6d8d7614be50154e55c06aa6bac2b80a59e8abcaa",
-    "https://rg.ru/2025/10/26/rossijskie-aviakompanii-pereshli-na-zimnee-raspisanie.html": "5d8b5794f0740b716050f495e2d3f78498c65b1699a1e6de80ea8e5363c1dffb"
+    "https://rg.ru/2025/10/26/rossijskie-aviakompanii-pereshli-na-zimnee-raspisanie.html": "5d8b5794f0740b716050f495e2d3f78498c65b1699a1e6de80ea8e5363c1dffb",
+    "https://rg.ru/2025/10/26/dmitriev-nazval-horoshim-sostoianie-rossijskoj-ekonomiki.html": "30bb8bd28f5114f84b86392de65aa6432db0b83a136ae2526111bf60fd7ff567",
+    "https://rg.ru/2025/10/26/civilev-rossijskie-kompanii-uzhe-nachali-raboty-po-stroitelstvu-novyh-ges.html": "9616f4f391f644127ec611e27ea7201e76e704b7d2ef2f96b6824870c5043e0e",
+    "https://rg.ru/2025/10/26/reg-cfo/rosaviaciia-vvela-ogranicheniia-v-aeroportu-kalugi.html": "b957e8ccd723cfd7e287e269bde273ddcb97d86644b4cca7aa94fccb607c3b9a",
+    "https://rg.ru/2025/10/26/civilev-zaiavil-o-minimalnyh-riskah-toplivnyh-krizisov-v-rf-v-budushchem.html": "684cc4fa9a0c2fa068da20d5271666a678177bcd8c89cfb533f52246d95ec702"
   }
 }
