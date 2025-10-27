@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 27 Oct 2025 17:37:24 GMT"
+      "Last-Modified": "Mon, 27 Oct 2025 18:26:09 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"198cb-TUni/KLALfOwDeIqvPOiaJxAK7E\""
+      "ETag": "W/\"19905-YR6NoAPhRYAM9itfT3Tlek4whyw\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"3mk49s34lh3oof\""
+      "ETag": "\"un47y1ps4l3o1c\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -13776,7 +13776,18 @@
     },
     "https://rg.ru/2025/10/27/lvova-belova-poniatie-semejnoe-predpriiatie-nuzhno-zakrepit-zakonodatelno.html": {
       "ETag": "\"w66mrib1571pbc\""
-    }
+    },
+    "https://www.interfax-russia.ru/realty/news/okolo-500-novyh-gostinichnyh-nomerov-mozhet-poyavitsya-do-konca-goda-v-moskve": {},
+    "https://rg.ru/2025/10/27/zdorovyj-kollektiv.html": {
+      "ETag": "\"443a3yjn7u1t5b\""
+    },
+    "https://rg.ru/2025/10/27/nomer-dlia-svoih.html": {
+      "ETag": "\"omegtumfde2046\""
+    },
+    "https://rg.ru/2025/10/27/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html": {
+      "ETag": "\"ejb4rntwve1o43\""
+    },
+    "https://rg.ru/amp/2025/10/27/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html": {}
   },
   "stats": {
     "cooldowns": {
@@ -16660,9 +16671,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa02a58da90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa029f89590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa029f896d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa029f903e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa029f90b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa029e85b50>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-27T17:37:35.247113+00:00",
+    "last_run": "2025-10-27T18:25:50.218452+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -16675,9 +16697,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 384.42399999999566,
-        "connect_ms": 697.8553149999982,
-        "response_ms": 1082.2793149999939,
+        "dns_ms": 403.31703999999036,
+        "connect_ms": 302.774047000014,
+        "response_ms": 706.0910870000043,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -16688,20 +16710,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbdf5081b50>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa029e85b50>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 1035.125289000007,
+        "dns_ms": 4168.07692399999,
         "connect_ms": 0.0,
-        "response_ms": 715.0684159999798,
+        "response_ms": 762.9543980000051,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.6293339999956515,
-        "connect_ms": 404.3068109999979,
-        "response_ms": 404.93614499999353,
+        "dns_ms": 138.6947070000133,
+        "connect_ms": 431.0696859999723,
+        "response_ms": 569.7643929999856,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -16710,20 +16732,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "9ce69fdba39e4ee4cc5fa637354f4ed286f2059300aae5001f8e37510d95af14",
+    "https://ardexpert.ru/article": "b7c4494406fe2b22aa5b1cb97aec99ffc1edd263e08a926b81691457875a911c",
     "https://www.gostinfo.ru/News/List": "f2aea6fa70d114b1374d90a152c6d4d59c61439c92fa62510ea41db2cc3585fb",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "67af5ea59e6f6c6e68e5d0977dfcf50e0da03fa96a58dcb61ac98ac64d1cac65",
-    "https://eec.eaeunion.org/news/": "9f0b6c7887622296baebe17fa9e376bde1c6018964f58ad5419b9f2e59524f65",
+    "https://eec.eaeunion.org/news/": "6c0057727f3283381f727eb8d63fc854b230a2128fc448979af4f2ac2c5ffab9",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "7c113dd880f797558aa4b1133de1c569cf3584d5b7ea42346b0be295269009f8",
-    "https://www.metalinfo.ru/ru/news": "fea4bae956996b262ae78e5c2140a01a9e9a2508627dd2bdbd8104afa8a6f9fe",
-    "https://www.pnp.ru/economics/": "88efe7a16c34edbb557106770b28daef2e6f9af05b077c8b39b5996fb4bab585",
-    "https://erzrf.ru/news/": "e7be32564ef0dc7d6670edfdd6368c75af57332ba5a3624c40e60fd62b898d2b",
-    "https://ria-stk.ru/news/vse-novosti.php": "2266c2d5bf7ffa4aa8a88670b70855909f47307b18ef31208cb72fa1ab6e88a0",
-    "http://government.ru/news/": "e312c06916158e2f6a530571bb553ad5fa0a5ea90f6f5bffca0fbdffc5fcbce9",
-    "https://stroygaz.ru/news/": "e9d1d8e6cc5094f349c3489f651c0247cb7a4b4a04850cce819accc5cc56d788",
-    "https://realty.ria.ru/lenta/": "58b2e5b12c07e537befda17816a61810c40c5dc030f4d55bae48663503b101aa",
-    "https://rg.ru/tema/ekonomika": "3e9c353bbd6e6d33d34bd3f2e2c4446094471404be0a2632e519d42cf9f07d3b",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "d5ac482475f9e4daded47caa4cd5e55314e30fdee07cfa6db11a7defd8181d2b",
+    "https://www.metalinfo.ru/ru/news": "73ce6bfb96033411b2233e5fab5fdb2b7d4db659df68647e034c9caceb5b57cf",
+    "https://www.pnp.ru/economics/": "6e4a2ea84f012dfa3019024d0ab9d075775cf35627513174ce5da447ee6ab0f8",
+    "https://erzrf.ru/news/": "730f14cb9c9bee2a5bcc37008b062be4ba3139103314cf49963f7fb571315030",
+    "https://ria-stk.ru/news/vse-novosti.php": "0c0454528a51b0a366434633d8da17c90722ae57d4961174fc4e4fb8c79bd634",
+    "http://government.ru/news/": "6090259a20f8714ba5a696ebbeb2a1bf6b11aba9b55c3d63d5153304ac2dbd30",
+    "https://stroygaz.ru/news/": "0972bbfbcb5ace8af3d7a55f1c537fec7c51ca1529eaef05915529c21d0aa1a4",
+    "https://realty.ria.ru/lenta/": "39c0d9da13367e9e4244b24e286265d4c8a5f28a555ac67e6bfee3f9de2dfe2a",
+    "https://rg.ru/tema/ekonomika": "927240bf20573f040718153125367dbc9aa3823a9a82fbb0781f0d06b835a0f4",
     "http://ancb.ru/publication": "06f683e0669fc83a22da88216ebf21cbfcd379b57a5e61e90b89cc05f05b8ca2",
     "https://notim.ru": "231e0ec4be3b2121513fdf38021223b6db955a1265afdfa37252883b1d30fe4e",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -16822,6 +16844,7 @@
       "https://minfin.gov.ru/ru/press-center/contacts/"
     ],
     "Интерфакс-Недвижимость": [
+      "https://www.interfax-russia.ru/realty/news/okolo-500-novyh-gostinichnyh-nomerov-mozhet-poyavitsya-do-konca-goda-v-moskve",
       "https://www.interfax-russia.ru/realty/news/okolo-90-domov-v-novyh-regionah-rossii-peredali-pod-upravlenie-edinyh-uk",
       "https://www.interfax-russia.ru/realty/news/arenda-odnushek-silnee-vsego-podorozhala-u-lotov-s-kosmeticheskim-remontom",
       "https://www.interfax-russia.ru/realty/news/pochti-52-mlrd-rubley-sekonomili-vlasti-moskvy-na-ekspertize-stroyproektov",
@@ -16860,8 +16883,7 @@
       "https://www.interfax-russia.ru/realty/news/vhod-v-metro-baumanskaya-chastichno-zakryt-iz-za-remonta-eskalatora",
       "https://www.interfax-russia.ru/realty/news/stroitelstvo-tonnelya-mezhdu-rf-i-ssha-vozmozhno-pri-postanovke-zadachi-husnullin",
       "https://www.interfax-russia.ru/realty/news/bolee-1-2-tys-ga-zemli-dlya-realizacii-maip-vydelili-v-moskve-s-2016-goda",
-      "https://www.interfax-russia.ru/realty/news/husnullin-poruchil-sozdat-programmy-pereobucheniya-kadrov-dlya-dorozhnoy-otrasli",
-      "https://www.interfax-russia.ru/realty/news/neobhodimost-kapremonta-nachali-opredelyat-po-novym-pravilam"
+      "https://www.interfax-russia.ru/realty/news/husnullin-poruchil-sozdat-programmy-pereobucheniya-kadrov-dlya-dorozhnoy-otrasli"
     ],
     "Металлоснабжение и сбыт": [
       "https://www.metalinfo.ru/ru/news/177973",
@@ -17034,6 +17056,9 @@
       "https://realty.ria.ru/20251024/dejstvija-2050394628.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/27/zdorovyj-kollektiv.html",
+      "https://rg.ru/2025/10/27/nomer-dlia-svoih.html",
+      "https://rg.ru/2025/10/27/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html",
       "https://rg.ru/2025/10/27/ventil-zatianulsia.html",
       "https://rg.ru/2025/10/27/reg-sibfo/iliusha-poshel-na-vzlet.html",
       "https://rg.ru/2025/10/27/supruzheskij-dolg.html",
@@ -17062,10 +17087,7 @@
       "https://rg.ru/2025/10/27/parkovki-v-moskve-budut-besplatnymi-3-i-4-noiabria.html",
       "https://rg.ru/2025/10/27/trebovaniia-k-reklame-napitkov-energetikov-stali-strozhe.html",
       "https://rg.ru/2025/10/27/putin-odobril-novye-shtrafy-za-negotovnost-kommunalshchikov-k-zime.html",
-      "https://rg.ru/2025/10/27/indiia-i-kitaj-ne-gotovy-polnostiu-otkazatsia-ot-rossijskoj-nefti-v-ugodu-ssha.html",
       "https://rg.ru/2025/10/27/kaznachejstvo-poluchit-polnomochiia-valiutnogo-kontrolia-v-novye-sroki.html",
-      "https://rg.ru/2025/10/27/domrf-zaemshchiki-po-semejnoj-ipoteke-smogut-snizit-nagruzku-na-svoj-biudzhet.html",
-      "https://rg.ru/2025/10/27/samolety-s-ovalnym-fiuzeliazhem-budut-perevozit-do-250-passazhirov-na-8000-9000-km.html",
       "https://rg.ru/2025/10/27/akciia-lechi-zhizni-blagotvoritelnogo-fonda-alyosha-vozvrashchaetsia.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html"
@@ -22180,7 +22202,11 @@
     "b0517dd108b7ec48798fcef51c2bebfbeb4015cd37a976eb5baa0537a7258c0c": "2025-10-27T20:37:00+03:00",
     "438b320061ddd6b30ed9253990d7dca54608c02fb53785408d0f831f81309939": "2025-10-27T20:37:00+03:00",
     "fabac082a303925884d923a68a72311e7b785be1e735dd32bf5d710a8e4ac3b5": "2025-10-27T20:37:00+03:00",
-    "2cf95f2c6cfaf848164e02e22c9b9bc1c70af861f92da9e8e4c17e5975b50d54": "2025-10-27T20:37:00+03:00"
+    "2cf95f2c6cfaf848164e02e22c9b9bc1c70af861f92da9e8e4c17e5975b50d54": "2025-10-27T20:37:00+03:00",
+    "84c7b0706b156682c653ad923f775a615b51d54898fd48fbf2501cb5fbf67b78": "2025-10-27T21:25:00+03:00",
+    "93b26a84a830ec5ea2f755d0f6b1c4fb8a8c9b5f40c1e4c199a142d4f2583d7a": "2025-10-27T21:25:00+03:00",
+    "07d84c37634c353f5c4c3e05fce0a2e57d082c9d015edcb8c1c5f31f9f7d43bf": "2025-10-27T21:25:00+03:00",
+    "f45226652b310490166ca92477f93047c9dcea343577c48eac0fea8d703bce27": "2025-10-27T21:25:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -22211,9 +22237,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbdf5188b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 20,
-        "last_ts": 1761586567.7842586
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa029f90b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 25,
+        "last_ts": 1761589486.8851523
       },
       "warmup_done": false,
       "last_success_path": null
@@ -22222,31 +22248,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "1h338gEbX62GKvk6",
+          "value": "9OLswXSrMupDpsUO",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761587811
+          "expires": 1761590735
         },
         {
           "name": "__ddg10_",
-          "value": "1761586611",
+          "value": "1761589535",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761587811
+          "expires": 1761590735
         },
         {
           "name": "__ddg9_",
-          "value": "172.178.119.42",
+          "value": "20.55.214.73",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761587811
+          "expires": 1761590735
+        },
+        {
+          "name": "__ddg1_",
+          "value": "LAbowfEmN880qUcNMgaL",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1793125535
         },
         {
           "name": "PHPSESSID",
-          "value": "a2980478bb3dde35a5f69881ec7370ba",
+          "value": "32441283a5cc5b76ddfff01ded4e66a9",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -22273,11 +22307,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "4GztpA7j3OYjLiedtUeIhyMBE2aMPkhT",
+          "value": "q5SUh4omu6N6uIo1836ayRz5ICQb14a4",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761597414
+          "expires": 1761600337
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -22285,7 +22319,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1792690614
+          "expires": 1792693537
         }
       ],
       "failures": {
@@ -28586,7 +28620,11 @@
     "https://rg.ru/2025/10/27/lvova-belova-alimentshchiki-dolzhny-znat-ob-otvetstvennosti-za-soderzhanie-detej.html": "https://rg.ru/2025/10/27/lvova-belova-alimentshchiki-dolzhny-znat-ob-otvetstvennosti-za-soderzhanie-detej.html",
     "https://rg.ru/2025/10/27/reg-szfo/povezem-morem.html": "https://rg.ru/2025/10/27/reg-szfo/povezem-morem.html",
     "https://rg.ru/2025/10/27/reg-ufo/kleva-ne-budet.html": "https://rg.ru/2025/10/27/reg-ufo/kleva-ne-budet.html",
-    "https://rg.ru/2025/10/27/lvova-belova-poniatie-semejnoe-predpriiatie-nuzhno-zakrepit-zakonodatelno.html": "https://rg.ru/2025/10/27/lvova-belova-poniatie-semejnoe-predpriiatie-nuzhno-zakrepit-zakonodatelno.html"
+    "https://rg.ru/2025/10/27/lvova-belova-poniatie-semejnoe-predpriiatie-nuzhno-zakrepit-zakonodatelno.html": "https://rg.ru/2025/10/27/lvova-belova-poniatie-semejnoe-predpriiatie-nuzhno-zakrepit-zakonodatelno.html",
+    "https://www.interfax-russia.ru/realty/news/okolo-500-novyh-gostinichnyh-nomerov-mozhet-poyavitsya-do-konca-goda-v-moskve": "https://www.interfax-russia.ru/realty/news/okolo-500-novyh-gostinichnyh-nomerov-mozhet-poyavitsya-do-konca-goda-v-moskve",
+    "https://rg.ru/2025/10/27/zdorovyj-kollektiv.html": "https://rg.ru/2025/10/27/zdorovyj-kollektiv.html",
+    "https://rg.ru/2025/10/27/nomer-dlia-svoih.html": "https://rg.ru/2025/10/27/nomer-dlia-svoih.html",
+    "https://rg.ru/2025/10/27/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html": "https://rg.ru/2025/10/27/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -33924,7 +33962,11 @@
     "a159d6774b062ec7c5154fe11013f33c37b3111c": "https://rg.ru/2025/10/27/lvova-belova-alimentshchiki-dolzhny-znat-ob-otvetstvennosti-za-soderzhanie-detej.html",
     "0f1dd155d3301eedf1febd475882c65cf0fbb0c6": "https://rg.ru/2025/10/27/reg-szfo/povezem-morem.html",
     "d029d44dbcc5e85d4597a65158388e5ecf54e552": "https://rg.ru/2025/10/27/reg-ufo/kleva-ne-budet.html",
-    "e9163e0bdaf59bac66fd8a5a40d5c3101bd96e41": "https://rg.ru/2025/10/27/lvova-belova-poniatie-semejnoe-predpriiatie-nuzhno-zakrepit-zakonodatelno.html"
+    "e9163e0bdaf59bac66fd8a5a40d5c3101bd96e41": "https://rg.ru/2025/10/27/lvova-belova-poniatie-semejnoe-predpriiatie-nuzhno-zakrepit-zakonodatelno.html",
+    "91edfe16ed2603c41cd09e732715f8df3f18e762": "https://www.interfax-russia.ru/realty/news/okolo-500-novyh-gostinichnyh-nomerov-mozhet-poyavitsya-do-konca-goda-v-moskve",
+    "cbe56996853c7809e515e6228f2a65f2d3fabf94": "https://rg.ru/2025/10/27/zdorovyj-kollektiv.html",
+    "a2c4d0228a0312c2251aac3b5c3a78a02bc0f543": "https://rg.ru/2025/10/27/nomer-dlia-svoih.html",
+    "6eb3318ffb4f6f07734b85d2441e70aea0ce7be2": "https://rg.ru/2025/10/27/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -40956,6 +40998,10 @@
     "https://rg.ru/2025/10/27/lvova-belova-alimentshchiki-dolzhny-znat-ob-otvetstvennosti-za-soderzhanie-detej.html": "b0517dd108b7ec48798fcef51c2bebfbeb4015cd37a976eb5baa0537a7258c0c",
     "https://rg.ru/2025/10/27/reg-szfo/povezem-morem.html": "438b320061ddd6b30ed9253990d7dca54608c02fb53785408d0f831f81309939",
     "https://rg.ru/2025/10/27/reg-ufo/kleva-ne-budet.html": "fabac082a303925884d923a68a72311e7b785be1e735dd32bf5d710a8e4ac3b5",
-    "https://rg.ru/2025/10/27/lvova-belova-poniatie-semejnoe-predpriiatie-nuzhno-zakrepit-zakonodatelno.html": "2cf95f2c6cfaf848164e02e22c9b9bc1c70af861f92da9e8e4c17e5975b50d54"
+    "https://rg.ru/2025/10/27/lvova-belova-poniatie-semejnoe-predpriiatie-nuzhno-zakrepit-zakonodatelno.html": "2cf95f2c6cfaf848164e02e22c9b9bc1c70af861f92da9e8e4c17e5975b50d54",
+    "https://www.interfax-russia.ru/realty/news/okolo-500-novyh-gostinichnyh-nomerov-mozhet-poyavitsya-do-konca-goda-v-moskve": "84c7b0706b156682c653ad923f775a615b51d54898fd48fbf2501cb5fbf67b78",
+    "https://rg.ru/2025/10/27/zdorovyj-kollektiv.html": "93b26a84a830ec5ea2f755d0f6b1c4fb8a8c9b5f40c1e4c199a142d4f2583d7a",
+    "https://rg.ru/2025/10/27/nomer-dlia-svoih.html": "07d84c37634c353f5c4c3e05fce0a2e57d082c9d015edcb8c1c5f31f9f7d43bf",
+    "https://rg.ru/2025/10/27/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html": "f45226652b310490166ca92477f93047c9dcea343577c48eac0fea8d703bce27"
   }
 }
