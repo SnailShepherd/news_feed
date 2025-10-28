@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 28 Oct 2025 18:25:21 GMT"
+      "Last-Modified": "Tue, 28 Oct 2025 20:34:59 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"192f8-e/Bu6I8XinNQzRUoO6AswBnwC24\""
+      "ETag": "W/\"19504-TMpS1fcthS2rkQqJ5vxcGJ8KFOQ\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"hk1sx4o0713ukc\""
+      "ETag": "\"iydmalfvab411x\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -14288,7 +14288,26 @@
     },
     "https://rg.ru/2025/10/28/punkt-spora.html": {
       "ETag": "\"d29ry64sfx25je\""
-    }
+    },
+    "https://rg.ru/2025/10/28/globalnoe-poteplenie-pozvolit-razvivat-turizm-na-krajnem-severe.html": {
+      "ETag": "\"icy8spdzzw253o\""
+    },
+    "https://rg.ru/2025/10/28/kapusta-s-shafranom.html": {
+      "ETag": "\"sva9gfmii71uxp\""
+    },
+    "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html": {
+      "ETag": "\"h828pt58rg1xc4\""
+    },
+    "https://rg.ru/2025/10/28/reg-cfo/gde-variat-krem.html": {
+      "ETag": "\"ehasispg4y1yo7\""
+    },
+    "https://rg.ru/2025/10/28/v-pole-vidimosti.html": {
+      "ETag": "\"5n8ehsua6r1xc1\""
+    },
+    "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": {
+      "ETag": "\"4ew1mgy1ms1myq\""
+    },
+    "https://rg.ru/amp/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": {}
   },
   "stats": {
     "cooldowns": {
@@ -17235,9 +17254,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdc9e175a90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdc9dbb1590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdc9dbb16d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdc9dbc03e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdc9dbc0b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdc9dabdd90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-28T18:25:32.027190+00:00",
+    "last_run": "2025-10-28T20:34:45.916166+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -17250,33 +17280,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 406.03069200000164,
-        "connect_ms": 566.7826069999933,
-        "response_ms": 972.8132989999949,
+        "dns_ms": 382.9718490000005,
+        "connect_ms": 574.4527680000004,
+        "response_ms": 957.4246170000009,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 131.11445600000593,
-        "connect_ms": 144.34399900000017,
-        "response_ms": 275.4584550000061,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdc9dabdd90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 570.5549070000018,
-        "connect_ms": 214.57665099998735,
-        "response_ms": 785.1315579999891,
+        "dns_ms": 572.4771820000001,
+        "connect_ms": 51.671521999992365,
+        "response_ms": 624.1487039999924,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 126.62860599999703,
-        "connect_ms": 434.58750100001,
-        "response_ms": 561.216107000007,
+        "dns_ms": 131.9565109999985,
+        "connect_ms": 420.8491899999842,
+        "response_ms": 552.8057009999827,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -17285,21 +17315,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "bde92234b47a2582a68f269d5e26297ed2f57cea74306d2e89d76c2821b1fdc9",
+    "https://ardexpert.ru/article": "97b955aebe59fbcac00e9c241802fe1024f6a1fc771023eca97494581de872e5",
     "https://www.gostinfo.ru/News/List": "f2aea6fa70d114b1374d90a152c6d4d59c61439c92fa62510ea41db2cc3585fb",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "f80c74cef42205ef41b3f67d587f18db996af6e63e3390f34b1f884c1ab6f1e2",
-    "https://eec.eaeunion.org/news/": "79e517fccbd45d985531a1927081995d57469ad89b9a5771be9759cfb35ba30b",
+    "https://eec.eaeunion.org/news/": "9c2993318a761fa3a5386525ea985c61375b99b01b1cf87c865653c3d35ce9f6",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "7c2e787a998813e487ca0b89331a8994b9c02c7650b2262c180a179c359c60da",
-    "https://www.metalinfo.ru/ru/news": "11d4e2bc27863ae42bc57c4a44a4dd306c8568e5d543a9cca2084b80cda7149c",
-    "https://www.pnp.ru/economics/": "3f36b4f9bdd0f7332590000b5fcf09bc5886922cd92e4d60b464e751e93b4d47",
-    "https://erzrf.ru/news/": "f8931383f3f66306b92a098546629607033e592cffa9c8a92f3aa6ccda69ce8a",
-    "https://ria-stk.ru/news/vse-novosti.php": "161298867e68b2be5cdc0a5a9755b5a0a643f1363d75efe9b30fe1385022f3a1",
-    "http://government.ru/news/": "2b386b2c41070500e06630582b45364ef402028ca1549d09983e62aa5dab0192",
-    "https://stroygaz.ru/news/": "bd3b8bf2169691ab2f7f93c0b6db917be4c4de079299809bf49bedbb67e5158d",
-    "https://realty.ria.ru/lenta/": "b027227d7c751eb65d53a7bfd9e7f600543bc57baf7badfdabf1861ba05da5c9",
-    "https://rg.ru/tema/ekonomika": "31a84b8e31aa24da220b8e0bc6471877eacf81690e5addf35f2e7a6b7cfe4c32",
-    "http://ancb.ru/publication": "7dd7745c29257edb73a58ca04488d5b9d73c895b3da51c55aabb43e351c9c4f1",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "56f45e314307d62790675ec6558ec8fe9e09423cb8c5c4f5784320bc383a18ee",
+    "https://www.metalinfo.ru/ru/news": "a9760242e0cadb586c43e30092e559330aa10a4e75c136f0952025d78ae612d1",
+    "https://www.pnp.ru/economics/": "1339f83a16cba14994512e948d92452c3527647bc3eed72151ad306e1611b3f4",
+    "https://erzrf.ru/news/": "acdf9f675d993ce7a73e0e0b135b19beb2e7bf0f9209f56adb72a88e471a895b",
+    "https://ria-stk.ru/news/vse-novosti.php": "adb0c94c65fe942e5eb8f2988e3940bfffadc06d4602c0ca3e238e7d131098ae",
+    "http://government.ru/news/": "9bab285deae596c4e942c47249b4682a89b6c2963731d90f74ab4d131b373ae3",
+    "https://stroygaz.ru/news/": "e3d8b00e4be05c7bea552c1aa5ef7aa169bcbf57c1ef237d6eba7a754e60652d",
+    "https://realty.ria.ru/lenta/": "1c23e4a12e61d70740dded43e1df888715f2e7b18dfbc3660ecc6e6eca915423",
+    "https://rg.ru/tema/ekonomika": "6300c79e53fc30dce698f31e1d6f1f36d82d3c1feda738715fe2ff111eda32ba",
+    "http://ancb.ru/publication": "972fc87afaf51aeebb5c931e31a7314422a3297180578aec715e2703203e1910",
     "https://notim.ru": "a16e81afcbfc53b55b0102ecf75259f752b8c13b785e51d8eb4d21f61286eba4",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -17609,6 +17639,12 @@
       "https://realty.ria.ru/20251028/zhile-2051104662.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/28/globalnoe-poteplenie-pozvolit-razvivat-turizm-na-krajnem-severe.html",
+      "https://rg.ru/2025/10/28/kapusta-s-shafranom.html",
+      "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html",
+      "https://rg.ru/2025/10/28/reg-cfo/gde-variat-krem.html",
+      "https://rg.ru/2025/10/28/v-pole-vidimosti.html",
+      "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html",
       "https://rg.ru/2025/10/28/ekspert-iz-indii-raskryl-rg-chto-zhdet-stranu-pri-snizhenii-zakupok-nefti-iz-rf.html",
       "https://rg.ru/2025/10/28/reg-cfo/shtraf-v-obektive.html",
       "https://rg.ru/2025/10/28/ekspert-shcherbachenko-rasskazal-kak-roditeliam-zashchitit-detej-ot-moshennikov.html",
@@ -17634,13 +17670,7 @@
       "https://rg.ru/2025/10/28/20-luchshih-dostoprimechatelnostej-kaliningrada-chto-posmotret-turistu.html",
       "https://rg.ru/2025/10/28/v-red-wings-obiasnili-prichiny-perenosa-rejsov-iz-vetnama.html",
       "https://rg.ru/2025/10/28/5-priborov-v-kvartire-kotorye-nezametno-voruiut-elektrichestvo.html",
-      "https://rg.ru/2025/10/28/chto-budet-s-rossijskim-fondovym-rynkom-posle-padeniia-27-oktiabria.html",
       "https://rg.ru/2025/10/28/bankam-stanet-proshche-uvolniat-nedobrosovestnyh-sotrudnikov.html",
-      "https://rg.ru/2025/10/28/cena-fiuchersov-na-dragmetally-padaet-na-2-4.html",
-      "https://rg.ru/2025/10/28/reg-ufo/stala-izvestna-data-otpravleniia-passazhirskogo-paroma-iz-sochi-v-trabzon.html",
-      "https://rg.ru/2025/10/28/v-cb-rasskazali-kak-uberech-dengi-ot-moshennikov-pri-oplate-onlajn-pokupok.html",
-      "https://rg.ru/2025/10/28/husnullin-nazval-procent-skorostnyh-dorog-v-rossii-malenkim.html",
-      "https://rg.ru/2025/10/28/ekspert-davlenie-ssha-uskorit-razrabotku-indiej-svoih-cifrovyh-reshenij-dlia-tek.html",
       "https://rg.ru/2025/10/27/akciia-lechi-zhizni-blagotvoritelnogo-fonda-alyosha-vozvrashchaetsia.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html"
@@ -22989,7 +23019,13 @@
     "9b287ec2a0eb722d58909b9cde04230f0e615ee2ac2240a20bc066ad018e1caf": "2025-10-28T21:25:00+03:00",
     "4c886f781672668b802324e8b541af1babc5a6ec5783d2c2b2506fe941b757d6": "2025-10-28T21:25:00+03:00",
     "750137af82174807994bc304bea6a029a3cbb817f58f6e0a60393942fba19eeb": "2025-10-28T21:25:00+03:00",
-    "3afbd2ec8719419faf3e2ae5e0e9668f23e34553e2bf3e6cc7ae24aa55535d54": "2025-10-28T21:25:00+03:00"
+    "3afbd2ec8719419faf3e2ae5e0e9668f23e34553e2bf3e6cc7ae24aa55535d54": "2025-10-28T21:25:00+03:00",
+    "36b146c73c60cb3b6bb8313a999b58605993a305af6c9dcc4df758cec151bdb7": "2025-10-28T23:34:00+03:00",
+    "817d1ce6a4233ddc2f7235aae26c45ae7c454a0fb4b924d4d3159ce138f62ecd": "2025-10-28T23:34:00+03:00",
+    "00040f73afffbb134b85d240356093cd22e6bc29750128055ff075f6a7587cf5": "2025-10-28T23:34:00+03:00",
+    "1df252f3424efdeec9d9974ac1939ee057c60d568268e5fc7afa3d79cdeafad9": "2025-10-28T23:34:00+03:00",
+    "c20fad575f4343913f8903c349a6f769f48fafb5d4f7220583a399bc0fa34d1d": "2025-10-28T23:34:00+03:00",
+    "9c30c0cbc81efc66c6f800259da1e2d83cde2461dd0411cc047a1b713c70dbf9": "2025-10-28T23:34:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -23020,9 +23056,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1761664905.266847
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdc9dbc0b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1761683623.8601608
       },
       "warmup_done": false,
       "last_success_path": null
@@ -23031,39 +23067,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "QmWLh9ap8dS88fSg",
+          "value": "ZMZyawSxyr2MkSPg",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761677087
+          "expires": 1761684865
         },
         {
           "name": "__ddg10_",
-          "value": "1761675887",
+          "value": "1761683665",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761677087
+          "expires": 1761684865
         },
         {
           "name": "__ddg9_",
-          "value": "48.211.213.33",
+          "value": "20.109.95.166",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761677087
-        },
-        {
-          "name": "__ddg1_",
-          "value": "bv6pmajV1vhTjJHMXQwE",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1793211887
+          "expires": 1761684865
         },
         {
           "name": "PHPSESSID",
-          "value": "26637b32ec95f270cfa318fb19e7d2c3",
+          "value": "01e9e8ecaf49caaf3ff9d26675e60a52",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -23090,11 +23118,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "AUPY9pYB5kFYoqTdZPNHFJQMgGwg2fo1",
+          "value": "Cgs8iSZkI1p6K2ENEU2oe3jxhcLldOsF",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761686690
+          "expires": 1761694468
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -23102,7 +23130,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1792779890
+          "expires": 1792787668
         }
       ],
       "failures": {
@@ -29691,7 +29719,13 @@
     "https://rg.ru/2025/10/28/reg-pfo/v-nizhnem-novgorode-s-1-noiabria-otmeniat-oplatu-nalichnymi-v-obshchestvennom-transporte.html": "https://rg.ru/2025/10/28/reg-pfo/v-nizhnem-novgorode-s-1-noiabria-otmeniat-oplatu-nalichnymi-v-obshchestvennom-transporte.html",
     "https://rg.ru/2025/10/28/puteshestvenniki-ne-otmenili-svoi-puteshestviia-iz-za-uragana-melissa.html": "https://rg.ru/2025/10/28/puteshestvenniki-ne-otmenili-svoi-puteshestviia-iz-za-uragana-melissa.html",
     "https://rg.ru/2025/10/28/rossiia-i-indiia-dogovorilis-o-proizvodstve-sj-100-v-indii.html": "https://rg.ru/2025/10/28/rossiia-i-indiia-dogovorilis-o-proizvodstve-sj-100-v-indii.html",
-    "https://rg.ru/2025/10/28/punkt-spora.html": "https://rg.ru/2025/10/28/punkt-spora.html"
+    "https://rg.ru/2025/10/28/punkt-spora.html": "https://rg.ru/2025/10/28/punkt-spora.html",
+    "https://rg.ru/2025/10/28/globalnoe-poteplenie-pozvolit-razvivat-turizm-na-krajnem-severe.html": "https://rg.ru/2025/10/28/globalnoe-poteplenie-pozvolit-razvivat-turizm-na-krajnem-severe.html",
+    "https://rg.ru/2025/10/28/kapusta-s-shafranom.html": "https://rg.ru/2025/10/28/kapusta-s-shafranom.html",
+    "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html": "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html",
+    "https://rg.ru/2025/10/28/reg-cfo/gde-variat-krem.html": "https://rg.ru/2025/10/28/reg-cfo/gde-variat-krem.html",
+    "https://rg.ru/2025/10/28/v-pole-vidimosti.html": "https://rg.ru/2025/10/28/v-pole-vidimosti.html",
+    "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -35263,7 +35297,13 @@
     "0b6f3e6c615e78850ee812d0e6eb64e30547a186": "https://rg.ru/2025/10/28/reg-pfo/v-nizhnem-novgorode-s-1-noiabria-otmeniat-oplatu-nalichnymi-v-obshchestvennom-transporte.html",
     "d0d10f61aac6a0412e0756677be92de0c3317f98": "https://rg.ru/2025/10/28/puteshestvenniki-ne-otmenili-svoi-puteshestviia-iz-za-uragana-melissa.html",
     "a78d19754b730a594c74a5518f49111a54b2fdb6": "https://rg.ru/2025/10/28/rossiia-i-indiia-dogovorilis-o-proizvodstve-sj-100-v-indii.html",
-    "6de0c464fdfa00a7c57957774494e80f96792d46": "https://rg.ru/2025/10/28/punkt-spora.html"
+    "6de0c464fdfa00a7c57957774494e80f96792d46": "https://rg.ru/2025/10/28/punkt-spora.html",
+    "ddff3e7cea750aca71194f7cc5c9f347ab00855b": "https://rg.ru/2025/10/28/globalnoe-poteplenie-pozvolit-razvivat-turizm-na-krajnem-severe.html",
+    "692e9b0eba3b9a7f57f38093895eb93e89725049": "https://rg.ru/2025/10/28/kapusta-s-shafranom.html",
+    "1f51169591e6ac40e4eef2e5e5469208741d7109": "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html",
+    "ba33e06dfa8d7e39c4b32db8d610a8004a4aefc1": "https://rg.ru/2025/10/28/reg-cfo/gde-variat-krem.html",
+    "80d13ecb7f4b0e3a5fc3a8cf7f02d2d93530dcda": "https://rg.ru/2025/10/28/v-pole-vidimosti.html",
+    "e3cb2508a5b995700e89f0b8c2e7f2568c235ed4": "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -42613,6 +42653,12 @@
     "https://rg.ru/2025/10/28/reg-pfo/v-nizhnem-novgorode-s-1-noiabria-otmeniat-oplatu-nalichnymi-v-obshchestvennom-transporte.html": "9b287ec2a0eb722d58909b9cde04230f0e615ee2ac2240a20bc066ad018e1caf",
     "https://rg.ru/2025/10/28/puteshestvenniki-ne-otmenili-svoi-puteshestviia-iz-za-uragana-melissa.html": "4c886f781672668b802324e8b541af1babc5a6ec5783d2c2b2506fe941b757d6",
     "https://rg.ru/2025/10/28/rossiia-i-indiia-dogovorilis-o-proizvodstve-sj-100-v-indii.html": "750137af82174807994bc304bea6a029a3cbb817f58f6e0a60393942fba19eeb",
-    "https://rg.ru/2025/10/28/punkt-spora.html": "3afbd2ec8719419faf3e2ae5e0e9668f23e34553e2bf3e6cc7ae24aa55535d54"
+    "https://rg.ru/2025/10/28/punkt-spora.html": "3afbd2ec8719419faf3e2ae5e0e9668f23e34553e2bf3e6cc7ae24aa55535d54",
+    "https://rg.ru/2025/10/28/globalnoe-poteplenie-pozvolit-razvivat-turizm-na-krajnem-severe.html": "36b146c73c60cb3b6bb8313a999b58605993a305af6c9dcc4df758cec151bdb7",
+    "https://rg.ru/2025/10/28/kapusta-s-shafranom.html": "817d1ce6a4233ddc2f7235aae26c45ae7c454a0fb4b924d4d3159ce138f62ecd",
+    "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html": "00040f73afffbb134b85d240356093cd22e6bc29750128055ff075f6a7587cf5",
+    "https://rg.ru/2025/10/28/reg-cfo/gde-variat-krem.html": "1df252f3424efdeec9d9974ac1939ee057c60d568268e5fc7afa3d79cdeafad9",
+    "https://rg.ru/2025/10/28/v-pole-vidimosti.html": "c20fad575f4343913f8903c349a6f769f48fafb5d4f7220583a399bc0fa34d1d",
+    "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": "9c30c0cbc81efc66c6f800259da1e2d83cde2461dd0411cc047a1b713c70dbf9"
   }
 }
