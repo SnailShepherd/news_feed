@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 28 Oct 2025 20:34:59 GMT"
+      "Last-Modified": "Tue, 28 Oct 2025 21:17:30 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"iydmalfvab411x\""
+      "ETag": "\"uemx35iyuw418g\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -14307,7 +14307,13 @@
     "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": {
       "ETag": "\"4ew1mgy1ms1myq\""
     },
-    "https://rg.ru/amp/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": {}
+    "https://rg.ru/amp/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": {},
+    "https://rg.ru/2025/10/29/eksperty-rasskazali-kakie-it-specialisty-vostrebovany-u-rabotodatelej.html": {
+      "ETag": "\"h8mk6sxjns1vpk\""
+    },
+    "https://rg.ru/2025/10/29/schetnaia-palata-vyiavila-neeffektivnoe-ispolzovanie-konfiskovannogo-imushchestva.html": {
+      "ETag": "\"186sw6jy8541vvm\""
+    }
   },
   "stats": {
     "cooldowns": {
@@ -17265,9 +17271,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9bc868da90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9bc80e9590>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9bc80e96d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9bc80f03e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9bc80f0b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9bc7ff1eb0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-28T20:34:45.916166+00:00",
+    "last_run": "2025-10-28T21:17:07.761104+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -17280,9 +17297,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 382.9718490000005,
-        "connect_ms": 574.4527680000004,
-        "response_ms": 957.4246170000009,
+        "dns_ms": 404.0098989999876,
+        "connect_ms": 621.7198760000144,
+        "response_ms": 1025.729775000002,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -17293,20 +17310,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdc9dabdd90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9bc7ff1eb0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 572.4771820000001,
-        "connect_ms": 51.671521999992365,
-        "response_ms": 624.1487039999924,
+        "dns_ms": 583.6917899999889,
+        "connect_ms": 206.8952920000129,
+        "response_ms": 790.5870820000018,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 131.9565109999985,
-        "connect_ms": 420.8491899999842,
-        "response_ms": 552.8057009999827,
+        "dns_ms": 525.8256019999976,
+        "connect_ms": 52.755998000009185,
+        "response_ms": 578.5816000000068,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -17315,20 +17332,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "97b955aebe59fbcac00e9c241802fe1024f6a1fc771023eca97494581de872e5",
+    "https://ardexpert.ru/article": "e445f5cf97a44cf384d5d6f7a92ef0a49550b6c3eedf62d414a0e23eb47fa647",
     "https://www.gostinfo.ru/News/List": "f2aea6fa70d114b1374d90a152c6d4d59c61439c92fa62510ea41db2cc3585fb",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "f80c74cef42205ef41b3f67d587f18db996af6e63e3390f34b1f884c1ab6f1e2",
-    "https://eec.eaeunion.org/news/": "9c2993318a761fa3a5386525ea985c61375b99b01b1cf87c865653c3d35ce9f6",
+    "https://eec.eaeunion.org/news/": "bd59cc77ec34415c64dd4c8ca742d88298a162402f80287b0de12969e20dbce6",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "56f45e314307d62790675ec6558ec8fe9e09423cb8c5c4f5784320bc383a18ee",
-    "https://www.metalinfo.ru/ru/news": "a9760242e0cadb586c43e30092e559330aa10a4e75c136f0952025d78ae612d1",
-    "https://www.pnp.ru/economics/": "1339f83a16cba14994512e948d92452c3527647bc3eed72151ad306e1611b3f4",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "a0c5d4a651512bf875632ad908328d265bc3fb1f58c28952393a5a7cbf8a0990",
+    "https://www.metalinfo.ru/ru/news": "11d4e2bc27863ae42bc57c4a44a4dd306c8568e5d543a9cca2084b80cda7149c",
+    "https://www.pnp.ru/economics/": "3acffac5f4bbf2d7a9f861eb47ee66c484570fb763cec8ad4af45086cb8b476e",
     "https://erzrf.ru/news/": "acdf9f675d993ce7a73e0e0b135b19beb2e7bf0f9209f56adb72a88e471a895b",
-    "https://ria-stk.ru/news/vse-novosti.php": "adb0c94c65fe942e5eb8f2988e3940bfffadc06d4602c0ca3e238e7d131098ae",
-    "http://government.ru/news/": "9bab285deae596c4e942c47249b4682a89b6c2963731d90f74ab4d131b373ae3",
-    "https://stroygaz.ru/news/": "e3d8b00e4be05c7bea552c1aa5ef7aa169bcbf57c1ef237d6eba7a754e60652d",
-    "https://realty.ria.ru/lenta/": "1c23e4a12e61d70740dded43e1df888715f2e7b18dfbc3660ecc6e6eca915423",
-    "https://rg.ru/tema/ekonomika": "6300c79e53fc30dce698f31e1d6f1f36d82d3c1feda738715fe2ff111eda32ba",
+    "https://ria-stk.ru/news/vse-novosti.php": "dc3a1b48ef597728b044d70bc18cc2359c810bdfe2c926dfcd333b4cde3ed607",
+    "http://government.ru/news/": "ee9ea338cff4630bcc2049f545792cd1922cf31be03a445d9635cf09d42ce051",
+    "https://stroygaz.ru/news/": "b14a2310028448fcd974d69e44b84aa25566d2fda12c200865b576d416a4c725",
+    "https://realty.ria.ru/lenta/": "fbd0cd01f12b6e035632316ecfddf84bcc7462ea6bbc01e456a3b73f56029c6a",
+    "https://rg.ru/tema/ekonomika": "3b7c7b1f3d77f5aa6e8ed7d5acd3a9595ce7ae61d0dad34d47e10de571c31f1f",
     "http://ancb.ru/publication": "972fc87afaf51aeebb5c931e31a7314422a3297180578aec715e2703203e1910",
     "https://notim.ru": "a16e81afcbfc53b55b0102ecf75259f752b8c13b785e51d8eb4d21f61286eba4",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -17639,6 +17656,8 @@
       "https://realty.ria.ru/20251028/zhile-2051104662.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/29/eksperty-rasskazali-kakie-it-specialisty-vostrebovany-u-rabotodatelej.html",
+      "https://rg.ru/2025/10/29/schetnaia-palata-vyiavila-neeffektivnoe-ispolzovanie-konfiskovannogo-imushchestva.html",
       "https://rg.ru/2025/10/28/globalnoe-poteplenie-pozvolit-razvivat-turizm-na-krajnem-severe.html",
       "https://rg.ru/2025/10/28/kapusta-s-shafranom.html",
       "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html",
@@ -17669,8 +17688,6 @@
       "https://rg.ru/2025/10/28/v-mintrude-soobshchili-chto-okolo-1-mln-samozaniatyh-poluchaiut-pensii.html",
       "https://rg.ru/2025/10/28/20-luchshih-dostoprimechatelnostej-kaliningrada-chto-posmotret-turistu.html",
       "https://rg.ru/2025/10/28/v-red-wings-obiasnili-prichiny-perenosa-rejsov-iz-vetnama.html",
-      "https://rg.ru/2025/10/28/5-priborov-v-kvartire-kotorye-nezametno-voruiut-elektrichestvo.html",
-      "https://rg.ru/2025/10/28/bankam-stanet-proshche-uvolniat-nedobrosovestnyh-sotrudnikov.html",
       "https://rg.ru/2025/10/27/akciia-lechi-zhizni-blagotvoritelnogo-fonda-alyosha-vozvrashchaetsia.html",
       "https://rg.ru/2025/10/16/holding-samson-stal-pobeditelem-premii-ski-business-awards.html",
       "https://rg.ru/2025/10/10/itogi-premii-talantlivaia-zhenshchina-v-sovremennoj-industrii-kak-zhenshchiny-nahodiat-svoj-put-v-sovremennoj-promyshlennosti.html"
@@ -23025,7 +23042,9 @@
     "00040f73afffbb134b85d240356093cd22e6bc29750128055ff075f6a7587cf5": "2025-10-28T23:34:00+03:00",
     "1df252f3424efdeec9d9974ac1939ee057c60d568268e5fc7afa3d79cdeafad9": "2025-10-28T23:34:00+03:00",
     "c20fad575f4343913f8903c349a6f769f48fafb5d4f7220583a399bc0fa34d1d": "2025-10-28T23:34:00+03:00",
-    "9c30c0cbc81efc66c6f800259da1e2d83cde2461dd0411cc047a1b713c70dbf9": "2025-10-28T23:34:00+03:00"
+    "9c30c0cbc81efc66c6f800259da1e2d83cde2461dd0411cc047a1b713c70dbf9": "2025-10-28T23:34:00+03:00",
+    "03546e031c9b6c2629c3439de348d2083157eb5b0c13118d4d8f3bf3e96a4802": "2025-10-29T00:17:00+03:00",
+    "88130bfcdfe59deb226143d86a19281ed72b8c888d42944f6d245a96c2546a45": "2025-10-29T00:17:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -23056,9 +23075,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdc9dbc0b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1761683623.8601608
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9bc80f0b00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1761686174.3055923
       },
       "warmup_done": false,
       "last_success_path": null
@@ -23067,31 +23086,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "ZMZyawSxyr2MkSPg",
+          "value": "jYsxXIFB0fAHwAdr",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761684865
+          "expires": 1761687416
         },
         {
           "name": "__ddg10_",
-          "value": "1761683665",
+          "value": "1761686216",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761684865
+          "expires": 1761687416
         },
         {
           "name": "__ddg9_",
-          "value": "20.109.95.166",
+          "value": "20.55.214.112",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761684865
+          "expires": 1761687416
+        },
+        {
+          "name": "__ddg1_",
+          "value": "7KgPwXMTwmxs30b0I9Wu",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1793222216
         },
         {
           "name": "PHPSESSID",
-          "value": "01e9e8ecaf49caaf3ff9d26675e60a52",
+          "value": "4d058e055fa41dfb97d1e76ad3ba0e43",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -23118,11 +23145,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "Cgs8iSZkI1p6K2ENEU2oe3jxhcLldOsF",
+          "value": "8RjH6BUpvQ3AHvB3hZsH7VDDJnFAExT3",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761694468
+          "expires": 1761697019
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -23130,7 +23157,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1792787668
+          "expires": 1792790219
         }
       ],
       "failures": {
@@ -29725,7 +29752,9 @@
     "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html": "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html",
     "https://rg.ru/2025/10/28/reg-cfo/gde-variat-krem.html": "https://rg.ru/2025/10/28/reg-cfo/gde-variat-krem.html",
     "https://rg.ru/2025/10/28/v-pole-vidimosti.html": "https://rg.ru/2025/10/28/v-pole-vidimosti.html",
-    "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html"
+    "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html",
+    "https://rg.ru/2025/10/29/eksperty-rasskazali-kakie-it-specialisty-vostrebovany-u-rabotodatelej.html": "https://rg.ru/2025/10/29/eksperty-rasskazali-kakie-it-specialisty-vostrebovany-u-rabotodatelej.html",
+    "https://rg.ru/2025/10/29/schetnaia-palata-vyiavila-neeffektivnoe-ispolzovanie-konfiskovannogo-imushchestva.html": "https://rg.ru/2025/10/29/schetnaia-palata-vyiavila-neeffektivnoe-ispolzovanie-konfiskovannogo-imushchestva.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -35303,7 +35332,9 @@
     "1f51169591e6ac40e4eef2e5e5469208741d7109": "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html",
     "ba33e06dfa8d7e39c4b32db8d610a8004a4aefc1": "https://rg.ru/2025/10/28/reg-cfo/gde-variat-krem.html",
     "80d13ecb7f4b0e3a5fc3a8cf7f02d2d93530dcda": "https://rg.ru/2025/10/28/v-pole-vidimosti.html",
-    "e3cb2508a5b995700e89f0b8c2e7f2568c235ed4": "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html"
+    "e3cb2508a5b995700e89f0b8c2e7f2568c235ed4": "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html",
+    "c2d3639b17ff2a2fd02cf37066ed54bdfa0ed2aa": "https://rg.ru/2025/10/29/eksperty-rasskazali-kakie-it-specialisty-vostrebovany-u-rabotodatelej.html",
+    "ac4030e255cad3d9cfed467f6ff5d88e913f669b": "https://rg.ru/2025/10/29/schetnaia-palata-vyiavila-neeffektivnoe-ispolzovanie-konfiskovannogo-imushchestva.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -42659,6 +42690,8 @@
     "https://rg.ru/2025/10/28/reg-cfo/bez-ocheredej.html": "00040f73afffbb134b85d240356093cd22e6bc29750128055ff075f6a7587cf5",
     "https://rg.ru/2025/10/28/reg-cfo/gde-variat-krem.html": "1df252f3424efdeec9d9974ac1939ee057c60d568268e5fc7afa3d79cdeafad9",
     "https://rg.ru/2025/10/28/v-pole-vidimosti.html": "c20fad575f4343913f8903c349a6f769f48fafb5d4f7220583a399bc0fa34d1d",
-    "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": "9c30c0cbc81efc66c6f800259da1e2d83cde2461dd0411cc047a1b713c70dbf9"
+    "https://rg.ru/2025/10/28/priostanovlena-rabota-aeroporta-v-volgograde.html": "9c30c0cbc81efc66c6f800259da1e2d83cde2461dd0411cc047a1b713c70dbf9",
+    "https://rg.ru/2025/10/29/eksperty-rasskazali-kakie-it-specialisty-vostrebovany-u-rabotodatelej.html": "03546e031c9b6c2629c3439de348d2083157eb5b0c13118d4d8f3bf3e96a4802",
+    "https://rg.ru/2025/10/29/schetnaia-palata-vyiavila-neeffektivnoe-ispolzovanie-konfiskovannogo-imushchestva.html": "88130bfcdfe59deb226143d86a19281ed72b8c888d42944f6d245a96c2546a45"
   }
 }
