@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 29 Oct 2025 18:26:42 GMT"
+      "Last-Modified": "Wed, 29 Oct 2025 21:18:38 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1ba3c-F9BHuEWpfHOI6G9wqrzgjXlI53w\""
+      "ETag": "W/\"1ba5b-7QCKW5qI2Cg2FY1BlVt77poMkbo\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"nujwxqtqo1408c\""
+      "ETag": "\"7zcs22vxq3yqj\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -14762,6 +14762,22 @@
     },
     "https://rg.ru/2025/10/29/vladelcev-nezhilyh-pomeshchenij-osvobodiat-ot-vznosov-na-kapremont-pri-renovacii.html": {
       "ETag": "\"q32dnkmthd1rcv\""
+    },
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245782&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245781&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245780&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245779&all_news=Y": {},
+    "https://rg.ru/2025/10/30/reg-dfo/sp-sredstva-na-povyshenie-kachestva-dorog-v-regionah-ispolzuiutsia-neekonomno.html": {
+      "ETag": "\"4zat31f3al1ugt\""
+    },
+    "https://rg.ru/2025/10/29/uvb-76-peredala-novoe-soobshchenie-posle-zaiavleniia-putina-o-posejdone.html": {
+      "ETag": "\"jf58cjl8y01q2c\""
+    },
+    "https://rg.ru/2025/10/29/v-mincifry-predlagaiut-rasshirit-vozmozhnosti-ispolzovaniia-cifrovogo-profilia.html": {
+      "ETag": "\"ic8z0zmoxp1pij\""
+    },
+    "https://rg.ru/2025/10/29/pochta-soiuza.html": {
+      "ETag": "\"db6ua9e96r1wy4\""
     }
   },
   "stats": {
@@ -17814,9 +17830,25 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "ФАУ ФЦС",
+        "url": "https://faufcc.ru/press-tsentr/novosti",
+        "error": "HTTPSConnectionPool(host='api.faufcc.ru', port=443): Max retries exceeded with url: /api/publications?type=news&page=1&limit=50 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f41ef92d590>, 'Connection to api.faufcc.ru timed out. (connect timeout=5.0)'))"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f41f00ab4d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f41ef92da90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f41ef92dd10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f41ef93cc30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f41ef93cd60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f41ef839b50>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-29T18:27:14.496248+00:00",
+    "last_run": "2025-10-29T21:18:36.067349+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -17829,33 +17861,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 447.85533800001076,
-        "connect_ms": 292.8368359999922,
-        "response_ms": 740.692174000003,
+        "dns_ms": 882.4617849999754,
+        "connect_ms": 721.6690360000371,
+        "response_ms": 1604.1308210000125,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 181.56173700000977,
-        "connect_ms": 116.58429599998499,
-        "response_ms": 298.14603299999476,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f41ef839b50>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 5439.304448000002,
-        "connect_ms": 0.0,
-        "response_ms": 949.2908990000046,
+        "dns_ms": 1017.1744819999731,
+        "connect_ms": 4346.260578000056,
+        "response_ms": 5363.435060000029,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 356.74393499999724,
-        "connect_ms": 283.8922690000061,
-        "response_ms": 640.6362040000033,
+        "dns_ms": 0.5702979999568925,
+        "connect_ms": 449.26996700002064,
+        "response_ms": 449.84026499997753,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -17864,21 +17896,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "5d2b0e5f5f79aeab6426e60651e74efed33188bf4a5fd08b5d5451f7320bf3f6",
+    "https://ardexpert.ru/article": "f502133e916c80caa2838588e59e8fa3a29c787f96c43a80396d087bfefae001",
     "https://www.gostinfo.ru/News/List": "2854f06f0de238b407205ed4ee941c0e4ba7b37ebc39af390e3f2ae50c7ef7f2",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "f93c069a5859554984d23a6c0ff437553abba6a799e29a07c7137de373b84536",
-    "https://eec.eaeunion.org/news/": "212c2e8ec1b979e4153c05c4b1e67ae827f653865d6331d59f060846be2f9b27",
+    "https://eec.eaeunion.org/news/": "7d613e5bf3f9cc97704d370b4bb8ac9e12c1838fc45ea76c430f6e95c6b4fd9a",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "88e428c74aff52fc8464088f2cd275d6d2086f3898ed9da60a7dff63881076e3",
-    "https://www.metalinfo.ru/ru/news": "c4a6dd9e521568f6a2fa97ba792c2cdc1ee87fcfda8ee2f0c6c93115d5376c9c",
-    "https://www.pnp.ru/economics/": "58506db0d16b1fd4de3500a0b78b20b24bc0e05fa9d2078ddbf90737ffb69251",
-    "https://erzrf.ru/news/": "8bb88047cfc470059bd1c366b4b6f3c87550dcab9805672cbe3ece444ca39fcd",
-    "https://ria-stk.ru/news/vse-novosti.php": "d441d7486a676e11da03d0ec3d1ccf6c8f1aa2ea113fff3e375698207d21bee4",
-    "http://government.ru/news/": "41a7c7af0a6082cf786b014e9dc8db478f8f4427fe6b14ffb07cce22b7020942",
-    "https://stroygaz.ru/news/": "bca8d0f2ed078d270e5368a934b5c2bbe252640e0d58d788d12e836cbcdf8125",
-    "https://realty.ria.ru/lenta/": "76da4f2199ba129a136e1ce7e3f70d151ebe93931d3a7a0cb3b9f6f7aec4949b",
-    "https://rg.ru/tema/ekonomika": "3d876e9a8bd7d6f451e7b3f7011d154176cfb3e11520189a15b20cf3b0028f3c",
-    "http://ancb.ru/publication": "a57bfe8da25b6fc276afdeba48b8bb826ab459b6bdb347a8d2abf1aa8dfbb648",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "08ca835b11fa4af8e7e02881df57d1c289d11c38891416fa6ea519b721ca65f6",
+    "https://www.metalinfo.ru/ru/news": "68315d10171689f44a6fdb7b1e9c3e7b449a33e41851bc1c616db6da18d534e6",
+    "https://www.pnp.ru/economics/": "1979c7ebf4e5e13386748dc422fa1d131de02370ac4805e567cad0b8ffdb6f3f",
+    "https://erzrf.ru/news/": "7a560cfbd1213e55b59511de21151df2be0ef7686781696e51a961eeb729a365",
+    "https://ria-stk.ru/news/vse-novosti.php": "ea5d176592d7e7b6c8759e861c171c2de08eb3739ee974afd0afbace17d5caf8",
+    "http://government.ru/news/": "6f2bcc0a27e7a75184a5d5e85783e5cfcd639a379d0319883d5320ed69c2cf23",
+    "https://stroygaz.ru/news/": "e9dbf0b1a3511724e93263c6d79cb4a4f8295474ebae49d769f25d007d7d912a",
+    "https://realty.ria.ru/lenta/": "03f91e277d336cdf382666ed27ce1f9c2d02b0a58ef474cf790b462ad732c1f0",
+    "https://rg.ru/tema/ekonomika": "16c247359b636eddab87b2da68e86cdea327dbd9892ba7093c1f3e8b37d88634",
+    "http://ancb.ru/publication": "4f2d329b7211c0784d55af256dcc6177851e1915302d7f02156d89f8f5efcfb1",
     "https://notim.ru": "a16e81afcbfc53b55b0102ecf75259f752b8c13b785e51d8eb4d21f61286eba4",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -18101,6 +18133,10 @@
       "https://erzrf.ru/news/news-archive"
     ],
     "РИА СТК": [
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=245782&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=245781&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=245780&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=245779&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245778&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245777&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245776&all_news=Y",
@@ -18116,11 +18152,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245766&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245765&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245764&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=245763&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=245762&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=245761&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=245760&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=245759&all_news=Y"
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=245763&all_news=Y"
     ],
     "Правительство РФ": [
       "http://government.ru/news/56696/",
@@ -18189,6 +18221,10 @@
       "https://realty.ria.ru/20251028/volatilnost-2051203248.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/10/30/reg-dfo/sp-sredstva-na-povyshenie-kachestva-dorog-v-regionah-ispolzuiutsia-neekonomno.html",
+      "https://rg.ru/2025/10/29/uvb-76-peredala-novoe-soobshchenie-posle-zaiavleniia-putina-o-posejdone.html",
+      "https://rg.ru/2025/10/29/v-mincifry-predlagaiut-rasshirit-vozmozhnosti-ispolzovaniia-cifrovogo-profilia.html",
+      "https://rg.ru/2025/10/29/pochta-soiuza.html",
       "https://rg.ru/2025/10/29/ustanovleny-shtrafy-za-holodnye-batarei.html",
       "https://rg.ru/2025/10/29/iurist-haminskij-kompanii-mogut-trebovat-udaleniia-iz-seti-negativnyh-otzyvov.html",
       "https://rg.ru/2025/10/29/andrej-pudov-80-procentov-samozaniatyh-gotovy-platit-vznosy-radi-bolnichnogo.html",
@@ -18216,12 +18252,8 @@
       "https://rg.ru/2025/10/29/reg-ufo/na-kubani-obiavili-itogi-zhatvy-kraj-sobral-113-milliona-tonn-zerna.html",
       "https://rg.ru/2025/10/29/reg-skfo/na-turisticheskom-poezde-zimniaia-skazka-teper-mozhno-uehat-iz-krasnodara.html",
       "https://rg.ru/2025/10/29/nvidia-stala-pervoj-kompaniej-s-rynochnoj-stoimostiu-51-trln-dollarov.html",
-      "https://rg.ru/2025/10/29/vladelcev-nezhilyh-pomeshchenij-osvobodiat-ot-vznosov-na-kapremont-pri-renovacii.html",
       "https://rg.ru/2025/10/29/kitaj-zapustil-sobstvennuiu-alternativu-swift.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
-      "https://rg.ru/2025/10/29/v-moskve-projdet-krupnejshee-v-rossii-meropriiatie-mirovoj-industrii-mice.html",
-      "https://rg.ru/2025/10/29/reg-ufo/krasnodarcy-rasskazali-kak-zhivut-bez-mobilnogo-interneta.html",
-      "https://rg.ru/2025/10/29/chem-interesen-turistu-arzamas-dostoprimechatelnosti-muzei-i-marshruty-vyhodnogo-dnia.html",
       "https://rg.ru/2025/10/29/v-krymu-proshla-nauchnaia-nedelia-zdorovogo-dolgoletiia-i-personalizirovannoj-mediciny.html",
       "https://rg.ru/2025/10/27/akciia-lechi-zhizni-blagotvoritelnogo-fonda-alyosha-vozvrashchaetsia.html"
     ],
@@ -23773,7 +23805,14 @@
     "a02cb5a4c91d9113a4865dc9dede8a25a7a5fa2b6c1b13ba21695cddedc3f111": "2025-10-29T21:27:00+03:00",
     "d503ccd4efad869fccd63688951d8b6e81f015074c46b249e90a7c1602f2bb18": "2025-10-29T21:27:00+03:00",
     "2e3ff190f19c332f669ef270424bdd8c04be443873d2891308f1e6f728e02ddd": "2025-10-29T21:27:00+03:00",
-    "20ccb9141ddaf3669d9bb0211b23645c805638c063c338ebc0b855694fd0e3f0": "2025-10-29T21:27:00+03:00"
+    "20ccb9141ddaf3669d9bb0211b23645c805638c063c338ebc0b855694fd0e3f0": "2025-10-29T21:27:00+03:00",
+    "dc43db9760fb9147c631fd1744e78006f3c0902c38817a1bfb4aae5a40fb30d4": "2025-10-30T00:18:00+03:00",
+    "9378c769ed4606fbc52f4b2e9750dd48ab103aa9788e10909a80b7e870a55c86": "2025-10-30T00:18:00+03:00",
+    "89aecdc203ab7dea510d53e719937a72ae09e5e4583fc905d67240514559523d": "2025-10-30T00:18:00+03:00",
+    "e9dc921b4a50b1b36a0afe1c29519eff0adc4cad44dccb8d8a6c19355a65273e": "2025-10-30T00:18:00+03:00",
+    "557146402fe4c529e102fab6e6e440b19bfbef16e70dddcd58c71d1838f4ac3a": "2025-10-30T00:18:00+03:00",
+    "fe530b84aad5d34646a88079da9caa1ae587035fb6e6510360d0365d6ff2e6a9": "2025-10-30T00:18:00+03:00",
+    "2a30c4aed5cbc439360c34614a7afe3aad790bce06c22bcd21c8ef1d8a5a0ebc": "2025-10-30T00:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -23804,9 +23843,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1761751189.7802951
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f41ef93cd60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1761772635.384796
       },
       "warmup_done": false,
       "last_success_path": null
@@ -23815,31 +23854,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "VqfYQdNPNvCSBgif",
+          "value": "OhVsQOFRA31T06S9",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761763568
+          "expires": 1761773884
         },
         {
           "name": "__ddg10_",
-          "value": "1761762368",
+          "value": "1761772684",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761763568
+          "expires": 1761773884
         },
         {
           "name": "__ddg9_",
-          "value": "64.236.153.148",
+          "value": "172.182.195.84",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761763568
+          "expires": 1761773884
+        },
+        {
+          "name": "__ddg1_",
+          "value": "oTLpdIUWfErkDfnVrbJK",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1793308684
         },
         {
           "name": "PHPSESSID",
-          "value": "090d45a1bec367a675c6e9a39fdcb73f",
+          "value": "cb90621d3671db1645d385cb085315d8",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -23866,11 +23913,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "25qLoBfEWpZB6GLynTqFnO5hez9WMWYk",
+          "value": "TPmCczzUX0fw33uxg0mOl8Cpcu2ucQa8",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761773172
+          "expires": 1761783490
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -23878,7 +23925,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1792866372
+          "expires": 1792876690
         }
       ],
       "failures": {
@@ -30718,7 +30765,15 @@
     "https://rg.ru/2025/10/29/reg-ufo/na-kubani-obiavili-itogi-zhatvy-kraj-sobral-113-milliona-tonn-zerna.html": "https://rg.ru/2025/10/29/reg-ufo/na-kubani-obiavili-itogi-zhatvy-kraj-sobral-113-milliona-tonn-zerna.html",
     "https://rg.ru/2025/10/29/reg-skfo/na-turisticheskom-poezde-zimniaia-skazka-teper-mozhno-uehat-iz-krasnodara.html": "https://rg.ru/2025/10/29/reg-skfo/na-turisticheskom-poezde-zimniaia-skazka-teper-mozhno-uehat-iz-krasnodara.html",
     "https://rg.ru/2025/10/29/nvidia-stala-pervoj-kompaniej-s-rynochnoj-stoimostiu-51-trln-dollarov.html": "https://rg.ru/2025/10/29/nvidia-stala-pervoj-kompaniej-s-rynochnoj-stoimostiu-51-trln-dollarov.html",
-    "https://rg.ru/2025/10/29/vladelcev-nezhilyh-pomeshchenij-osvobodiat-ot-vznosov-na-kapremont-pri-renovacii.html": "https://rg.ru/2025/10/29/vladelcev-nezhilyh-pomeshchenij-osvobodiat-ot-vznosov-na-kapremont-pri-renovacii.html"
+    "https://rg.ru/2025/10/29/vladelcev-nezhilyh-pomeshchenij-osvobodiat-ot-vznosov-na-kapremont-pri-renovacii.html": "https://rg.ru/2025/10/29/vladelcev-nezhilyh-pomeshchenij-osvobodiat-ot-vznosov-na-kapremont-pri-renovacii.html",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245782&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=245782&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245781&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=245781&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245780&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=245780&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245779&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=245779&all_news=Y",
+    "https://rg.ru/2025/10/30/reg-dfo/sp-sredstva-na-povyshenie-kachestva-dorog-v-regionah-ispolzuiutsia-neekonomno.html": "https://rg.ru/2025/10/30/reg-dfo/sp-sredstva-na-povyshenie-kachestva-dorog-v-regionah-ispolzuiutsia-neekonomno.html",
+    "https://rg.ru/2025/10/29/uvb-76-peredala-novoe-soobshchenie-posle-zaiavleniia-putina-o-posejdone.html": "https://rg.ru/2025/10/29/uvb-76-peredala-novoe-soobshchenie-posle-zaiavleniia-putina-o-posejdone.html",
+    "https://rg.ru/2025/10/29/v-mincifry-predlagaiut-rasshirit-vozmozhnosti-ispolzovaniia-cifrovogo-profilia.html": "https://rg.ru/2025/10/29/v-mincifry-predlagaiut-rasshirit-vozmozhnosti-ispolzovaniia-cifrovogo-profilia.html",
+    "https://rg.ru/2025/10/29/pochta-soiuza.html": "https://rg.ru/2025/09/29/grigorenko-eksport-rossijskih-it-reshenij-v-respubliku-belarus-vyros-na-23.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -36495,7 +36550,14 @@
     "821654e212e50ddc6ce796de8f51a34a4eebc2c8": "https://rg.ru/2025/10/29/reg-ufo/na-kubani-obiavili-itogi-zhatvy-kraj-sobral-113-milliona-tonn-zerna.html",
     "56704171dff22bf8d2440786c93a5f7dfc0653b5": "https://rg.ru/2025/10/29/reg-skfo/na-turisticheskom-poezde-zimniaia-skazka-teper-mozhno-uehat-iz-krasnodara.html",
     "8b2e1a2c10dba14cb3adc4a69bbec53150caa6cc": "https://rg.ru/2025/10/29/nvidia-stala-pervoj-kompaniej-s-rynochnoj-stoimostiu-51-trln-dollarov.html",
-    "978f6a0de16636360f8437132a1ee1acf2fc7a80": "https://rg.ru/2025/10/29/vladelcev-nezhilyh-pomeshchenij-osvobodiat-ot-vznosov-na-kapremont-pri-renovacii.html"
+    "978f6a0de16636360f8437132a1ee1acf2fc7a80": "https://rg.ru/2025/10/29/vladelcev-nezhilyh-pomeshchenij-osvobodiat-ot-vznosov-na-kapremont-pri-renovacii.html",
+    "777623d108587ecf3c2281120963b184d290e821": "https://ria-stk.ru/news/index.php?ELEMENT_ID=245782&all_news=Y",
+    "1cdd1d5d7a70088e5c7361ae3914b7665137e0d4": "https://ria-stk.ru/news/index.php?ELEMENT_ID=245781&all_news=Y",
+    "35dd816d57a4dff5b2c65d8f6d2c0591e88c8e04": "https://ria-stk.ru/news/index.php?ELEMENT_ID=245780&all_news=Y",
+    "39331dd7647b0fbd96c919a93b743cc63bab49fd": "https://ria-stk.ru/news/index.php?ELEMENT_ID=245779&all_news=Y",
+    "8341c7cfd6bb6fad05ab571cf2c2de1c0b3f629f": "https://rg.ru/2025/10/30/reg-dfo/sp-sredstva-na-povyshenie-kachestva-dorog-v-regionah-ispolzuiutsia-neekonomno.html",
+    "1cfbf9c7b5bf1081f97c93bb6e1b93ad200c7093": "https://rg.ru/2025/10/29/uvb-76-peredala-novoe-soobshchenie-posle-zaiavleniia-putina-o-posejdone.html",
+    "b334b552f3334d652ac2528e78420dcb8cd36f8f": "https://rg.ru/2025/10/29/v-mincifry-predlagaiut-rasshirit-vozmozhnosti-ispolzovaniia-cifrovogo-profilia.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -44120,6 +44182,14 @@
     "https://rg.ru/2025/10/29/reg-ufo/na-kubani-obiavili-itogi-zhatvy-kraj-sobral-113-milliona-tonn-zerna.html": "a02cb5a4c91d9113a4865dc9dede8a25a7a5fa2b6c1b13ba21695cddedc3f111",
     "https://rg.ru/2025/10/29/reg-skfo/na-turisticheskom-poezde-zimniaia-skazka-teper-mozhno-uehat-iz-krasnodara.html": "d503ccd4efad869fccd63688951d8b6e81f015074c46b249e90a7c1602f2bb18",
     "https://rg.ru/2025/10/29/nvidia-stala-pervoj-kompaniej-s-rynochnoj-stoimostiu-51-trln-dollarov.html": "2e3ff190f19c332f669ef270424bdd8c04be443873d2891308f1e6f728e02ddd",
-    "https://rg.ru/2025/10/29/vladelcev-nezhilyh-pomeshchenij-osvobodiat-ot-vznosov-na-kapremont-pri-renovacii.html": "20ccb9141ddaf3669d9bb0211b23645c805638c063c338ebc0b855694fd0e3f0"
+    "https://rg.ru/2025/10/29/vladelcev-nezhilyh-pomeshchenij-osvobodiat-ot-vznosov-na-kapremont-pri-renovacii.html": "20ccb9141ddaf3669d9bb0211b23645c805638c063c338ebc0b855694fd0e3f0",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245782&all_news=Y": "dc43db9760fb9147c631fd1744e78006f3c0902c38817a1bfb4aae5a40fb30d4",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245781&all_news=Y": "9378c769ed4606fbc52f4b2e9750dd48ab103aa9788e10909a80b7e870a55c86",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245780&all_news=Y": "89aecdc203ab7dea510d53e719937a72ae09e5e4583fc905d67240514559523d",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=245779&all_news=Y": "e9dc921b4a50b1b36a0afe1c29519eff0adc4cad44dccb8d8a6c19355a65273e",
+    "https://rg.ru/2025/10/30/reg-dfo/sp-sredstva-na-povyshenie-kachestva-dorog-v-regionah-ispolzuiutsia-neekonomno.html": "557146402fe4c529e102fab6e6e440b19bfbef16e70dddcd58c71d1838f4ac3a",
+    "https://rg.ru/2025/10/29/uvb-76-peredala-novoe-soobshchenie-posle-zaiavleniia-putina-o-posejdone.html": "fe530b84aad5d34646a88079da9caa1ae587035fb6e6510360d0365d6ff2e6a9",
+    "https://rg.ru/2025/10/29/v-mincifry-predlagaiut-rasshirit-vozmozhnosti-ispolzovaniia-cifrovogo-profilia.html": "2a30c4aed5cbc439360c34614a7afe3aad790bce06c22bcd21c8ef1d8a5a0ebc",
+    "https://rg.ru/2025/10/29/pochta-soiuza.html": "27a6c790716a02beafa826026a4d59b7cbbaa527ed588250ed9662c286a48566"
   }
 }
