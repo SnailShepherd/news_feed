@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 30 Oct 2025 21:18:25 GMT"
+      "Last-Modified": "Fri, 31 Oct 2025 01:14:30 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1bce9-rYSciTfuEYASkKiI/CqnZIvJ264\""
+      "ETag": "W/\"1bc80-vDy9i3FJdn7ccNuQ7tgyPpo8ml8\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"164lbmu9f5t48dx\""
+      "ETag": "\"acigimwpxo48id\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -15273,6 +15273,12 @@
     },
     "https://rg.ru/2025/10/30/reg-ufo/obmanuli-oblaka.html": {
       "ETag": "\"5f5og3irw41sr7\""
+    },
+    "http://ancb.ru/publication/read/20384": {},
+    "http://ancb.ru/publication/read/20383": {},
+    "http://ancb.ru/publication/read/20377": {},
+    "https://realty.ria.ru/20251031/bronirovanie-2051767770.html": {
+      "Last-Modified": "Fri, 31 Oct 2025 00:00:04 GMT"
     }
   },
   "stats": {
@@ -18479,9 +18485,19 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "ФАУ ФЦС",
+        "url": "https://faufcc.ru/press-tsentr/novosti",
+        "error": "HTTPSConnectionPool(host='api.faufcc.ru', port=443): Max retries exceeded with url: /api/publications?type=news&page=1&limit=50 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f9c74359590>, 'Connection to api.faufcc.ru timed out. (connect timeout=5.0)'))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-10-30T21:18:28.346283+00:00",
+    "last_run": "2025-10-31T01:14:06.543687+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -18494,33 +18510,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 621.2219539999921,
-        "connect_ms": 375.233448000003,
-        "response_ms": 996.4554019999952,
+        "dns_ms": 428.46585399999526,
+        "connect_ms": 171.6162479999923,
+        "response_ms": 600.0821019999876,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f24dbe71eb0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 165.56955400000106,
+        "connect_ms": 311.4197099999956,
+        "response_ms": 476.98926399999664,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 5019.012899999979,
+        "dns_ms": 4398.762688999995,
         "connect_ms": 0.0,
-        "response_ms": 4201.969726000016,
+        "response_ms": 798.0896189999953,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.6047279999847888,
-        "connect_ms": 367.0850000000314,
-        "response_ms": 367.6897280000162,
+        "dns_ms": 249.05808100001536,
+        "connect_ms": 377.7258579999909,
+        "response_ms": 626.7839390000063,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -18529,21 +18545,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "7f7179a0cdb663aaeddb54a6a16e042908950e7d0edef0b4085548eaaf3504dd",
+    "https://ardexpert.ru/article": "1641d3f5aa678d59e1a984073b09a523f22980881a2f5abd45533c10cfb64821",
     "https://www.gostinfo.ru/News/List": "2854f06f0de238b407205ed4ee941c0e4ba7b37ebc39af390e3f2ae50c7ef7f2",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "f93c069a5859554984d23a6c0ff437553abba6a799e29a07c7137de373b84536",
-    "https://eec.eaeunion.org/news/": "90b59ea1f97ef34f25b9a52b3547f85ffe31580fbc15c4df2e6f8c20aaf4d3e3",
+    "https://eec.eaeunion.org/news/": "2cd50f4e414364f731669bd625caddaae02681a893c6c36fd40c70db5f025059",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "b36b18e89fc074ced3c92d8acd775a8a887f338f8c41a0707484068df23cb418",
-    "https://www.metalinfo.ru/ru/news": "cb648c3c29233aff988428bba910e377a98e86e4a1100414744cf94051ebf24f",
-    "https://www.pnp.ru/economics/": "54de9437e23d760f15ed68463e68328718e0ebcf63915e31d96480aa0638968f",
-    "https://erzrf.ru/news/": "e16171cab4e4ae967ddd3821498f2f77fa8a74df0873a1eeaec5dd22ebe0eca6",
-    "https://ria-stk.ru/news/vse-novosti.php": "ae18a4fef3e599090a4f2ec8dd5145f6331d2d715d300e3dc3f4068fffb8c487",
-    "http://government.ru/news/": "dc6d1e5c8f821697743ce56235bd7ecbd20797fd7c9979a483011f12746c576b",
-    "https://stroygaz.ru/news/": "ab54dcb34a7bb4b4dbc15edb349ca51d642dc09206930d0a8517631097781696",
-    "https://realty.ria.ru/lenta/": "7ed0bd020c7a739ced2895506641781cdd90ee8e9e89e72b11d9269d04071611",
-    "https://rg.ru/tema/ekonomika": "f2a6f8e6587c8b52c784d9c05da4f77d6da2a3e117d9ffe3d486caed4e5612f0",
-    "http://ancb.ru/publication": "600e40247e989dd5b66814251ea0cc5df14f3e2c379aeffdf042277e106816d5",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "0c73b3b1dd88a09a79238fee4232e515a5264b647b742ba1a633a24f67bbba78",
+    "https://www.metalinfo.ru/ru/news": "165c9300c78dd8d270b1d35b29dc3a5cb4a79726c1d3036dc97f5e34d52a8377",
+    "https://www.pnp.ru/economics/": "e2c450490931410e3c741404d842fd8ff4bf936d269cb61cfaaea49c20f37697",
+    "https://erzrf.ru/news/": "06cb557e9b248b79bb87f46bd876566f275f82526342ec84315fe11a960e5089",
+    "https://ria-stk.ru/news/vse-novosti.php": "d046b327216152aa1e854635772e846fb73c9b0fb498b02524b5636f08d916b1",
+    "http://government.ru/news/": "079a6e318c14afe434a3cff06722986d91fb5b13cbb679a00013c64c1206cc96",
+    "https://stroygaz.ru/news/": "38515b8aee4366663416f118e87040f977c242585d14b70ae46c105a4d88397b",
+    "https://realty.ria.ru/lenta/": "aae3fc47d36a0df2570f87601c3a9ebbc57ef714ee67fd3c17fca2161d75e786",
+    "https://rg.ru/tema/ekonomika": "04d27240aa2f88ae81e7435a2c077eeae646fa20dce6d134502358e7db75a90f",
+    "http://ancb.ru/publication": "f8826b0676847f58c0bf1ff4b1405c6016cdd1dc387a7fcdd6d6ed3e3d185881",
     "https://notim.ru": "a16e81afcbfc53b55b0102ecf75259f752b8c13b785e51d8eb4d21f61286eba4",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -18831,6 +18847,7 @@
       "https://stroygaz.ru/news/info-partners-news/na-forume-sklady-rossii-itogi-goda-rasskazhut-vsyu-pravdu-pro-light-industrial-/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251031/bronirovanie-2051767770.html",
       "https://realty.ria.ru/20251031/sdelki-2051795430.html",
       "https://realty.ria.ru/20251030/kuntsevo-2051901252.html",
       "https://realty.ria.ru/20251030/peterburg-2051900457.html",
@@ -18849,8 +18866,7 @@
       "https://realty.ria.ru/20251030/zhile-2051796848.html",
       "https://realty.ria.ru/20251030/bank-2051789583.html",
       "https://realty.ria.ru/20251030/gosduma-2051781377.html",
-      "https://realty.ria.ru/20251030/moskva-2051781053.html",
-      "https://realty.ria.ru/20251030/gosduma-2051776578.html"
+      "https://realty.ria.ru/20251030/moskva-2051781053.html"
     ],
     "Российская газета: Экономика": [
       "https://rg.ru/2025/10/31/noiabr-vstupaet-v-silu.html",
@@ -18890,6 +18906,9 @@
       "https://rg.ru/2025/10/27/akciia-lechi-zhizni-blagotvoritelnogo-fonda-alyosha-vozvrashchaetsia.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20384",
+      "http://ancb.ru/publication/read/20383",
+      "http://ancb.ru/publication/read/20377",
       "http://ancb.ru/publication/read/20375",
       "http://ancb.ru/publication/read/20373",
       "http://ancb.ru/publication/read/20372",
@@ -18921,10 +18940,7 @@
       "http://ancb.ru/publication/read/20263",
       "http://ancb.ru/publication/read/20261",
       "http://ancb.ru/publication/read/20258",
-      "http://ancb.ru/publication/read/20246",
-      "http://ancb.ru/publication/read/20245",
-      "http://ancb.ru/publication/read/20237",
-      "http://ancb.ru/publication/read/20236"
+      "http://ancb.ru/publication/read/20246"
     ]
   },
   "first_seen": {
@@ -24670,7 +24686,11 @@
     "a80059005042d3003bec8d6efd9b056508b21c9d4bb2727a4bf3d87a3799f298": "2025-10-31T00:18:00+03:00",
     "119f65d9e7f635c6a4d31f5b99f04a3f7de0d8cd6a4740b6e735ba3d46045b6a": "2025-10-31T00:18:00+03:00",
     "cab06f1b070f8e37c7c1d77cc64e6e39d773a9a04854302e13c60ac512b33544": "2025-10-31T00:18:00+03:00",
-    "0a8c6c742f817d8d6f9cc2cccd421df65caaf27b43098fc629d7020a5f691027": "2025-10-31T00:18:00+03:00"
+    "0a8c6c742f817d8d6f9cc2cccd421df65caaf27b43098fc629d7020a5f691027": "2025-10-31T00:18:00+03:00",
+    "ba74bb08559306e77fa6d254d38b0d685d9a690bf8c0d39d9384e686d8ece82b": "2025-10-31T04:13:00+03:00",
+    "91e8ac06159d5faa12eb6efe7d0b56f23e884bbfb31821559326ee4133065b59": "2025-10-31T04:13:00+03:00",
+    "228368565eff3073e6d4c6e74ccc1fe5c09c7be7cdf3c8fe79f7ab51fc742cfc": "2025-10-31T04:13:00+03:00",
+    "ac2ed1af854d28fa5c8e26bfb435f82582b4de85192f2dbcaf2fa01d2a2569ef": "2025-10-31T04:14:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -24701,8 +24721,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f24dbf74d60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 25,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1761859013.2625363
       },
       "warmup_done": false,
@@ -24712,31 +24732,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "3tyTZNPIG3X8psYF",
+          "value": "2BjkipHsdrXim519",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761860271
+          "expires": 1761874436
         },
         {
           "name": "__ddg10_",
-          "value": "1761859071",
+          "value": "1761873236",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761860271
+          "expires": 1761874436
         },
         {
           "name": "__ddg9_",
-          "value": "135.119.38.38",
+          "value": "64.236.153.145",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761860271
+          "expires": 1761874436
+        },
+        {
+          "name": "__ddg1_",
+          "value": "YShp7EdJK7g93hIUJKls",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1793409236
         },
         {
           "name": "PHPSESSID",
-          "value": "fef0cf4371422e8a3ed298941daa7c31",
+          "value": "867edf4b55c3c07e01650f0193c136b2",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -24763,11 +24791,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "cqxsr1KGah1QYkWNmL0wNxlhuAATpsho",
+          "value": "uAhqFFJcpMVUYr40Qw9MmwLSYWyCm4no",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1761869875
+          "expires": 1761884039
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -24775,7 +24803,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1792963075
+          "expires": 1792977239
         }
       ],
       "failures": {
@@ -31898,7 +31926,11 @@
     "https://rg.ru/2025/10/30/reg-ufo/v-aeroportu-volgograda-vveli-vremennye-ogranicheniia.html": "https://rg.ru/2025/10/30/reg-ufo/v-aeroportu-volgograda-vveli-vremennye-ogranicheniia.html",
     "https://rg.ru/2025/10/30/reg-cfo/pereryv-dlia-elektrichki.html": "https://rg.ru/2025/10/30/reg-cfo/pereryv-dlia-elektrichki.html",
     "https://rg.ru/2025/10/30/reg-szfo/ren-tv-gid-brosil-turistov-s-detmi-v-lesu-v-karelii.html": "https://rg.ru/2025/10/30/reg-szfo/ren-tv-gid-brosil-turistov-s-detmi-v-lesu-v-karelii.html",
-    "https://rg.ru/2025/10/30/reg-ufo/obmanuli-oblaka.html": "https://rg.ru/2025/10/30/reg-ufo/obmanuli-oblaka.html"
+    "https://rg.ru/2025/10/30/reg-ufo/obmanuli-oblaka.html": "https://rg.ru/2025/10/30/reg-ufo/obmanuli-oblaka.html",
+    "http://ancb.ru/publication/read/20384": "http://ancb.ru/publication/read/20384",
+    "http://ancb.ru/publication/read/20383": "http://ancb.ru/publication/read/20383",
+    "http://ancb.ru/publication/read/20377": "http://ancb.ru/publication/read/20377",
+    "https://realty.ria.ru/20251031/bronirovanie-2051767770.html": "https://realty.ria.ru/20251031/bronirovanie-2051767770.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -37908,7 +37940,11 @@
     "2ae7a0b6fc9cc51d52dedcf8baeb62dc56d936dc": "https://rg.ru/2025/10/30/reg-ufo/v-aeroportu-volgograda-vveli-vremennye-ogranicheniia.html",
     "4655755d5bbf6bcc67276b85b1b0a5efb192c104": "https://rg.ru/2025/10/30/reg-cfo/pereryv-dlia-elektrichki.html",
     "31cf5f20f1a8c76494cc73e9ec0aba04369b9851": "https://rg.ru/2025/10/30/reg-szfo/ren-tv-gid-brosil-turistov-s-detmi-v-lesu-v-karelii.html",
-    "5097124d749d897cf1d0cfd03bfdef6d7a553ef2": "https://rg.ru/2025/10/30/reg-ufo/obmanuli-oblaka.html"
+    "5097124d749d897cf1d0cfd03bfdef6d7a553ef2": "https://rg.ru/2025/10/30/reg-ufo/obmanuli-oblaka.html",
+    "9f8203b6617900a2d003a4ea24d70fa083dc1993": "http://ancb.ru/publication/read/20384",
+    "47dee5a34a1aabb00a8e58158ea0d6082ae2e47a": "http://ancb.ru/publication/read/20383",
+    "2d090adb3726106ec6bca793d30798f69e48b48e": "http://ancb.ru/publication/read/20377",
+    "3fa507fa49fab9aca7112d41450702b0b60bf001": "https://realty.ria.ru/20251031/bronirovanie-2051767770.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -45843,6 +45879,10 @@
     "https://rg.ru/2025/10/30/reg-ufo/v-aeroportu-volgograda-vveli-vremennye-ogranicheniia.html": "a80059005042d3003bec8d6efd9b056508b21c9d4bb2727a4bf3d87a3799f298",
     "https://rg.ru/2025/10/30/reg-cfo/pereryv-dlia-elektrichki.html": "119f65d9e7f635c6a4d31f5b99f04a3f7de0d8cd6a4740b6e735ba3d46045b6a",
     "https://rg.ru/2025/10/30/reg-szfo/ren-tv-gid-brosil-turistov-s-detmi-v-lesu-v-karelii.html": "cab06f1b070f8e37c7c1d77cc64e6e39d773a9a04854302e13c60ac512b33544",
-    "https://rg.ru/2025/10/30/reg-ufo/obmanuli-oblaka.html": "0a8c6c742f817d8d6f9cc2cccd421df65caaf27b43098fc629d7020a5f691027"
+    "https://rg.ru/2025/10/30/reg-ufo/obmanuli-oblaka.html": "0a8c6c742f817d8d6f9cc2cccd421df65caaf27b43098fc629d7020a5f691027",
+    "http://ancb.ru/publication/read/20384": "ba74bb08559306e77fa6d254d38b0d685d9a690bf8c0d39d9384e686d8ece82b",
+    "http://ancb.ru/publication/read/20383": "91e8ac06159d5faa12eb6efe7d0b56f23e884bbfb31821559326ee4133065b59",
+    "http://ancb.ru/publication/read/20377": "228368565eff3073e6d4c6e74ccc1fe5c09c7be7cdf3c8fe79f7ab51fc742cfc",
+    "https://realty.ria.ru/20251031/bronirovanie-2051767770.html": "ac2ed1af854d28fa5c8e26bfb435f82582b4de85192f2dbcaf2fa01d2a2569ef"
   }
 }
