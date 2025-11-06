@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 06 Nov 2025 01:16:24 GMT"
+      "Last-Modified": "Thu, 06 Nov 2025 03:49:21 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1caad-c+1itkG2i9UpkVY7CV+5op7NDc8\""
+      "ETag": "W/\"1c90c-TAh9SJMvESaJ1OhQ6l0fjH4igRU\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"o719e75xxy3xqb\""
+      "ETag": "\"56bw9i7pgi3wqv\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -16003,6 +16003,21 @@
     },
     "https://rg.ru/2025/11/06/reg-cfo/vsegda-na-sviazi.html": {
       "ETag": "\"lszu3i5kg31wz1\""
+    },
+    "https://www.metalinfo.ru/ru/news/178242": {},
+    "https://www.metalinfo.ru/ru/news/178248": {},
+    "https://www.metalinfo.ru/ru/news/178258": {},
+    "https://www.metalinfo.ru/ru/news/178253": {},
+    "https://www.metalinfo.ru/ru/news/178246": {},
+    "https://www.metalinfo.ru/ru/news/178252": {},
+    "https://realty.ria.ru/20251106/zadolzhennost-2053032282.html": {
+      "Last-Modified": "Thu, 06 Nov 2025 02:00:01 GMT"
+    },
+    "https://rg.ru/2025/11/06/reg-dfo/nash-privet-bollivudu.html": {
+      "ETag": "\"1nhfqjj9xa23w5\""
+    },
+    "https://rg.ru/2025/11/06/reg-dfo/zojkin-plombir.html": {
+      "ETag": "\"m8kxivyd2z22i9\""
     }
   },
   "stats": {
@@ -19349,9 +19364,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe3fa674050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe3fa67ce10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe3fa67ccd0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe3fb02d940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe3fb02f820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe3fafaf9b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-06T01:16:25.333165+00:00",
+    "last_run": "2025-11-06T03:49:00.374494+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -19364,9 +19390,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 540.7468719999997,
-        "connect_ms": 564.3617329999984,
-        "response_ms": 1105.108604999998,
+        "dns_ms": 549.893664999999,
+        "connect_ms": 423.924877999994,
+        "response_ms": 973.818542999993,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -19377,20 +19403,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9a793639b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe3fafaf9b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 4564.110314000004,
+        "dns_ms": 9419.748251999976,
         "connect_ms": 0.0,
-        "response_ms": 865.9177290000173,
+        "response_ms": 4387.184775999969,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.5560799999955179,
-        "connect_ms": 376.91931799997747,
-        "response_ms": 377.475397999973,
+        "dns_ms": 257.1533039999849,
+        "connect_ms": 312.93739500000584,
+        "response_ms": 570.0906989999908,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -19399,20 +19425,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "4b1405f0b9baf8c3cc9a2e8fa83346b3315be22ad9643ec787603062d6043edc",
+    "https://ardexpert.ru/article": "d2cea38131844fd64cf0af10c65befb3e002fc6f4a55debb598800f6ce97084d",
     "https://www.gostinfo.ru/News/List": "0bbe8eb7e93dc2979c15b04d6cae6b1d449d97040a8b0eb785d73c7a6ce7c612",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4cc7c9a5b249441a8e6d68e69aad2d546352644130bd12eca5929540f2df89cc",
-    "https://eec.eaeunion.org/news/": "6f1b92c987f145d758e5b1fd67dc462212f3fe283e657fb5facc79deef840670",
+    "https://eec.eaeunion.org/news/": "036dd935b7590e48ce1ab4edbe19234d53990c40b1f0961ce5517c1ea9567532",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "5650f2eb41d959bb50ef4267d31b3d728b6135bba6094b04247319b44df273f5",
-    "https://www.metalinfo.ru/ru/news": "09fbee48bc54a4853968599c3f8536d6774863bdcc08144f91f9ac69eca61a2d",
-    "https://www.pnp.ru/economics/": "e9d7169ac25434ecd9da0615650410ea06ed3148ada13203fe6588ea0c8a5a68",
-    "https://erzrf.ru/news/": "bd588dc571903bd333358b6bb2ca40bfaf1e5abd72fa2aca0bdff6e854ccbdf1",
-    "https://ria-stk.ru/news/vse-novosti.php": "4ab8197268e60b5565b0515136ffb3f83fcecb97f3c3faa704e9a4d57765111e",
-    "http://government.ru/news/": "f08d4e23fa560bc68ff05860189c9baf56e3101ba8b60c005c4f337c1453c58e",
-    "https://stroygaz.ru/news/": "5f071783b4590e9b3dae6830039b0ac15fc267b3adadd1845e7be4789ca0c3bb",
-    "https://realty.ria.ru/lenta/": "8e191ea2b3ba372a607930abcb976ef72d28c4e61def228fe078df53aef819b0",
-    "https://rg.ru/tema/ekonomika": "b05d45c36e41859799546bac69c6b198540d38a61b98b9faefa6727d90e917df",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "8b4e6db7a1da24963622f10f701be3747d71dda2c56fc4d0a921782d771fbdfe",
+    "https://www.metalinfo.ru/ru/news": "7d4919c69a9830238fd2d20aae8d1eae0dfece401128976d64fe446d476158e7",
+    "https://www.pnp.ru/economics/": "5a00c51f9e55e91da3bc9a30bd1ecf468bfa53abef06631f75a90ef4a82f3b32",
+    "https://erzrf.ru/news/": "d9164ea95b8ceb8a0387c1136f9495a4c32e68c3de7bcfcece0c884f778ea88f",
+    "https://ria-stk.ru/news/vse-novosti.php": "388e35dcdeff80141e04f57ef6b1f3c86602e6bdc0ebcae795ff44d649f832d2",
+    "http://government.ru/news/": "53a8970eef7e22f287da4f54cf3620d38b83e7dba182e577b6b5c52d8e78bc4a",
+    "https://stroygaz.ru/news/": "6bbf688a5528eda78c8f80d27388e690e7e92ebfd92ca6c4d6132c0bc59ab9d4",
+    "https://realty.ria.ru/lenta/": "10e425e054fa455ca7711a0be63a128a4dcf2d07690aab7310108a7d6cb81e5e",
+    "https://rg.ru/tema/ekonomika": "2d705e7b8fe92c4686ffa616f49d7dd2e7ca0abd9d9021f8765a58956c604f48",
     "http://ancb.ru/publication": "37fcd65634ed57bd1cac5f0ef86367dbf2815644762ba7a829cf37cd982d38e6",
     "https://notim.ru": "235e25b016fcc5e4c8a0e1478ea100d75cab50f0abeef3609a04624474c1320a",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -19549,6 +19575,12 @@
       "https://www.interfax-russia.ru/realty/news/naselenie-rastet-tolko-v-dvuh-iz-shestnadcati-rossiyskih-gorodov-millionikov"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/178242",
+      "https://www.metalinfo.ru/ru/news/178248",
+      "https://www.metalinfo.ru/ru/news/178258",
+      "https://www.metalinfo.ru/ru/news/178253",
+      "https://www.metalinfo.ru/ru/news/178246",
+      "https://www.metalinfo.ru/ru/news/178252",
       "https://www.metalinfo.ru/ru/news/178249",
       "https://www.metalinfo.ru/ru/news/178254",
       "https://www.metalinfo.ru/ru/news/178245",
@@ -19562,13 +19594,7 @@
       "https://www.metalinfo.ru/ru/news/178244",
       "https://www.metalinfo.ru/ru/news/178243",
       "https://www.metalinfo.ru/ru/news/178233",
-      "https://www.metalinfo.ru/ru/news/178240",
-      "https://www.metalinfo.ru/ru/news/178229",
-      "https://www.metalinfo.ru/ru/news/178232",
-      "https://www.metalinfo.ru/ru/news/178220",
-      "https://www.metalinfo.ru/ru/news/178223",
-      "https://www.metalinfo.ru/ru/news/178228",
-      "https://www.metalinfo.ru/ru/news/178222"
+      "https://www.metalinfo.ru/ru/news/178240"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -19697,6 +19723,7 @@
       "https://stroygaz.ru/news/construction/tolko-78-regionov-rossii-realizuyut-proekty-krt-minstroy-rossii/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251106/zadolzhennost-2053032282.html",
       "https://realty.ria.ru/20251106/shtrafy-2052915545.html",
       "https://realty.ria.ru/20251105/sud-2053009364.html",
       "https://realty.ria.ru/20251105/moskva-2053000409.html",
@@ -19715,10 +19742,11 @@
       "https://realty.ria.ru/20251105/predlozhenie-2052353403.html",
       "https://realty.ria.ru/20251104/dom-2052373804.html",
       "https://realty.ria.ru/20251104/defitsit-2052370543.html",
-      "https://realty.ria.ru/20251104/odnushka-2052057535.html",
-      "https://realty.ria.ru/20251102/balkon-2052369641.html"
+      "https://realty.ria.ru/20251104/odnushka-2052057535.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/06/reg-dfo/nash-privet-bollivudu.html",
+      "https://rg.ru/2025/11/06/reg-dfo/zojkin-plombir.html",
       "https://rg.ru/2025/11/06/reg-dfo/dlia-bystrogo-starta.html",
       "https://rg.ru/2025/11/06/ria-novosti-goviadina-v-mire-podorozhala-do-rekordnyh-7-za-kilogramm.html",
       "https://rg.ru/2025/11/06/reg-pfo/rosaviaciia-eshche-tri-aeroporta-rf-ostanovili-polety.html",
@@ -19749,8 +19777,6 @@
       "https://rg.ru/2025/11/05/reg-cfo/v-moskve-na-ezhegodnom-turnire-zvezdy-professii-vyberut-luchshih-buhgalterov.html",
       "https://rg.ru/2025/11/05/reg-szfo/mnogodetnym-semiam-iz-sankt-peterburga-povysili-vyplaty-na-ipoteku.html",
       "https://rg.ru/2025/11/05/obem-rynka-onlajn-torgovli-v-rossii-k-koncu-goda-dostignet-152-trln-rublej.html",
-      "https://rg.ru/2025/11/05/v-moskve-za-tri-goda-postroiat-47-mostov-tonnelej-estakad-i-puteprovodov.html",
-      "https://rg.ru/2025/11/05/raschetnyj-kurs-dollara-prevysil-81-rubl-vpervye-s-24-oktiabria.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
       "https://rg.ru/2025/10/29/v-krymu-proshla-nauchnaia-nedelia-zdorovogo-dolgoletiia-i-personalizirovannoj-mediciny.html",
       "https://rg.ru/2025/10/27/akciia-lechi-zhizni-blagotvoritelnogo-fonda-alyosha-vozvrashchaetsia.html"
@@ -25897,7 +25923,16 @@
     "049025e98214b267674be5fdb248146524d793d1548c86deb1be647bc6faabb1": "2025-11-06T04:16:00+03:00",
     "bfb30f502ace075b3e4bc84e9501fad078a11129296a3c3a9740cab923bd9454": "2025-11-06T04:16:00+03:00",
     "e8b89966285cde2669a823078ef05d49ed4df12d5aac00b4edc9fbef6aede9d9": "2025-11-06T04:16:00+03:00",
-    "723aff615d14bcf5b1a392be6ce701854e245baf98c699e87d6329bd8037836e": "2025-11-06T04:16:00+03:00"
+    "723aff615d14bcf5b1a392be6ce701854e245baf98c699e87d6329bd8037836e": "2025-11-06T04:16:00+03:00",
+    "fdae015c4b4a6778155e2eaa829a5ddc7c832f503e3c0e4bb79d95121f46e9eb": "2025-11-06T06:47:00+03:00",
+    "5c97962ca877a79386fef3c399cc9bbd0e7cc6baae89e517b71b1053996c279c": "2025-11-06T06:48:00+03:00",
+    "1ab839e637f768b1e3706e25825b5cf9db59999c810ebe0cc07337cbb8752905": "2025-11-06T06:48:00+03:00",
+    "bd4b5571cb451fea0adecadd15f61b3d0e6c0c1909d2b36e9866335470461c9c": "2025-11-06T06:48:00+03:00",
+    "48b2aa31769f7d942c07b8f5e2075707f20c78caac694ff61dd54ad7dbd4b001": "2025-11-06T06:48:00+03:00",
+    "33fc721e39b7ed4a81125a81237badf62ffcbd718b712d5624d2465ef3e103c7": "2025-11-06T06:48:00+03:00",
+    "351874cacceb332be08b46b1a5368ea8de01272a04e5eb1b82840ce63be1aaea": "2025-11-06T06:48:00+03:00",
+    "6880f1c83d48d2af900deb699b13bc8691600a7aceeadd1a8e1c2673bb5e2e2c": "2025-11-06T06:48:00+03:00",
+    "f392d903f89deb5759d707ad6cfb4b0930d0d1293f73343bb565cee56a8a230c": "2025-11-06T06:49:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -25928,9 +25963,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9a793bb820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 25,
-        "last_ts": 1762391698.739425
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe3fb02f820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 30,
+        "last_ts": 1762400824.0046642
       },
       "warmup_done": false,
       "last_success_path": null
@@ -25939,31 +25974,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "CMHoNJegDy3p3fog",
+          "value": "1rAUyTVlHWUvZaAJ",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762392950
+          "expires": 1762402126
         },
         {
           "name": "__ddg10_",
-          "value": "1762391750",
+          "value": "1762400926",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762392950
+          "expires": 1762402126
         },
         {
           "name": "__ddg9_",
-          "value": "135.119.38.34",
+          "value": "20.57.77.193",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762392950
+          "expires": 1762402126
+        },
+        {
+          "name": "__ddg1_",
+          "value": "G5TbeawyJLMHSNKu05nP",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1793936926
         },
         {
           "name": "PHPSESSID",
-          "value": "3ceed2e64d60c593fd89216ece561612",
+          "value": "ad3884820a83e0c7a76cec11c160ab3f",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -25990,11 +26033,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "PmHKdPuVg400Lr25fJ9GxVvgTi2rFu12",
+          "value": "PBOL36KJ4zv4zyj9UsvffPfI17jvtPmb",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762402553
+          "expires": 1762411728
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -26002,7 +26045,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1793495752
+          "expires": 1793504928
         }
       ],
       "failures": {
@@ -33559,7 +33602,22 @@
     "https://rg.ru/2025/11/06/reg-pfo/rosaviaciia-eshche-tri-aeroporta-rf-ostanovili-polety.html": "https://rg.ru/2025/11/06/reg-pfo/rosaviaciia-eshche-tri-aeroporta-rf-ostanovili-polety.html",
     "https://rg.ru/2025/11/06/deputat-steniakina-srednij-razmer-pensii-v-2026-godu-prevysit-27-tysiach-rublej.html": "https://rg.ru/2025/11/06/deputat-steniakina-srednij-razmer-pensii-v-2026-godu-prevysit-27-tysiach-rublej.html",
     "https://rg.ru/2025/11/06/reg-cfo/ono-im-nano.html": "https://rg.ru/2025/11/06/reg-cfo/ono-im-nano.html",
-    "https://rg.ru/2025/11/06/reg-cfo/vsegda-na-sviazi.html": "https://rg.ru/2025/11/06/reg-cfo/vsegda-na-sviazi.html"
+    "https://rg.ru/2025/11/06/reg-cfo/vsegda-na-sviazi.html": "https://rg.ru/2025/11/06/reg-cfo/vsegda-na-sviazi.html",
+    "https://www.metalinfo.ru/ru/news/178242": "http://www.metalinfo.ru/ru/news/178242",
+    "http://www.metalinfo.ru/ru/news/178242": "http://www.metalinfo.ru/ru/news/178242",
+    "https://www.metalinfo.ru/ru/news/178248": "http://www.metalinfo.ru/ru/news/178248",
+    "http://www.metalinfo.ru/ru/news/178248": "http://www.metalinfo.ru/ru/news/178248",
+    "https://www.metalinfo.ru/ru/news/178258": "http://www.metalinfo.ru/ru/news/178258",
+    "http://www.metalinfo.ru/ru/news/178258": "http://www.metalinfo.ru/ru/news/178258",
+    "https://www.metalinfo.ru/ru/news/178253": "http://www.metalinfo.ru/ru/news/178253",
+    "http://www.metalinfo.ru/ru/news/178253": "http://www.metalinfo.ru/ru/news/178253",
+    "https://www.metalinfo.ru/ru/news/178246": "http://www.metalinfo.ru/ru/news/178246",
+    "http://www.metalinfo.ru/ru/news/178246": "http://www.metalinfo.ru/ru/news/178246",
+    "https://www.metalinfo.ru/ru/news/178252": "http://www.metalinfo.ru/ru/news/178252",
+    "http://www.metalinfo.ru/ru/news/178252": "http://www.metalinfo.ru/ru/news/178252",
+    "https://realty.ria.ru/20251106/zadolzhennost-2053032282.html": "https://realty.ria.ru/20251106/zadolzhennost-2053032282.html",
+    "https://rg.ru/2025/11/06/reg-dfo/nash-privet-bollivudu.html": "https://rg.ru/2025/11/06/reg-dfo/nash-privet-bollivudu.html",
+    "https://rg.ru/2025/11/06/reg-dfo/zojkin-plombir.html": "https://rg.ru/2025/11/06/reg-dfo/zojkin-plombir.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -39933,7 +39991,16 @@
     "62d0a38708ac9704f6f599cfa2889c786ecb945a": "https://rg.ru/2025/11/06/reg-pfo/rosaviaciia-eshche-tri-aeroporta-rf-ostanovili-polety.html",
     "8b71d88ea14c268f7728f26823041b6f34c4651f": "https://rg.ru/2025/11/06/deputat-steniakina-srednij-razmer-pensii-v-2026-godu-prevysit-27-tysiach-rublej.html",
     "fe61aac3422cb18c868149793f1cca92343fd876": "https://rg.ru/2025/11/06/reg-cfo/ono-im-nano.html",
-    "bc402557bb4c07d63291fe1d11bb3631f7d44eb9": "https://rg.ru/2025/11/06/reg-cfo/vsegda-na-sviazi.html"
+    "bc402557bb4c07d63291fe1d11bb3631f7d44eb9": "https://rg.ru/2025/11/06/reg-cfo/vsegda-na-sviazi.html",
+    "d98598e5c0afa5be2161b5c2e68552a87840a665": "http://www.metalinfo.ru/ru/news/178242",
+    "7493733874673f73dd85a4046a370e5833dab1ec": "http://www.metalinfo.ru/ru/news/178248",
+    "4efa2a91de712abfd242dbb04d158593f99bf332": "http://www.metalinfo.ru/ru/news/178258",
+    "8d0a40b64eaebb4ed3a7c4d75e7c5a60d8ba1962": "http://www.metalinfo.ru/ru/news/178253",
+    "53486dec29e096b9290a6cb2f4ae6c575c2583a8": "http://www.metalinfo.ru/ru/news/178246",
+    "e4318b7da15b41177a6f22445b11f119782227b2": "http://www.metalinfo.ru/ru/news/178252",
+    "367d81e27dc80ccbb88ac3ef22b975a407441111": "https://realty.ria.ru/20251106/zadolzhennost-2053032282.html",
+    "748970e8e9137bb5bdd286752a89b8deaca170e8": "https://rg.ru/2025/11/06/reg-dfo/nash-privet-bollivudu.html",
+    "6e0102f238cc54cd53ba5214bcc2ba50c5324643": "https://rg.ru/2025/11/06/reg-dfo/zojkin-plombir.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -48372,6 +48439,21 @@
     "https://rg.ru/2025/11/06/reg-pfo/rosaviaciia-eshche-tri-aeroporta-rf-ostanovili-polety.html": "049025e98214b267674be5fdb248146524d793d1548c86deb1be647bc6faabb1",
     "https://rg.ru/2025/11/06/deputat-steniakina-srednij-razmer-pensii-v-2026-godu-prevysit-27-tysiach-rublej.html": "bfb30f502ace075b3e4bc84e9501fad078a11129296a3c3a9740cab923bd9454",
     "https://rg.ru/2025/11/06/reg-cfo/ono-im-nano.html": "e8b89966285cde2669a823078ef05d49ed4df12d5aac00b4edc9fbef6aede9d9",
-    "https://rg.ru/2025/11/06/reg-cfo/vsegda-na-sviazi.html": "723aff615d14bcf5b1a392be6ce701854e245baf98c699e87d6329bd8037836e"
+    "https://rg.ru/2025/11/06/reg-cfo/vsegda-na-sviazi.html": "723aff615d14bcf5b1a392be6ce701854e245baf98c699e87d6329bd8037836e",
+    "http://www.metalinfo.ru/ru/news/178242": "fdae015c4b4a6778155e2eaa829a5ddc7c832f503e3c0e4bb79d95121f46e9eb",
+    "https://www.metalinfo.ru/ru/news/178242": "fdae015c4b4a6778155e2eaa829a5ddc7c832f503e3c0e4bb79d95121f46e9eb",
+    "http://www.metalinfo.ru/ru/news/178248": "5c97962ca877a79386fef3c399cc9bbd0e7cc6baae89e517b71b1053996c279c",
+    "https://www.metalinfo.ru/ru/news/178248": "5c97962ca877a79386fef3c399cc9bbd0e7cc6baae89e517b71b1053996c279c",
+    "http://www.metalinfo.ru/ru/news/178258": "1ab839e637f768b1e3706e25825b5cf9db59999c810ebe0cc07337cbb8752905",
+    "https://www.metalinfo.ru/ru/news/178258": "1ab839e637f768b1e3706e25825b5cf9db59999c810ebe0cc07337cbb8752905",
+    "http://www.metalinfo.ru/ru/news/178253": "bd4b5571cb451fea0adecadd15f61b3d0e6c0c1909d2b36e9866335470461c9c",
+    "https://www.metalinfo.ru/ru/news/178253": "bd4b5571cb451fea0adecadd15f61b3d0e6c0c1909d2b36e9866335470461c9c",
+    "http://www.metalinfo.ru/ru/news/178246": "48b2aa31769f7d942c07b8f5e2075707f20c78caac694ff61dd54ad7dbd4b001",
+    "https://www.metalinfo.ru/ru/news/178246": "48b2aa31769f7d942c07b8f5e2075707f20c78caac694ff61dd54ad7dbd4b001",
+    "http://www.metalinfo.ru/ru/news/178252": "33fc721e39b7ed4a81125a81237badf62ffcbd718b712d5624d2465ef3e103c7",
+    "https://www.metalinfo.ru/ru/news/178252": "33fc721e39b7ed4a81125a81237badf62ffcbd718b712d5624d2465ef3e103c7",
+    "https://realty.ria.ru/20251106/zadolzhennost-2053032282.html": "351874cacceb332be08b46b1a5368ea8de01272a04e5eb1b82840ce63be1aaea",
+    "https://rg.ru/2025/11/06/reg-dfo/nash-privet-bollivudu.html": "6880f1c83d48d2af900deb699b13bc8691600a7aceeadd1a8e1c2673bb5e2e2c",
+    "https://rg.ru/2025/11/06/reg-dfo/zojkin-plombir.html": "f392d903f89deb5759d707ad6cfb4b0930d0d1293f73343bb565cee56a8a230c"
   }
 }
