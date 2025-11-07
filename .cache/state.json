@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 07 Nov 2025 16:21:33 GMT"
+      "Last-Modified": "Fri, 07 Nov 2025 18:24:06 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1ce2b-L4iunH8C9fJ1hVyIDLgpCnZj2Xc\""
+      "ETag": "W/\"1ce49-f3gEOT7d/97clMbD49jRWbWdxwo\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"ifdeeg9ks63ybz\""
+      "ETag": "\"62e8u1dta53yx0\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -16666,6 +16666,15 @@
     },
     "https://rg.ru/2025/11/07/ekspert-leonova-poiasnila-kakaia-kompensaciia-polozhena-passazhiram-paroma-seabridge.html": {
       "ETag": "\"cg2m9rp4fl1tgp\""
+    },
+    "http://government.ru/news/56874/": {},
+    "http://government.ru/news/56866/": {},
+    "http://government.ru/news/56865/": {},
+    "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html": {
+      "ETag": "\"188c713zxdr24ap\""
+    },
+    "https://rg.ru/2025/11/07/v-oktiabre-fizlica-vlozhili-v-cennye-bumagi-na-mosbirzhe-176-mlrd-rublej.html": {
+      "ETag": "\"6xbpkh20211obh\""
     }
   },
   "stats": {
@@ -20154,9 +20163,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8d76053610>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8d76053750>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8d760539d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8d76053c50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8d76053ed0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-07T16:22:07.528631+00:00",
+    "last_run": "2025-11-07T18:23:53.779210+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -20169,56 +20183,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 628.4279650000002,
-        "connect_ms": 448.7898720000061,
-        "response_ms": 1077.2178370000063,
+        "dns_ms": 747.6484719999945,
+        "connect_ms": 574.5469360000044,
+        "response_ms": 1322.195407999999,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8d7692fad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 297.7434480000056,
+        "connect_ms": 756.8177889999959,
+        "response_ms": 1054.5612370000015,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4660.552784999993,
-        "connect_ms": 476.4249250000039,
-        "response_ms": 5136.9777099999965,
+        "dns_ms": 5001.110449999998,
+        "connect_ms": 0.0,
+        "response_ms": 3405.024729000019,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8d76053ed0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 1195.4324949999773,
+        "connect_ms": 616.3619140000378,
+        "response_ms": 1811.794409000015,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "2311336329f2cb90b30c5323849ea0113a900c2f135a91613cd65749c926e3e9",
+    "https://ardexpert.ru/article": "abe69a4ecd15eecd3bcbb7f75c9c8d2571d6fbac0aee596e38d7403c85dedfec",
     "https://www.gostinfo.ru/News/List": "b4ab788f26c689d5b6adaee9cf7e756a495ab0eeb34ab1473bf0fa849d752b9a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2539db27f5d80a489a71d7bddf3b6bf4dd6c9bce10af68f39994b3e8e971722d",
-    "https://eec.eaeunion.org/news/": "c79b61157d7950823bb4ae26c33cfbccd2a3b63c14cd761abd9d76c9fbcbb752",
+    "https://eec.eaeunion.org/news/": "a990352dc79b5c637d9a7dfbcebc7343a9d7b76e424a91a3e16a39756ea20168",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "1b344e79a2892236a0a609086499f68ece4b9c40520660f0ffe060d2178f4ff4",
-    "https://www.metalinfo.ru/ru/news": "beab2a8c8271fbae0d919da7184b2e7b66d12171270dbc5daadc0215ef734f92",
-    "https://www.pnp.ru/economics/": "93edfa53dba8614593fac5ef2a19fa067551c009d5ecc9d961b12377842fc2b6",
-    "https://erzrf.ru/news/": "180939bdcb49df2ea2ddff4d3cddc47722fe9850cc59ee79376222d8d880d412",
-    "https://ria-stk.ru/news/vse-novosti.php": "375d74add15ffd8aef65e2e40834338b064cded196cf3f4ce0c6ae579d29251a",
-    "http://government.ru/news/": "e2c302bec52d96cda78e500abfb2bb95c357333945bb3aae53410b24abe99230",
-    "https://stroygaz.ru/news/": "e8120a1b10c85ece93adac4eb504b7288a6abcb866e2d75559c2c3ea11a64384",
-    "https://realty.ria.ru/lenta/": "4b614d04b060487b4a119fe27b642d5a88e2b381031096da0cec23bc31789339",
-    "https://rg.ru/tema/ekonomika": "ecb1695e31c18317d50d8906ad36db436c1638d2ed45a495b4b7fbf6f0e8d6a8",
-    "http://ancb.ru/publication": "6cd74e71dbcc065544826bfa5870036e88744bd70323c29acaa1374b8cfa07d1",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "49339e7aa3f5362c1c693c533949176296b7ba685d8d6a5e9b1a9d00ced41be9",
+    "https://www.metalinfo.ru/ru/news": "578c116c226a8179a91e3d63bbdecba0895a1a6fc3d8c6dae1eb3ca24ae8e9b9",
+    "https://www.pnp.ru/economics/": "46eaae70173dc731a37fbe2491dc0d45ba20f892edf0ef3c2eb91015764ec591",
+    "https://erzrf.ru/news/": "c1b338c96b9391505fd0e69267a7695045a83191f41dc6b027e21221f79275f8",
+    "https://ria-stk.ru/news/vse-novosti.php": "aa5222a90caaf0411792180fb3bb3b15f21071ba4c86c678bcdc5a0da566ce4d",
+    "http://government.ru/news/": "bfe0a055d76f21525e7443dedc5822287e6e2a79028571d77dbfdd9f69dc1752",
+    "https://stroygaz.ru/news/": "cc4299f3840af677e7f0d3a739ed31b8fbadd244eb23a08a275fac99cbf975b5",
+    "https://realty.ria.ru/lenta/": "edf49fdac4cbd9a326fa2e64b8031f091842068143abf3f01912a41e8d13cd12",
+    "https://rg.ru/tema/ekonomika": "d2618c05df4f59a3f6967dceef50775f9fd2c326dd7fe0b710bec44f804ac672",
+    "http://ancb.ru/publication": "3fd95cf7d15d1e722b4b510741ac5a0e9e8417be2c1f299fa3ae0f4db96d7795",
     "https://notim.ru": "235e25b016fcc5e4c8a0e1478ea100d75cab50f0abeef3609a04624474c1320a",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -20459,6 +20473,9 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245822&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56874/",
+      "http://government.ru/news/56866/",
+      "http://government.ru/news/56865/",
       "http://government.ru/news/56862/",
       "http://government.ru/news/56861/",
       "http://government.ru/news/56860/",
@@ -20475,10 +20492,7 @@
       "http://government.ru/news/56850/",
       "http://government.ru/news/56848/",
       "http://government.ru/news/56847/",
-      "http://government.ru/news/56842/",
-      "http://government.ru/news/56841/",
-      "http://government.ru/news/56839/",
-      "http://government.ru/news/56838/"
+      "http://government.ru/news/56842/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/v-gornolyzhnykh-kurortakh-vyros-obem-arendnogo-zhilya/",
@@ -20525,6 +20539,8 @@
       "https://realty.ria.ru/20251106/domklik-2053172389.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html",
+      "https://rg.ru/2025/11/07/v-oktiabre-fizlica-vlozhili-v-cennye-bumagi-na-mosbirzhe-176-mlrd-rublej.html",
       "https://rg.ru/2025/11/07/rosstat-roznichnye-ceny-na-benzin-na-proshloj-nedele-pochti-ostanovilis.html",
       "https://rg.ru/2025/11/07/ekspert-rodionov-nazval-tri-faktora-dlia-podderzhaniia-neftegazovyh-dohodov-rf.html",
       "https://rg.ru/2025/11/07/centrobank-fiksiruet-rost-chisla-zhalob-na-neobosnovannye-blokirovki-schetov.html",
@@ -20555,8 +20571,6 @@
       "https://rg.ru/2025/11/07/deputat-lantratova-obiasnila-zachem-nuzhna-proverka-prodazhi-tovarov-s-betelem.html",
       "https://rg.ru/2025/11/07/reg-skfo/mintrans-marshruty-na-kurorty-severnogo-kavkaza-stanut-udobnee.html",
       "https://rg.ru/2025/11/07/polnostiu-importozameshchennyj-sj-100-proshel-ispytaniia-na-zashchitu-dvigatelej-ot-vody.html",
-      "https://rg.ru/2025/11/07/reg-ufo/mezhdu-rostovskoj-oblastiu-i-dnr-poiavitsia-priamoj-zheleznodorozhnyj-marshrut.html",
-      "https://rg.ru/2025/11/07/volodin-o-novyh-shtrafah-zhkh-vazhno-navodit-poriadok-v-etoj-sfere.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
       "https://rg.ru/2025/10/29/v-krymu-proshla-nauchnaia-nedelia-zdorovogo-dolgoletiia-i-personalizirovannoj-mediciny.html"
@@ -27038,7 +27052,12 @@
     "802a88c4bf4eea4cac22d55383f7c0f272849d545c33f745bb81f8d23008e5eb": "2025-11-07T19:22:00+03:00",
     "d669e7b495f76c298d37f668fef8446935348479b0d6351cbb157441ea8985e2": "2025-11-07T19:22:00+03:00",
     "098c2486d4f55db3ad880d175c7a2e52df231bc62b6b7bee4fdc2b5ec6fab58a": "2025-11-07T19:22:00+03:00",
-    "72aee97b9ea15bc2e19502d392d7b10f321e16445e279c0cb879218234aa7145": "2025-11-07T19:22:00+03:00"
+    "72aee97b9ea15bc2e19502d392d7b10f321e16445e279c0cb879218234aa7145": "2025-11-07T19:22:00+03:00",
+    "b1e1e3099a14bf979e8f6be67bf96fcae71586f3c7e9c2b93e82a50e9191a553": "2025-11-07T21:23:00+03:00",
+    "e9c0962d5b25c6068cf7bb9d0eda1d8b388da43ad78a6952655d05b9b1d794c3": "2025-11-07T21:23:00+03:00",
+    "e3d405db48bf331b9b4b6dc32987254bbddfecbd43b13926e2a94c59d1a5e2f7": "2025-11-07T21:23:00+03:00",
+    "db677ae6cca43308f316128295b244ba79ba7f9652b490c4e556e470fefe6c99": "2025-11-07T21:23:00+03:00",
+    "90ae40df4dac6d643f39d3d927430e881f96f6432e6e8da731c6e2543c807269": "2025-11-07T21:23:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -27069,8 +27088,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8d7697f820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1762532408.0566328
       },
       "warmup_done": false,
@@ -27080,31 +27099,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "OsgT37ynMqiHxC1U",
+          "value": "WSvnFvxDs9gMiulm",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762533658
+          "expires": 1762541011
         },
         {
           "name": "__ddg10_",
-          "value": "1762532458",
+          "value": "1762539811",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762533658
+          "expires": 1762541011
         },
         {
           "name": "__ddg9_",
-          "value": "20.161.70.177",
+          "value": "132.196.19.18",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762533658
+          "expires": 1762541011
+        },
+        {
+          "name": "__ddg1_",
+          "value": "VUjRYOVQ7vgaEucOsrpr",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1794075811
         },
         {
           "name": "PHPSESSID",
-          "value": "575d4e6644846db27b0d71084fce546a",
+          "value": "d4f963fe5a2ca2c0910f43bba57c811c",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -27131,11 +27158,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "ieC4DtdFp70aq2KR9MK1HFaUR0qFlNlF",
+          "value": "QdwaIscgcKFZbtedkInSVlvD2a7UJNdV",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762539532
+          "expires": 1762550616
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -27143,12 +27170,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1793632732
+          "expires": 1793643816
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8d76053c50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1762532494.45793
       },
       "warmup_done": false,
@@ -35148,7 +35175,12 @@
     "https://rg.ru/2025/11/07/rosstat-roznichnye-ceny-na-benzin-na-proshloj-nedele-pochti-ostanovilis.html": "https://rg.ru/2025/11/07/rosstat-roznichnye-ceny-na-benzin-na-proshloj-nedele-pochti-ostanovilis.html",
     "https://rg.ru/2025/11/07/ekspert-rodionov-nazval-tri-faktora-dlia-podderzhaniia-neftegazovyh-dohodov-rf.html": "https://rg.ru/2025/11/07/ekspert-rodionov-nazval-tri-faktora-dlia-podderzhaniia-neftegazovyh-dohodov-rf.html",
     "https://rg.ru/2025/11/07/centrobank-fiksiruet-rost-chisla-zhalob-na-neobosnovannye-blokirovki-schetov.html": "https://rg.ru/2025/11/07/centrobank-fiksiruet-rost-chisla-zhalob-na-neobosnovannye-blokirovki-schetov.html",
-    "https://rg.ru/2025/11/07/ekspert-leonova-poiasnila-kakaia-kompensaciia-polozhena-passazhiram-paroma-seabridge.html": "https://rg.ru/2025/11/07/ekspert-leonova-poiasnila-kakaia-kompensaciia-polozhena-passazhiram-paroma-seabridge.html"
+    "https://rg.ru/2025/11/07/ekspert-leonova-poiasnila-kakaia-kompensaciia-polozhena-passazhiram-paroma-seabridge.html": "https://rg.ru/2025/11/07/ekspert-leonova-poiasnila-kakaia-kompensaciia-polozhena-passazhiram-paroma-seabridge.html",
+    "http://government.ru/news/56874": "http://government.ru/news/56874",
+    "http://government.ru/news/56866": "http://government.ru/news/56866",
+    "http://government.ru/news/56865": "http://government.ru/news/56865",
+    "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html": "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html",
+    "https://rg.ru/2025/11/07/v-oktiabre-fizlica-vlozhili-v-cennye-bumagi-na-mosbirzhe-176-mlrd-rublej.html": "https://rg.ru/2025/11/07/v-oktiabre-fizlica-vlozhili-v-cennye-bumagi-na-mosbirzhe-176-mlrd-rublej.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -41858,7 +41890,12 @@
     "4649819bd95053f436eac6f3ed33e289bdaadb45": "https://rg.ru/2025/11/07/rosstat-roznichnye-ceny-na-benzin-na-proshloj-nedele-pochti-ostanovilis.html",
     "f7f764cfc6f2ce0927cdc8d019b047bb9e13684a": "https://rg.ru/2025/11/07/ekspert-rodionov-nazval-tri-faktora-dlia-podderzhaniia-neftegazovyh-dohodov-rf.html",
     "94448080f897712921f45001cbd6521a33f7d969": "https://rg.ru/2025/11/07/centrobank-fiksiruet-rost-chisla-zhalob-na-neobosnovannye-blokirovki-schetov.html",
-    "17164d55c349dd22fd6177d56e51c57df6dc53ee": "https://rg.ru/2025/11/07/ekspert-leonova-poiasnila-kakaia-kompensaciia-polozhena-passazhiram-paroma-seabridge.html"
+    "17164d55c349dd22fd6177d56e51c57df6dc53ee": "https://rg.ru/2025/11/07/ekspert-leonova-poiasnila-kakaia-kompensaciia-polozhena-passazhiram-paroma-seabridge.html",
+    "563dce935dccd7b06d61743ead65da4e71d6e9b5": "http://government.ru/news/56874",
+    "4a7ac5c8e3bc2ea7ea93426e7a9331450fe19600": "http://government.ru/news/56866",
+    "325f8543d9415916957f54a247c9fa793ec9f661": "http://government.ru/news/56865",
+    "ff51c51fea321b795fee85633602fa82313db816": "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html",
+    "56b3c9c68b31a973440e1b39532541bb539e3a97": "https://rg.ru/2025/11/07/v-oktiabre-fizlica-vlozhili-v-cennye-bumagi-na-mosbirzhe-176-mlrd-rublej.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -50783,6 +50820,14 @@
     "https://rg.ru/2025/11/07/rosstat-roznichnye-ceny-na-benzin-na-proshloj-nedele-pochti-ostanovilis.html": "802a88c4bf4eea4cac22d55383f7c0f272849d545c33f745bb81f8d23008e5eb",
     "https://rg.ru/2025/11/07/ekspert-rodionov-nazval-tri-faktora-dlia-podderzhaniia-neftegazovyh-dohodov-rf.html": "d669e7b495f76c298d37f668fef8446935348479b0d6351cbb157441ea8985e2",
     "https://rg.ru/2025/11/07/centrobank-fiksiruet-rost-chisla-zhalob-na-neobosnovannye-blokirovki-schetov.html": "098c2486d4f55db3ad880d175c7a2e52df231bc62b6b7bee4fdc2b5ec6fab58a",
-    "https://rg.ru/2025/11/07/ekspert-leonova-poiasnila-kakaia-kompensaciia-polozhena-passazhiram-paroma-seabridge.html": "72aee97b9ea15bc2e19502d392d7b10f321e16445e279c0cb879218234aa7145"
+    "https://rg.ru/2025/11/07/ekspert-leonova-poiasnila-kakaia-kompensaciia-polozhena-passazhiram-paroma-seabridge.html": "72aee97b9ea15bc2e19502d392d7b10f321e16445e279c0cb879218234aa7145",
+    "http://government.ru/news/56874": "b1e1e3099a14bf979e8f6be67bf96fcae71586f3c7e9c2b93e82a50e9191a553",
+    "http://government.ru/news/56874/": "b1e1e3099a14bf979e8f6be67bf96fcae71586f3c7e9c2b93e82a50e9191a553",
+    "http://government.ru/news/56866": "e9c0962d5b25c6068cf7bb9d0eda1d8b388da43ad78a6952655d05b9b1d794c3",
+    "http://government.ru/news/56866/": "e9c0962d5b25c6068cf7bb9d0eda1d8b388da43ad78a6952655d05b9b1d794c3",
+    "http://government.ru/news/56865": "e3d405db48bf331b9b4b6dc32987254bbddfecbd43b13926e2a94c59d1a5e2f7",
+    "http://government.ru/news/56865/": "e3d405db48bf331b9b4b6dc32987254bbddfecbd43b13926e2a94c59d1a5e2f7",
+    "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html": "db677ae6cca43308f316128295b244ba79ba7f9652b490c4e556e470fefe6c99",
+    "https://rg.ru/2025/11/07/v-oktiabre-fizlica-vlozhili-v-cennye-bumagi-na-mosbirzhe-176-mlrd-rublej.html": "90ae40df4dac6d643f39d3d927430e881f96f6432e6e8da731c6e2543c807269"
   }
 }
