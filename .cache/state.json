@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 07 Nov 2025 21:14:55 GMT"
+      "Last-Modified": "Sat, 08 Nov 2025 01:12:20 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1cb25-5jIiCqZJVm4uZfH6PRVFEXBBTyg\""
+      "ETag": "W/\"1c475-jUvefk5rL4ZCzZ/f/BH+7XlNdVA\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"8dg37tl3q23v3a\""
+      "ETag": "\"16xx92nmcxn3srj\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -16681,6 +16681,12 @@
     },
     "https://rg.ru/2025/11/07/siluanov-v-proekt-biudzheta-vojdut-dopsredstva-na-likvidaciiu-avarijnogo-zhilia.html": {
       "ETag": "\"7cn8zxovht1qct\""
+    },
+    "https://rg.ru/2025/11/08/padenie-sprosa-na-strojmaterialy-ne-privelo-k-snizheniiu-cen.html": {
+      "ETag": "\"3vuphe0it22581\""
+    },
+    "https://rg.ru/2025/11/08/socfond-sredniaia-pensiia-v-rf-po-starosti-sostavila-pochti-252-tysiachi-rublej.html": {
+      "ETag": "\"czupkbn0g1p5d\""
     }
   },
   "stats": {
@@ -20185,9 +20191,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2d215d8050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2d215e0e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2d215e0cd0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2d21f3d940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2d21f3f820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2d21ecbbf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-07T21:14:34.173871+00:00",
+    "last_run": "2025-11-08T01:12:02.567202+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -20200,9 +20217,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 335.59843300000125,
-        "connect_ms": 393.90728700001887,
-        "response_ms": 729.5057200000201,
+        "dns_ms": 744.9178939999967,
+        "connect_ms": 1132.135336999994,
+        "response_ms": 1877.0532309999908,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -20213,20 +20230,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4884c5fad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2d21ecbbf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 8662.824392999994,
+        "dns_ms": 1743.9742100000046,
         "connect_ms": 0.0,
-        "response_ms": 4762.770012000033,
+        "response_ms": 647.1722629999874,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 459.436979999964,
-        "connect_ms": 1225.7661740000572,
-        "response_ms": 1685.2031540000212,
+        "dns_ms": 354.31514199999015,
+        "connect_ms": 1556.1293090000277,
+        "response_ms": 1910.4444510000178,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -20235,20 +20252,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "83218aa9a0e3b6391ec551ff0b1bc24026de8a8b00dc9263940292ac2d5f62da",
+    "https://ardexpert.ru/article": "7a3fadf8fec78ed23b05759ca502660319e1da76f17b0c8c0ec3a56798133ec7",
     "https://www.gostinfo.ru/News/List": "b4ab788f26c689d5b6adaee9cf7e756a495ab0eeb34ab1473bf0fa849d752b9a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2539db27f5d80a489a71d7bddf3b6bf4dd6c9bce10af68f39994b3e8e971722d",
-    "https://eec.eaeunion.org/news/": "f43bc156201e4f46e66b8623ac5353ff3465054cfe9a94ef7bc13b4d5f9407ac",
+    "https://eec.eaeunion.org/news/": "6007c70493b236b1aa6bab45e7eb8ec442f7cd67238e27f1c3a76818b89d4a50",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "2399fed1083b47cddbe523c0b75cf8d610c0eeb4ebedcee2e7287b901938fbb6",
-    "https://www.metalinfo.ru/ru/news": "f8c3a7403abb8915dec4918a75b405fb26430ce5860cd829d4d4780cff12d8f4",
-    "https://www.pnp.ru/economics/": "ea22b32d999b4fc81f66f3b70b58b7560b56c92e14af31f176a030fcc12bc51c",
-    "https://erzrf.ru/news/": "78108a842dfb272bce0c4ca0fc944975334fdfcc87e171aa6498ee06817baf7c",
-    "https://ria-stk.ru/news/vse-novosti.php": "f477dfd0808335af867051093713f5d433a2eed54f873ad7d2fcaf496743bc1f",
-    "http://government.ru/news/": "d8719bee603f62408320b77ce7e79a710c7af61c48f8e57d2eee4a16d276569a",
-    "https://stroygaz.ru/news/": "ed9936c3e3333536d1421ef1d8710c5802b2a795253f7dbf0bdfe21368febd6a",
-    "https://realty.ria.ru/lenta/": "00e0c5c3038d1e2f63f268b255c237f48e56e6e0fb570cad333db62f4daa3437",
-    "https://rg.ru/tema/ekonomika": "9f52b697de920b851d549aae4f18154045419c1037a9e53528be308c06285680",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "68607d44ef997a4737d78b0d4ec5b3c51f442470b668543c1c8a51b105e489ba",
+    "https://www.metalinfo.ru/ru/news": "0062056a61a59b8c0df9c5f1ec3ebe732a04839d7480d765bb6b5a62ebe756c3",
+    "https://www.pnp.ru/economics/": "b71f75398da407c3ecb2b01cd77ef5a33502afb2efebfb812eaf1cdb4eabf0dd",
+    "https://erzrf.ru/news/": "dc3d102b4c9b24c26af44182ab7bb5819066221bf8e6269e6a5995dfb9d266db",
+    "https://ria-stk.ru/news/vse-novosti.php": "f0b740cbc1fbcf124ae5158f558c23b21b6f43e157f42153ef9f5181aff59808",
+    "http://government.ru/news/": "40081ec6303327cd4716ebb7486f4da34acadce24261ded5b25c7ebb46256ba3",
+    "https://stroygaz.ru/news/": "ebf59267219b34809ce92d2732436dad76cd7cfb9c3d209cd1342447c5016a4b",
+    "https://realty.ria.ru/lenta/": "20a21c565b5458091497318ea22f3e1f26f4cef00d57c128eb4612fee0c87fd2",
+    "https://rg.ru/tema/ekonomika": "d6732d0e0655b7178b99e44dc44330ecd89f7c355772f151d08185a360dd414b",
     "http://ancb.ru/publication": "6cd74e71dbcc065544826bfa5870036e88744bd70323c29acaa1374b8cfa07d1",
     "https://notim.ru": "235e25b016fcc5e4c8a0e1478ea100d75cab50f0abeef3609a04624474c1320a",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -20556,6 +20573,8 @@
       "https://realty.ria.ru/20251106/domklik-2053172389.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/08/padenie-sprosa-na-strojmaterialy-ne-privelo-k-snizheniiu-cen.html",
+      "https://rg.ru/2025/11/08/socfond-sredniaia-pensiia-v-rf-po-starosti-sostavila-pochti-252-tysiachi-rublej.html",
       "https://rg.ru/2025/11/07/mirovaia-stoimost-nefti-vyrosla-v-piatnicu-vecherom.html",
       "https://rg.ru/2025/11/07/siluanov-v-proekt-biudzheta-vojdut-dopsredstva-na-likvidaciiu-avarijnogo-zhilia.html",
       "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html",
@@ -20586,8 +20605,6 @@
       "https://rg.ru/2025/11/07/ekspert-balynin-pri-uvolnenii-mozhno-poluchit-22-tysiachi-rublej-za-bolnichnyj.html",
       "https://rg.ru/2025/11/07/kreml-nazval-vrednymi-nezakonnye-torgovye-mery-na-fone-situacii-s-lukojlom.html",
       "https://rg.ru/2025/11/07/vitek-vyhodit-v-novye-segmenty-rossijskij-brend-startuet-s-krupnoj-vstraivaemoj-i-klimaticheskoj-tehnikoj.html",
-      "https://rg.ru/2025/11/07/bank-rossii-vypuskaet-pamiatnuiu-monetu-k-200-letiiu-finansista-ei-lamanskogo.html",
-      "https://rg.ru/2025/11/07/deputat-lantratova-obiasnila-zachem-nuzhna-proverka-prodazhi-tovarov-s-betelem.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
       "https://rg.ru/2025/10/29/v-krymu-proshla-nauchnaia-nedelia-zdorovogo-dolgoletiia-i-personalizirovannoj-mediciny.html"
@@ -27076,7 +27093,9 @@
     "db677ae6cca43308f316128295b244ba79ba7f9652b490c4e556e470fefe6c99": "2025-11-07T21:23:00+03:00",
     "90ae40df4dac6d643f39d3d927430e881f96f6432e6e8da731c6e2543c807269": "2025-11-07T21:23:00+03:00",
     "f746f2377fa98b0806d5a62a4be8fa05568070067a5badc02da01598d9cfa0d4": "2025-11-08T00:14:00+03:00",
-    "7cd5b99e470e61dcc0d35670900632905b2137b5a284f6ed48ea91ad72c1dd9d": "2025-11-08T00:14:00+03:00"
+    "7cd5b99e470e61dcc0d35670900632905b2137b5a284f6ed48ea91ad72c1dd9d": "2025-11-08T00:14:00+03:00",
+    "db039ab4cc9cea919ad1ea0987168414165fc1f68ee2d94cfb27d1baf2a99d26": "2025-11-08T04:11:00+03:00",
+    "5112c7f0ea332286e0f4e27207c355c01c88719d18fb8e8c4e68c6282c1de350": "2025-11-08T04:12:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -27107,9 +27126,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4884cd7820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1762550006.1453612
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2d21f3f820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1762564261.1350465
       },
       "warmup_done": false,
       "last_success_path": null
@@ -27118,31 +27137,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "qzSj9Zy7VWOrbZXc",
+          "value": "UFId44Wfc0dtK5hp",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762551260
+          "expires": 1762565505
         },
         {
           "name": "__ddg10_",
-          "value": "1762550060",
+          "value": "1762564305",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762551260
+          "expires": 1762565505
         },
         {
           "name": "__ddg9_",
-          "value": "172.183.131.17",
+          "value": "172.184.191.162",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762551260
+          "expires": 1762565505
+        },
+        {
+          "name": "__ddg1_",
+          "value": "RYhlbnDVgXy8WPqeJLH2",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1794100305
         },
         {
           "name": "PHPSESSID",
-          "value": "b8526144837fe3a4848b7fb3bbe2350d",
+          "value": "f6e0eb83e44c2813e5e6a86280c87ea0",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -27169,11 +27196,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "Bhvy9c78CNFWVzJeF02jv3aEtLYd1MPj",
+          "value": "uElvY4YhcHkf1aCcgTlqKPIytitKaLBu",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762560864
+          "expires": 1762575110
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -27181,7 +27208,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1793654063
+          "expires": 1793668310
         }
       ],
       "failures": {
@@ -35193,7 +35220,9 @@
     "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html": "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html",
     "https://rg.ru/2025/11/07/v-oktiabre-fizlica-vlozhili-v-cennye-bumagi-na-mosbirzhe-176-mlrd-rublej.html": "https://rg.ru/2025/11/07/v-oktiabre-fizlica-vlozhili-v-cennye-bumagi-na-mosbirzhe-176-mlrd-rublej.html",
     "https://rg.ru/2025/11/07/mirovaia-stoimost-nefti-vyrosla-v-piatnicu-vecherom.html": "https://rg.ru/2025/11/07/mirovaia-stoimost-nefti-vyrosla-v-piatnicu-vecherom.html",
-    "https://rg.ru/2025/11/07/siluanov-v-proekt-biudzheta-vojdut-dopsredstva-na-likvidaciiu-avarijnogo-zhilia.html": "https://rg.ru/2025/11/07/siluanov-v-proekt-biudzheta-vojdut-dopsredstva-na-likvidaciiu-avarijnogo-zhilia.html"
+    "https://rg.ru/2025/11/07/siluanov-v-proekt-biudzheta-vojdut-dopsredstva-na-likvidaciiu-avarijnogo-zhilia.html": "https://rg.ru/2025/11/07/siluanov-v-proekt-biudzheta-vojdut-dopsredstva-na-likvidaciiu-avarijnogo-zhilia.html",
+    "https://rg.ru/2025/11/08/padenie-sprosa-na-strojmaterialy-ne-privelo-k-snizheniiu-cen.html": "https://rg.ru/2025/11/08/padenie-sprosa-na-strojmaterialy-ne-privelo-k-snizheniiu-cen.html",
+    "https://rg.ru/2025/11/08/socfond-sredniaia-pensiia-v-rf-po-starosti-sostavila-pochti-252-tysiachi-rublej.html": "https://rg.ru/2025/11/08/socfond-sredniaia-pensiia-v-rf-po-starosti-sostavila-pochti-252-tysiachi-rublej.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -41910,7 +41939,9 @@
     "ff51c51fea321b795fee85633602fa82313db816": "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html",
     "56b3c9c68b31a973440e1b39532541bb539e3a97": "https://rg.ru/2025/11/07/v-oktiabre-fizlica-vlozhili-v-cennye-bumagi-na-mosbirzhe-176-mlrd-rublej.html",
     "e7c7a3920c2ab4e668fa5009932445267191d20d": "https://rg.ru/2025/11/07/mirovaia-stoimost-nefti-vyrosla-v-piatnicu-vecherom.html",
-    "13597d1ae345d287ea87c82b11c3b9eee2996808": "https://rg.ru/2025/11/07/siluanov-v-proekt-biudzheta-vojdut-dopsredstva-na-likvidaciiu-avarijnogo-zhilia.html"
+    "13597d1ae345d287ea87c82b11c3b9eee2996808": "https://rg.ru/2025/11/07/siluanov-v-proekt-biudzheta-vojdut-dopsredstva-na-likvidaciiu-avarijnogo-zhilia.html",
+    "613a0495795e6817e1c69ca13e1102a6e4dfabab": "https://rg.ru/2025/11/08/padenie-sprosa-na-strojmaterialy-ne-privelo-k-snizheniiu-cen.html",
+    "6faec3c60189f7f8ef77c729f1250765aed21f08": "https://rg.ru/2025/11/08/socfond-sredniaia-pensiia-v-rf-po-starosti-sostavila-pochti-252-tysiachi-rublej.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -50845,6 +50876,8 @@
     "https://rg.ru/2025/11/07/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-10-po-16-noiabria.html": "db677ae6cca43308f316128295b244ba79ba7f9652b490c4e556e470fefe6c99",
     "https://rg.ru/2025/11/07/v-oktiabre-fizlica-vlozhili-v-cennye-bumagi-na-mosbirzhe-176-mlrd-rublej.html": "90ae40df4dac6d643f39d3d927430e881f96f6432e6e8da731c6e2543c807269",
     "https://rg.ru/2025/11/07/mirovaia-stoimost-nefti-vyrosla-v-piatnicu-vecherom.html": "f746f2377fa98b0806d5a62a4be8fa05568070067a5badc02da01598d9cfa0d4",
-    "https://rg.ru/2025/11/07/siluanov-v-proekt-biudzheta-vojdut-dopsredstva-na-likvidaciiu-avarijnogo-zhilia.html": "7cd5b99e470e61dcc0d35670900632905b2137b5a284f6ed48ea91ad72c1dd9d"
+    "https://rg.ru/2025/11/07/siluanov-v-proekt-biudzheta-vojdut-dopsredstva-na-likvidaciiu-avarijnogo-zhilia.html": "7cd5b99e470e61dcc0d35670900632905b2137b5a284f6ed48ea91ad72c1dd9d",
+    "https://rg.ru/2025/11/08/padenie-sprosa-na-strojmaterialy-ne-privelo-k-snizheniiu-cen.html": "db039ab4cc9cea919ad1ea0987168414165fc1f68ee2d94cfb27d1baf2a99d26",
+    "https://rg.ru/2025/11/08/socfond-sredniaia-pensiia-v-rf-po-starosti-sostavila-pochti-252-tysiachi-rublej.html": "5112c7f0ea332286e0f4e27207c355c01c88719d18fb8e8c4e68c6282c1de350"
   }
 }
