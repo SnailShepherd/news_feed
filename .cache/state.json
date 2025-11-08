@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 08 Nov 2025 09:18:12 GMT"
+      "Last-Modified": "Sat, 08 Nov 2025 12:31:57 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1cb25-ZY1cE80z178avdzKEK7jZhhhU+g\""
+      "ETag": "W/\"1ce49-KMWv6PWY8cy5qPQW0qL3gtp3ipI\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"9em2a5sjrx3lhb\""
+      "ETag": "\"jbl1t6f79j3gmh\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -16720,6 +16720,16 @@
     },
     "https://rg.ru/2025/11/08/reg-ufo/aviarejs-volgograd-hurgada-zaderzhivaetsia-bolee-chem-na-13-chasov.html": {
       "ETag": "\"20mcst6d2h1oiv\""
+    },
+    "https://www.metalinfo.ru/ru/news/178377": {},
+    "https://rg.ru/2025/11/08/reg-urfo/samolet-iz-blagoveshchenska-v-moskvu-ekstrenno-sel-v-nizhnevartovske.html": {
+      "ETag": "\"171bodltzhn1oj6\""
+    },
+    "https://rg.ru/2025/11/08/reg-cfo/sobianin-stroitelstvo-estakady-na-shosse-entuziastov-zavershitsia-v-2027-godu.html": {
+      "ETag": "\"8kghpmwd4j1oqw\""
+    },
+    "https://rg.ru/2025/11/08/v-rossii-utverdili-perechen-ugroz-dlia-ustojchivosti-interneta.html": {
+      "ETag": "\"ewnwxza7s1xse\""
     }
   },
   "stats": {
@@ -20256,9 +20266,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4942d9c050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4942da4e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4942da4cd0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f494371d940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f494371f820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f49436a3bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-08T09:18:06.587555+00:00",
+    "last_run": "2025-11-08T12:31:49.011027+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -20271,9 +20292,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 836.2737650001009,
-        "connect_ms": 182.64018099989698,
-        "response_ms": 1018.9139459999978,
+        "dns_ms": 384.17780699998616,
+        "connect_ms": 943.5111109999923,
+        "response_ms": 1327.6889179999785,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -20284,20 +20305,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa305217ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f49436a3bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 8807.616687000063,
-        "connect_ms": 0.0,
-        "response_ms": 778.9946110000301,
+        "dns_ms": 5195.3750160000145,
+        "connect_ms": 186.1385379999656,
+        "response_ms": 5381.51355399998,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 1368.6074959999814,
-        "connect_ms": 431.7058729999417,
-        "response_ms": 1800.3133689999231,
+        "dns_ms": 4931.181417999995,
+        "connect_ms": 0.0,
+        "response_ms": 1868.011915000011,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -20306,20 +20327,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "5fe37129f099a4e13e2f5547636c4157f4a221513fddec98a5f3e5032916475c",
+    "https://ardexpert.ru/article": "cbde2160ed34de7f991e6d035a708e00acdc88f5fa4914146c1931b10ccba10e",
     "https://www.gostinfo.ru/News/List": "b4ab788f26c689d5b6adaee9cf7e756a495ab0eeb34ab1473bf0fa849d752b9a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2539db27f5d80a489a71d7bddf3b6bf4dd6c9bce10af68f39994b3e8e971722d",
-    "https://eec.eaeunion.org/news/": "5502864fc84a20c07dc642a213e9675ef6c6b1b4c4c3037191881ead0b69f3c1",
+    "https://eec.eaeunion.org/news/": "4997d1f5df24145bff845b1b14389db643317dd280d4a4b2df43dc086f2a5676",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "8daade9ad6426c523919d44172050d9368de2fa0d36e8f21e77b5bdc5d68b050",
-    "https://www.metalinfo.ru/ru/news": "578c116c226a8179a91e3d63bbdecba0895a1a6fc3d8c6dae1eb3ca24ae8e9b9",
-    "https://www.pnp.ru/economics/": "dd605ed18892e49fc0b2336eb1721749943d1ba7c10d86a5cc1bc4073a3e8139",
-    "https://erzrf.ru/news/": "cb563ef9b02b553e7d2ec306f6ac1177b8a93dd5d117d80684e7c0cc118d9a55",
-    "https://ria-stk.ru/news/vse-novosti.php": "eeae4e8bfccf680765bb910b290eb60e2ea3956a557b0a8044e2fd1d5508c95e",
-    "http://government.ru/news/": "7cb15ec1b53766c26f7f62e5a3d548c4802a8e4814ea75c0793df21483870d87",
-    "https://stroygaz.ru/news/": "97538e246964d1ba7ca0f416a30a789fc021362d68a80b96ac6cab322b9ff998",
-    "https://realty.ria.ru/lenta/": "cd42ee833eadaf529476286dc9ac2ed96ef0c94e994068a56d604867e5af9858",
-    "https://rg.ru/tema/ekonomika": "d3240f74e5767184796402ade69c885722c2908ab7ef2afbf95c2ac9fdc0998a",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "6925581dd9acb7470166085adca55f4887e532cab5aedfc27c7ca49d7a526787",
+    "https://www.metalinfo.ru/ru/news": "e441d5b1b30350dc366ff099610b65eb1933207e0c729bfe9b321ba5056a7acc",
+    "https://www.pnp.ru/economics/": "978232946ddbeb478d1b4ce2ee1ef859a7c6169d55b4b1a825dd2efa2d9673a1",
+    "https://erzrf.ru/news/": "7dce7a77445841b715d19af0603ee56b07c770bb7912843a5c823f127d827121",
+    "https://ria-stk.ru/news/vse-novosti.php": "917b80c673c5596e1605bb49e6a808cdec5150455802d3bd322735ab6882ea6b",
+    "http://government.ru/news/": "08e4a4e1dc04ffb955b82e3e80adea5c1dbea9389cb4b854d910e62f86da64a8",
+    "https://stroygaz.ru/news/": "3bf142c67318016651260d61827644735ccd1ccecdfc6f16bb4fdbf17203f647",
+    "https://realty.ria.ru/lenta/": "91d75af72af08e8a8416e92303b564017e2fa7ee818c7e0a5eecbd7efd9959b7",
+    "https://rg.ru/tema/ekonomika": "fb91b0bdcc5513843280729ee709f534ad62c1d062c7a7eb78f3ccb6774ba55c",
     "http://ancb.ru/publication": "6cd74e71dbcc065544826bfa5870036e88744bd70323c29acaa1374b8cfa07d1",
     "https://notim.ru": "235e25b016fcc5e4c8a0e1478ea100d75cab50f0abeef3609a04624474c1320a",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -20457,6 +20478,7 @@
       "https://www.interfax-russia.ru/realty/news/putin-poruchil-rasshirit-usloviya-dalnevostochnoy-i-arkticheskoy-ipoteki"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/178377",
       "https://www.metalinfo.ru/ru/news/178358",
       "https://www.metalinfo.ru/ru/news/178370",
       "https://www.metalinfo.ru/ru/news/178353",
@@ -20475,8 +20497,7 @@
       "https://www.metalinfo.ru/ru/news/178344",
       "https://www.metalinfo.ru/ru/news/178355",
       "https://www.metalinfo.ru/ru/news/178352",
-      "https://www.metalinfo.ru/ru/news/178342",
-      "https://www.metalinfo.ru/ru/news/178320"
+      "https://www.metalinfo.ru/ru/news/178342"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -20627,6 +20648,9 @@
       "https://realty.ria.ru/20251106/brendy-2053172767.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/08/reg-urfo/samolet-iz-blagoveshchenska-v-moskvu-ekstrenno-sel-v-nizhnevartovske.html",
+      "https://rg.ru/2025/11/08/reg-cfo/sobianin-stroitelstvo-estakady-na-shosse-entuziastov-zavershitsia-v-2027-godu.html",
+      "https://rg.ru/2025/11/08/v-rossii-utverdili-perechen-ugroz-dlia-ustojchivosti-interneta.html",
       "https://rg.ru/2025/11/08/reg-ufo/parom-iz-trabzona-s-passazhirami-dvoe-sutok-stoit-v-more-u-porta-sochi.html",
       "https://rg.ru/2025/11/08/senator-gibatdinov-predlozhil-otmenit-moratorij-na-proverki-uk.html",
       "https://rg.ru/2025/11/08/reg-ufo/aviarejs-volgograd-hurgada-zaderzhivaetsia-bolee-chem-na-13-chasov.html",
@@ -20655,10 +20679,7 @@
       "https://rg.ru/2025/11/07/reg-ufo/na-krymskom-mostu-dva-voditelia-elektromobilej-poluchili-shtrafy.html",
       "https://rg.ru/2025/11/07/reg-ufo/vlasti-kubani-zaiavili-o-prezhdevremennosti-zapuska-paroma-iz-trabzona-v-sochi.html",
       "https://rg.ru/2025/11/07/cb-za-nedeliu-mezhdunarodnye-rezervy-rossii-upali-na-54-mlrd-dollarov.html",
-      "https://rg.ru/2025/11/07/chernaia-piatnica-v-rossii-2025-gde-luchshie-skidki-i-kak-ne-popast-na-akcii-fejki.html",
-      "https://rg.ru/2025/11/07/veteranam-boevyh-dejstvij-predlozhili-kompensirovat-polovinu-rashodov-na-zhku.html",
       "https://rg.ru/2025/11/07/ekspert-leonova-predlagaet-uvelichit-shtrafy-dlia-severnyh-zhkh-kompanij.html",
-      "https://rg.ru/2025/11/07/passazhiram-seabridge-rekomendovali-sohranit-dokumenty-dlia-polucheniia-kompensacii.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
       "https://rg.ru/2025/10/29/v-krymu-proshla-nauchnaia-nedelia-zdorovogo-dolgoletiia-i-personalizirovannoj-mediciny.html"
@@ -27162,7 +27183,11 @@
     "d0b4e04eada8836b3444eef5e43889d38da9a8c49da9c432e2bbab8f7402094e": "2025-11-08T12:17:00+03:00",
     "b781bfe2e902ec3b6187b8478161ae745de748dc749183254a2e084abcd88438": "2025-11-08T12:18:00+03:00",
     "079d01427520ad451ac0c2c5c9e3fbfb2239c6826633b67a48f3860de10913c9": "2025-11-08T12:18:00+03:00",
-    "40c1bdf3be8b186c351b9ef77acfcee22a58e55b3d82d0c5159aeb20967d8489": "2025-11-08T12:18:00+03:00"
+    "40c1bdf3be8b186c351b9ef77acfcee22a58e55b3d82d0c5159aeb20967d8489": "2025-11-08T12:18:00+03:00",
+    "470e5a8b69ce9f53db1bc464298f39a070ac30c92f362d0d6a8501b206e2f918": "2025-11-08T15:31:00+03:00",
+    "219ec4a3d6e27d688b0ad9dc3fae7b391644f1be740e946af7bf2435c065c55b": "2025-11-08T15:31:00+03:00",
+    "a44278f57056c545fc6c263a3bef5b738a9b0618e5bc89337d2d04591323e367": "2025-11-08T15:31:00+03:00",
+    "c2fac459b32eb08257ca1a9c905532b94377700d474d59c96b1e97043bfb20c2": "2025-11-08T15:31:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -27193,9 +27218,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa305293820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1762593397.4617262
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f494371f820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1762605018.8249876
       },
       "warmup_done": false,
       "last_success_path": null
@@ -27204,31 +27229,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "IVL09gWjR46R7xHz",
+          "value": "vtBisF4n33EM37ul",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762594657
+          "expires": 1762606282
         },
         {
           "name": "__ddg10_",
-          "value": "1762593457",
+          "value": "1762605082",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762594657
+          "expires": 1762606282
         },
         {
           "name": "__ddg9_",
-          "value": "172.208.153.2",
+          "value": "172.184.211.162",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762594657
+          "expires": 1762606282
+        },
+        {
+          "name": "__ddg1_",
+          "value": "HiHCkuTPfUCUsrV2CG5H",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1794141082
         },
         {
           "name": "PHPSESSID",
-          "value": "8cd2e8581a90e8105f7e15b424d261d9",
+          "value": "36c6e2f6f498ec3ad8bcf1a75015a3ac",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -27255,11 +27288,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "C32NjSRNMhZ7QCK2Q7mLo6OdC2C5z6vi",
+          "value": "v5NgfhkVZCeNcXU2sWHVMDSn1JRFeEf9",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762604262
+          "expires": 1762615891
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -27267,7 +27300,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1793697462
+          "expires": 1793709091
         }
       ],
       "failures": {
@@ -35294,7 +35327,12 @@
     "http://government.ru/news/56867": "http://government.ru/news/56867",
     "https://rg.ru/2025/11/08/reg-ufo/parom-iz-trabzona-s-passazhirami-dvoe-sutok-stoit-v-more-u-porta-sochi.html": "https://rg.ru/2025/11/08/reg-ufo/parom-iz-trabzona-s-passazhirami-dvoe-sutok-stoit-v-more-u-porta-sochi.html",
     "https://rg.ru/2025/11/08/senator-gibatdinov-predlozhil-otmenit-moratorij-na-proverki-uk.html": "https://rg.ru/2025/11/08/senator-gibatdinov-predlozhil-otmenit-moratorij-na-proverki-uk.html",
-    "https://rg.ru/2025/11/08/reg-ufo/aviarejs-volgograd-hurgada-zaderzhivaetsia-bolee-chem-na-13-chasov.html": "https://rg.ru/2025/11/08/reg-ufo/aviarejs-volgograd-hurgada-zaderzhivaetsia-bolee-chem-na-13-chasov.html"
+    "https://rg.ru/2025/11/08/reg-ufo/aviarejs-volgograd-hurgada-zaderzhivaetsia-bolee-chem-na-13-chasov.html": "https://rg.ru/2025/11/08/reg-ufo/aviarejs-volgograd-hurgada-zaderzhivaetsia-bolee-chem-na-13-chasov.html",
+    "https://www.metalinfo.ru/ru/news/178377": "http://www.metalinfo.ru/ru/news/178377",
+    "http://www.metalinfo.ru/ru/news/178377": "http://www.metalinfo.ru/ru/news/178377",
+    "https://rg.ru/2025/11/08/reg-urfo/samolet-iz-blagoveshchenska-v-moskvu-ekstrenno-sel-v-nizhnevartovske.html": "https://rg.ru/2025/11/08/reg-urfo/samolet-iz-blagoveshchenska-v-moskvu-ekstrenno-sel-v-nizhnevartovske.html",
+    "https://rg.ru/2025/11/08/reg-cfo/sobianin-stroitelstvo-estakady-na-shosse-entuziastov-zavershitsia-v-2027-godu.html": "https://rg.ru/2025/11/08/reg-cfo/sobianin-stroitelstvo-estakady-na-shosse-entuziastov-zavershitsia-v-2027-godu.html",
+    "https://rg.ru/2025/11/08/v-rossii-utverdili-perechen-ugroz-dlia-ustojchivosti-interneta.html": "https://rg.ru/2025/11/08/v-rossii-utverdili-perechen-ugroz-dlia-ustojchivosti-interneta.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -42026,7 +42064,11 @@
     "705464d9048c6361f7026b868edcfdb50d0af29d": "http://government.ru/news/56867",
     "c618737d1c39f8845dd14df7904d82bf2c7766a3": "https://rg.ru/2025/11/08/reg-ufo/parom-iz-trabzona-s-passazhirami-dvoe-sutok-stoit-v-more-u-porta-sochi.html",
     "5d78ac454096787e7f972b2b4aec8d669cb50b5b": "https://rg.ru/2025/11/08/senator-gibatdinov-predlozhil-otmenit-moratorij-na-proverki-uk.html",
-    "f765096d1f147db13d8462463393b3e57164be69": "https://rg.ru/2025/11/08/reg-ufo/aviarejs-volgograd-hurgada-zaderzhivaetsia-bolee-chem-na-13-chasov.html"
+    "f765096d1f147db13d8462463393b3e57164be69": "https://rg.ru/2025/11/08/reg-ufo/aviarejs-volgograd-hurgada-zaderzhivaetsia-bolee-chem-na-13-chasov.html",
+    "4640e6a8b13cb6bb4b92b7b4239b0641540f0a18": "http://www.metalinfo.ru/ru/news/178377",
+    "e1f1bd04508142f585484bafade92d2c083a9a17": "https://rg.ru/2025/11/08/reg-urfo/samolet-iz-blagoveshchenska-v-moskvu-ekstrenno-sel-v-nizhnevartovske.html",
+    "885baff397cf72bd2dbe55ac7387d14b22801ec1": "https://rg.ru/2025/11/08/reg-cfo/sobianin-stroitelstvo-estakady-na-shosse-entuziastov-zavershitsia-v-2027-godu.html",
+    "25d2bc42c5d25254809c7c623efda8edd8d6e940": "https://rg.ru/2025/11/08/v-rossii-utverdili-perechen-ugroz-dlia-ustojchivosti-interneta.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -50979,6 +51021,11 @@
     "http://government.ru/news/56867/": "d0b4e04eada8836b3444eef5e43889d38da9a8c49da9c432e2bbab8f7402094e",
     "https://rg.ru/2025/11/08/reg-ufo/parom-iz-trabzona-s-passazhirami-dvoe-sutok-stoit-v-more-u-porta-sochi.html": "b781bfe2e902ec3b6187b8478161ae745de748dc749183254a2e084abcd88438",
     "https://rg.ru/2025/11/08/senator-gibatdinov-predlozhil-otmenit-moratorij-na-proverki-uk.html": "079d01427520ad451ac0c2c5c9e3fbfb2239c6826633b67a48f3860de10913c9",
-    "https://rg.ru/2025/11/08/reg-ufo/aviarejs-volgograd-hurgada-zaderzhivaetsia-bolee-chem-na-13-chasov.html": "40c1bdf3be8b186c351b9ef77acfcee22a58e55b3d82d0c5159aeb20967d8489"
+    "https://rg.ru/2025/11/08/reg-ufo/aviarejs-volgograd-hurgada-zaderzhivaetsia-bolee-chem-na-13-chasov.html": "40c1bdf3be8b186c351b9ef77acfcee22a58e55b3d82d0c5159aeb20967d8489",
+    "http://www.metalinfo.ru/ru/news/178377": "470e5a8b69ce9f53db1bc464298f39a070ac30c92f362d0d6a8501b206e2f918",
+    "https://www.metalinfo.ru/ru/news/178377": "470e5a8b69ce9f53db1bc464298f39a070ac30c92f362d0d6a8501b206e2f918",
+    "https://rg.ru/2025/11/08/reg-urfo/samolet-iz-blagoveshchenska-v-moskvu-ekstrenno-sel-v-nizhnevartovske.html": "219ec4a3d6e27d688b0ad9dc3fae7b391644f1be740e946af7bf2435c065c55b",
+    "https://rg.ru/2025/11/08/reg-cfo/sobianin-stroitelstvo-estakady-na-shosse-entuziastov-zavershitsia-v-2027-godu.html": "a44278f57056c545fc6c263a3bef5b738a9b0618e5bc89337d2d04591323e367",
+    "https://rg.ru/2025/11/08/v-rossii-utverdili-perechen-ugroz-dlia-ustojchivosti-interneta.html": "c2fac459b32eb08257ca1a9c905532b94377700d474d59c96b1e97043bfb20c2"
   }
 }
