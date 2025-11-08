@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 08 Nov 2025 15:17:21 GMT"
+      "Last-Modified": "Sat, 08 Nov 2025 18:22:14 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1caac-KVlDDjJK9+Ilumcx2SSgc1QA90k\""
+      "ETag": "W/\"1c2e6-82S35/Y9FvEKBydPUqCdaFVNXrQ\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"2bxan8566r3he4\""
+      "ETag": "\"mepraagtj93hj0\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -16737,6 +16737,19 @@
     },
     "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html": {
       "ETag": "\"2e3ktsy9ww1o8s\""
+    },
+    "http://government.ru/news/56877/": {},
+    "https://rg.ru/2025/11/08/ekonomist-frolov-predupredil-ob-opasnostiah-perevoda-deneg-mezhdu-svoimi-schetami.html": {
+      "ETag": "\"of2j6g49ko1yaf\""
+    },
+    "https://rg.ru/2025/11/08/v-gd-vystupili-s-iniciativoj-zakrepleniia-semejnogo-biznesa-v-zakonodatelstve.html": {
+      "ETag": "\"ohdw10ysai200u\""
+    },
+    "https://rg.ru/2025/11/08/tatiana-kim-podelilas-kak-vychislit-dollarovogo-millionera.html": {
+      "ETag": "\"uuj4e952u1ola\""
+    },
+    "https://rg.ru/2025/11/08/rossiianam-rasskazali-na-chto-obrashchat-vnimanie-pri-vybore-puhovika.html": {
+      "ETag": "\"dsq48nji7a1tyl\""
     }
   },
   "stats": {
@@ -20301,9 +20314,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f780b75e850>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f780b75f250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f780b75f4d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f780b75f750>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f780b75f9d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-08T15:18:00.408028+00:00",
+    "last_run": "2025-11-08T18:22:01.515612+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -20316,56 +20334,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 734.3542959999922,
-        "connect_ms": 1382.4347309999894,
-        "response_ms": 2116.7890269999816,
+        "dns_ms": 248.7950039999305,
+        "connect_ms": 533.6738170000217,
+        "response_ms": 782.4688209999522,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f780c037bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 149.23960200007969,
+        "connect_ms": 1066.892257999939,
+        "response_ms": 1216.1318600000186,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 6002.494367999987,
-        "connect_ms": 192.88686400003007,
-        "response_ms": 6195.381232000017,
+        "dns_ms": 7846.995689999972,
+        "connect_ms": 0.0,
+        "response_ms": 4081.3691629999767,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f780b75f9d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 5260.211971999979,
+        "connect_ms": 0.0,
+        "response_ms": 1674.7928859999774,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "badee0d952afa775f53a70968c4d928ceb96a7b57ade3f1c0ab5765a700a8ce1",
+    "https://ardexpert.ru/article": "b7702682f8e9ef47baa3bac52f88d1c848bb04ceadae8ef4f7c55ff02f81503c",
     "https://www.gostinfo.ru/News/List": "b4ab788f26c689d5b6adaee9cf7e756a495ab0eeb34ab1473bf0fa849d752b9a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2539db27f5d80a489a71d7bddf3b6bf4dd6c9bce10af68f39994b3e8e971722d",
-    "https://eec.eaeunion.org/news/": "b977159306541e97dd872efdb161bdc16041fd8db1322998e73d70da0e670cde",
+    "https://eec.eaeunion.org/news/": "608beb3ca8a27883dceb41a33b79717071e3c655b2039f2c827e99d2e3bd6486",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "d0fab76cb7f1218a04e9397894ec2b6bfa9edc1caddb102f829911761bf938d0",
-    "https://www.metalinfo.ru/ru/news": "7f9040efb5a2f1b37fee46f8b04882e36b5ec9747da4d05c1f7b7f5205f1c983",
-    "https://www.pnp.ru/economics/": "e8180eb3be7b2acdcd0b7df35e7f043e08f6c59784ae1d99ea1acf406dd414dc",
-    "https://erzrf.ru/news/": "418459cbe57fa032e27b67578f3b50e1b25a5f36c3d025da8826e5146daa1d22",
-    "https://ria-stk.ru/news/vse-novosti.php": "da03bd58795ae1d2563d3244bdd5bb935fb843df3ec13f01798cc7ea64543eb0",
-    "http://government.ru/news/": "843cd7ca73e56e0736779ec50f460c7396b688eab9a845fbc200cfb0a153fd6a",
-    "https://stroygaz.ru/news/": "4460fe67864029588d3e3fb1c16c96372d251e5a850c7e54a21333b5b457f21e",
-    "https://realty.ria.ru/lenta/": "d283e752a7161ba4aefb77934dcc17d78e5811904adf11664a957b28bc4ba42c",
-    "https://rg.ru/tema/ekonomika": "9b4f0ba8fc84116286a361b3ff515117d0a8c0ada865c8343aadad020724c44b",
-    "http://ancb.ru/publication": "6cd74e71dbcc065544826bfa5870036e88744bd70323c29acaa1374b8cfa07d1",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "518ffbd8040afe27699b66fc47e3f84fec248da3aad5073b0ad5b27ec9a154e1",
+    "https://www.metalinfo.ru/ru/news": "c03f5334b2ba35338885ee82e60a5e6d65fe32a352b5e708521c20e8e11ac88b",
+    "https://www.pnp.ru/economics/": "20ec2b09f91e70df797556cf8b8033d7dd6b5bcceae7d493d0a3b6c08880d716",
+    "https://erzrf.ru/news/": "15e631785e81425988862165c5ac8788cf6e20eae57bfb63f957836c0258af2d",
+    "https://ria-stk.ru/news/vse-novosti.php": "0485072183bdd5acb53811d04d2262d55613eeee25b6043eb5bd9acf9baaa3a4",
+    "http://government.ru/news/": "91888ceaa2995620afb1e897446d2b16c184561f661383d4d6e69b4a8a9a1b26",
+    "https://stroygaz.ru/news/": "5377ceb7abe0ab05fdb50afd684c8a9e109f02a053994392a8074d16d7a4ef2f",
+    "https://realty.ria.ru/lenta/": "9c75f2456eee4da374a2d3273f3239f47a3af4a67733800fc8b8322beb73849c",
+    "https://rg.ru/tema/ekonomika": "1fbb8b53500904a60829b776c5b5b90b96de725b919cdf91409a8cc9784039c5",
+    "http://ancb.ru/publication": "3fd95cf7d15d1e722b4b510741ac5a0e9e8417be2c1f299fa3ae0f4db96d7795",
     "https://notim.ru": "235e25b016fcc5e4c8a0e1478ea100d75cab50f0abeef3609a04624474c1320a",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -20606,6 +20624,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245822&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56877/",
       "http://government.ru/news/56876/",
       "http://government.ru/news/56875/",
       "http://government.ru/news/56868/",
@@ -20624,8 +20643,7 @@
       "http://government.ru/news/56853/",
       "http://government.ru/news/56854/",
       "http://government.ru/news/56852/",
-      "http://government.ru/news/56849/",
-      "http://government.ru/news/56846/"
+      "http://government.ru/news/56849/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/v-gornolyzhnykh-kurortakh-vyros-obem-arendnogo-zhilya/",
@@ -20672,6 +20690,10 @@
       "https://realty.ria.ru/20251106/brendy-2053172767.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/08/ekonomist-frolov-predupredil-ob-opasnostiah-perevoda-deneg-mezhdu-svoimi-schetami.html",
+      "https://rg.ru/2025/11/08/v-gd-vystupili-s-iniciativoj-zakrepleniia-semejnogo-biznesa-v-zakonodatelstve.html",
+      "https://rg.ru/2025/11/08/tatiana-kim-podelilas-kak-vychislit-dollarovogo-millionera.html",
+      "https://rg.ru/2025/11/08/rossiianam-rasskazali-na-chto-obrashchat-vnimanie-pri-vybore-puhovika.html",
       "https://rg.ru/2025/11/08/nemkin-utverzhdenie-perechnia-ugroz-dlia-ustojchivosti-runeta-snizit-zavisimost.html",
       "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html",
       "https://rg.ru/2025/11/08/reg-urfo/samolet-iz-blagoveshchenska-v-moskvu-ekstrenno-sel-v-nizhnevartovske.html",
@@ -20700,10 +20722,6 @@
       "https://rg.ru/2025/11/07/ekspert-muradian-ia-ne-prognoziruiu-chto-kolichestvo-turistov-v-es-sokratitsia.html",
       "https://rg.ru/2025/11/07/rzhd-rasshirit-vozmozhnosti-servisa-list-ozhidaniia.html",
       "https://rg.ru/2025/11/07/reg-szfo/v-stranu-netaiushchego-snega-v-arktiku-prolozhat-chetyre-turisticheskih-koridora.html",
-      "https://rg.ru/2025/11/07/reg-cfo/sobianin-vtoroj-peshehodnyj-most-budet-postroen-v-mnevnikovskoj-pojme.html",
-      "https://rg.ru/2025/11/07/v-domodedovo-otkryli-tri-kuritelnye-komnaty.html",
-      "https://rg.ru/2025/11/07/reg-ufo/na-krymskom-mostu-dva-voditelia-elektromobilej-poluchili-shtrafy.html",
-      "https://rg.ru/2025/11/07/reg-ufo/vlasti-kubani-zaiavili-o-prezhdevremennosti-zapuska-paroma-iz-trabzona-v-sochi.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
       "https://rg.ru/2025/10/29/v-krymu-proshla-nauchnaia-nedelia-zdorovogo-dolgoletiia-i-personalizirovannoj-mediciny.html"
@@ -27214,7 +27232,12 @@
     "c2fac459b32eb08257ca1a9c905532b94377700d474d59c96b1e97043bfb20c2": "2025-11-08T15:31:00+03:00",
     "14e95846dffca40bd6d965694b02c0e1e74e17fdd8f29f0cf7ad7955c7dc6e2c": "2025-11-08T18:17:00+03:00",
     "a47d6cbfa81304abf1bc26658370d35cc85dd520e162bb58e83589d6021ee329": "2025-11-08T18:17:00+03:00",
-    "d0ec70cfb5de0e9851851a1e290a42d86ce181a81decd7e525b24a462da3f494": "2025-11-08T18:18:00+03:00"
+    "d0ec70cfb5de0e9851851a1e290a42d86ce181a81decd7e525b24a462da3f494": "2025-11-08T18:18:00+03:00",
+    "cb344d3de438cc71c45ce903e590f5efff8ea79188b0b582a66ba3b7603fb3c8": "2025-11-08T21:21:00+03:00",
+    "ac8e088d13fa30e19a9d758265a5dcce24c44543f661c0636633a6e8dce2a368": "2025-11-08T21:21:00+03:00",
+    "2847635598f916bca94dc69c941396181424c3dfafc724ccd52924039cc28bda": "2025-11-08T21:21:00+03:00",
+    "c7804edfa91b7eaf83f253484265f3ea862867ce0912019a9a913729c5dad62b": "2025-11-08T21:21:00+03:00",
+    "413d897f350572c789fa546675f0326ae3986ba0f125492357f0f56ce60913b1": "2025-11-08T21:22:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -27245,8 +27268,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f780c0af820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1762614949.9334977
       },
       "warmup_done": false,
@@ -27256,31 +27279,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "Hyy0XYrbwB4FhQhN",
+          "value": "PtD7v9J989MdeLgO",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762616206
+          "expires": 1762627299
         },
         {
           "name": "__ddg10_",
-          "value": "1762615006",
+          "value": "1762626099",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762616206
+          "expires": 1762627299
         },
         {
           "name": "__ddg9_",
-          "value": "20.169.74.98",
+          "value": "68.154.37.71",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762616206
+          "expires": 1762627299
+        },
+        {
+          "name": "__ddg1_",
+          "value": "MqX385B8ejCAxPSuWOwG",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1794162099
         },
         {
           "name": "PHPSESSID",
-          "value": "d88f9d03b27053ad8a9b0a160d640695",
+          "value": "75e324c985088c2acdf688c5fc37a133",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -27307,11 +27338,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "v5NgfhkVZCeNcXU2sWHVMDSn1JRFeEf9",
+          "value": "meSJ4bu2m5L0r0hCd5GCzvbc20Y56KB6",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762615891
+          "expires": 1762636907
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -27319,12 +27350,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1793709091
+          "expires": 1793730107
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f780b75f750>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1762615046.4200006
       },
       "warmup_done": false,
@@ -35354,7 +35385,12 @@
     "https://rg.ru/2025/11/08/v-rossii-utverdili-perechen-ugroz-dlia-ustojchivosti-interneta.html": "https://rg.ru/2025/11/08/v-rossii-utverdili-perechen-ugroz-dlia-ustojchivosti-interneta.html",
     "http://government.ru/news/56876": "http://government.ru/news/56876",
     "https://rg.ru/2025/11/08/nemkin-utverzhdenie-perechnia-ugroz-dlia-ustojchivosti-runeta-snizit-zavisimost.html": "https://rg.ru/2025/11/08/nemkin-utverzhdenie-perechnia-ugroz-dlia-ustojchivosti-runeta-snizit-zavisimost.html",
-    "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html": "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html"
+    "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html": "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html",
+    "http://government.ru/news/56877": "http://government.ru/news/56877",
+    "https://rg.ru/2025/11/08/ekonomist-frolov-predupredil-ob-opasnostiah-perevoda-deneg-mezhdu-svoimi-schetami.html": "https://rg.ru/2025/11/08/ekonomist-frolov-predupredil-ob-opasnostiah-perevoda-deneg-mezhdu-svoimi-schetami.html",
+    "https://rg.ru/2025/11/08/v-gd-vystupili-s-iniciativoj-zakrepleniia-semejnogo-biznesa-v-zakonodatelstve.html": "https://rg.ru/2025/11/08/v-gd-vystupili-s-iniciativoj-zakrepleniia-semejnogo-biznesa-v-zakonodatelstve.html",
+    "https://rg.ru/2025/11/08/tatiana-kim-podelilas-kak-vychislit-dollarovogo-millionera.html": "https://rg.ru/2025/11/08/tatiana-kim-podelilas-kak-vychislit-dollarovogo-millionera.html",
+    "https://rg.ru/2025/11/08/rossiianam-rasskazali-na-chto-obrashchat-vnimanie-pri-vybore-puhovika.html": "https://rg.ru/2025/11/08/rossiianam-rasskazali-na-chto-obrashchat-vnimanie-pri-vybore-puhovika.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -42093,7 +42129,12 @@
     "25d2bc42c5d25254809c7c623efda8edd8d6e940": "https://rg.ru/2025/11/08/v-rossii-utverdili-perechen-ugroz-dlia-ustojchivosti-interneta.html",
     "99fe64a7dfa811add60029bbf81b3526e0aa41a6": "http://government.ru/news/56876",
     "72deb8f70130ed979b2ab406272bd0c74c1cf8c6": "https://rg.ru/2025/11/08/nemkin-utverzhdenie-perechnia-ugroz-dlia-ustojchivosti-runeta-snizit-zavisimost.html",
-    "ac057d9648a4a2e632e5cbf564999d96a9cd17a2": "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html"
+    "ac057d9648a4a2e632e5cbf564999d96a9cd17a2": "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html",
+    "f56b16ab78ce20ba8e62603f95311af25a284c40": "http://government.ru/news/56877",
+    "1cf924cf8c0d95c5c890e3857de5cc428d2f883e": "https://rg.ru/2025/11/08/ekonomist-frolov-predupredil-ob-opasnostiah-perevoda-deneg-mezhdu-svoimi-schetami.html",
+    "4fc42f06867ea5bcbee64b79012cd394d629a5e5": "https://rg.ru/2025/11/08/v-gd-vystupili-s-iniciativoj-zakrepleniia-semejnogo-biznesa-v-zakonodatelstve.html",
+    "1c119cc854b105eae6d155cf5aa80255eabe9e18": "https://rg.ru/2025/11/08/tatiana-kim-podelilas-kak-vychislit-dollarovogo-millionera.html",
+    "24bc9e5c385275b7cd258ee65585b6f7d36c60ad": "https://rg.ru/2025/11/08/rossiianam-rasskazali-na-chto-obrashchat-vnimanie-pri-vybore-puhovika.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -51055,6 +51096,12 @@
     "http://government.ru/news/56876": "14e95846dffca40bd6d965694b02c0e1e74e17fdd8f29f0cf7ad7955c7dc6e2c",
     "http://government.ru/news/56876/": "14e95846dffca40bd6d965694b02c0e1e74e17fdd8f29f0cf7ad7955c7dc6e2c",
     "https://rg.ru/2025/11/08/nemkin-utverzhdenie-perechnia-ugroz-dlia-ustojchivosti-runeta-snizit-zavisimost.html": "a47d6cbfa81304abf1bc26658370d35cc85dd520e162bb58e83589d6021ee329",
-    "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html": "d0ec70cfb5de0e9851851a1e290a42d86ce181a81decd7e525b24a462da3f494"
+    "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html": "d0ec70cfb5de0e9851851a1e290a42d86ce181a81decd7e525b24a462da3f494",
+    "http://government.ru/news/56877": "cb344d3de438cc71c45ce903e590f5efff8ea79188b0b582a66ba3b7603fb3c8",
+    "http://government.ru/news/56877/": "cb344d3de438cc71c45ce903e590f5efff8ea79188b0b582a66ba3b7603fb3c8",
+    "https://rg.ru/2025/11/08/ekonomist-frolov-predupredil-ob-opasnostiah-perevoda-deneg-mezhdu-svoimi-schetami.html": "ac8e088d13fa30e19a9d758265a5dcce24c44543f661c0636633a6e8dce2a368",
+    "https://rg.ru/2025/11/08/v-gd-vystupili-s-iniciativoj-zakrepleniia-semejnogo-biznesa-v-zakonodatelstve.html": "2847635598f916bca94dc69c941396181424c3dfafc724ccd52924039cc28bda",
+    "https://rg.ru/2025/11/08/tatiana-kim-podelilas-kak-vychislit-dollarovogo-millionera.html": "c7804edfa91b7eaf83f253484265f3ea862867ce0912019a9a913729c5dad62b",
+    "https://rg.ru/2025/11/08/rossiianam-rasskazali-na-chto-obrashchat-vnimanie-pri-vybore-puhovika.html": "413d897f350572c789fa546675f0326ae3986ba0f125492357f0f56ce60913b1"
   }
 }
