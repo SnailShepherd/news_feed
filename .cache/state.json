@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 09 Nov 2025 12:30:17 GMT"
+      "Last-Modified": "Sun, 09 Nov 2025 15:15:19 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1ce49-NelSUWDfvR4EWxc8HMZzUbyHbd0\""
+      "ETag": "W/\"1ce49-6RjqWyBuOhOY28RBqSP2KgYWKLo\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"1272kc847633gcn\""
+      "ETag": "\"12v81rr6zi73gm2\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -16796,6 +16796,9 @@
     },
     "https://rg.ru/2025/11/09/chislo-turpoezdok-rossiian-v-knr-dostiglo-maksimalnogo-za-13-let-pokazatelia.html": {
       "ETag": "\"aofc73kay61ozq\""
+    },
+    "https://rg.ru/2025/11/09/opros-45-rabotnikov-ispytyvaiut-na-sebe-abiuz-so-storony-nachalstva.html": {
+      "ETag": "\"vb1ijmvpkn2hpz\""
     }
   },
   "stats": {
@@ -20419,9 +20422,14 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-09T12:30:04.738161+00:00",
+    "last_run": "2025-11-09T15:15:26.318653+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -20434,55 +20442,55 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 764.6016460000027,
-        "connect_ms": 283.5819679999928,
-        "response_ms": 1048.1836139999955,
+        "dns_ms": 368.8101399999937,
+        "connect_ms": 730.3121129999965,
+        "response_ms": 1099.1222529999902,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 4691.327234999989,
+        "dns_ms": 4794.829230000005,
         "connect_ms": 0.0,
-        "response_ms": 1856.217799999996,
+        "response_ms": 1082.2165250000069,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 9216.437630000002,
+        "dns_ms": 4584.967525999986,
         "connect_ms": 0.0,
-        "response_ms": 5494.392852999994,
+        "response_ms": 825.3081599999916,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 560.2835319999997,
-        "connect_ms": 262.4298460000034,
-        "response_ms": 822.7133780000031,
-        "attempts": 1,
+        "dns_ms": 0.6771190000165461,
+        "connect_ms": 6956.219502999971,
+        "response_ms": 6956.8966219999875,
+        "attempts": 2,
         "status": 200,
-        "error": null
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0)"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "41ba8aae7b27825e049f17262685c76eb2b2c872d87b233610f264d4cee09be3",
+    "https://ardexpert.ru/article": "aa7e59ebf0db5cd8afdf54528224f6053a205168b9b6c70e554bcc7023811b2a",
     "https://www.gostinfo.ru/News/List": "b4ab788f26c689d5b6adaee9cf7e756a495ab0eeb34ab1473bf0fa849d752b9a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2539db27f5d80a489a71d7bddf3b6bf4dd6c9bce10af68f39994b3e8e971722d",
-    "https://eec.eaeunion.org/news/": "6a5473e58d3bcb2712eef9ed236281ee26a23b2ad214300d4490f8a08d68eaab",
+    "https://eec.eaeunion.org/news/": "f92e1558e9b182b332e38c1085d4de8bf2aecf2d56628fd4f114d6a2f544cded",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "9b32e8c647746df6093f9bb98d69c47e1cea9d3b08f4d7f29499386ff76c771a",
-    "https://www.metalinfo.ru/ru/news": "3007dfda450f8b3a7002e3144ae31783d423b177eb9781052efdf04811e1c903",
-    "https://www.pnp.ru/economics/": "9509f8779d988d4cf88bb56df5bb5ea07a07a8c9f66ddf0f52234e3bc6bdf2c6",
-    "https://erzrf.ru/news/": "1af9bb0bdebcb72046e3df34dcb3592f8853a7d4b107aabccb484fbeda2a6557",
-    "https://ria-stk.ru/news/vse-novosti.php": "6481dc6e16bd547d8ed2b0fd136830bcb5257ddf8ea8cab748d02209d6cbb840",
-    "http://government.ru/news/": "0f52e5a4133a0ca07a309f013ce229af868d730e1f374e46e8ba10dc527664ff",
-    "https://stroygaz.ru/news/": "bfa4847103a90ac8ba6dfb2d73855524d593b250d73f2f05a49b6c6a853c6a40",
-    "https://realty.ria.ru/lenta/": "8738d5df882332d92ba180cb2be3b62338e46041d2d3e1bc6bb6e85249de4179",
-    "https://rg.ru/tema/ekonomika": "8e40864458c9d6cd827a0799f5ad6b11be5ad055d4c93e012fe287f16fad177a",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "711684ae2b4347d6307f0c814c8d084929d586ecd1778fdccf2bae44129a2e23",
+    "https://www.metalinfo.ru/ru/news": "c03f5334b2ba35338885ee82e60a5e6d65fe32a352b5e708521c20e8e11ac88b",
+    "https://www.pnp.ru/economics/": "1a11ffa3d287416e9b887b6ee31d01d16a291e1f1c0db60e3bfe311206feb2e7",
+    "https://erzrf.ru/news/": "018ba7ec8dbd09b411873bb56c98c3a22f38da44d25c80576bec99b379f1636d",
+    "https://ria-stk.ru/news/vse-novosti.php": "60108470d49e53eb62220bc6276161ec21f96e8440c054ad9b083eca52368c36",
+    "http://government.ru/news/": "dc52e3248238b44b9f3a05b5967b7beb8b8eaedca10da310ac65a04d00e011cb",
+    "https://stroygaz.ru/news/": "3ea9abeae673ca890f2393b82b3c56d17e025f9132d519f528fc0d78110d4527",
+    "https://realty.ria.ru/lenta/": "f4526ba23fffc6ab2009c4b886c74a4fc9c008a9ecc01c82cc92292c613b69fe",
+    "https://rg.ru/tema/ekonomika": "5d8c5640c59cfb86811020f1fd024240a01e592783197b55ae4c56c619a750cd",
     "http://ancb.ru/publication": "3fd95cf7d15d1e722b4b510741ac5a0e9e8417be2c1f299fa3ae0f4db96d7795",
     "https://notim.ru": "235e25b016fcc5e4c8a0e1478ea100d75cab50f0abeef3609a04624474c1320a",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -20790,6 +20798,7 @@
       "https://realty.ria.ru/20251106/brendy-2053172767.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/09/opros-45-rabotnikov-ispytyvaiut-na-sebe-abiuz-so-storony-nachalstva.html",
       "https://rg.ru/2025/11/09/v-roskachestve-raziasnili-mozhno-li-est-produkt-v-magazine-do-oplaty.html",
       "https://rg.ru/2025/11/09/chislo-turpoezdok-rossiian-v-knr-dostiglo-maksimalnogo-za-13-let-pokazatelia.html",
       "https://rg.ru/2025/11/09/rossiianam-rasskazali-gde-mozhno-obmeniat-starye-dollary.html",
@@ -20821,7 +20830,6 @@
       "https://rg.ru/2025/11/08/ekspert-asiaeva-vnimanie-monitoringa-ne-privlechet-summa-do-1-mln-rublej.html",
       "https://rg.ru/2025/11/08/stolichnyj-rejs-v-anadyr-iz-za-nepogody-ushel-na-zapasnoj-aerodrom-na-kamchatku.html",
       "https://rg.ru/2025/11/08/krizis-menedzher-rasskazal-na-chem-mozhno-sekonomit-pri-podgotovke-k-novomu-godu.html",
-      "https://rg.ru/2025/11/08/deputat-bessarab-novogodnie-kanikuly-rossiian-prodliatsia-do-12-ianvaria.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
       "https://rg.ru/2025/10/29/v-krymu-proshla-nauchnaia-nedelia-zdorovogo-dolgoletiia-i-personalizirovannoj-mediciny.html"
@@ -27352,7 +27360,8 @@
     "2decc6cae5cf73129938d92b3d1ea1a0e8228684df6bcf925502fab5db452940": "2025-11-09T15:29:00+03:00",
     "3c0f1e37606016153b0e8670f6c50348a78dc8880f0cb45960db9ef6de3c9d37": "2025-11-09T15:29:00+03:00",
     "eae4ab0e3d570ee5e8e84c166a86ddf0c1054d05c178e66ee422abba5808d711": "2025-11-09T15:30:00+03:00",
-    "d93bf619a10977f085db2f7bff7ebd4d6378da76dbeae5c96cebc7cffa696e47": "2025-11-09T15:30:00+03:00"
+    "d93bf619a10977f085db2f7bff7ebd4d6378da76dbeae5c96cebc7cffa696e47": "2025-11-09T15:30:00+03:00",
+    "92defab4d7e7fe33b9a8bb390a461c0d7a571087b6353e265f2d9cf310ba2f80": "2025-11-09T18:15:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -27394,39 +27403,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "BdgkquzM1YfUB5ec",
+          "value": "eCsI6CExdLQzkFpB",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762692582
+          "expires": 1762702484
         },
         {
           "name": "__ddg10_",
-          "value": "1762691382",
+          "value": "1762701284",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762692582
+          "expires": 1762702484
         },
         {
           "name": "__ddg9_",
-          "value": "52.225.25.49",
+          "value": "4.236.173.21",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762692582
-        },
-        {
-          "name": "__ddg1_",
-          "value": "Z2OEMEHi4zeeQc7Uxsd0",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1794227382
+          "expires": 1762702484
         },
         {
           "name": "PHPSESSID",
-          "value": "32d7d9f1991900f947e75c37557f40d7",
+          "value": "38382063ee187a68392cc37a94641762",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -27453,11 +27454,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "bPEvNKZRkLjEezHzoY0noiAl1FBTW5L3",
+          "value": "JjszOHXCoq3JuupR77h1v0tgK3OX0BBe",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762702185
+          "expires": 1762712119
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -27465,13 +27466,13 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1793795385
+          "expires": 1793805319
         }
       ],
       "failures": {
         "last_error": null,
         "consecutive": 0,
-        "last_ts": 1762659884.1320057
+        "last_ts": 1762701310.9886746
       },
       "warmup_done": false,
       "last_success_path": null
@@ -35520,7 +35521,8 @@
     "https://stroygaz.ru/news/infrastructure/pravitelstvo-profinansiruet-obnovlenie-dorozhnoy-infrastruktury-v-novykh-regionakh": "https://stroygaz.ru/news/infrastructure/pravitelstvo-profinansiruet-obnovlenie-dorozhnoy-infrastruktury-v-novykh-regionakh",
     "https://stroygaz.ru/news/infrastructure/vo-vladivostoke-dlya-filiala-mariinskogo-teatra-postroyat-dva-novykh-zala-": "https://stroygaz.ru/news/infrastructure/vo-vladivostoke-dlya-filiala-mariinskogo-teatra-postroyat-dva-novykh-zala-",
     "https://rg.ru/2025/11/09/v-roskachestve-raziasnili-mozhno-li-est-produkt-v-magazine-do-oplaty.html": "https://rg.ru/2025/11/09/v-roskachestve-raziasnili-mozhno-li-est-produkt-v-magazine-do-oplaty.html",
-    "https://rg.ru/2025/11/09/chislo-turpoezdok-rossiian-v-knr-dostiglo-maksimalnogo-za-13-let-pokazatelia.html": "https://rg.ru/2025/11/09/chislo-turpoezdok-rossiian-v-knr-dostiglo-maksimalnogo-za-13-let-pokazatelia.html"
+    "https://rg.ru/2025/11/09/chislo-turpoezdok-rossiian-v-knr-dostiglo-maksimalnogo-za-13-let-pokazatelia.html": "https://rg.ru/2025/11/09/chislo-turpoezdok-rossiian-v-knr-dostiglo-maksimalnogo-za-13-let-pokazatelia.html",
+    "https://rg.ru/2025/11/09/opros-45-rabotnikov-ispytyvaiut-na-sebe-abiuz-so-storony-nachalstva.html": "https://rg.ru/2025/11/09/opros-45-rabotnikov-ispytyvaiut-na-sebe-abiuz-so-storony-nachalstva.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -42279,7 +42281,8 @@
     "8a61793cf1d853636865010014332e73051d0869": "https://stroygaz.ru/news/infrastructure/pravitelstvo-profinansiruet-obnovlenie-dorozhnoy-infrastruktury-v-novykh-regionakh",
     "7e29ec8048a7e2a59cac15f19182ad30a8ef1425": "https://stroygaz.ru/news/infrastructure/vo-vladivostoke-dlya-filiala-mariinskogo-teatra-postroyat-dva-novykh-zala-",
     "caa875b757112ce020c66376b3d9b2b5d20bf2e7": "https://rg.ru/2025/11/09/v-roskachestve-raziasnili-mozhno-li-est-produkt-v-magazine-do-oplaty.html",
-    "49fd4210bb2bcfdf41e9ea223177903383613d7e": "https://rg.ru/2025/11/09/chislo-turpoezdok-rossiian-v-knr-dostiglo-maksimalnogo-za-13-let-pokazatelia.html"
+    "49fd4210bb2bcfdf41e9ea223177903383613d7e": "https://rg.ru/2025/11/09/chislo-turpoezdok-rossiian-v-knr-dostiglo-maksimalnogo-za-13-let-pokazatelia.html",
+    "071a419da1e5a78528afaa057ddbe42516f1d417": "https://rg.ru/2025/11/09/opros-45-rabotnikov-ispytyvaiut-na-sebe-abiuz-so-storony-nachalstva.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -51264,6 +51267,7 @@
     "https://stroygaz.ru/news/infrastructure/vo-vladivostoke-dlya-filiala-mariinskogo-teatra-postroyat-dva-novykh-zala-": "3c0f1e37606016153b0e8670f6c50348a78dc8880f0cb45960db9ef6de3c9d37",
     "https://stroygaz.ru/news/infrastructure/vo-vladivostoke-dlya-filiala-mariinskogo-teatra-postroyat-dva-novykh-zala-/": "3c0f1e37606016153b0e8670f6c50348a78dc8880f0cb45960db9ef6de3c9d37",
     "https://rg.ru/2025/11/09/v-roskachestve-raziasnili-mozhno-li-est-produkt-v-magazine-do-oplaty.html": "eae4ab0e3d570ee5e8e84c166a86ddf0c1054d05c178e66ee422abba5808d711",
-    "https://rg.ru/2025/11/09/chislo-turpoezdok-rossiian-v-knr-dostiglo-maksimalnogo-za-13-let-pokazatelia.html": "d93bf619a10977f085db2f7bff7ebd4d6378da76dbeae5c96cebc7cffa696e47"
+    "https://rg.ru/2025/11/09/chislo-turpoezdok-rossiian-v-knr-dostiglo-maksimalnogo-za-13-let-pokazatelia.html": "d93bf619a10977f085db2f7bff7ebd4d6378da76dbeae5c96cebc7cffa696e47",
+    "https://rg.ru/2025/11/09/opros-45-rabotnikov-ispytyvaiut-na-sebe-abiuz-so-storony-nachalstva.html": "92defab4d7e7fe33b9a8bb390a461c0d7a571087b6353e265f2d9cf310ba2f80"
   }
 }
