@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 09 Nov 2025 21:16:26 GMT"
+      "Last-Modified": "Mon, 10 Nov 2025 01:19:00 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1cca6-MFe2gHPvwa+gMu6RtkaJsU0rcCo\""
+      "ETag": "W/\"1cd31-ZvBDC9OHnRDRmx7XhDEhMww/a3E\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"6hropqsgw73p0b\""
+      "ETag": "\"16dotxe89sa3rfl\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -16829,6 +16829,9 @@
     },
     "https://rg.ru/2025/11/09/kazahstanskim-dalnobojshchikam-hotiat-uvelichit-srok-prebyvaniia-v-rossii.html": {
       "ETag": "\"apylcu6url1nto\""
+    },
+    "https://rg.ru/2025/11/10/treska-po-shvam.html": {
+      "ETag": "\"6qdqg9fl2p1v0l\""
     }
   },
   "stats": {
@@ -20473,9 +20476,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f688bc64050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f688bc68e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f688bc68cd0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f688c5d5940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f688c5d7820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f688c54bbf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-09T21:16:16.588213+00:00",
+    "last_run": "2025-11-10T01:18:35.062841+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -20488,9 +20502,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 399.05636100002084,
-        "connect_ms": 1105.2117689999648,
-        "response_ms": 1504.2681299999856,
+        "dns_ms": 507.50573600004145,
+        "connect_ms": 401.8565199999671,
+        "response_ms": 909.3622560000085,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -20501,20 +20515,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f288d15fad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f688c54bbf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 9271.579222000015,
+        "dns_ms": 8184.023559000025,
         "connect_ms": 0.0,
-        "response_ms": 700.5068459999961,
+        "response_ms": 4582.986462000008,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 385.9388939999917,
-        "connect_ms": 428.98220700001843,
-        "response_ms": 814.9211010000101,
+        "dns_ms": 753.7842179999643,
+        "connect_ms": 0.0,
+        "response_ms": 549.0839419999247,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -20523,20 +20537,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "172373d708a5eaea2c2135dd227f473e8aecc22511ae65ea7a6a690bb17df98d",
+    "https://ardexpert.ru/article": "117881154de1296c207844da6f1b1dc142407907fcb0617c7cdab3f5bfd94f0a",
     "https://www.gostinfo.ru/News/List": "b4ab788f26c689d5b6adaee9cf7e756a495ab0eeb34ab1473bf0fa849d752b9a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "2539db27f5d80a489a71d7bddf3b6bf4dd6c9bce10af68f39994b3e8e971722d",
-    "https://eec.eaeunion.org/news/": "d4f5e96caf7b359b653288947a6dae56116ce1670b1cf3ef0569f2ae70ac23a8",
+    "https://eec.eaeunion.org/news/": "ed69deb21bcea02a95510e17bfcd136a74a77cc8a2727d9fe45b6b457b5edbda",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "3a7be3243a61db87e7dfa8ae916a44e8720aa9c34f157c49a252ee641edd72e7",
-    "https://www.metalinfo.ru/ru/news": "52c982674df088150571ee7e04a0683fecbfee23e95d8f791d9b90ce58832ace",
-    "https://www.pnp.ru/economics/": "49eb17d733b74c61cb8cec00a7926b7654aa8229fe0adc5d16a3a5082c6cde45",
-    "https://erzrf.ru/news/": "6982ae61a23abc98e249027b42331d4b114af37525a47ef9deb5e2fb7e37092d",
-    "https://ria-stk.ru/news/vse-novosti.php": "e0cc99b435e44e0bf01c902d7f7004aae105a71ce876c1a3ad60bbd92bba56d3",
-    "http://government.ru/news/": "37c4c26c21537d00eb67680a55d961abf4252969ca60769832640741969257df",
-    "https://stroygaz.ru/news/": "fa7fdec4c2684864627a109aa5cfeccdebd5aa419bae1704f6a24a1683278615",
-    "https://realty.ria.ru/lenta/": "c1bb5900f4f5cbf211adc6b94877ddb0d07831da24a2cc01bcdeca93f686fd58",
-    "https://rg.ru/tema/ekonomika": "6132c13a8c3f81013da4ddbc315054f30943ac1de7138c81c695768c1471a8c2",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "81ac0b83e740c052cfeb1621502b6ac6f0b6b377bc17145186d0fc8d4f222226",
+    "https://www.metalinfo.ru/ru/news": "aba9089a28e243536456e421a6e3207a6c0e2b6adc288c3461ea3fd06789c275",
+    "https://www.pnp.ru/economics/": "63d3e619b393a858cb93e24224fd86bcf8fe3af0ab2376ee3282e4ffc441f715",
+    "https://erzrf.ru/news/": "fa4e2cca56a0a79f372dadfac8fd3ff3d528e4b12e4f56c35d2b82970b9a470a",
+    "https://ria-stk.ru/news/vse-novosti.php": "06276de46662b3760620995d00cac0e54b3baaaded2f81f7b447df1d19ae99ee",
+    "http://government.ru/news/": "12b1c833f15b0b6b1ecebd3764f3c20588f03deaa74c9f9d9e92eb48366261b1",
+    "https://stroygaz.ru/news/": "4f6cf5a1b79254d682ecec0c2540304655a07cc6b7385ad9bd8d128bf64cde3f",
+    "https://realty.ria.ru/lenta/": "ca949bdb1a71c299f47431e0f83fd27207002e1c17303cb25c305756a917e3c6",
+    "https://rg.ru/tema/ekonomika": "2bda8f1bc0e1bedcd4c62f607656611b9684d7217626c9050283fda958e3e3d4",
     "http://ancb.ru/publication": "6cd74e71dbcc065544826bfa5870036e88744bd70323c29acaa1374b8cfa07d1",
     "https://notim.ru": "235e25b016fcc5e4c8a0e1478ea100d75cab50f0abeef3609a04624474c1320a",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -20844,6 +20858,7 @@
       "https://realty.ria.ru/20251106/brendy-2053172767.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/10/treska-po-shvam.html",
       "https://rg.ru/documents/2025/11/10/fz413-dok.html",
       "https://rg.ru/2025/11/10/oborotnye-sredstva.html",
       "https://rg.ru/2025/11/10/v-gosdume-gotoviat-zakonoproekt-ob-indeksacii-zarplat-raz-v-god.html",
@@ -20875,7 +20890,6 @@
       "https://rg.ru/2025/11/08/rossiianam-rasskazali-na-chto-obrashchat-vnimanie-pri-vybore-puhovika.html",
       "https://rg.ru/2025/11/08/nemkin-utverzhdenie-perechnia-ugroz-dlia-ustojchivosti-runeta-snizit-zavisimost.html",
       "https://rg.ru/2025/11/08/v-iran-pribyl-pervyj-gruzovoj-poezd-iz-rossii.html",
-      "https://rg.ru/2025/11/08/reg-urfo/samolet-iz-blagoveshchenska-v-moskvu-ekstrenno-sel-v-nizhnevartovske.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
       "https://rg.ru/2025/10/29/v-krymu-proshla-nauchnaia-nedelia-zdorovogo-dolgoletiia-i-personalizirovannoj-mediciny.html"
@@ -27417,7 +27431,8 @@
     "331c3795be6e0bc2a4849e75a45baeddcf71e9f6f5ff738aaa1bacc883a61723": "2025-11-10T00:16:00+03:00",
     "28a7c2f5990ebb1dbb28fa8e558b2ba01d999dc5801797f4c4f9babb074021f5": "2025-11-10T00:16:00+03:00",
     "0edca28d3d5f3c916a917aae44aa59b44ec3d101c525a0a0ac091176ff94190b": "2025-11-10T00:16:00+03:00",
-    "6c555c847a3288438e50aebacfee80d35248756a17212e45e8505cb3151b7576": "2025-11-10T00:16:00+03:00"
+    "6c555c847a3288438e50aebacfee80d35248756a17212e45e8505cb3151b7576": "2025-11-10T00:16:00+03:00",
+    "2783eabc4934379f51d2d79137a175c7c7191e7d59229b1a652aa5b387d50161": "2025-11-10T04:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -27448,9 +27463,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f288d1eb820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1762722897.2370486
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f688c5d7820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1762737450.4603891
       },
       "warmup_done": false,
       "last_success_path": null
@@ -27459,31 +27474,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "7AB7fFtenxmoHXmz",
+          "value": "5qvweSe0Lmwhx92Q",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762724151
+          "expires": 1762738705
         },
         {
           "name": "__ddg10_",
-          "value": "1762722951",
+          "value": "1762737505",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762724151
+          "expires": 1762738705
         },
         {
           "name": "__ddg9_",
-          "value": "172.184.210.160",
+          "value": "172.174.167.20",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762724151
+          "expires": 1762738705
+        },
+        {
+          "name": "__ddg1_",
+          "value": "slQOK0rqY48PVqF0BrII",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1794273505
         },
         {
           "name": "PHPSESSID",
-          "value": "237abcb617b6b84de75f39ae86f25c29",
+          "value": "459df625a07ddceb6d08abe127a2489d",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -27510,11 +27533,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "A6K97gxE217yAhtIayHMxvynzUSRmyNp",
+          "value": "tgXBtb1kEDgFqYY3jI81OY0Cl5isauPb",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762733755
+          "expires": 1762748307
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -27522,7 +27545,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1793826955
+          "expires": 1793841507
         }
       ],
       "failures": {
@@ -35588,7 +35611,8 @@
     "https://rg.ru/2025/11/10/oborotnye-sredstva.html": "https://rg.ru/2025/11/10/oborotnye-sredstva.html",
     "https://rg.ru/2025/11/10/v-gosdume-gotoviat-zakonoproekt-ob-indeksacii-zarplat-raz-v-god.html": "https://rg.ru/2025/11/10/v-gosdume-gotoviat-zakonoproekt-ob-indeksacii-zarplat-raz-v-god.html",
     "https://rg.ru/2025/11/09/s-kvotoj-nadezhnee.html": "https://rg.ru/2025/11/09/s-kvotoj-nadezhnee.html",
-    "https://rg.ru/2025/11/09/kazahstanskim-dalnobojshchikam-hotiat-uvelichit-srok-prebyvaniia-v-rossii.html": "https://rg.ru/2025/11/09/kazahstanskim-dalnobojshchikam-hotiat-uvelichit-srok-prebyvaniia-v-rossii.html"
+    "https://rg.ru/2025/11/09/kazahstanskim-dalnobojshchikam-hotiat-uvelichit-srok-prebyvaniia-v-rossii.html": "https://rg.ru/2025/11/09/kazahstanskim-dalnobojshchikam-hotiat-uvelichit-srok-prebyvaniia-v-rossii.html",
+    "https://rg.ru/2025/11/10/treska-po-shvam.html": "https://rg.ru/2025/11/10/treska-po-shvam.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -42358,7 +42382,8 @@
     "a59d603839b9f941a0a7655933fb2d4297636190": "https://rg.ru/2025/11/10/oborotnye-sredstva.html",
     "b988ca201a2f2053e181ef261dde2bffa3e5e3d6": "https://rg.ru/2025/11/10/v-gosdume-gotoviat-zakonoproekt-ob-indeksacii-zarplat-raz-v-god.html",
     "22e8431f23061487c4909773550257784e8ebe68": "https://rg.ru/2025/11/09/s-kvotoj-nadezhnee.html",
-    "acd3aa49a7b2181e4b442d5041ba7a905cbe665b": "https://rg.ru/2025/11/09/kazahstanskim-dalnobojshchikam-hotiat-uvelichit-srok-prebyvaniia-v-rossii.html"
+    "acd3aa49a7b2181e4b442d5041ba7a905cbe665b": "https://rg.ru/2025/11/09/kazahstanskim-dalnobojshchikam-hotiat-uvelichit-srok-prebyvaniia-v-rossii.html",
+    "4b9d86bcf327aad90155b75af7a8acf027e53e1f": "https://rg.ru/2025/11/10/treska-po-shvam.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -51354,6 +51379,7 @@
     "https://rg.ru/2025/11/10/oborotnye-sredstva.html": "331c3795be6e0bc2a4849e75a45baeddcf71e9f6f5ff738aaa1bacc883a61723",
     "https://rg.ru/2025/11/10/v-gosdume-gotoviat-zakonoproekt-ob-indeksacii-zarplat-raz-v-god.html": "28a7c2f5990ebb1dbb28fa8e558b2ba01d999dc5801797f4c4f9babb074021f5",
     "https://rg.ru/2025/11/09/s-kvotoj-nadezhnee.html": "0edca28d3d5f3c916a917aae44aa59b44ec3d101c525a0a0ac091176ff94190b",
-    "https://rg.ru/2025/11/09/kazahstanskim-dalnobojshchikam-hotiat-uvelichit-srok-prebyvaniia-v-rossii.html": "6c555c847a3288438e50aebacfee80d35248756a17212e45e8505cb3151b7576"
+    "https://rg.ru/2025/11/09/kazahstanskim-dalnobojshchikam-hotiat-uvelichit-srok-prebyvaniia-v-rossii.html": "6c555c847a3288438e50aebacfee80d35248756a17212e45e8505cb3151b7576",
+    "https://rg.ru/2025/11/10/treska-po-shvam.html": "2783eabc4934379f51d2d79137a175c7c7191e7d59229b1a652aa5b387d50161"
   }
 }
