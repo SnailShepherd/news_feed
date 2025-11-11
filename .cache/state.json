@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 10 Nov 2025 21:17:42 GMT"
+      "Last-Modified": "Tue, 11 Nov 2025 01:17:19 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1cfea-eM1jyy+Iw2oksypBZCf9P0VvwDI\""
+      "ETag": "W/\"1cd44-k8qUofKFrHkgeI7Fh7GFmoTe5AE\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Mon, 10 Nov 2025 17:11:47 GMT"
+      "Last-Modified": "Mon, 10 Nov 2025 23:03:16 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"xm5ziv1way3x56\""
+      "ETag": "\"12rito3zem83v0d\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -17185,6 +17185,15 @@
     },
     "https://rg.ru/2025/11/10/reg-cfo/ot-kitaia-do-irlandii.html": {
       "ETag": "\"1293gkm9zhh1qz9\""
+    },
+    "https://realty.ria.ru/20251111/sklady-2053991316.html": {
+      "Last-Modified": "Tue, 11 Nov 2025 00:00:04 GMT"
+    },
+    "https://rg.ru/2025/11/11/analitik-bochkina-nazvala-podozritelnuiu-dlia-bankov-summu-perevoda.html": {
+      "ETag": "\"f79h647b511s22\""
+    },
+    "https://rg.ru/2025/11/11/tass-rossiian-zhdet-samaia-korotkaia-za-20-let-rabochaia-zima.html": {
+      "ETag": "\"17xmlcqt4o51pq7\""
     }
   },
   "stats": {
@@ -20941,9 +20950,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae2db3c050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae2db40e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae2db40cd0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae2e461940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae2e463820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae2e3e7bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-10T21:17:45.404064+00:00",
+    "last_run": "2025-11-11T01:17:03.591265+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -20956,9 +20976,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 396.47509100001344,
-        "connect_ms": 533.5089089999769,
-        "response_ms": 929.9839999999904,
+        "dns_ms": 680.5288060000123,
+        "connect_ms": 236.63804899999263,
+        "response_ms": 917.166855000005,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -20969,20 +20989,20 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3963833bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae2e3e7bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 8560.976116000005,
+        "dns_ms": 9631.851818999963,
         "connect_ms": 0.0,
-        "response_ms": 4881.634324000004,
+        "response_ms": 5557.20679999996,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.5785419999710939,
-        "connect_ms": 424.23347699997294,
-        "response_ms": 424.81201899994403,
+        "dns_ms": 519.252650999988,
+        "connect_ms": 170.4489709999848,
+        "response_ms": 689.7016219999728,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -20991,20 +21011,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "8970f0816eae35d1ce6a6fe1ba481c496a3e19bac1377d290f61e1263e7771b3",
+    "https://ardexpert.ru/article": "90cc56eea47f8576c8ddecaea30a010f88bf74e6ebcd9df8f37d8c0d70c4822c",
     "https://www.gostinfo.ru/News/List": "b4ab788f26c689d5b6adaee9cf7e756a495ab0eeb34ab1473bf0fa849d752b9a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "ab75730fb956e668c36ef0712b97effb8df23c2c1e03af0c4dec0354ff98749c",
-    "https://eec.eaeunion.org/news/": "b043478839141327811ea49a231ee8fdb08e98eeb125da5cd1368835c53a2db0",
+    "https://eec.eaeunion.org/news/": "a290d9667e187b3ac7db453d9eded695508718b09328cb74e10d89e33dbd7480",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "97fb27449339e984c370ef1977153c7719b8f85b5e92d5163ac0c92854d0e8c3",
-    "https://www.metalinfo.ru/ru/news": "bc8ed782b8b055a4f9b73452b66bd14e03fd23580fabe843325e82f4ed2ae7b5",
-    "https://www.pnp.ru/economics/": "73098822c766784c6a8b9a04ddf6728a842f0a820cc552d0a93281c742deda07",
-    "https://erzrf.ru/news/": "fe6c6316c29fa4465037493802739b89c0c79f62197a309708324f61d2e111ce",
-    "https://ria-stk.ru/news/vse-novosti.php": "f189d28d6261379eea70ec1e30ce2a2afb98290346d0c6473d5e7ffcfd9bee22",
-    "http://government.ru/news/": "f08d7786830c5694b075c9b59697a4729e83f467ce0c597c3bbe1747e3661313",
-    "https://stroygaz.ru/news/": "f1c1dcaf3732dfa3fe9e469f7146a8a9080ae67fad637b797d7fa95f83390689",
-    "https://realty.ria.ru/lenta/": "61d3c164e9d0f8f6d1875a22e2d0ebf5e7f565818cb3a02460cabac8e823297c",
-    "https://rg.ru/tema/ekonomika": "4590f2b89932e34026114191c7714bd97c7f9bf204f1ce95f2a69f5953842484",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "62c7a626a048ae6f8ddd6eeadb09ccf668a76af9aa038754c2593ce7c9abc9bd",
+    "https://www.metalinfo.ru/ru/news": "57c59592b815223a4788ac961838a437a373c6c33d1f59321197df41f65b7713",
+    "https://www.pnp.ru/economics/": "5832b6f615b13ca14d1b2e1cd47f5724006b3ff034f04f8d5d8f41f8edbb9b1d",
+    "https://erzrf.ru/news/": "40b98432bbbf8747ed012a7e8f540e295d9ad50390fc900923ffe0024ab763b5",
+    "https://ria-stk.ru/news/vse-novosti.php": "841734abbac148f8f34d1c5178373db6cc6e0ef5d6410c2f773a56f57c194639",
+    "http://government.ru/news/": "614062b48a04e87c16bc74e6be718333fca5ad8e1056f0625062b6adae571cb1",
+    "https://stroygaz.ru/news/": "5323169e023452abe54a05374f55b8ebfc782ceee43fb9785642ea4e27d11ef1",
+    "https://realty.ria.ru/lenta/": "42f405337c39f818679c09105e20bb554307a61b472b9bd9c8c63a0ec2b9d3df",
+    "https://rg.ru/tema/ekonomika": "80f495ed6d16cbd8faa9df1175636f34bde231841a845dbccb4b5f707f53d24b",
     "http://ancb.ru/publication": "6cd74e71dbcc065544826bfa5870036e88744bd70323c29acaa1374b8cfa07d1",
     "https://notim.ru": "235e25b016fcc5e4c8a0e1478ea100d75cab50f0abeef3609a04624474c1320a",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -21290,6 +21310,7 @@
       "https://stroygaz.ru/news/zkh/v-rossii-snizilsya-srok-ustraneniya-avariy-v-zhkkh-/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251111/sklady-2053991316.html",
       "https://realty.ria.ru/20251110/moszhilinspektsija-2053999291.html",
       "https://realty.ria.ru/20251110/stoimost-2053981034.html",
       "https://realty.ria.ru/20251110/eksperty-2053973423.html",
@@ -21308,10 +21329,11 @@
       "https://realty.ria.ru/20251107/etalon-2053529575.html",
       "https://realty.ria.ru/20251107/krym-2053478855.html",
       "https://realty.ria.ru/20251107/brusnika-2053462346.html",
-      "https://realty.ria.ru/20251107/rosseti-2053437471.html",
-      "https://realty.ria.ru/20251107/shojgu-2053421641.html"
+      "https://realty.ria.ru/20251107/rosseti-2053437471.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/11/analitik-bochkina-nazvala-podozritelnuiu-dlia-bankov-summu-perevoda.html",
+      "https://rg.ru/2025/11/11/tass-rossiian-zhdet-samaia-korotkaia-za-20-let-rabochaia-zima.html",
       "https://rg.ru/2025/11/11/nevinnyj-vopros.html",
       "https://rg.ru/2025/11/10/zdorovye-summy.html",
       "https://rg.ru/2025/11/10/reg-cfo/zelenyj-gorit-dolshe.html",
@@ -21341,8 +21363,6 @@
       "https://rg.ru/2025/11/10/putin-na-primere-vzhuha-otmetil-sobstvennoe-razvitie-tehnologij-v-rossii.html",
       "https://rg.ru/2025/11/10/tass-mcdonalds-zaregistriroval-v-rossii-sem-tovarnyh-znakov.html",
       "https://rg.ru/2025/11/10/gref-vydacha-ipoteki-v-sberbanke-v-2025-godu-snizitsia-na-5-7.html",
-      "https://rg.ru/2025/11/10/manturov-ozvuchil-prioritety-sotrudnichestva-gosudarstv-odkb-v-2026-godu.html",
-      "https://rg.ru/2025/11/10/reo-bolee-6-tysiach-musorovozov-v-rossii-nuzhno-obnovit.html",
       "https://rg.ru/2025/11/10/peterburgskij-politeh-podgotovka-tehnologicheskih-liderov-budushchego.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
@@ -28071,7 +28091,10 @@
     "15850bf40856a806e8ac22e2622a5bcd1f1bd0913802facb3e64da1d4d04535a": "2025-11-11T00:17:00+03:00",
     "081045ed3dcc85a84eba9591ffc438df7fcb8e7cef35963df4bde29698930ce4": "2025-11-11T00:17:00+03:00",
     "5029adb61cc2d53965a272dc13cba987d99f766e3404295c70567eba7fa446cd": "2025-11-11T00:17:00+03:00",
-    "2e271f0e9f299c8ec5d0019f63aa970976a2803311814130235bee85f93e4af4": "2025-11-11T00:17:00+03:00"
+    "2e271f0e9f299c8ec5d0019f63aa970976a2803311814130235bee85f93e4af4": "2025-11-11T00:17:00+03:00",
+    "8521af0993ff5bc2a67c9ffecef744915a6c15e614606b242043335e3d9568cb": "2025-11-11T04:16:00+03:00",
+    "78930b4c22e5ffff9c3ffa92706f11a22f8c69e7efd2cea58873dd51a6a7e78d": "2025-11-11T04:17:00+03:00",
+    "f25ff8de0d2cda25702fd63005af5a61dd133808c17b9283fb1ff389cd06bc3e": "2025-11-11T04:17:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -28102,9 +28125,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f39638ab820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 45,
-        "last_ts": 1762809371.6339912
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae2e463820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 50,
+        "last_ts": 1762823747.4139802
       },
       "warmup_done": false,
       "last_success_path": null
@@ -28113,31 +28136,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "wdU0f4DP2Kf02ngL",
+          "value": "NC8WqhNaXOYjSfnF",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762810627
+          "expires": 1762825004
         },
         {
           "name": "__ddg10_",
-          "value": "1762809427",
+          "value": "1762823804",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762810627
+          "expires": 1762825004
         },
         {
           "name": "__ddg9_",
-          "value": "20.81.158.149",
+          "value": "172.215.209.176",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762810627
+          "expires": 1762825004
+        },
+        {
+          "name": "__ddg1_",
+          "value": "wnNVq6GXgLZ770Vyw82k",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1794359804
         },
         {
           "name": "PHPSESSID",
-          "value": "789f2466d8b182c821b39c542e870211",
+          "value": "068059682d3c88a2d8fb5667bb1bf548",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -28164,11 +28195,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "VWhUZ6dllLCnDfJaM8CdZkBqwMN0xtsX",
+          "value": "0MTZlxxTPHup8Sa0Y6lXHq2jod9dKrPl",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762820233
+          "expires": 1762834609
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -28176,7 +28207,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1793913433
+          "expires": 1793927809
         }
       ],
       "failures": {
@@ -36489,7 +36520,10 @@
     "https://rg.ru/2025/11/10/vedomosti-kabmin-podderzhal-zapret-priema-stavok-s-kreditnyh-kart.html": "https://rg.ru/2025/11/10/vedomosti-kabmin-podderzhal-zapret-priema-stavok-s-kreditnyh-kart.html",
     "https://rg.ru/2025/11/10/rynok-realizoval-mechty-utopistov-no-silno-po-svoemu.html": "https://rg.ru/2025/11/10/rynok-realizoval-mechty-utopistov-no-silno-po-svoemu.html",
     "https://rg.ru/2025/11/10/gref-prishel-k-putinu-s-umnym-kolcom-na-ruke.html": "https://rg.ru/2025/11/10/gref-prishel-k-putinu-s-umnym-kolcom-na-ruke.html",
-    "https://rg.ru/2025/11/10/reg-cfo/ot-kitaia-do-irlandii.html": "https://rg.ru/2025/11/10/reg-cfo/ot-kitaia-do-irlandii.html"
+    "https://rg.ru/2025/11/10/reg-cfo/ot-kitaia-do-irlandii.html": "https://rg.ru/2025/11/10/reg-cfo/ot-kitaia-do-irlandii.html",
+    "https://realty.ria.ru/20251111/sklady-2053991316.html": "https://realty.ria.ru/20251111/sklady-2053991316.html",
+    "https://rg.ru/2025/11/11/analitik-bochkina-nazvala-podozritelnuiu-dlia-bankov-summu-perevoda.html": "https://rg.ru/2025/11/11/analitik-bochkina-nazvala-podozritelnuiu-dlia-bankov-summu-perevoda.html",
+    "https://rg.ru/2025/11/11/tass-rossiian-zhdet-samaia-korotkaia-za-20-let-rabochaia-zima.html": "https://rg.ru/2025/11/11/tass-rossiian-zhdet-samaia-korotkaia-za-20-let-rabochaia-zima.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -43445,7 +43479,10 @@
     "4de6a63df267161f00929ab8dd4c67962f6a0eaf": "https://rg.ru/2025/11/10/vedomosti-kabmin-podderzhal-zapret-priema-stavok-s-kreditnyh-kart.html",
     "958d596fbfe4501fdb9542eb1ab72ea96f668184": "https://rg.ru/2025/11/10/rynok-realizoval-mechty-utopistov-no-silno-po-svoemu.html",
     "3a5ada4155e3c42e55b901c035efa61ab7a4d128": "https://rg.ru/2025/11/10/gref-prishel-k-putinu-s-umnym-kolcom-na-ruke.html",
-    "1ba4e7719ce827b733247782157111c663f6183a": "https://rg.ru/2025/11/10/reg-cfo/ot-kitaia-do-irlandii.html"
+    "1ba4e7719ce827b733247782157111c663f6183a": "https://rg.ru/2025/11/10/reg-cfo/ot-kitaia-do-irlandii.html",
+    "837946736e95a79a722555e935fd8d6ebc438650": "https://realty.ria.ru/20251111/sklady-2053991316.html",
+    "142eaafe2b3e07be21e85ffe08f5ddd304086fbd": "https://rg.ru/2025/11/11/analitik-bochkina-nazvala-podozritelnuiu-dlia-bankov-summu-perevoda.html",
+    "1e9db5fd8266f09e584122f15171d57eb1f16b0c": "https://rg.ru/2025/11/11/tass-rossiian-zhdet-samaia-korotkaia-za-20-let-rabochaia-zima.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -52717,6 +52754,9 @@
     "https://rg.ru/2025/11/10/vedomosti-kabmin-podderzhal-zapret-priema-stavok-s-kreditnyh-kart.html": "15850bf40856a806e8ac22e2622a5bcd1f1bd0913802facb3e64da1d4d04535a",
     "https://rg.ru/2025/11/10/rynok-realizoval-mechty-utopistov-no-silno-po-svoemu.html": "081045ed3dcc85a84eba9591ffc438df7fcb8e7cef35963df4bde29698930ce4",
     "https://rg.ru/2025/11/10/gref-prishel-k-putinu-s-umnym-kolcom-na-ruke.html": "5029adb61cc2d53965a272dc13cba987d99f766e3404295c70567eba7fa446cd",
-    "https://rg.ru/2025/11/10/reg-cfo/ot-kitaia-do-irlandii.html": "2e271f0e9f299c8ec5d0019f63aa970976a2803311814130235bee85f93e4af4"
+    "https://rg.ru/2025/11/10/reg-cfo/ot-kitaia-do-irlandii.html": "2e271f0e9f299c8ec5d0019f63aa970976a2803311814130235bee85f93e4af4",
+    "https://realty.ria.ru/20251111/sklady-2053991316.html": "8521af0993ff5bc2a67c9ffecef744915a6c15e614606b242043335e3d9568cb",
+    "https://rg.ru/2025/11/11/analitik-bochkina-nazvala-podozritelnuiu-dlia-bankov-summu-perevoda.html": "78930b4c22e5ffff9c3ffa92706f11a22f8c69e7efd2cea58873dd51a6a7e78d",
+    "https://rg.ru/2025/11/11/tass-rossiian-zhdet-samaia-korotkaia-za-20-let-rabochaia-zima.html": "f25ff8de0d2cda25702fd63005af5a61dd133808c17b9283fb1ff389cd06bc3e"
   }
 }
