@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 11 Nov 2025 18:26:06 GMT"
+      "Last-Modified": "Tue, 11 Nov 2025 21:16:37 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1c65c-tqFgZCVyvn8z8L+cAg3XMiP5Qr0\""
+      "ETag": "W/\"1c7fb-9id3Z+2qpioEJAyw/niPO86ZgC8\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"s0hogdcujy3u92\""
+      "ETag": "\"vvmbs19vyy42ke\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -17635,6 +17635,23 @@
     },
     "https://rg.ru/2025/11/11/pod-devizom-poleznoe.html": {
       "ETag": "\"j48dsl38c23vo\""
+    },
+    "http://ancb.ru/publication/read/20430": {},
+    "http://government.ru/news/56903/": {},
+    "https://stroygaz.ru/news/kadry/stroygazeta-pozdravlyaet-koordinatora-nostroy-po-dfo-aykhala-gabysheva-s-dnem-rozhdeniya/": {
+      "Last-Modified": "Tue, 11 Nov 2025 13:50:14 GMT"
+    },
+    "https://rg.ru/2025/11/11/igra-v-perevodnogo.html": {
+      "ETag": "\"14vez4h0mb222c2\""
+    },
+    "https://rg.ru/2025/11/11/reg-cfo/stoianka-bez-opasnosti.html": {
+      "ETag": "\"oqd7ipgvit1v4z\""
+    },
+    "https://rg.ru/2025/11/11/reg-cfo/kvartiry-s-modnym-remontom-sdaiutsia-vdvoe-dorozhe.html": {
+      "ETag": "\"9y5v4xp6gb1hq8\""
+    },
+    "https://rg.ru/2025/11/11/rashody-biudzheta-na-nacproekty-k-noiabriu-predvaritelno-sostavili-46-trln-rublej.html": {
+      "ETag": "\"f2crqzax7q1tr1\""
     }
   },
   "stats": {
@@ -21503,9 +21520,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfc6bc3750>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfc74edf90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfc63b42d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfc63b4550>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfc63b47d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-11T18:26:43.341079+00:00",
+    "last_run": "2025-11-11T21:16:33.977537+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -21518,56 +21540,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 613.6318009999968,
-        "connect_ms": 728.3841560000042,
-        "response_ms": 1342.015957000001,
+        "dns_ms": 392.7975930000116,
+        "connect_ms": 938.074438000001,
+        "response_ms": 1330.8720310000126,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbfc743bbf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 195.32393800000136,
+        "connect_ms": 939.1853079999919,
+        "response_ms": 1134.5092459999933,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 9620.051148000017,
+        "dns_ms": 8480.806171000011,
         "connect_ms": 0.0,
-        "response_ms": 846.6790730000184,
+        "response_ms": 4334.920208999989,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfc63b47d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 4405.927087999999,
+        "connect_ms": 0.0,
+        "response_ms": 827.2592799999927,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "b4048f86c5ed786adbdaf8e05c477b8d426da1df6bcdb069ad695cfc15afcfaa",
+    "https://ardexpert.ru/article": "036bc10ccc1eb5701eecf025b69210826e498a92b29b1a1a2df5105261771de4",
     "https://www.gostinfo.ru/News/List": "b4ab788f26c689d5b6adaee9cf7e756a495ab0eeb34ab1473bf0fa849d752b9a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "ab75730fb956e668c36ef0712b97effb8df23c2c1e03af0c4dec0354ff98749c",
-    "https://eec.eaeunion.org/news/": "7595dcb3deb3dffd9c9f18cf7d4506769bc2a1b2882e4c7ca5be16937a0d20aa",
+    "https://eec.eaeunion.org/news/": "2856a9c7b71854f92e3f9eac03c4d80aa93f55fbffbb910791659a5f393b11e4",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "3caaea2609d6d23fad032a820612a26468e5b7849f28828300be2a969a227347",
-    "https://www.metalinfo.ru/ru/news": "3b62379b7aecd51d61023063ba92e4345d9d56965478d943f03320fb73b8887e",
-    "https://www.pnp.ru/economics/": "2b4c38b116034f646eefda35dc04931bc409f93c09ba1ac1b90e461edaaca998",
-    "https://erzrf.ru/news/": "17f955e7d8201714a6f2952b719fd450f088e98089cd7524d9a3f3956c2a8131",
-    "https://ria-stk.ru/news/vse-novosti.php": "6d11df0f4b63b4f05d414e2bbcde02e3d12cfae3557574ab3cc418452a090bbb",
-    "http://government.ru/news/": "fe94f52407103b21ee5c6d9e67842eb0393cfc81a5b4d54112039058a9a36788",
-    "https://stroygaz.ru/news/": "112c8e70dd35ac74e31c7b09959ef8e0ea80b92e7f8d0d3ac569584e1abbc5be",
-    "https://realty.ria.ru/lenta/": "6f581c31e4cea977ce44f9506f342c3cabfd99a1e11d6f48c3970cb10988d12e",
-    "https://rg.ru/tema/ekonomika": "57f4b48b772855e1677bee9f025ad9063260c73dca633f228e21bfacbd7c412b",
-    "http://ancb.ru/publication": "67483fdc22c5f818c946001a807d8386cbafb1f72fc816b06968d8f075e8290c",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "34d769a0ceb6b63f2f25fb532a2a3b0a1584e9205833892529d4b9b7ecd33152",
+    "https://www.metalinfo.ru/ru/news": "242e6371d4a5199aa8bec7d9daccc8fea0212a502599735d5ab225519f14c3a5",
+    "https://www.pnp.ru/economics/": "c156f8544e00b0bf389ce37fda03d6a5ae4b00e010821b2bf6a7fdf73792be26",
+    "https://erzrf.ru/news/": "0af211c4e0f019eff62bad749eb96a34f7577715d003218408c70fc1da5d14e0",
+    "https://ria-stk.ru/news/vse-novosti.php": "0e56d0d8c172d78bfdbd06a0e80d0850d413663e573ec4bbbbfafc3cb85bfe51",
+    "http://government.ru/news/": "6b39c46a04f22419b3c13bedf8ffecf103905d184b8db2e4f7b21f13d24efe20",
+    "https://stroygaz.ru/news/": "b58a1bf5e3dc527382dacd11d49732fc2c88a42962e87b71ae70b4a05f82eb39",
+    "https://realty.ria.ru/lenta/": "880e1a9587ef9959fd01323bc0591fd486d1cff93f413ef10c956f17f59f6161",
+    "https://rg.ru/tema/ekonomika": "513c779bd9d505ad5a7eafa5a43c471497577cde8c146f45ffdf3f6b093caa37",
+    "http://ancb.ru/publication": "3784ecbf3bae87efdca14bd52df6474b4a656b8146784f80b3316748576cc3a3",
     "https://notim.ru": "235e25b016fcc5e4c8a0e1478ea100d75cab50f0abeef3609a04624474c1320a",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -21808,6 +21830,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=245869&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/56903/",
       "http://government.ru/news/56900/",
       "http://government.ru/news/56898/",
       "http://government.ru/news/56896/",
@@ -21826,10 +21849,10 @@
       "http://government.ru/news/56883/",
       "http://government.ru/news/56880/",
       "http://government.ru/news/56882/",
-      "http://government.ru/news/56879/",
-      "http://government.ru/news/56873/"
+      "http://government.ru/news/56879/"
     ],
     "Стройгаз.ру": [
+      "https://stroygaz.ru/news/kadry/stroygazeta-pozdravlyaet-koordinatora-nostroy-po-dfo-aykhala-gabysheva-s-dnem-rozhdeniya/",
       "https://stroygaz.ru/news/commercial/podschitana-obespechennost-dvukh-stolits-torgovymi-tsentrami/",
       "https://stroygaz.ru/news/commercial/v-moskve-skladskoy-rynok-prodemonstriroval-rost-spekulyativnogo-stroitelstva/",
       "https://stroygaz.ru/news/regulation/podved-minstroya-razrabotal-turisticheskie-skhemy-dlya-vossoedinennykh-regionov/",
@@ -21848,8 +21871,7 @@
       "https://stroygaz.ru/news/info-partners-news/bfl-design-forum-obedinit-vedushchikh-professionalov-v-sfere-dizayna-developmenta-i-kreativnykh-indu/",
       "https://stroygaz.ru/news/dwelling/chetvert-sdelok-v-novostroykakh-novoy-moskvy-prikhoditsya-na-molodezh/",
       "https://stroygaz.ru/news/dwelling/kvadratnyy-metr-na-pervichnom-rynke-moskovskoy-oblasti-podorozhal-na-101-za-pyat-let-/",
-      "https://stroygaz.ru/news/dwelling/krupnyy-proekt-apartamentov-gotovitsya-k-sdache-v-peterburge/",
-      "https://stroygaz.ru/news/materials/v-novyy-zavod-podmoskovya-investiruyut-3-milliarda-rubley-/"
+      "https://stroygaz.ru/news/dwelling/krupnyy-proekt-apartamentov-gotovitsya-k-sdache-v-peterburge/"
     ],
     "РИА Недвижимость: лента": [
       "https://realty.ria.ru/20251111/asterus-2054278937.html",
@@ -21874,6 +21896,10 @@
       "https://realty.ria.ru/20251111/ljudi-2054117709.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/11/igra-v-perevodnogo.html",
+      "https://rg.ru/2025/11/11/reg-cfo/stoianka-bez-opasnosti.html",
+      "https://rg.ru/2025/11/11/reg-cfo/kvartiry-s-modnym-remontom-sdaiutsia-vdvoe-dorozhe.html",
+      "https://rg.ru/2025/11/11/rashody-biudzheta-na-nacproekty-k-noiabriu-predvaritelno-sostavili-46-trln-rublej.html",
       "https://rg.ru/2025/11/11/igra-v-krestiki-noliki.html",
       "https://rg.ru/2025/11/11/kak-vladelcy-povrezhdennyh-posle-obrusheniia-snezhkoma-avto-mogut-poluchit-vyplaty.html",
       "https://rg.ru/2025/11/11/pod-devizom-poleznoe.html",
@@ -21901,16 +21927,13 @@
       "https://rg.ru/2025/11/11/reg-cfo/v-moskve-zapustili-opros-ob-udobstve-nazemnogo-obshchestvennogo-transporta.html",
       "https://rg.ru/2025/11/11/v-novyh-regionah-sozdadut-edinye-marshruty-dlia-turistov.html",
       "https://rg.ru/2025/11/11/pravitelstvo-sozdast-rabochuiu-gruppu-po-platformennoj-ekonomike.html",
-      "https://rg.ru/2025/11/11/ekspert-spicenko-gotovaia-eda-trebuet-otdelnogo-regulirovaniia.html",
-      "https://rg.ru/2025/11/11/tri-letevshih-v-ufu-borta-prizemlilis-na-zapasnyh-aerodromah-iz-za-ogranichenij.html",
-      "https://rg.ru/2025/11/11/gosduma-vvodit-nalogovyj-vychet-pri-pozhertvovaniiah-sportshkolam.html",
-      "https://rg.ru/2025/11/11/minfin-bessrochno-otlozhil-otmenu-lgoty-po-nds-na-rossijskoe-po.html",
       "https://rg.ru/2025/11/10/peterburgskij-politeh-podgotovka-tehnologicheskih-liderov-budushchego.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
       "https://rg.ru/2025/10/29/v-krymu-proshla-nauchnaia-nedelia-zdorovogo-dolgoletiia-i-personalizirovannoj-mediciny.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20430",
       "http://ancb.ru/publication/read/20425",
       "http://ancb.ru/publication/read/20419",
       "http://ancb.ru/publication/read/20418",
@@ -21944,8 +21967,7 @@
       "http://ancb.ru/publication/read/20309",
       "http://ancb.ru/publication/read/20300",
       "http://ancb.ru/publication/read/20299",
-      "http://ancb.ru/publication/read/20297",
-      "http://ancb.ru/publication/read/20292"
+      "http://ancb.ru/publication/read/20297"
     ]
   },
   "first_seen": {
@@ -28844,7 +28866,14 @@
     "2c39ead88536c6fe7c5c9ef70d42fd0f37dcf9b0678492f46ac3a75370dda19e": "2025-11-11T21:26:00+03:00",
     "882ece2a19af3ef67553de002a977109bc95f8fa59593dc77f7aaedc9ca6bd0f": "2025-11-11T21:26:00+03:00",
     "5114a460ce5403dbc8e316975eb2f5d1a57b34d1fd3669d781a6d265bcdf9bc6": "2025-11-11T21:26:00+03:00",
-    "549dc672fbb4fca7e60b023d923d72cd8e1cdd6678c738737cdcc944b58df6ee": "2025-11-11T21:26:00+03:00"
+    "549dc672fbb4fca7e60b023d923d72cd8e1cdd6678c738737cdcc944b58df6ee": "2025-11-11T21:26:00+03:00",
+    "48d3a7252376174d1200ecc2b16ebdcb1ca4b5f618a57759a3aae5fdc69dad65": "2025-11-12T00:15:00+03:00",
+    "fa0211826d2b2bcf4d2157e01f8b46806cfca7fec6844a6a568a94befd0d19bf": "2025-11-12T00:16:00+03:00",
+    "3332a28f0a086a0ff3fbababc59d4e4b37a234fc252875aa6c45df48ebc826ba": "2025-11-12T00:16:00+03:00",
+    "87c817fde8ef904258794aabf1fa5c66b9571a877ed0bd2af5f305a77b3a6726": "2025-11-12T00:16:00+03:00",
+    "2a8b3789ae19e09d71be6e25c0693a558f66233893cd905ba7112dc84f701dfd": "2025-11-12T00:16:00+03:00",
+    "cf1d77e83e5d047a97034779334b41b60e4066407a0ca15b9676049629463eaa": "2025-11-12T00:16:00+03:00",
+    "f370328a60502095ce0a982e306b25c442a78caa8a79225b37321166eb9754b2": "2025-11-12T00:16:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -28875,8 +28904,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbfc74b3820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 20,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1762885462.6683784
       },
       "warmup_done": false,
@@ -28886,31 +28915,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "zryFOyAzEa9KCrPZ",
+          "value": "cG17Lydj4VGy0T5t",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762886731
+          "expires": 1762896962
         },
         {
           "name": "__ddg10_",
-          "value": "1762885531",
+          "value": "1762895762",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762886731
+          "expires": 1762896962
         },
         {
           "name": "__ddg9_",
-          "value": "13.83.161.17",
+          "value": "68.220.61.212",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762886731
+          "expires": 1762896962
+        },
+        {
+          "name": "__ddg1_",
+          "value": "FsUkDO5R8THYM204DXgn",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1794431762
         },
         {
           "name": "PHPSESSID",
-          "value": "8657df287d7dc06a140c66d309dd470f",
+          "value": "1ebefdcb0b20f2e9b2e300141b5d0d68",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -28937,11 +28974,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "n3Az89bfCd1Mv7I8MGL3epUSAl8Z3Gds",
+          "value": "11LVtdAA4IhJhxSqom9LIlXGI2KoqZoJ",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1762863697
+          "expires": 1762906570
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -28949,12 +28986,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1793956897
+          "expires": 1793999770
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfc63b4550>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 16,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1762885565.3739724
       },
       "warmup_done": false,
@@ -37530,7 +37567,14 @@
     "http://government.ru/news/56898": "http://government.ru/news/56898",
     "https://rg.ru/2025/11/11/igra-v-krestiki-noliki.html": "https://rg.ru/2025/11/11/igra-v-krestiki-noliki.html",
     "https://rg.ru/2025/11/11/kak-vladelcy-povrezhdennyh-posle-obrusheniia-snezhkoma-avto-mogut-poluchit-vyplaty.html": "https://rg.ru/2025/11/11/kak-vladelcy-povrezhdennyh-posle-obrusheniia-snezhkoma-avto-mogut-poluchit-vyplaty.html",
-    "https://rg.ru/2025/11/11/pod-devizom-poleznoe.html": "https://rg.ru/2025/11/11/pod-devizom-poleznoe.html"
+    "https://rg.ru/2025/11/11/pod-devizom-poleznoe.html": "https://rg.ru/2025/11/11/pod-devizom-poleznoe.html",
+    "http://ancb.ru/publication/read/20430": "http://ancb.ru/publication/read/20430",
+    "http://government.ru/news/56903": "http://government.ru/news/56903",
+    "https://stroygaz.ru/news/kadry/stroygazeta-pozdravlyaet-koordinatora-nostroy-po-dfo-aykhala-gabysheva-s-dnem-rozhdeniya": "https://stroygaz.ru/news/kadry/stroygazeta-pozdravlyaet-koordinatora-nostroy-po-dfo-aykhala-gabysheva-s-dnem-rozhdeniya",
+    "https://rg.ru/2025/11/11/igra-v-perevodnogo.html": "https://rg.ru/2025/11/11/igra-v-perevodnogo.html",
+    "https://rg.ru/2025/11/11/reg-cfo/stoianka-bez-opasnosti.html": "https://rg.ru/2025/11/11/reg-cfo/stoianka-bez-opasnosti.html",
+    "https://rg.ru/2025/11/11/reg-cfo/kvartiry-s-modnym-remontom-sdaiutsia-vdvoe-dorozhe.html": "https://rg.ru/2025/11/11/reg-cfo/kvartiry-s-modnym-remontom-sdaiutsia-vdvoe-dorozhe.html",
+    "https://rg.ru/2025/11/11/rashody-biudzheta-na-nacproekty-k-noiabriu-predvaritelno-sostavili-46-trln-rublej.html": "https://rg.ru/2025/11/11/rashody-biudzheta-na-nacproekty-k-noiabriu-predvaritelno-sostavili-46-trln-rublej.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -44698,7 +44742,14 @@
     "940e2b835aab0f0c8b435bac5412909f658e248b": "http://government.ru/news/56898",
     "7a73990ce0360def198e78b85e9ed8ee46dac84d": "https://rg.ru/2025/11/11/igra-v-krestiki-noliki.html",
     "246c9d9d0df3b4f70723335b1edc1756760b5f6a": "https://rg.ru/2025/11/11/kak-vladelcy-povrezhdennyh-posle-obrusheniia-snezhkoma-avto-mogut-poluchit-vyplaty.html",
-    "d7ebed2fe05ab355a9a0116b252c8f4d155ad5ee": "https://rg.ru/2025/11/11/pod-devizom-poleznoe.html"
+    "d7ebed2fe05ab355a9a0116b252c8f4d155ad5ee": "https://rg.ru/2025/11/11/pod-devizom-poleznoe.html",
+    "5b951d097823e48d75fcffae5c474599bb984fcd": "http://ancb.ru/publication/read/20430",
+    "28a09d09af8d8bbec1cf02adceb1b90a13faa9a5": "http://government.ru/news/56903",
+    "e63138cbf91dc18fede58e03e08f2b4c4147eb88": "https://stroygaz.ru/news/kadry/stroygazeta-pozdravlyaet-koordinatora-nostroy-po-dfo-aykhala-gabysheva-s-dnem-rozhdeniya",
+    "25a5c9247af98fdef741b281c73a5b75eb3497b9": "https://rg.ru/2025/11/11/igra-v-perevodnogo.html",
+    "30eaffcc8be68358a06e8a5ab8564594a40e92ba": "https://rg.ru/2025/11/11/reg-cfo/stoianka-bez-opasnosti.html",
+    "dd28546fdc7c07394946a287883fba6690cc60e5": "https://rg.ru/2025/11/11/reg-cfo/kvartiry-s-modnym-remontom-sdaiutsia-vdvoe-dorozhe.html",
+    "a4aeb07fb9ff251a1efb313713d134644bcf9792": "https://rg.ru/2025/11/11/rashody-biudzheta-na-nacproekty-k-noiabriu-predvaritelno-sostavili-46-trln-rublej.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -54268,6 +54319,15 @@
     "http://government.ru/news/56898/": "2c39ead88536c6fe7c5c9ef70d42fd0f37dcf9b0678492f46ac3a75370dda19e",
     "https://rg.ru/2025/11/11/igra-v-krestiki-noliki.html": "882ece2a19af3ef67553de002a977109bc95f8fa59593dc77f7aaedc9ca6bd0f",
     "https://rg.ru/2025/11/11/kak-vladelcy-povrezhdennyh-posle-obrusheniia-snezhkoma-avto-mogut-poluchit-vyplaty.html": "5114a460ce5403dbc8e316975eb2f5d1a57b34d1fd3669d781a6d265bcdf9bc6",
-    "https://rg.ru/2025/11/11/pod-devizom-poleznoe.html": "549dc672fbb4fca7e60b023d923d72cd8e1cdd6678c738737cdcc944b58df6ee"
+    "https://rg.ru/2025/11/11/pod-devizom-poleznoe.html": "549dc672fbb4fca7e60b023d923d72cd8e1cdd6678c738737cdcc944b58df6ee",
+    "http://ancb.ru/publication/read/20430": "48d3a7252376174d1200ecc2b16ebdcb1ca4b5f618a57759a3aae5fdc69dad65",
+    "http://government.ru/news/56903": "fa0211826d2b2bcf4d2157e01f8b46806cfca7fec6844a6a568a94befd0d19bf",
+    "http://government.ru/news/56903/": "fa0211826d2b2bcf4d2157e01f8b46806cfca7fec6844a6a568a94befd0d19bf",
+    "https://stroygaz.ru/news/kadry/stroygazeta-pozdravlyaet-koordinatora-nostroy-po-dfo-aykhala-gabysheva-s-dnem-rozhdeniya": "3332a28f0a086a0ff3fbababc59d4e4b37a234fc252875aa6c45df48ebc826ba",
+    "https://stroygaz.ru/news/kadry/stroygazeta-pozdravlyaet-koordinatora-nostroy-po-dfo-aykhala-gabysheva-s-dnem-rozhdeniya/": "3332a28f0a086a0ff3fbababc59d4e4b37a234fc252875aa6c45df48ebc826ba",
+    "https://rg.ru/2025/11/11/igra-v-perevodnogo.html": "87c817fde8ef904258794aabf1fa5c66b9571a877ed0bd2af5f305a77b3a6726",
+    "https://rg.ru/2025/11/11/reg-cfo/stoianka-bez-opasnosti.html": "2a8b3789ae19e09d71be6e25c0693a558f66233893cd905ba7112dc84f701dfd",
+    "https://rg.ru/2025/11/11/reg-cfo/kvartiry-s-modnym-remontom-sdaiutsia-vdvoe-dorozhe.html": "cf1d77e83e5d047a97034779334b41b60e4066407a0ca15b9676049629463eaa",
+    "https://rg.ru/2025/11/11/rashody-biudzheta-na-nacproekty-k-noiabriu-predvaritelno-sostavili-46-trln-rublej.html": "f370328a60502095ce0a982e306b25c442a78caa8a79225b37321166eb9754b2"
   }
 }
