@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 13 Nov 2025 18:26:07 GMT"
+      "Last-Modified": "Thu, 13 Nov 2025 20:37:17 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1c31e-ji2lq3FYQWHBSh/JjsckjqwlSmQ\""
+      "ETag": "W/\"1c13d-ZfQ2nreaX0Mm6dGd9iZ5vkJBMtI\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"pa1fbynbly45al\""
+      "ETag": "\"p1gcx3hn6n49wg\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -18606,6 +18606,16 @@
     },
     "https://rg.ru/2025/11/13/sargassovo-more.html": {
       "ETag": "\"c0yzvqhzlo29kf\""
+    },
+    "http://ancb.ru/publication/read/20449": {},
+    "https://rg.ru/2025/11/13/oleg-panteleev-vtoroj-ms-21-pozvolit-uskorit-sertifikacionnye-ispytaniia.html": {
+      "ETag": "\"2s9q27abn31xvz\""
+    },
+    "https://rg.ru/2025/11/13/reg-cfo/minus-20-minut.html": {
+      "ETag": "\"3nnorpsphl1yic\""
+    },
+    "https://rg.ru/2025/11/13/kriterii-stavki.html": {
+      "ETag": "\"uumla1p51j1rq0\""
     }
   },
   "stats": {
@@ -22690,9 +22700,19 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "НОТИМ",
+        "url": "https://notim.ru",
+        "error": "403 Client Error: Forbidden for url: https://notim.ru/"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-13T18:26:21.552448+00:00",
+    "last_run": "2025-11-13T20:37:02.653481+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -22705,33 +22725,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 393.9150239999947,
-        "connect_ms": 651.7664660000121,
-        "response_ms": 1045.6814900000068,
+        "dns_ms": 456.3533580000012,
+        "connect_ms": 346.029480999988,
+        "response_ms": 802.3828389999892,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1048fe39b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 333.1319450000052,
+        "connect_ms": 0.0,
+        "response_ms": 298.9956050000018,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 9093.769143000003,
+        "dns_ms": 8921.804899000022,
         "connect_ms": 0.0,
-        "response_ms": 888.8763999999867,
+        "response_ms": 669.652812999999,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 262.0225189999985,
-        "connect_ms": 330.40336599998454,
-        "response_ms": 592.425884999983,
+        "dns_ms": 5429.255048000015,
+        "connect_ms": 0.0,
+        "response_ms": 619.4362479999995,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -22740,21 +22760,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "516359fb5ca24a4df5d55b311d095d7277b4a9cb2e92f969925b5482d1418a08",
+    "https://ardexpert.ru/article": "d4bad2345ba8fb1916da5091ca2471634f750f61eeff7219a4c9415841c507a7",
     "https://www.gostinfo.ru/News/List": "2a9d135c2facd331bcfb18a43fb00bdd50cd2b466bd705419dd56383640466f8",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "538a90219d48be37a290be1c8202dab39b72fc43327b6d81f206e8ed05529a86",
-    "https://eec.eaeunion.org/news/": "74ac150b7686e1c152da2930577dd9ef172d7e3663a91b796e4239b2a093d868",
+    "https://eec.eaeunion.org/news/": "39956b06110dacf3167d00b94c21d1b04f8d75003e29bb5d92fc81fbb8247803",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "3b54d12ef87432dae83499238bb668589bde10d1838f1eb623b2e53e5289ef1f",
-    "https://www.metalinfo.ru/ru/news": "4adf1069930e461d3440bad5c32273497de8f4d6e32847853688669656723e01",
-    "https://www.pnp.ru/economics/": "afadd59b9d8f696470035b68d87b717b1e1247b7d2de901fae90d362489482d3",
-    "https://erzrf.ru/news/": "d6626688631c8fc9ef5e8dbef1ab1048eac1a26268823a125cfc471bca2fe1cc",
-    "https://ria-stk.ru/news/vse-novosti.php": "14ac2705e41e906feb72df917467328570055e141e9a526fe8c22fed09febe4b",
-    "http://government.ru/news/": "46c2c9f84a9efe41bf0d20a4b6898a9469499a2aeb053ec46339141a6b91ae3e",
-    "https://stroygaz.ru/news/": "01520d892ad1e04aade748bb5288a8d9acc9cba02b850050fe512b44e19f616c",
-    "https://realty.ria.ru/lenta/": "0f59ea0ab38ca66a0ee9e893a48c2bfc2426c97bfc666f91a3952d34b05cde71",
-    "https://rg.ru/tema/ekonomika": "1258e0c826ca791a6875b7c55ee01e8c0a75b61513cd1f85f1c546f1a455a86f",
-    "http://ancb.ru/publication": "74990a63db0fcbf37129f9e053924b84f831a95342cde6ec735cbf62885b4dbb",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "e1b9036586fe84964e5f253a9fe8922b9cf2680eb98e15c714b4ea0bc2e0e2d2",
+    "https://www.metalinfo.ru/ru/news": "4784b2d4a86027aee5753c88c0efb113563dd086f24ddaaacf75b326ccaa31c1",
+    "https://www.pnp.ru/economics/": "e14460a3134a60e4421a66a08a0a8ae7db6dcf301d2bcaccc93e75cbe79bfafe",
+    "https://erzrf.ru/news/": "d41d6d49616ee8cb6168c87eba32ab86f8b7fde5bf28b4bb934e521b5591dcf9",
+    "https://ria-stk.ru/news/vse-novosti.php": "9acaa9f533e29533000a19f1c324c5f72a82038cbc4514b4cfe49c7ebe644d99",
+    "http://government.ru/news/": "457f40d50fdd12a2cf254dc78b68eb55e6b2818847a1af0eff53559ab9de3212",
+    "https://stroygaz.ru/news/": "494a5e08fadcc8bbf6574d9f73a2793c4b9139feb9ab45ad3c02bf4fed5ce8cc",
+    "https://realty.ria.ru/lenta/": "9c3998a86648ff014ddb7de901502f0d56da585e2d46dca2cdaa2208935bf1ec",
+    "https://rg.ru/tema/ekonomika": "176edfc7bfc8f8bdd1a51b697e119309f05802f7f5193a4eab5b61b0950bb613",
+    "http://ancb.ru/publication": "210edb5c5976cb29cb4ce531eef9ee6bd6858f71790ec6a141d8be0223b08e0e",
     "https://notim.ru": "18d123e2639db11e37f9c33c9d71f0d58edb4646756b985a1f6922340381289e",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
   },
@@ -23061,6 +23081,9 @@
       "https://realty.ria.ru/20251112/vladeltsy-2054559731.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/13/oleg-panteleev-vtoroj-ms-21-pozvolit-uskorit-sertifikacionnye-ispytaniia.html",
+      "https://rg.ru/2025/11/13/reg-cfo/minus-20-minut.html",
+      "https://rg.ru/2025/11/13/kriterii-stavki.html",
       "https://rg.ru/2025/11/13/vtoroj-polnostiu-importozameshchennyj-samolet-ms-21-pribyl-v-zhukovskij.html",
       "https://rg.ru/2025/11/13/roman-markelov-o-tom-kak-perestat-bespokoitsia-o-kurse-rublia-i-nachat-zhit.html",
       "https://rg.ru/2025/11/13/minek-uzhestochit-vozvrat-tovarov-dlia-nedobrosovestnyh-pokupatelej.html",
@@ -23081,8 +23104,6 @@
       "https://rg.ru/2025/11/13/rossijskoe-vinodelie-pokazalo-rekordnyj-rost.html",
       "https://rg.ru/2025/11/13/iurist-haminskij-obiasnil-kak-ne-lishitsia-pensii-iz-za-oshibki-v-trudovoj-knizhke.html",
       "https://rg.ru/2025/11/13/reg-cfo/sobianin-s-msd-poiavitsia-priamoj-vyezd-na-ulicu-akademika-koroleva-v-2026-godu.html",
-      "https://rg.ru/2025/11/13/vice-prezident-opory-biznesu-nado-izmenit-procedury-uvolneniia-sotrudnikov.html",
-      "https://rg.ru/2025/11/13/reg-cfo/etazhi-komforta.html",
       "https://rg.ru/2025/11/13/reg-cfo/s-zhitelej-riada-regionov-mogut-priostanovit-vzyskanie-dolgov.html",
       "https://rg.ru/2025/11/13/rossiian-predupredili-o-novoj-sheme-moshennichestva-s-proverkoj-sistemy-otopleniia.html",
       "https://rg.ru/2025/11/13/v-rossii-uskorilis-temy-importozameshcheniia-vina.html",
@@ -23090,7 +23111,6 @@
       "https://rg.ru/2025/11/13/reg-sibfo/turpoezd-do-sheregesha-nachnet-kursirovat-v-den-otkrytiia-zimnego-sezona.html",
       "https://rg.ru/2025/11/13/husnullin-raskryl-kogda-ipoteka-stanet-massovoj.html",
       "https://rg.ru/2025/11/13/reg-pfo/v-saranske-zapustiat-semejnoe-taksi.html",
-      "https://rg.ru/2025/11/13/reg-cfo/na-kanikulah-moskovskih-shkolnikov-zajmut-proforientaciej.html",
       "https://rg.ru/2025/11/10/oez-sankt-peterburg-prodolzhaet-rasshiriatsia-i-privlekat-novyh-investorov.html",
       "https://rg.ru/2025/11/10/peterburgskij-politeh-podgotovka-tehnologicheskih-liderov-budushchego.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html",
@@ -23098,6 +23118,7 @@
       "https://rg.ru/2025/10/29/v-krymu-proshla-nauchnaia-nedelia-zdorovogo-dolgoletiia-i-personalizirovannoj-mediciny.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20449",
       "http://ancb.ru/publication/read/20440",
       "http://ancb.ru/publication/read/20430",
       "http://ancb.ru/publication/read/20425",
@@ -23131,8 +23152,7 @@
       "http://ancb.ru/publication/read/20322",
       "http://ancb.ru/publication/read/20321",
       "http://ancb.ru/publication/read/20309",
-      "http://ancb.ru/publication/read/20300",
-      "http://ancb.ru/publication/read/20299"
+      "http://ancb.ru/publication/read/20300"
     ]
   },
   "first_seen": {
@@ -30481,7 +30501,11 @@
     "84ae409f3601b20e3fa32839a50512bd0459ff926d3147714ccad80d75c8eb36": "2025-11-13T21:26:00+03:00",
     "cdb2782614f3098be131e054d5069b9a82179f5274aefe5c89b1b715409f7799": "2025-11-13T21:26:00+03:00",
     "0cc42bca1ccad3e122f7bc3cfb57d1f3ae8df8697f95dc2baf9a139ed3adc171": "2025-11-13T21:26:00+03:00",
-    "efafaf280aaae6b8b3acf5bdf0bbfb293fff7492a7c39acfcc609e08f8e05fc3": "2025-11-13T21:26:00+03:00"
+    "efafaf280aaae6b8b3acf5bdf0bbfb293fff7492a7c39acfcc609e08f8e05fc3": "2025-11-13T21:26:00+03:00",
+    "e208b6f219681eee0e8aab0175be2731292b5e28995b17b27633a88b88716dea": "2025-11-13T23:36:00+03:00",
+    "092573fdde2ed36ba3e6f64190c7a0fe4d4a07a6cd32451d773683d4f4de3b68": "2025-11-13T23:36:00+03:00",
+    "c720581bd299b14ff5a3820d0b1fd0a4e7aca2935f02fdf6ebe8bf4260dd6cc4": "2025-11-13T23:37:00+03:00",
+    "37294497340f285fac9c7190be5d28ef5e9426aaafddbfd9e44165db78796aa2": "2025-11-13T23:37:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -30512,8 +30536,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f104905f820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 25,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1763058266.2724288
       },
       "warmup_done": false,
@@ -30523,39 +30547,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "zoprB7Ld8GMv8FvK",
+          "value": "fS55cW2jGZADL2F0",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763059532
+          "expires": 1763067401
         },
         {
           "name": "__ddg10_",
-          "value": "1763058332",
+          "value": "1763066201",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763059532
+          "expires": 1763067401
         },
         {
           "name": "__ddg9_",
-          "value": "20.49.13.180",
+          "value": "64.236.201.40",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763059532
-        },
-        {
-          "name": "__ddg1_",
-          "value": "hzEM49XvtxeSLphsaOTo",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1794594332
+          "expires": 1763067401
         },
         {
           "name": "PHPSESSID",
-          "value": "ca045fbf933dd0a7457a7dae84c5f7fa",
+          "value": "e8c22dd8fadc4c403275544ba42e5855",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -30582,11 +30598,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "DhK3xV1E3q4BE7GqRk40lA2DOfGxNu0Z",
+          "value": "3nIX5iOwTBkJciWA8ba7f2jWpwv0p02h",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763069134
+          "expires": 1763077010
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -30594,7 +30610,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1794162334
+          "expires": 1794170210
         }
       ],
       "failures": {
@@ -39740,7 +39756,11 @@
     "https://rg.ru/2025/11/13/maksimalno-bystro.html": "https://rg.ru/2025/11/13/maksimalno-bystro.html",
     "https://rg.ru/2025/11/13/dohodnye-mesta.html": "https://rg.ru/2025/11/13/dohodnye-mesta.html",
     "https://rg.ru/2025/11/13/po-itogam-iii-kvartala-banki-predotvratili-hishchenie-35-trln-rublej.html": "https://rg.ru/2025/11/13/po-itogam-iii-kvartala-banki-predotvratili-hishchenie-35-trln-rublej.html",
-    "https://rg.ru/2025/11/13/sargassovo-more.html": "https://rg.ru/2025/11/13/sargassovo-more.html"
+    "https://rg.ru/2025/11/13/sargassovo-more.html": "https://rg.ru/2025/11/13/sargassovo-more.html",
+    "http://ancb.ru/publication/read/20449": "http://ancb.ru/publication/read/20449",
+    "https://rg.ru/2025/11/13/oleg-panteleev-vtoroj-ms-21-pozvolit-uskorit-sertifikacionnye-ispytaniia.html": "https://rg.ru/2025/11/13/oleg-panteleev-vtoroj-ms-21-pozvolit-uskorit-sertifikacionnye-ispytaniia.html",
+    "https://rg.ru/2025/11/13/reg-cfo/minus-20-minut.html": "https://rg.ru/2025/11/13/reg-cfo/minus-20-minut.html",
+    "https://rg.ru/2025/11/13/kriterii-stavki.html": "https://rg.ru/2025/11/13/kriterii-stavki.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -47359,7 +47379,11 @@
     "62ec1f4ac67fbb827e400095008fa29bae7801c5": "https://rg.ru/2025/11/13/maksimalno-bystro.html",
     "64525817bd0acdd7d66ece8cfb33538eb24a7d2a": "https://rg.ru/2025/11/13/dohodnye-mesta.html",
     "f6f07be765c2a04417b60bc515588034e338db68": "https://rg.ru/2025/11/13/po-itogam-iii-kvartala-banki-predotvratili-hishchenie-35-trln-rublej.html",
-    "7b39b32e9e5863c2f21697bf3ac5ba9f3ce562fc": "https://rg.ru/2025/11/13/sargassovo-more.html"
+    "7b39b32e9e5863c2f21697bf3ac5ba9f3ce562fc": "https://rg.ru/2025/11/13/sargassovo-more.html",
+    "6c388c15d293fd8cda0993d261fe03cd1358e9df": "http://ancb.ru/publication/read/20449",
+    "e82d5b0743f89b4e208d3dc64e7db7b3ad048f05": "https://rg.ru/2025/11/13/oleg-panteleev-vtoroj-ms-21-pozvolit-uskorit-sertifikacionnye-ispytaniia.html",
+    "109eabbdeb7eeda5cc7d4c044ea7412e0868014c": "https://rg.ru/2025/11/13/reg-cfo/minus-20-minut.html",
+    "e6bd72aa41f0271e08455859e407244058704132": "https://rg.ru/2025/11/13/kriterii-stavki.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -57555,6 +57579,10 @@
     "https://rg.ru/2025/11/13/maksimalno-bystro.html": "84ae409f3601b20e3fa32839a50512bd0459ff926d3147714ccad80d75c8eb36",
     "https://rg.ru/2025/11/13/dohodnye-mesta.html": "cdb2782614f3098be131e054d5069b9a82179f5274aefe5c89b1b715409f7799",
     "https://rg.ru/2025/11/13/po-itogam-iii-kvartala-banki-predotvratili-hishchenie-35-trln-rublej.html": "0cc42bca1ccad3e122f7bc3cfb57d1f3ae8df8697f95dc2baf9a139ed3adc171",
-    "https://rg.ru/2025/11/13/sargassovo-more.html": "efafaf280aaae6b8b3acf5bdf0bbfb293fff7492a7c39acfcc609e08f8e05fc3"
+    "https://rg.ru/2025/11/13/sargassovo-more.html": "efafaf280aaae6b8b3acf5bdf0bbfb293fff7492a7c39acfcc609e08f8e05fc3",
+    "http://ancb.ru/publication/read/20449": "e208b6f219681eee0e8aab0175be2731292b5e28995b17b27633a88b88716dea",
+    "https://rg.ru/2025/11/13/oleg-panteleev-vtoroj-ms-21-pozvolit-uskorit-sertifikacionnye-ispytaniia.html": "092573fdde2ed36ba3e6f64190c7a0fe4d4a07a6cd32451d773683d4f4de3b68",
+    "https://rg.ru/2025/11/13/reg-cfo/minus-20-minut.html": "c720581bd299b14ff5a3820d0b1fd0a4e7aca2935f02fdf6ebe8bf4260dd6cc4",
+    "https://rg.ru/2025/11/13/kriterii-stavki.html": "37294497340f285fac9c7190be5d28ef5e9426aaafddbfd9e44165db78796aa2"
   }
 }
