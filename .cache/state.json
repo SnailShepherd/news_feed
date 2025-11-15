@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 15 Nov 2025 01:12:53 GMT"
+      "Last-Modified": "Sat, 15 Nov 2025 03:38:44 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1bb7b-UrHgRyaKeBCpBiM0S1HlMnLAFtw\""
+      "ETag": "W/\"1be8f-lBAC2WHjsOOaykhsENG4fUPSpT0\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"101xszkrcs03ta8\""
+      "ETag": "\"no3z2nuebl3vv6\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -19029,7 +19029,16 @@
     "https://rg.ru/2025/11/14/v-moskve-sostoialas-ceremoniia-nagrazhdeniia-top-menedzhery-npbk-2025.html": {
       "ETag": "\"ktlklzz39m1nm7\""
     },
-    "https://www.metalinfo.ru/ru/news/178634": {}
+    "https://www.metalinfo.ru/ru/news/178634": {},
+    "https://rg.ru/2025/11/15/glava-cb-nabiullina-priznala-oshibki-v-kommunikacii-s-rynkom-po-kliuchevoj-stavke.html": {
+      "ETag": "\"115baggddb428ad\""
+    },
+    "https://rg.ru/2025/11/15/reg-sibfo/festivali-noiabria-snezhnye-kreposti-virtuozy-iakutii-parad-shliap-i-utinoe-magre.html": {
+      "ETag": "\"7160hb1wcj28yv\""
+    },
+    "https://rg.ru/2025/11/15/reg-pfo/v-shesti-aeroportah-rf-vveli-ogranicheniia-na-polety.html": {
+      "ETag": "\"101r2o4ve0q1r5c\""
+    }
   },
   "stats": {
     "cooldowns": {
@@ -23276,9 +23285,20 @@
         "source": "Металлоснабжение и сбыт",
         "url": "https://www.metalinfo.ru/ru/news",
         "error": "403 Client Error: Forbidden for url: https://www.metalinfo.ru/ru/news"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0), HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0), HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0), HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0), HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0)",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-11-15T01:12:25.585765+00:00",
+    "last_run": "2025-11-15T03:40:50.949366+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -23291,55 +23311,55 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 387.7073609999968,
-        "connect_ms": 633.3433409999998,
-        "response_ms": 1021.0507019999966,
+        "dns_ms": 442.330130000002,
+        "connect_ms": 362.5499869999942,
+        "response_ms": 804.8801169999962,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 140.43713299997762,
-        "connect_ms": 876.8645210000159,
-        "response_ms": 1017.3016539999935,
+        "dns_ms": 174.88719700000388,
+        "connect_ms": 766.793082999996,
+        "response_ms": 941.6802799999999,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 912.775288000006,
-        "connect_ms": 3697.6256840000015,
-        "response_ms": 4610.400972000008,
+        "dns_ms": 4548.899688999995,
+        "connect_ms": 0.0,
+        "response_ms": 1084.8006189999921,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 148.79340600001,
-        "connect_ms": 403.75305599999933,
-        "response_ms": 552.5464620000093,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0)"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "e6d432a54e3a2f4500de5da86df1b003e7f19774d92902a3f894db88b890ceb6",
+    "https://ardexpert.ru/article": "64b49a28a744f3f3a9c974c7358b950b8e30ded8a15d61a23b7f9f86f960376d",
     "https://www.gostinfo.ru/News/List": "2a9d135c2facd331bcfb18a43fb00bdd50cd2b466bd705419dd56383640466f8",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "538a90219d48be37a290be1c8202dab39b72fc43327b6d81f206e8ed05529a86",
-    "https://eec.eaeunion.org/news/": "412068240eab4b90f66fa4ecc08793e373433e2b1d4bf3b423e9e8cccf08545f",
+    "https://eec.eaeunion.org/news/": "57bfd826612273b201490bf98ccefeccd1b10a04e8c9584dd65862585c5e20b8",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "6694f991f5af90ef283f865e28b5ce7b09d7861370bb6d10d908ce43e5442f86",
-    "https://www.metalinfo.ru/ru/news": "ffd3dbd8b073f8006fb7b6939eaaa7910deeab6f459a53dbbef2263f7af83e35",
-    "https://www.pnp.ru/economics/": "477fb42e8fc0f1da369bce821a6b6ed25164ea0f6023fd1cc4d46ceb390af46b",
-    "https://erzrf.ru/news/": "303305137180ea30278980a40cbfa1d7015b2863354c5b22640331af0a7ea006",
-    "https://ria-stk.ru/news/vse-novosti.php": "52a219ee5ed6ca527313d620bce4ec4fe88f9cd1f25c35d047fa82a51f8cd081",
-    "http://government.ru/news/": "ec45168d9c799921c5329bf90b0199be2708850d252dd7927e1d8f0d716b29e4",
-    "https://stroygaz.ru/news/": "3f004325447199f7eb982311c2f2625d9c1124a9f09c7ed4d235fd3151dfe8ab",
-    "https://realty.ria.ru/lenta/": "b882cc5d190acd79cdf367871b974d09c37ef7c98b0f139be24d4d116605b3b8",
-    "https://rg.ru/tema/ekonomika": "884f207f20ce6f66e64a1705182a1197c50f44b4ad478590ea6309f40132eb9b",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "89a3d01ab4df2eec663b49ccfe10a37050bf261b94147ccc93e8f71d205b6f5c",
+    "https://www.metalinfo.ru/ru/news": "0c96ea0d7f2dbadf5a8dcd93f40311b62b101adae41ee71b270572d292f5008d",
+    "https://www.pnp.ru/economics/": "3098cacf6cc3cba50c829367d75c3a4fb3c8746a6e74c37de5fe285fddf39a34",
+    "https://erzrf.ru/news/": "62b6970fbb8857d7ea4d51ef72d517696879f25d93fde3f7851c7b1f3fab51cb",
+    "https://ria-stk.ru/news/vse-novosti.php": "302a3e5865f470a3730fd1ccbe71fd7054c3c20716c2a65d720c15f4ef4c62fe",
+    "http://government.ru/news/": "44e6bb34deaa818399ddd1991af7b376315eb8057f0598063ac53fb0004e8b53",
+    "https://stroygaz.ru/news/": "10f8649eae3e09c3fbdaca03b22064b5c8bafc1173feb3956e2f2dccb2a7d08e",
+    "https://realty.ria.ru/lenta/": "9cff9f158b8dc80941f3e7e35c9fa6ab7dc18e40135ea0b856aaf3b207046d64",
+    "https://rg.ru/tema/ekonomika": "dfce8477f63aa6bc856ca09a2b808c385a5cbaf2429cda02268269c230b2ef73",
     "http://ancb.ru/publication": "46a06651814dcdf95792fa29fc6bfabc8f7d38c8a887155c84d76cfa56cc6fc6",
     "https://notim.ru": "18d123e2639db11e37f9c33c9d71f0d58edb4646756b985a1f6922340381289e",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -23647,6 +23667,9 @@
       "https://realty.ria.ru/20251114/orientir-2054921356.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/15/glava-cb-nabiullina-priznala-oshibki-v-kommunikacii-s-rynkom-po-kliuchevoj-stavke.html",
+      "https://rg.ru/2025/11/15/reg-sibfo/festivali-noiabria-snezhnye-kreposti-virtuozy-iakutii-parad-shliap-i-utinoe-magre.html",
+      "https://rg.ru/2025/11/15/reg-pfo/v-shesti-aeroportah-rf-vveli-ogranicheniia-na-polety.html",
       "https://rg.ru/2025/11/14/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-17-po-23-noiabria.html",
       "https://rg.ru/2025/11/14/v-moskve-sostoialas-ceremoniia-nagrazhdeniia-top-menedzhery-npbk-2025.html",
       "https://rg.ru/2025/11/14/v-minekonomrazvitiia-prokommentirovali-dannye-rosstata-po-rostu-vvp-za-kvartal.html",
@@ -23672,9 +23695,6 @@
       "https://rg.ru/2025/11/14/v-rossii-nachalsia-eksperiment-po-markirovke-bakalejnoj-produkcii.html",
       "https://rg.ru/2025/11/14/birzhevye-ceny-na-kakao-boby-vpervye-s-2024-goda-upali-nizhe-5300-dollarov.html",
       "https://rg.ru/2025/11/14/reg-pfo/putin-prisvoil-mezhdunarodnomu-aeroportu-izhevska-imia-kalashnikova.html",
-      "https://rg.ru/2025/11/14/nabiullina-nazvala-zapozdalym-povyshenie-kliuchevoj-stavki-v-2023-godu.html",
-      "https://rg.ru/2025/11/14/v-kremle-ocenili-mehanizm-ohlazhdeniia-dlia-sim-kart.html",
-      "https://rg.ru/2025/11/14/auditoriia-max-dostigla-55-millionov-polzovatelej.html",
       "https://rg.ru/2025/11/14/s-ianvaria-po-sentiabr-rf-zaniala-trete-mesto-po-dole-v-stoimosti-importa-gaza-es.html",
       "https://rg.ru/2025/11/14/kommunisty-predlozhili-podniat-bazovyj-oklad-vrachej-do-treh-mrot.html",
       "https://rg.ru/2025/11/14/orban-vengriia-podast-v-sud-na-es-iz-za-zapreta-na-import-rossijskogo-gaza.html",
@@ -31268,7 +31288,10 @@
     "96747a3d7099d604dffbe883b5e8172c673811fb976b46ea9d52e7c1dd9267f5": "2025-11-14T21:23:00+03:00",
     "8550a457d004bcbacdb9d48bd1fbdb44aa9de26558f05b6f6d36b4b59c01c902": "2025-11-14T21:24:00+03:00",
     "8a948819f615251b20a9adc4569306b2c9ad67c898ffe797214efcbc504732bc": "2025-11-14T21:24:00+03:00",
-    "59bfc910f0cd35c05762cd05d474d1eed91716875b63dd7de33ff91d59f70fbd": "2025-11-15T00:15:00+03:00"
+    "59bfc910f0cd35c05762cd05d474d1eed91716875b63dd7de33ff91d59f70fbd": "2025-11-15T00:15:00+03:00",
+    "4b6ddca9f2922eacbe3d4d02275237e1f3a6d3b03fddc7407340e2442960ef4b": "2025-11-15T06:40:00+03:00",
+    "3f1db8bfb3812afa66c9cc3c92e5e6f2747a8d76845d40344a678cade2fe6dfe": "2025-11-15T06:40:00+03:00",
+    "9abb230dceb1989e3da6bf6e3e8b585d30755d9c4fd451f57987ac46b33f4f83": "2025-11-15T06:40:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -31310,39 +31333,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "knsJMlLgiyQigngn",
+          "value": "sOkSgDCAIgqmMO5t",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763170337
+          "expires": 1763179089
         },
         {
           "name": "__ddg10_",
-          "value": "1763169137",
+          "value": "1763177889",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763170337
+          "expires": 1763179089
         },
         {
           "name": "__ddg9_",
-          "value": "51.8.152.228",
+          "value": "135.232.216.51",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763170337
-        },
-        {
-          "name": "__ddg1_",
-          "value": "xbm9QiyXnaoLRGlSRJyT",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1794705137
+          "expires": 1763179089
         },
         {
           "name": "PHPSESSID",
-          "value": "7162f21020957dc074c18e05e15a1b69",
+          "value": "42efd2da356c078f6cbf9762baa91320",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -31385,9 +31400,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1763133578.8503327
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0)",
+        "consecutive": 4,
+        "last_ts": 1763178003.4747005
       },
       "warmup_done": false,
       "last_success_path": null
@@ -40775,7 +40790,10 @@
     "https://rg.ru/2025/11/14/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-17-po-23-noiabria.html": "https://rg.ru/2025/11/14/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-17-po-23-noiabria.html",
     "https://rg.ru/2025/11/14/v-moskve-sostoialas-ceremoniia-nagrazhdeniia-top-menedzhery-npbk-2025.html": "https://rg.ru/2025/11/14/v-moskve-sostoialas-ceremoniia-nagrazhdeniia-top-menedzhery-npbk-2025.html",
     "https://www.metalinfo.ru/ru/news/178634": "http://www.metalinfo.ru/ru/news/178634",
-    "http://www.metalinfo.ru/ru/news/178634": "http://www.metalinfo.ru/ru/news/178634"
+    "http://www.metalinfo.ru/ru/news/178634": "http://www.metalinfo.ru/ru/news/178634",
+    "https://rg.ru/2025/11/15/glava-cb-nabiullina-priznala-oshibki-v-kommunikacii-s-rynkom-po-kliuchevoj-stavke.html": "https://rg.ru/2025/11/15/glava-cb-nabiullina-priznala-oshibki-v-kommunikacii-s-rynkom-po-kliuchevoj-stavke.html",
+    "https://rg.ru/2025/11/15/reg-sibfo/festivali-noiabria-snezhnye-kreposti-virtuozy-iakutii-parad-shliap-i-utinoe-magre.html": "https://rg.ru/2025/11/15/reg-sibfo/festivali-noiabria-snezhnye-kreposti-virtuozy-iakutii-parad-shliap-i-utinoe-magre.html",
+    "https://rg.ru/2025/11/15/reg-pfo/v-shesti-aeroportah-rf-vveli-ogranicheniia-na-polety.html": "https://rg.ru/2025/11/15/reg-pfo/v-shesti-aeroportah-rf-vveli-ogranicheniia-na-polety.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -48595,7 +48613,10 @@
     "5692815b6c68d5b26d9b4c6013619cdf6e71fe00": "http://ancb.ru/publication/read/20451",
     "a733f8de82eaf1647f949d5a564bd85c22b0d2d8": "https://rg.ru/2025/11/14/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-17-po-23-noiabria.html",
     "d7c162414167522092e55d4b45064006e79b046e": "https://rg.ru/2025/11/14/v-moskve-sostoialas-ceremoniia-nagrazhdeniia-top-menedzhery-npbk-2025.html",
-    "32a2552dd381d7dd76ef5a93150e0c0beffee9e0": "http://www.metalinfo.ru/ru/news/178634"
+    "32a2552dd381d7dd76ef5a93150e0c0beffee9e0": "http://www.metalinfo.ru/ru/news/178634",
+    "891c92aac882cb6a4c46d1c44cc5379608a92b39": "https://rg.ru/2025/11/15/glava-cb-nabiullina-priznala-oshibki-v-kommunikacii-s-rynkom-po-kliuchevoj-stavke.html",
+    "5883a38b6a7d855b4d822fd0ceec80e2259f5a05": "https://rg.ru/2025/11/15/reg-sibfo/festivali-noiabria-snezhnye-kreposti-virtuozy-iakutii-parad-shliap-i-utinoe-magre.html",
+    "3f3399d9f9f1614a9d981dce557bd99e9ca810cc": "https://rg.ru/2025/11/15/reg-pfo/v-shesti-aeroportah-rf-vveli-ogranicheniia-na-polety.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -59073,6 +59094,9 @@
     "https://rg.ru/2025/11/14/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-17-po-23-noiabria.html": "8550a457d004bcbacdb9d48bd1fbdb44aa9de26558f05b6f6d36b4b59c01c902",
     "https://rg.ru/2025/11/14/v-moskve-sostoialas-ceremoniia-nagrazhdeniia-top-menedzhery-npbk-2025.html": "8a948819f615251b20a9adc4569306b2c9ad67c898ffe797214efcbc504732bc",
     "http://www.metalinfo.ru/ru/news/178634": "59bfc910f0cd35c05762cd05d474d1eed91716875b63dd7de33ff91d59f70fbd",
-    "https://www.metalinfo.ru/ru/news/178634": "59bfc910f0cd35c05762cd05d474d1eed91716875b63dd7de33ff91d59f70fbd"
+    "https://www.metalinfo.ru/ru/news/178634": "59bfc910f0cd35c05762cd05d474d1eed91716875b63dd7de33ff91d59f70fbd",
+    "https://rg.ru/2025/11/15/glava-cb-nabiullina-priznala-oshibki-v-kommunikacii-s-rynkom-po-kliuchevoj-stavke.html": "4b6ddca9f2922eacbe3d4d02275237e1f3a6d3b03fddc7407340e2442960ef4b",
+    "https://rg.ru/2025/11/15/reg-sibfo/festivali-noiabria-snezhnye-kreposti-virtuozy-iakutii-parad-shliap-i-utinoe-magre.html": "3f1db8bfb3812afa66c9cc3c92e5e6f2747a8d76845d40344a678cade2fe6dfe",
+    "https://rg.ru/2025/11/15/reg-pfo/v-shesti-aeroportah-rf-vveli-ogranicheniia-na-polety.html": "9abb230dceb1989e3da6bf6e3e8b585d30755d9c4fd451f57987ac46b33f4f83"
   }
 }
