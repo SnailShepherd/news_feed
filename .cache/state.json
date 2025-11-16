@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 16 Nov 2025 18:22:20 GMT"
+      "Last-Modified": "Sun, 16 Nov 2025 21:15:32 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1bf7d-MPxZXB7Gl+5fsgOqfQNGFca06vI\""
+      "ETag": "W/\"1bd9f-VDOm1WYWEkhU/RZHJjr3tpFBJ8M\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"1821rw5uxmw3uwz\""
+      "ETag": "\"6ukiyywaez3wzg\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -19215,6 +19215,21 @@
     },
     "https://rg.ru/2025/11/16/reg-dnr/v-dnr-budet-vvedena-koncepciia-voennogo-turizma.html": {
       "ETag": "\"qdvvyn83zh1uia\""
+    },
+    "https://rg.ru/2025/11/16/reg-cfo/vse-po-pravilam.html": {
+      "ETag": "\"65dr5vt0up1y7a\""
+    },
+    "https://rg.ru/2025/11/16/udachnyj-kadr.html": {
+      "ETag": "\"2hvc0er2b51z9v\""
+    },
+    "https://rg.ru/2025/11/16/pyos-s-nimi.html": {
+      "ETag": "\"110w06t5m6w1x2f\""
+    },
+    "https://rg.ru/2025/11/16/reg-cfo/na-kryshe-elektrichki-v-podmoskove-zagorelos-oborudovanie.html": {
+      "ETag": "\"qn1a5rwsjt1q2d\""
+    },
+    "https://rg.ru/2025/11/16/aksakov-evrope-pridetsia-nesti-otvetstvennost-za-uderzhanie-dohodov-s-aktivov-rf.html": {
+      "ETag": "\"nhoaw2a56h1ru7\""
     }
   },
   "stats": {
@@ -23604,9 +23619,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0), HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0), HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0), HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0), HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0)",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-16T18:24:37.066605+00:00",
+    "last_run": "2025-11-16T21:15:12.227153+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -23619,55 +23639,55 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 307.6602360000038,
-        "connect_ms": 1036.249998999992,
-        "response_ms": 1343.9102349999957,
+        "dns_ms": 392.0843250000132,
+        "connect_ms": 399.6040659999949,
+        "response_ms": 791.6883910000081,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 413.2834339999931,
-        "connect_ms": 0.0,
-        "response_ms": 307.33960399999205,
+        "dns_ms": 130.70210400002225,
+        "connect_ms": 851.1735919999808,
+        "response_ms": 981.875696000003,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 5785.526912999984,
-        "connect_ms": 0.0,
-        "response_ms": 1013.0690390000154,
+        "dns_ms": 407.47378500000764,
+        "connect_ms": 4726.317478999988,
+        "response_ms": 5133.791263999996,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0)"
+        "dns_ms": 128.2929999999851,
+        "connect_ms": 432.53280600001176,
+        "response_ms": 560.8258059999969,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "bb9ed02444fa5431b5b917b6af7d928b62bcd3eb48db3ec8830e0f1c04478149",
+    "https://ardexpert.ru/article": "b39f6aff8740727b517b59115ab0d50519ac20fed3a8ae9767880741b662359e",
     "https://www.gostinfo.ru/News/List": "2a9d135c2facd331bcfb18a43fb00bdd50cd2b466bd705419dd56383640466f8",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "538a90219d48be37a290be1c8202dab39b72fc43327b6d81f206e8ed05529a86",
-    "https://eec.eaeunion.org/news/": "d81a26703b91c4a46273ceaf2593e231831621916e4fc709da3dc6eb2499014e",
+    "https://eec.eaeunion.org/news/": "e9a45235c9e1a9c89147148aa3c78aa43df78d2a9665ab867bcb7c45806bba30",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "ba715d42cfc13913c1457d5317c9a3720d09926eb8e1e8c926b5683896ddd13b",
-    "https://www.metalinfo.ru/ru/news": "df95c88d62f890b11169faea62f25d14285f3014a19c728c0f58ed235235a35d",
-    "https://www.pnp.ru/economics/": "74fab28e846a7c13643d0827c0e3afe401a929ea44984f1acdb68ae838cc9129",
-    "https://erzrf.ru/news/": "22fc941b5a11c8ef52874d74548d557a82ca0057470c401c67d2e84b37a9370a",
-    "https://ria-stk.ru/news/vse-novosti.php": "ef98ddca8cd5870dbf8a540f0696f1fb6d83defdeaab5312f86d9790b1296b14",
-    "http://government.ru/news/": "18a64b6857342b37a8ee659711bf284a8fa8df15f48dc3b7560aa5b1ace72e26",
-    "https://stroygaz.ru/news/": "57794447177d470a968bea8802585072c72bc062c557e82c674bfc4b562b274a",
-    "https://realty.ria.ru/lenta/": "fccc3adde6e5deaf4d7ebe79eb3450093340a9e50f9608cd4de58ef3d2e4b7bc",
-    "https://rg.ru/tema/ekonomika": "9b4834f08275b6ca02e673aa02b66ed4f5e3aa4817cb676f19956d2b039e41f3",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "9912dd4f2be18e488f5961031cff02f63977e409537db45a2bdad3edd7122177",
+    "https://www.metalinfo.ru/ru/news": "690645bb04907bdc4e20d2753cf50d24de49ae2c44f2eb7eef34c404baee7d0a",
+    "https://www.pnp.ru/economics/": "600623be72c858a90320c83608237ba7b578e097089249c268a6d47d4b69afb7",
+    "https://erzrf.ru/news/": "709c1c4e647355f2852d4cd8f1496ac1718733778c99539792567e313e7c29dd",
+    "https://ria-stk.ru/news/vse-novosti.php": "bcedf0a7d7508d71b94528a005fc84fb98bab519262dba3b0da4368a77a6dc95",
+    "http://government.ru/news/": "ce31cb6c0e46c1dd2b3c8b6fa07d6574490b055dc655c1c79882356f001a795c",
+    "https://stroygaz.ru/news/": "7ef2724b27c02ce6edc228ac1c941d032d595e76c3df35b65653fd85e0d8927a",
+    "https://realty.ria.ru/lenta/": "9c48014fe7a62f8b6f4a510eafc35df5318ddb28e3f0272561d0a427da9054c8",
+    "https://rg.ru/tema/ekonomika": "e13659a4281c146a538e148e7661de7cac44a4367dc7a97e1b8aa41dd108e15c",
     "http://ancb.ru/publication": "85d52fb2c56df235a9b9ed2bb61246821a6889edf925d0c3048409f36cb8bfca",
     "https://notim.ru": "18d123e2639db11e37f9c33c9d71f0d58edb4646756b985a1f6922340381289e",
     "https://faufcc.ru/press-tsentr/novosti": "a648052e9069b46cf54763475133aff3b064b83064e9311601a8753f7ac3cc0d"
@@ -23975,6 +23995,11 @@
       "https://realty.ria.ru/20251114/orientir-2054921356.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/16/reg-cfo/vse-po-pravilam.html",
+      "https://rg.ru/2025/11/16/udachnyj-kadr.html",
+      "https://rg.ru/2025/11/16/pyos-s-nimi.html",
+      "https://rg.ru/2025/11/16/reg-cfo/na-kryshe-elektrichki-v-podmoskove-zagorelos-oborudovanie.html",
+      "https://rg.ru/2025/11/16/aksakov-evrope-pridetsia-nesti-otvetstvennost-za-uderzhanie-dohodov-s-aktivov-rf.html",
       "https://rg.ru/2025/11/14/cb-obiasnil-kogda-bank-otkazhet-v-vydache-karty-iz-za-podozrenij-v-moshennichestve.html",
       "https://rg.ru/2025/11/16/sploshnoe-naduvanie.html",
       "https://rg.ru/2025/11/16/reg-dfo/bolee-70-ulic-i-desiatki-shkol-v-rossii-nazvany-imenami-geroev-specoperacii.html",
@@ -24000,11 +24025,6 @@
       "https://rg.ru/2025/11/16/eshche-v-dvuh-aeroportah-otmenili-ogranicheniia-na-polety.html",
       "https://rg.ru/2025/11/16/fns-nachislit-po-55-kopejki-v-den-na-kazhdye-prosrochennye-100-rublej.html",
       "https://rg.ru/2025/11/16/reg-dfo/v-iakutii-vykraivaiut-sredstva-na-zhkh-iz-vseh-statej-respublikanskogo-biudzheta.html",
-      "https://rg.ru/2025/11/16/deputat-bessarab-rasskazala-o-sposobe-uvelicheniia-pensii-bolee-chem-v-dva-raza.html",
-      "https://rg.ru/2025/11/15/bovt-eti-tendencii-nado-imet-vvidu-chtoby-derzhat-nos-po-vetru-i-po-solncu.html",
-      "https://rg.ru/2025/11/15/v-gosdume-perechislili-sposoby-zashchity-ot-moshennichestva-s-zhilem.html",
-      "https://rg.ru/2025/11/15/reg-ufo/aeroport-volgograda-vremenno-ne-prinimaet-i-ne-vypuskaet-rejsy.html",
-      "https://rg.ru/2025/11/15/reg-pfo/saratovskij-aeroport-priostanovil-rabotu.html",
       "https://rg.ru/2025/11/14/gk-poliplast-predstavila-innovacionnye-resheniia-na-mezhdunarodnoj-vystavke-himiia-2025.html",
       "https://rg.ru/2025/11/10/oez-sankt-peterburg-prodolzhaet-rasshiriatsia-i-privlekat-novyh-investorov.html",
       "https://rg.ru/2025/11/10/peterburgskij-politeh-podgotovka-tehnologicheskih-liderov-budushchego.html",
@@ -31664,7 +31684,12 @@
     "1725b91c977be7eca8e4d9d73b1e399a4b8e2bf8f53a01d53c3b4c327f66a0a0": "2025-11-16T21:24:00+03:00",
     "33a7c4c24ecaca5afc6272a3b538e70a45b26224652e439880c5800b9183c42e": "2025-11-16T21:24:00+03:00",
     "4bbbdcf7953182aeb4b3f0531eed0307ee13b3e2e99c2a6ace0c4f5fd1cce90b": "2025-11-16T21:24:00+03:00",
-    "595ef2cd62b05bc66ca1f1fad3fcc7591f4d6abeb52b854d9e88be47b496d931": "2025-11-16T21:24:00+03:00"
+    "595ef2cd62b05bc66ca1f1fad3fcc7591f4d6abeb52b854d9e88be47b496d931": "2025-11-16T21:24:00+03:00",
+    "a7907134c5c8001e3549fab9baa62b998d94493f25a7156333470e210bdeddb4": "2025-11-17T00:15:00+03:00",
+    "aa66b3b4254636d2369cf7864c267075285dedb013cb53ec4d81253ae6459a22": "2025-11-17T00:15:00+03:00",
+    "e40327e46fa97d4a8adf18d1bd433ac86db5a9378ed990c7cc9f99cab8bb0c78": "2025-11-17T00:15:00+03:00",
+    "9697ae2945c54d08b7bd95e70fddd062d44e0d9d89e7495dfcc4c3095dac699e": "2025-11-17T00:15:00+03:00",
+    "41a352df5455056a9f1bb657bb9959d4087e66f5ad247ab5e1effb9a0ae8e3d4": "2025-11-17T00:15:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -31706,39 +31731,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "rbLOxEioMfjVfqrc",
+          "value": "z1ukmAb8eTWw7ojb",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763318504
+          "expires": 1763328896
         },
         {
           "name": "__ddg10_",
-          "value": "1763317304",
+          "value": "1763327696",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763318504
+          "expires": 1763328896
         },
         {
           "name": "__ddg9_",
-          "value": "135.232.224.162",
+          "value": "145.132.102.96",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763318504
-        },
-        {
-          "name": "__ddg1_",
-          "value": "twe8A8uRGANDGRsmhm6z",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1794853304
+          "expires": 1763328896
         },
         {
           "name": "PHPSESSID",
-          "value": "d90204d960199c9fa8ba9c82f4e0d821",
+          "value": "5a36b7d4071d941603e911aa4ca2a501",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -31765,11 +31782,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "Z0VN6mhsi3wzKuL3AifDpPTXIt72q4VV",
+          "value": "aEEzv55hRcOqIgR5c6kwd47jD2HyoBYN",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763316924
+          "expires": 1763338498
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -31777,12 +31794,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1794410124
+          "expires": 1794431698
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Read timed out. (read timeout=25.0)",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1763317418.6769164
       },
       "warmup_done": false,
@@ -41240,7 +41257,12 @@
     "https://rg.ru/2025/11/16/sploshnoe-naduvanie.html": "https://rg.ru/2025/11/16/sploshnoe-naduvanie.html",
     "https://rg.ru/2025/11/16/reg-dfo/bolee-70-ulic-i-desiatki-shkol-v-rossii-nazvany-imenami-geroev-specoperacii.html": "https://rg.ru/2025/11/16/reg-dfo/bolee-70-ulic-i-desiatki-shkol-v-rossii-nazvany-imenami-geroev-specoperacii.html",
     "https://rg.ru/2025/11/16/kak-vybrat-kuhonnyj-stol-dlia-malenkoj-kuhni-formy-razmery-i-udobnye-resheniia.html": "https://rg.ru/2025/11/16/kak-vybrat-kuhonnyj-stol-dlia-malenkoj-kuhni-formy-razmery-i-udobnye-resheniia.html",
-    "https://rg.ru/2025/11/16/reg-dnr/v-dnr-budet-vvedena-koncepciia-voennogo-turizma.html": "https://rg.ru/2025/11/16/reg-dnr/v-dnr-budet-vvedena-koncepciia-voennogo-turizma.html"
+    "https://rg.ru/2025/11/16/reg-dnr/v-dnr-budet-vvedena-koncepciia-voennogo-turizma.html": "https://rg.ru/2025/11/16/reg-dnr/v-dnr-budet-vvedena-koncepciia-voennogo-turizma.html",
+    "https://rg.ru/2025/11/16/reg-cfo/vse-po-pravilam.html": "https://rg.ru/2025/11/16/reg-cfo/vse-po-pravilam.html",
+    "https://rg.ru/2025/11/16/udachnyj-kadr.html": "https://rg.ru/2025/11/16/udachnyj-kadr.html",
+    "https://rg.ru/2025/11/16/pyos-s-nimi.html": "https://rg.ru/2025/11/16/pyos-s-nimi.html",
+    "https://rg.ru/2025/11/16/reg-cfo/na-kryshe-elektrichki-v-podmoskove-zagorelos-oborudovanie.html": "https://rg.ru/2025/11/16/reg-cfo/na-kryshe-elektrichki-v-podmoskove-zagorelos-oborudovanie.html",
+    "https://rg.ru/2025/11/16/aksakov-evrope-pridetsia-nesti-otvetstvennost-za-uderzhanie-dohodov-s-aktivov-rf.html": "https://rg.ru/2025/11/16/aksakov-evrope-pridetsia-nesti-otvetstvennost-za-uderzhanie-dohodov-s-aktivov-rf.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -49131,7 +49153,12 @@
     "28686ea7988e557cd6040044e4621e0743ee0309": "https://rg.ru/2025/11/16/sploshnoe-naduvanie.html",
     "59514af4d88f8368933ac240431550a12a41c6e3": "https://rg.ru/2025/11/16/reg-dfo/bolee-70-ulic-i-desiatki-shkol-v-rossii-nazvany-imenami-geroev-specoperacii.html",
     "e3b56c6c3ccb2372ee34dbff7dab01d864ef07e1": "https://rg.ru/2025/11/16/kak-vybrat-kuhonnyj-stol-dlia-malenkoj-kuhni-formy-razmery-i-udobnye-resheniia.html",
-    "a5c83d4c9857472272ce45513a90f695d41e4bef": "https://rg.ru/2025/11/16/reg-dnr/v-dnr-budet-vvedena-koncepciia-voennogo-turizma.html"
+    "a5c83d4c9857472272ce45513a90f695d41e4bef": "https://rg.ru/2025/11/16/reg-dnr/v-dnr-budet-vvedena-koncepciia-voennogo-turizma.html",
+    "3142786c9c1525c3a36c90b9047a8547ba221175": "https://rg.ru/2025/11/16/reg-cfo/vse-po-pravilam.html",
+    "83a7af057f5f51e0614a71e00fea46adbd8778dd": "https://rg.ru/2025/11/16/udachnyj-kadr.html",
+    "ec05ee172de812a193657afbbd37255c789df717": "https://rg.ru/2025/11/16/pyos-s-nimi.html",
+    "4887876c76a474dc4ef4c1d68bdb78942b7c3440": "https://rg.ru/2025/11/16/reg-cfo/na-kryshe-elektrichki-v-podmoskove-zagorelos-oborudovanie.html",
+    "f239d69630a0ac9e5240f220fc6b003e936fb632": "https://rg.ru/2025/11/16/aksakov-evrope-pridetsia-nesti-otvetstvennost-za-uderzhanie-dohodov-s-aktivov-rf.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -59686,6 +59713,11 @@
     "https://rg.ru/2025/11/16/sploshnoe-naduvanie.html": "1725b91c977be7eca8e4d9d73b1e399a4b8e2bf8f53a01d53c3b4c327f66a0a0",
     "https://rg.ru/2025/11/16/reg-dfo/bolee-70-ulic-i-desiatki-shkol-v-rossii-nazvany-imenami-geroev-specoperacii.html": "33a7c4c24ecaca5afc6272a3b538e70a45b26224652e439880c5800b9183c42e",
     "https://rg.ru/2025/11/16/kak-vybrat-kuhonnyj-stol-dlia-malenkoj-kuhni-formy-razmery-i-udobnye-resheniia.html": "4bbbdcf7953182aeb4b3f0531eed0307ee13b3e2e99c2a6ace0c4f5fd1cce90b",
-    "https://rg.ru/2025/11/16/reg-dnr/v-dnr-budet-vvedena-koncepciia-voennogo-turizma.html": "595ef2cd62b05bc66ca1f1fad3fcc7591f4d6abeb52b854d9e88be47b496d931"
+    "https://rg.ru/2025/11/16/reg-dnr/v-dnr-budet-vvedena-koncepciia-voennogo-turizma.html": "595ef2cd62b05bc66ca1f1fad3fcc7591f4d6abeb52b854d9e88be47b496d931",
+    "https://rg.ru/2025/11/16/reg-cfo/vse-po-pravilam.html": "a7907134c5c8001e3549fab9baa62b998d94493f25a7156333470e210bdeddb4",
+    "https://rg.ru/2025/11/16/udachnyj-kadr.html": "aa66b3b4254636d2369cf7864c267075285dedb013cb53ec4d81253ae6459a22",
+    "https://rg.ru/2025/11/16/pyos-s-nimi.html": "e40327e46fa97d4a8adf18d1bd433ac86db5a9378ed990c7cc9f99cab8bb0c78",
+    "https://rg.ru/2025/11/16/reg-cfo/na-kryshe-elektrichki-v-podmoskove-zagorelos-oborudovanie.html": "9697ae2945c54d08b7bd95e70fddd062d44e0d9d89e7495dfcc4c3095dac699e",
+    "https://rg.ru/2025/11/16/aksakov-evrope-pridetsia-nesti-otvetstvennost-za-uderzhanie-dohodov-s-aktivov-rf.html": "41a352df5455056a9f1bb657bb9959d4087e66f5ad247ab5e1effb9a0ae8e3d4"
   }
 }
