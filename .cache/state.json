@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 21 Nov 2025 18:25:20 GMT"
+      "Last-Modified": "Fri, 21 Nov 2025 21:18:05 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1c55d-QET+1hwyJTazK7pBXfMW3FW31xo\""
+      "ETag": "W/\"1c512-RkLFZnyJONr1iVqqniD5LfU2tK8\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"1zocyahx813h3y\""
+      "ETag": "\"vjn0x0tsc73gqt\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -21656,6 +21656,11 @@
     },
     "https://rg.ru/2025/11/21/analitik-vasilev-obiasnil-prichiny-ukrepleniia-rublia.html": {
       "ETag": "\"e0ggx8op1m207a\""
+    },
+    "https://www.interfax-russia.ru/realty/news/moratoriy-na-shtrafy-za-perenos-srokov-vvoda-zhilya-namereny-otmenit-husnullin": {},
+    "http://government.ru/news/57077/": {},
+    "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html": {
+      "ETag": "\"1namxu9eh91rlq\""
     }
   },
   "stats": {
@@ -26532,9 +26537,26 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f85a11d07d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f85a11d0cd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f85a11d0f50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f85a11d11d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f85a11d1450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1f775b8050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1f775b47d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1f775b5090>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1f780b1940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1f780b3820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1f7803be30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1f775b7390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1f780f1f90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1f775b7c50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1f775b7ed0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1f76fe0190>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-11-21T18:25:56.816673+00:00",
+    "last_run": "2025-11-21T21:18:31.837866+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -26547,9 +26569,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 576.8209809999973,
-        "connect_ms": 690.0993500000254,
-        "response_ms": 1266.9203310000228,
+        "dns_ms": 871.5222840000081,
+        "connect_ms": 940.0997779999898,
+        "response_ms": 1811.6220619999979,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -26560,12 +26582,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f85a22d3d10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1f7803be30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 6800.311915999999,
+        "dns_ms": 9830.173121999962,
         "connect_ms": 0.0,
-        "response_ms": 5758.277922000019,
+        "response_ms": 1124.5728449999888,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -26576,26 +26598,26 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f85a11d1450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1f76fe0190>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "32028a6f3a47b29cf2b372724e1979ca58d864f89386dbf5a1cc3fa30a3b55a0",
+    "https://ardexpert.ru/article": "9a0b165a6bee66f83e2803cb50e4d49f9f6ad00ea8b3e5164ee852e3df25d0c0",
     "https://www.gostinfo.ru/News/List": "d350e4e4cb397efdff601f5a473600ee25730c9c88826edd3df40a6fa869040c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "1fd37e3ccb04e0149b6718057941944b33a83e235d9c59f2cedbfff877c24a41",
-    "https://eec.eaeunion.org/news/": "737fed9b13819ddc7ed4ad24885fdf6466407d45c76e2da3983bd5ba97f3299f",
+    "https://eec.eaeunion.org/news/": "7f7627db240a1bca0a2a3144c665cc061e5db8c1e2e55fb2c3fda45d42edad89",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "a0749f098d7b4af6270b6e8f7f4a0bd77f2ac5ccbc3e800ed6439d308def0759",
-    "https://www.metalinfo.ru/ru/news": "e053df7d920f7bf195d8d0698a5a4774d3e29b70665918a3997ddc3b283e5a38",
-    "https://www.pnp.ru/economics/": "08058de953d481bb1824205f11dc8a5b76fef1fa7b366e9209aca4ce289eb427",
-    "https://erzrf.ru/news/": "adeab8c9152f4a84b7b3ea32bdfbd4694d7f27ac16aba2db6ceb79246db13cb0",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "2bded98fe6fb96b2fdf26c16a7a15aabfcce0366e15af2e116c4b7a977863011",
+    "https://www.metalinfo.ru/ru/news": "ec9b81f98c71590dba08f70e1083e255b6795edf8148320ceb90d3b49260b8e4",
+    "https://www.pnp.ru/economics/": "a4170a97fa51757bca8872206808ebfee50dc7c7e5f3b235be64feabcbceaaf5",
+    "https://erzrf.ru/news/": "222cafb3626b66837d65f78d07dda9c3753fd26254d7d26b8d21a59476b324bb",
     "https://ria-stk.ru/news/vse-novosti.php": "d55d01904523be15dfc90e009f85e37e51b9acdd530403056c4bcf205b3b3307",
-    "http://government.ru/news/": "b9da1bc1ed93bcc66aee4b6b6c2fc81bd72b02697c084a3726c73ae15bf15a12",
-    "https://stroygaz.ru/news/": "b2e38c1a879a2614fb3971e5a9e1c8193219df9baad5854b1b3cba5081d3d76a",
-    "https://realty.ria.ru/lenta/": "da9c1a235a1e35df59226172040bb1beed1f1d4f8f3f721a5340e72743459048",
-    "https://rg.ru/tema/ekonomika": "33853aa090db75f50c92b2f88de89d81716ae4f0881710cb7b2424f04b518813",
+    "http://government.ru/news/": "741b98390c6e681f67633259ce3b47364287b6014c15908ea8925a3147836776",
+    "https://stroygaz.ru/news/": "45b39d3920e04c3d0ef34b3ecbfa0c24ad5f81e46a941c0867a08498b6ccec78",
+    "https://realty.ria.ru/lenta/": "f976904029d719dc91508e80e069cfc013b8c87186da7a0e1a9c65e82a2ed069",
+    "https://rg.ru/tema/ekonomika": "d1f0d9c753b2ea30eb3944ed432b199dd4fd3b7dfd85303ca002b445cb68bce4",
     "http://ancb.ru/publication": "ce61f69a9d8138bfab6c3dc8d4b9361e63d42dcd394ac51569680ee0818d26f0",
     "https://notim.ru": "9f249b6cea620d1db3e683c63eacc597048676a2c1b9ebe29a1ac77bb65ffa39",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -26691,6 +26713,7 @@
       "https://minfin.gov.ru/ru/press-center/contacts/"
     ],
     "Интерфакс-Недвижимость": [
+      "https://www.interfax-russia.ru/realty/news/moratoriy-na-shtrafy-za-perenos-srokov-vvoda-zhilya-namereny-otmenit-husnullin",
       "https://www.interfax-russia.ru/realty/news/vydachi-ipoteki-v-rf-v-noyabre-prevysyat-500-mlrd-rubley-husnullin",
       "https://www.interfax-russia.ru/realty/news/stoimost-stroitelstva-bagaevskogo-gidrouzla-vyrosla-do-40-5-mlrd-rubley",
       "https://www.interfax-russia.ru/realty/news/cena-prodazhi-ofisov-klassa-a-v-peterburge-vyrosla-na-tret-za-tri-goda",
@@ -26729,8 +26752,7 @@
       "https://www.interfax-russia.ru/realty/news/dom-rf-razmeshchaet-akcii-v-ramkah-ipo-po-verhney-granice-diapazona-1750-rub",
       "https://www.interfax-russia.ru/realty/news/chetyre-kulturno-obrazovatelnyh-klastera-rf-popali-v-top-10-proektov-mira",
       "https://www.interfax-russia.ru/realty/news/minpromtorg-prodolzhaet-rabotu-nad-sovershenstvovaniem-platformennoy-ekonomiki",
-      "https://www.interfax-russia.ru/realty/news/gradsovet-rassmotrel-proekt-rekonstrukcii-edinstvennogo-v-peterburge-krematoriya",
-      "https://www.interfax-russia.ru/realty/news/pozhar-tushat-v-zhilom-komplekse-v-centre-moskvy"
+      "https://www.interfax-russia.ru/realty/news/gradsovet-rassmotrel-proekt-rekonstrukcii-edinstvennogo-v-peterburge-krematoriya"
     ],
     "Металлоснабжение и сбыт": [
       "https://www.metalinfo.ru/ru/news/178863",
@@ -26837,6 +26859,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=246405&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57077/",
       "http://government.ru/news/57069/",
       "http://government.ru/news/57071/",
       "http://government.ru/news/57070/",
@@ -26855,8 +26878,7 @@
       "http://government.ru/news/57039/",
       "http://government.ru/news/57038/",
       "http://government.ru/news/57037/",
-      "http://government.ru/news/57030/",
-      "http://government.ru/news/57036/"
+      "http://government.ru/news/57030/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/nazvana-stoimost-arendy-zhilya-v-regionakh-s-termalnym-otdykhom/",
@@ -26903,6 +26925,7 @@
       "https://realty.ria.ru/20251120/vsm-2056340398.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html",
       "https://rg.ru/2025/11/21/novyj-zakon-pozvolit-bankam-poluchit-platnyj-dostup-k-bazam-mvd.html",
       "https://rg.ru/2025/11/21/spor-bankov-i-marketplejsov-o-skidkah-za-oplatu-obostrilsia.html",
       "https://rg.ru/2025/11/21/iandeks-taksi-napravit-v-fns-30-mlrd-rublej-nalogov-za-samozaniatyh-voditelej.html",
@@ -26934,7 +26957,6 @@
       "https://rg.ru/2025/11/21/v-2025-godu-mavritaniia-vpervye-zakupila-u-rossii-molochnuiu-produkciiu.html",
       "https://rg.ru/2025/11/21/reg-skfo/pervyj-reguliarnyj-rejs-v-saudovskuiu-araviiu-budet-zapushchen-iz-mahachkaly-v-dekabre.html",
       "https://rg.ru/2025/11/21/operatory-obvinili-vympelkom-v-nedobrosovestnoj-konkurencii-iz-za-novyh-akcij.html",
-      "https://rg.ru/2025/11/21/ekspert-matveeva-nazvala-sposob-kak-sekonomit-na-produktah-k-novomu-godu.html",
       "https://rg.ru/2025/11/18/bolshe-tonn-za-rejs-i-menshe-prostoev-kak-kamaz-pomogaet-vyvezti-urozhaj-bez-zaderzhek.html",
       "https://rg.ru/2025/11/14/gk-poliplast-predstavila-innovacionnye-resheniia-na-mezhdunarodnoj-vystavke-himiia-2025.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html"
@@ -35683,7 +35705,10 @@
     "2a041305d1bb309b02ae536332967a02bba28d2d035451a703f3da839ce9753c": "2025-11-21T21:25:00+03:00",
     "aba9c21397a50222faab20fb072233c9a53c45121eecfc6718de0568e38ec767": "2025-11-21T21:25:00+03:00",
     "f8a1ca76c46a84b5ecd3810f2348febe240bf4a3f6f4c2831f7a8bdbc4da31c5": "2025-11-21T21:25:00+03:00",
-    "a8619be183213cb47b816fa1d7cb769f2a7ce8f2fe6e6c1c129b141e779cd924": "2025-11-21T21:25:00+03:00"
+    "a8619be183213cb47b816fa1d7cb769f2a7ce8f2fe6e6c1c129b141e779cd924": "2025-11-21T21:25:00+03:00",
+    "305d25b8f9f92222ca25b1acdc094e4776376543f1897cf0c1ccdc02bf3ef035": "2025-11-22T00:17:00+03:00",
+    "214ecabd56202f71053c8346d24c95407504df89d1f641f44858efc57acf350c": "2025-11-22T00:18:00+03:00",
+    "821d13278ff7f3f22347ac05059f0d5cdfea23af107ab480c77f6676a2c6f6ad": "2025-11-22T00:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -35714,9 +35739,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f85a230f820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1763749424.5767043
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1f780b3820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1763759783.673399
       },
       "warmup_done": false,
       "last_success_path": null
@@ -35725,31 +35750,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "kP2uym4oC9o1rdxD",
+          "value": "9gZDNHfdxvgRNAHc",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763750683
+          "expires": 1763761049
         },
         {
           "name": "__ddg10_",
-          "value": "1763749483",
+          "value": "1763759849",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763750683
+          "expires": 1763761049
         },
         {
           "name": "__ddg9_",
-          "value": "172.215.217.70",
+          "value": "172.215.216.211",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763750683
+          "expires": 1763761049
+        },
+        {
+          "name": "__ddg1_",
+          "value": "RDRBFG9qgJgXNlks8SoZ",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1795295849
         },
         {
           "name": "PHPSESSID",
-          "value": "498edb37c6185ffcc1e3dfcfe82c4a2d",
+          "value": "54a17a02a917a291a588b389e8e4def1",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -35792,9 +35825,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f85a11d11d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
-        "last_ts": 1763749518.092374
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1f775b7ed0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 8,
+        "last_ts": 1763759881.7281735
       },
       "warmup_done": false,
       "last_success_path": null
@@ -46585,7 +46618,10 @@
     "https://rg.ru/2025/11/21/novyj-zakon-pozvolit-bankam-poluchit-platnyj-dostup-k-bazam-mvd.html": "https://rg.ru/2025/11/21/novyj-zakon-pozvolit-bankam-poluchit-platnyj-dostup-k-bazam-mvd.html",
     "https://rg.ru/2025/11/21/spor-bankov-i-marketplejsov-o-skidkah-za-oplatu-obostrilsia.html": "https://rg.ru/2025/11/21/spor-bankov-i-marketplejsov-o-skidkah-za-oplatu-obostrilsia.html",
     "https://rg.ru/2025/11/21/iandeks-taksi-napravit-v-fns-30-mlrd-rublej-nalogov-za-samozaniatyh-voditelej.html": "https://rg.ru/2025/11/21/iandeks-taksi-napravit-v-fns-30-mlrd-rublej-nalogov-za-samozaniatyh-voditelej.html",
-    "https://rg.ru/2025/11/21/analitik-vasilev-obiasnil-prichiny-ukrepleniia-rublia.html": "https://rg.ru/2025/11/21/analitik-vasilev-obiasnil-prichiny-ukrepleniia-rublia.html"
+    "https://rg.ru/2025/11/21/analitik-vasilev-obiasnil-prichiny-ukrepleniia-rublia.html": "https://rg.ru/2025/11/21/analitik-vasilev-obiasnil-prichiny-ukrepleniia-rublia.html",
+    "https://www.interfax-russia.ru/realty/news/moratoriy-na-shtrafy-za-perenos-srokov-vvoda-zhilya-namereny-otmenit-husnullin": "https://www.interfax-russia.ru/realty/news/moratoriy-na-shtrafy-za-perenos-srokov-vvoda-zhilya-namereny-otmenit-husnullin",
+    "http://government.ru/news/57077": "http://government.ru/news/57077",
+    "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html": "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -55577,7 +55613,10 @@
     "2b13a21dbfdeed2e9d2e9d0fe24768a4c80df9c4": "https://rg.ru/2025/11/21/novyj-zakon-pozvolit-bankam-poluchit-platnyj-dostup-k-bazam-mvd.html",
     "d015a2a3083de8b6dc0007423fbb770f8a6d1a77": "https://rg.ru/2025/11/21/spor-bankov-i-marketplejsov-o-skidkah-za-oplatu-obostrilsia.html",
     "14bd52b9598745ed0de0e8e0b958a120c9907417": "https://rg.ru/2025/11/21/iandeks-taksi-napravit-v-fns-30-mlrd-rublej-nalogov-za-samozaniatyh-voditelej.html",
-    "b5347ccf5f01a29a9ae5618227c650aed9a796aa": "https://rg.ru/2025/11/21/analitik-vasilev-obiasnil-prichiny-ukrepleniia-rublia.html"
+    "b5347ccf5f01a29a9ae5618227c650aed9a796aa": "https://rg.ru/2025/11/21/analitik-vasilev-obiasnil-prichiny-ukrepleniia-rublia.html",
+    "b64b5a8bf11cab0b29af3c04f7e15de20fb145df": "https://www.interfax-russia.ru/realty/news/moratoriy-na-shtrafy-za-perenos-srokov-vvoda-zhilya-namereny-otmenit-husnullin",
+    "909fee3b83ead6ff895a9fe3c4487a9b5f6469e8": "http://government.ru/news/57077",
+    "154cee98b166ff15b4ff0ab62c4bccc697d4eb18": "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -67638,6 +67677,10 @@
     "https://rg.ru/2025/11/21/novyj-zakon-pozvolit-bankam-poluchit-platnyj-dostup-k-bazam-mvd.html": "2a041305d1bb309b02ae536332967a02bba28d2d035451a703f3da839ce9753c",
     "https://rg.ru/2025/11/21/spor-bankov-i-marketplejsov-o-skidkah-za-oplatu-obostrilsia.html": "aba9c21397a50222faab20fb072233c9a53c45121eecfc6718de0568e38ec767",
     "https://rg.ru/2025/11/21/iandeks-taksi-napravit-v-fns-30-mlrd-rublej-nalogov-za-samozaniatyh-voditelej.html": "f8a1ca76c46a84b5ecd3810f2348febe240bf4a3f6f4c2831f7a8bdbc4da31c5",
-    "https://rg.ru/2025/11/21/analitik-vasilev-obiasnil-prichiny-ukrepleniia-rublia.html": "a8619be183213cb47b816fa1d7cb769f2a7ce8f2fe6e6c1c129b141e779cd924"
+    "https://rg.ru/2025/11/21/analitik-vasilev-obiasnil-prichiny-ukrepleniia-rublia.html": "a8619be183213cb47b816fa1d7cb769f2a7ce8f2fe6e6c1c129b141e779cd924",
+    "https://www.interfax-russia.ru/realty/news/moratoriy-na-shtrafy-za-perenos-srokov-vvoda-zhilya-namereny-otmenit-husnullin": "305d25b8f9f92222ca25b1acdc094e4776376543f1897cf0c1ccdc02bf3ef035",
+    "http://government.ru/news/57077": "214ecabd56202f71053c8346d24c95407504df89d1f641f44858efc57acf350c",
+    "http://government.ru/news/57077/": "214ecabd56202f71053c8346d24c95407504df89d1f641f44858efc57acf350c",
+    "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html": "821d13278ff7f3f22347ac05059f0d5cdfea23af107ab480c77f6676a2c6f6ad"
   }
 }
