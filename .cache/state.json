@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 22 Nov 2025 01:13:47 GMT"
+      "Last-Modified": "Sat, 22 Nov 2025 03:37:19 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1c55d-3w3pTE1UGUxSXVRbJToUrIsszl4\""
+      "ETag": "W/\"1c4e7-YpHbsqjfOnxs/A3TnEEUw1hAVls\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"mb9qxhspu33h3g\""
+      "ETag": "\"z2xjvzm3zs3e5e\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -21667,6 +21667,9 @@
     },
     "https://rg.ru/2025/11/22/reg-dfo/formula-zemli-leoparda.html": {
       "ETag": "\"8s2qfp8e3g2957\""
+    },
+    "https://rg.ru/2025/11/22/reg-pfo/rosaviaciia-piat-aeroportov-v-rf-ogranichili-priem-i-otpravku-rejsov.html": {
+      "ETag": "\"g9qa830ub31o89\""
     }
   },
   "stats": {
@@ -26577,9 +26580,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1cccdb6990>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1ccd90df90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1cccdb7250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1cccdb74d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1cccdb7750>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-22T01:14:13.635699+00:00",
+    "last_run": "2025-11-22T03:36:56.535170+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -26592,56 +26600,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 713.2267490000004,
-        "connect_ms": 763.0111590000013,
-        "response_ms": 1476.2379080000017,
+        "dns_ms": 400.62390900000366,
+        "connect_ms": 658.8858519999975,
+        "response_ms": 1059.5097610000012,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1ccd83fe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 725.4828509999953,
+        "connect_ms": 235.94249300001024,
+        "response_ms": 961.4253440000056,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 9815.22434499999,
+        "dns_ms": 8022.836586000011,
         "connect_ms": 0.0,
-        "response_ms": 4916.700053,
+        "response_ms": 432.73357900000065,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1cccdb7750>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 2030.6022970000015,
+        "connect_ms": 0.0,
+        "response_ms": 546.4162470000247,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "d03a252dcbba0afb05cff4c2a984caded67ad137018618073a51014151354cbe",
+    "https://ardexpert.ru/article": "a5bc21a8ae4367eb5d09b93e5a35596edd7c95a3019d485ad7be4a5c944cc2bf",
     "https://www.gostinfo.ru/News/List": "d350e4e4cb397efdff601f5a473600ee25730c9c88826edd3df40a6fa869040c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "1fd37e3ccb04e0149b6718057941944b33a83e235d9c59f2cedbfff877c24a41",
-    "https://eec.eaeunion.org/news/": "b7e53d18f21605092b71ff017f552c6d75e8416cc2d47de3458242f4a43cbf3b",
+    "https://eec.eaeunion.org/news/": "c3729127279bf6ece54fbdcc6141cb4e4682040a233557d4fdf002c289c79ea1",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "77c705f54a95cc78e300eab412505fdc5ba582a04a680eb00a4bd2f6521c3a94",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "20fdcc20ea1ee460983e6f151a608ea960bdc3f8597ff75a6c42a2a02d7bf2d0",
     "https://www.metalinfo.ru/ru/news": "ac9915b9e79ef02fbda034dead85e264cbe294204e99678ef7a69b4132471883",
-    "https://www.pnp.ru/economics/": "fcd1ae7f554959fbc121b68d1d71a67688a694fd77f605ada772d2377f442aa5",
-    "https://erzrf.ru/news/": "66e689a749f761fc13cabc45dad1915de2e8cc342ccd88fe860ea207b9e33db5",
-    "https://ria-stk.ru/news/vse-novosti.php": "d55d01904523be15dfc90e009f85e37e51b9acdd530403056c4bcf205b3b3307",
-    "http://government.ru/news/": "8d5f848da12378b6c11409ddf54e12b9ca78177f3ec9cd7007f1d89733a5cba2",
-    "https://stroygaz.ru/news/": "58bb116e88bf61cf858f2b57c2edce1b38e5f3cb2e3550d4633227c7ac78eec7",
-    "https://realty.ria.ru/lenta/": "a70f4cc54a7ab8dd0b6e858378ef84568489b111a0af677c56d1352af65c5c30",
-    "https://rg.ru/tema/ekonomika": "32d96c04f515b1bf12e3f982192fcd3756d458dbd9d8d38a43247fdd4281891b",
-    "http://ancb.ru/publication": "ce61f69a9d8138bfab6c3dc8d4b9361e63d42dcd394ac51569680ee0818d26f0",
+    "https://www.pnp.ru/economics/": "685ba2cd9acc03af0d7d4548fa27a0abd3ffc4981fd1ea44b40224b853f2ed85",
+    "https://erzrf.ru/news/": "7662a68ea625cc648f358a0c1f42288d42e3fc48fda9a4d5f295351046d7e365",
+    "https://ria-stk.ru/news/vse-novosti.php": "f911fc40886b8188a8e3bd1649e0ef9bc59835bb92ab880b8bca3ba4c47fad19",
+    "http://government.ru/news/": "0d5f2781717b21fd96a930f0ba2e694d90aa4e7ef91a18b6ede2061afbfb83a2",
+    "https://stroygaz.ru/news/": "029ee50702f5761da3c908241abf6a4b25fb1979fef0357205236ed63f7ad32a",
+    "https://realty.ria.ru/lenta/": "db7153905a20a9112415633ce2cbb5c3a16ac808bfea1d65f983974eee9195cd",
+    "https://rg.ru/tema/ekonomika": "7ab6fc3d18305447b0393a00e7244cf831a9fab32b313d9ce11a05f059fdcf80",
+    "http://ancb.ru/publication": "5f64c5404cadac1e1d1ba610429a50f5666c5021ab10e6b8be536aa89b0379e8",
     "https://notim.ru": "9f249b6cea620d1db3e683c63eacc597048676a2c1b9ebe29a1ac77bb65ffa39",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -26948,6 +26956,7 @@
       "https://realty.ria.ru/20251120/vsm-2056340398.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/22/reg-pfo/rosaviaciia-piat-aeroportov-v-rf-ogranichili-priem-i-otpravku-rejsov.html",
       "https://rg.ru/2025/11/22/eksperty-rg-rasskazali-kak-rasschitat-vygodu-pri-refinansirovanii-kredita.html",
       "https://rg.ru/2025/11/22/reg-dfo/formula-zemli-leoparda.html",
       "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html",
@@ -26967,7 +26976,6 @@
       "https://rg.ru/2025/11/21/shadaev-liudi-otnosiatsia-k-periodu-ohlazhdeniia-dlia-sim-kart-s-ponimaniem.html",
       "https://rg.ru/2025/11/21/fokus-na-liudiah-i-tehnologiiah-moskovskij-industrialnyj-mediaforum.html",
       "https://rg.ru/2025/11/21/zastriavshie-iz-za-navodneniia-vo-vetname-turisty-iz-rf-vernulis-v-gostinicy.html",
-      "https://rg.ru/2025/11/21/reg-cfo/rosaviaciia-vse-zakrytye-s-2022-goda-rossijskie-aeroporty-gotovy-k-otkrytiiu.html",
       "https://rg.ru/2025/11/21/v-oae-projdet-mezhdunarodnyj-forum-farminspektoratov.html",
       "https://rg.ru/2025/11/21/reg-urfo/na-peregone-shamary-kordon-vosstanovleno-dvizhenie-poezdov.html",
       "https://rg.ru/2025/11/21/reg-cfo/zheleznodorozhnuiu-stanciiu-v-iaroslavskoj-oblasti-pereimenovali-v-rostov-velikij.html",
@@ -35733,7 +35741,8 @@
     "214ecabd56202f71053c8346d24c95407504df89d1f641f44858efc57acf350c": "2025-11-22T00:18:00+03:00",
     "821d13278ff7f3f22347ac05059f0d5cdfea23af107ab480c77f6676a2c6f6ad": "2025-11-22T00:18:00+03:00",
     "dec924c1d65220b0bff2c06bdbcdf3f12e7e16144a9b0dbf540e0c85b61e8e2e": "2025-11-22T04:14:00+03:00",
-    "fb779b8e1a55c07b05aefe05f0ef7d1d0580cd02ab29d0eac30618f3d8227c7a": "2025-11-22T04:14:00+03:00"
+    "fb779b8e1a55c07b05aefe05f0ef7d1d0580cd02ab29d0eac30618f3d8227c7a": "2025-11-22T04:14:00+03:00",
+    "d39d6dc0609651c22ed76b1a437ec439775e9ef9fe48fd1c81369fdc32a4efbd": "2025-11-22T06:36:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -35764,8 +35773,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1ccd8b3820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1763773923.824717
       },
       "warmup_done": false,
@@ -35775,31 +35784,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "usIvjhjCicDZupKE",
+          "value": "ZA5DJZlWCXWt5iqR",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763775190
+          "expires": 1763783803
         },
         {
           "name": "__ddg10_",
-          "value": "1763773990",
+          "value": "1763782603",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763775190
+          "expires": 1763783803
         },
         {
           "name": "__ddg9_",
-          "value": "172.215.209.241",
+          "value": "4.236.159.144",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763775190
+          "expires": 1763783803
+        },
+        {
+          "name": "__ddg1_",
+          "value": "FlE6zrL7KXouiFm7Nux3",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1795318603
         },
         {
           "name": "PHPSESSID",
-          "value": "80c06a2181c8b060498e894862222de3",
+          "value": "b25778011c583f4b311f1d19405e4142",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -35826,11 +35843,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "zp2sNsWVHEwZDyFXjbwgNwaAPg51h4Vu",
+          "value": "0spJCgbYJQ7VcerxezulRsnVal40Emhz",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1763739279
+          "expires": 1763793409
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -35838,12 +35855,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1794832479
+          "expires": 1794886609
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1cccdb74d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1763774024.7065716
       },
       "warmup_done": false,
@@ -46640,7 +46657,8 @@
     "http://government.ru/news/57077": "http://government.ru/news/57077",
     "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html": "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html",
     "https://rg.ru/2025/11/22/eksperty-rg-rasskazali-kak-rasschitat-vygodu-pri-refinansirovanii-kredita.html": "https://rg.ru/2025/11/22/eksperty-rg-rasskazali-kak-rasschitat-vygodu-pri-refinansirovanii-kredita.html",
-    "https://rg.ru/2025/11/22/reg-dfo/formula-zemli-leoparda.html": "https://rg.ru/2025/11/22/reg-dfo/formula-zemli-leoparda.html"
+    "https://rg.ru/2025/11/22/reg-dfo/formula-zemli-leoparda.html": "https://rg.ru/2025/11/22/reg-dfo/formula-zemli-leoparda.html",
+    "https://rg.ru/2025/11/22/reg-pfo/rosaviaciia-piat-aeroportov-v-rf-ogranichili-priem-i-otpravku-rejsov.html": "https://rg.ru/2025/11/22/reg-pfo/rosaviaciia-piat-aeroportov-v-rf-ogranichili-priem-i-otpravku-rejsov.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -55637,7 +55655,8 @@
     "909fee3b83ead6ff895a9fe3c4487a9b5f6469e8": "http://government.ru/news/57077",
     "154cee98b166ff15b4ff0ab62c4bccc697d4eb18": "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html",
     "045e75d74021e016930e636f9b73e830fa30bafd": "https://rg.ru/2025/11/22/eksperty-rg-rasskazali-kak-rasschitat-vygodu-pri-refinansirovanii-kredita.html",
-    "2ec43f2f9ed8dd17790c9f3e03fdffc49cd53424": "https://rg.ru/2025/11/22/reg-dfo/formula-zemli-leoparda.html"
+    "2ec43f2f9ed8dd17790c9f3e03fdffc49cd53424": "https://rg.ru/2025/11/22/reg-dfo/formula-zemli-leoparda.html",
+    "65e5a30ca8812f8368e7cd16a980f9086cfcf399": "https://rg.ru/2025/11/22/reg-pfo/rosaviaciia-piat-aeroportov-v-rf-ogranichili-priem-i-otpravku-rejsov.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -67704,6 +67723,7 @@
     "http://government.ru/news/57077/": "214ecabd56202f71053c8346d24c95407504df89d1f641f44858efc57acf350c",
     "https://rg.ru/2025/11/21/reg-cfo/obiavleny-pobediteli-premii-luchshij-analitik-rossii-2025.html": "821d13278ff7f3f22347ac05059f0d5cdfea23af107ab480c77f6676a2c6f6ad",
     "https://rg.ru/2025/11/22/eksperty-rg-rasskazali-kak-rasschitat-vygodu-pri-refinansirovanii-kredita.html": "dec924c1d65220b0bff2c06bdbcdf3f12e7e16144a9b0dbf540e0c85b61e8e2e",
-    "https://rg.ru/2025/11/22/reg-dfo/formula-zemli-leoparda.html": "fb779b8e1a55c07b05aefe05f0ef7d1d0580cd02ab29d0eac30618f3d8227c7a"
+    "https://rg.ru/2025/11/22/reg-dfo/formula-zemli-leoparda.html": "fb779b8e1a55c07b05aefe05f0ef7d1d0580cd02ab29d0eac30618f3d8227c7a",
+    "https://rg.ru/2025/11/22/reg-pfo/rosaviaciia-piat-aeroportov-v-rf-ogranichili-priem-i-otpravku-rejsov.html": "d39d6dc0609651c22ed76b1a437ec439775e9ef9fe48fd1c81369fdc32a4efbd"
   }
 }
