@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 25 Nov 2025 15:58:58 GMT"
+      "Last-Modified": "Tue, 25 Nov 2025 18:29:11 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d168-pldcwo0UmI7nRpNy1Ej8e7465bE\""
+      "ETag": "W/\"1d031-qtW+rbhfR/b5yV79Pem014ZSwJ8\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Tue, 25 Nov 2025 14:44:59 GMT"
+      "Last-Modified": "Tue, 25 Nov 2025 15:30:16 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"9ldfil2pwm3tfx\""
+      "ETag": "\"rc0kloq7433wmj\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -22687,11 +22687,31 @@
     },
     "https://rg.ru/2025/11/25/ekonomist-razveial-mif-o-tom-chto-pokupka-zhilia-samoe-vygodnoe-vlozhenie-deneg.html": {
       "ETag": "\"17eu0dz0luk1rw6\""
+    },
+    "http://government.ru/news/57091/": {},
+    "https://stroygaz.ru/news/kadry/nazvany-samye-vostrebovannye-vakansii-s-chastichnoy-zanyatostyu-v-stroitelstve/": {
+      "Last-Modified": "Tue, 25 Nov 2025 15:30:16 GMT"
+    },
+    "https://rg.ru/2025/11/25/kredity-zaehali-na-pit-stop.html": {
+      "ETag": "\"t9rfc62vai1xt7\""
+    },
+    "https://rg.ru/2025/11/25/kirpichnyj-sled.html": {
+      "ETag": "\"xxqdxv34qt1wuc\""
+    },
+    "https://rg.ru/2025/11/25/vesna-ili-ottepel.html": {
+      "ETag": "\"1222kmoq0mc20l5\""
+    },
+    "https://rg.ru/2025/11/25/bokal-emocij.html": {
+      "ETag": "\"cov7082n5p1xcb\""
+    },
+    "https://rg.ru/documents/2025/11/26/ks37-dok.html": {
+      "ETag": "\"cxba1u841j3nzg\""
     }
   },
   "stats": {
     "cooldowns": {
-      "https://stroygaz.ru/news/": 1761491859.0752552
+      "https://stroygaz.ru/news/": 1761491859.0752552,
+      "https://www.interfax-russia.ru/realty/news?per-page=32": 1764116905.8625288
     },
     "errors": [
       {
@@ -28028,9 +28048,31 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb75dfd87d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb75dfd8b90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb75dfd8e10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb75dfd9090>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb75dfd9310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6bd4634050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6bd46307d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6bd4631090>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6bd52a9a70>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6bd52ab950>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6bd522fbf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Интерфакс-Недвижимость",
+        "url": "https://www.interfax-russia.ru/realty/news?per-page=32",
+        "error": "retry exhausted -> used cache + cooldown 6h: HTTPSConnectionPool(host='www.interfax-russia.ru', port=443): Max retries exceeded with url: /realty/news?per-page=32 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6bd4632e90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6bd52e5f90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6bd4633250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6bd46334d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6bd4633750>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-11-25T16:00:00.278941+00:00",
+    "last_run": "2025-11-25T18:29:50.761596+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -28043,9 +28085,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 381.6598849998627,
-        "connect_ms": 575.21609000014,
-        "response_ms": 956.8759750000027,
+        "dns_ms": 564.5570309999925,
+        "connect_ms": 485.9234049999941,
+        "response_ms": 1050.4804359999866,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -28056,12 +28098,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb75ee80170>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6bd522fbf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 4360.589614000219,
+        "dns_ms": 4989.9765779999825,
         "connect_ms": 0.0,
-        "response_ms": 459.2870960000255,
+        "response_ms": 1226.043964999974,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -28072,26 +28114,26 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb75dfd9310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6bd4633750>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "fbaa22eaf13d59572354eacdc80e63bb4ab6de45b7fe642d4a72248e38e4e020",
+    "https://ardexpert.ru/article": "9d11bc036d890a95216b1e4aa002119f8a89e53137950f6e3882f3c586b252fc",
     "https://www.gostinfo.ru/News/List": "d350e4e4cb397efdff601f5a473600ee25730c9c88826edd3df40a6fa869040c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "e6619837ddc676dffa30a84150f2cf9b257cb50288b8087f4ab73c85072c50d4",
-    "https://eec.eaeunion.org/news/": "f8b58948431f50d85558d420ac831719b2d8cc91ee3cd5508c3e11ab57586e66",
+    "https://eec.eaeunion.org/news/": "82fd80c68e8195ff4dca9dc2de2f6abb6f9f7ee4499cc97b4853415eb9f8aa08",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "537c8fade8f531b6275943b2f4ba3b2128b34c0bb258d36276aace450a10dcc7",
-    "https://www.metalinfo.ru/ru/news": "896813607bf39bab792174835a9b4833404911c9f57a5f7acf6beb6d1ffa245e",
-    "https://www.pnp.ru/economics/": "119b1c2989942f44d0424ceef95767bebf9799772e086b6a3c3c788ee6ba4d1a",
-    "https://erzrf.ru/news/": "01d382e6ecc3589202d565b78e66238d6b27f33fed5103d5a9a82d1a5146fe8b",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "10c2f7bfa14c12a648f785f61f6c48c9a56c3646e0c8e63d1b24a9f5418e14ad",
+    "https://www.metalinfo.ru/ru/news": "b765221d8940916c201d080b6c2e530dff57f93e5b55a155487b393f622bdbfb",
+    "https://www.pnp.ru/economics/": "452f84ee34f501622cda8c504e5d8951d032b86596dcc83065b8826ddb7e1ad6",
+    "https://erzrf.ru/news/": "2ce30d0d23305fed6fc6869c02270f87b1908c433d2f6dcbbf09eb79452b58c8",
     "https://ria-stk.ru/news/vse-novosti.php": "42c561258456626588fe07b5736c3bc74b9dd41791d986f5f5756521b9ff7f2d",
-    "http://government.ru/news/": "e74849e90bf1ebb6b51ba03799c1adfbeb4f36ff997b7f1b3737954a791f2be9",
-    "https://stroygaz.ru/news/": "d5018f223553f70986e51d6535ac96860d1592956404c9a2fd7f704723dda34d",
-    "https://realty.ria.ru/lenta/": "c88451b1247f0ddbb52bbdab19e37d558fac84cb14ffcf228e4243882daea5bf",
-    "https://rg.ru/tema/ekonomika": "28a26dbb744c00c8c081ae1ad50d43be5175916ee9b4b8ed9f5e4e309340c615",
+    "http://government.ru/news/": "2a7c73b6516ae0877a587fd644e2980e8870c4385c09313c03740285c930004b",
+    "https://stroygaz.ru/news/": "3f4655ea1a2bf8c7184d364ec4676fff759fb8a59c6cc8fc18b764c6630280ad",
+    "https://realty.ria.ru/lenta/": "6e66358a47a1268de3ad532113363b47795bb9bd956fd863cb4f166f7f9672d4",
+    "https://rg.ru/tema/ekonomika": "2e0a4fbab59840382bd78728469bc908eddbb2162957be0175c58dfa485df345",
     "http://ancb.ru/publication": "37a21bf53b2ba10da425f83fc0186504826f150c10940390bab807f77fe993e7",
     "https://notim.ru": "9f249b6cea620d1db3e683c63eacc597048676a2c1b9ebe29a1ac77bb65ffa39",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -28333,6 +28375,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=246430&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57091/",
       "http://government.ru/news/57090/",
       "http://government.ru/news/57089/",
       "http://government.ru/news/57085/",
@@ -28351,10 +28394,10 @@
       "http://government.ru/news/57078/",
       "http://government.ru/news/57072/",
       "http://government.ru/news/57073/",
-      "http://government.ru/news/57077/",
-      "http://government.ru/news/57069/"
+      "http://government.ru/news/57077/"
     ],
     "Стройгаз.ру": [
+      "https://stroygaz.ru/news/kadry/nazvany-samye-vostrebovannye-vakansii-s-chastichnoy-zanyatostyu-v-stroitelstve/",
       "https://stroygaz.ru/news/construction/v-moskovskoy-oblasti-postroeno-bolee-36-mln-kvadratov-nezhilykh-zdaniy-za-8-let-/",
       "https://stroygaz.ru/news/dwelling/na-starte-stroitelstva-mkd-pokupateli-proyavlyayut-maksimalnuyu-aktivnost-issledovanie-/",
       "https://stroygaz.ru/news/info-partners-news/v-moskve-proydet-kongress-posvyashchennyy-tsifrovomu-budushchemu-stroyotrasli-/",
@@ -28373,8 +28416,7 @@
       "https://stroygaz.ru/news/dwelling/v-noyabre-na-rynke-dolgosrochnoy-arendy-lish-3-sobstvennikov-ne-zaprashivali-depozit-/",
       "https://stroygaz.ru/news/dwelling/u-rossiyan-za-poslednie-tri-goda-vyros-zapros-k-tikhim-prostranstvam-/",
       "https://stroygaz.ru/news/materials/soyuztsement-prinyal-uchastie-v-konferentsii-po-ekologicheskomu-mashinostroeniyu-/",
-      "https://stroygaz.ru/news/dwelling/predlozhenie-mnogokomnatnykh-kvartir-v-novostroykakh-moskvy-uvelichilos-na-tret/",
-      "https://stroygaz.ru/news/dwelling/tseny-na-zhile-v-rf-v-2027-godu-mogut-vyrasti-v-dva-raza-vyshe-inflyatsii-mikhail-goldberg-/"
+      "https://stroygaz.ru/news/dwelling/predlozhenie-mnogokomnatnykh-kvartir-v-novostroykakh-moskvy-uvelichilos-na-tret/"
     ],
     "РИА Недвижимость: лента": [
       "https://realty.ria.ru/20251125/rosreestr-2057487860.html",
@@ -28399,6 +28441,11 @@
       "https://realty.ria.ru/20251125/moskva-2057194823.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/25/kredity-zaehali-na-pit-stop.html",
+      "https://rg.ru/2025/11/25/kirpichnyj-sled.html",
+      "https://rg.ru/2025/11/25/vesna-ili-ottepel.html",
+      "https://rg.ru/2025/11/25/bokal-emocij.html",
+      "https://rg.ru/documents/2025/11/26/ks37-dok.html",
       "https://rg.ru/2025/11/25/dobavlennoe-vremia.html",
       "https://rg.ru/2025/11/25/litry-liubiat-schet.html",
       "https://rg.ru/2025/11/25/reg-cfo/iamshchik-ne-goni.html",
@@ -28426,11 +28473,6 @@
       "https://rg.ru/2025/11/25/v-otchete-sledstviia-opublikovany-prichiny-katastrofy-gruzovogo-md-11-v-luisville.html",
       "https://rg.ru/2025/11/25/matvienko-obiasnila-svoiu-poziciiu-po-oplate-oms-dlia-nerabotaiushchih-na-mersedesah.html",
       "https://rg.ru/2025/11/25/opros-bolshinstvo-rossiian-schitaiut-iniciativu-o-zaprete-skidok-na-marketplejsah-nespravedlivoj.html",
-      "https://rg.ru/2025/11/25/reg-cfo/v-moskve-projdet-kongress-innovacionnaia-praktika-nauka-plius-biznes.html",
-      "https://rg.ru/2025/11/25/postoronnim-razreshat-platit-gosposhlinu-na-istcov.html",
-      "https://rg.ru/2025/11/25/finuniversitet-nazval-goroda-s-samym-vysokim-kachestvom-zhizni.html",
-      "https://rg.ru/2025/11/25/v-rossii-vydacha-potrebkreditov-snizilas-na-481-v-2025-godu.html",
-      "https://rg.ru/2025/11/25/rf-i-kitaj-obsuzhdaiut-uvelichenie-eksporta-nefti-v-knr.html",
       "https://rg.ru/2025/10/29/provedeny-master-klassy-dlia-finalistov-konkursa-novoe-zveno-proekty.html",
       "https://rg.ru/2025/11/14/gk-poliplast-predstavila-innovacionnye-resheniia-na-mezhdunarodnoj-vystavke-himiia-2025.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html"
@@ -37629,7 +37671,14 @@
     "7793ab9fc4b16f441acdbe90dc9364da077a49afcc8c41c9b69973c43bc674a4": "2025-11-25T18:59:00+03:00",
     "d3b5028c976b4a2132998965ea8c2753b1cf6adbfe2423172fdca531ba189435": "2025-11-25T18:59:00+03:00",
     "417c11a3eaeca902ac64f6251b4ebcbe9b82c482daa4c200fb42121ebed12a0e": "2025-11-25T18:59:00+03:00",
-    "0d903cd1550391124931cbd4ddc4ae91a7425877203a8f29c528f91594a6d873": "2025-11-25T19:00:00+03:00"
+    "0d903cd1550391124931cbd4ddc4ae91a7425877203a8f29c528f91594a6d873": "2025-11-25T19:00:00+03:00",
+    "51754c0b1e8f10104ab3cb36a01f95106046af32e8f6a82296c535fdbcf2758e": "2025-11-25T21:29:00+03:00",
+    "365b67d1a8769c331fd19411ec4cd224f99823ab549b7db5b8bf2991da49fc64": "2025-11-25T21:29:00+03:00",
+    "523c6a6ded254d2f0b17b6abc208723b32ba34fe2f3f17879b36346650a63250": "2025-11-25T21:29:00+03:00",
+    "23a4ddb43ada4a0938d694df183596eb1fc1437b70e7e7a993696d13a252db66": "2025-11-25T21:29:00+03:00",
+    "b20fc423ee5c8e82ebb1e8b311457a80dc6384d556d7f3c6e183d363cfe21e81": "2025-11-25T21:29:00+03:00",
+    "2f00aa9a50818eb12d7f82509f8f97ea0df56cdd7c53c87a7edb159e103da351": "2025-11-25T21:29:00+03:00",
+    "24b0ca918e2fdd8fa03d4934c9e539f008eda1ecca079ec23b905379c3ccf753": "2025-11-25T21:29:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -37660,9 +37709,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb75fa42b10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1764086221.9774988
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6bd52ab950>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1764095207.173197
       },
       "warmup_done": false,
       "last_success_path": null
@@ -37671,39 +37720,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "TxScb7xusofsNIuj",
+          "value": "f8VFTeRv46lzQexI",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764087502
+          "expires": 1764096514
         },
         {
           "name": "__ddg10_",
-          "value": "1764086302",
+          "value": "1764095314",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764087502
+          "expires": 1764096514
         },
         {
           "name": "__ddg9_",
-          "value": "172.208.127.32",
+          "value": "172.184.213.243",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764087502
-        },
-        {
-          "name": "__ddg1_",
-          "value": "sGNRaEmLp3IgkV0ZSeEk",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1795622302
+          "expires": 1764096514
         },
         {
           "name": "PHPSESSID",
-          "value": "ecbccf74f9a0e25f7d19adf82fb40a8e",
+          "value": "39b85855302b9212c5f886dfab33128f",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -37746,9 +37787,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb75dfd9090>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
-        "last_ts": 1764086334.043958
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6bd46334d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 8,
+        "last_ts": 1764095348.4543543
       },
       "warmup_done": false,
       "last_success_path": null
@@ -49078,7 +49119,14 @@
     "https://rg.ru/2025/11/25/reg-cfo/v-podmoskove-priglashaiut-zhenshchin-porabotat-voditeliami-avtobusov.html": "https://rg.ru/2025/11/25/reg-cfo/v-podmoskove-priglashaiut-zhenshchin-porabotat-voditeliami-avtobusov.html",
     "https://rg.ru/2025/11/25/cb-banki-budut-proveriat-dannye-zaemshchikov-cherez-fns-i-socfond-s-2027-goda.html": "https://rg.ru/2025/11/25/cb-banki-budut-proveriat-dannye-zaemshchikov-cherez-fns-i-socfond-s-2027-goda.html",
     "https://rg.ru/2025/11/25/dlia-zhenshchin-v-dekrete-predlozhili-otmenit-shtrafy-po-kreditam.html": "https://rg.ru/2025/11/25/dlia-zhenshchin-v-dekrete-predlozhili-otmenit-shtrafy-po-kreditam.html",
-    "https://rg.ru/2025/11/25/ekonomist-razveial-mif-o-tom-chto-pokupka-zhilia-samoe-vygodnoe-vlozhenie-deneg.html": "https://rg.ru/2025/11/25/ekonomist-razveial-mif-o-tom-chto-pokupka-zhilia-samoe-vygodnoe-vlozhenie-deneg.html"
+    "https://rg.ru/2025/11/25/ekonomist-razveial-mif-o-tom-chto-pokupka-zhilia-samoe-vygodnoe-vlozhenie-deneg.html": "https://rg.ru/2025/11/25/ekonomist-razveial-mif-o-tom-chto-pokupka-zhilia-samoe-vygodnoe-vlozhenie-deneg.html",
+    "http://government.ru/news/57091": "http://government.ru/news/57091",
+    "https://stroygaz.ru/news/kadry/nazvany-samye-vostrebovannye-vakansii-s-chastichnoy-zanyatostyu-v-stroitelstve": "https://stroygaz.ru/news/kadry/nazvany-samye-vostrebovannye-vakansii-s-chastichnoy-zanyatostyu-v-stroitelstve",
+    "https://rg.ru/2025/11/25/kredity-zaehali-na-pit-stop.html": "https://rg.ru/2025/11/25/kredity-zaehali-na-pit-stop.html",
+    "https://rg.ru/2025/11/25/kirpichnyj-sled.html": "https://rg.ru/2025/11/25/kirpichnyj-sled.html",
+    "https://rg.ru/2025/11/25/vesna-ili-ottepel.html": "https://rg.ru/2025/11/25/vesna-ili-ottepel.html",
+    "https://rg.ru/2025/11/25/bokal-emocij.html": "https://rg.ru/2025/11/25/bokal-emocij.html",
+    "https://rg.ru/documents/2025/11/26/ks37-dok.html": "https://rg.ru/documents/2025/11/26/ks37-dok.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -58521,7 +58569,14 @@
     "09acbc6f8d76cf358726983fffbd1e17fa53272f": "https://rg.ru/2025/11/25/reg-cfo/v-podmoskove-priglashaiut-zhenshchin-porabotat-voditeliami-avtobusov.html",
     "ca7483c84bd35eb1203b4095ee8385dc8e98377f": "https://rg.ru/2025/11/25/cb-banki-budut-proveriat-dannye-zaemshchikov-cherez-fns-i-socfond-s-2027-goda.html",
     "14df8258e9431633bbfa0b15c69df90f430bf71f": "https://rg.ru/2025/11/25/dlia-zhenshchin-v-dekrete-predlozhili-otmenit-shtrafy-po-kreditam.html",
-    "9a8289344366cb34843f7467ac0d0a660501bbea": "https://rg.ru/2025/11/25/ekonomist-razveial-mif-o-tom-chto-pokupka-zhilia-samoe-vygodnoe-vlozhenie-deneg.html"
+    "9a8289344366cb34843f7467ac0d0a660501bbea": "https://rg.ru/2025/11/25/ekonomist-razveial-mif-o-tom-chto-pokupka-zhilia-samoe-vygodnoe-vlozhenie-deneg.html",
+    "e1fc4bff164aa5a2540c0d171bd2d7e63a12a409": "http://government.ru/news/57091",
+    "c33ab8379bf339daf335e047814cdff83ba62f2a": "https://stroygaz.ru/news/kadry/nazvany-samye-vostrebovannye-vakansii-s-chastichnoy-zanyatostyu-v-stroitelstve",
+    "e63db7ae513cd11e2e444e546c203fda44b5368b": "https://rg.ru/2025/11/25/kredity-zaehali-na-pit-stop.html",
+    "ea27f69e4848d92c074af0617e40983199b33190": "https://rg.ru/2025/11/25/kirpichnyj-sled.html",
+    "9ecb74b69d3cf1f3b94e5cc5c6e2719e09f2e5c8": "https://rg.ru/2025/11/25/vesna-ili-ottepel.html",
+    "4c79141f218e4f0c7d4360a7da3400a65bae7591": "https://rg.ru/2025/11/25/bokal-emocij.html",
+    "3a48e2f00055ba3df48ae132096fd412a6d25885": "https://rg.ru/documents/2025/11/26/ks37-dok.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -71177,6 +71232,15 @@
     "https://rg.ru/2025/11/25/reg-cfo/v-podmoskove-priglashaiut-zhenshchin-porabotat-voditeliami-avtobusov.html": "7793ab9fc4b16f441acdbe90dc9364da077a49afcc8c41c9b69973c43bc674a4",
     "https://rg.ru/2025/11/25/cb-banki-budut-proveriat-dannye-zaemshchikov-cherez-fns-i-socfond-s-2027-goda.html": "d3b5028c976b4a2132998965ea8c2753b1cf6adbfe2423172fdca531ba189435",
     "https://rg.ru/2025/11/25/dlia-zhenshchin-v-dekrete-predlozhili-otmenit-shtrafy-po-kreditam.html": "417c11a3eaeca902ac64f6251b4ebcbe9b82c482daa4c200fb42121ebed12a0e",
-    "https://rg.ru/2025/11/25/ekonomist-razveial-mif-o-tom-chto-pokupka-zhilia-samoe-vygodnoe-vlozhenie-deneg.html": "0d903cd1550391124931cbd4ddc4ae91a7425877203a8f29c528f91594a6d873"
+    "https://rg.ru/2025/11/25/ekonomist-razveial-mif-o-tom-chto-pokupka-zhilia-samoe-vygodnoe-vlozhenie-deneg.html": "0d903cd1550391124931cbd4ddc4ae91a7425877203a8f29c528f91594a6d873",
+    "http://government.ru/news/57091": "51754c0b1e8f10104ab3cb36a01f95106046af32e8f6a82296c535fdbcf2758e",
+    "http://government.ru/news/57091/": "51754c0b1e8f10104ab3cb36a01f95106046af32e8f6a82296c535fdbcf2758e",
+    "https://stroygaz.ru/news/kadry/nazvany-samye-vostrebovannye-vakansii-s-chastichnoy-zanyatostyu-v-stroitelstve": "365b67d1a8769c331fd19411ec4cd224f99823ab549b7db5b8bf2991da49fc64",
+    "https://stroygaz.ru/news/kadry/nazvany-samye-vostrebovannye-vakansii-s-chastichnoy-zanyatostyu-v-stroitelstve/": "365b67d1a8769c331fd19411ec4cd224f99823ab549b7db5b8bf2991da49fc64",
+    "https://rg.ru/2025/11/25/kredity-zaehali-na-pit-stop.html": "523c6a6ded254d2f0b17b6abc208723b32ba34fe2f3f17879b36346650a63250",
+    "https://rg.ru/2025/11/25/kirpichnyj-sled.html": "23a4ddb43ada4a0938d694df183596eb1fc1437b70e7e7a993696d13a252db66",
+    "https://rg.ru/2025/11/25/vesna-ili-ottepel.html": "b20fc423ee5c8e82ebb1e8b311457a80dc6384d556d7f3c6e183d363cfe21e81",
+    "https://rg.ru/2025/11/25/bokal-emocij.html": "2f00aa9a50818eb12d7f82509f8f97ea0df56cdd7c53c87a7edb159e103da351",
+    "https://rg.ru/documents/2025/11/26/ks37-dok.html": "24b0ca918e2fdd8fa03d4934c9e539f008eda1ecca079ec23b905379c3ccf753"
   }
 }
