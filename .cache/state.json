@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 30 Nov 2025 18:23:54 GMT"
+      "Last-Modified": "Sun, 30 Nov 2025 21:17:58 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1c907-Sj8I631iTTvmmIlmoY0248CD5rc\""
+      "ETag": "W/\"1c5e9-R60iCHg8temrBb+OfuEZy/cZXoo\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"5e6fudiqnh3o3g\""
+      "ETag": "\"921ov3m7o73nh3\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -24319,6 +24319,18 @@
     },
     "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html": {
       "ETag": "\"9qzgadl6761pqu\""
+    },
+    "https://rg.ru/2025/12/01/uderzhat-na-plavu.html": {
+      "ETag": "\"61uvhikdjc1pi2\""
+    },
+    "https://rg.ru/2025/12/01/s-1-dekabria-vvedena-markirovka-igrushek-kakao-britv-i-riada-strojmaterialov.html": {
+      "ETag": "\"slxe72cbsc22j4\""
+    },
+    "https://rg.ru/2025/11/30/kurernyj-rost.html": {
+      "ETag": "\"10f8cubeziv24r0\""
+    },
+    "https://rg.ru/2025/11/30/soedinennye-shtaty.html": {
+      "ETag": "\"ro5ekf4vjg21k9\""
     }
   },
   "stats": {
@@ -30265,9 +30277,31 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd148b0c050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd148b01a90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd148b01950>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd1496eb490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd1496ebbb0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd149667ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "ЕЭК ЕАЭС",
+        "url": "https://eec.eaeunion.org/news/",
+        "error": "HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Max retries exceeded with url: /news/ (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Read timed out. (read timeout=10.0)\"))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd148b01f90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd148b01f90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd148b039d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd148b03c50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd148b03ed0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-11-30T18:23:48.091665+00:00",
+    "last_run": "2025-11-30T21:18:24.389529+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -30280,56 +30314,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 452.8656380000058,
-        "connect_ms": 481.86880599999427,
-        "response_ms": 934.734444,
+        "dns_ms": 591.8196339999895,
+        "connect_ms": 477.94931100000326,
+        "response_ms": 1069.7689449999928,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 2.1243300000151066,
-        "connect_ms": 306.6542679999884,
-        "response_ms": 308.7785980000035,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd149667ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 744.2650640000181,
-        "connect_ms": 3670.473805999961,
-        "response_ms": 4414.738869999979,
+        "dns_ms": 674.7301099999845,
+        "connect_ms": 333.7035440000591,
+        "response_ms": 1008.4336540000436,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 156.53846000000726,
-        "connect_ms": 444.98015299998883,
-        "response_ms": 601.5186129999961,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd148b03ed0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "abbc08ef2aa8f93cc5fb92a7535f329674082dd194f43385eba8954b046fd626",
+    "https://ardexpert.ru/article": "1e32d0ea585cda141788c9a03ef0f7be8fade7b4ae4701e7ae8c9c8ccb462dd5",
     "https://www.gostinfo.ru/News/List": "d350e4e4cb397efdff601f5a473600ee25730c9c88826edd3df40a6fa869040c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "d35fa6ab4cebf56e6882cd39a33d35966ada5cd17ef80a70df07db77ed09a646",
     "https://eec.eaeunion.org/news/": "9e68a5bd05a67ba6c87fcba711438e70e4578552764b417dcbd261666ff952b6",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "fe5dd8abfc7d418dcf8def8e9b116930b2a8725db3ea4038ad77fb074b1f9366",
-    "https://www.metalinfo.ru/ru/news": "09ef9dedaeab9d0ea78ca0341b0681babe41f923472d384bd0f3ab870df03be4",
-    "https://www.pnp.ru/economics/": "89e085425f8a4ac2d74f3e033d11b6a09107a94db64b9c193591584f15c33221",
-    "https://erzrf.ru/news/": "48e6d7a7144df1f5537b29a9fdf097f0a4f87f3eef6351cbb83e0d63c9fadaac",
-    "https://ria-stk.ru/news/vse-novosti.php": "a9713b8da86e09ae9b72a6f4055845ff33fb16bf10cc0dc8bb349cfb7b43b0bd",
-    "http://government.ru/news/": "c415aa0380d71a3de05ca58873bcd172cfc142938bc5b35fde92205c132ff719",
-    "https://stroygaz.ru/news/": "a97c7f39e7ba9c03b196f97f0cd89a80c70aa49a6b5bc375764419fa39919469",
-    "https://realty.ria.ru/lenta/": "972f4dca36aca8899bbf4c2b7894f9d38dc0f397155f050f8c5bd6ef631d7977",
-    "https://rg.ru/tema/ekonomika": "43869185939078c21a22c1ae4bdd67b3b7fd3338117b6d7d67ca61f9facfb068",
-    "http://ancb.ru/publication": "aa5607ca67c565fbc5cf4d2e1ee28b08869ec114413446af6255bcb77aed6a6f",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "e1c1be30ef821fbedb154c0feb9bff2c404ad14667f3dedfc8046502bb24a69d",
+    "https://www.metalinfo.ru/ru/news": "dc52de85289ccb206baefacd137472b38a1fada362d943cf93c1809621312121",
+    "https://www.pnp.ru/economics/": "c53053a38fb3356df54598baee285bc3b8a0b92af77674388c0621c9ea8ea2f3",
+    "https://erzrf.ru/news/": "657df2cfcf4905c511111db208a1327c0a5586496ffbbb6447d1b99513afd433",
+    "https://ria-stk.ru/news/vse-novosti.php": "394246544475d442dfcd55846fb11dee68ccef003dd73bc58a35d2ae9fa53980",
+    "http://government.ru/news/": "e6b34deb71c31624f201a196ca5f499d107cce34d446e4e561bbfcf964b4f9d8",
+    "https://stroygaz.ru/news/": "5c7b5c5ca9a20885d334a7d807e99a5e3ffe53056c5443ac60c5f84adc0de547",
+    "https://realty.ria.ru/lenta/": "db3b41cbe75e530c815808b73498c6bbfd032508c563dc9e96e9392c54fadd53",
+    "https://rg.ru/tema/ekonomika": "a3bd4b8bd922ddf1bf99427377d6aeb3a41d887c336b12ed4c942bd1113edf70",
+    "http://ancb.ru/publication": "3c7ea602a96ed5e0e1fd5471324bd8582081caf6d4d908c9120f6c4dd6c9eab6",
     "https://notim.ru": "23d9d455b53a7d865b0543889b2fc4e4e335dd736dcd6bfee9ad910c82290155",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -30637,6 +30671,10 @@
       "https://realty.ria.ru/20251128/pochta-2058271707.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/01/uderzhat-na-plavu.html",
+      "https://rg.ru/2025/12/01/s-1-dekabria-vvedena-markirovka-igrushek-kakao-britv-i-riada-strojmaterialov.html",
+      "https://rg.ru/2025/11/30/kurernyj-rost.html",
+      "https://rg.ru/2025/11/30/soedinennye-shtaty.html",
       "https://rg.ru/2025/11/30/eksperty-polozhitelno-ocenili-reshenie-rf-i-opek-ne-uvelichivat-dobychu-nefti.html",
       "https://rg.ru/2025/11/30/prognoz-pogody-v-dome.html",
       "https://rg.ru/2025/11/30/popolnili-koshelki.html",
@@ -30665,10 +30703,6 @@
       "https://rg.ru/2025/11/26/v-novyj-god-bez-viz.html",
       "https://rg.ru/2025/11/30/odinokim-roditeliam-predlagaiut-dat-pravo-uhodit-v-otpusk-v-liuboe-vremia.html",
       "https://rg.ru/2025/11/29/reg-cfo/sobianin-chem-privlekaiut-pokupatelej-rybnye-rynki-moskva-na-volne.html",
-      "https://rg.ru/2025/11/29/rossijskie-kompanii-stremiatsia-uderzhat-personal-putem-uvelicheniia-oplaty-truda.html",
-      "https://rg.ru/2025/11/29/v-rossii-mozhet-poiavitsia-edinaia-mera-dlia-vesovyh-produktov.html",
-      "https://rg.ru/2025/11/29/ekspert-filatov-otmetil-zagruzhennost-punktov-propuska-fur-na-granice-kazahstana.html",
-      "https://rg.ru/2025/11/29/v-rosaviacii-zaiavili-chto-v-rossijskom-aviaparke-u-airbus-net-problem-s-po.html",
       "https://rg.ru/2025/11/27/gruppa-renessans-strahovanie-uvelichila-obyom-strahovyh-premij-na-282-gg-za-9-mesiacev-2025-goda.html",
       "https://rg.ru/2025/11/14/gk-poliplast-predstavila-innovacionnye-resheniia-na-mezhdunarodnoj-vystavke-himiia-2025.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html"
@@ -40607,7 +40641,11 @@
     "693ad45fd25541f30323a06de6ff523939e655e127c61f0bc01fb1d41427d14d": "2025-11-30T21:23:00+03:00",
     "1f7348f435007ec7df8efa313fd70e22f28b4901d92ca4885ceb0b8b9b5dfc04": "2025-11-30T21:23:00+03:00",
     "6a829879ad9e4ca82c52cdb2e7b880f594d62f2d70b4cbf2698b9568907cdaac": "2025-11-30T21:23:00+03:00",
-    "1789ee812d73d06886eb23fc4673f07c51fb57260929aa528eca2ffc935728a7": "2025-11-30T21:23:00+03:00"
+    "1789ee812d73d06886eb23fc4673f07c51fb57260929aa528eca2ffc935728a7": "2025-11-30T21:23:00+03:00",
+    "63d9de68a109a149ae55184c668e1a741e7cbffa76fb5733ebb523b7b64c04fd": "2025-12-01T00:18:00+03:00",
+    "4e056583911e2d0b43b8f83e868d0444f45785788dd9c9766d49c8be8f2275d0": "2025-12-01T00:18:00+03:00",
+    "906709d21294d0f45a7eae86d407f355aa690de68d2f5cbb6c07cf8cf09cd151": "2025-12-01T00:18:00+03:00",
+    "5c802c884b3f09cdb309d439e5fd0485832e8c3bbea7b2f0f386b9513d30eab9": "2025-12-01T00:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -40638,9 +40676,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1764483940.4958174
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd1496ebbb0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1764537343.017964
       },
       "warmup_done": false,
       "last_success_path": null
@@ -40649,39 +40687,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "UCiAD42sHB6NaNAR",
+          "value": "bp39wae7tBYFAJwt",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764528197
+          "expires": 1764538640
         },
         {
           "name": "__ddg10_",
-          "value": "1764526997",
+          "value": "1764537440",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764528197
+          "expires": 1764538640
         },
         {
           "name": "__ddg9_",
-          "value": "64.236.143.32",
+          "value": "52.154.131.99",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764528197
-        },
-        {
-          "name": "__ddg1_",
-          "value": "YSchSRccCpwVtosJ5Lua",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1796062997
+          "expires": 1764538640
         },
         {
           "name": "PHPSESSID",
-          "value": "1ac01ec8feaaaa9c77a5013e42b9e125",
+          "value": "99600f5f2b421ec01f67dc04ed40a2bb",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -40724,9 +40754,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1764484022.816763
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd148b03c50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 4,
+        "last_ts": 1764537474.155981
       },
       "warmup_done": false,
       "last_success_path": null
@@ -52941,7 +52971,11 @@
     "https://rg.ru/2025/11/30/reshetnikov-zaiavil-chto-tovary-iz-rf-polzuetsia-sprosom-na-rynke-katara.html": "https://rg.ru/2025/11/30/reshetnikov-zaiavil-chto-tovary-iz-rf-polzuetsia-sprosom-na-rynke-katara.html",
     "https://rg.ru/2025/11/30/solncem-napeklo.html": "https://rg.ru/2025/11/30/solncem-napeklo.html",
     "https://rg.ru/2025/11/30/ekspert-berezniuk-fasovka-krasnoj-ikry-ne-po-mestu-vylova-dolzhna-nastorozhit.html": "https://rg.ru/2025/11/30/ekspert-berezniuk-fasovka-krasnoj-ikry-ne-po-mestu-vylova-dolzhna-nastorozhit.html",
-    "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html": "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html"
+    "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html": "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html",
+    "https://rg.ru/2025/12/01/uderzhat-na-plavu.html": "https://rg.ru/2025/12/01/uderzhat-na-plavu.html",
+    "https://rg.ru/2025/12/01/s-1-dekabria-vvedena-markirovka-igrushek-kakao-britv-i-riada-strojmaterialov.html": "https://rg.ru/2025/12/01/s-1-dekabria-vvedena-markirovka-igrushek-kakao-britv-i-riada-strojmaterialov.html",
+    "https://rg.ru/2025/11/30/kurernyj-rost.html": "https://rg.ru/2025/11/30/kurernyj-rost.html",
+    "https://rg.ru/2025/11/30/soedinennye-shtaty.html": "https://rg.ru/2025/11/30/soedinennye-shtaty.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -63125,7 +63159,11 @@
     "919aaec94dcde62da56146aa0cbf956562867af8": "https://rg.ru/2025/11/30/reshetnikov-zaiavil-chto-tovary-iz-rf-polzuetsia-sprosom-na-rynke-katara.html",
     "28447f5a04e564d3a88c796bd476678f6aa8faa9": "https://rg.ru/2025/11/30/solncem-napeklo.html",
     "de0d4750445ccb55a41a46a819f55298d27fdfb6": "https://rg.ru/2025/11/30/ekspert-berezniuk-fasovka-krasnoj-ikry-ne-po-mestu-vylova-dolzhna-nastorozhit.html",
-    "1057de7bb167c4ee54b2961ec9553c6461612842": "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html"
+    "1057de7bb167c4ee54b2961ec9553c6461612842": "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html",
+    "bf311d37e332c034cdc1b5f2019415429130a7e1": "https://rg.ru/2025/12/01/uderzhat-na-plavu.html",
+    "a9e0d75b6b6b32fb5aa03470074e48de17ba1000": "https://rg.ru/2025/12/01/s-1-dekabria-vvedena-markirovka-igrushek-kakao-britv-i-riada-strojmaterialov.html",
+    "fedceda8f0caf9c9707f0610e22414a49ac8b94e": "https://rg.ru/2025/11/30/kurernyj-rost.html",
+    "6201bd9a664bc5c2d8bc3bf19059bc9d827490ca": "https://rg.ru/2025/11/30/soedinennye-shtaty.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -76768,6 +76806,10 @@
     "https://rg.ru/2025/11/30/reshetnikov-zaiavil-chto-tovary-iz-rf-polzuetsia-sprosom-na-rynke-katara.html": "693ad45fd25541f30323a06de6ff523939e655e127c61f0bc01fb1d41427d14d",
     "https://rg.ru/2025/11/30/solncem-napeklo.html": "1f7348f435007ec7df8efa313fd70e22f28b4901d92ca4885ceb0b8b9b5dfc04",
     "https://rg.ru/2025/11/30/ekspert-berezniuk-fasovka-krasnoj-ikry-ne-po-mestu-vylova-dolzhna-nastorozhit.html": "6a829879ad9e4ca82c52cdb2e7b880f594d62f2d70b4cbf2698b9568907cdaac",
-    "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html": "1789ee812d73d06886eb23fc4673f07c51fb57260929aa528eca2ffc935728a7"
+    "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html": "1789ee812d73d06886eb23fc4673f07c51fb57260929aa528eca2ffc935728a7",
+    "https://rg.ru/2025/12/01/uderzhat-na-plavu.html": "63d9de68a109a149ae55184c668e1a741e7cbffa76fb5733ebb523b7b64c04fd",
+    "https://rg.ru/2025/12/01/s-1-dekabria-vvedena-markirovka-igrushek-kakao-britv-i-riada-strojmaterialov.html": "4e056583911e2d0b43b8f83e868d0444f45785788dd9c9766d49c8be8f2275d0",
+    "https://rg.ru/2025/11/30/kurernyj-rost.html": "906709d21294d0f45a7eae86d407f355aa690de68d2f5cbb6c07cf8cf09cd151",
+    "https://rg.ru/2025/11/30/soedinennye-shtaty.html": "5c802c884b3f09cdb309d439e5fd0485832e8c3bbea7b2f0f386b9513d30eab9"
   }
 }
