@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 30 Nov 2025 06:27:07 GMT"
+      "Last-Modified": "Sun, 30 Nov 2025 09:18:01 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1c662-pNxGDk4SE+4Tky50J/1E3qgBL00\""
+      "ETag": "W/\"1c5e9-motlhGG0nq+UIVmaF+G214am9WA\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"nxzvy2tvt43qap\""
+      "ETag": "\"wbnh3jcymc3l3y\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -24254,7 +24254,26 @@
     "https://rg.ru/amp/2025/11/30/reg-pfo/aeroport-saratova-vozobnovil-priem-i-vypusk-samoletov.html": {},
     "https://rg.ru/2025/11/30/reg-pfo/rosaviaciia-aeroport-saratova-priostanovil-rabotu.html": {
       "ETag": "\"ip9ikrmns11pac\""
-    }
+    },
+    "https://rg.ru/2025/11/30/bovt-nuzhno-zashchitit-pokupatelej-ot-vremennogo-pomutneniia-prodavcov.html": {
+      "ETag": "\"3klzd6atl61sy0\""
+    },
+    "https://rg.ru/2025/11/30/rossiia-narastila-import-korejskoj-lapshi-do-maksimuma-s-2004-goda.html": {
+      "ETag": "\"3bhpjy4ohi1oon\""
+    },
+    "https://rg.ru/2025/11/30/v-chetyreh-rossijskih-regionah-sredniaia-zarplata-prevysila-150-tysiach-rublej.html": {
+      "ETag": "\"139khs0b2091sqs\""
+    },
+    "https://rg.ru/2025/11/30/zverev-moshenniki-pered-novym-godom-prodaiut-rossiianam-ikornyj-sup-vmesto-ikry.html": {
+      "ETag": "\"m3vbcec65o1opp\""
+    },
+    "https://rg.ru/2025/11/30/v-gosdume-prizval-verhovnyj-sud-prismotretsia-k-delu-dolinoj.html": {
+      "ETag": "\"15e0dq1r6261qaf\""
+    },
+    "https://rg.ru/2025/11/30/reg-pfo/aeroport-samary-priostanovil-rabotu.html": {
+      "ETag": "\"9jwc0b4cm51o78\""
+    },
+    "https://rg.ru/amp/2025/11/30/reg-pfo/aeroport-samary-priostanovil-rabotu.html": {}
   },
   "stats": {
     "cooldowns": {
@@ -30165,9 +30184,19 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7feb6f00f390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7feb6fe0e850>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7feb6f00fd90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7feb6ecb4050>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7feb6ecb42d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "ЕЭК ЕАЭС",
+        "url": "https://eec.eaeunion.org/news/",
+        "error": "HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Max retries exceeded with url: /news/ (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Read timed out. (read timeout=10.0)\"))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-30T06:27:37.235869+00:00",
+    "last_run": "2025-11-30T09:17:44.299244+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -30180,56 +30209,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 374.0518339999994,
-        "connect_ms": 596.1489120000181,
-        "response_ms": 970.2007460000175,
+        "dns_ms": 279.5993679999924,
+        "connect_ms": 368.4341999999958,
+        "response_ms": 648.0335679999882,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7feb6fd37bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 759.0819510000131,
+        "connect_ms": 489.26300099998343,
+        "response_ms": 1248.3449519999965,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 729.0794389999746,
-        "connect_ms": 39.20985100000962,
-        "response_ms": 768.2892899999842,
+        "dns_ms": 8750.469073999995,
+        "connect_ms": 0.0,
+        "response_ms": 721.1351419999801,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7feb6ecb42d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 442.85846099998594,
+        "connect_ms": 158.1311630000357,
+        "response_ms": 600.9896240000216,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "59c9181d13fafd27a45a725dbd588be08b9ce1f207fb1c1f802e7fffced6f64f",
+    "https://ardexpert.ru/article": "360b576b105d40d110edea4de94f4412e5ccc05e14df4bfb85a5ac40eeda50d7",
     "https://www.gostinfo.ru/News/List": "d350e4e4cb397efdff601f5a473600ee25730c9c88826edd3df40a6fa869040c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "d35fa6ab4cebf56e6882cd39a33d35966ada5cd17ef80a70df07db77ed09a646",
     "https://eec.eaeunion.org/news/": "487148b83826ac221f4d4b59a39e7cb91f1bc085e244ba550da11f3537eba639",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "9e9af13a495a5506216bb3340aff9a65a37319252d8b7ae576a6a618193c7b04",
-    "https://www.metalinfo.ru/ru/news": "8c13830e1326ffd5de5e923b53e01d88b7158cb5f6fd2b645bcce4778163bfe9",
-    "https://www.pnp.ru/economics/": "3c6981a241aa98606e7eabc43ef2d662657bbf54c0a35f9ac32bd98ae69840e7",
-    "https://erzrf.ru/news/": "aaf2d506126d984c594cf2073f571b400b8586b8b4d9c36080b93038956e3d77",
-    "https://ria-stk.ru/news/vse-novosti.php": "cc3225b8c1dde389c82daf7a02f189689e7e62edb9968c8924558fba588c449f",
-    "http://government.ru/news/": "8b405e3a187166f89e4fa3df9f90988cea59f83fcf96d4377bd67ca6f4c1de16",
-    "https://stroygaz.ru/news/": "78326dc9d13e49612398057e363ab6a7a74816f257e8f5502c8ffc0e5859981b",
-    "https://realty.ria.ru/lenta/": "8a58d1c75276ce0fe9ae49f32099df17aea8eafef6c30b52e1186ee4d7c33be9",
-    "https://rg.ru/tema/ekonomika": "d193aafc0d106a995a4d4a33a91b58f85ef22d97ef00bff8ca0014d5c166860d",
-    "http://ancb.ru/publication": "7acf051337f6c26ef585a55cface78c8d45cbc1fb7e1f380a1ec70e78764d405",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "fe3fea854b8cbedc8e4cf0645e9dad883bab8211643d39af90b14627a47c5df2",
+    "https://www.metalinfo.ru/ru/news": "990021493bd73e92f705bc6498f2e861fc08348815d9b87aec4318333011e71e",
+    "https://www.pnp.ru/economics/": "de893844129a188d6c8901d95712dc6d65695c305c142a7b4b5fa5845a4301d5",
+    "https://erzrf.ru/news/": "18738ccb59df7c80da58887de14b0b4f912a6725bdeee4d79be51cc731593326",
+    "https://ria-stk.ru/news/vse-novosti.php": "184c9546361a44039d3576c287cd96314ff9fe18f45eff62e1f40f7c0c2c4db3",
+    "http://government.ru/news/": "c5e1777c8299872d70735866e1c3f5ac779c1bd44216abd329a62a20d7f32135",
+    "https://stroygaz.ru/news/": "2ecaff6f7d8aab7fb0df97e775297b6c64ca0a1f6f88d62f12b24f2cd595a51f",
+    "https://realty.ria.ru/lenta/": "6758af53ff023c5ffa34ce5f8dcc199b0cc3c2aa92919d4350e3825422c4dcb3",
+    "https://rg.ru/tema/ekonomika": "ac415832448f4b4393da5b73d12f8c09ffb5036276aa0bea63daef14526ac553",
+    "http://ancb.ru/publication": "a0f023a10eeff63308a9483353c342506b8cd74ee56ab52cbfe23a8c56d4cc4a",
     "https://notim.ru": "23d9d455b53a7d865b0543889b2fc4e4e335dd736dcd6bfee9ad910c82290155",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -30537,6 +30566,12 @@
       "https://realty.ria.ru/20251128/pochta-2058271707.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/30/bovt-nuzhno-zashchitit-pokupatelej-ot-vremennogo-pomutneniia-prodavcov.html",
+      "https://rg.ru/2025/11/30/rossiia-narastila-import-korejskoj-lapshi-do-maksimuma-s-2004-goda.html",
+      "https://rg.ru/2025/11/30/v-chetyreh-rossijskih-regionah-sredniaia-zarplata-prevysila-150-tysiach-rublej.html",
+      "https://rg.ru/2025/11/30/zverev-moshenniki-pered-novym-godom-prodaiut-rossiianam-ikornyj-sup-vmesto-ikry.html",
+      "https://rg.ru/2025/11/30/v-gosdume-prizval-verhovnyj-sud-prismotretsia-k-delu-dolinoj.html",
+      "https://rg.ru/2025/11/30/reg-pfo/aeroport-samary-priostanovil-rabotu.html",
       "https://rg.ru/2025/11/30/postavki-tureckih-sladostej-v-rossii-vyrosli-do-rekordnyh-151-milliona-dollarov.html",
       "https://rg.ru/2025/11/30/bloomberg-aviakompanii-ustranili-uiazvimost-po-na-samoletah-airbus-a320.html",
       "https://rg.ru/2025/11/30/reg-pfo/aeroport-saratova-vozobnovil-priem-i-vypusk-samoletov.html",
@@ -30560,15 +30595,9 @@
       "https://rg.ru/2025/11/29/reg-dfo/passazhiry-zaderzhannogo-v-habarovske-rejsa-otpraviatsia-v-moskvu-rezervnym-bortom.html",
       "https://rg.ru/2025/11/29/reg-ufo/prichal-ktk-pod-novorossijskom-vyshel-iz-stroia-posle-ataki-bezekipazhnyh-katerov.html",
       "https://rg.ru/2025/11/29/v-gosdume-nazvali-teh-u-kogo-uvelichitsia-pensiia-s-1-dekabria.html",
-      "https://rg.ru/2025/11/29/airbus-obiavila-o-massovom-otzyve-a320-eto-povliiaet-na-rejsy-po-vsemu-miru.html",
       "https://rg.ru/2025/11/29/proshla-registraciia-nazvaniia-lada-niva-tour-chto-eto-mozhet-byt-za-avto.html",
       "https://rg.ru/2025/11/29/vyrastut-do-20-2026-god-grozit-povysheniem-cen-na-avtomobili.html",
       "https://rg.ru/2025/11/29/istekaet-srok-oplaty-nalogov-na-nedvizhimost-i-vklady.html",
-      "https://rg.ru/2025/11/29/reg-ufo/aeroporty-volgograda-i-krasnodara-vozobnovili-rabotu.html",
-      "https://rg.ru/2025/11/29/s-2026-goda-izmenitsia-poriadok-oformleniia-mezhdunarodnyh-posylok.html",
-      "https://rg.ru/2025/11/29/v-ator-ne-ozhidaiut-polnoj-otmeny-vydachi-shengenskih-viz-rossiianam.html",
-      "https://rg.ru/2025/11/29/reg-ufo/v-volgograde-zaderzhali-11-aviarejsov.html",
-      "https://rg.ru/2025/11/29/reg-dfo/v-iakutii-sinergiia-arktiki-obespechit-internetom-50-tysiach-zhitelej.html",
       "https://rg.ru/2025/11/27/gruppa-renessans-strahovanie-uvelichila-obyom-strahovyh-premij-na-282-gg-za-9-mesiacev-2025-goda.html",
       "https://rg.ru/2025/11/14/gk-poliplast-predstavila-innovacionnye-resheniia-na-mezhdunarodnoj-vystavke-himiia-2025.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html"
@@ -40483,7 +40512,13 @@
     "cb3621c4d6cc76e3ba9e34900a767efc24c60bb8e8deaed3eee0ce202ecc0013": "2025-11-30T09:27:00+03:00",
     "774bf1543c7a3ef74f9382d8268b490ce578e98960d24f512f4dcf961cb7ac32": "2025-11-30T09:27:00+03:00",
     "ae5b595645d029bf326e5e16272cc884858f2b1aeca04443ec98e312067aad98": "2025-11-30T09:27:00+03:00",
-    "18e815d2f5c68715c3b3dc1f50974a99957beba3e9bcecae8c5653e0ece1973a": "2025-11-30T09:27:00+03:00"
+    "18e815d2f5c68715c3b3dc1f50974a99957beba3e9bcecae8c5653e0ece1973a": "2025-11-30T09:27:00+03:00",
+    "4cd8e7eda885fbf5cb9fbd66698683150f2de37c37f979c3696f76ab89a7802f": "2025-11-30T12:17:00+03:00",
+    "6862cddda4f5d8b5fd04c249b6d12cb88fb84d99513e3c6b556a6849771fef22": "2025-11-30T12:17:00+03:00",
+    "6dd6910d5240d4bed6e4946c5ca50061c8304f0059578cde44f5ba3e3a76d479": "2025-11-30T12:17:00+03:00",
+    "3a621ba8402719e45bea803a37603f999d2b53f4795b11beabea4f3f17fb934c": "2025-11-30T12:17:00+03:00",
+    "db77535c1d514d84a6eb144a4a0284bd00293cbeaff0701de63fe1329f750e98": "2025-11-30T12:17:00+03:00",
+    "0a40d40da89db5f9f55ad3a70f134bd5a34f484107cd3052a72bd7e99bf4a56a": "2025-11-30T12:17:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -40514,8 +40549,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7feb6fdc3bb0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 20,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1764483940.4958174
       },
       "warmup_done": false,
@@ -40525,39 +40560,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "rclYMFG4EeDHUExP",
+          "value": "ub6GLmRyj5UYOfuN",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764485190
+          "expires": 1764495444
         },
         {
           "name": "__ddg10_",
-          "value": "1764483990",
+          "value": "1764494244",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764485190
+          "expires": 1764495444
         },
         {
           "name": "__ddg9_",
-          "value": "172.214.44.3",
+          "value": "135.232.216.64",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764485190
-        },
-        {
-          "name": "__ddg1_",
-          "value": "toER3kkf3dT5yqQSJson",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1796019990
+          "expires": 1764495444
         },
         {
           "name": "PHPSESSID",
-          "value": "4d04941c08b911b44052dcc020fcb8fa",
+          "value": "53dc1d62f9b63dae30c5287c55cb8bf3",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -40584,11 +40611,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "xQXCSoLALvvsiCORh6fzhTDQFH1Ix6P6",
+          "value": "4QsLm3UakY6ZI1PirBf1AVNLkXKrm5Y4",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764451434
+          "expires": 1764505046
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -40596,12 +40623,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1795544634
+          "expires": 1795598246
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7feb6ecb4050>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 16,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1764484022.816763
       },
       "warmup_done": false,
@@ -52793,7 +52820,13 @@
     "https://rg.ru/2025/11/30/postavki-tureckih-sladostej-v-rossii-vyrosli-do-rekordnyh-151-milliona-dollarov.html": "https://rg.ru/2025/11/30/postavki-tureckih-sladostej-v-rossii-vyrosli-do-rekordnyh-151-milliona-dollarov.html",
     "https://rg.ru/2025/11/30/bloomberg-aviakompanii-ustranili-uiazvimost-po-na-samoletah-airbus-a320.html": "https://rg.ru/2025/11/30/bloomberg-aviakompanii-ustranili-uiazvimost-po-na-samoletah-airbus-a320.html",
     "https://rg.ru/2025/11/30/reg-pfo/aeroport-saratova-vozobnovil-priem-i-vypusk-samoletov.html": "https://rg.ru/2025/11/30/reg-pfo/aeroport-saratova-vozobnovil-priem-i-vypusk-samoletov.html",
-    "https://rg.ru/2025/11/30/reg-pfo/rosaviaciia-aeroport-saratova-priostanovil-rabotu.html": "https://rg.ru/2025/11/30/reg-pfo/rosaviaciia-aeroport-saratova-priostanovil-rabotu.html"
+    "https://rg.ru/2025/11/30/reg-pfo/rosaviaciia-aeroport-saratova-priostanovil-rabotu.html": "https://rg.ru/2025/11/30/reg-pfo/rosaviaciia-aeroport-saratova-priostanovil-rabotu.html",
+    "https://rg.ru/2025/11/30/bovt-nuzhno-zashchitit-pokupatelej-ot-vremennogo-pomutneniia-prodavcov.html": "https://rg.ru/2025/11/30/bovt-nuzhno-zashchitit-pokupatelej-ot-vremennogo-pomutneniia-prodavcov.html",
+    "https://rg.ru/2025/11/30/rossiia-narastila-import-korejskoj-lapshi-do-maksimuma-s-2004-goda.html": "https://rg.ru/2025/11/30/rossiia-narastila-import-korejskoj-lapshi-do-maksimuma-s-2004-goda.html",
+    "https://rg.ru/2025/11/30/v-chetyreh-rossijskih-regionah-sredniaia-zarplata-prevysila-150-tysiach-rublej.html": "https://rg.ru/2025/11/30/v-chetyreh-rossijskih-regionah-sredniaia-zarplata-prevysila-150-tysiach-rublej.html",
+    "https://rg.ru/2025/11/30/zverev-moshenniki-pered-novym-godom-prodaiut-rossiianam-ikornyj-sup-vmesto-ikry.html": "https://rg.ru/2025/11/30/zverev-moshenniki-pered-novym-godom-prodaiut-rossiianam-ikornyj-sup-vmesto-ikry.html",
+    "https://rg.ru/2025/11/30/v-gosdume-prizval-verhovnyj-sud-prismotretsia-k-delu-dolinoj.html": "https://rg.ru/2025/11/30/v-gosdume-prizval-verhovnyj-sud-prismotretsia-k-delu-dolinoj.html",
+    "https://rg.ru/2025/11/30/reg-pfo/aeroport-samary-priostanovil-rabotu.html": "https://rg.ru/2025/11/30/reg-pfo/aeroport-samary-priostanovil-rabotu.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -62953,7 +62986,13 @@
     "3906bc8b7eddafe2f0e5667b29e3b3d467e70b06": "https://rg.ru/2025/11/30/postavki-tureckih-sladostej-v-rossii-vyrosli-do-rekordnyh-151-milliona-dollarov.html",
     "6ccccd936efd19deeb0aff7c9103a3878f7a53a5": "https://rg.ru/2025/11/30/bloomberg-aviakompanii-ustranili-uiazvimost-po-na-samoletah-airbus-a320.html",
     "afea90b10214d5dbf0fa751b67e6171243a03cb9": "https://rg.ru/2025/11/30/reg-pfo/aeroport-saratova-vozobnovil-priem-i-vypusk-samoletov.html",
-    "74c0820fb8f23f6ab716f8ab3614af6447b90611": "https://rg.ru/2025/11/30/reg-pfo/rosaviaciia-aeroport-saratova-priostanovil-rabotu.html"
+    "74c0820fb8f23f6ab716f8ab3614af6447b90611": "https://rg.ru/2025/11/30/reg-pfo/rosaviaciia-aeroport-saratova-priostanovil-rabotu.html",
+    "8589731486fae60b832bc2d87172e2f756824662": "https://rg.ru/2025/11/30/bovt-nuzhno-zashchitit-pokupatelej-ot-vremennogo-pomutneniia-prodavcov.html",
+    "39948df81850ac30410d6a4820f01350a2d150e0": "https://rg.ru/2025/11/30/rossiia-narastila-import-korejskoj-lapshi-do-maksimuma-s-2004-goda.html",
+    "595743fceee1fcdf3b9e346ecbde2a9ba8f11f15": "https://rg.ru/2025/11/30/v-chetyreh-rossijskih-regionah-sredniaia-zarplata-prevysila-150-tysiach-rublej.html",
+    "3bbf0df7737e0ea4838b960d9625e444e6276213": "https://rg.ru/2025/11/30/zverev-moshenniki-pered-novym-godom-prodaiut-rossiianam-ikornyj-sup-vmesto-ikry.html",
+    "7f6dc90ed93e75eb88695ac315d8a2dd2cf82982": "https://rg.ru/2025/11/30/v-gosdume-prizval-verhovnyj-sud-prismotretsia-k-delu-dolinoj.html",
+    "8925932b894df2c30ca89f2060fec3b1caf6e0fe": "https://rg.ru/2025/11/30/reg-pfo/aeroport-samary-priostanovil-rabotu.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -76569,6 +76608,12 @@
     "https://rg.ru/2025/11/30/postavki-tureckih-sladostej-v-rossii-vyrosli-do-rekordnyh-151-milliona-dollarov.html": "cb3621c4d6cc76e3ba9e34900a767efc24c60bb8e8deaed3eee0ce202ecc0013",
     "https://rg.ru/2025/11/30/bloomberg-aviakompanii-ustranili-uiazvimost-po-na-samoletah-airbus-a320.html": "774bf1543c7a3ef74f9382d8268b490ce578e98960d24f512f4dcf961cb7ac32",
     "https://rg.ru/2025/11/30/reg-pfo/aeroport-saratova-vozobnovil-priem-i-vypusk-samoletov.html": "ae5b595645d029bf326e5e16272cc884858f2b1aeca04443ec98e312067aad98",
-    "https://rg.ru/2025/11/30/reg-pfo/rosaviaciia-aeroport-saratova-priostanovil-rabotu.html": "18e815d2f5c68715c3b3dc1f50974a99957beba3e9bcecae8c5653e0ece1973a"
+    "https://rg.ru/2025/11/30/reg-pfo/rosaviaciia-aeroport-saratova-priostanovil-rabotu.html": "18e815d2f5c68715c3b3dc1f50974a99957beba3e9bcecae8c5653e0ece1973a",
+    "https://rg.ru/2025/11/30/bovt-nuzhno-zashchitit-pokupatelej-ot-vremennogo-pomutneniia-prodavcov.html": "4cd8e7eda885fbf5cb9fbd66698683150f2de37c37f979c3696f76ab89a7802f",
+    "https://rg.ru/2025/11/30/rossiia-narastila-import-korejskoj-lapshi-do-maksimuma-s-2004-goda.html": "6862cddda4f5d8b5fd04c249b6d12cb88fb84d99513e3c6b556a6849771fef22",
+    "https://rg.ru/2025/11/30/v-chetyreh-rossijskih-regionah-sredniaia-zarplata-prevysila-150-tysiach-rublej.html": "6dd6910d5240d4bed6e4946c5ca50061c8304f0059578cde44f5ba3e3a76d479",
+    "https://rg.ru/2025/11/30/zverev-moshenniki-pered-novym-godom-prodaiut-rossiianam-ikornyj-sup-vmesto-ikry.html": "3a621ba8402719e45bea803a37603f999d2b53f4795b11beabea4f3f17fb934c",
+    "https://rg.ru/2025/11/30/v-gosdume-prizval-verhovnyj-sud-prismotretsia-k-delu-dolinoj.html": "db77535c1d514d84a6eb144a4a0284bd00293cbeaff0701de63fe1329f750e98",
+    "https://rg.ru/2025/11/30/reg-pfo/aeroport-samary-priostanovil-rabotu.html": "0a40d40da89db5f9f55ad3a70f134bd5a34f484107cd3052a72bd7e99bf4a56a"
   }
 }
