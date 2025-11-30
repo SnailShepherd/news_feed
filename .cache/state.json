@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 30 Nov 2025 15:17:34 GMT"
+      "Last-Modified": "Sun, 30 Nov 2025 18:23:54 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1c7e3-5B3xnU70oAOAvdeIu3EddFDlA28\""
+      "ETag": "W/\"1c907-Sj8I631iTTvmmIlmoY0248CD5rc\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"rsquoyy3s63hxo\""
+      "ETag": "\"5e6fudiqnh3o3g\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -24289,6 +24289,36 @@
     },
     "https://rg.ru/2025/11/30/v-rf-vtoroj-god-snizhaetsia-kolichestvo-magazinov-kosmetiki.html": {
       "ETag": "\"yje8rr116i1ntx\""
+    },
+    "http://ancb.ru/publication/read/20551": {},
+    "http://government.ru/news/57133/": {},
+    "http://government.ru/news/57132/": {},
+    "https://rg.ru/2025/11/30/eksperty-polozhitelno-ocenili-reshenie-rf-i-opek-ne-uvelichivat-dobychu-nefti.html": {
+      "ETag": "\"14dxc50cwg621c1\""
+    },
+    "https://rg.ru/2025/11/30/prognoz-pogody-v-dome.html": {
+      "ETag": "\"17k1x8zkozz28mz\""
+    },
+    "https://rg.ru/2025/11/30/popolnili-koshelki.html": {
+      "ETag": "\"jnyed8x62s24p6\""
+    },
+    "https://rg.ru/2025/11/30/uslyshte-ih-na-sushe.html": {
+      "ETag": "\"100011iqllp2a7q\""
+    },
+    "https://rg.ru/2025/11/30/rossiia-i-opek-priostanoviat-rost-dobychi-nefti-v-2026-godu.html": {
+      "ETag": "\"v2v7yhmq331t9x\""
+    },
+    "https://rg.ru/2025/11/30/reshetnikov-zaiavil-chto-tovary-iz-rf-polzuetsia-sprosom-na-rynke-katara.html": {
+      "ETag": "\"uiso1l1qcc1o79\""
+    },
+    "https://rg.ru/2025/11/30/solncem-napeklo.html": {
+      "ETag": "\"t68agdwr09203f\""
+    },
+    "https://rg.ru/2025/11/30/ekspert-berezniuk-fasovka-krasnoj-ikry-ne-po-mestu-vylova-dolzhna-nastorozhit.html": {
+      "ETag": "\"g9fcd3l9y01t5q\""
+    },
+    "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html": {
+      "ETag": "\"9qzgadl6761pqu\""
     }
   },
   "stats": {
@@ -30225,9 +30255,19 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "ЕЭК ЕАЭС",
+        "url": "https://eec.eaeunion.org/news/",
+        "error": "HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Max retries exceeded with url: /news/ (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='eec.eaeunion.org', port=443): Read timed out. (read timeout=10.0)\"))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-11-30T15:17:15.696657+00:00",
+    "last_run": "2025-11-30T18:23:48.091665+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -30240,33 +30280,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 306.854168000001,
-        "connect_ms": 637.9319920000057,
-        "response_ms": 944.7861600000067,
+        "dns_ms": 452.8656380000058,
+        "connect_ms": 481.86880599999427,
+        "response_ms": 934.734444,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 175.98438499999247,
-        "connect_ms": 973.0421910000189,
-        "response_ms": 1149.0265760000113,
+        "dns_ms": 2.1243300000151066,
+        "connect_ms": 306.6542679999884,
+        "response_ms": 308.7785980000035,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4830.12512800002,
-        "connect_ms": 0.0,
-        "response_ms": 702.4557599999923,
+        "dns_ms": 744.2650640000181,
+        "connect_ms": 3670.473805999961,
+        "response_ms": 4414.738869999979,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 4272.551632000017,
-        "connect_ms": 0.0,
-        "response_ms": 656.0132759999817,
+        "dns_ms": 156.53846000000726,
+        "connect_ms": 444.98015299998883,
+        "response_ms": 601.5186129999961,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -30275,21 +30315,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "1814da8c60b1bdefb9f0a2e00ec162646c99833c813971f802aadbbbd161bf89",
+    "https://ardexpert.ru/article": "abbc08ef2aa8f93cc5fb92a7535f329674082dd194f43385eba8954b046fd626",
     "https://www.gostinfo.ru/News/List": "d350e4e4cb397efdff601f5a473600ee25730c9c88826edd3df40a6fa869040c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "d35fa6ab4cebf56e6882cd39a33d35966ada5cd17ef80a70df07db77ed09a646",
     "https://eec.eaeunion.org/news/": "9e68a5bd05a67ba6c87fcba711438e70e4578552764b417dcbd261666ff952b6",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "69ea42a6dc00aa36f4f34e3d685a3c313a36b61f959b0ded0e9fa5b3c302e56e",
-    "https://www.metalinfo.ru/ru/news": "8c13830e1326ffd5de5e923b53e01d88b7158cb5f6fd2b645bcce4778163bfe9",
-    "https://www.pnp.ru/economics/": "5884759365889438c879830c2d7a784381a66950e88c0632d5cb18c7d7d2498c",
-    "https://erzrf.ru/news/": "c718f7b1b825ff03b075437b7bc26da585df2ebadc2507d70383d8eff7602b06",
-    "https://ria-stk.ru/news/vse-novosti.php": "10918fa6e7ad50c62b1c6a2b0847b15bec1e3ef6be6b9d7cd9bd758b531cb991",
-    "http://government.ru/news/": "060acc9afa9e33fe83618ab7544195e6dfc64f9498edb0c6bf990ec472c9c2f2",
-    "https://stroygaz.ru/news/": "2661fee694cd6858a960d81062794a3974a4ab9f35d12f6b0922e53ddbc2bcc4",
-    "https://realty.ria.ru/lenta/": "43a3aa7c49b80d86d5e787813a40845c2f7dd90d6fbf7f27162baa52761c14d4",
-    "https://rg.ru/tema/ekonomika": "369eeb5401416fcccf0d58345d247da7b145b33f11c7716e0d1c0f904182e784",
-    "http://ancb.ru/publication": "022195a166b5c77338b6f828f6432062f849d31ca883e2fd2ced79c23c05dbd0",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "fe5dd8abfc7d418dcf8def8e9b116930b2a8725db3ea4038ad77fb074b1f9366",
+    "https://www.metalinfo.ru/ru/news": "09ef9dedaeab9d0ea78ca0341b0681babe41f923472d384bd0f3ab870df03be4",
+    "https://www.pnp.ru/economics/": "89e085425f8a4ac2d74f3e033d11b6a09107a94db64b9c193591584f15c33221",
+    "https://erzrf.ru/news/": "48e6d7a7144df1f5537b29a9fdf097f0a4f87f3eef6351cbb83e0d63c9fadaac",
+    "https://ria-stk.ru/news/vse-novosti.php": "a9713b8da86e09ae9b72a6f4055845ff33fb16bf10cc0dc8bb349cfb7b43b0bd",
+    "http://government.ru/news/": "c415aa0380d71a3de05ca58873bcd172cfc142938bc5b35fde92205c132ff719",
+    "https://stroygaz.ru/news/": "a97c7f39e7ba9c03b196f97f0cd89a80c70aa49a6b5bc375764419fa39919469",
+    "https://realty.ria.ru/lenta/": "972f4dca36aca8899bbf4c2b7894f9d38dc0f397155f050f8c5bd6ef631d7977",
+    "https://rg.ru/tema/ekonomika": "43869185939078c21a22c1ae4bdd67b3b7fd3338117b6d7d67ca61f9facfb068",
+    "http://ancb.ru/publication": "aa5607ca67c565fbc5cf4d2e1ee28b08869ec114413446af6255bcb77aed6a6f",
     "https://notim.ru": "23d9d455b53a7d865b0543889b2fc4e4e335dd736dcd6bfee9ad910c82290155",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -30531,6 +30571,8 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=246478&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57133/",
+      "http://government.ru/news/57132/",
       "http://government.ru/news/57131/",
       "http://government.ru/news/57123/",
       "http://government.ru/news/57129/",
@@ -30548,9 +30590,7 @@
       "http://government.ru/news/57113/",
       "http://government.ru/news/57112/",
       "http://government.ru/news/57109/",
-      "http://government.ru/news/57108/",
-      "http://government.ru/news/57104/",
-      "http://government.ru/news/57107/"
+      "http://government.ru/news/57108/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/projection/v-yuzhnom-portu-otkryli-novyy-art-obekt/",
@@ -30597,6 +30637,15 @@
       "https://realty.ria.ru/20251128/pochta-2058271707.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/11/30/eksperty-polozhitelno-ocenili-reshenie-rf-i-opek-ne-uvelichivat-dobychu-nefti.html",
+      "https://rg.ru/2025/11/30/prognoz-pogody-v-dome.html",
+      "https://rg.ru/2025/11/30/popolnili-koshelki.html",
+      "https://rg.ru/2025/11/30/uslyshte-ih-na-sushe.html",
+      "https://rg.ru/2025/11/30/rossiia-i-opek-priostanoviat-rost-dobychi-nefti-v-2026-godu.html",
+      "https://rg.ru/2025/11/30/reshetnikov-zaiavil-chto-tovary-iz-rf-polzuetsia-sprosom-na-rynke-katara.html",
+      "https://rg.ru/2025/11/30/solncem-napeklo.html",
+      "https://rg.ru/2025/11/30/ekspert-berezniuk-fasovka-krasnoj-ikry-ne-po-mestu-vylova-dolzhna-nastorozhit.html",
+      "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html",
       "https://rg.ru/2025/11/30/v-gosdume-prizvali-zashchitit-dobrosovestnyh-priobretatelej-zhilia.html",
       "https://rg.ru/2025/11/30/rossijskij-turoperator-vmesto-venesuely-povezet-rossiian-na-kubu.html",
       "https://rg.ru/2025/11/30/v-rf-vtoroj-god-snizhaetsia-kolichestvo-magazinov-kosmetiki.html",
@@ -30620,20 +30669,12 @@
       "https://rg.ru/2025/11/29/v-rossii-mozhet-poiavitsia-edinaia-mera-dlia-vesovyh-produktov.html",
       "https://rg.ru/2025/11/29/ekspert-filatov-otmetil-zagruzhennost-punktov-propuska-fur-na-granice-kazahstana.html",
       "https://rg.ru/2025/11/29/v-rosaviacii-zaiavili-chto-v-rossijskom-aviaparke-u-airbus-net-problem-s-po.html",
-      "https://rg.ru/2025/11/29/rospotrebnadzor-nazval-usloviia-dlia-vozvrata-kosmetiki.html",
-      "https://rg.ru/2025/11/29/reg-ufo/astrahanskaia-oblast-namerena-sotrudnichat-s-afganistanom-i-irakom.html",
-      "https://rg.ru/2025/11/29/v-rst-rasskazali-kak-massovyj-otzyv-airbus-a320-otrazitsia-na-turizme-v-rossii.html",
-      "https://rg.ru/2025/11/29/reg-cfo/sobianin-stolica-otmechaet-den-mostov.html",
-      "https://rg.ru/2025/11/29/reg-cfo/zammera-biriukov-pozdravil-moskovskih-gazovikov-so-160-letiem-gazovogo-hoziajstva.html",
-      "https://rg.ru/2025/11/29/iurist-silkin-ot-babushkinoj-shemy-s-kvartiroj-spaset-princip-iz-12-stulev.html",
-      "https://rg.ru/2025/11/29/mishustin-prodlil-zapret-na-vyvoz-othodov-i-loma-dragocennyh-metallov.html",
-      "https://rg.ru/2025/11/29/novye-vydelennye-polosy-nachnut-rabotat-v-moskve-s-20-dekabria.html",
-      "https://rg.ru/2025/11/29/reg-dfo/passazhiry-zaderzhannogo-v-habarovske-rejsa-otpraviatsia-v-moskvu-rezervnym-bortom.html",
       "https://rg.ru/2025/11/27/gruppa-renessans-strahovanie-uvelichila-obyom-strahovyh-premij-na-282-gg-za-9-mesiacev-2025-goda.html",
       "https://rg.ru/2025/11/14/gk-poliplast-predstavila-innovacionnye-resheniia-na-mezhdunarodnoj-vystavke-himiia-2025.html",
       "https://rg.ru/2025/11/06/v-moskve-projdet-v-iubilejnyj-forum-v-sfere-razrabotki-proizvodstva-i-obrashcheniia-medicinskih-izdelij.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20551",
       "http://ancb.ru/publication/read/20545",
       "http://ancb.ru/publication/read/20543",
       "http://ancb.ru/publication/read/20536",
@@ -30667,8 +30708,7 @@
       "http://ancb.ru/publication/read/20398",
       "http://ancb.ru/publication/read/20397",
       "http://ancb.ru/publication/read/20393",
-      "http://ancb.ru/publication/read/20384",
-      "http://ancb.ru/publication/read/20383"
+      "http://ancb.ru/publication/read/20384"
     ]
   },
   "first_seen": {
@@ -40555,7 +40595,19 @@
     "53193e8fae8b9ccd3e2e6053d30ca986117cad30edbbed1d37059d42260fd138": "2025-11-30T15:30:00+03:00",
     "bba47ab78fc96958f13eb4ed67a312f1245d480f477942557a69d320c1f1efc9": "2025-11-30T18:17:00+03:00",
     "2840f561718ca8af91d22b5b946d4ed5d102b1b457971c8ada54c0d7fe732b65": "2025-11-30T18:17:00+03:00",
-    "6a5a87cc947e437055e0b0c1183b81c329ed14698a487a08f29ea26f33670586": "2025-11-30T18:17:00+03:00"
+    "6a5a87cc947e437055e0b0c1183b81c329ed14698a487a08f29ea26f33670586": "2025-11-30T18:17:00+03:00",
+    "e185b25d214488133bcfb16cf3c46f9b4df15658ed79321f7dd41e27311072a8": "2025-11-30T21:22:00+03:00",
+    "86684231de83e5c97babab49a026edfdc5aa35bbf6b231d274a09eb8eda05bbb": "2025-11-30T21:23:00+03:00",
+    "479634b3a1cbde4866358ea99aba0ccd1bada750d6d07dc2004382b678f64350": "2025-11-30T21:23:00+03:00",
+    "be4a23b1dad0332eee0b1dbbb71e011f64aae09e0ba3749676b457967c844516": "2025-11-30T21:23:00+03:00",
+    "0bcc7758c9296bc7ecc0e60879fb3d0b06fc279eaf1ec38217259b5f62fe64d4": "2025-11-30T21:23:00+03:00",
+    "24ca761bcb260e076f0b7be907e0b1b83887c12b6c6d31f6eded5aa1df4ce837": "2025-11-30T21:23:00+03:00",
+    "854f6550416aa7978e9ba2363a578c0c3b7b82bb3043665a155c3ef835c749d9": "2025-11-30T21:23:00+03:00",
+    "5528d8c815d9a7c4f6e35d11fc18fb1bc3186bb9c731c464b66ba0978bead158": "2025-11-30T21:23:00+03:00",
+    "693ad45fd25541f30323a06de6ff523939e655e127c61f0bc01fb1d41427d14d": "2025-11-30T21:23:00+03:00",
+    "1f7348f435007ec7df8efa313fd70e22f28b4901d92ca4885ceb0b8b9b5dfc04": "2025-11-30T21:23:00+03:00",
+    "6a829879ad9e4ca82c52cdb2e7b880f594d62f2d70b4cbf2698b9568907cdaac": "2025-11-30T21:23:00+03:00",
+    "1789ee812d73d06886eb23fc4673f07c51fb57260929aa528eca2ffc935728a7": "2025-11-30T21:23:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -40597,31 +40649,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "0yP03AXwzZ201nBd",
+          "value": "UCiAD42sHB6NaNAR",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764517017
+          "expires": 1764528197
         },
         {
           "name": "__ddg10_",
-          "value": "1764515817",
+          "value": "1764526997",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764517017
+          "expires": 1764528197
         },
         {
           "name": "__ddg9_",
-          "value": "64.236.160.192",
+          "value": "64.236.143.32",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764517017
+          "expires": 1764528197
+        },
+        {
+          "name": "__ddg1_",
+          "value": "YSchSRccCpwVtosJ5Lua",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1796062997
         },
         {
           "name": "PHPSESSID",
-          "value": "86b1baabe2ff246d4015a107ba09286d",
+          "value": "1ac01ec8feaaaa9c77a5013e42b9e125",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -40648,11 +40708,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "H7QVE9ZGWh9oJIN4qnYwsLmaLOsTXuzg",
+          "value": "Uf3xhvvWVljU5XPjpHlNVJzKFnV86uEF",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764526624
+          "expires": 1764537799
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -40660,7 +40720,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1795619824
+          "expires": 1795630999
         }
       ],
       "failures": {
@@ -52869,7 +52929,19 @@
     "https://rg.ru/2025/11/30/ekspert-iushkov-udar-ukrainy-po-tankeram-u-turcii-mozhet-povysit-ceny-na-neft.html": "https://rg.ru/2025/11/30/ekspert-iushkov-udar-ukrainy-po-tankeram-u-turcii-mozhet-povysit-ceny-na-neft.html",
     "https://rg.ru/2025/11/30/v-gosdume-prizvali-zashchitit-dobrosovestnyh-priobretatelej-zhilia.html": "https://rg.ru/2025/11/30/v-gosdume-prizvali-zashchitit-dobrosovestnyh-priobretatelej-zhilia.html",
     "https://rg.ru/2025/11/30/rossijskij-turoperator-vmesto-venesuely-povezet-rossiian-na-kubu.html": "https://rg.ru/2025/11/30/rossijskij-turoperator-vmesto-venesuely-povezet-rossiian-na-kubu.html",
-    "https://rg.ru/2025/11/30/v-rf-vtoroj-god-snizhaetsia-kolichestvo-magazinov-kosmetiki.html": "https://rg.ru/2025/11/30/v-rf-vtoroj-god-snizhaetsia-kolichestvo-magazinov-kosmetiki.html"
+    "https://rg.ru/2025/11/30/v-rf-vtoroj-god-snizhaetsia-kolichestvo-magazinov-kosmetiki.html": "https://rg.ru/2025/11/30/v-rf-vtoroj-god-snizhaetsia-kolichestvo-magazinov-kosmetiki.html",
+    "http://ancb.ru/publication/read/20551": "http://ancb.ru/publication/read/20551",
+    "http://government.ru/news/57133": "http://government.ru/news/57133",
+    "http://government.ru/news/57132": "http://government.ru/news/57132",
+    "https://rg.ru/2025/11/30/eksperty-polozhitelno-ocenili-reshenie-rf-i-opek-ne-uvelichivat-dobychu-nefti.html": "https://rg.ru/2025/11/30/eksperty-polozhitelno-ocenili-reshenie-rf-i-opek-ne-uvelichivat-dobychu-nefti.html",
+    "https://rg.ru/2025/11/30/prognoz-pogody-v-dome.html": "https://rg.ru/2025/11/30/prognoz-pogody-v-dome.html",
+    "https://rg.ru/2025/11/30/popolnili-koshelki.html": "https://rg.ru/2025/11/30/popolnili-koshelki.html",
+    "https://rg.ru/2025/11/30/uslyshte-ih-na-sushe.html": "https://rg.ru/2025/11/30/uslyshte-ih-na-sushe.html",
+    "https://rg.ru/2025/11/30/rossiia-i-opek-priostanoviat-rost-dobychi-nefti-v-2026-godu.html": "https://rg.ru/2025/11/30/rossiia-i-opek-priostanoviat-rost-dobychi-nefti-v-2026-godu.html",
+    "https://rg.ru/2025/11/30/reshetnikov-zaiavil-chto-tovary-iz-rf-polzuetsia-sprosom-na-rynke-katara.html": "https://rg.ru/2025/11/30/reshetnikov-zaiavil-chto-tovary-iz-rf-polzuetsia-sprosom-na-rynke-katara.html",
+    "https://rg.ru/2025/11/30/solncem-napeklo.html": "https://rg.ru/2025/11/30/solncem-napeklo.html",
+    "https://rg.ru/2025/11/30/ekspert-berezniuk-fasovka-krasnoj-ikry-ne-po-mestu-vylova-dolzhna-nastorozhit.html": "https://rg.ru/2025/11/30/ekspert-berezniuk-fasovka-krasnoj-ikry-ne-po-mestu-vylova-dolzhna-nastorozhit.html",
+    "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html": "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -63041,7 +63113,19 @@
     "8a52a35c10a90c991a31871bcc4517fd608a4121": "https://rg.ru/2025/11/30/ekspert-iushkov-udar-ukrainy-po-tankeram-u-turcii-mozhet-povysit-ceny-na-neft.html",
     "967b47e359c9ae3dce985d6ff3cf123c51a4090c": "https://rg.ru/2025/11/30/v-gosdume-prizvali-zashchitit-dobrosovestnyh-priobretatelej-zhilia.html",
     "41fc316740448fb4f24289dc1dae26789d3a3314": "https://rg.ru/2025/11/30/rossijskij-turoperator-vmesto-venesuely-povezet-rossiian-na-kubu.html",
-    "d2d6cd4f70f7f7e1089af68d716d20f7731dbc4b": "https://rg.ru/2025/11/30/v-rf-vtoroj-god-snizhaetsia-kolichestvo-magazinov-kosmetiki.html"
+    "d2d6cd4f70f7f7e1089af68d716d20f7731dbc4b": "https://rg.ru/2025/11/30/v-rf-vtoroj-god-snizhaetsia-kolichestvo-magazinov-kosmetiki.html",
+    "a73b5e87985097eaf48fbc04777aafeff4d278e3": "http://ancb.ru/publication/read/20551",
+    "b41155f24043a9347f9c99b29c203b2e78d6dce7": "http://government.ru/news/57133",
+    "9eba6eae5244fc224fe051463b875c8f29d71f48": "http://government.ru/news/57132",
+    "c6d46fe5f6f2620bb06e0c35b98c55c15d392535": "https://rg.ru/2025/11/30/eksperty-polozhitelno-ocenili-reshenie-rf-i-opek-ne-uvelichivat-dobychu-nefti.html",
+    "b864fbb95c169d3cd18ebf9c21f6abcd842c1c52": "https://rg.ru/2025/11/30/prognoz-pogody-v-dome.html",
+    "cb53e7ab4e4a39bcdeeba0765a4065714f269703": "https://rg.ru/2025/11/30/popolnili-koshelki.html",
+    "f6b67ff2e5542ddb0009742ff5e908e42c973353": "https://rg.ru/2025/11/30/uslyshte-ih-na-sushe.html",
+    "f346832251405a43ff33c29239f3254bb07ce16e": "https://rg.ru/2025/11/30/rossiia-i-opek-priostanoviat-rost-dobychi-nefti-v-2026-godu.html",
+    "919aaec94dcde62da56146aa0cbf956562867af8": "https://rg.ru/2025/11/30/reshetnikov-zaiavil-chto-tovary-iz-rf-polzuetsia-sprosom-na-rynke-katara.html",
+    "28447f5a04e564d3a88c796bd476678f6aa8faa9": "https://rg.ru/2025/11/30/solncem-napeklo.html",
+    "de0d4750445ccb55a41a46a819f55298d27fdfb6": "https://rg.ru/2025/11/30/ekspert-berezniuk-fasovka-krasnoj-ikry-ne-po-mestu-vylova-dolzhna-nastorozhit.html",
+    "1057de7bb167c4ee54b2961ec9553c6461612842": "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -76670,6 +76754,20 @@
     "https://rg.ru/2025/11/30/ekspert-iushkov-udar-ukrainy-po-tankeram-u-turcii-mozhet-povysit-ceny-na-neft.html": "53193e8fae8b9ccd3e2e6053d30ca986117cad30edbbed1d37059d42260fd138",
     "https://rg.ru/2025/11/30/v-gosdume-prizvali-zashchitit-dobrosovestnyh-priobretatelej-zhilia.html": "bba47ab78fc96958f13eb4ed67a312f1245d480f477942557a69d320c1f1efc9",
     "https://rg.ru/2025/11/30/rossijskij-turoperator-vmesto-venesuely-povezet-rossiian-na-kubu.html": "2840f561718ca8af91d22b5b946d4ed5d102b1b457971c8ada54c0d7fe732b65",
-    "https://rg.ru/2025/11/30/v-rf-vtoroj-god-snizhaetsia-kolichestvo-magazinov-kosmetiki.html": "6a5a87cc947e437055e0b0c1183b81c329ed14698a487a08f29ea26f33670586"
+    "https://rg.ru/2025/11/30/v-rf-vtoroj-god-snizhaetsia-kolichestvo-magazinov-kosmetiki.html": "6a5a87cc947e437055e0b0c1183b81c329ed14698a487a08f29ea26f33670586",
+    "http://ancb.ru/publication/read/20551": "e185b25d214488133bcfb16cf3c46f9b4df15658ed79321f7dd41e27311072a8",
+    "http://government.ru/news/57133": "86684231de83e5c97babab49a026edfdc5aa35bbf6b231d274a09eb8eda05bbb",
+    "http://government.ru/news/57133/": "86684231de83e5c97babab49a026edfdc5aa35bbf6b231d274a09eb8eda05bbb",
+    "http://government.ru/news/57132": "479634b3a1cbde4866358ea99aba0ccd1bada750d6d07dc2004382b678f64350",
+    "http://government.ru/news/57132/": "479634b3a1cbde4866358ea99aba0ccd1bada750d6d07dc2004382b678f64350",
+    "https://rg.ru/2025/11/30/eksperty-polozhitelno-ocenili-reshenie-rf-i-opek-ne-uvelichivat-dobychu-nefti.html": "be4a23b1dad0332eee0b1dbbb71e011f64aae09e0ba3749676b457967c844516",
+    "https://rg.ru/2025/11/30/prognoz-pogody-v-dome.html": "0bcc7758c9296bc7ecc0e60879fb3d0b06fc279eaf1ec38217259b5f62fe64d4",
+    "https://rg.ru/2025/11/30/popolnili-koshelki.html": "24ca761bcb260e076f0b7be907e0b1b83887c12b6c6d31f6eded5aa1df4ce837",
+    "https://rg.ru/2025/11/30/uslyshte-ih-na-sushe.html": "854f6550416aa7978e9ba2363a578c0c3b7b82bb3043665a155c3ef835c749d9",
+    "https://rg.ru/2025/11/30/rossiia-i-opek-priostanoviat-rost-dobychi-nefti-v-2026-godu.html": "5528d8c815d9a7c4f6e35d11fc18fb1bc3186bb9c731c464b66ba0978bead158",
+    "https://rg.ru/2025/11/30/reshetnikov-zaiavil-chto-tovary-iz-rf-polzuetsia-sprosom-na-rynke-katara.html": "693ad45fd25541f30323a06de6ff523939e655e127c61f0bc01fb1d41427d14d",
+    "https://rg.ru/2025/11/30/solncem-napeklo.html": "1f7348f435007ec7df8efa313fd70e22f28b4901d92ca4885ceb0b8b9b5dfc04",
+    "https://rg.ru/2025/11/30/ekspert-berezniuk-fasovka-krasnoj-ikry-ne-po-mestu-vylova-dolzhna-nastorozhit.html": "6a829879ad9e4ca82c52cdb2e7b880f594d62f2d70b4cbf2698b9568907cdaac",
+    "https://rg.ru/2025/11/30/reshetnikov-nazval-katar-odnim-iz-vazhnejshih-strategicheskih-partnerov-rf.html": "1789ee812d73d06886eb23fc4673f07c51fb57260929aa528eca2ffc935728a7"
   }
 }
