@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 03 Dec 2025 21:19:32 GMT"
+      "Last-Modified": "Thu, 04 Dec 2025 01:18:28 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1cb77-U1H/eVU0yWM8OkND4Q6lVEN1eeY\""
+      "ETag": "W/\"1c8d7-f962iWYp1cXqcEvW8QFGnoeyx44\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"18bgp040r3b3yyg\""
+      "ETag": "\"nw49hdm6th3xlw\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -25723,6 +25723,9 @@
     },
     "https://rg.ru/2025/12/03/reg-szfo/vyhod-v-svet.html": {
       "ETag": "\"16fevmacgop1z79\""
+    },
+    "https://rg.ru/2025/12/04/reg-cfo/rejs-na-phuket-posle-avarijnoj-posadki-boeing-v-domodedovo-naznachen-na-5-dekabria.html": {
+      "ETag": "\"16mueu4721qt6\""
     }
   },
   "stats": {
@@ -31982,9 +31985,26 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3c670eda90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3c670edd10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3c670edf90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3c670ee210>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3c670ee490>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7efc31d70050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7efc31d5e210>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7efc31d5e0d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7efc32aa1a70>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7efc32aa3950>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7efc32a279b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7efc31910690>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7efc32afae90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7efc31910a50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7efc31910cd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7efc31910f50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-12-03T21:20:09.428526+00:00",
+    "last_run": "2025-12-04T01:18:49.311473+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -31997,9 +32017,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 371.3768280000238,
-        "connect_ms": 873.4207499999798,
-        "response_ms": 1244.7975780000036,
+        "dns_ms": 454.7714120000137,
+        "connect_ms": 889.7670229999619,
+        "response_ms": 1344.5384349999756,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -32010,12 +32030,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3c681ab890>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7efc32a279b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 983.3157589999928,
-        "connect_ms": 400.31821899998477,
-        "response_ms": 1383.6339779999776,
+        "dns_ms": 1270.6809940000028,
+        "connect_ms": 0.0,
+        "response_ms": 843.3185989999856,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -32026,26 +32046,26 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3c670ee490>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7efc31910f50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "0d74b01167e5d11aaf144a8151ab527ac7b867df1252b01e08e07a6bc268547a",
+    "https://ardexpert.ru/article": "ae6c3da3036ba4a2d43d2be5af3018e754006a4bcd70c5741ea5d0a3a982652c",
     "https://www.gostinfo.ru/News/List": "d350e4e4cb397efdff601f5a473600ee25730c9c88826edd3df40a6fa869040c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "866435dc3469aaaf69ed8622c340e031df1d39528eb8860a431eb7ad2066db76",
-    "https://eec.eaeunion.org/news/": "b9e9b719e50158534d8d0def2653d7d47a4b0fc6cd18aeccbe27db7510cfc664",
+    "https://eec.eaeunion.org/news/": "a2673e4475d7f8c17f51df18bc8619aa0ddfeb32326d84a36538045348c0bb89",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "a42d7234abcabc83e81bc215c914bb5081117b45b503e9cffbad56e30836fd51",
-    "https://www.metalinfo.ru/ru/news": "d95a456737d4860dd5b0f66add1497d535e0593758701639a42a6e578d166dbd",
-    "https://www.pnp.ru/economics/": "80e903010ffc9458ae59459eea0e09e69aec1256949af864f6a144ffb43f9c60",
-    "https://erzrf.ru/news/": "02271d5c719799ed6aade1addc99ae58cc20ea8f70542ac7c4e6f150249a1b61",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "e4c95ddc4547b80112619a2fd585574869e8c33515335149a7cb2915418dd09c",
+    "https://www.metalinfo.ru/ru/news": "9948ad359b5b0d8eb8b2cdf426210f6d6dbf621fa674caed165553e020cf2085",
+    "https://www.pnp.ru/economics/": "44edbc25f2d927e8dff62ac1918d498dabb340eb3ee1dc93f9658b38c67e286d",
+    "https://erzrf.ru/news/": "2cfff3c280c3875fcba7a0383d53129baf5ae30b20578f4662fb13ba040a02a8",
     "https://ria-stk.ru/news/vse-novosti.php": "c51cb6bc257da42a4d4f55869ec59d7d41fe75ad66dc34f8394ca3858aa0b02b",
-    "http://government.ru/news/": "c2386edb581b6d8638f45a3d0b2d7a9c383cbae65b3f01b6a996b15dae8d4900",
-    "https://stroygaz.ru/news/": "7401fd69676885107304107577d3e70d731e63746c6ea05209f02e7de59c661b",
-    "https://realty.ria.ru/lenta/": "80b2fd68b4fb33b6dc6e908a39eb7ebe958f0788ce2a572a6a0e247ac411844f",
-    "https://rg.ru/tema/ekonomika": "eb0f64a6f52f9ac57c9cd311e1d563e7f00a7e521229ad2f13c5b00e0a5454ed",
+    "http://government.ru/news/": "769a46205063487efbee4c009e678e18592955022ad7095cc13f04d1c19cf36d",
+    "https://stroygaz.ru/news/": "c720bcfcda1e50fe21cbb6b9bdbdb4cabc33dddc31533cee915138d223b3d437",
+    "https://realty.ria.ru/lenta/": "c6378cb80f201c4d7245b4a42e545d99cafbbc1dea7d3df783bf1dbf4a8bce3c",
+    "https://rg.ru/tema/ekonomika": "02bb3557e4a53d6acd7934b2dcb38d748177e4480d3085a241bc15ec2d63e58f",
     "http://ancb.ru/publication": "eabccb6481865601f09c1e9bd5e953b18342baebce6aaa77be45fc607e29556f",
     "https://notim.ru": "23d9d455b53a7d865b0543889b2fc4e4e335dd736dcd6bfee9ad910c82290155",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -32354,6 +32374,7 @@
       "https://realty.ria.ru/20251203/komitet-2059437084.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/04/reg-cfo/rejs-na-phuket-posle-avarijnoj-posadki-boeing-v-domodedovo-naznachen-na-5-dekabria.html",
       "https://rg.ru/2025/12/03/oleg-urvan-tureckaia-kompaniia-beikta-shipping-perevozila-menee-1-nefti-rf.html",
       "https://rg.ru/2025/12/03/reg-cfo/boeing-777-sel-v-domodedovo-posle-pozhara-obstanovku-na-bortu-sniali-na-video.html",
       "https://rg.ru/2025/12/03/pochta-soiuza.html",
@@ -32386,7 +32407,6 @@
       "https://rg.ru/2025/12/03/kozyr-v-rukave-sovremennye-polimery-pomogut-sohranit-milliardy-rublej-dlia-apk.html",
       "https://rg.ru/2025/12/03/reg-cfo/festival-russkoe-rozhdestvo-v-shue-obiavil-programmu-na-2026-god.html",
       "https://rg.ru/2025/12/03/vyplaty-rossiianam-po-strahovkam-zhizni-i-zdorovia-uverenno-rastut.html",
-      "https://rg.ru/2025/12/03/reg-pfo/v-ulianovske-budut-vypuskat-dva-novyh-samoleta-il-100-i-il-276.html",
       "https://rg.ru/2025/12/02/moskva-primet-vtorye-mezhdunarodnye-detskie-tvorcheskie-igry-stran-briks.html",
       "https://rg.ru/2025/12/02/v-rossii-bespilotniki-nauchat-videt-obekty-pod-zemlej.html"
     ],
@@ -42976,7 +42996,8 @@
     "0c402743c7a4116127aacc377cf3bc240fe73e4a5ff3790b6781750562684e97": "2025-12-04T00:19:00+03:00",
     "59ef01facd569ee3ff6db133f14d2f8ea315d47bc7e39a69d077ef0063d1617a": "2025-12-04T00:20:00+03:00",
     "3718dce5018dfa3b5734531c4fea24c5e8dd3abf4ddbdb93128bb86d5d5b7878": "2025-12-04T00:20:00+03:00",
-    "7d3ea44bc135d59d2b733e7a32c02594f9c56a671d05aeba230b231fc619ab20": "2025-12-04T00:20:00+03:00"
+    "7d3ea44bc135d59d2b733e7a32c02594f9c56a671d05aeba230b231fc619ab20": "2025-12-04T00:20:00+03:00",
+    "e9ff91db0cb3ea2cdc05236559405bc948781e343a4caca17747134571ea3b3c": "2025-12-04T04:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -43007,9 +43028,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3c68233950>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1764796684.0942917
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7efc32aa3950>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1764811021.7423468
       },
       "warmup_done": false,
       "last_success_path": null
@@ -43018,39 +43039,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "pacj47e8IHrQd9ti",
+          "value": "8f0ycNQGDPsEqS3x",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764797934
+          "expires": 1764812270
         },
         {
           "name": "__ddg10_",
-          "value": "1764796734",
+          "value": "1764811070",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764797934
+          "expires": 1764812270
         },
         {
           "name": "__ddg9_",
-          "value": "52.159.245.150",
+          "value": "52.154.19.225",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1764797934
-        },
-        {
-          "name": "__ddg1_",
-          "value": "bRKrQZuLfJqmH2Khji3v",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1796332734
+          "expires": 1764812270
         },
         {
           "name": "PHPSESSID",
-          "value": "a7594d7907df7cd4bdbea62cac773d0f",
+          "value": "a71abc8423bd3f6f45463e131c2bf995",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -43093,9 +43106,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3c670ee210>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
-        "last_ts": 1764796767.605117
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7efc31910cd0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 8,
+        "last_ts": 1764811102.8653553
       },
       "warmup_done": false,
       "last_success_path": null
@@ -56110,7 +56123,8 @@
     "https://rg.ru/2025/12/03/oleg-urvan-tureckaia-kompaniia-beikta-shipping-perevozila-menee-1-nefti-rf.html": "https://rg.ru/2025/12/03/oleg-urvan-tureckaia-kompaniia-beikta-shipping-perevozila-menee-1-nefti-rf.html",
     "https://rg.ru/2025/12/03/reg-cfo/boeing-777-sel-v-domodedovo-posle-pozhara-obstanovku-na-bortu-sniali-na-video.html": "https://rg.ru/2025/12/03/reg-cfo/boeing-777-sel-v-domodedovo-posle-pozhara-obstanovku-na-bortu-sniali-na-video.html",
     "https://rg.ru/2025/12/03/pochta-soiuza.html": "https://rg.ru/2025/09/29/grigorenko-eksport-rossijskih-it-reshenij-v-respubliku-belarus-vyros-na-23.html",
-    "https://rg.ru/2025/12/03/reg-szfo/vyhod-v-svet.html": "https://rg.ru/2025/12/03/reg-szfo/vyhod-v-svet.html"
+    "https://rg.ru/2025/12/03/reg-szfo/vyhod-v-svet.html": "https://rg.ru/2025/12/03/reg-szfo/vyhod-v-svet.html",
+    "https://rg.ru/2025/12/04/reg-cfo/rejs-na-phuket-posle-avarijnoj-posadki-boeing-v-domodedovo-naznachen-na-5-dekabria.html": "https://rg.ru/2025/12/04/reg-cfo/rejs-na-phuket-posle-avarijnoj-posadki-boeing-v-domodedovo-naznachen-na-5-dekabria.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -66945,7 +66959,8 @@
     "bb93056b22ae94f864b5e0796de477d69ed4116c": "https://realty.ria.ru/20251203/perestanovki-2059635311.html",
     "017bceff283b39dd6185bd30d60cb0f85376ce8d": "https://rg.ru/2025/12/03/oleg-urvan-tureckaia-kompaniia-beikta-shipping-perevozila-menee-1-nefti-rf.html",
     "f9d56aed52353511094bb119cd90ccdbf8a58d6f": "https://rg.ru/2025/12/03/reg-cfo/boeing-777-sel-v-domodedovo-posle-pozhara-obstanovku-na-bortu-sniali-na-video.html",
-    "4b4eba5d3dd897ac835f01e0457ffeb5670f10e5": "https://rg.ru/2025/12/03/reg-szfo/vyhod-v-svet.html"
+    "4b4eba5d3dd897ac835f01e0457ffeb5670f10e5": "https://rg.ru/2025/12/03/reg-szfo/vyhod-v-svet.html",
+    "efad35b0e04b6df052a1e50628534522b3650132": "https://rg.ru/2025/12/04/reg-cfo/rejs-na-phuket-posle-avarijnoj-posadki-boeing-v-domodedovo-naznachen-na-5-dekabria.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -81484,6 +81499,7 @@
     "https://rg.ru/2025/12/03/oleg-urvan-tureckaia-kompaniia-beikta-shipping-perevozila-menee-1-nefti-rf.html": "59ef01facd569ee3ff6db133f14d2f8ea315d47bc7e39a69d077ef0063d1617a",
     "https://rg.ru/2025/12/03/reg-cfo/boeing-777-sel-v-domodedovo-posle-pozhara-obstanovku-na-bortu-sniali-na-video.html": "3718dce5018dfa3b5734531c4fea24c5e8dd3abf4ddbdb93128bb86d5d5b7878",
     "https://rg.ru/2025/12/03/pochta-soiuza.html": "27a6c790716a02beafa826026a4d59b7cbbaa527ed588250ed9662c286a48566",
-    "https://rg.ru/2025/12/03/reg-szfo/vyhod-v-svet.html": "7d3ea44bc135d59d2b733e7a32c02594f9c56a671d05aeba230b231fc619ab20"
+    "https://rg.ru/2025/12/03/reg-szfo/vyhod-v-svet.html": "7d3ea44bc135d59d2b733e7a32c02594f9c56a671d05aeba230b231fc619ab20",
+    "https://rg.ru/2025/12/04/reg-cfo/rejs-na-phuket-posle-avarijnoj-posadki-boeing-v-domodedovo-naznachen-na-5-dekabria.html": "e9ff91db0cb3ea2cdc05236559405bc948781e343a4caca17747134571ea3b3c"
   }
 }
