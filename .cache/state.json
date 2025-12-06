@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 06 Dec 2025 15:17:52 GMT"
+      "Last-Modified": "Sat, 06 Dec 2025 18:23:10 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d691-2niGUE1qCbEZjWmMawEwx6Mt8pQ\""
+      "ETag": "W/\"1cc50-c1b/w1Ues5C5uE/Ea+i/1DigjVM\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"r32n7nws6m3nlo\""
+      "ETag": "\"n6iiq97a053m8k\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -26688,6 +26688,20 @@
     },
     "https://rg.ru/2025/12/06/na-elbruse-povysiat-trebovaniia-k-instruktoram-pri-podemah-vyshe-4000-metrov.html": {
       "ETag": "\"a2agouj9g11sen\""
+    },
+    "http://government.ru/news/57223/": {},
+    "http://government.ru/news/57222/": {},
+    "https://rg.ru/2025/12/06/mer-chastnye-investicii-v-elbrus-prevysiat-35-mlrd-rublej-k-2030-godu.html": {
+      "ETag": "\"naix1uztsp1um1\""
+    },
+    "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html": {
+      "ETag": "\"l2hq3vcefb1ozc\""
+    },
+    "https://rg.ru/2025/12/06/polina-lure-ne-otzovet-zhalobu-iz-vs-posle-obeshchanij-larisy-dolinoj.html": {
+      "ETag": "\"l4ly5yugt31qxj\""
+    },
+    "https://rg.ru/2025/12/06/husnullin-poruchil-operativno-reshit-vopros-s-teplosnabzheniem-severodonecka.html": {
+      "ETag": "\"14bzpkgay911sta\""
     }
   },
   "stats": {
@@ -33261,9 +33275,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4b21c760d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4b22e3ee90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4b22e3ee90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4b21c76490>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4b21c76710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-12-06T15:18:14.836660+00:00",
+    "last_run": "2025-12-06T18:22:56.957615+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -33276,56 +33295,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 404.34785700000475,
-        "connect_ms": 27.193414999999277,
-        "response_ms": 431.541272000004,
+        "dns_ms": 469.10804399999506,
+        "connect_ms": 198.0278450000128,
+        "response_ms": 667.1358890000079,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4b21c60710>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 154.0643880000232,
+        "connect_ms": 989.5450849999747,
+        "response_ms": 1143.609472999998,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 1463.262152999988,
-        "connect_ms": 3284.113259000009,
-        "response_ms": 4747.375411999997,
+        "dns_ms": 9721.710863999988,
+        "connect_ms": 0.0,
+        "response_ms": 512.9429650000077,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4b21c76710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 300.45777199998724,
+        "connect_ms": 330.76003400000786,
+        "response_ms": 631.2178059999951,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "27c1808a02e0577fe0833852942e8cb89c4d109697242a2989f4e99d08cd5048",
+    "https://ardexpert.ru/article": "af68e7bbffa1c9bcee7156f6e2cb7710d705b8987c71f4be8421535fd57e48dc",
     "https://www.gostinfo.ru/News/List": "bc94ce188a22b43f6d64f4a215dee35ad4498c73c262dce79757713e99c1c23a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "fe3415739314a264ae4b45f1fc78619d59f19b68929f6c4ab6d50b71a80d77b1",
-    "https://eec.eaeunion.org/news/": "8476f2ba400319d087ee9698a37d2b8c59f803d9f0c16323efa6f78d93700bbe",
+    "https://eec.eaeunion.org/news/": "270fcfc223177e0cea7e94556e3e7f8c1273b3b1d9fee7d0546381f44cd1d4d5",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "a12e4c8fac8f177e451c39f2d27cd9486ae8e5406bd3604d1d57ab6c5fa1b5fd",
-    "https://www.metalinfo.ru/ru/news": "8990d40894db5ca6239166e92bab99612874a954dbbb7ad3bef6c0a7800cd386",
-    "https://www.pnp.ru/economics/": "9664f4fd9d83fd78addaebb1d122f4c3d5248f6b82d241b8acd0d5d190814fec",
-    "https://erzrf.ru/news/": "afc11ea319f61aeec78e6b7cb71532d81905b2c950bda7408d6dfbf39008931b",
-    "https://ria-stk.ru/news/vse-novosti.php": "ec96a13591faca03fda5da07d855d22ec4580bb530d3264be3d972b564a35fcd",
-    "http://government.ru/news/": "06e5f0375e48c45b54f0b80ec1a32dbf4c2f924f756ff05a9c5d9243c0afb31f",
-    "https://stroygaz.ru/news/": "3dc33acced260f703aba5abc483586fb273378ab74232430c289e0b77ad903a8",
-    "https://realty.ria.ru/lenta/": "d199d768dbcbad185201e0901fa166a7d417d0f2e8327e3bd0f9c92c2952c9c9",
-    "https://rg.ru/tema/ekonomika": "9a4d3a9bc1d06e268e4df1d662ff368ecde33c931be64373f7ff015e58ddf6ea",
-    "http://ancb.ru/publication": "8fca39e4397d1c52401cf8b48d2e9dd4ccba575031c6ea2a42ef4ffd8c136a8b",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "f107e3e886231fa247a0335c67f5edc508a2241899f0517fa5b09d4f219a1b09",
+    "https://www.metalinfo.ru/ru/news": "8658aa727ac10cb584885e4f61463571b89822a803ceab13eb960251611f8f6a",
+    "https://www.pnp.ru/economics/": "d498922655111f59ebb3927b18b68ba920dcebfb8d175f4910b138d9945f0a89",
+    "https://erzrf.ru/news/": "4eb3b170666f1407a2e234ab234f5106b421d1d211af1897cc3aa467b888c640",
+    "https://ria-stk.ru/news/vse-novosti.php": "83c7cc6e193b2fae360163b8825b91d23aaa6c34a258ec2bec7cd0f1268c9d2b",
+    "http://government.ru/news/": "0331c113807d066a065b48893fc6cce7c7a2db27cc7f99312ac75aa581a5ea81",
+    "https://stroygaz.ru/news/": "e765d498944a4ece1387dd84c357482af6e827c453d289b564c5f3eba6195ae0",
+    "https://realty.ria.ru/lenta/": "9b71d967978860ede2e8c4ee3a625b0f505fe126d8c27c2e46510d74f097b625",
+    "https://rg.ru/tema/ekonomika": "d37f14ba74fa1896b69283c009cc5985276cc736e5823bfd6e9399c66dd4a10a",
+    "http://ancb.ru/publication": "58391459b9bbab500aaea8b760dfb607671172a479c0ce9cedf4e01823089a59",
     "https://notim.ru": "64e3e9a8f163b90f99f13deec13162a74b67d45f89a161f3b172b9f03a502495",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -33566,6 +33585,8 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=246746&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57223/",
+      "http://government.ru/news/57222/",
       "http://government.ru/news/57221/",
       "http://government.ru/news/57204/",
       "http://government.ru/news/57215/",
@@ -33583,9 +33604,7 @@
       "http://government.ru/news/57203/",
       "http://government.ru/news/57202/",
       "http://government.ru/news/57201/",
-      "http://government.ru/news/57195/",
-      "http://government.ru/news/57200/",
-      "http://government.ru/news/57194/"
+      "http://government.ru/news/57195/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/kadry/eksperty-podschitali-kolichestvo-vysokooplachivaemykh-vakansiy-v-sfere-stroitelstva/",
@@ -33632,6 +33651,10 @@
       "https://realty.ria.ru/20251205/rosreestr-2059854296.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/06/mer-chastnye-investicii-v-elbrus-prevysiat-35-mlrd-rublej-k-2030-godu.html",
+      "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html",
+      "https://rg.ru/2025/12/06/polina-lure-ne-otzovet-zhalobu-iz-vs-posle-obeshchanij-larisy-dolinoj.html",
+      "https://rg.ru/2025/12/06/husnullin-poruchil-operativno-reshit-vopros-s-teplosnabzheniem-severodonecka.html",
       "https://rg.ru/2025/12/06/dlitelnost-sverhurochnoj-raboty-rossiian-planiruiut-uvelichit-do-240-chasov.html",
       "https://rg.ru/2025/12/06/na-elbruse-povysiat-trebovaniia-k-instruktoram-pri-podemah-vyshe-4000-metrov.html",
       "https://rg.ru/2025/12/06/rossiia-zaniala-trete-mesto-po-dostupnosti-elektroenergii-sredi-stran-g20.html",
@@ -33659,11 +33682,7 @@
       "https://rg.ru/2025/12/05/vyzovom-2026-goda-na-rynke-truda-mozhet-stat-tihoe-uvolnenie-sotrudnikov.html",
       "https://rg.ru/2025/12/05/obem-torgovli-s-indiej-budet-zaviset-ot-cen-i-diversifikacii-tovarooborota.html",
       "https://rg.ru/2025/12/05/ekonomist-fedorov-vyvesti-valiutu-za-rubezh-dazhe-posle-resheniia-cb-budet-neprosto.html",
-      "https://rg.ru/2025/12/05/analitik-semko-gibkaia-zaniatost-v-rossii-mozhet-ohvatit-18-millionov-chelovek.html",
       "https://rg.ru/2025/12/05/mintrans-vidit-potencial-rosta-gruzopotoka-po-mtk-sever-iug.html",
-      "https://rg.ru/2025/12/05/reuters-g7-i-es-gotoviat-polnyj-zapret-morskoj-transportirovki-rossijskoj-nefti.html",
-      "https://rg.ru/2025/12/05/manturov-rf-i-indiia-zainteresovany-v-sotrudnichestve-po-ssj-100-i-il-114-300.html",
-      "https://rg.ru/2025/12/05/cb-ne-rassmatrivaet-sozdanie-mobilnogo-prilozheniia-dlia-cifrovogo-rublia.html",
       "https://rg.ru/2025/12/04/professiia-mechty-nauchila-shkolnikov-rabotat-v-sfere-gostepriimstva.html",
       "https://rg.ru/2025/12/04/v-rossii-robotov-obuchaiut-gumanitarnomu-razminirovaniiu.html",
       "https://rg.ru/2025/12/03/kurort-sbera-mriia-v-2025-godu-zavoeval-dve-mezhdunarodnye-premii-v-sfere-gostepriimstva.html"
@@ -44692,7 +44711,13 @@
     "f4114fc709c1c539b9b3c73eb5878c5f305bbd311714a7222f3e2521023bc7e2": "2025-12-06T15:34:00+03:00",
     "0a6ec92ef5ab6c3c201a80009976371e30715944a506434baaebf8bae8498c90": "2025-12-06T15:34:00+03:00",
     "6796f2606682d15f1fd22743ef241f7e069aca2716d645bd1cbdca1db50e4560": "2025-12-06T18:18:00+03:00",
-    "d67f4570bf013fd6bf59769f56eb0c9d2c8ee68e2c53967ca91fa63d61a5563d": "2025-12-06T18:18:00+03:00"
+    "d67f4570bf013fd6bf59769f56eb0c9d2c8ee68e2c53967ca91fa63d61a5563d": "2025-12-06T18:18:00+03:00",
+    "b7cd4d146416fa8dc496e9bcacf54a2ed5f5f3ee0fd31d5206b5c7b4b35fca31": "2025-12-06T21:22:00+03:00",
+    "0eef72ec9ad0c7548429f5ea83ecc0847d1518716a8c3d4c7070b9e7e8f90c93": "2025-12-06T21:22:00+03:00",
+    "f9fe194281b79aa91653d719360b885901bb630715d5bd7abe54405e272ed760": "2025-12-06T21:22:00+03:00",
+    "fb1abe36b9b2e8207e595b46efa754e85a96d4d2115dc315156b1dd269dae8dc": "2025-12-06T21:22:00+03:00",
+    "ee0175816c5579ca1b448c6ee759c14ee63cc53690353a1b0aab3060bd122809": "2025-12-06T21:22:00+03:00",
+    "724051d8350e3c5e70f4507c18a7ecb0f57486b5c941ceba270ba29a66dd1b04": "2025-12-06T21:22:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -44723,8 +44748,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4b21c54770>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1765034185.3413687
       },
       "warmup_done": false,
@@ -44734,39 +44759,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "6byftHi3yrl0baF5",
+          "value": "ukxdg95mOIDMZb3H",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765035434
+          "expires": 1765046552
         },
         {
           "name": "__ddg10_",
-          "value": "1765034234",
+          "value": "1765045352",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765035434
+          "expires": 1765046552
         },
         {
           "name": "__ddg9_",
-          "value": "172.184.210.208",
+          "value": "135.232.200.209",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765035434
-        },
-        {
-          "name": "__ddg1_",
-          "value": "NEG2xSsIjJKxxXEFV2qP",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1796570234
+          "expires": 1765046552
         },
         {
           "name": "PHPSESSID",
-          "value": "9608164d0a312b8a55693551b4df505c",
+          "value": "79b35eeaa6ca14c361eb385178fe50cb",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -44793,11 +44810,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "kbfkZsN4wCeogWJIUWK71HlgSGVhYFKV",
+          "value": "ofB3NaQT38B9mYd0GUyz1l91m633wRci",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765013026
+          "expires": 1765056156
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -44805,12 +44822,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1796106226
+          "expires": 1796149356
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4b21c76490>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1765034267.0741055
       },
       "warmup_done": false,
@@ -58352,7 +58369,13 @@
     "https://rg.ru/2025/12/06/s-1-marta-2026-v-rf-ustanoviat-obiazatelnuiu-doliu-prodazh-cementa-na-birzhe-v-5.html": "https://rg.ru/2025/12/06/s-1-marta-2026-v-rf-ustanoviat-obiazatelnuiu-doliu-prodazh-cementa-na-birzhe-v-5.html",
     "https://www.gostinfo.ru/News/Details/2031": "https://www.gostinfo.ru/",
     "https://rg.ru/2025/12/06/dlitelnost-sverhurochnoj-raboty-rossiian-planiruiut-uvelichit-do-240-chasov.html": "https://rg.ru/2025/12/06/dlitelnost-sverhurochnoj-raboty-rossiian-planiruiut-uvelichit-do-240-chasov.html",
-    "https://rg.ru/2025/12/06/na-elbruse-povysiat-trebovaniia-k-instruktoram-pri-podemah-vyshe-4000-metrov.html": "https://rg.ru/2025/12/06/na-elbruse-povysiat-trebovaniia-k-instruktoram-pri-podemah-vyshe-4000-metrov.html"
+    "https://rg.ru/2025/12/06/na-elbruse-povysiat-trebovaniia-k-instruktoram-pri-podemah-vyshe-4000-metrov.html": "https://rg.ru/2025/12/06/na-elbruse-povysiat-trebovaniia-k-instruktoram-pri-podemah-vyshe-4000-metrov.html",
+    "http://government.ru/news/57223": "http://government.ru/news/57223",
+    "http://government.ru/news/57222": "http://government.ru/news/57222",
+    "https://rg.ru/2025/12/06/mer-chastnye-investicii-v-elbrus-prevysiat-35-mlrd-rublej-k-2030-godu.html": "https://rg.ru/2025/12/06/mer-chastnye-investicii-v-elbrus-prevysiat-35-mlrd-rublej-k-2030-godu.html",
+    "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html": "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html",
+    "https://rg.ru/2025/12/06/polina-lure-ne-otzovet-zhalobu-iz-vs-posle-obeshchanij-larisy-dolinoj.html": "https://rg.ru/2025/12/06/polina-lure-ne-otzovet-zhalobu-iz-vs-posle-obeshchanij-larisy-dolinoj.html",
+    "https://rg.ru/2025/12/06/husnullin-poruchil-operativno-reshit-vopros-s-teplosnabzheniem-severodonecka.html": "https://rg.ru/2025/12/06/husnullin-poruchil-operativno-reshit-vopros-s-teplosnabzheniem-severodonecka.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -69624,7 +69647,13 @@
     "8c05c7eef298f0f771d5f3e54afe6ce13f0d7c9b": "https://rg.ru/2025/12/06/s-1-marta-2026-v-rf-ustanoviat-obiazatelnuiu-doliu-prodazh-cementa-na-birzhe-v-5.html",
     "03adc6781b8e9074703b56f92ba69f79aa20a84f": "https://www.gostinfo.ru/",
     "aa22a8e09edefb15a11f03b65706664eaf619afd": "https://rg.ru/2025/12/06/dlitelnost-sverhurochnoj-raboty-rossiian-planiruiut-uvelichit-do-240-chasov.html",
-    "f4c6b769a8bcddab5ee4826a6c060c14574b42f6": "https://rg.ru/2025/12/06/na-elbruse-povysiat-trebovaniia-k-instruktoram-pri-podemah-vyshe-4000-metrov.html"
+    "f4c6b769a8bcddab5ee4826a6c060c14574b42f6": "https://rg.ru/2025/12/06/na-elbruse-povysiat-trebovaniia-k-instruktoram-pri-podemah-vyshe-4000-metrov.html",
+    "600ea02acd9187ae4a2bac0c985938555b4c8539": "http://government.ru/news/57223",
+    "0bd02071cd83be5732c6bc52df85b8e40126f2a1": "http://government.ru/news/57222",
+    "8d905a20688839d9a0fef4488590e11644a72229": "https://rg.ru/2025/12/06/mer-chastnye-investicii-v-elbrus-prevysiat-35-mlrd-rublej-k-2030-godu.html",
+    "731ccd5fee58e9540fe9adb37f5ce292fff16181": "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html",
+    "f3b14c52c3822f98f476b92cd85e0f8e74465ef0": "https://rg.ru/2025/12/06/polina-lure-ne-otzovet-zhalobu-iz-vs-posle-obeshchanij-larisy-dolinoj.html",
+    "b0676d6964c634446875bd5afe2f180ec3b25a83": "https://rg.ru/2025/12/06/husnullin-poruchil-operativno-reshit-vopros-s-teplosnabzheniem-severodonecka.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -84755,6 +84784,14 @@
     "https://rg.ru/2025/12/06/s-1-marta-2026-v-rf-ustanoviat-obiazatelnuiu-doliu-prodazh-cementa-na-birzhe-v-5.html": "0a6ec92ef5ab6c3c201a80009976371e30715944a506434baaebf8bae8498c90",
     "https://www.gostinfo.ru/News/Details/2031": "0969b263d992291fa853dbfc604517fbdead07e1e3d32dbf0ae9ef701a59bf5d",
     "https://rg.ru/2025/12/06/dlitelnost-sverhurochnoj-raboty-rossiian-planiruiut-uvelichit-do-240-chasov.html": "6796f2606682d15f1fd22743ef241f7e069aca2716d645bd1cbdca1db50e4560",
-    "https://rg.ru/2025/12/06/na-elbruse-povysiat-trebovaniia-k-instruktoram-pri-podemah-vyshe-4000-metrov.html": "d67f4570bf013fd6bf59769f56eb0c9d2c8ee68e2c53967ca91fa63d61a5563d"
+    "https://rg.ru/2025/12/06/na-elbruse-povysiat-trebovaniia-k-instruktoram-pri-podemah-vyshe-4000-metrov.html": "d67f4570bf013fd6bf59769f56eb0c9d2c8ee68e2c53967ca91fa63d61a5563d",
+    "http://government.ru/news/57223": "b7cd4d146416fa8dc496e9bcacf54a2ed5f5f3ee0fd31d5206b5c7b4b35fca31",
+    "http://government.ru/news/57223/": "b7cd4d146416fa8dc496e9bcacf54a2ed5f5f3ee0fd31d5206b5c7b4b35fca31",
+    "http://government.ru/news/57222": "0eef72ec9ad0c7548429f5ea83ecc0847d1518716a8c3d4c7070b9e7e8f90c93",
+    "http://government.ru/news/57222/": "0eef72ec9ad0c7548429f5ea83ecc0847d1518716a8c3d4c7070b9e7e8f90c93",
+    "https://rg.ru/2025/12/06/mer-chastnye-investicii-v-elbrus-prevysiat-35-mlrd-rublej-k-2030-godu.html": "f9fe194281b79aa91653d719360b885901bb630715d5bd7abe54405e272ed760",
+    "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html": "fb1abe36b9b2e8207e595b46efa754e85a96d4d2115dc315156b1dd269dae8dc",
+    "https://rg.ru/2025/12/06/polina-lure-ne-otzovet-zhalobu-iz-vs-posle-obeshchanij-larisy-dolinoj.html": "ee0175816c5579ca1b448c6ee759c14ee63cc53690353a1b0aab3060bd122809",
+    "https://rg.ru/2025/12/06/husnullin-poruchil-operativno-reshit-vopros-s-teplosnabzheniem-severodonecka.html": "724051d8350e3c5e70f4507c18a7ecb0f57486b5c941ceba270ba29a66dd1b04"
   }
 }
