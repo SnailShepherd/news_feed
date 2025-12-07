@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 07 Dec 2025 01:25:09 GMT"
+      "Last-Modified": "Sun, 07 Dec 2025 03:57:33 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d71c-xG1K58Eeft4RyHDjxphYaahHBas\""
+      "ETag": "W/\"1d941-nCep3g78La9KhXaVmFzMumgSFVc\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"ks4d0xwahq3n69\""
+      "ETag": "\"jhm7y5n58r3nn4\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -26705,6 +26705,15 @@
     },
     "https://rg.ru/2025/12/07/deputat-govyrin-socialnye-pensii-proindeksiruiut-na-68-procenta-s-1-aprelia.html": {
       "ETag": "\"1kdi9x66vn1pb2\""
+    },
+    "https://rg.ru/2025/12/07/byl-tolko-mig.html": {
+      "ETag": "\"v92ijvq55y2362\""
+    },
+    "https://rg.ru/2025/12/07/analitik-abelev-posovetoval-rossiianam-imet-pri-sebe-5-7-tysiach-rublej-nalichnymi.html": {
+      "ETag": "\"doc3cv66o21p2g\""
+    },
+    "https://rg.ru/2025/12/07/tass-v-rf-v-2027-godu-sokratiat-spisok-nezhenskih-professij.html": {
+      "ETag": "\"dg3h65qepe1q5m\""
     }
   },
   "stats": {
@@ -33322,9 +33331,19 @@
         "source": "Стройгаз.ру",
         "url": "https://stroygaz.ru/news/",
         "error": "retry exhausted -> used cache + cooldown 6h: HTTPSConnectionPool(host='stroygaz.ru', port=443): Max retries exceeded with url: /news/ (Caused by ResponseError('too many 502 error responses'))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Стройгаз.ру",
+        "url": "https://stroygaz.ru/news/",
+        "error": "cooldown active until 2025-12-07T07:26:11.780464+00:00 -> used cache"
       }
     ],
-    "last_run": "2025-12-07T01:26:15.738471+00:00",
+    "last_run": "2025-12-07T03:57:04.560672+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -33337,56 +33356,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 134.45458900000062,
-        "connect_ms": 850.5169729999977,
-        "response_ms": 984.9715619999984,
+        "dns_ms": 4062.2955719999823,
+        "connect_ms": 0.0,
+        "response_ms": 984.7873660000346,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff26b2e39b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 147.3082439999871,
+        "connect_ms": 860.699134000015,
+        "response_ms": 1008.0073780000021,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 676.951291000023,
-        "connect_ms": 90.46900799998525,
-        "response_ms": 767.4202990000083,
+        "dns_ms": 1464.6844370000167,
+        "connect_ms": 0.0,
+        "response_ms": 450.09812300003205,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff26a290b90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 148.42444600003546,
+        "connect_ms": 445.0843259999715,
+        "response_ms": 593.508772000007,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "3216eccdf1afdf6889476a116505aa1a3620f1047f510b577bdc976e4a40fa36",
+    "https://ardexpert.ru/article": "b06e627fba5b2159dc8182cd785bcb4ba9e2f28ce687fbb7e3cc8502e692ce73",
     "https://www.gostinfo.ru/News/List": "bc94ce188a22b43f6d64f4a215dee35ad4498c73c262dce79757713e99c1c23a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "fe3415739314a264ae4b45f1fc78619d59f19b68929f6c4ab6d50b71a80d77b1",
-    "https://eec.eaeunion.org/news/": "74a1a79d829f46df4ae95e7ca9f0c70566d8d5ad1683cff9332c883d0b47db5b",
+    "https://eec.eaeunion.org/news/": "fd14426993c62884ffd2a17918762d4a87717eabac259cd56583b0b780c51995",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "c9f1682260a9599c237a8539a776c8fa38a156cf46c43bb27da1adf29c5a52a6",
-    "https://www.metalinfo.ru/ru/news": "f78e1debf04688ac4042b9dde3cd675f528a2ab15e41f7ea3201d53bb165ba99",
-    "https://www.pnp.ru/economics/": "4d6b0d361ca3491c613c4da6a8cdd1ded1e448cc9a3c16421ba9b52d2e44192f",
-    "https://erzrf.ru/news/": "b95d7304142ded69490cda7ff4843783621432c43fb8fcf56864808498701f8f",
-    "https://ria-stk.ru/news/vse-novosti.php": "ab4d85d868a345d17f406269877d44f2dedeecbc8fbe5778c9ef2d0b9a84f910",
-    "http://government.ru/news/": "1212722b7496fe6a95093c5c9322a3a9ee3af6cb3643a5b3cc20a1ae407f3cb0",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "d39f8481f33555cf17b378c2388449fe8bac0ed8721d57e0e1a1e507b99b99a7",
+    "https://www.metalinfo.ru/ru/news": "30c93053ba0f6ff9e7a838923b6d796a76a70cf96161d48805faf6dbe61a4222",
+    "https://www.pnp.ru/economics/": "2506925264b27159d7403d00a09a584af9c0dacddf4a56ff757a2a6cea4b2044",
+    "https://erzrf.ru/news/": "2530f3181aa76e9a831b33504b62654c4af330cf21e08b064be045b71a4c44cd",
+    "https://ria-stk.ru/news/vse-novosti.php": "76f639d66e12e7348a63c22936e370b8539a568f555bf1ef247aceb8a236b2ff",
+    "http://government.ru/news/": "3a6f17d4aa0e333eac0091ee071bde9114aa937cb91c12aff3016e939e8d1b58",
     "https://stroygaz.ru/news/": "5ec86080c7aeaed895a86029406599aa568076a1116c0cf238461a0e58f0f6d2",
-    "https://realty.ria.ru/lenta/": "3ab169726fd110fc96916618db6bafe72c8ed1bdfcfb5ef48f2b7e8ed92de7a0",
-    "https://rg.ru/tema/ekonomika": "afbac93b08fc62f01ee7cc49b8121c04840973927b35bf5135f3ecc48b481e4c",
-    "http://ancb.ru/publication": "8fca39e4397d1c52401cf8b48d2e9dd4ccba575031c6ea2a42ef4ffd8c136a8b",
+    "https://realty.ria.ru/lenta/": "f4921a913e05214ba8e696b3065509d4a9d39274657f6c719c81103e893c5ea4",
+    "https://rg.ru/tema/ekonomika": "8cd67bf120e54ec31dd80a336126c4e2f3363478799ebc9f6dee2f98ae5fedef",
+    "http://ancb.ru/publication": "58391459b9bbab500aaea8b760dfb607671172a479c0ce9cedf4e01823089a59",
     "https://notim.ru": "64e3e9a8f163b90f99f13deec13162a74b67d45f89a161f3b172b9f03a502495",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -33693,6 +33712,9 @@
       "https://realty.ria.ru/20251205/rosreestr-2059854296.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/07/byl-tolko-mig.html",
+      "https://rg.ru/2025/12/07/analitik-abelev-posovetoval-rossiianam-imet-pri-sebe-5-7-tysiach-rublej-nalichnymi.html",
+      "https://rg.ru/2025/12/07/tass-v-rf-v-2027-godu-sokratiat-spisok-nezhenskih-professij.html",
       "https://rg.ru/2025/12/07/deputat-govyrin-socialnye-pensii-proindeksiruiut-na-68-procenta-s-1-aprelia.html",
       "https://rg.ru/2025/12/06/mer-chastnye-investicii-v-elbrus-prevysiat-35-mlrd-rublej-k-2030-godu.html",
       "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html",
@@ -33722,9 +33744,6 @@
       "https://rg.ru/2025/12/05/larisa-dolina-poobeshchala-vernut-vse-dengi-poline-lure.html",
       "https://rg.ru/2025/12/05/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-tambova.html",
       "https://rg.ru/2025/12/05/cb-prognoziruet-infliaciiu-po-itogam-goda-na-urovne-65-7.html",
-      "https://rg.ru/2025/12/05/vyzovom-2026-goda-na-rynke-truda-mozhet-stat-tihoe-uvolnenie-sotrudnikov.html",
-      "https://rg.ru/2025/12/05/obem-torgovli-s-indiej-budet-zaviset-ot-cen-i-diversifikacii-tovarooborota.html",
-      "https://rg.ru/2025/12/05/mintrans-vidit-potencial-rosta-gruzopotoka-po-mtk-sever-iug.html",
       "https://rg.ru/2025/12/04/professiia-mechty-nauchila-shkolnikov-rabotat-v-sfere-gostepriimstva.html",
       "https://rg.ru/2025/12/04/v-rossii-robotov-obuchaiut-gumanitarnomu-razminirovaniiu.html",
       "https://rg.ru/2025/12/03/kurort-sbera-mriia-v-2025-godu-zavoeval-dve-mezhdunarodnye-premii-v-sfere-gostepriimstva.html"
@@ -44760,7 +44779,10 @@
     "fb1abe36b9b2e8207e595b46efa754e85a96d4d2115dc315156b1dd269dae8dc": "2025-12-06T21:22:00+03:00",
     "ee0175816c5579ca1b448c6ee759c14ee63cc53690353a1b0aab3060bd122809": "2025-12-06T21:22:00+03:00",
     "724051d8350e3c5e70f4507c18a7ecb0f57486b5c941ceba270ba29a66dd1b04": "2025-12-06T21:22:00+03:00",
-    "bfe2fd45ceded2b6846826ab6e2169058175ad5eca2be27e60ecaa2149b71d25": "2025-12-07T04:26:00+03:00"
+    "bfe2fd45ceded2b6846826ab6e2169058175ad5eca2be27e60ecaa2149b71d25": "2025-12-07T04:26:00+03:00",
+    "e6d078b90ad2b8c02460faf078b6bba4180dd144a9035cf63f1b770c316994f4": "2025-12-07T06:57:00+03:00",
+    "4a45f0558f53c2ee647d018ca67f5d2c835cc948d9d9a2b4c03e1a5fd4b3d18c": "2025-12-07T06:57:00+03:00",
+    "691360dd615763c9623405baa345cd8d275cec0dfb3a36ad2a3f6cee7f93c086": "2025-12-07T06:57:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -44791,8 +44813,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff26b367950>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1765070628.8236232
       },
       "warmup_done": false,
@@ -44802,31 +44824,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "f2XdzSTx73XzgTGt",
+          "value": "8LpFW3Kn8Kyw04a5",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765071871
+          "expires": 1765081014
         },
         {
           "name": "__ddg10_",
-          "value": "1765070671",
+          "value": "1765079814",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765071871
+          "expires": 1765081014
         },
         {
           "name": "__ddg9_",
-          "value": "20.81.183.83",
+          "value": "172.203.38.240",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765071871
+          "expires": 1765081014
+        },
+        {
+          "name": "__ddg1_",
+          "value": "clDBW3InyQgcqPLdFRIE",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1796615814
         },
         {
           "name": "PHPSESSID",
-          "value": "3293bf83c7faa43dacb7d136cdf528b3",
+          "value": "89f98fa91c85a3f6a2ef6246795283f2",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -44853,11 +44883,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "ofB3NaQT38B9mYd0GUyz1l91m633wRci",
+          "value": "PEWqFF15g4WrYTbw3tYBv2OE5ryVmGe8",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765056156
+          "expires": 1765090616
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -44865,12 +44895,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1796149356
+          "expires": 1796183816
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff26a290910>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1765070707.214688
       },
       "warmup_done": false,
@@ -58419,7 +58449,10 @@
     "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html": "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html",
     "https://rg.ru/2025/12/06/polina-lure-ne-otzovet-zhalobu-iz-vs-posle-obeshchanij-larisy-dolinoj.html": "https://rg.ru/2025/12/06/polina-lure-ne-otzovet-zhalobu-iz-vs-posle-obeshchanij-larisy-dolinoj.html",
     "https://rg.ru/2025/12/06/husnullin-poruchil-operativno-reshit-vopros-s-teplosnabzheniem-severodonecka.html": "https://rg.ru/2025/12/06/husnullin-poruchil-operativno-reshit-vopros-s-teplosnabzheniem-severodonecka.html",
-    "https://rg.ru/2025/12/07/deputat-govyrin-socialnye-pensii-proindeksiruiut-na-68-procenta-s-1-aprelia.html": "https://rg.ru/2025/12/07/deputat-govyrin-socialnye-pensii-proindeksiruiut-na-68-procenta-s-1-aprelia.html"
+    "https://rg.ru/2025/12/07/deputat-govyrin-socialnye-pensii-proindeksiruiut-na-68-procenta-s-1-aprelia.html": "https://rg.ru/2025/12/07/deputat-govyrin-socialnye-pensii-proindeksiruiut-na-68-procenta-s-1-aprelia.html",
+    "https://rg.ru/2025/12/07/byl-tolko-mig.html": "https://rg.ru/2025/12/07/byl-tolko-mig.html",
+    "https://rg.ru/2025/12/07/analitik-abelev-posovetoval-rossiianam-imet-pri-sebe-5-7-tysiach-rublej-nalichnymi.html": "https://rg.ru/2025/12/07/analitik-abelev-posovetoval-rossiianam-imet-pri-sebe-5-7-tysiach-rublej-nalichnymi.html",
+    "https://rg.ru/2025/12/07/tass-v-rf-v-2027-godu-sokratiat-spisok-nezhenskih-professij.html": "https://rg.ru/2025/12/07/tass-v-rf-v-2027-godu-sokratiat-spisok-nezhenskih-professij.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -69698,7 +69731,10 @@
     "731ccd5fee58e9540fe9adb37f5ce292fff16181": "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html",
     "f3b14c52c3822f98f476b92cd85e0f8e74465ef0": "https://rg.ru/2025/12/06/polina-lure-ne-otzovet-zhalobu-iz-vs-posle-obeshchanij-larisy-dolinoj.html",
     "b0676d6964c634446875bd5afe2f180ec3b25a83": "https://rg.ru/2025/12/06/husnullin-poruchil-operativno-reshit-vopros-s-teplosnabzheniem-severodonecka.html",
-    "cf3658b7df841e1efbb7b8f7a1d1b766453d81d3": "https://rg.ru/2025/12/07/deputat-govyrin-socialnye-pensii-proindeksiruiut-na-68-procenta-s-1-aprelia.html"
+    "cf3658b7df841e1efbb7b8f7a1d1b766453d81d3": "https://rg.ru/2025/12/07/deputat-govyrin-socialnye-pensii-proindeksiruiut-na-68-procenta-s-1-aprelia.html",
+    "5a7480ae6573e3a3d70a90abd948f2a29278941d": "https://rg.ru/2025/12/07/byl-tolko-mig.html",
+    "91811067f80aeb4bdc97e4ef706c46b7372a70ab": "https://rg.ru/2025/12/07/analitik-abelev-posovetoval-rossiianam-imet-pri-sebe-5-7-tysiach-rublej-nalichnymi.html",
+    "c18f27556b63fa9f023fb5ea4ffbaa97f6a7ec82": "https://rg.ru/2025/12/07/tass-v-rf-v-2027-godu-sokratiat-spisok-nezhenskih-professij.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -84838,6 +84874,9 @@
     "https://rg.ru/2025/12/06/reg-zaporozhskaya/magate-vneshnee-pitanie-zaes-bylo-prervano-v-11-yj-raz.html": "fb1abe36b9b2e8207e595b46efa754e85a96d4d2115dc315156b1dd269dae8dc",
     "https://rg.ru/2025/12/06/polina-lure-ne-otzovet-zhalobu-iz-vs-posle-obeshchanij-larisy-dolinoj.html": "ee0175816c5579ca1b448c6ee759c14ee63cc53690353a1b0aab3060bd122809",
     "https://rg.ru/2025/12/06/husnullin-poruchil-operativno-reshit-vopros-s-teplosnabzheniem-severodonecka.html": "724051d8350e3c5e70f4507c18a7ecb0f57486b5c941ceba270ba29a66dd1b04",
-    "https://rg.ru/2025/12/07/deputat-govyrin-socialnye-pensii-proindeksiruiut-na-68-procenta-s-1-aprelia.html": "bfe2fd45ceded2b6846826ab6e2169058175ad5eca2be27e60ecaa2149b71d25"
+    "https://rg.ru/2025/12/07/deputat-govyrin-socialnye-pensii-proindeksiruiut-na-68-procenta-s-1-aprelia.html": "bfe2fd45ceded2b6846826ab6e2169058175ad5eca2be27e60ecaa2149b71d25",
+    "https://rg.ru/2025/12/07/byl-tolko-mig.html": "e6d078b90ad2b8c02460faf078b6bba4180dd144a9035cf63f1b770c316994f4",
+    "https://rg.ru/2025/12/07/analitik-abelev-posovetoval-rossiianam-imet-pri-sebe-5-7-tysiach-rublej-nalichnymi.html": "4a45f0558f53c2ee647d018ca67f5d2c835cc948d9d9a2b4c03e1a5fd4b3d18c",
+    "https://rg.ru/2025/12/07/tass-v-rf-v-2027-godu-sokratiat-spisok-nezhenskih-professij.html": "691360dd615763c9623405baa345cd8d275cec0dfb3a36ad2a3f6cee7f93c086"
   }
 }
