@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 07 Dec 2025 09:18:53 GMT"
+      "Last-Modified": "Sun, 07 Dec 2025 12:31:28 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d71c-yCa5gr/WemynS8nTmjd1XgM6yb0\""
+      "ETag": "W/\"1da4a-edUoaEiFohenOwRETTh4Iu0yiRs\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"z1ognwg2jv3q3t\""
+      "ETag": "\"tizo6pa1ti3rze\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -26746,6 +26746,15 @@
     },
     "https://rg.ru/2025/12/07/op-dlinnye-prazdniki-v-rossii-ne-dolzhny-preryvatsia-rabochimi-budniami.html": {
       "ETag": "\"p2iy62xhj21o1c\""
+    },
+    "https://rg.ru/2025/12/07/s-novogo-goda-vyrastut-mrot-pensii-i-socialnye-vyplaty.html": {
+      "ETag": "\"13n0zaptq3234x\""
+    },
+    "https://rg.ru/2025/12/07/rossiianam-rasskazali-kto-mozhet-vyjti-na-pensiiu-ranshe-obychnogo-sroka.html": {
+      "ETag": "\"13t5wgux3nx1rrm\""
+    },
+    "https://rg.ru/2025/12/07/kak-otlichit-nastoiashchego-sotrudnika-gazovoj-sluzhby-ot-samozvanca.html": {
+      "ETag": "\"zod3c8a03m1ogs\""
     }
   },
   "stats": {
@@ -33417,9 +33426,19 @@
         "source": "Стройгаз.ру",
         "url": "https://stroygaz.ru/news/",
         "error": "retry exhausted -> used cache + cooldown 6h: HTTPSConnectionPool(host='stroygaz.ru', port=443): Max retries exceeded with url: /news/ (Caused by ResponseError('too many 502 error responses'))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Стройгаз.ру",
+        "url": "https://stroygaz.ru/news/",
+        "error": "cooldown active until 2025-12-07T15:19:56.489407+00:00 -> used cache"
       }
     ],
-    "last_run": "2025-12-07T09:20:05.176601+00:00",
+    "last_run": "2025-12-07T12:31:03.273635+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -33432,56 +33451,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 399.1366669999934,
-        "connect_ms": 552.2576930000014,
-        "response_ms": 951.3943599999948,
+        "dns_ms": 263.60306999998784,
+        "connect_ms": 1344.7073049999858,
+        "response_ms": 1608.3103749999736,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f30fd379010>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 141.24076300004162,
+        "connect_ms": 865.9621429999333,
+        "response_ms": 1007.202905999975,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 429.34400499999015,
-        "connect_ms": 343.04911199998855,
-        "response_ms": 772.3931169999787,
+        "dns_ms": 7212.500089000059,
+        "connect_ms": 0.0,
+        "response_ms": 587.6052240000718,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f30fd222490>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 258.37138700001105,
+        "connect_ms": 318.32561499993517,
+        "response_ms": 576.6970019999462,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "e9bcdd17343ce5e1e9678955724adaa2aec1b0bdee25824cab1b05690f8c8f0c",
+    "https://ardexpert.ru/article": "d2166ada8e2287eb614e0ba4cb2fe7a8d30f830c7b42f942780de84ac0a19605",
     "https://www.gostinfo.ru/News/List": "bc94ce188a22b43f6d64f4a215dee35ad4498c73c262dce79757713e99c1c23a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "fe3415739314a264ae4b45f1fc78619d59f19b68929f6c4ab6d50b71a80d77b1",
-    "https://eec.eaeunion.org/news/": "079c481b4d6744b9a365d04002c4928cd2b1a6879ea2aee85a81c58da3b51428",
+    "https://eec.eaeunion.org/news/": "01a004eea12df374b8014aaf7c4977e7b525bb1fea82905b7e3760d491c4ced4",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "39aea179831037e7486f353e7f708bb628d1b9300ded3c69a454cd0808377015",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "1cb370099df35da92581aa8989e74587384dbca7541c015c646ba4b6ee464295",
     "https://www.metalinfo.ru/ru/news": "f78e1debf04688ac4042b9dde3cd675f528a2ab15e41f7ea3201d53bb165ba99",
-    "https://www.pnp.ru/economics/": "ffd23b22462f3381d018f19bc58728dbe74bbaa364106c19fe8ab7e4c2442f1c",
-    "https://erzrf.ru/news/": "71b4ab64aea6ea24d266097e6501a4d80902c6089f8c418d7bd40cdffdb4b4cd",
-    "https://ria-stk.ru/news/vse-novosti.php": "6a8e16102b35a1e45395d6badc9ded39fa524f0935994e9feb39db414a367d41",
-    "http://government.ru/news/": "487323833ea18ea63a866cd30034645e2a7d5deddf412ee9ca899b6a8c07e6a6",
+    "https://www.pnp.ru/economics/": "c290a3388b2f9a2847e1d7663fdb6cfb1618e1311e91d5621277ed89298465b4",
+    "https://erzrf.ru/news/": "8ffcba8bdac2889001629b65313d5653aa4128420d75db1c9d439b5ea0b334f6",
+    "https://ria-stk.ru/news/vse-novosti.php": "0aa86ac29fc656c0645e9fd77c49b522c5425310be7e69aa40f71c5c0889f10b",
+    "http://government.ru/news/": "3e5458f734b2d6b624b3079b0e2e0611220b0e355f97a4fb9e83fec60a85c9c3",
     "https://stroygaz.ru/news/": "5ec86080c7aeaed895a86029406599aa568076a1116c0cf238461a0e58f0f6d2",
-    "https://realty.ria.ru/lenta/": "cfe1a42e1abd456d8a5d2e91ff7752c16759480c2d3ae7e80caf437ea91fecb4",
-    "https://rg.ru/tema/ekonomika": "184a7f78061e0b37337c62a08c180ee42b3a164ab32b1fa5da98818c92c13ef3",
-    "http://ancb.ru/publication": "8fca39e4397d1c52401cf8b48d2e9dd4ccba575031c6ea2a42ef4ffd8c136a8b",
+    "https://realty.ria.ru/lenta/": "db1caa4395a8f60ff796bbbf74f57fb935300d5f20265296711930c921aaba2b",
+    "https://rg.ru/tema/ekonomika": "423185bc5e5e6a5d32fcd7b00c6f316f6e3480cc8dca0fac47d9d37991b41ffa",
+    "http://ancb.ru/publication": "58391459b9bbab500aaea8b760dfb607671172a479c0ce9cedf4e01823089a59",
     "https://notim.ru": "64e3e9a8f163b90f99f13deec13162a74b67d45f89a161f3b172b9f03a502495",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -33788,6 +33807,9 @@
       "https://realty.ria.ru/20251205/rosreestr-2059854296.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/07/s-novogo-goda-vyrastut-mrot-pensii-i-socialnye-vyplaty.html",
+      "https://rg.ru/2025/12/07/rossiianam-rasskazali-kto-mozhet-vyjti-na-pensiiu-ranshe-obychnogo-sroka.html",
+      "https://rg.ru/2025/12/07/kak-otlichit-nastoiashchego-sotrudnika-gazovoj-sluzhby-ot-samozvanca.html",
       "https://rg.ru/2025/12/07/gosduma-otkazalas-ot-idei-zapreshchat-bankam-vladet-marketplejsami.html",
       "https://rg.ru/2025/12/07/s-1-ianvaria-v-rossii-zarabotaet-obnovlennyj-perechen-professij.html",
       "https://rg.ru/2025/12/07/reg-ufo/gornolyzhnyj-sezon-v-sochi-otkroetsia-19-dekabria.html",
@@ -33817,9 +33839,6 @@
       "https://rg.ru/2025/12/06/s-1-marta-2026-v-rf-ustanoviat-obiazatelnuiu-doliu-prodazh-cementa-na-birzhe-v-5.html",
       "https://rg.ru/2025/12/06/v-cb-prognoziruiut-rost-vvp-v-2026-godu-v-05-15.html",
       "https://rg.ru/2025/12/06/deputat-kolunov-gazovshchikam-mogut-razreshit-besprepiatstvenno-zahodit-v-kvartiry.html",
-      "https://rg.ru/2025/12/06/v-rospotrebnadzore-rekomendovali-ne-pokupat-krasnuiu-ikru-s-konservantom-e-239.html",
-      "https://rg.ru/2025/12/06/reg-ufo/v-volgograde-na-vyhodnyh-zavershitsia-rabota-rechnyh-tramvaev.html",
-      "https://rg.ru/2025/12/06/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-8-po-14-dekabria.html",
       "https://rg.ru/2025/12/04/professiia-mechty-nauchila-shkolnikov-rabotat-v-sfere-gostepriimstva.html",
       "https://rg.ru/2025/12/04/v-rossii-robotov-obuchaiut-gumanitarnomu-razminirovaniiu.html",
       "https://rg.ru/2025/12/03/kurort-sbera-mriia-v-2025-godu-zavoeval-dve-mezhdunarodnye-premii-v-sfere-gostepriimstva.html"
@@ -44871,7 +44890,10 @@
     "d3007fac25eb6771386f668edcc3bf1008aedb61c64cb7710609a0f1b900eec8": "2025-12-07T12:19:00+03:00",
     "03d934eccd78583f8bf0a30251a62329182235af23aa3f246d8b92b780c53dae": "2025-12-07T12:20:00+03:00",
     "50d0db907a7348e0235ebe5b39d5cf6ca813f7eef9dc3c6befd5e388cee12e4f": "2025-12-07T12:20:00+03:00",
-    "b2c4820787394b300893266a8d933fe9f6efaac7343f158ff162699d5e3a1c20": "2025-12-07T12:20:00+03:00"
+    "b2c4820787394b300893266a8d933fe9f6efaac7343f158ff162699d5e3a1c20": "2025-12-07T12:20:00+03:00",
+    "ca68c9d6e79c58d0d0142054773c9ee5cdb7c5603d8d2a05484241d368a51995": "2025-12-07T15:30:00+03:00",
+    "e81d8551881cac5e4d362017a7bef8d2c04ee44ae302094522df29d53a817d52": "2025-12-07T15:31:00+03:00",
+    "18606fc53245c96dd4a38f3e8b81b4bacff2a8237fc15e2f0cab0559ffcdf14d": "2025-12-07T15:31:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -44902,8 +44924,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f30fd398050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1765099053.928454
       },
       "warmup_done": false,
@@ -44913,39 +44935,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "gvc2zYBmCYaJkk8K",
+          "value": "Rn5lc4nzyqKl6JTU",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765100294
+          "expires": 1765111850
         },
         {
           "name": "__ddg10_",
-          "value": "1765099094",
+          "value": "1765110650",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765100294
+          "expires": 1765111850
         },
         {
           "name": "__ddg9_",
-          "value": "20.97.198.244",
+          "value": "145.132.100.83",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765100294
-        },
-        {
-          "name": "__ddg1_",
-          "value": "xP3NNSGyLzwpiJQEUxJu",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1796635094
+          "expires": 1765111850
         },
         {
           "name": "PHPSESSID",
-          "value": "7817c176a0fc22d4f0b8ee8b5d1f7ead",
+          "value": "e155eebd6581453e38d046b62d54cca9",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -44972,11 +44986,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "PEWqFF15g4WrYTbw3tYBv2OE5ryVmGe8",
+          "value": "ZvlDJP6PDHTI3EuZz78xYsMbB2ppt2Nb",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765090616
+          "expires": 1765121453
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -44984,12 +44998,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1796183816
+          "expires": 1796214653
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f30fd222210>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1765099127.458257
       },
       "warmup_done": false,
@@ -58554,7 +58568,10 @@
     "https://rg.ru/2025/12/07/gosduma-otkazalas-ot-idei-zapreshchat-bankam-vladet-marketplejsami.html": "https://rg.ru/2025/12/07/gosduma-otkazalas-ot-idei-zapreshchat-bankam-vladet-marketplejsami.html",
     "https://rg.ru/2025/12/07/s-1-ianvaria-v-rossii-zarabotaet-obnovlennyj-perechen-professij.html": "https://rg.ru/2025/12/07/s-1-ianvaria-v-rossii-zarabotaet-obnovlennyj-perechen-professij.html",
     "https://rg.ru/2025/12/07/reg-ufo/gornolyzhnyj-sezon-v-sochi-otkroetsia-19-dekabria.html": "https://rg.ru/2025/12/07/reg-ufo/gornolyzhnyj-sezon-v-sochi-otkroetsia-19-dekabria.html",
-    "https://rg.ru/2025/12/07/op-dlinnye-prazdniki-v-rossii-ne-dolzhny-preryvatsia-rabochimi-budniami.html": "https://rg.ru/2025/12/07/op-dlinnye-prazdniki-v-rossii-ne-dolzhny-preryvatsia-rabochimi-budniami.html"
+    "https://rg.ru/2025/12/07/op-dlinnye-prazdniki-v-rossii-ne-dolzhny-preryvatsia-rabochimi-budniami.html": "https://rg.ru/2025/12/07/op-dlinnye-prazdniki-v-rossii-ne-dolzhny-preryvatsia-rabochimi-budniami.html",
+    "https://rg.ru/2025/12/07/s-novogo-goda-vyrastut-mrot-pensii-i-socialnye-vyplaty.html": "https://rg.ru/2025/12/07/s-novogo-goda-vyrastut-mrot-pensii-i-socialnye-vyplaty.html",
+    "https://rg.ru/2025/12/07/rossiianam-rasskazali-kto-mozhet-vyjti-na-pensiiu-ranshe-obychnogo-sroka.html": "https://rg.ru/2025/12/07/rossiianam-rasskazali-kto-mozhet-vyjti-na-pensiiu-ranshe-obychnogo-sroka.html",
+    "https://rg.ru/2025/12/07/kak-otlichit-nastoiashchego-sotrudnika-gazovoj-sluzhby-ot-samozvanca.html": "https://rg.ru/2025/12/07/kak-otlichit-nastoiashchego-sotrudnika-gazovoj-sluzhby-ot-samozvanca.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -69849,7 +69866,10 @@
     "229b1931294ad3342c5e610a15f65ab088db17df": "https://rg.ru/2025/12/07/gosduma-otkazalas-ot-idei-zapreshchat-bankam-vladet-marketplejsami.html",
     "5f7e655c1cfc4dd322ade8020af7eb929001b323": "https://rg.ru/2025/12/07/s-1-ianvaria-v-rossii-zarabotaet-obnovlennyj-perechen-professij.html",
     "28b8fa0089d27c1a3800df936db1b1b70e9db651": "https://rg.ru/2025/12/07/reg-ufo/gornolyzhnyj-sezon-v-sochi-otkroetsia-19-dekabria.html",
-    "0374fbbc85a472dc8c72844ca43a7bb62983abfb": "https://rg.ru/2025/12/07/op-dlinnye-prazdniki-v-rossii-ne-dolzhny-preryvatsia-rabochimi-budniami.html"
+    "0374fbbc85a472dc8c72844ca43a7bb62983abfb": "https://rg.ru/2025/12/07/op-dlinnye-prazdniki-v-rossii-ne-dolzhny-preryvatsia-rabochimi-budniami.html",
+    "051a07ce6c6c93586c3c7692c75e10d68ef1d184": "https://rg.ru/2025/12/07/s-novogo-goda-vyrastut-mrot-pensii-i-socialnye-vyplaty.html",
+    "a302541942ca45558c8251433392ff67fb3e24d5": "https://rg.ru/2025/12/07/rossiianam-rasskazali-kto-mozhet-vyjti-na-pensiiu-ranshe-obychnogo-sroka.html",
+    "42e5c9b2a9ff088a0164ad0f2e34bd8658c9c28a": "https://rg.ru/2025/12/07/kak-otlichit-nastoiashchego-sotrudnika-gazovoj-sluzhby-ot-samozvanca.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -85007,6 +85027,9 @@
     "https://rg.ru/2025/12/07/gosduma-otkazalas-ot-idei-zapreshchat-bankam-vladet-marketplejsami.html": "d3007fac25eb6771386f668edcc3bf1008aedb61c64cb7710609a0f1b900eec8",
     "https://rg.ru/2025/12/07/s-1-ianvaria-v-rossii-zarabotaet-obnovlennyj-perechen-professij.html": "03d934eccd78583f8bf0a30251a62329182235af23aa3f246d8b92b780c53dae",
     "https://rg.ru/2025/12/07/reg-ufo/gornolyzhnyj-sezon-v-sochi-otkroetsia-19-dekabria.html": "50d0db907a7348e0235ebe5b39d5cf6ca813f7eef9dc3c6befd5e388cee12e4f",
-    "https://rg.ru/2025/12/07/op-dlinnye-prazdniki-v-rossii-ne-dolzhny-preryvatsia-rabochimi-budniami.html": "b2c4820787394b300893266a8d933fe9f6efaac7343f158ff162699d5e3a1c20"
+    "https://rg.ru/2025/12/07/op-dlinnye-prazdniki-v-rossii-ne-dolzhny-preryvatsia-rabochimi-budniami.html": "b2c4820787394b300893266a8d933fe9f6efaac7343f158ff162699d5e3a1c20",
+    "https://rg.ru/2025/12/07/s-novogo-goda-vyrastut-mrot-pensii-i-socialnye-vyplaty.html": "ca68c9d6e79c58d0d0142054773c9ee5cdb7c5603d8d2a05484241d368a51995",
+    "https://rg.ru/2025/12/07/rossiianam-rasskazali-kto-mozhet-vyjti-na-pensiiu-ranshe-obychnogo-sroka.html": "e81d8551881cac5e4d362017a7bef8d2c04ee44ae302094522df29d53a817d52",
+    "https://rg.ru/2025/12/07/kak-otlichit-nastoiashchego-sotrudnika-gazovoj-sluzhby-ot-samozvanca.html": "18606fc53245c96dd4a38f3e8b81b4bacff2a8237fc15e2f0cab0559ffcdf14d"
   }
 }
