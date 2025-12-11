@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 11 Dec 2025 18:27:32 GMT"
+      "Last-Modified": "Thu, 11 Dec 2025 21:21:16 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d956-f3HtpLxo7qgw2rv3aCk3CUOkCgw\""
+      "ETag": "W/\"1d897-roWGajL3z+QfjJkkqK1km4cNLEA\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"khkdjknoyf3gkl\""
+      "ETag": "\"c6844ixkz23j5b\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -28606,6 +28606,12 @@
     "https://rg.ru/amp/2025/12/11/reg-pfo/aeroport-cheboksar-priostanovil-priem-i-vypusk-samoletov.html": {},
     "https://rg.ru/2025/12/11/cb-povysil-kurs-dollara-na-12-dekabria-bolee-chem-na-rubl.html": {
       "ETag": "\"yj74pv7ez71nx2\""
+    },
+    "https://rg.ru/2025/12/12/sem-regionov-rossii-gotoviatsia-k-vypusku-narodnyh-obligacij-v-2026-godu.html": {
+      "ETag": "\"6cwss42n2l1t7j\""
+    },
+    "https://rg.ru/2025/12/12/reg-cfo/nomernoj-uhodit-v-noch.html": {
+      "ETag": "\"ptkl0hjhxj1ylq\""
     }
   },
   "stats": {
@@ -35765,9 +35771,26 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd149082710>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd149081d10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd149081310>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd1490811d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd1490816d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f06bb974980>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f06bb962710>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f06bb9625d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f06bc913360>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f06bc913a80>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f06bc8ffad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f06bb963d90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f06bb9639d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f06bb963750>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f06bb962fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f06bb962e90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-12-11T18:28:52.499499+00:00",
+    "last_run": "2025-12-11T21:21:35.733869+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -35780,9 +35803,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 758.9689600000042,
-        "connect_ms": 640.6611669999904,
-        "response_ms": 1399.6301269999947,
+        "dns_ms": 270.3985120000425,
+        "connect_ms": 597.4528790000022,
+        "response_ms": 867.8513910000447,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -35793,12 +35816,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd14a033ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f06bc8ffad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 9481.363541000008,
-        "connect_ms": 0.0,
-        "response_ms": 2421.3296979999654,
+        "dns_ms": 417.371585000069,
+        "connect_ms": 335.232478999842,
+        "response_ms": 752.604063999911,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -35809,26 +35832,26 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd1490816d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f06bb962e90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "73bb5e93e377b7b17bae10c892b7a5c879eb0941001e16ec2d12a997af313958",
+    "https://ardexpert.ru/article": "88d5e91b358edf7f7a3cf028a7ef765837f04d95f3750be993e3fc30a45112e3",
     "https://www.gostinfo.ru/News/List": "d8b7807b07d63bdba76ebe2cac9d30b0262732cfcdd973ffab871fa74d3c65d6",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "183fca216c173aefc589aedd1ab8af8a68ffeaef6bef249ca8ddda5f14d21ed1",
-    "https://eec.eaeunion.org/news/": "1bd217dd9f7c6dee77e37a7ab907d2ec9b2c8176dbf1d409c026a3465a026777",
+    "https://eec.eaeunion.org/news/": "dddef4bf16aa43ef82ecd954e950a8b006ff1e4a459f8f6abf091ce8e012e85b",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "a8318ab09812177dd3d778997b94eb36c9f85796e37dd6aaf75165341996367b",
-    "https://www.metalinfo.ru/ru/news": "4d05a7cb330203f954279aeac52eb9428a59e6c40be0cc95480c886f69ab9b3d",
-    "https://www.pnp.ru/economics/": "e56f9679991b61e09f13280f56b4552571b45e70dd8156b9742f9f816f300442",
-    "https://erzrf.ru/news/": "c3b96e6fd598b3813d6a0fdc3013f276ec5346c7a7e826f93cd59e61f7b113f3",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "cc900fd174d0537e14a80a3c7d59868d39cdb6ce6d728520305f8f44fe078e0c",
+    "https://www.metalinfo.ru/ru/news": "2382156adffcae207437285dfb9a4c6edef01227b63f1c9513de82ff36498fcd",
+    "https://www.pnp.ru/economics/": "8844a6cc5f889d9740ae5ee20a4fe68fc922e29cf27a08c30cde1173b78eb494",
+    "https://erzrf.ru/news/": "6476792ea2030077fc68457f758c5b9368544d07a5a58cad4e9fa23955c0cd9f",
     "https://ria-stk.ru/news/vse-novosti.php": "41aa19a6baa0bb0e84a80c4e7240f17d04b68dd740ea170b546a1a3e48a93956",
-    "http://government.ru/news/": "072274ec0b1366f5f5d6176e7d9cb4d5fb02e94acf1c1cdf66aea23829815041",
-    "https://stroygaz.ru/news/": "cb79921b30c19e8e3aef33441d0b71ba282339acf4d9962013b45f1aea1aa5fb",
-    "https://realty.ria.ru/lenta/": "a26180cc1c384e324fbf99b85dc726d664959a202a408f58616f54c68f84abb4",
-    "https://rg.ru/tema/ekonomika": "84fa8e29105cf0c8aec0cdd4a23594d6c0ea439964c6b4d6ef2097e13e58b101",
+    "http://government.ru/news/": "150def10d67bdb56117e39e65218103f6592de62b07823735fe92b6d15a81615",
+    "https://stroygaz.ru/news/": "8a45cc5bda6e327d05607d80d3c47c3b4eeca8595d1d65077ae4cfc1e3a06dc0",
+    "https://realty.ria.ru/lenta/": "baa1c26b2d74146521b6795bba0eee0dfa6103f62f49927984254986f3601e63",
+    "https://rg.ru/tema/ekonomika": "6df83954ed9792f4a6d8786bf1e53c8453ff0385ed958d9218e84c68565bdf39",
     "http://ancb.ru/publication": "fa85741587aa2e17d3684579fb183336fad3dc3c0f77b48fc731bddb47076a11",
     "https://notim.ru": "4fc3cacc40045ec54274ffcc2c34de042ee9d849b6d735a2a7165e91616286df",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -36133,6 +36156,8 @@
       "https://realty.ria.ru/20251210/kapremont-2061147592.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/12/sem-regionov-rossii-gotoviatsia-k-vypusku-narodnyh-obligacij-v-2026-godu.html",
+      "https://rg.ru/2025/12/12/reg-cfo/nomernoj-uhodit-v-noch.html",
       "https://rg.ru/2025/12/11/rossijskij-rynok-lizinga-upal-na-38-procentov-chast-kompanij-zakrylas.html",
       "https://rg.ru/2025/12/11/ne-derzhat-bank.html",
       "https://rg.ru/2025/12/11/milliard-za-chistuiu-komnatu.html",
@@ -36163,8 +36188,6 @@
       "https://rg.ru/2025/12/11/rossiian-predupredili-o-roste-cen-na-pirotehniku-pered-novym-godom.html",
       "https://rg.ru/2025/12/11/reg-cfo/v-moskve-zavershilas-rabota-shkoly-gorodskoj-ekonomiki.html",
       "https://rg.ru/2025/12/11/putin-rasskazal-kakie-vyplaty-i-pensii-zhdut-rossiian-v-2026-godu.html",
-      "https://rg.ru/2025/12/11/kvartiru-larisy-dolinoj-pomog-prodat-ekspert-po-borbe-s-moshennikami.html",
-      "https://rg.ru/2025/12/11/na-novyj-god-zabronirovany-70-domov-sdaiushchihsia-v-arendu.html",
       "https://rg.ru/2025/12/08/rossijskij-prodiuserskij-centr-budet-sotrudnichat-s-indiej-v-proizvodstve-kontenta.html",
       "https://rg.ru/2025/12/08/v-tiumeni-obsudili-razvitie-predprinimatelskogo-obrazovaniia.html",
       "https://rg.ru/2025/12/08/morozko-novogodnij-spektakl-mif-dlia-teh-kto-ustal-ot-shumnyh-yolok-blokbasterov.html"
@@ -48052,7 +48075,9 @@
     "14437c3a9a0d7196bb5e46ad526bc87f6cb57e925bd396cb88868a2ec1164d5c": "2025-12-11T21:28:00+03:00",
     "d04efb19114f39e3fef20ec9f409f6324283640e69fbc08c7f4e1b1a3a81a32c": "2025-12-11T21:28:00+03:00",
     "044ab4eddb792857a5601d7077c3ec11dbf337c26c3100500562f4023a06d347": "2025-12-11T21:28:00+03:00",
-    "bfa2ca2eac586e8ac5db3b0b50e506e4d115257ac0019eaa15f4a2da7934479d": "2025-12-11T21:28:00+03:00"
+    "bfa2ca2eac586e8ac5db3b0b50e506e4d115257ac0019eaa15f4a2da7934479d": "2025-12-11T21:28:00+03:00",
+    "2da866c0a36474d6f2b502faaae9f212b8c9ab1d68ffd5a6ed958b732cd3152b": "2025-12-12T00:21:00+03:00",
+    "1c0fa41549c332c2c4818ae3392dd62fc902d938b028c8c31bc41dfda5164fdf": "2025-12-12T00:21:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -48083,9 +48108,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd14a017a80>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
-        "last_ts": 1765477546.4511058
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f06bc913a80>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 15,
+        "last_ts": 1765487997.5839005
       },
       "warmup_done": false,
       "last_success_path": null
@@ -48094,31 +48119,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "R2n9DoDIvcgrAe2q",
+          "value": "ntLuoCJcHAnkJjGQ",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765478814
+          "expires": 1765489237
         },
         {
           "name": "__ddg10_",
-          "value": "1765477614",
+          "value": "1765488037",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765478814
+          "expires": 1765489237
         },
         {
           "name": "__ddg9_",
-          "value": "52.190.183.85",
+          "value": "20.109.38.246",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765478814
+          "expires": 1765489237
+        },
+        {
+          "name": "__ddg1_",
+          "value": "vzErlPAUnTvcWcsS7gDv",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1797024037
         },
         {
           "name": "PHPSESSID",
-          "value": "9da42058f1ff73252587c23bf9c2c4d4",
+          "value": "b4ff98075a7c154de8b16e2469cbddd2",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -48161,9 +48194,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd1490811d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
-        "last_ts": 1765477647.5960207
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f06bb962fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 12,
+        "last_ts": 1765488070.514272
       },
       "warmup_done": false,
       "last_success_path": null
@@ -62764,7 +62797,9 @@
     "https://rg.ru/2025/12/11/na-dorogah-10-ballov-novogodnie-probki-v-moskve-nachalis-ranshe-obychnogo.html": "https://rg.ru/2025/12/11/na-dorogah-10-ballov-novogodnie-probki-v-moskve-nachalis-ranshe-obychnogo.html",
     "https://rg.ru/2025/12/11/v-rspp-obsudili-kliuchevye-trendy-i-vyzovy-kongressno-vystavochnoj-deiatelnosti.html": "https://rg.ru/2025/12/11/v-rspp-obsudili-kliuchevye-trendy-i-vyzovy-kongressno-vystavochnoj-deiatelnosti.html",
     "https://rg.ru/2025/12/11/reg-pfo/aeroport-cheboksar-priostanovil-priem-i-vypusk-samoletov.html": "https://rg.ru/2025/12/11/reg-pfo/aeroport-cheboksar-priostanovil-priem-i-vypusk-samoletov.html",
-    "https://rg.ru/2025/12/11/cb-povysil-kurs-dollara-na-12-dekabria-bolee-chem-na-rubl.html": "https://rg.ru/2025/12/11/cb-povysil-kurs-dollara-na-12-dekabria-bolee-chem-na-rubl.html"
+    "https://rg.ru/2025/12/11/cb-povysil-kurs-dollara-na-12-dekabria-bolee-chem-na-rubl.html": "https://rg.ru/2025/12/11/cb-povysil-kurs-dollara-na-12-dekabria-bolee-chem-na-rubl.html",
+    "https://rg.ru/2025/12/12/sem-regionov-rossii-gotoviatsia-k-vypusku-narodnyh-obligacij-v-2026-godu.html": "https://rg.ru/2025/12/12/sem-regionov-rossii-gotoviatsia-k-vypusku-narodnyh-obligacij-v-2026-godu.html",
+    "https://rg.ru/2025/12/12/reg-cfo/nomernoj-uhodit-v-noch.html": "https://rg.ru/2025/12/12/reg-cfo/nomernoj-uhodit-v-noch.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -74926,7 +74961,9 @@
     "7b64a5c274993b2fb67243894273c307f5120665": "https://rg.ru/2025/12/11/na-dorogah-10-ballov-novogodnie-probki-v-moskve-nachalis-ranshe-obychnogo.html",
     "89b772f03a0a282598c478aef5feeff77268338c": "https://rg.ru/2025/12/11/v-rspp-obsudili-kliuchevye-trendy-i-vyzovy-kongressno-vystavochnoj-deiatelnosti.html",
     "fcf957d0b0eb06ad87362a8e6af868965275cf82": "https://rg.ru/2025/12/11/reg-pfo/aeroport-cheboksar-priostanovil-priem-i-vypusk-samoletov.html",
-    "a5f5fc4202d558c98000bb83aac4ca0ade3c1f77": "https://rg.ru/2025/12/11/cb-povysil-kurs-dollara-na-12-dekabria-bolee-chem-na-rubl.html"
+    "a5f5fc4202d558c98000bb83aac4ca0ade3c1f77": "https://rg.ru/2025/12/11/cb-povysil-kurs-dollara-na-12-dekabria-bolee-chem-na-rubl.html",
+    "48d5bbd37082a9bb7a26565bc2bcfe63c87c4694": "https://rg.ru/2025/12/12/sem-regionov-rossii-gotoviatsia-k-vypusku-narodnyh-obligacij-v-2026-godu.html",
+    "c67f18bac2636e33c8345cb1f2a1318bbdba1dd5": "https://rg.ru/2025/12/12/reg-cfo/nomernoj-uhodit-v-noch.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -91232,6 +91269,8 @@
     "https://rg.ru/2025/12/11/na-dorogah-10-ballov-novogodnie-probki-v-moskve-nachalis-ranshe-obychnogo.html": "14437c3a9a0d7196bb5e46ad526bc87f6cb57e925bd396cb88868a2ec1164d5c",
     "https://rg.ru/2025/12/11/v-rspp-obsudili-kliuchevye-trendy-i-vyzovy-kongressno-vystavochnoj-deiatelnosti.html": "d04efb19114f39e3fef20ec9f409f6324283640e69fbc08c7f4e1b1a3a81a32c",
     "https://rg.ru/2025/12/11/reg-pfo/aeroport-cheboksar-priostanovil-priem-i-vypusk-samoletov.html": "044ab4eddb792857a5601d7077c3ec11dbf337c26c3100500562f4023a06d347",
-    "https://rg.ru/2025/12/11/cb-povysil-kurs-dollara-na-12-dekabria-bolee-chem-na-rubl.html": "bfa2ca2eac586e8ac5db3b0b50e506e4d115257ac0019eaa15f4a2da7934479d"
+    "https://rg.ru/2025/12/11/cb-povysil-kurs-dollara-na-12-dekabria-bolee-chem-na-rubl.html": "bfa2ca2eac586e8ac5db3b0b50e506e4d115257ac0019eaa15f4a2da7934479d",
+    "https://rg.ru/2025/12/12/sem-regionov-rossii-gotoviatsia-k-vypusku-narodnyh-obligacij-v-2026-godu.html": "2da866c0a36474d6f2b502faaae9f212b8c9ab1d68ffd5a6ed958b732cd3152b",
+    "https://rg.ru/2025/12/12/reg-cfo/nomernoj-uhodit-v-noch.html": "1c0fa41549c332c2c4818ae3392dd62fc902d938b028c8c31bc41dfda5164fdf"
   }
 }
