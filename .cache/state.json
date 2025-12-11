@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 10 Dec 2025 21:21:10 GMT"
+      "Last-Modified": "Thu, 11 Dec 2025 01:19:28 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1da26-xVanaL6hz4n7mapVJnHd0CcDWPQ\""
+      "ETag": "W/\"1d932-5uFv9szNRecY2GoAWU1+x1zaV5Y\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Wed, 10 Dec 2025 14:43:17 GMT"
+      "Last-Modified": "Wed, 10 Dec 2025 23:28:51 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"sc6wczmmmy3vjd\""
+      "ETag": "\"jurucw2pbo3vjo\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -28193,6 +28193,20 @@
     },
     "https://rg.ru/2025/12/10/v-minstroe-otchitalis-o-baze-dlia-stroitelstva-mnogoetazhek-iz-dereva.html": {
       "ETag": "\"17z9f4ow8i91shn\""
+    },
+    "http://ancb.ru/publication/read/20617": {},
+    "http://ancb.ru/publication/read/20616": {},
+    "https://realty.ria.ru/20251211/komnaty-2061090735.html": {
+      "Last-Modified": "Thu, 11 Dec 2025 00:00:04 GMT"
+    },
+    "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-moskvy-na-fone-ataki-bpla-otmenili-ili-zaderzhali-133-rejsa.html": {
+      "ETag": "\"onr2o3yq4s1nxk\""
+    },
+    "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-vnukovo-sheremetevo-i-domodedovo-vremenno-ogranichili-polety.html": {
+      "ETag": "\"17xlvr8qubj1pb8\""
+    },
+    "https://rg.ru/2025/12/11/dekabrskij-rejs.html": {
+      "ETag": "\"lusccc66fy23vp\""
     }
   },
   "stats": {
@@ -35252,9 +35266,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f491d158a50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f491e62ad50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f491d158f50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f491d1591d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f491d159450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-12-10T21:21:52.181653+00:00",
+    "last_run": "2025-12-11T01:19:06.080378+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -35267,56 +35286,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 585.2167890000146,
-        "connect_ms": 475.58282399998575,
-        "response_ms": 1060.7996130000004,
+        "dns_ms": 537.957074000019,
+        "connect_ms": 149.2607410000346,
+        "response_ms": 687.2178150000536,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f491e55be30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 119.18142799993348,
+        "connect_ms": 180.68729200012967,
+        "response_ms": 299.86872000006315,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 1081.4086179999833,
-        "connect_ms": 720.1499730000194,
-        "response_ms": 1801.5585910000027,
+        "dns_ms": 5134.173209999972,
+        "connect_ms": 1031.2765649999847,
+        "response_ms": 6165.449774999956,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f491d159450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 490.6300330000022,
+        "connect_ms": 65.03535800004556,
+        "response_ms": 555.6653910000477,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "d41fb0f7ae510574df42e7db6d5b16ab49600c372d164dd867c81561388d505d",
+    "https://ardexpert.ru/article": "8070bfae6b42cf924d8ee6290994160f2619bacae84efc14ed6ccc42428653ad",
     "https://www.gostinfo.ru/News/List": "d8b7807b07d63bdba76ebe2cac9d30b0262732cfcdd973ffab871fa74d3c65d6",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "183fca216c173aefc589aedd1ab8af8a68ffeaef6bef249ca8ddda5f14d21ed1",
-    "https://eec.eaeunion.org/news/": "e8dd63b66ed7832aa11c5689c0df61d8e084fe8921298cf2b496012940c1f79f",
+    "https://eec.eaeunion.org/news/": "83f46f6d9a3c9cc2fda8af2edbbd11447b1df9fd90c115f4a68b8763f6749a70",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "5ebba7d8096fc2930ade59bb1d48655ba2ca84ced2dfa22f957adacc550ea266",
-    "https://www.metalinfo.ru/ru/news": "291dba3a2ec539c490159f03b059fc48006ca66cf8a8fad258ce8e97ee44f96c",
-    "https://www.pnp.ru/economics/": "45caade59e319f87db54a827dee25ca63c6581ac604040181f1479eeb2d72ed8",
-    "https://erzrf.ru/news/": "b8100eb5cdf97511f68189c79b0a8e8ad26975e6812ed13099399d86f6380321",
-    "https://ria-stk.ru/news/vse-novosti.php": "b66c4edd65d7ec839cecbdd780a115c4331e31fd1f809c3c6cd2b9c2a86d3850",
-    "http://government.ru/news/": "16c88aaa6db93e981938d04215c76e0a22ebc8ec57e2fff612c265c73be2182d",
-    "https://stroygaz.ru/news/": "f91080db7e76e13c08f661981f7cf979b57966384bb31da6cbfb16e26ea645fe",
-    "https://realty.ria.ru/lenta/": "9d940d47d94ceb31834c6aa1867731ee28eb3476a6d35b103336b4f91fc78063",
-    "https://rg.ru/tema/ekonomika": "80019c5cae1843c92938fbf87e98120e603599b114e1d3f328ef3c0f8a761dcd",
-    "http://ancb.ru/publication": "3e73b5f392defc224b13db353e8bb718a89b9658e499bf6c837da2b8041e8664",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "b316034a4803b33611359c5904320b959e4c727da7be60db2d03f714a9c15179",
+    "https://www.metalinfo.ru/ru/news": "47ea87062b5dd74a284d5264a50987eb3e6617fdd984951da1cc7753a249bb14",
+    "https://www.pnp.ru/economics/": "b68c0e1755f8c9e591541ce70681a80813fd2c1d2a0d7d887ac070ee617103a3",
+    "https://erzrf.ru/news/": "cafd4debd5d155b96ccedbf6b6539a22a56759e390127955aea1e754ab907979",
+    "https://ria-stk.ru/news/vse-novosti.php": "fcb80d7f70a1651a133dad2aabec8ca05a3e50532305226e6502c46d1a801622",
+    "http://government.ru/news/": "793c665cc36a90e987f19fba84f660845c22a6b3e20e4dac9b26391b6a4508ec",
+    "https://stroygaz.ru/news/": "8ed769638201c1eec24d6bc9c8e587069cc730b1b1f048c24dd5aba977c3a81f",
+    "https://realty.ria.ru/lenta/": "3c002dcd5795ecb0e7988996bd99fc4ffac01ed97b8ed216ed764ce12df2ca01",
+    "https://rg.ru/tema/ekonomika": "389e69623d15f3ad4199fe1284f302e0a5dfaafea79bc4369f7257a952abca54",
+    "http://ancb.ru/publication": "ec97bd37123f7ee8559011d3607e8a84b6af64f18ac993fed3a9f0256ffda401",
     "https://notim.ru": "0878b889cd264092407a0f8677ad3e5bc66554c099a3dbd28b7da347ce108944",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -35598,6 +35617,7 @@
       "https://stroygaz.ru/news/info-partners-news/vsego-odin-den-ostalsya-do-natsionalnoy-premii-direktor-goda-po-zakupkam-v-stroitelnom-komplekse/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251211/komnaty-2061090735.html",
       "https://realty.ria.ru/20251210/obschepit-2061175931.html",
       "https://realty.ria.ru/20251210/istorik-2061171318.html",
       "https://realty.ria.ru/20251210/kapremont-2061147592.html",
@@ -35616,10 +35636,12 @@
       "https://realty.ria.ru/20251210/bolshinstvo-2061055845.html",
       "https://realty.ria.ru/20251210/pravitelstvo-2061047696.html",
       "https://realty.ria.ru/20251210/opros-2061043516.html",
-      "https://realty.ria.ru/20251210/vladelets-2061020479.html",
-      "https://realty.ria.ru/20251210/sud-2061016362.html"
+      "https://realty.ria.ru/20251210/vladelets-2061020479.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-moskvy-na-fone-ataki-bpla-otmenili-ili-zaderzhali-133-rejsa.html",
+      "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-vnukovo-sheremetevo-i-domodedovo-vremenno-ogranichili-polety.html",
+      "https://rg.ru/2025/12/11/dekabrskij-rejs.html",
       "https://rg.ru/2025/12/10/derzhat-slovo.html",
       "https://rg.ru/2025/12/10/kuda-ushli-dengi.html",
       "https://rg.ru/2025/12/10/vostochnyj-ekspress.html",
@@ -35639,7 +35661,6 @@
       "https://rg.ru/2025/12/10/zdorove-v-svoi-ruki.html",
       "https://rg.ru/2025/12/10/s-detmi-deshevle.html",
       "https://rg.ru/2025/12/10/pripechatannaia-kvartira.html",
-      "https://rg.ru/2025/12/10/iz-kazahstana-v-rossiiu-po-uproshchennoj-sheme-vehali-pochti-3900-mashin-importerov.html",
       "https://rg.ru/2025/12/10/grigorenko-novyj-zakon-utochniaet-mehanizm-ispolzovaniia-infrastruktury.html",
       "https://rg.ru/2025/12/10/reg-pfo/aeroporty-saratova-i-penzy-vosstanovili-rabotu.html",
       "https://rg.ru/2025/12/10/gosduma-predlozhili-soobshchat-zhiteliam-o-perenose-sdachi-obektov-blagoustrojstva.html",
@@ -35650,13 +35671,13 @@
       "https://rg.ru/2025/12/10/minek-godovaia-infliaciia-v-rossii-na-8-dekabria-sostavila-634.html",
       "https://rg.ru/2025/12/10/fiuchersy-na-platinu-i-palladij-upali-pochti-na-3.html",
       "https://rg.ru/2025/12/10/rossiia-sohraniaet-vysokij-uroven-zernovogo-proizvodstva-i-narashchivaet-eksport.html",
-      "https://rg.ru/2025/12/10/reg-cfo/v-smolenskoj-oblasti-na-neopredelennoe-vremia-vykliuchili-mobilnyj-internet.html",
-      "https://rg.ru/2025/12/10/reg-szfo/medkliniku-v-peterburge-oshtrafovali-za-trebovanie-k-vneshnosti-v-vakansii.html",
       "https://rg.ru/2025/12/08/rossijskij-prodiuserskij-centr-budet-sotrudnichat-s-indiej-v-proizvodstve-kontenta.html",
       "https://rg.ru/2025/12/08/v-tiumeni-obsudili-razvitie-predprinimatelskogo-obrazovaniia.html",
       "https://rg.ru/2025/12/08/morozko-novogodnij-spektakl-mif-dlia-teh-kto-ustal-ot-shumnyh-yolok-blokbasterov.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20617",
+      "http://ancb.ru/publication/read/20616",
       "http://ancb.ru/publication/read/20615",
       "http://ancb.ru/publication/read/20609",
       "http://ancb.ru/publication/read/20605",
@@ -35689,9 +35710,7 @@
       "http://ancb.ru/publication/read/20481",
       "http://ancb.ru/publication/read/20480",
       "http://ancb.ru/publication/read/20479",
-      "http://ancb.ru/publication/read/20474",
-      "http://ancb.ru/publication/read/20472",
-      "http://ancb.ru/publication/read/20471"
+      "http://ancb.ru/publication/read/20474"
     ]
   },
   "first_seen": {
@@ -47339,7 +47358,13 @@
     "54dd9bfb7d36afffaf4db564f9a999f67809496ab0fef5146c92187ce4d6be8b": "2025-12-11T00:21:00+03:00",
     "f50b5bab4ce8c5d283dcd2f8a47904e3aaa585cd9a71c05f54e6efa27b4e572c": "2025-12-11T00:21:00+03:00",
     "4a6eaf9899b8a38b4abf9b466fa8afbac62ec4ebed57318ae7952eb2a3ef9e3b": "2025-12-11T00:21:00+03:00",
-    "eb94a24e5b977a512c91e5d616712690dac78ea582b479d958127f7fd8b4bbef": "2025-12-11T00:21:00+03:00"
+    "eb94a24e5b977a512c91e5d616712690dac78ea582b479d958127f7fd8b4bbef": "2025-12-11T00:21:00+03:00",
+    "72fe82a9916cad60818b873cd7fdfb94df77abbfdf6129c33f0b76d5eeaaca4c": "2025-12-11T04:18:00+03:00",
+    "879d70d5fb7ac08277430b05b3abcc8f7369dbd8b8976ace67eade4851eafe64": "2025-12-11T04:18:00+03:00",
+    "1b33126eb1eb9f8f534d8a527c0d57ddb7ce8fe0e167dab943e45e46e30c4440": "2025-12-11T04:18:00+03:00",
+    "359956a3a0add8fdb34df2336b6d78e3b817538debfea77a44799fcf37dc564e": "2025-12-11T04:19:00+03:00",
+    "636d0f81f09e4a6a5df8910ed4d6f017479601a500083ec6cab2cc0981bd43cc": "2025-12-11T04:19:00+03:00",
+    "dcc7ce886a1159c4e46dba71d60ce07935785c90cf2c3851f4bdf219860b33e1": "2025-12-11T04:19:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -47370,8 +47395,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f491e5e7820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1765401585.4696748
       },
       "warmup_done": false,
@@ -47381,31 +47406,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "rdHWAMDNT2L1d5qV",
+          "value": "6HdsZVs4aECFJzFB",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765402831
+          "expires": 1765417130
         },
         {
           "name": "__ddg10_",
-          "value": "1765401631",
+          "value": "1765415930",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765402831
+          "expires": 1765417130
         },
         {
           "name": "__ddg9_",
-          "value": "172.183.91.36",
+          "value": "4.227.173.114",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765402831
+          "expires": 1765417130
+        },
+        {
+          "name": "__ddg1_",
+          "value": "gh2o7VvGodUlRG5kWBAQ",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1796951930
         },
         {
           "name": "PHPSESSID",
-          "value": "6ef4ccf0f34329e00d33096e79a1253c",
+          "value": "ac9fed71c90e1c54a0091a46dc9e1cb7",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -47432,11 +47465,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "J4nPCOAAsyN0KBKVkATN2jKGCV4Yc6IH",
+          "value": "z3NbWhOrEDIka2S8wxJXdc8ogvTJp4LX",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765389827
+          "expires": 1765426732
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -47444,12 +47477,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1796483027
+          "expires": 1796519932
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f491d1591d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1765401663.4421747
       },
       "warmup_done": false,
@@ -61804,7 +61837,13 @@
     "https://rg.ru/2025/12/10/reg-szfo/nelegalnye-tropy.html": "https://rg.ru/2025/12/10/reg-szfo/nelegalnye-tropy.html",
     "https://rg.ru/2025/12/10/stoiat-u-stali.html": "https://rg.ru/2025/09/29/grigorenko-eksport-rossijskih-it-reshenij-v-respubliku-belarus-vyros-na-23.html",
     "https://rg.ru/2025/12/10/popali-v-piaterku.html": "https://rg.ru/2025/09/29/grigorenko-eksport-rossijskih-it-reshenij-v-respubliku-belarus-vyros-na-23.html",
-    "https://rg.ru/2025/12/10/v-minstroe-otchitalis-o-baze-dlia-stroitelstva-mnogoetazhek-iz-dereva.html": "https://rg.ru/2025/12/10/v-minstroe-otchitalis-o-baze-dlia-stroitelstva-mnogoetazhek-iz-dereva.html"
+    "https://rg.ru/2025/12/10/v-minstroe-otchitalis-o-baze-dlia-stroitelstva-mnogoetazhek-iz-dereva.html": "https://rg.ru/2025/12/10/v-minstroe-otchitalis-o-baze-dlia-stroitelstva-mnogoetazhek-iz-dereva.html",
+    "http://ancb.ru/publication/read/20617": "http://ancb.ru/publication/read/20617",
+    "http://ancb.ru/publication/read/20616": "http://ancb.ru/publication/read/20616",
+    "https://realty.ria.ru/20251211/komnaty-2061090735.html": "https://realty.ria.ru/20251211/komnaty-2061090735.html",
+    "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-moskvy-na-fone-ataki-bpla-otmenili-ili-zaderzhali-133-rejsa.html": "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-moskvy-na-fone-ataki-bpla-otmenili-ili-zaderzhali-133-rejsa.html",
+    "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-vnukovo-sheremetevo-i-domodedovo-vremenno-ogranichili-polety.html": "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-vnukovo-sheremetevo-i-domodedovo-vremenno-ogranichili-polety.html",
+    "https://rg.ru/2025/12/11/dekabrskij-rejs.html": "https://rg.ru/2025/12/11/dekabrskij-rejs.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -73765,7 +73804,13 @@
     "73c6c9ccc646babe4d6a6e713a9350a47e772c14": "https://rg.ru/2025/12/10/reg-pfo/u-lada-naladilos.html",
     "2a0d7c2a4b3e0b62ba17b0f079407e14e0e330d7": "https://rg.ru/2025/12/10/reg-ufo/kvartira-priedet.html",
     "55050ea27424281ed34d9316041ad4a37a2153b8": "https://rg.ru/2025/12/10/reg-szfo/nelegalnye-tropy.html",
-    "2d104940e2968f19a75aaf5b0c5cc7ff39268518": "https://rg.ru/2025/12/10/v-minstroe-otchitalis-o-baze-dlia-stroitelstva-mnogoetazhek-iz-dereva.html"
+    "2d104940e2968f19a75aaf5b0c5cc7ff39268518": "https://rg.ru/2025/12/10/v-minstroe-otchitalis-o-baze-dlia-stroitelstva-mnogoetazhek-iz-dereva.html",
+    "99ca980c0664dfe0b01839bcdbfb5516b944a633": "http://ancb.ru/publication/read/20617",
+    "fa88769dff2c901b40e6790685d88d3322b2cd2c": "http://ancb.ru/publication/read/20616",
+    "b3a077d51fa8d07c01863f45af7939ac42cd4d1c": "https://realty.ria.ru/20251211/komnaty-2061090735.html",
+    "647506e24b01506d836ddb4878ea41f0d8877940": "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-moskvy-na-fone-ataki-bpla-otmenili-ili-zaderzhali-133-rejsa.html",
+    "659faaeb00ad983814aa40070943a7bd53844e29": "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-vnukovo-sheremetevo-i-domodedovo-vremenno-ogranichili-polety.html",
+    "5272cf938c04227f5be69bf747e974162f31ddc3": "https://rg.ru/2025/12/11/dekabrskij-rejs.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -89791,6 +89836,12 @@
     "https://rg.ru/2025/12/10/reg-szfo/nelegalnye-tropy.html": "4a6eaf9899b8a38b4abf9b466fa8afbac62ec4ebed57318ae7952eb2a3ef9e3b",
     "https://rg.ru/2025/12/10/stoiat-u-stali.html": "27a6c790716a02beafa826026a4d59b7cbbaa527ed588250ed9662c286a48566",
     "https://rg.ru/2025/12/10/popali-v-piaterku.html": "27a6c790716a02beafa826026a4d59b7cbbaa527ed588250ed9662c286a48566",
-    "https://rg.ru/2025/12/10/v-minstroe-otchitalis-o-baze-dlia-stroitelstva-mnogoetazhek-iz-dereva.html": "eb94a24e5b977a512c91e5d616712690dac78ea582b479d958127f7fd8b4bbef"
+    "https://rg.ru/2025/12/10/v-minstroe-otchitalis-o-baze-dlia-stroitelstva-mnogoetazhek-iz-dereva.html": "eb94a24e5b977a512c91e5d616712690dac78ea582b479d958127f7fd8b4bbef",
+    "http://ancb.ru/publication/read/20617": "72fe82a9916cad60818b873cd7fdfb94df77abbfdf6129c33f0b76d5eeaaca4c",
+    "http://ancb.ru/publication/read/20616": "879d70d5fb7ac08277430b05b3abcc8f7369dbd8b8976ace67eade4851eafe64",
+    "https://realty.ria.ru/20251211/komnaty-2061090735.html": "1b33126eb1eb9f8f534d8a527c0d57ddb7ce8fe0e167dab943e45e46e30c4440",
+    "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-moskvy-na-fone-ataki-bpla-otmenili-ili-zaderzhali-133-rejsa.html": "359956a3a0add8fdb34df2336b6d78e3b817538debfea77a44799fcf37dc564e",
+    "https://rg.ru/2025/12/11/reg-cfo/v-aeroportah-vnukovo-sheremetevo-i-domodedovo-vremenno-ogranichili-polety.html": "636d0f81f09e4a6a5df8910ed4d6f017479601a500083ec6cab2cc0981bd43cc",
+    "https://rg.ru/2025/12/11/dekabrskij-rejs.html": "dcc7ce886a1159c4e46dba71d60ce07935785c90cf2c3851f4bdf219860b33e1"
   }
 }
