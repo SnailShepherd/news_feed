@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 12 Dec 2025 21:18:40 GMT"
+      "Last-Modified": "Sat, 13 Dec 2025 01:15:23 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d123-6EM9yh07KDUCuH5dLSBUUa8WCvM\""
+      "ETag": "W/\"1cfb8-8uJl+x2AJbeOrx5men1/DhP5jrM\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"1475e3ah1k53x74\""
+      "ETag": "\"i8ydw19vki3wwm\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -28942,6 +28942,9 @@
     },
     "https://rg.ru/2025/12/12/inturisty-oformili-12-mln-elektronnyh-viz-v-rossiiu-s-avgusta-2023-goda.html": {
       "ETag": "\"88l0l253hv1tch\""
+    },
+    "https://rg.ru/2025/12/13/ekspert-kosareva-malenkie-kvartiry-stanut-nelikvidnymi.html": {
+      "ETag": "\"ciqusj7z51223p\""
     }
   },
   "stats": {
@@ -36230,9 +36233,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f992ff36fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f992ff36c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f992ff35d10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f992ff36e90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f992ff36490>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-12-12T21:19:07.148413+00:00",
+    "last_run": "2025-12-13T01:15:03.063657+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -36245,56 +36253,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 907.0468800000242,
-        "connect_ms": 970.9413619999907,
-        "response_ms": 1877.988242000015,
+        "dns_ms": 801.7875399999923,
+        "connect_ms": 1244.4226130000118,
+        "response_ms": 2046.210153000004,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9930e639b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 586.3156010000239,
+        "connect_ms": 1225.0657019999664,
+        "response_ms": 1811.3813029999903,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 9771.973421999974,
+        "dns_ms": 10082.311752000009,
         "connect_ms": 0.0,
-        "response_ms": 807.7872700000057,
+        "response_ms": 5444.393339000016,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f992ff36490>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 1045.3864010000018,
+        "connect_ms": 0.0,
+        "response_ms": 747.3489589999929,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "570a5c2e1478ed8ff63fd4e1404dfce0b141150fb3b0711b841d1407cd43972b",
+    "https://ardexpert.ru/article": "27eb6e405e365aa284b8e397aa80bf95efc6929a97c3887e706a65291edeca36",
     "https://www.gostinfo.ru/News/List": "62951658909d2cf3c506f2aee16f7f53b3c224d8c54d2c4f97e8b83282045042",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "183fca216c173aefc589aedd1ab8af8a68ffeaef6bef249ca8ddda5f14d21ed1",
-    "https://eec.eaeunion.org/news/": "9cb71b7ff0f44f626dc5c769d9ef540c541a70f85a4d8f1e6f5001138d2a0da5",
+    "https://eec.eaeunion.org/news/": "424fc34c78152eb1e823764e939027b63469ed824419d2c36c9937dd7ed39876",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "e80227b3a24403836a56192230d4bc9939fdc9e72996536a6ee88401780a0388",
-    "https://www.metalinfo.ru/ru/news": "76bd4d17ff182adcdbca07725cf0c623a2c074a62e363c3ddd079ddc0667a946",
-    "https://www.pnp.ru/economics/": "79a348dedc57ddbf2489f25160f1e51840609b50d752fae5572de2d181dd0e30",
-    "https://erzrf.ru/news/": "51324a4a7ffab1fae1362a763373821b85e42e32b0bd1054d98847c50a5ffa75",
-    "https://ria-stk.ru/news/vse-novosti.php": "7d5010c7f6698442fdc7006c2d3363e38be208a41d95389367943edc7d18f34d",
-    "http://government.ru/news/": "b1bcbf17be01f947730ab77bc2937b161ba4514dfc9b45897d051790fe28c135",
-    "https://stroygaz.ru/news/": "e948a497e128317a6c7e93ebd6f792076b420d71a2402e5276f7e781cacf9bd2",
-    "https://realty.ria.ru/lenta/": "f62bea2a5df9a9407c0b42e8fbb7d5767589d54e473587640951b3d70599d663",
-    "https://rg.ru/tema/ekonomika": "a56778193478fdb4d872aab278323ea223e924ac6a8e0b3d3b5886f9e50af549",
-    "http://ancb.ru/publication": "ad9e16392427d2b910842abc04e1c38496a5277927d9d3b0cc4b6d8c3a5eefd2",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "e21edfe7eaaf790604effbf40735c01bf4e550c34b093dd14fcb2d9e057e0f6b",
+    "https://www.metalinfo.ru/ru/news": "a848b212ca5ec9309444e5b6f6aef340d25e6d12960a448125999f0760048099",
+    "https://www.pnp.ru/economics/": "06be7b6694aeadf9d1c46db74e54a7a9e479d0f254715dd54faad24816cdf096",
+    "https://erzrf.ru/news/": "b65e36057d78c214f49b15568149c2356f446d9befacc10a554cf9eae4b36ae8",
+    "https://ria-stk.ru/news/vse-novosti.php": "7f8dbb8ed6fc98d2e9c26bf012ee88d6d8bc4a5823c4af14c093d1b88837a13e",
+    "http://government.ru/news/": "59390bc7092d37f5f4874da6b96acc58fff98d538d751886c7892a3355424f9a",
+    "https://stroygaz.ru/news/": "edb1035d9621cabb6a61fa55f28c11774650fe74818e77f7a913fd28abc93e50",
+    "https://realty.ria.ru/lenta/": "ae12e2a3d7175921336501bfa88fd063ca54f62d7529274a42ccd49a79be2aaa",
+    "https://rg.ru/tema/ekonomika": "e96e888857d4b8277c13157ac9faed600d3c18268fb00960d4c0f81fc45f2480",
+    "http://ancb.ru/publication": "bcdcadf2883ae4a35af6541b666b3990cc475bf938c47e2294a46aad279150fd",
     "https://notim.ru": "4fc3cacc40045ec54274ffcc2c34de042ee9d849b6d735a2a7165e91616286df",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -36598,6 +36606,7 @@
       "https://realty.ria.ru/20251211/vyhod-2061349304.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/13/ekspert-kosareva-malenkie-kvartiry-stanut-nelikvidnymi.html",
       "https://rg.ru/2025/12/12/dtp-s-sim-chto-delaiut-vlasti-regionov-chtoby-snizit-chislo-avarij-s-samokatami.html",
       "https://rg.ru/2025/12/12/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-15-po-21-dekabria.html",
       "https://rg.ru/2025/12/12/inturisty-oformili-12-mln-elektronnyh-viz-v-rossiiu-s-avgusta-2023-goda.html",
@@ -36628,7 +36637,6 @@
       "https://rg.ru/2025/12/12/reg-sibfo/zhurnalist-natalia-graf-tak-nazyvaemyj-effekt-dolinoj-iskusstvenno-sozdan.html",
       "https://rg.ru/2025/12/12/v-chetyreh-aeroportah-severnogo-kavkaza-vvedeny-vremennye-ogranicheniia.html",
       "https://rg.ru/2025/12/12/cb-rassmatrivaet-zashchitu-interesov-po-svoim-aktivam-i-v-mezhdunarodnyh-sudah.html",
-      "https://rg.ru/2025/12/12/kotiakov-neobhodimosti-sokrashchat-rabochij-den-do-shesti-chasov-segodnia-net.html",
       "https://rg.ru/2025/12/12/reg-cfo/v-moskve-utverzhden-proekt-vysotnogo-parka-na-meste-zakrytogo-monorelsa.html",
       "https://rg.ru/2025/12/12/chto-posmotret-v-tule-i-okrestnostiah-polnyj-gid-i-top-40-luchshih-mest.html",
       "https://rg.ru/2025/12/08/rossijskij-prodiuserskij-centr-budet-sotrudnichat-s-indiej-v-proizvodstve-kontenta.html",
@@ -48686,7 +48694,8 @@
     "0fabf58679094bf5f20cc72cfeb0d437b8a7ebaddc6c0446d662c21c6faf923e": "2025-12-12T21:28:00+03:00",
     "ff872136e1d2225c28f3c2f8313dd616936b8695eebe78ff411f206aa9a9fb71": "2025-12-13T00:19:00+03:00",
     "04478961ce1fd2deb1acd60892f64b35922cfa5aa9a38ddec23d8e291ff7dbae": "2025-12-13T00:19:00+03:00",
-    "13b1d2a03d3a1efe769fc4c417beccaf541bcab1c5ff165ab74a25264998e1e0": "2025-12-13T00:19:00+03:00"
+    "13b1d2a03d3a1efe769fc4c417beccaf541bcab1c5ff165ab74a25264998e1e0": "2025-12-13T00:19:00+03:00",
+    "3c0ceba1008a15ea5e78e8808e73bbec621565e08831494a856e661816ae3da4": "2025-12-13T04:15:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -48717,8 +48726,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9930e8fa80>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1765574223.1850939
       },
       "warmup_done": false,
@@ -48728,39 +48737,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "vtmuB9MgYjOi9MAS",
+          "value": "fBrwGH0Na87zXaC8",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765575481
+          "expires": 1765589685
         },
         {
           "name": "__ddg10_",
-          "value": "1765574281",
+          "value": "1765588485",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765575481
+          "expires": 1765589685
         },
         {
           "name": "__ddg9_",
-          "value": "20.168.110.181",
+          "value": "104.209.5.145",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765575481
-        },
-        {
-          "name": "__ddg1_",
-          "value": "iLDYIZcDfZXwXZvhz87t",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1797110281
+          "expires": 1765589685
         },
         {
           "name": "PHPSESSID",
-          "value": "94cd5b9b439dcdac6e36569b464f21ac",
+          "value": "b688be40d93700b436b93a5a37d3423a",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -48787,11 +48788,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "Gu8GMg1FYqpiEEfC7VoAhJYVGKAVUHKq",
+          "value": "vgqP9nCpUJXnrokYIF1gFn5stifjqQtL",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1765574871
+          "expires": 1765599291
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -48799,12 +48800,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1796668071
+          "expires": 1796692490
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f992ff36e90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1765574314.3930497
       },
       "warmup_done": false,
@@ -63620,7 +63621,8 @@
     "https://rg.ru/2025/12/12/reshetnikov-nuzhno-opredelit-vozmozhnosti-dlia-investicij-v-art-industriiu.html": "https://rg.ru/2025/12/12/reshetnikov-nuzhno-opredelit-vozmozhnosti-dlia-investicij-v-art-industriiu.html",
     "https://rg.ru/2025/12/12/dtp-s-sim-chto-delaiut-vlasti-regionov-chtoby-snizit-chislo-avarij-s-samokatami.html": "https://rg.ru/2025/12/12/dtp-s-sim-chto-delaiut-vlasti-regionov-chtoby-snizit-chislo-avarij-s-samokatami.html",
     "https://rg.ru/2025/12/12/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-15-po-21-dekabria.html": "https://rg.ru/2025/12/12/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-15-po-21-dekabria.html",
-    "https://rg.ru/2025/12/12/inturisty-oformili-12-mln-elektronnyh-viz-v-rossiiu-s-avgusta-2023-goda.html": "https://rg.ru/2025/12/12/inturisty-oformili-12-mln-elektronnyh-viz-v-rossiiu-s-avgusta-2023-goda.html"
+    "https://rg.ru/2025/12/12/inturisty-oformili-12-mln-elektronnyh-viz-v-rossiiu-s-avgusta-2023-goda.html": "https://rg.ru/2025/12/12/inturisty-oformili-12-mln-elektronnyh-viz-v-rossiiu-s-avgusta-2023-goda.html",
+    "https://rg.ru/2025/12/13/ekspert-kosareva-malenkie-kvartiry-stanut-nelikvidnymi.html": "https://rg.ru/2025/12/13/ekspert-kosareva-malenkie-kvartiry-stanut-nelikvidnymi.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -75952,7 +75954,8 @@
     "2e4310479c93b0028b5c8bf8864547b37105dddf": "https://rg.ru/2025/12/12/reshetnikov-nuzhno-opredelit-vozmozhnosti-dlia-investicij-v-art-industriiu.html",
     "1f04584836d0202223e11d0c2db2246f8336ac3d": "https://rg.ru/2025/12/12/dtp-s-sim-chto-delaiut-vlasti-regionov-chtoby-snizit-chislo-avarij-s-samokatami.html",
     "8469c204f990df0473b9c0029c4a0de23007bfb0": "https://rg.ru/2025/12/12/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-15-po-21-dekabria.html",
-    "f001832e88a8bb385c4b2a4ab40cd8602a54dd37": "https://rg.ru/2025/12/12/inturisty-oformili-12-mln-elektronnyh-viz-v-rossiiu-s-avgusta-2023-goda.html"
+    "f001832e88a8bb385c4b2a4ab40cd8602a54dd37": "https://rg.ru/2025/12/12/inturisty-oformili-12-mln-elektronnyh-viz-v-rossiiu-s-avgusta-2023-goda.html",
+    "8eea53671d547a6253f7d4207297b6464333ce74": "https://rg.ru/2025/12/13/ekspert-kosareva-malenkie-kvartiry-stanut-nelikvidnymi.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -92502,6 +92505,7 @@
     "https://rg.ru/2025/12/12/reshetnikov-nuzhno-opredelit-vozmozhnosti-dlia-investicij-v-art-industriiu.html": "0fabf58679094bf5f20cc72cfeb0d437b8a7ebaddc6c0446d662c21c6faf923e",
     "https://rg.ru/2025/12/12/dtp-s-sim-chto-delaiut-vlasti-regionov-chtoby-snizit-chislo-avarij-s-samokatami.html": "ff872136e1d2225c28f3c2f8313dd616936b8695eebe78ff411f206aa9a9fb71",
     "https://rg.ru/2025/12/12/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-15-po-21-dekabria.html": "04478961ce1fd2deb1acd60892f64b35922cfa5aa9a38ddec23d8e291ff7dbae",
-    "https://rg.ru/2025/12/12/inturisty-oformili-12-mln-elektronnyh-viz-v-rossiiu-s-avgusta-2023-goda.html": "13b1d2a03d3a1efe769fc4c417beccaf541bcab1c5ff165ab74a25264998e1e0"
+    "https://rg.ru/2025/12/12/inturisty-oformili-12-mln-elektronnyh-viz-v-rossiiu-s-avgusta-2023-goda.html": "13b1d2a03d3a1efe769fc4c417beccaf541bcab1c5ff165ab74a25264998e1e0",
+    "https://rg.ru/2025/12/13/ekspert-kosareva-malenkie-kvartiry-stanut-nelikvidnymi.html": "3c0ceba1008a15ea5e78e8808e73bbec621565e08831494a856e661816ae3da4"
   }
 }
