@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 21 Dec 2025 12:35:04 GMT"
+      "Last-Modified": "Sun, 21 Dec 2025 15:17:16 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d840-z5FR9qg+vye4xLrBoQzgpXdwiXI\""
+      "ETag": "W/\"1d840-YFL9bRYTV6jwnz+rc3f/Lu95u9E\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"3c58f31lyh3se1\""
+      "ETag": "\"5qneuf2y4n3t6p\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -31640,6 +31640,27 @@
     },
     "https://rg.ru/2025/12/21/v-roskachestve-rasskazali-kak-pravilno-podobrat-vino-k-novogodnemu-stolu.html": {
       "ETag": "\"105rb6gquts1pwn\""
+    },
+    "https://rg.ru/2025/12/21/onishchenko-obiasnil-pochemu-rossiianam-ne-nuzhna-chetyrehdnevnaia-rabochaia-nedelia.html": {
+      "ETag": "\"920baa74sq1obp\""
+    },
+    "https://rg.ru/2025/12/21/rospotrebnadzor-svetlye-mandariny-skoree-vsego-imeiut-kislyj-vkus.html": {
+      "ETag": "\"raf16cdg5g1wqp\""
+    },
+    "https://rg.ru/2025/12/21/belarus-podderzhivaet-poisk-novyh-partnerov-eaes.html": {
+      "ETag": "\"11xocs7z8ow1uze\""
+    },
+    "https://rg.ru/2025/12/21/glava-varpe-zverev-otpusknaia-cena-krasnoj-ikry-sostavliaet-7-tysiach-rublej-za-kg.html": {
+      "ETag": "\"7jhr7hj0g11qxn\""
+    },
+    "https://rg.ru/2025/12/21/the-telegraph-rossijskie-atomnye-ledokoly-ne-imeiut-analogov-v-mire.html": {
+      "ETag": "\"1dn2xw98gy1uf4\""
+    },
+    "https://rg.ru/2025/12/21/reg-ufo/v-sochi-vyiavili-narusheniia-prav-passazhirov-pri-zaderzhkah-aviarejsov.html": {
+      "ETag": "\"rpx84yld901qdp\""
+    },
+    "https://rg.ru/2025/12/21/plius-piatnadcat.html": {
+      "ETag": "\"4opp2wx1061sgm\""
     }
   },
   "stats": {
@@ -39859,9 +39880,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3604bf2c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3604bf2710>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3604bf1d10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3604bf1310>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3604bf11d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-12-21T12:35:34.062247+00:00",
+    "last_run": "2025-12-21T15:17:07.157082+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -39874,56 +39900,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 764.5581250000077,
-        "connect_ms": 521.927355999992,
-        "response_ms": 1286.4854809999997,
+        "dns_ms": 1486.3806150000016,
+        "connect_ms": 97.87488799997845,
+        "response_ms": 1584.25550299998,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3605c23ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 414.68865499999197,
+        "connect_ms": 1048.2927240000208,
+        "response_ms": 1462.9813790000128,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 5692.830437999987,
-        "connect_ms": 0.0,
-        "response_ms": 5671.4257539999835,
+        "dns_ms": 1003.697394999989,
+        "connect_ms": 62.12558300001092,
+        "response_ms": 1065.822978,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3604bf11d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 385.32867699998974,
+        "connect_ms": 405.0718199999892,
+        "response_ms": 790.4004969999789,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "69c36f652e83299e7a228c7495df84236725ae366ef1546b7208a3f005765b27",
+    "https://ardexpert.ru/article": "ea844711a7e69e9684dbdc8d7ef091365996ed2ac228f0426347115c98c29c84",
     "https://www.gostinfo.ru/News/List": "88673ce4169292c55c0949619f29cc8e794d2dc26893271fc505306398f6a8f4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4163de5f2098f75fc7e7510d269e49a15e401768fea13182b611d659d1b6d6c8",
-    "https://eec.eaeunion.org/news/": "010ceb06424d889836df8d0ad35ebfb7cf328f759ba74d1ea0cae7aa070e0c0e",
+    "https://eec.eaeunion.org/news/": "b3e46dd28e39ed37594efd4fae91203e50bccbe2824dc3e8f5d8299816a21c4e",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "566b403b0c3af6b25554fc0b07d7b0a51db80b037fa3c083784e72ed59add6fc",
-    "https://www.metalinfo.ru/ru/news": "47f3a8feff37b3ffb9ce0e78e8d95eea61e8084e8d0ef1a4910d1581a70edf5d",
-    "https://www.pnp.ru/economics/": "ca541e26473a02b1475c9f82d9fd9380ef6e54ea3c39ade2502c7f5c04f5e0ec",
-    "https://erzrf.ru/news/": "4145118f5ec514860ee5e0de822946db888914017ec2301bd6ec2f97debeb242",
-    "https://ria-stk.ru/news/vse-novosti.php": "5fa8ff6d66665099dd92428d4c1ed30f2182448392dab06ec160758d267ec65b",
-    "http://government.ru/news/": "ed85e0d7f131b3801ea75bf8a49e578c5104fede25b892649e542181994e3a96",
-    "https://stroygaz.ru/news/": "65c50ec0ebd632299bb1f6a408d84714dcbcb6d7e2aeeaa70ea7f18d0a498060",
-    "https://realty.ria.ru/lenta/": "4184588efb710eea478e881ed056c69025c979c8b06868b013af77fb3b1f3919",
-    "https://rg.ru/tema/ekonomika": "1d502739bc28cfebfbdb3802679afeb26587528e23b63a43a6ff8dce0fdfda6c",
-    "http://ancb.ru/publication": "e97aa47b2e2e5b369d494797334894f213a15046de9330c7e52ce5b8ebe29509",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "c027f97d79586980df54bfa16e6ecd98571da8e1afa2ff0aaa8740b87020d713",
+    "https://www.metalinfo.ru/ru/news": "53776ce7b045ae4dd4827f121aa4ea1bb41fc89f5cc15880aceb0ac19d09b2cf",
+    "https://www.pnp.ru/economics/": "76d0bfe0d4ac5a94389ccf213a6e478e5c0fc144eccfca4cf8a53b93ed96721b",
+    "https://erzrf.ru/news/": "da367fd8201b1976e0d91773c9ed1ca6d0e0c19f09984d079e37e266725fc703",
+    "https://ria-stk.ru/news/vse-novosti.php": "564afd9d9475e81d4191fbb2c5b7a1822e1b3860ea26c37c0d2436f55044f04c",
+    "http://government.ru/news/": "6c61599542f1080d9db8e154f20b7c2f3313d3cdb01a6214a04d440737399b0f",
+    "https://stroygaz.ru/news/": "5d850a1003a9b97da81eaac570a8c1c6b14b79159073974c55a89b1ddf76075e",
+    "https://realty.ria.ru/lenta/": "123e3d57b1b4b4f2419581aa7326f7c8db3f5234ed735292b777cdafb7611247",
+    "https://rg.ru/tema/ekonomika": "5ade4006f6296ffed8d47b6f7705955505eb038bd9546027bfa0e8a96a820332",
+    "http://ancb.ru/publication": "f7446fdfebeefb26f159c1108344bed9d0fba5d2beef8bc150510c7adbd8eabc",
     "https://notim.ru": "eb8b8e24a3fd1c207c4450c669fb11c811c6337b4979bb6cd8acca1e1c91c249",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -40227,6 +40253,13 @@
       "https://realty.ria.ru/20251219/vtb-2063133933.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/21/onishchenko-obiasnil-pochemu-rossiianam-ne-nuzhna-chetyrehdnevnaia-rabochaia-nedelia.html",
+      "https://rg.ru/2025/12/21/rospotrebnadzor-svetlye-mandariny-skoree-vsego-imeiut-kislyj-vkus.html",
+      "https://rg.ru/2025/12/21/belarus-podderzhivaet-poisk-novyh-partnerov-eaes.html",
+      "https://rg.ru/2025/12/21/glava-varpe-zverev-otpusknaia-cena-krasnoj-ikry-sostavliaet-7-tysiach-rublej-za-kg.html",
+      "https://rg.ru/2025/12/21/the-telegraph-rossijskie-atomnye-ledokoly-ne-imeiut-analogov-v-mire.html",
+      "https://rg.ru/2025/12/21/reg-ufo/v-sochi-vyiavili-narusheniia-prav-passazhirov-pri-zaderzhkah-aviarejsov.html",
+      "https://rg.ru/2025/12/21/plius-piatnadcat.html",
       "https://rg.ru/2025/12/21/v-gosdume-rasskazali-kak-izmeniatsia-pensii-v-2026-godu.html",
       "https://rg.ru/2025/12/21/v-rossii-razrabotaiut-mehanizm-zashchity-semej-ot-lisheniia-posobij.html",
       "https://rg.ru/2025/12/21/v-op-napomnili-kak-oplachivaetsia-rabota-v-prazdniki.html",
@@ -40251,14 +40284,7 @@
       "https://rg.ru/2025/12/20/rossijskie-vina-sniali-s-konkursa-v-san-francisko-iz-za-sankcij.html",
       "https://rg.ru/2025/12/20/reg-dfo/v-rossii-zarplaty-bystree-vsego-rastut-na-kamchatke-i-chukotke.html",
       "https://rg.ru/2025/12/20/reg-skfo/kakie-navyki-chashche-vsego-iskali-rabotodateli-stavropolia-v-kandidatah-na-vakansii.html",
-      "https://rg.ru/2025/12/20/red-wings-rezervnyj-bort-vyvezet-zastriavshih-na-shri-lanke-turistov-21-dekabria.html",
       "https://rg.ru/2025/12/20/reg-ufo/v-astrahani-uvelichilos-chislo-turistov-nesmotria-na-zapret-liubitelskoj-rybalki.html",
-      "https://rg.ru/2025/12/20/reg-szfo/v-arhangelskoj-oblasti-vosstanovili-dvizhenie-poezdov-posle-zaderzhki.html",
-      "https://rg.ru/2025/12/20/reg-skfo/v-novogodniuiu-noch-na-elbruse-projdet-shou-ratrakov.html",
-      "https://rg.ru/2025/12/20/v-brestskoj-kreposti-gotoviat-novyj-ekskursionnyj-proekt.html",
-      "https://rg.ru/2025/12/20/reg-ufo/pod-astrahaniu-dlia-vyiavleniia-sorniakov-na-selhozpoliah-ispolzuiut-bpla.html",
-      "https://rg.ru/2025/12/20/postavki-rossijskogo-spg-v-kitaj-vyrosli-v-noiabre-na-24.html",
-      "https://rg.ru/2025/12/20/bolee-14-tysiachi-derevev-vysadiat-na-territoriiah-obnovlennyh-shkol-v-moskve.html",
       "https://rg.ru/2025/12/19/iek-group-anonsiruet-vypusk-novoj-serii-elektroustanovochnyh-izdelij-flite.html",
       "https://rg.ru/2025/12/18/podvedeny-itogi-vserossijskogo-konkursa-na-razrabotku-koncepcii-reekspozicii-livadijskogo-dvorca-muzeia.html",
       "https://rg.ru/2025/12/17/blagotvoritelnyj-fond-zapustil-novogodnij-proekt-yolochka-gori.html"
@@ -53513,7 +53539,13 @@
     "90e8abc2ec4e076867de51103a51e1c1ebd126c66eb043b64104a3537ed6f8a3": "2025-12-21T15:35:00+03:00",
     "919f5d98f3084044a38e210a54ea477ce44ee7f78fd1f5b0b56ef9e0bc0d7164": "2025-12-21T15:35:00+03:00",
     "f3d9593e5e3a5ad26398cfb03489f200b940420f7a4d6c968b79eeae9f152396": "2025-12-21T15:35:00+03:00",
-    "c7d64daf564633acf4357572c517371a39f1aacba89d0a06e8be1ac12832635b": "2025-12-21T15:35:00+03:00"
+    "c7d64daf564633acf4357572c517371a39f1aacba89d0a06e8be1ac12832635b": "2025-12-21T15:35:00+03:00",
+    "a29bef2c1c41b3ae13d17982b1114a40893174a102db9c6328f4055bfc03c4e0": "2025-12-21T18:16:00+03:00",
+    "887a26b43e8143d1f0fb4d69e32b1182a8fc49cf39f0c692b46716ef65488c62": "2025-12-21T18:16:00+03:00",
+    "cf407a0e587858fef4c34beef95615cb11548ea81af72258fbae19ce24609050": "2025-12-21T18:17:00+03:00",
+    "a5769dab275b6bca4d9496ee80de54af922a5ac6a5fa3dd0fa189a11c514bf3a": "2025-12-21T18:17:00+03:00",
+    "372cfa8ce6479f09102b3630148513fad0e36cada9ff209d9fa509116c47f544": "2025-12-21T18:17:00+03:00",
+    "2db6577bc0acf40235d7dcb0352711cf6d8c5d03e6f89d56cb8cd480e33f70aa": "2025-12-21T18:17:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -53544,8 +53576,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3605c07ce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1766320406.1700156
       },
       "warmup_done": false,
@@ -53555,31 +53587,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "CAyEqgQTf3Qa0kZE",
+          "value": "D2baCwgdd0e1KTSL",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766321664
+          "expires": 1766331396
         },
         {
           "name": "__ddg10_",
-          "value": "1766320464",
+          "value": "1766330196",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766321664
+          "expires": 1766331396
         },
         {
           "name": "__ddg9_",
-          "value": "20.169.75.200",
+          "value": "68.220.63.3",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766321664
+          "expires": 1766331396
+        },
+        {
+          "name": "__ddg1_",
+          "value": "WydrXtvvNxAkUtzdIwlv",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1797866196
         },
         {
           "name": "PHPSESSID",
-          "value": "5449b752949caa5f80f2693859d79907",
+          "value": "0311188bd91b980219257570047bf137",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -53606,11 +53646,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "xxI4fBZKEkHDdqvu350vKhODV3yhFjK1",
+          "value": "AAD5pMesJCjFvZtb1yx2uREhaKR00Kf6",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766309132
+          "expires": 1766341002
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -53618,12 +53658,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1797402332
+          "expires": 1797434202
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3604bf1310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1766320498.1384823
       },
       "warmup_done": false,
@@ -69887,7 +69927,14 @@
     "https://rg.ru/2025/12/21/v-rossii-razrabotaiut-mehanizm-zashchity-semej-ot-lisheniia-posobij.html": "https://rg.ru/2025/12/21/v-rossii-razrabotaiut-mehanizm-zashchity-semej-ot-lisheniia-posobij.html",
     "https://rg.ru/2025/12/21/v-op-napomnili-kak-oplachivaetsia-rabota-v-prazdniki.html": "https://rg.ru/2025/12/21/v-op-napomnili-kak-oplachivaetsia-rabota-v-prazdniki.html",
     "https://rg.ru/2025/12/21/eksport-russkoj-vodki-v-kitaj-vyros-v-17-raza.html": "https://rg.ru/2025/12/21/eksport-russkoj-vodki-v-kitaj-vyros-v-17-raza.html",
-    "https://rg.ru/2025/12/21/v-roskachestve-rasskazali-kak-pravilno-podobrat-vino-k-novogodnemu-stolu.html": "https://rg.ru/2025/12/21/v-roskachestve-rasskazali-kak-pravilno-podobrat-vino-k-novogodnemu-stolu.html"
+    "https://rg.ru/2025/12/21/v-roskachestve-rasskazali-kak-pravilno-podobrat-vino-k-novogodnemu-stolu.html": "https://rg.ru/2025/12/21/v-roskachestve-rasskazali-kak-pravilno-podobrat-vino-k-novogodnemu-stolu.html",
+    "https://rg.ru/2025/12/21/onishchenko-obiasnil-pochemu-rossiianam-ne-nuzhna-chetyrehdnevnaia-rabochaia-nedelia.html": "https://rg.ru/2025/12/21/onishchenko-obiasnil-pochemu-rossiianam-ne-nuzhna-chetyrehdnevnaia-rabochaia-nedelia.html",
+    "https://rg.ru/2025/12/21/rospotrebnadzor-svetlye-mandariny-skoree-vsego-imeiut-kislyj-vkus.html": "https://rg.ru/2025/12/21/rospotrebnadzor-svetlye-mandariny-skoree-vsego-imeiut-kislyj-vkus.html",
+    "https://rg.ru/2025/12/21/belarus-podderzhivaet-poisk-novyh-partnerov-eaes.html": "https://rg.ru/2025/09/29/grigorenko-eksport-rossijskih-it-reshenij-v-respubliku-belarus-vyros-na-23.html",
+    "https://rg.ru/2025/12/21/glava-varpe-zverev-otpusknaia-cena-krasnoj-ikry-sostavliaet-7-tysiach-rublej-za-kg.html": "https://rg.ru/2025/12/21/glava-varpe-zverev-otpusknaia-cena-krasnoj-ikry-sostavliaet-7-tysiach-rublej-za-kg.html",
+    "https://rg.ru/2025/12/21/the-telegraph-rossijskie-atomnye-ledokoly-ne-imeiut-analogov-v-mire.html": "https://rg.ru/2025/12/21/the-telegraph-rossijskie-atomnye-ledokoly-ne-imeiut-analogov-v-mire.html",
+    "https://rg.ru/2025/12/21/reg-ufo/v-sochi-vyiavili-narusheniia-prav-passazhirov-pri-zaderzhkah-aviarejsov.html": "https://rg.ru/2025/12/21/reg-ufo/v-sochi-vyiavili-narusheniia-prav-passazhirov-pri-zaderzhkah-aviarejsov.html",
+    "https://rg.ru/2025/12/21/plius-piatnadcat.html": "https://rg.ru/2025/12/21/plius-piatnadcat.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -83424,7 +83471,13 @@
     "649a98fc86b6a62d24b0e49d948b35664c052a5d": "https://rg.ru/2025/12/21/v-rossii-razrabotaiut-mehanizm-zashchity-semej-ot-lisheniia-posobij.html",
     "e73ab590d8d7f834f6c8741590854976f548461c": "https://rg.ru/2025/12/21/v-op-napomnili-kak-oplachivaetsia-rabota-v-prazdniki.html",
     "08ea778a114c17aa0a98d0bb49b1855567940afe": "https://rg.ru/2025/12/21/eksport-russkoj-vodki-v-kitaj-vyros-v-17-raza.html",
-    "6bb351501ab36d11918e8829e46fcba670b64d66": "https://rg.ru/2025/12/21/v-roskachestve-rasskazali-kak-pravilno-podobrat-vino-k-novogodnemu-stolu.html"
+    "6bb351501ab36d11918e8829e46fcba670b64d66": "https://rg.ru/2025/12/21/v-roskachestve-rasskazali-kak-pravilno-podobrat-vino-k-novogodnemu-stolu.html",
+    "6bde731d8ecdeaba4fd3535a2400ffd7f28090fc": "https://rg.ru/2025/12/21/onishchenko-obiasnil-pochemu-rossiianam-ne-nuzhna-chetyrehdnevnaia-rabochaia-nedelia.html",
+    "f82c9e0d4332ab675e0049292f3975d8dd7c2ada": "https://rg.ru/2025/12/21/rospotrebnadzor-svetlye-mandariny-skoree-vsego-imeiut-kislyj-vkus.html",
+    "6b1975ef9e3259537b4360fab19801f396bc83c9": "https://rg.ru/2025/12/21/glava-varpe-zverev-otpusknaia-cena-krasnoj-ikry-sostavliaet-7-tysiach-rublej-za-kg.html",
+    "ce804946302b98757294e018902001c702dee3af": "https://rg.ru/2025/12/21/the-telegraph-rossijskie-atomnye-ledokoly-ne-imeiut-analogov-v-mire.html",
+    "f4d818d14a6749a2b92b77b13b2478932f4200cf": "https://rg.ru/2025/12/21/reg-ufo/v-sochi-vyiavili-narusheniia-prav-passazhirov-pri-zaderzhkah-aviarejsov.html",
+    "49c85075c22193c21aaf4be9ccd432a7b0ec0347": "https://rg.ru/2025/12/21/plius-piatnadcat.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -101569,6 +101622,13 @@
     "https://rg.ru/2025/12/21/v-rossii-razrabotaiut-mehanizm-zashchity-semej-ot-lisheniia-posobij.html": "90e8abc2ec4e076867de51103a51e1c1ebd126c66eb043b64104a3537ed6f8a3",
     "https://rg.ru/2025/12/21/v-op-napomnili-kak-oplachivaetsia-rabota-v-prazdniki.html": "919f5d98f3084044a38e210a54ea477ce44ee7f78fd1f5b0b56ef9e0bc0d7164",
     "https://rg.ru/2025/12/21/eksport-russkoj-vodki-v-kitaj-vyros-v-17-raza.html": "f3d9593e5e3a5ad26398cfb03489f200b940420f7a4d6c968b79eeae9f152396",
-    "https://rg.ru/2025/12/21/v-roskachestve-rasskazali-kak-pravilno-podobrat-vino-k-novogodnemu-stolu.html": "c7d64daf564633acf4357572c517371a39f1aacba89d0a06e8be1ac12832635b"
+    "https://rg.ru/2025/12/21/v-roskachestve-rasskazali-kak-pravilno-podobrat-vino-k-novogodnemu-stolu.html": "c7d64daf564633acf4357572c517371a39f1aacba89d0a06e8be1ac12832635b",
+    "https://rg.ru/2025/12/21/onishchenko-obiasnil-pochemu-rossiianam-ne-nuzhna-chetyrehdnevnaia-rabochaia-nedelia.html": "a29bef2c1c41b3ae13d17982b1114a40893174a102db9c6328f4055bfc03c4e0",
+    "https://rg.ru/2025/12/21/rospotrebnadzor-svetlye-mandariny-skoree-vsego-imeiut-kislyj-vkus.html": "887a26b43e8143d1f0fb4d69e32b1182a8fc49cf39f0c692b46716ef65488c62",
+    "https://rg.ru/2025/12/21/belarus-podderzhivaet-poisk-novyh-partnerov-eaes.html": "27a6c790716a02beafa826026a4d59b7cbbaa527ed588250ed9662c286a48566",
+    "https://rg.ru/2025/12/21/glava-varpe-zverev-otpusknaia-cena-krasnoj-ikry-sostavliaet-7-tysiach-rublej-za-kg.html": "cf407a0e587858fef4c34beef95615cb11548ea81af72258fbae19ce24609050",
+    "https://rg.ru/2025/12/21/the-telegraph-rossijskie-atomnye-ledokoly-ne-imeiut-analogov-v-mire.html": "a5769dab275b6bca4d9496ee80de54af922a5ac6a5fa3dd0fa189a11c514bf3a",
+    "https://rg.ru/2025/12/21/reg-ufo/v-sochi-vyiavili-narusheniia-prav-passazhirov-pri-zaderzhkah-aviarejsov.html": "372cfa8ce6479f09102b3630148513fad0e36cada9ff209d9fa509116c47f544",
+    "https://rg.ru/2025/12/21/plius-piatnadcat.html": "2db6577bc0acf40235d7dcb0352711cf6d8c5d03e6f89d56cb8cd480e33f70aa"
   }
 }
