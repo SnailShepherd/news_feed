@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 22 Dec 2025 01:25:11 GMT"
+      "Last-Modified": "Mon, 22 Dec 2025 04:05:53 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d67d-4pPSrgRIP1r0I91L3qUsJZ7Mdlw\""
+      "ETag": "W/\"1d709-PNTD47PaQAKVyf3rtp3MtUJAm68\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"3bg50n46b33rvv\""
+      "ETag": "\"ea56y3qtsk3ye5\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -31744,6 +31744,24 @@
     },
     "https://rg.ru/2025/12/22/deputat-steniakina-sleduiushchaia-rabochaia-nedelia-v-rossii-budet-dvuhdnevnoj.html": {
       "ETag": "\"14rasues4p11p9x\""
+    },
+    "https://ardexpert.ru/article/28604": {},
+    "https://www.metalinfo.ru/ru/news/179794": {},
+    "https://www.metalinfo.ru/ru/news/179772": {},
+    "https://www.metalinfo.ru/ru/news/179785": {},
+    "https://www.metalinfo.ru/ru/news/179790": {},
+    "https://www.metalinfo.ru/ru/news/179769": {},
+    "https://www.metalinfo.ru/ru/news/179801": {},
+    "https://www.metalinfo.ru/ru/news/179804": {},
+    "https://www.metalinfo.ru/ru/news/179807": {},
+    "https://realty.ria.ru/20251222/kvartiry-2063370743.html": {
+      "Last-Modified": "Mon, 22 Dec 2025 02:00:01 GMT"
+    },
+    "https://rg.ru/2025/12/22/moriaki-podvodniki-i-korabely-pozdravliaiut-ckb-rubin-s-iubileem.html": {
+      "ETag": "\"13139jz11l92ubs\""
+    },
+    "https://rg.ru/2025/12/22/reg-szfo/den-energetika-solnce-veter-i-korporativnaia-stipendiia.html": {
+      "ETag": "\"12yeyb69tv7233p\""
     }
   },
   "stats": {
@@ -40012,9 +40030,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f517ebf3c50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f517ebf3d90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f517ebf3b10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f517ebf34d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f517ebf3390>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-12-22T01:26:47.349276+00:00",
+    "last_run": "2025-12-22T04:05:25.657461+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -40027,56 +40050,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 730.376289999981,
-        "connect_ms": 865.4070900000193,
-        "response_ms": 1595.7833800000003,
+        "dns_ms": 374.40327599998113,
+        "connect_ms": 874.0524920000325,
+        "response_ms": 1248.4557680000137,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f517fc0fe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 117.88768499999946,
+        "connect_ms": 1181.9344269999874,
+        "response_ms": 1299.8221119999869,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 1596.2429369999995,
+        "dns_ms": 7819.746025,
         "connect_ms": 0.0,
-        "response_ms": 832.6641510000172,
+        "response_ms": 4949.369436000012,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f517ebf3390>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 247.95172399998933,
+        "connect_ms": 317.9902000000254,
+        "response_ms": 565.9419240000148,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "d190a121d8b29f8b19080f3a7514a2d65a11cba46c8c7ecd4396e7deec0b4d25",
+    "https://ardexpert.ru/article": "7e91298e0b7b89646e952084d70830d77827b18fb3d2145e0f58c211b16df200",
     "https://www.gostinfo.ru/News/List": "88673ce4169292c55c0949619f29cc8e794d2dc26893271fc505306398f6a8f4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4163de5f2098f75fc7e7510d269e49a15e401768fea13182b611d659d1b6d6c8",
-    "https://eec.eaeunion.org/news/": "683a1e2547485ad6a9caf69fc0f7ea5ba0385626f5ae2f9831cddaa94cd05ddc",
+    "https://eec.eaeunion.org/news/": "1118a0f22625ff889f5ec92dc115e1780f55596c66c315d310e91532c1c6a4c5",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "be6dbd16f9c360f08e8930ffc7d075e4252f0633e057ba63fc31f68f5cad2383",
-    "https://www.metalinfo.ru/ru/news": "47f3a8feff37b3ffb9ce0e78e8d95eea61e8084e8d0ef1a4910d1581a70edf5d",
-    "https://www.pnp.ru/economics/": "393431fcb95317ce930c114101329994a9f161e6d3bdae8f56073ce4dc24e208",
-    "https://erzrf.ru/news/": "a8d7eeb43231fc45ced8d9df5ca22debe8da0d24f8d42d943fdeb7403a575c67",
-    "https://ria-stk.ru/news/vse-novosti.php": "e4789f76d33ac294e1937130aaef1f70839bb635ed955acab7c034cef917864f",
-    "http://government.ru/news/": "6b790c34f74ec199abdc6236078208724de41e7d55e13a6cff190cbf4e9bc772",
-    "https://stroygaz.ru/news/": "5d20d9a708304d7258f49ef6449d680c4e8c5b94ab31ee9b88f6f005edc38a8e",
-    "https://realty.ria.ru/lenta/": "64e949aa1084e6c6198d0b28d097553f84f4a69bcbee261a9d129bd2f3633f17",
-    "https://rg.ru/tema/ekonomika": "41249d245f7056763dd2e9ab1ae85c485072482a2b759817e18facb278aad490",
-    "http://ancb.ru/publication": "cceb40e53f5884d44c9ed3c3eb866d585f9a029796e3eb757530c9fa2483c1e0",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "a2bdac2d23619c4c6ff5ed62d3abfce2074178fa274befc7d884e7c3b2700806",
+    "https://www.metalinfo.ru/ru/news": "24895cc72873a8509b413d0bde804d4ff80d57322dc274ca97979bcb6a17b974",
+    "https://www.pnp.ru/economics/": "07cf7d8be61906442d7dcfb91716a65bcc9fd273c6a4326b5837b2d5beefbf76",
+    "https://erzrf.ru/news/": "b764efd034862de8c6dca3275899240bda52521bae05c6baffc6d1d8d8423769",
+    "https://ria-stk.ru/news/vse-novosti.php": "79933cbc0d0d73a37966dd63adb6e22638996012c2dcfdb27b78edab12436e11",
+    "http://government.ru/news/": "8d6c70bd55c9b1032969b0d973b4a0f56d93f214ab9ea0bbbf74e3ca962d4fe4",
+    "https://stroygaz.ru/news/": "913474b574fcfa6ed12db008c8355083a693e8621d07683111bce5ccdaa7ea88",
+    "https://realty.ria.ru/lenta/": "00756d336bf3f30a7ebfa7350c09896a3e6937be63bbd105bd08d33fe41909eb",
+    "https://rg.ru/tema/ekonomika": "f3bfbb31a7471e3dd84bb7afd3df9a9f5416da62f4699f868e71868f929c79ca",
+    "http://ancb.ru/publication": "be4686c4047e2ddeb7c48186ed0d7ebd919ef1f299a18955e4cc721543d61bc6",
     "https://notim.ru": "eb8b8e24a3fd1c207c4450c669fb11c811c6337b4979bb6cd8acca1e1c91c249",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -40116,6 +40139,7 @@
       "https://notim.ru/news-partners/"
     ],
     "АРД: статьи": [
+      "https://ardexpert.ru/article/28604",
       "https://ardexpert.ru/article/28602",
       "https://ardexpert.ru/article/28601",
       "https://ardexpert.ru/article/28600",
@@ -40128,8 +40152,7 @@
       "https://ardexpert.ru/article/28590",
       "https://ardexpert.ru/article/28589",
       "https://ardexpert.ru/article/28588",
-      "https://ardexpert.ru/article/28587",
-      "https://ardexpert.ru/article/28586"
+      "https://ardexpert.ru/article/28587"
     ],
     "Гостинформ": [
       "https://www.gostinfo.ru/News/Details/2054",
@@ -40210,6 +40233,14 @@
       "https://www.interfax-russia.ru/realty/news/bandu-chernyh-rieltorov-budut-sudit-v-smolenskoy-oblasti"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/179794",
+      "https://www.metalinfo.ru/ru/news/179772",
+      "https://www.metalinfo.ru/ru/news/179785",
+      "https://www.metalinfo.ru/ru/news/179790",
+      "https://www.metalinfo.ru/ru/news/179769",
+      "https://www.metalinfo.ru/ru/news/179801",
+      "https://www.metalinfo.ru/ru/news/179804",
+      "https://www.metalinfo.ru/ru/news/179807",
       "https://www.metalinfo.ru/ru/news/179800",
       "https://www.metalinfo.ru/ru/news/179779",
       "https://www.metalinfo.ru/ru/news/179797",
@@ -40221,15 +40252,7 @@
       "https://www.metalinfo.ru/ru/news/179781",
       "https://www.metalinfo.ru/ru/news/179791",
       "https://www.metalinfo.ru/ru/news/179782",
-      "https://www.metalinfo.ru/ru/news/179783",
-      "https://www.metalinfo.ru/ru/news/179716",
-      "https://www.metalinfo.ru/ru/news/179789",
-      "https://www.metalinfo.ru/ru/news/179788",
-      "https://www.metalinfo.ru/ru/news/179786",
-      "https://www.metalinfo.ru/ru/news/179764",
-      "https://www.metalinfo.ru/ru/news/179780",
-      "https://www.metalinfo.ru/ru/news/179777",
-      "https://www.metalinfo.ru/ru/news/179746"
+      "https://www.metalinfo.ru/ru/news/179783"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -40358,6 +40381,7 @@
       "https://stroygaz.ru/news/dwelling/pochti-polovina-predlozheniy-premialnogo-zhilya-moskvy-prikhoditsya-na-neboskreby-novostroyki/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20251222/kvartiry-2063370743.html",
       "https://realty.ria.ru/20251222/sdelki-2063136532.html",
       "https://realty.ria.ru/20251220/sdelka-2063564201.html",
       "https://realty.ria.ru/20251220/khusnullin-2063563606.html",
@@ -40376,10 +40400,11 @@
       "https://realty.ria.ru/20251219/sfn-2063256588.html",
       "https://realty.ria.ru/20251219/sovfed-2063242636.html",
       "https://realty.ria.ru/20251219/putin-2063238282.html",
-      "https://realty.ria.ru/20251219/reshenie-2063220188.html",
-      "https://realty.ria.ru/20251219/sutochnoe-2063134146.html"
+      "https://realty.ria.ru/20251219/reshenie-2063220188.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/22/moriaki-podvodniki-i-korabely-pozdravliaiut-ckb-rubin-s-iubileem.html",
+      "https://rg.ru/2025/12/22/reg-szfo/den-energetika-solnce-veter-i-korporativnaia-stipendiia.html",
       "https://rg.ru/2025/12/22/deputat-gd-govyrin-raskryl-razmer-vyplat-semiam-s-detmi-v-2026-godu.html",
       "https://rg.ru/2025/12/22/analitik-kiseleva-napomnila-ob-indeksacii-pensij-v-2026-godu.html",
       "https://rg.ru/2025/12/22/ria-novosti-kitaj-v-noiabre-vpervye-postavil-syr-v-rf.html",
@@ -40409,8 +40434,6 @@
       "https://rg.ru/2025/12/21/the-telegraph-rossijskie-atomnye-ledokoly-ne-imeiut-analogov-v-mire.html",
       "https://rg.ru/2025/12/21/reg-ufo/v-sochi-vyiavili-narusheniia-prav-passazhirov-pri-zaderzhkah-aviarejsov.html",
       "https://rg.ru/2025/12/21/plius-piatnadcat.html",
-      "https://rg.ru/2025/12/21/v-gosdume-rasskazali-kak-izmeniatsia-pensii-v-2026-godu.html",
-      "https://rg.ru/2025/12/21/v-rossii-razrabotaiut-mehanizm-zashchity-semej-ot-lisheniia-posobij.html",
       "https://rg.ru/2025/12/21/eksport-russkoj-vodki-v-kitaj-vyros-v-17-raza.html",
       "https://rg.ru/2025/12/19/iek-group-anonsiruet-vypusk-novoj-serii-elektroustanovochnyh-izdelij-flite.html",
       "https://rg.ru/2025/12/18/podvedeny-itogi-vserossijskogo-konkursa-na-razrabotku-koncepcii-reekspozicii-livadijskogo-dvorca-muzeia.html",
@@ -53709,7 +53732,19 @@
     "fdfc33fcace53212a44330f5351ca37d34ba49367d3f6506cb5e8bc88d3e5666": "2025-12-22T04:26:00+03:00",
     "809ea0a1894ee54ea331ba6734eb006ca54e32ddb9321b9b0c0376184463266c": "2025-12-22T04:26:00+03:00",
     "b28dfdb1d85dacfb8ebbbe1635fc5f569a9c1c3323f54c13bff8435a156ce5e2": "2025-12-22T04:26:00+03:00",
-    "d972c93d08d20c17b1c4305db9bfe14c0561af16d337993cb66d4535af7affe7": "2025-12-22T04:26:00+03:00"
+    "d972c93d08d20c17b1c4305db9bfe14c0561af16d337993cb66d4535af7affe7": "2025-12-22T04:26:00+03:00",
+    "e94ee16778b32de6fbd03694c01697dae0f186e70192629c84ba99dc86bcd8aa": "2025-12-22T07:03:00+03:00",
+    "929e7fce6ab6c294b5a7a29b0730025ecf34a91e945f43ea53dec9f496223f96": "2025-12-22T07:04:00+03:00",
+    "120999afe59ede1ea6bc97d05793668029c55b995aa0626ad10cc3e7761bf073": "2025-12-22T07:04:00+03:00",
+    "26dcdb939ae2062758fbf47e3c42a929ae0278ba5aaf7afa10c448d1463f8d9a": "2025-12-22T07:04:00+03:00",
+    "561092a2258f846fbc05694d2aff820d0616abf3a662d51a74fd9c939b464622": "2025-12-22T07:04:00+03:00",
+    "14cf59a2e4e54a5be6886156cc03a8416c30d8a80dcbef59b0ed7b52e3cf0355": "2025-12-22T07:04:00+03:00",
+    "8dd4c163ffa004078b2656951946578c07554dbd7496431d5824ac956544e296": "2025-12-22T07:04:00+03:00",
+    "87c7d61a270deb73b77de0edcfd7d86024da7c20e07315caa9b1e25b47dd2b36": "2025-12-22T07:04:00+03:00",
+    "b0df97eee1366cf212420d13682a64e1171dc89b12169aa8535c06640962f3be": "2025-12-22T07:04:00+03:00",
+    "e3c63b879b9e498317866e47d85a5b9f19c48ef00b65c655344d432412932265": "2025-12-22T07:05:00+03:00",
+    "a6161a77de68be943a55d01012152944d0a7befbe9db3e0166a5cd16a061d1a5": "2025-12-22T07:05:00+03:00",
+    "507498bf485823caa2aac1cf137e22c1584e258f0ea8663e2ec347a83d69415d": "2025-12-22T07:05:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -53740,8 +53775,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f517ead83e0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1766366623.6621745
       },
       "warmup_done": false,
@@ -53751,31 +53786,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "7NyBBsqCB4T2A2zf",
+          "value": "e8JwsvpiEkOoWPCW",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766367871
+          "expires": 1766377513
         },
         {
           "name": "__ddg10_",
-          "value": "1766366671",
+          "value": "1766376313",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766367871
+          "expires": 1766377513
         },
         {
           "name": "__ddg9_",
-          "value": "52.159.227.193",
+          "value": "4.236.173.18",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766367871
+          "expires": 1766377513
+        },
+        {
+          "name": "__ddg1_",
+          "value": "GWo5PRWxXubO22sdVuUb",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1797912313
         },
         {
           "name": "PHPSESSID",
-          "value": "2e9c0d5e56a4c9136b4dc5b0a5e442e0",
+          "value": "4c5086f8c73d1e831abc20c1ba2e0641",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -53802,11 +53845,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "ieCR6ehlUh8SYCWiLYan8hspUMhFdPv2",
+          "value": "6BqAIuDeGACtqevKEHbTbl4Seb1IjYyQ",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766352263
+          "expires": 1766387115
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -53814,12 +53857,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1797445463
+          "expires": 1797480315
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f517ebf34d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1766366704.1659756
       },
       "warmup_done": false,
@@ -70127,7 +70170,27 @@
     "https://rg.ru/2025/12/22/deputat-gd-govyrin-raskryl-razmer-vyplat-semiam-s-detmi-v-2026-godu.html": "https://rg.ru/2025/12/22/deputat-gd-govyrin-raskryl-razmer-vyplat-semiam-s-detmi-v-2026-godu.html",
     "https://rg.ru/2025/12/22/analitik-kiseleva-napomnila-ob-indeksacii-pensij-v-2026-godu.html": "https://rg.ru/2025/12/22/analitik-kiseleva-napomnila-ob-indeksacii-pensij-v-2026-godu.html",
     "https://rg.ru/2025/12/22/ria-novosti-kitaj-v-noiabre-vpervye-postavil-syr-v-rf.html": "https://rg.ru/2025/12/22/ria-novosti-kitaj-v-noiabre-vpervye-postavil-syr-v-rf.html",
-    "https://rg.ru/2025/12/22/deputat-steniakina-sleduiushchaia-rabochaia-nedelia-v-rossii-budet-dvuhdnevnoj.html": "https://rg.ru/2025/12/22/deputat-steniakina-sleduiushchaia-rabochaia-nedelia-v-rossii-budet-dvuhdnevnoj.html"
+    "https://rg.ru/2025/12/22/deputat-steniakina-sleduiushchaia-rabochaia-nedelia-v-rossii-budet-dvuhdnevnoj.html": "https://rg.ru/2025/12/22/deputat-steniakina-sleduiushchaia-rabochaia-nedelia-v-rossii-budet-dvuhdnevnoj.html",
+    "https://ardexpert.ru/article/28604": "https://ardexpert.ru/article/28604",
+    "https://www.metalinfo.ru/ru/news/179794": "http://www.metalinfo.ru/ru/news/179794",
+    "http://www.metalinfo.ru/ru/news/179794": "http://www.metalinfo.ru/ru/news/179794",
+    "https://www.metalinfo.ru/ru/news/179772": "http://www.metalinfo.ru/ru/news/179772",
+    "http://www.metalinfo.ru/ru/news/179772": "http://www.metalinfo.ru/ru/news/179772",
+    "https://www.metalinfo.ru/ru/news/179785": "http://www.metalinfo.ru/ru/news/179785",
+    "http://www.metalinfo.ru/ru/news/179785": "http://www.metalinfo.ru/ru/news/179785",
+    "https://www.metalinfo.ru/ru/news/179790": "http://www.metalinfo.ru/ru/news/179790",
+    "http://www.metalinfo.ru/ru/news/179790": "http://www.metalinfo.ru/ru/news/179790",
+    "https://www.metalinfo.ru/ru/news/179769": "http://www.metalinfo.ru/ru/news/179769",
+    "http://www.metalinfo.ru/ru/news/179769": "http://www.metalinfo.ru/ru/news/179769",
+    "https://www.metalinfo.ru/ru/news/179801": "http://www.metalinfo.ru/ru/news/179801",
+    "http://www.metalinfo.ru/ru/news/179801": "http://www.metalinfo.ru/ru/news/179801",
+    "https://www.metalinfo.ru/ru/news/179804": "http://www.metalinfo.ru/ru/news/179804",
+    "http://www.metalinfo.ru/ru/news/179804": "http://www.metalinfo.ru/ru/news/179804",
+    "https://www.metalinfo.ru/ru/news/179807": "http://www.metalinfo.ru/ru/news/179807",
+    "http://www.metalinfo.ru/ru/news/179807": "http://www.metalinfo.ru/ru/news/179807",
+    "https://realty.ria.ru/20251222/kvartiry-2063370743.html": "https://realty.ria.ru/20251222/kvartiry-2063370743.html",
+    "https://rg.ru/2025/12/22/moriaki-podvodniki-i-korabely-pozdravliaiut-ckb-rubin-s-iubileem.html": "https://rg.ru/2025/12/22/moriaki-podvodniki-i-korabely-pozdravliaiut-ckb-rubin-s-iubileem.html",
+    "https://rg.ru/2025/12/22/reg-szfo/den-energetika-solnce-veter-i-korporativnaia-stipendiia.html": "https://rg.ru/2025/12/22/reg-szfo/den-energetika-solnce-veter-i-korporativnaia-stipendiia.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -83709,7 +83772,19 @@
     "0405e94499980a33c1ea399e0c4c39591a4c4ccd": "https://rg.ru/2025/12/22/deputat-gd-govyrin-raskryl-razmer-vyplat-semiam-s-detmi-v-2026-godu.html",
     "8e1869eb56b2a96f4a97c2057447eb1a32bbd46f": "https://rg.ru/2025/12/22/analitik-kiseleva-napomnila-ob-indeksacii-pensij-v-2026-godu.html",
     "9fb4d720a319f9e1422c6d78d3f4893a51ada779": "https://rg.ru/2025/12/22/ria-novosti-kitaj-v-noiabre-vpervye-postavil-syr-v-rf.html",
-    "dd72575fb6b1be7917a6784971cebea4991d097e": "https://rg.ru/2025/12/22/deputat-steniakina-sleduiushchaia-rabochaia-nedelia-v-rossii-budet-dvuhdnevnoj.html"
+    "dd72575fb6b1be7917a6784971cebea4991d097e": "https://rg.ru/2025/12/22/deputat-steniakina-sleduiushchaia-rabochaia-nedelia-v-rossii-budet-dvuhdnevnoj.html",
+    "7df286b1e4aa7b8405e9f84b7fdcc9d6b7d83f86": "https://ardexpert.ru/article/28604",
+    "cbdc4cb3451ed7b1acb5d113b6b55da59cfcb223": "http://www.metalinfo.ru/ru/news/179794",
+    "f698655cd829e0a79b3ff3ccae722c2fbca81803": "http://www.metalinfo.ru/ru/news/179772",
+    "66ba7a3d54d913d88b5026cb4f7a664a44acad31": "http://www.metalinfo.ru/ru/news/179785",
+    "cecf1454fd741fbcc7b9f6956afc4d3356e0492a": "http://www.metalinfo.ru/ru/news/179790",
+    "9d49a84cbf511cc33f2d1c7c88cd2792cdc85828": "http://www.metalinfo.ru/ru/news/179769",
+    "c6cd57aea132067a19868e6ee63a31efc24b82b4": "http://www.metalinfo.ru/ru/news/179801",
+    "8a17db1c622077c30807176a1efcad68c93cef38": "http://www.metalinfo.ru/ru/news/179804",
+    "3527611263ebdb9ca02d5708f0c98667266ede33": "http://www.metalinfo.ru/ru/news/179807",
+    "81092f6c250fb348ada771c63c9e5f93cd3bf266": "https://realty.ria.ru/20251222/kvartiry-2063370743.html",
+    "01a5198d2f717081be19b43a03d54a2ef6c57cad": "https://rg.ru/2025/12/22/moriaki-podvodniki-i-korabely-pozdravliaiut-ckb-rubin-s-iubileem.html",
+    "476936bcb1498215c684d7079757bd73f26a9c5b": "https://rg.ru/2025/12/22/reg-szfo/den-energetika-solnce-veter-i-korporativnaia-stipendiia.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -101909,6 +101984,26 @@
     "https://rg.ru/2025/12/22/deputat-gd-govyrin-raskryl-razmer-vyplat-semiam-s-detmi-v-2026-godu.html": "fdfc33fcace53212a44330f5351ca37d34ba49367d3f6506cb5e8bc88d3e5666",
     "https://rg.ru/2025/12/22/analitik-kiseleva-napomnila-ob-indeksacii-pensij-v-2026-godu.html": "809ea0a1894ee54ea331ba6734eb006ca54e32ddb9321b9b0c0376184463266c",
     "https://rg.ru/2025/12/22/ria-novosti-kitaj-v-noiabre-vpervye-postavil-syr-v-rf.html": "b28dfdb1d85dacfb8ebbbe1635fc5f569a9c1c3323f54c13bff8435a156ce5e2",
-    "https://rg.ru/2025/12/22/deputat-steniakina-sleduiushchaia-rabochaia-nedelia-v-rossii-budet-dvuhdnevnoj.html": "d972c93d08d20c17b1c4305db9bfe14c0561af16d337993cb66d4535af7affe7"
+    "https://rg.ru/2025/12/22/deputat-steniakina-sleduiushchaia-rabochaia-nedelia-v-rossii-budet-dvuhdnevnoj.html": "d972c93d08d20c17b1c4305db9bfe14c0561af16d337993cb66d4535af7affe7",
+    "https://ardexpert.ru/article/28604": "e94ee16778b32de6fbd03694c01697dae0f186e70192629c84ba99dc86bcd8aa",
+    "http://www.metalinfo.ru/ru/news/179794": "929e7fce6ab6c294b5a7a29b0730025ecf34a91e945f43ea53dec9f496223f96",
+    "https://www.metalinfo.ru/ru/news/179794": "929e7fce6ab6c294b5a7a29b0730025ecf34a91e945f43ea53dec9f496223f96",
+    "http://www.metalinfo.ru/ru/news/179772": "120999afe59ede1ea6bc97d05793668029c55b995aa0626ad10cc3e7761bf073",
+    "https://www.metalinfo.ru/ru/news/179772": "120999afe59ede1ea6bc97d05793668029c55b995aa0626ad10cc3e7761bf073",
+    "http://www.metalinfo.ru/ru/news/179785": "26dcdb939ae2062758fbf47e3c42a929ae0278ba5aaf7afa10c448d1463f8d9a",
+    "https://www.metalinfo.ru/ru/news/179785": "26dcdb939ae2062758fbf47e3c42a929ae0278ba5aaf7afa10c448d1463f8d9a",
+    "http://www.metalinfo.ru/ru/news/179790": "561092a2258f846fbc05694d2aff820d0616abf3a662d51a74fd9c939b464622",
+    "https://www.metalinfo.ru/ru/news/179790": "561092a2258f846fbc05694d2aff820d0616abf3a662d51a74fd9c939b464622",
+    "http://www.metalinfo.ru/ru/news/179769": "14cf59a2e4e54a5be6886156cc03a8416c30d8a80dcbef59b0ed7b52e3cf0355",
+    "https://www.metalinfo.ru/ru/news/179769": "14cf59a2e4e54a5be6886156cc03a8416c30d8a80dcbef59b0ed7b52e3cf0355",
+    "http://www.metalinfo.ru/ru/news/179801": "8dd4c163ffa004078b2656951946578c07554dbd7496431d5824ac956544e296",
+    "https://www.metalinfo.ru/ru/news/179801": "8dd4c163ffa004078b2656951946578c07554dbd7496431d5824ac956544e296",
+    "http://www.metalinfo.ru/ru/news/179804": "87c7d61a270deb73b77de0edcfd7d86024da7c20e07315caa9b1e25b47dd2b36",
+    "https://www.metalinfo.ru/ru/news/179804": "87c7d61a270deb73b77de0edcfd7d86024da7c20e07315caa9b1e25b47dd2b36",
+    "http://www.metalinfo.ru/ru/news/179807": "b0df97eee1366cf212420d13682a64e1171dc89b12169aa8535c06640962f3be",
+    "https://www.metalinfo.ru/ru/news/179807": "b0df97eee1366cf212420d13682a64e1171dc89b12169aa8535c06640962f3be",
+    "https://realty.ria.ru/20251222/kvartiry-2063370743.html": "e3c63b879b9e498317866e47d85a5b9f19c48ef00b65c655344d432412932265",
+    "https://rg.ru/2025/12/22/moriaki-podvodniki-i-korabely-pozdravliaiut-ckb-rubin-s-iubileem.html": "a6161a77de68be943a55d01012152944d0a7befbe9db3e0166a5cd16a061d1a5",
+    "https://rg.ru/2025/12/22/reg-szfo/den-energetika-solnce-veter-i-korporativnaia-stipendiia.html": "507498bf485823caa2aac1cf137e22c1584e258f0ea8663e2ec347a83d69415d"
   }
 }
