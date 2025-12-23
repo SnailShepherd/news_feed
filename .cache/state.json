@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 23 Dec 2025 18:26:59 GMT"
+      "Last-Modified": "Tue, 23 Dec 2025 21:18:58 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"zuawpfur1j3vzc\""
+      "ETag": "\"14spoxhukrh3xzs\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -32530,6 +32530,15 @@
     },
     "https://rg.ru/2025/12/23/top-20-zimnih-aktivnostej-na-novogodnie-prazdniki-2026-idei-dlia-aktivnogo-otdyha.html": {
       "ETag": "\"w58dmx7bok64pc\""
+    },
+    "https://rg.ru/2025/12/23/kliuchevoj-vopros.html": {
+      "ETag": "\"s3ojii4keg2hae\""
+    },
+    "https://rg.ru/2025/12/23/reg-cfo/na-zariadku-stanovis.html": {
+      "ETag": "\"68ue62ixab1w2y\""
+    },
+    "https://rg.ru/2025/12/23/potreblenie-gaza-v-mire-v-2025-godu-vyroslo-na-25-mlrd-kubometrov.html": {
+      "ETag": "\"aj7hsfziq61p5q\""
     }
   },
   "stats": {
@@ -40988,9 +40997,26 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3175ae8ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3175ae2490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3175ae2350>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3176ca36f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3176ca3e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3176c979b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3175ae3110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3175ae2d50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3175ae2ad0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3175ae2850>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3175ae2350>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-12-23T18:27:28.966309+00:00",
+    "last_run": "2025-12-23T21:19:22.320754+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -41003,56 +41029,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 134.69283399996357,
-        "connect_ms": 186.63908800004947,
-        "response_ms": 321.33192200001304,
+        "dns_ms": 679.482213,
+        "connect_ms": 726.4643439999929,
+        "response_ms": 1405.946556999993,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 175.37708599996904,
-        "connect_ms": 909.8340220000409,
-        "response_ms": 1085.21110800001,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3176c979b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 8610.518766999974,
-        "connect_ms": 0.0,
-        "response_ms": 5388.006504000032,
+        "dns_ms": 529.9548790000017,
+        "connect_ms": 32.2176140000181,
+        "response_ms": 562.1724930000198,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.6670980000080817,
-        "connect_ms": 457.0628160000183,
-        "response_ms": 457.7299140000264,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3175ae2350>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "1cc301489b15a513486389f69734a29ca3f0dd5bfcef5d7978ae58f56573e3bb",
+    "https://ardexpert.ru/article": "cb42c73e4153caf4a7f58af506073ce2a7a5f61cbd8d9fea982df7887ed7da9b",
     "https://www.gostinfo.ru/News/List": "67648484012125a59b2f31790650fce86ef70328536ec0def09779d95fbb1a05",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4c1969295e2822f3a2f0e5fca72a641641ce86b1572980c4023d8199bc80c5a1",
-    "https://eec.eaeunion.org/news/": "b351b44ff7ae09d27740b2fddb1058456a2dd69428ffaef250ed9c230c6cf194",
+    "https://eec.eaeunion.org/news/": "1f8b02901c4d2b31b5f842897880699d372f36099142f514de11c2e6bd2ee7c2",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "e9404cb8f40c536db849cb9cb0599df331fe588b51a00f9aae869b88cfa4917d",
-    "https://www.metalinfo.ru/ru/news": "e67c3752acac8878d8a7b62ca4838fe33377292b5c82f12429d2ddf0f2185f04",
-    "https://www.pnp.ru/economics/": "f0a84cc4b619d4a0aa317972a5f72fa3d6ee9eb4a888877ff70cd2b0bae45ac1",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "fb88448812e61745c0493e4ce7e14803d3fb773c2fe2b4c4710c06a73338fbd8",
+    "https://www.metalinfo.ru/ru/news": "2922a16327acf5989ee11216850fffdd4659de1f3f330af9d13b53029d1d8d6d",
+    "https://www.pnp.ru/economics/": "d1dd26431e364561fc3493a99a6d4c6bd71f88d9f2f3ca7c772b554ffac006ad",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "43ca6d206a037bb2259337e3d5a7d5e6fa18de03516c4ce26fa4588f0a8f643c",
-    "http://government.ru/news/": "1b7f16ccde83474b8caef17cf623a6abebebd61f24add7255b4772811bbceb88",
-    "https://stroygaz.ru/news/": "874e69d03f0b34bbbdebd1587fca82c2608c638cd21de272f3a1730ab0a7a0e2",
-    "https://realty.ria.ru/lenta/": "8ecc94359cc68e83b80272a771acecef583a40d2923a8850fd31dc08398b8cab",
-    "https://rg.ru/tema/ekonomika": "d6478375127f69c6acd767525bda6f23a381533219fbb560a3031d44695d35c4",
-    "http://ancb.ru/publication": "f58b41269948d1c9cd4c0aa3676408f6f7ca548c0e7e682562aea86bff6309e4",
+    "https://ria-stk.ru/news/vse-novosti.php": "fd8d2d936703538216520e4cbb633fc7146bbbbafe9c20f90cda11d0ad3b3fb0",
+    "http://government.ru/news/": "dbcc985fedeb90c41c462bbc75192db16dd6bed43cd9704e7c8c916b9c4d59b7",
+    "https://stroygaz.ru/news/": "df1dea96f95b583c375f7a90b916c05decd6b1f1f188aed081e9fd6ea5debfd7",
+    "https://realty.ria.ru/lenta/": "aefede98d46a148fb3be7a9b8a21a2dcf758824a68f603d5e51e847ea726e354",
+    "https://rg.ru/tema/ekonomika": "1cbff53db3d7386ce8add146f378136df1d743975f2a9e1239ef6445af73a7d0",
+    "http://ancb.ru/publication": "d38bdd74fe3f51dd5e93c97bd5099c390a24846b9e171b1bf7cc8035977f0f09",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -41356,6 +41382,9 @@
       "https://realty.ria.ru/20251222/arbitrazh-2063804033.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/23/kliuchevoj-vopros.html",
+      "https://rg.ru/2025/12/23/reg-cfo/na-zariadku-stanovis.html",
+      "https://rg.ru/2025/12/23/potreblenie-gaza-v-mire-v-2025-godu-vyroslo-na-25-mlrd-kubometrov.html",
       "https://rg.ru/2025/12/23/risk-delo-reguliatornoe.html",
       "https://rg.ru/2025/12/23/chelovecheskij-faktor.html",
       "https://rg.ru/2025/12/23/pozvonili-byvshemu.html",
@@ -41382,12 +41411,9 @@
       "https://rg.ru/2025/12/23/ekspert-velichko-rost-cen-na-aviabilety-zamedlilsia-iz-za-stabilizacii-izderzhek.html",
       "https://rg.ru/2025/12/23/oreshkin-anonsiroval-ekspertnyj-forum-otkrytogo-dialoga-v-nc-rossiia-v-konce-ianvaria.html",
       "https://rg.ru/2025/12/23/top-20-zimnih-aktivnostej-na-novogodnie-prazdniki-2026-idei-dlia-aktivnogo-otdyha.html",
-      "https://rg.ru/2025/12/23/sud-obiazal-zhertvu-telefonnyh-moshennikov-vernut-dengi-za-kvartiru.html",
-      "https://rg.ru/2025/12/23/sim-karty-rossiian-mozhno-budet-priviazat-k-smartfonam.html",
       "https://rg.ru/2025/12/23/vs-raziasnil-kogda-rukovoditel-firmy-bankrota-budet-otvechat-po-dolgam.html",
       "https://rg.ru/2025/12/23/reg-dfo/v-evrejskoj-avtonomii-plata-za-kapitalnyj-remont-domov-vozrosla-na-20-procentov.html",
       "https://rg.ru/2025/12/23/shohin-farmkompanii-ssha-hoteli-by-no-ne-mogut-investirovat-v-issledovaniia-v-rf.html",
-      "https://rg.ru/2025/12/23/spros-na-rossijskij-shokolad-za-rubezhom-vyros-na-10-god-k-godu.html",
       "https://rg.ru/2025/12/19/iek-group-anonsiruet-vypusk-novoj-serii-elektroustanovochnyh-izdelij-flite.html",
       "https://rg.ru/2025/12/18/podvedeny-itogi-vserossijskogo-konkursa-na-razrabotku-koncepcii-reekspozicii-livadijskogo-dvorca-muzeia.html",
       "https://rg.ru/2025/12/17/blagotvoritelnyj-fond-zapustil-novogodnij-proekt-yolochka-gori.html"
@@ -55059,7 +55085,10 @@
     "7ba8e2ddd07759f94587d7ebc0b0b1c2a58a783033cf5177e29f6145ff22ce1d": "2025-12-23T21:27:00+03:00",
     "332e7985dc2ac7ce1b493fbe71bb3220eba62f2868ff3758fd2b2577d6991efa": "2025-12-23T21:27:00+03:00",
     "5f9975f9ddbdcd1fe8c80427a4cc1e941b4e5f754acc9eb649217a7f41477191": "2025-12-23T21:27:00+03:00",
-    "201e3dbd61be0fd35be137960eaff2b90391ab217f0561cbf4347c26a3020e76": "2025-12-23T21:27:00+03:00"
+    "201e3dbd61be0fd35be137960eaff2b90391ab217f0561cbf4347c26a3020e76": "2025-12-23T21:27:00+03:00",
+    "61dba8e3a0c740e3f4a15d543e4b9e55b19f954a1cf575bb94f6a00036b64add": "2025-12-24T00:19:00+03:00",
+    "04debfb3816cb3d18214094249f9a571e2eb1cc2f8030b83def9bf61ee5fdc4b": "2025-12-24T00:19:00+03:00",
+    "b0a31460cd90f97b2d512bcc8b51fd851219316e5a4f3d7bf4f045e4c2c38354": "2025-12-24T00:19:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -55090,9 +55119,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1766503194.0982041
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3176ca3e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1766524654.729512
       },
       "warmup_done": false,
       "last_success_path": null
@@ -55101,31 +55130,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "KMPrS1tpbUaKfnmD",
+          "value": "6fkevfnEQYiaihev",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766515579
+          "expires": 1766525898
         },
         {
           "name": "__ddg10_",
-          "value": "1766514379",
+          "value": "1766524698",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766515579
+          "expires": 1766525898
         },
         {
           "name": "__ddg9_",
-          "value": "64.236.144.104",
+          "value": "128.24.161.41",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766515579
+          "expires": 1766525898
+        },
+        {
+          "name": "__ddg1_",
+          "value": "s81jvjYYQrfBtURcq2rg",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1798060698
         },
         {
           "name": "PHPSESSID",
-          "value": "c59ada8a17994391d6ce222474072ee8",
+          "value": "e7099579fd9cbf215279c3bffe1da787",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -55168,9 +55205,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1766503335.18181
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3175ae2850>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 4,
+        "last_ts": 1766524730.328916
       },
       "warmup_done": false,
       "last_success_path": null
@@ -71955,7 +71992,10 @@
     "https://rg.ru/2025/12/23/reg-cfo/v-moskve-tehnologii-smart-city-stali-povsednevnoj-realnostiu.html": "https://rg.ru/2025/12/23/reg-cfo/v-moskve-tehnologii-smart-city-stali-povsednevnoj-realnostiu.html",
     "https://rg.ru/2025/12/23/ekspert-velichko-rost-cen-na-aviabilety-zamedlilsia-iz-za-stabilizacii-izderzhek.html": "https://rg.ru/2025/12/23/ekspert-velichko-rost-cen-na-aviabilety-zamedlilsia-iz-za-stabilizacii-izderzhek.html",
     "https://rg.ru/2025/12/23/oreshkin-anonsiroval-ekspertnyj-forum-otkrytogo-dialoga-v-nc-rossiia-v-konce-ianvaria.html": "https://rg.ru/2025/12/23/oreshkin-anonsiroval-ekspertnyj-forum-otkrytogo-dialoga-v-nc-rossiia-v-konce-ianvaria.html",
-    "https://rg.ru/2025/12/23/top-20-zimnih-aktivnostej-na-novogodnie-prazdniki-2026-idei-dlia-aktivnogo-otdyha.html": "https://rg.ru/2025/12/23/top-20-zimnih-aktivnostej-na-novogodnie-prazdniki-2026-idei-dlia-aktivnogo-otdyha.html"
+    "https://rg.ru/2025/12/23/top-20-zimnih-aktivnostej-na-novogodnie-prazdniki-2026-idei-dlia-aktivnogo-otdyha.html": "https://rg.ru/2025/12/23/top-20-zimnih-aktivnostej-na-novogodnie-prazdniki-2026-idei-dlia-aktivnogo-otdyha.html",
+    "https://rg.ru/2025/12/23/kliuchevoj-vopros.html": "https://rg.ru/2025/12/23/kliuchevoj-vopros.html",
+    "https://rg.ru/2025/12/23/reg-cfo/na-zariadku-stanovis.html": "https://rg.ru/2025/12/23/reg-cfo/na-zariadku-stanovis.html",
+    "https://rg.ru/2025/12/23/potreblenie-gaza-v-mire-v-2025-godu-vyroslo-na-25-mlrd-kubometrov.html": "https://rg.ru/2025/12/23/potreblenie-gaza-v-mire-v-2025-godu-vyroslo-na-25-mlrd-kubometrov.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -85915,7 +85955,10 @@
     "6fd73da3831191ee1507378ce498836d7272a86b": "https://rg.ru/2025/12/23/reg-cfo/v-moskve-tehnologii-smart-city-stali-povsednevnoj-realnostiu.html",
     "056a423adca23a1e1ef099c7f967427ecc594563": "https://rg.ru/2025/12/23/ekspert-velichko-rost-cen-na-aviabilety-zamedlilsia-iz-za-stabilizacii-izderzhek.html",
     "4a8398b1241afd7de9b1b29b6f4bf9a485060d48": "https://rg.ru/2025/12/23/oreshkin-anonsiroval-ekspertnyj-forum-otkrytogo-dialoga-v-nc-rossiia-v-konce-ianvaria.html",
-    "d9d54f509e77b4ad14eb352ecabf7dd361f2b34c": "https://rg.ru/2025/12/23/top-20-zimnih-aktivnostej-na-novogodnie-prazdniki-2026-idei-dlia-aktivnogo-otdyha.html"
+    "d9d54f509e77b4ad14eb352ecabf7dd361f2b34c": "https://rg.ru/2025/12/23/top-20-zimnih-aktivnostej-na-novogodnie-prazdniki-2026-idei-dlia-aktivnogo-otdyha.html",
+    "0582825c71d466e923b9a86d5a2fc04f57da2752": "https://rg.ru/2025/12/23/kliuchevoj-vopros.html",
+    "8f692d11181939df7d4c6c713aec96ff5be622fd": "https://rg.ru/2025/12/23/reg-cfo/na-zariadku-stanovis.html",
+    "5dc9118c8efe8dc9a565d003c527420bf694ad70": "https://rg.ru/2025/12/23/potreblenie-gaza-v-mire-v-2025-godu-vyroslo-na-25-mlrd-kubometrov.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -104651,6 +104694,9 @@
     "https://rg.ru/2025/12/23/reg-cfo/v-moskve-tehnologii-smart-city-stali-povsednevnoj-realnostiu.html": "7ba8e2ddd07759f94587d7ebc0b0b1c2a58a783033cf5177e29f6145ff22ce1d",
     "https://rg.ru/2025/12/23/ekspert-velichko-rost-cen-na-aviabilety-zamedlilsia-iz-za-stabilizacii-izderzhek.html": "332e7985dc2ac7ce1b493fbe71bb3220eba62f2868ff3758fd2b2577d6991efa",
     "https://rg.ru/2025/12/23/oreshkin-anonsiroval-ekspertnyj-forum-otkrytogo-dialoga-v-nc-rossiia-v-konce-ianvaria.html": "5f9975f9ddbdcd1fe8c80427a4cc1e941b4e5f754acc9eb649217a7f41477191",
-    "https://rg.ru/2025/12/23/top-20-zimnih-aktivnostej-na-novogodnie-prazdniki-2026-idei-dlia-aktivnogo-otdyha.html": "201e3dbd61be0fd35be137960eaff2b90391ab217f0561cbf4347c26a3020e76"
+    "https://rg.ru/2025/12/23/top-20-zimnih-aktivnostej-na-novogodnie-prazdniki-2026-idei-dlia-aktivnogo-otdyha.html": "201e3dbd61be0fd35be137960eaff2b90391ab217f0561cbf4347c26a3020e76",
+    "https://rg.ru/2025/12/23/kliuchevoj-vopros.html": "61dba8e3a0c740e3f4a15d543e4b9e55b19f954a1cf575bb94f6a00036b64add",
+    "https://rg.ru/2025/12/23/reg-cfo/na-zariadku-stanovis.html": "04debfb3816cb3d18214094249f9a571e2eb1cc2f8030b83def9bf61ee5fdc4b",
+    "https://rg.ru/2025/12/23/potreblenie-gaza-v-mire-v-2025-godu-vyroslo-na-25-mlrd-kubometrov.html": "b0a31460cd90f97b2d512bcc8b51fd851219316e5a4f3d7bf4f045e4c2c38354"
   }
 }
