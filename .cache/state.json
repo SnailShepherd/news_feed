@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 22 Dec 2025 21:17:00 GMT"
+      "Last-Modified": "Tue, 23 Dec 2025 01:20:45 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"bg2ab0dwje4269\""
+      "ETag": "\"12teeo0wbn3w79\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -32098,6 +32098,12 @@
     },
     "https://rg.ru/2025/12/22/socfond-zavershil-perechislenie-pensij-rossiian-v-pribaltiku-i-bolgariiu-za-2025-god.html": {
       "ETag": "\"b6l401pmcz1uie\""
+    },
+    "https://rg.ru/2025/12/23/ria-novosti-nakopitelnuiu-pensiiu-v-rf-budut-vyplachivat-v-techenie-270-mesiacev.html": {
+      "ETag": "\"9hg5d0fgr51q4n\""
+    },
+    "https://rg.ru/2025/12/23/tass-v-2026-godu-rabotaiushchim-pensioneram-dvazhdy-proindeksiruiut-pensiiu.html": {
+      "ETag": "\"nlkj1oygtw1p97\""
     }
   },
   "stats": {
@@ -40461,9 +40467,26 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fecfb8e8ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fecfb8d6490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fecfb8d6350>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fecfc8db6f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fecfc8dbe10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fecfc8cf9b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fecfb8d7110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fecfb8d6e90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fecfb8d6c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fecfb8d5d10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fecfb8d6fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-12-22T21:16:55.168229+00:00",
+    "last_run": "2025-12-23T01:21:05.471097+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -40476,56 +40499,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 549.3619979999949,
-        "connect_ms": 528.6161300000458,
-        "response_ms": 1077.9781280000407,
+        "dns_ms": 387.587864000011,
+        "connect_ms": 490.60779299998103,
+        "response_ms": 878.195656999992,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 119.76358999993408,
-        "connect_ms": 898.3081480000692,
-        "response_ms": 1018.0717380000033,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fecfc8cf9b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 664.9462249999942,
-        "connect_ms": 4323.957853000024,
-        "response_ms": 4988.904078000019,
+        "dns_ms": 778.4346269999673,
+        "connect_ms": 360.34752199998366,
+        "response_ms": 1138.782148999951,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.523865999980444,
-        "connect_ms": 314.71203599994624,
-        "response_ms": 315.2359019999267,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fecfb8d6fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "3b0e16c443819bc394a7d8a17c20e6ab4f8183b4bd12be72a5ffdd0076d1b4be",
+    "https://ardexpert.ru/article": "af1ef6c18ee1e5a105f5aad2eb7dcad52b8e43544b99d4c3eefba6ba9207f843",
     "https://www.gostinfo.ru/News/List": "88673ce4169292c55c0949619f29cc8e794d2dc26893271fc505306398f6a8f4",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "4163de5f2098f75fc7e7510d269e49a15e401768fea13182b611d659d1b6d6c8",
-    "https://eec.eaeunion.org/news/": "7195fa7a972921186998c10ef9a12bf670080f061f92b2a1bab0b26b47fb4f30",
+    "https://eec.eaeunion.org/news/": "473a500d36ae8522bcd435eb91f4a6e25c0f74ef00f0ac1041b72fa5f96e0bfb",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "c6f5761d991899c390a1a1f207b109c978265251b3a6b28ecb4aa534bb975362",
-    "https://www.metalinfo.ru/ru/news": "0efb60aeb4d0a85862bb894d3fc79a26d0acc8303412edd94b08ed9597af3921",
-    "https://www.pnp.ru/economics/": "1f1dc1052d8e7085dc588d7ccc23832e29d655b7627d105d2b0033fe29d34cb6",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "797ca1174c1423ccf2facb185377a251b33df9e8c85a157654e25ab59d9ec07a",
+    "https://www.metalinfo.ru/ru/news": "306feea2bd52f2d32db45dedb04066d2e270f436b932b5ca9a58d9ba95a46e8f",
+    "https://www.pnp.ru/economics/": "c4c36975e3da610c7707d4c66b0abc6cf60daaa3afc655fe23c081f6068514c5",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "09fffc42c7afa2c0b79a411788a802149f6efa4ea8ee625d2de5ce0c80bcaff4",
-    "http://government.ru/news/": "cb570978caaecadb58f8690d51311199c0cfa66963550547c3c8a6832c8f53c3",
-    "https://stroygaz.ru/news/": "7a2533a58fc51ea24e2895c1297ea1cdf0e38ec879433be9eeacafd0bc556ec7",
-    "https://realty.ria.ru/lenta/": "5fed35b34e06f89c6e6a71d6566b6e36ca5c62ba81d89d64dcd68644eb1babd1",
-    "https://rg.ru/tema/ekonomika": "f602e5495fccc580019bd7d5301fd5679c11c21d8fdeb1e6591380de6d771c9a",
-    "http://ancb.ru/publication": "f58b41269948d1c9cd4c0aa3676408f6f7ca548c0e7e682562aea86bff6309e4",
+    "https://ria-stk.ru/news/vse-novosti.php": "77f38a1357fedf0f805ddbe7b09276f964243b33f4b0d6f0813800210d088e4a",
+    "http://government.ru/news/": "cd56780d2ffd65bf249dc22365be2a6001adaf65cc9c7ce77fcc83cccb5deac4",
+    "https://stroygaz.ru/news/": "431e2d955a76191840129a86e7daac99bfb738445ac4d038cd2e6bb07857814c",
+    "https://realty.ria.ru/lenta/": "edd9d13025a37b504b6586546324d94471207b63965660ec6ff069d61684f4a3",
+    "https://rg.ru/tema/ekonomika": "919e773948311bc44f775ff486b762a5790e401c4595ddc2e67376a4adc975da",
+    "http://ancb.ru/publication": "d38bdd74fe3f51dd5e93c97bd5099c390a24846b9e171b1bf7cc8035977f0f09",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -40829,6 +40852,8 @@
       "https://realty.ria.ru/20251220/khusnullin-2063563134.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/23/ria-novosti-nakopitelnuiu-pensiiu-v-rf-budut-vyplachivat-v-techenie-270-mesiacev.html",
+      "https://rg.ru/2025/12/23/tass-v-2026-godu-rabotaiushchim-pensioneram-dvazhdy-proindeksiruiut-pensiiu.html",
       "https://rg.ru/2025/12/23/v-gosdume-predlozhili-zapretit-manipuliacii-s-ispytatelnym-srokom-dlia-rabotnikov.html",
       "https://rg.ru/2025/12/23/reg-cfo/moj-liubimyj-knizhnyj.html",
       "https://rg.ru/2025/12/22/reg-cfo/malenkij-da-vezuchij.html",
@@ -40854,8 +40879,6 @@
       "https://rg.ru/2025/12/22/rossiianam-nazvali-legalnye-sposoby-uvelichit-pensiiu.html",
       "https://rg.ru/2025/12/22/rossijskie-kompanii-gotovy-tratit-milliony-na-novogodnie-korporativy.html",
       "https://rg.ru/2025/12/22/centrobank-soobshchil-ob-ohlazhdenii-na-rynke-mikrozajmov.html",
-      "https://rg.ru/2025/12/22/patrushev-vruchil-orden-aleksandra-nevskogo-ckb-morskoj-tehniki-rubin.html",
-      "https://rg.ru/2025/12/22/eksperty-ocenili-ekonomicheskuiu-vygodu-dlia-rossii-ot-soglasheniia-eaes-s-indoneziej.html",
       "https://rg.ru/2025/12/22/vtoroj-paket-mer-protiv-kibermoshennikov-budet-vnesen-v-gosdumu-v-blizhajshie-dni.html",
       "https://rg.ru/2025/12/22/v-max-usilitsia-zashchita-soobshchenij-i-zvonkov.html",
       "https://rg.ru/2025/12/22/titov-zaiavil-chto-v-rf-mogut-priehat-40-tysiach-migrantov-iz-indii.html",
@@ -54341,7 +54364,9 @@
     "f0205f757ea62284ce60e22f0bde73cf1da8c73d26fe6722a4ab7052fd331473": "2025-12-23T00:16:00+03:00",
     "79d7dcff4e4475b4578a0174acf96a0e40f705557d9d93caf077a5de45914da9": "2025-12-23T00:16:00+03:00",
     "6a6c9e2c9e06e51ef322eb777962e034cfcc8661ef58d798d73bbc6454c003fe": "2025-12-23T00:16:00+03:00",
-    "0d7a035df2a1e8890550b857f4934a91b242ec24783bad7ba56f35d1f0a1485e": "2025-12-23T00:16:00+03:00"
+    "0d7a035df2a1e8890550b857f4934a91b242ec24783bad7ba56f35d1f0a1485e": "2025-12-23T00:16:00+03:00",
+    "f9a7e63c249731aefc2ffdb79968a4dbfcf8071ed4b6d8f2dbd133fb899d49b5": "2025-12-23T04:21:00+03:00",
+    "993ae9eb8ef9872e0a6f37a38ec3df927bf04f9150ea3689cb67d96c30544d84": "2025-12-23T04:21:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -54372,9 +54397,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1766428137.5993068
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fecfc8dbe10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1766452760.1032152
       },
       "warmup_done": false,
       "last_success_path": null
@@ -54383,39 +54408,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "LaoON1kpPa5FC2PZ",
+          "value": "vuKgipzZu8Bh2Ooc",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766439379
+          "expires": 1766454005
         },
         {
           "name": "__ddg10_",
-          "value": "1766438179",
+          "value": "1766452805",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766439379
+          "expires": 1766454005
         },
         {
           "name": "__ddg9_",
-          "value": "68.154.115.181",
+          "value": "52.159.247.49",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766439379
-        },
-        {
-          "name": "__ddg1_",
-          "value": "L6YIPXsDg3VTHctWOVmX",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1797974179
+          "expires": 1766454005
         },
         {
           "name": "PHPSESSID",
-          "value": "fabb27c0b01a57f40a5112feb3a5c489",
+          "value": "fd8ad767ff3a352043d373aa961b7c0e",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -54458,9 +54475,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1766428226.656936
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fecfb8d5d10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 4,
+        "last_ts": 1766452837.4769065
       },
       "warmup_done": false,
       "last_success_path": null
@@ -71006,7 +71023,9 @@
     "https://rg.ru/2025/12/23/reg-cfo/moj-liubimyj-knizhnyj.html": "https://rg.ru/2025/12/23/reg-cfo/moj-liubimyj-knizhnyj.html",
     "https://rg.ru/2025/12/22/reg-cfo/malenkij-da-vezuchij.html": "https://rg.ru/2025/12/22/reg-cfo/malenkij-da-vezuchij.html",
     "https://rg.ru/2025/12/22/fas-vydala-predosterezhenie-iz-za-publichnogo-zaiavleniia-o-roste-cen-na-iajca.html": "https://rg.ru/2025/12/22/fas-vydala-predosterezhenie-iz-za-publichnogo-zaiavleniia-o-roste-cen-na-iajca.html",
-    "https://rg.ru/2025/12/22/socfond-zavershil-perechislenie-pensij-rossiian-v-pribaltiku-i-bolgariiu-za-2025-god.html": "https://rg.ru/2025/12/22/socfond-zavershil-perechislenie-pensij-rossiian-v-pribaltiku-i-bolgariiu-za-2025-god.html"
+    "https://rg.ru/2025/12/22/socfond-zavershil-perechislenie-pensij-rossiian-v-pribaltiku-i-bolgariiu-za-2025-god.html": "https://rg.ru/2025/12/22/socfond-zavershil-perechislenie-pensij-rossiian-v-pribaltiku-i-bolgariiu-za-2025-god.html",
+    "https://rg.ru/2025/12/23/ria-novosti-nakopitelnuiu-pensiiu-v-rf-budut-vyplachivat-v-techenie-270-mesiacev.html": "https://rg.ru/2025/12/23/ria-novosti-nakopitelnuiu-pensiiu-v-rf-budut-vyplachivat-v-techenie-270-mesiacev.html",
+    "https://rg.ru/2025/12/23/tass-v-2026-godu-rabotaiushchim-pensioneram-dvazhdy-proindeksiruiut-pensiiu.html": "https://rg.ru/2025/12/23/tass-v-2026-godu-rabotaiushchim-pensioneram-dvazhdy-proindeksiruiut-pensiiu.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -84773,7 +84792,9 @@
     "78c84b011816cefdd656956d83cf4ea13d3343ca": "https://rg.ru/2025/12/23/reg-cfo/moj-liubimyj-knizhnyj.html",
     "d192a704492d7b5aa68d58870ec992978ed49f6f": "https://rg.ru/2025/12/22/reg-cfo/malenkij-da-vezuchij.html",
     "5705cc9f93867cc981b8ef6871fa6b2f8c1cab3d": "https://rg.ru/2025/12/22/fas-vydala-predosterezhenie-iz-za-publichnogo-zaiavleniia-o-roste-cen-na-iajca.html",
-    "b4f96a6dd4b40fa30d961bebef7164ca9f41140b": "https://rg.ru/2025/12/22/socfond-zavershil-perechislenie-pensij-rossiian-v-pribaltiku-i-bolgariiu-za-2025-god.html"
+    "b4f96a6dd4b40fa30d961bebef7164ca9f41140b": "https://rg.ru/2025/12/22/socfond-zavershil-perechislenie-pensij-rossiian-v-pribaltiku-i-bolgariiu-za-2025-god.html",
+    "25e0bc5a2c62b41526ef73e2d0907bb679c37693": "https://rg.ru/2025/12/23/ria-novosti-nakopitelnuiu-pensiiu-v-rf-budut-vyplachivat-v-techenie-270-mesiacev.html",
+    "9581ec528367cd712458f96498eda152f7fba1d4": "https://rg.ru/2025/12/23/tass-v-2026-godu-rabotaiushchim-pensioneram-dvazhdy-proindeksiruiut-pensiiu.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -103243,6 +103264,8 @@
     "https://rg.ru/2025/12/23/reg-cfo/moj-liubimyj-knizhnyj.html": "f0205f757ea62284ce60e22f0bde73cf1da8c73d26fe6722a4ab7052fd331473",
     "https://rg.ru/2025/12/22/reg-cfo/malenkij-da-vezuchij.html": "79d7dcff4e4475b4578a0174acf96a0e40f705557d9d93caf077a5de45914da9",
     "https://rg.ru/2025/12/22/fas-vydala-predosterezhenie-iz-za-publichnogo-zaiavleniia-o-roste-cen-na-iajca.html": "6a6c9e2c9e06e51ef322eb777962e034cfcc8661ef58d798d73bbc6454c003fe",
-    "https://rg.ru/2025/12/22/socfond-zavershil-perechislenie-pensij-rossiian-v-pribaltiku-i-bolgariiu-za-2025-god.html": "0d7a035df2a1e8890550b857f4934a91b242ec24783bad7ba56f35d1f0a1485e"
+    "https://rg.ru/2025/12/22/socfond-zavershil-perechislenie-pensij-rossiian-v-pribaltiku-i-bolgariiu-za-2025-god.html": "0d7a035df2a1e8890550b857f4934a91b242ec24783bad7ba56f35d1f0a1485e",
+    "https://rg.ru/2025/12/23/ria-novosti-nakopitelnuiu-pensiiu-v-rf-budut-vyplachivat-v-techenie-270-mesiacev.html": "f9a7e63c249731aefc2ffdb79968a4dbfcf8071ed4b6d8f2dbd133fb899d49b5",
+    "https://rg.ru/2025/12/23/tass-v-2026-godu-rabotaiushchim-pensioneram-dvazhdy-proindeksiruiut-pensiiu.html": "993ae9eb8ef9872e0a6f37a38ec3df927bf04f9150ea3689cb67d96c30544d84"
   }
 }
