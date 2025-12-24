@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 24 Dec 2025 18:27:52 GMT"
+      "Last-Modified": "Wed, 24 Dec 2025 21:16:58 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"jyzlozv77y41l3\""
+      "ETag": "\"13mdhwonty141o4\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -32939,6 +32939,23 @@
     },
     "https://rg.ru/2025/12/24/reg-szfo/v-peterburge-skorostnoj-tramvaj-slavianka-soshel-s-relsov.html": {
       "ETag": "\"i843fy3yw61pe2\""
+    },
+    "http://ancb.ru/publication/read/20710": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247562&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247561&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247560&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247559&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247558&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247557&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247556&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247555&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247554&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247553&all_news=Y": {},
+    "https://rg.ru/2025/12/24/reg-cfo/bystree-bystrogo.html": {
+      "ETag": "\"cntwd5h88g1zr9\""
+    },
+    "https://rg.ru/2025/12/24/reg-cfo/vot-priletit-vertolet.html": {
+      "ETag": "\"o92439e8631ynq\""
     }
   },
   "stats": {
@@ -41497,9 +41514,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa64aaf6710>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa64aaf6210>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa64aaf5f90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa64aaf5e50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa64aaf5a90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-12-24T18:29:04.778562+00:00",
+    "last_run": "2025-12-24T21:16:47.952630+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -41512,56 +41534,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 745.7790260000081,
-        "connect_ms": 903.3877020000034,
-        "response_ms": 1649.1667280000115,
+        "dns_ms": 458.01474500001405,
+        "connect_ms": 483.0885940000087,
+        "response_ms": 941.1033390000227,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa64a9185f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 185.52459100001784,
+        "connect_ms": 131.14443399999232,
+        "response_ms": 316.66902500001015,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 8514.626035999981,
-        "connect_ms": 0.0,
-        "response_ms": 5783.734934999984,
+        "dns_ms": 651.8831090000106,
+        "connect_ms": 4732.501526999983,
+        "response_ms": 5384.384635999993,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa64aaf5a90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 0.6191260000036891,
+        "connect_ms": 353.7587009999754,
+        "response_ms": 354.3778269999791,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "2c690d80683b305cbdd4660a5fc218ef6187603b6c1f83a5e540e976d9497834",
+    "https://ardexpert.ru/article": "1e87169ff10270d2043d7f8ae5a0d5fdfd6145817cd09c247ff945078c65eb3e",
     "https://www.gostinfo.ru/News/List": "2a36c1e00830703e73218179146e8e4235c63528c1664d39448445d2bc516305",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "8a8266abb98f14745edd5fb53d480cd0aad8ca6e2a905a0c79ca1f8c7831ef1b",
-    "https://eec.eaeunion.org/news/": "4fae2b1c672d29fd75240b42463776626b738573b9bb2160a7c5ee63125d9b87",
+    "https://eec.eaeunion.org/news/": "697580d03ff6b816c25b3af81d04707b16d3bb86743beabf9221dfaa1eebfcdd",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "714aa5ee126b0269e31ade37d024a4f1b4b2e91869783be979e4f34d332c42fe",
-    "https://www.metalinfo.ru/ru/news": "7d066576482336d8614b7586dc7c790f9959f5214bc52dabd94467080f919833",
-    "https://www.pnp.ru/economics/": "91fe83a44840a979fce4a4e6747349557ef705750a9866d9489cc7da3888816e",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "f9a31d10d68b5e6fc4a36c66a6bb8b0f422d0da6f7f749c287ed1ce1b5c0556b",
+    "https://www.metalinfo.ru/ru/news": "e7d65f84744a5aff34112f5d275dd7403fd365018f64f24e6517a679d87c1608",
+    "https://www.pnp.ru/economics/": "c5394fe7a443d70543254273bdf344d4a91b1923cb245122706b7a923445c733",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "f4ebc6293cf40a3f3f32882934d086928eb894de917333ec0d530a2cd73496ca",
-    "http://government.ru/news/": "ede55e159eca960b2708a66058a7156b114c25b7a672c8b2642cd27726902a9c",
-    "https://stroygaz.ru/news/": "3aa538d1118f78f145d413e5377246caba177e19226ea8726ae4f4749cad8742",
-    "https://realty.ria.ru/lenta/": "471991d8fa8732bd615b1bc48a778dc911f1205443dd50670fdf5dae835c0b09",
-    "https://rg.ru/tema/ekonomika": "a51f06db951e38c4540711e6ac6dd3ae46648e1b951b1d338dfd7df7cdae5d40",
-    "http://ancb.ru/publication": "85e166ab5142c8f691556f7f0c6561692af983dbf26a831fbf25238b4a2f6bd5",
+    "https://ria-stk.ru/news/vse-novosti.php": "83ba5d51fb218ae518aa013f5e156e9a52caf6d8af56c7cd9ae84507a6735d06",
+    "http://government.ru/news/": "7679a065ba367c594bc6f004e9c8d702536e1bf25ead68e97094d692074d27d4",
+    "https://stroygaz.ru/news/": "9b2684f8d045b6b8fb218ff5efa88c436ac75eefb62d0bca2f626fca25657d49",
+    "https://realty.ria.ru/lenta/": "b288ae4690895471937527cf365ecefecdc85e7c05258aeea99ea80f93c0ffbc",
+    "https://rg.ru/tema/ekonomika": "45b53118b9206d32a103eb013b34676f0536544dd54ac6ef4b454a8d6d1b12e8",
+    "http://ancb.ru/publication": "9bc9300a7ac6df12eb6a6b250e63fad58bdbe3adc0ec8c4397b10f22a9e162b5",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -41777,6 +41799,16 @@
       "https://erzrf.ru/news/news-archive"
     ],
     "РИА СТК": [
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247562&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247561&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247560&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247559&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247558&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247557&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247556&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247555&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247554&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247553&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=247551&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=247550&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=247548&all_news=Y",
@@ -41786,17 +41818,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=247544&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=247543&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=247542&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247541&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247540&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247537&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247539&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247538&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247536&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247535&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247534&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247533&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247532&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247531&all_news=Y"
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=247541&all_news=Y"
     ],
     "Правительство РФ": [
       "http://government.ru/news/57401/",
@@ -41865,6 +41887,8 @@
       "https://realty.ria.ru/20251223/krasnojarsk-2064048013.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/24/reg-cfo/bystree-bystrogo.html",
+      "https://rg.ru/2025/12/24/reg-cfo/vot-priletit-vertolet.html",
       "https://rg.ru/2025/12/24/cb-rf-rasshiril-perech-priznakov-moshennicheskih-perevodov.html",
       "https://rg.ru/2025/12/24/svobodnoe-bremia.html",
       "https://rg.ru/2025/12/24/vnutrennij-litr.html",
@@ -41895,13 +41919,12 @@
       "https://rg.ru/2025/12/24/mishustin-rasshiril-perechen-zhiznenno-vazhnyh-lekarstv-na-vosem-pozicij.html",
       "https://rg.ru/2025/12/24/ria-novosti-deshevle-vsego-ukrasit-elku-k-novomu-godu-mozhno-v-indii.html",
       "https://rg.ru/2025/12/24/putin-poruchil-peresmotret-poriadok-naznacheniia-posobiia-mnogodetnym-semiam.html",
-      "https://rg.ru/2025/12/24/gornolyzhniki-stali-ekonomit-na-prozhivanii.html",
-      "https://rg.ru/2025/12/24/reg-cfo/v-moskve-opublikovan-grafik-proverok-gazovyh-plit-v-2026-godu.html",
       "https://rg.ru/2025/12/19/iek-group-anonsiruet-vypusk-novoj-serii-elektroustanovochnyh-izdelij-flite.html",
       "https://rg.ru/2025/12/18/podvedeny-itogi-vserossijskogo-konkursa-na-razrabotku-koncepcii-reekspozicii-livadijskogo-dvorca-muzeia.html",
       "https://rg.ru/2025/12/17/blagotvoritelnyj-fond-zapustil-novogodnij-proekt-yolochka-gori.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20710",
       "http://ancb.ru/publication/read/20706",
       "http://ancb.ru/publication/read/20694",
       "http://ancb.ru/publication/read/20692",
@@ -41935,8 +41958,7 @@
       "http://ancb.ru/publication/read/20589",
       "http://ancb.ru/publication/read/20584",
       "http://ancb.ru/publication/read/20580",
-      "http://ancb.ru/publication/read/20566",
-      "http://ancb.ru/publication/read/20561"
+      "http://ancb.ru/publication/read/20566"
     ]
   },
   "first_seen": {
@@ -55755,7 +55777,20 @@
     "0e923638eeba6743476e0f7c9c1566e523791c1562f8186dcad8f3177953ca13": "2025-12-24T21:28:00+03:00",
     "c7f84bc3ee74009c0eff2cdd612904aeab927163c43ca8923b076182c18a5d60": "2025-12-24T21:28:00+03:00",
     "a847f7a18788d594d52d9f106bc267a554d2cd22c627ff4ae1563bfa5ed47323": "2025-12-24T21:29:00+03:00",
-    "0b414ba8a81521b33510d70a10dbceb2ac4fcf55c1b1d68fd97476435e773d56": "2025-12-24T21:29:00+03:00"
+    "0b414ba8a81521b33510d70a10dbceb2ac4fcf55c1b1d68fd97476435e773d56": "2025-12-24T21:29:00+03:00",
+    "c5dfeb036913bda21001358bd69a82d85b48450582a6cde1cc1d53167573929b": "2025-12-25T00:16:00+03:00",
+    "3bca41daf2b75456ad2ea8da061fd790c58bdcbd487f6674f648f1aeef4e9566": "2025-12-25T00:16:00+03:00",
+    "e391d2c2997aecea6af92240ae244a7de5ab18bb59dd74270ffaedd5eec95963": "2025-12-25T00:16:00+03:00",
+    "7b8bd1f839a8d0a8f6ae3fa2293f7e1ad5f37eee469f493416a95bd225787151": "2025-12-25T00:16:00+03:00",
+    "753b47aa9853da9a52919f98e78e2b9992ea33da1b5a4cc60ba3e6d03f4afde8": "2025-12-25T00:16:00+03:00",
+    "f8f96986ddf0c70ef4aac5722ea1ff3bd0245bce076d11a886443759a3aeff7e": "2025-12-25T00:16:00+03:00",
+    "4acf4a34c2b3ff77c32f05a3a6d8282dccd97256ddeb383bbd4395114dde5c28": "2025-12-25T00:16:00+03:00",
+    "c82b02ec9972d58abaa14baf391f820d4bc95a8293323e5be81167aa8a3f1762": "2025-12-25T00:16:00+03:00",
+    "384cc880e063f86c04bfbe90de42cdbf0233e3660d5aea8e8327d276e16e0576": "2025-12-25T00:16:00+03:00",
+    "ebb32ceda8826968ca29028f91c49dc0e3e60c8852a083a453c7327bf9606c50": "2025-12-25T00:16:00+03:00",
+    "8ebee2f260a1a0db13c721a3d26a82f4c16a50d696294f070c7ec077909169c0": "2025-12-25T00:16:00+03:00",
+    "ee511536f3df6dec01eceb7117f4fff2b136bbac4b11f170f46a17dd2a37d133": "2025-12-25T00:16:00+03:00",
+    "e13c590fc9f649ee55ae18edf33f9fec1d8ab56213c4c095460f416a090ee4f4": "2025-12-25T00:16:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -55786,8 +55821,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa64bc8f6f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1766600772.0541248
       },
       "warmup_done": false,
@@ -55797,31 +55832,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "LCe1nLOhSK8jledd",
+          "value": "0sjzxPSmxXeI2xSB",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766602031
+          "expires": 1766612177
         },
         {
           "name": "__ddg10_",
-          "value": "1766600831",
+          "value": "1766610977",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766602031
+          "expires": 1766612177
         },
         {
           "name": "__ddg9_",
-          "value": "172.182.194.213",
+          "value": "135.232.224.99",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766602031
+          "expires": 1766612177
+        },
+        {
+          "name": "__ddg1_",
+          "value": "ad8W4C0kbMSv3huONCrk",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1798146977
         },
         {
           "name": "PHPSESSID",
-          "value": "1c91de888a292d009d9c4c14d50fa9fa",
+          "value": "404576e0f348bec5530a0c9d9ac8071d",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -55848,11 +55891,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "f5TX0dp98yPnjPSst7zvOlpLPzARBCGX",
+          "value": "rTFU4ILu6BYeuXea4zgSz4hMlcLfnPsl",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766600402
+          "expires": 1766621779
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -55860,12 +55903,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1797693602
+          "expires": 1797714979
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa64aaf5e50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1766600864.6408217
       },
       "warmup_done": false,
@@ -72881,7 +72924,20 @@
     "https://rg.ru/2025/12/24/rospotrebnadzor-podgotovit-predlozheniia-po-regulirovaniiu-otrasli-gotovoj-edy.html": "https://rg.ru/2025/12/24/rospotrebnadzor-podgotovit-predlozheniia-po-regulirovaniiu-otrasli-gotovoj-edy.html",
     "https://rg.ru/2025/12/24/reg-szfo/simfonicheskij-orkestr-vystupil-v-peterburgskom-metro.html": "https://rg.ru/2025/12/24/reg-szfo/simfonicheskij-orkestr-vystupil-v-peterburgskom-metro.html",
     "https://rg.ru/2025/12/24/v-2026-godu-v-rf-razrabotaiut-novye-mery-po-borbe-s-tenevym-sektorom-ekonomiki.html": "https://rg.ru/2025/12/24/v-2026-godu-v-rf-razrabotaiut-novye-mery-po-borbe-s-tenevym-sektorom-ekonomiki.html",
-    "https://rg.ru/2025/12/24/reg-szfo/v-peterburge-skorostnoj-tramvaj-slavianka-soshel-s-relsov.html": "https://rg.ru/2025/12/24/reg-szfo/v-peterburge-skorostnoj-tramvaj-slavianka-soshel-s-relsov.html"
+    "https://rg.ru/2025/12/24/reg-szfo/v-peterburge-skorostnoj-tramvaj-slavianka-soshel-s-relsov.html": "https://rg.ru/2025/12/24/reg-szfo/v-peterburge-skorostnoj-tramvaj-slavianka-soshel-s-relsov.html",
+    "http://ancb.ru/publication/read/20710": "http://ancb.ru/publication/read/20710",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247562&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247562&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247561&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247561&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247560&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247560&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247559&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247559&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247558&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247558&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247557&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247557&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247556&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247556&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247555&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247555&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247554&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247554&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247553&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247553&all_news=Y",
+    "https://rg.ru/2025/12/24/reg-cfo/bystree-bystrogo.html": "https://rg.ru/2025/12/24/reg-cfo/bystree-bystrogo.html",
+    "https://rg.ru/2025/12/24/reg-cfo/vot-priletit-vertolet.html": "https://rg.ru/2025/12/24/reg-cfo/vot-priletit-vertolet.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -87029,7 +87085,20 @@
     "cfe2b3dfad5ccc43d41caf431a47890ffb5a4cd4": "https://rg.ru/2025/12/24/rospotrebnadzor-podgotovit-predlozheniia-po-regulirovaniiu-otrasli-gotovoj-edy.html",
     "0fa195374bb00d15b9bf77a9d5f3b83a91b9aa0f": "https://rg.ru/2025/12/24/reg-szfo/simfonicheskij-orkestr-vystupil-v-peterburgskom-metro.html",
     "046701b3f7d7a77d703f5af8a3714cd9957eadee": "https://rg.ru/2025/12/24/v-2026-godu-v-rf-razrabotaiut-novye-mery-po-borbe-s-tenevym-sektorom-ekonomiki.html",
-    "16e03c0bb493a978674f00397f478a2d3b616c57": "https://rg.ru/2025/12/24/reg-szfo/v-peterburge-skorostnoj-tramvaj-slavianka-soshel-s-relsov.html"
+    "16e03c0bb493a978674f00397f478a2d3b616c57": "https://rg.ru/2025/12/24/reg-szfo/v-peterburge-skorostnoj-tramvaj-slavianka-soshel-s-relsov.html",
+    "e914d30fb6ece32ba0addf87c22e68139726d87e": "http://ancb.ru/publication/read/20710",
+    "0cfa445e2d6425327900a4d88c8166f48e0e53f7": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247562&all_news=Y",
+    "ec44fb0357829e4f9d67e1743f2da5bb5fe8a2c2": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247561&all_news=Y",
+    "8722346f3676f9adafea77f3a7cb20d0f641d322": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247560&all_news=Y",
+    "9ac5cbf6819f3c424d1955351094facf843a5b45": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247559&all_news=Y",
+    "40c05972ed560a77de01a1bdde5090989cdbcf54": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247558&all_news=Y",
+    "161a5dc64f69ae868784a3fe46903c13f014f233": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247557&all_news=Y",
+    "4a93e1a49f72bcfc38cf15e233c1f19e8698b446": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247556&all_news=Y",
+    "618db49dab06d567942baa7812ae1b57c9dbe7b2": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247555&all_news=Y",
+    "93d43d8a8bc50d1d8d5869eb8aee59db97e8955c": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247554&all_news=Y",
+    "b17fa8bfdb2745e14905628bcc2996200989bffd": "https://ria-stk.ru/news/index.php?ELEMENT_ID=247553&all_news=Y",
+    "77924c9536a6de850652a277de0990aede6bb907": "https://rg.ru/2025/12/24/reg-cfo/bystree-bystrogo.html",
+    "012dc0657a58066478cc149176595b686643e481": "https://rg.ru/2025/12/24/reg-cfo/vot-priletit-vertolet.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -106026,6 +106095,19 @@
     "https://rg.ru/2025/12/24/rospotrebnadzor-podgotovit-predlozheniia-po-regulirovaniiu-otrasli-gotovoj-edy.html": "0e923638eeba6743476e0f7c9c1566e523791c1562f8186dcad8f3177953ca13",
     "https://rg.ru/2025/12/24/reg-szfo/simfonicheskij-orkestr-vystupil-v-peterburgskom-metro.html": "c7f84bc3ee74009c0eff2cdd612904aeab927163c43ca8923b076182c18a5d60",
     "https://rg.ru/2025/12/24/v-2026-godu-v-rf-razrabotaiut-novye-mery-po-borbe-s-tenevym-sektorom-ekonomiki.html": "a847f7a18788d594d52d9f106bc267a554d2cd22c627ff4ae1563bfa5ed47323",
-    "https://rg.ru/2025/12/24/reg-szfo/v-peterburge-skorostnoj-tramvaj-slavianka-soshel-s-relsov.html": "0b414ba8a81521b33510d70a10dbceb2ac4fcf55c1b1d68fd97476435e773d56"
+    "https://rg.ru/2025/12/24/reg-szfo/v-peterburge-skorostnoj-tramvaj-slavianka-soshel-s-relsov.html": "0b414ba8a81521b33510d70a10dbceb2ac4fcf55c1b1d68fd97476435e773d56",
+    "http://ancb.ru/publication/read/20710": "c5dfeb036913bda21001358bd69a82d85b48450582a6cde1cc1d53167573929b",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247562&all_news=Y": "3bca41daf2b75456ad2ea8da061fd790c58bdcbd487f6674f648f1aeef4e9566",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247561&all_news=Y": "e391d2c2997aecea6af92240ae244a7de5ab18bb59dd74270ffaedd5eec95963",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247560&all_news=Y": "7b8bd1f839a8d0a8f6ae3fa2293f7e1ad5f37eee469f493416a95bd225787151",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247559&all_news=Y": "753b47aa9853da9a52919f98e78e2b9992ea33da1b5a4cc60ba3e6d03f4afde8",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247558&all_news=Y": "f8f96986ddf0c70ef4aac5722ea1ff3bd0245bce076d11a886443759a3aeff7e",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247557&all_news=Y": "4acf4a34c2b3ff77c32f05a3a6d8282dccd97256ddeb383bbd4395114dde5c28",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247556&all_news=Y": "c82b02ec9972d58abaa14baf391f820d4bc95a8293323e5be81167aa8a3f1762",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247555&all_news=Y": "384cc880e063f86c04bfbe90de42cdbf0233e3660d5aea8e8327d276e16e0576",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247554&all_news=Y": "ebb32ceda8826968ca29028f91c49dc0e3e60c8852a083a453c7327bf9606c50",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=247553&all_news=Y": "8ebee2f260a1a0db13c721a3d26a82f4c16a50d696294f070c7ec077909169c0",
+    "https://rg.ru/2025/12/24/reg-cfo/bystree-bystrogo.html": "ee511536f3df6dec01eceb7117f4fff2b136bbac4b11f170f46a17dd2a37d133",
+    "https://rg.ru/2025/12/24/reg-cfo/vot-priletit-vertolet.html": "e13c590fc9f649ee55ae18edf33f9fec1d8ab56213c4c095460f416a090ee4f4"
   }
 }
