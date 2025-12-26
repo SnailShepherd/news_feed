@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 26 Dec 2025 18:27:10 GMT"
+      "Last-Modified": "Fri, 26 Dec 2025 21:18:21 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"16h5h9kgfxf3odl\""
+      "ETag": "\"vm4gka6yal3g0g\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -33799,6 +33799,18 @@
     },
     "https://rg.ru/2025/12/26/aksakov-v-rossii-obsuzhdaetsia-sozdanie-islamskogo-banka.html": {
       "ETag": "\"cf4crcc1au1oqq\""
+    },
+    "https://rg.ru/2025/12/26/na-ukraine-rassekretili-dannye-ob-iskopaemyh-iz-soglasheniia-s-ssha-po-nedram.html": {
+      "ETag": "\"7885asdo401p0t\""
+    },
+    "https://rg.ru/2025/12/26/obnaruzhen-sklad-otkuda-postavlialsia-napitok-aloe-vera-s-acetonom.html": {
+      "ETag": "\"1461zsrvgu01qvs\""
+    },
+    "https://rg.ru/2025/12/26/mvd-predupredilo-o-novyh-pravilah-peresecheniia-granicy-dlia-detej-v-2026-godu.html": {
+      "ETag": "\"bx9g4izoj1nkv\""
+    },
+    "https://rg.ru/2025/12/26/husnullin-obemy-vydachi-ipoteki-dolzhny-byt-minimum-4-trln-rublej-v-god.html": {
+      "ETag": "\"8x34tp0ihw1pec\""
     }
   },
   "stats": {
@@ -42567,9 +42579,31 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f77cdf17ed0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f77cf087390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f77cdcec2d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f77cdcec550>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f77cdcec7d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7ce64c8ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7ce64be710>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7ce64be5d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7ce761f6f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7ce761fe10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7ce7613e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Интерфакс-Недвижимость",
+        "url": "https://www.interfax-russia.ru/realty/news?per-page=32",
+        "error": "cooldown active until 2025-12-26T21:20:43.924635+00:00 -> used cache"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7ce6184190>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7ce7667390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7ce6184550>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7ce61847d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7ce6184a50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-12-26T18:27:46.203672+00:00",
+    "last_run": "2025-12-26T21:18:50.009557+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -42582,9 +42616,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 379.38596200001484,
-        "connect_ms": 896.9485409999152,
-        "response_ms": 1276.33450299993,
+        "dns_ms": 767.9198539999561,
+        "connect_ms": 780.6324850000692,
+        "response_ms": 1548.5523390000253,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -42595,12 +42629,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f77cf02be30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7ce7613e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 5271.930533000045,
-        "connect_ms": 0.0,
-        "response_ms": 589.1527950000182,
+        "dns_ms": 1343.3895209998354,
+        "connect_ms": 4927.289555000243,
+        "response_ms": 6270.679076000079,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -42611,26 +42645,26 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f77cdcec7d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7ce6184a50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "c29156868c6cadfe07cbcd3de07b9e695245a38d606b68d54ecb8e6b23302080",
+    "https://ardexpert.ru/article": "b31ad3b14a098696a4047a928d9ffe86abc884cfc10981f351b4282899026eed",
     "https://www.gostinfo.ru/News/List": "2a36c1e00830703e73218179146e8e4235c63528c1664d39448445d2bc516305",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "bb708a86fec21bae64ca59e3c15005adcf1c983a5934083a7ef241ce91bc99e6",
-    "https://eec.eaeunion.org/news/": "61f12ad079ba9a32c49b16f3be78c011a02d2ecc5a285be868a5f94590b84600",
+    "https://eec.eaeunion.org/news/": "36edf31dc2b28cfdb10c27ceb615bd1e5b82553417a3a8f691eae012357b72ee",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
     "https://www.interfax-russia.ru/realty/news?per-page=32": "d31eca94015ff883eca8d4760ee3f2a6cc72e1db2f7dc13a66c565b00131723f",
-    "https://www.metalinfo.ru/ru/news": "697829e257c9deb457baa30ea8e6bf0601852195e06a1fdbdf491887eb2a0e13",
-    "https://www.pnp.ru/economics/": "944906c92e05d1ca3385e4691c8124b09efaa7bb16508fcdb48efce29df7d8b7",
+    "https://www.metalinfo.ru/ru/news": "3fd07b1e250a153508fb39289ced50701951e2db9a5e8ab0f8e7065c7fa55a34",
+    "https://www.pnp.ru/economics/": "f580dc8dce80ed6aa8254b02641cf5e89799560a3ab70c6a0b9aee734dbfb937",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
     "https://ria-stk.ru/news/vse-novosti.php": "688b1321658127737c7da380bfbced9e7de2536fe0480b9ecfa1a8fecc68d7f6",
-    "http://government.ru/news/": "1171a915b5f1b19db74bc394f8853a09a0598d2aaab353c2e99f6c99ee61ad7e",
-    "https://stroygaz.ru/news/": "cc86f3f1f821ca8dc7ada8014e57dd0ad4a226fc275174635f69b40219deca39",
-    "https://realty.ria.ru/lenta/": "6a75e37bde4dafaff1b4090541047f69c2c415b984e2248bf76ff91e27e2448c",
-    "https://rg.ru/tema/ekonomika": "b6e6e4a41a26a62356b0aeffda5540af4216415fe5d0590462cc43566e837371",
+    "http://government.ru/news/": "82c858ee7905e1cd236e81c5fd37d641ea53a59d2dac88c7ad29530ff14bcd71",
+    "https://stroygaz.ru/news/": "1c735923404814507f8236cd1d91be00782cffc35e215dd719cb6aa1b3d209eb",
+    "https://realty.ria.ru/lenta/": "b3bb37f757554523e92b93b95a3cb9c6f21454db8a051f693dff15474bfed996",
+    "https://rg.ru/tema/ekonomika": "61bddd4e419c79cb7a492b753675363fcec0f885d163afeb9bfeed2efcada671",
     "http://ancb.ru/publication": "827ec9463a45e8c50e21ebfb86d7a883fffeef7b3ad1f6bbd43bd52a00c175e1",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -42935,6 +42969,10 @@
       "https://realty.ria.ru/20251226/minstroy-2064551655.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/26/na-ukraine-rassekretili-dannye-ob-iskopaemyh-iz-soglasheniia-s-ssha-po-nedram.html",
+      "https://rg.ru/2025/12/26/obnaruzhen-sklad-otkuda-postavlialsia-napitok-aloe-vera-s-acetonom.html",
+      "https://rg.ru/2025/12/26/mvd-predupredilo-o-novyh-pravilah-peresecheniia-granicy-dlia-detej-v-2026-godu.html",
+      "https://rg.ru/2025/12/26/husnullin-obemy-vydachi-ipoteki-dolzhny-byt-minimum-4-trln-rublej-v-god.html",
       "https://rg.ru/2025/12/26/chto-budet-s-rublem-neftiu-i-birzhej-v-poslednie-dni-2025-goda.html",
       "https://rg.ru/2025/12/26/rosreestr-poschitaet-postradavshih-ot-effekta-dolinoj.html",
       "https://rg.ru/2025/12/26/specialisty-kotorye-staviat-zadachi-i-otvechaiut-za-rezultat-ostanutsia-vostrebovannymi.html",
@@ -42965,10 +43003,6 @@
       "https://rg.ru/2025/12/26/reg-cfo/v-moskovskih-aeroportah-zaderzhany-24-rejsa.html",
       "https://rg.ru/2025/12/26/manturov-rf-predpolagaet-rost-avtorynka-k-2030-godu-do-25-mln-prodannyh-mashin.html",
       "https://rg.ru/2025/12/26/deputat-gd-gavrilov-massovyh-shtrafov-iz-za-vnedreniia-ii-v-regionah-ne-budet.html",
-      "https://rg.ru/2025/12/26/reg-pfo/v-kakie-turisticheskie-mesta-mozhno-biudzhetno-sezdit-na-novyj-god.html",
-      "https://rodina-history.ru/2025/12/26/novuiu-1000-rublej-s-simvolami-povolzhia-vypustili-v-rossii.html",
-      "https://rg.ru/2025/12/26/manturov-rf-vremenno-otkladyvaet-postavki-vooruzhenij-po-eksportnym-kontraktam.html",
-      "https://rg.ru/2025/12/26/manturov-rossiia-postavliaet-v-zonu-svo-bolshe-dronov-chem-protivnik.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
     ],
     "АНЦБ": [
@@ -57237,7 +57271,11 @@
     "f8144a03d97248aee6141d8ab82e5a9f3f0ae2f9e40a74a49207800ddf8dc6d7": "2025-12-26T21:27:00+03:00",
     "4f4d51d75c79e3951c15f7141ea99ff3d5d83991bf7f81c277c9f154a7e9db9e": "2025-12-26T21:27:00+03:00",
     "3516ee05a8d0b91f432435e49b667209ec6e1474260edc0b79f47506965170fa": "2025-12-26T21:27:00+03:00",
-    "987cfc72a5cf4f02f0a9fc1ebbbecdba5c8d613573910828c247069cbb404c11": "2025-12-26T21:27:00+03:00"
+    "987cfc72a5cf4f02f0a9fc1ebbbecdba5c8d613573910828c247069cbb404c11": "2025-12-26T21:27:00+03:00",
+    "a1beed9ad0401dfd2b849dbfdbb1d21f2b60a0163b9d1b9137180cef5070571d": "2025-12-27T00:18:00+03:00",
+    "c491bd834c5a65e98bc17e10c9b4ecc598cf2f561ea31db2780bc0dcda3b22c2": "2025-12-27T00:18:00+03:00",
+    "a43ddf34b0cd16727498e41331e6425fbd99578714ba346d1427820e90dd6a38": "2025-12-27T00:18:00+03:00",
+    "56a0d68d6e327090ec141160409f340569ab2031f6a323470ebf18313f10e178": "2025-12-27T00:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -57268,9 +57306,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f77cf017e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
-        "last_ts": 1766773545.7583802
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7ce761fe10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 20,
+        "last_ts": 1766783812.0743198
       },
       "warmup_done": false,
       "last_success_path": null
@@ -57279,31 +57317,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "Od42BuegLs5puUqC",
+          "value": "bOJpCu8DEFLWFjlu",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766774789
+          "expires": 1766785061
         },
         {
           "name": "__ddg10_",
-          "value": "1766773589",
+          "value": "1766783861",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766774789
+          "expires": 1766785061
         },
         {
           "name": "__ddg9_",
-          "value": "20.51.206.83",
+          "value": "52.159.244.162",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766774789
+          "expires": 1766785061
+        },
+        {
+          "name": "__ddg1_",
+          "value": "lZWeED5bkhoLL2Hc7RsF",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1798319861
         },
         {
           "name": "PHPSESSID",
-          "value": "ccec8ed3c3127367318c41e1a4a543c7",
+          "value": "57dcf4d6d299d5d01b5e3aaf5e580beb",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -57346,9 +57392,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f77cdcec550>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
-        "last_ts": 1766773621.8407142
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7ce61847d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 16,
+        "last_ts": 1766783894.5484085
       },
       "warmup_done": false,
       "last_success_path": null
@@ -74882,7 +74928,11 @@
     "https://rg.ru/2025/12/26/sobstvennikov-zahlamlennyh-dachnyh-uchastkov-nachnut-shtrafovat.html": "https://rg.ru/2025/12/26/sobstvennikov-zahlamlennyh-dachnyh-uchastkov-nachnut-shtrafovat.html",
     "https://rg.ru/2025/12/26/reg-cfo/stoimost-proezda-po-msd-i-parkovochnye-tarify-izmeniatsia-s-2-ianvaria.html": "https://rg.ru/2025/12/26/reg-cfo/stoimost-proezda-po-msd-i-parkovochnye-tarify-izmeniatsia-s-2-ianvaria.html",
     "https://rg.ru/2025/12/26/minfin-finansovo-gramotnyh-rossiian-stanovitsia-bolshe.html": "https://rg.ru/2025/12/26/minfin-finansovo-gramotnyh-rossiian-stanovitsia-bolshe.html",
-    "https://rg.ru/2025/12/26/aksakov-v-rossii-obsuzhdaetsia-sozdanie-islamskogo-banka.html": "https://rg.ru/2025/12/26/aksakov-v-rossii-obsuzhdaetsia-sozdanie-islamskogo-banka.html"
+    "https://rg.ru/2025/12/26/aksakov-v-rossii-obsuzhdaetsia-sozdanie-islamskogo-banka.html": "https://rg.ru/2025/12/26/aksakov-v-rossii-obsuzhdaetsia-sozdanie-islamskogo-banka.html",
+    "https://rg.ru/2025/12/26/na-ukraine-rassekretili-dannye-ob-iskopaemyh-iz-soglasheniia-s-ssha-po-nedram.html": "https://rg.ru/2025/12/26/na-ukraine-rassekretili-dannye-ob-iskopaemyh-iz-soglasheniia-s-ssha-po-nedram.html",
+    "https://rg.ru/2025/12/26/obnaruzhen-sklad-otkuda-postavlialsia-napitok-aloe-vera-s-acetonom.html": "https://rg.ru/2025/12/26/obnaruzhen-sklad-otkuda-postavlialsia-napitok-aloe-vera-s-acetonom.html",
+    "https://rg.ru/2025/12/26/mvd-predupredilo-o-novyh-pravilah-peresecheniia-granicy-dlia-detej-v-2026-godu.html": "https://rg.ru/2025/12/26/mvd-predupredilo-o-novyh-pravilah-peresecheniia-granicy-dlia-detej-v-2026-godu.html",
+    "https://rg.ru/2025/12/26/husnullin-obemy-vydachi-ipoteki-dolzhny-byt-minimum-4-trln-rublej-v-god.html": "https://rg.ru/2025/12/26/husnullin-obemy-vydachi-ipoteki-dolzhny-byt-minimum-4-trln-rublej-v-god.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -89442,7 +89492,11 @@
     "ffdd609a53257e21e91df22de10b56370666c141": "https://rg.ru/2025/12/26/sobstvennikov-zahlamlennyh-dachnyh-uchastkov-nachnut-shtrafovat.html",
     "4fd87fff0d0d10c4c62b05c9ea6b25976fe09f05": "https://rg.ru/2025/12/26/reg-cfo/stoimost-proezda-po-msd-i-parkovochnye-tarify-izmeniatsia-s-2-ianvaria.html",
     "7065d5eada5c38902fd06baa6d2ad7596deb6bd9": "https://rg.ru/2025/12/26/minfin-finansovo-gramotnyh-rossiian-stanovitsia-bolshe.html",
-    "9c05bfef4f2ec7c7bc7b72068b1fa8c860944230": "https://rg.ru/2025/12/26/aksakov-v-rossii-obsuzhdaetsia-sozdanie-islamskogo-banka.html"
+    "9c05bfef4f2ec7c7bc7b72068b1fa8c860944230": "https://rg.ru/2025/12/26/aksakov-v-rossii-obsuzhdaetsia-sozdanie-islamskogo-banka.html",
+    "70aab7960b5a498ecb5c50bccc21508ebf383deb": "https://rg.ru/2025/12/26/na-ukraine-rassekretili-dannye-ob-iskopaemyh-iz-soglasheniia-s-ssha-po-nedram.html",
+    "2d6e537a2ba8a671483f1df47ecc2c4f37bf63dc": "https://rg.ru/2025/12/26/obnaruzhen-sklad-otkuda-postavlialsia-napitok-aloe-vera-s-acetonom.html",
+    "3fbd3d8fc03b8cfe8c8edc697631ff366de89fd6": "https://rg.ru/2025/12/26/mvd-predupredilo-o-novyh-pravilah-peresecheniia-granicy-dlia-detej-v-2026-godu.html",
+    "bdc6314d3bd94ece99aac8eedd08e5206d861f71": "https://rg.ru/2025/12/26/husnullin-obemy-vydachi-ipoteki-dolzhny-byt-minimum-4-trln-rublej-v-god.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -109013,6 +109067,10 @@
     "https://rg.ru/2025/12/26/sobstvennikov-zahlamlennyh-dachnyh-uchastkov-nachnut-shtrafovat.html": "f8144a03d97248aee6141d8ab82e5a9f3f0ae2f9e40a74a49207800ddf8dc6d7",
     "https://rg.ru/2025/12/26/reg-cfo/stoimost-proezda-po-msd-i-parkovochnye-tarify-izmeniatsia-s-2-ianvaria.html": "4f4d51d75c79e3951c15f7141ea99ff3d5d83991bf7f81c277c9f154a7e9db9e",
     "https://rg.ru/2025/12/26/minfin-finansovo-gramotnyh-rossiian-stanovitsia-bolshe.html": "3516ee05a8d0b91f432435e49b667209ec6e1474260edc0b79f47506965170fa",
-    "https://rg.ru/2025/12/26/aksakov-v-rossii-obsuzhdaetsia-sozdanie-islamskogo-banka.html": "987cfc72a5cf4f02f0a9fc1ebbbecdba5c8d613573910828c247069cbb404c11"
+    "https://rg.ru/2025/12/26/aksakov-v-rossii-obsuzhdaetsia-sozdanie-islamskogo-banka.html": "987cfc72a5cf4f02f0a9fc1ebbbecdba5c8d613573910828c247069cbb404c11",
+    "https://rg.ru/2025/12/26/na-ukraine-rassekretili-dannye-ob-iskopaemyh-iz-soglasheniia-s-ssha-po-nedram.html": "a1beed9ad0401dfd2b849dbfdbb1d21f2b60a0163b9d1b9137180cef5070571d",
+    "https://rg.ru/2025/12/26/obnaruzhen-sklad-otkuda-postavlialsia-napitok-aloe-vera-s-acetonom.html": "c491bd834c5a65e98bc17e10c9b4ecc598cf2f561ea31db2780bc0dcda3b22c2",
+    "https://rg.ru/2025/12/26/mvd-predupredilo-o-novyh-pravilah-peresecheniia-granicy-dlia-detej-v-2026-godu.html": "a43ddf34b0cd16727498e41331e6425fbd99578714ba346d1427820e90dd6a38",
+    "https://rg.ru/2025/12/26/husnullin-obemy-vydachi-ipoteki-dolzhny-byt-minimum-4-trln-rublej-v-god.html": "56a0d68d6e327090ec141160409f340569ab2031f6a323470ebf18313f10e178"
   }
 }
