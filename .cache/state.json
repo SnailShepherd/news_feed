@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 27 Dec 2025 18:26:36 GMT"
+      "Last-Modified": "Sat, 27 Dec 2025 21:16:06 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"sm34m1m8bd3brr\""
+      "ETag": "\"oa6i0mou6q3de8\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -33930,6 +33930,9 @@
     },
     "https://rg.ru/2025/12/27/reg-cfo/kanatnaia-doroga-na-vorobevyh-gorah-budet-rabotat-vsiu-novogodniuiu-noch.html": {
       "ETag": "\"mqc10wkwrd1omu\""
+    },
+    "https://rg.ru/2025/12/27/reg-cfo/rosaviaciia-dva-moskovskih-aeroporta-rabotaiut-s-ogranicheniiami.html": {
+      "ETag": "\"173rx4dq1o71re5\""
     }
   },
   "stats": {
@@ -42827,9 +42830,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe63d6f250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe63d6f390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe63d6f110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe63d6ec10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe63d6e710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-12-27T18:26:59.644260+00:00",
+    "last_run": "2025-12-27T21:15:36.772549+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -42842,56 +42850,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 737.1811810000111,
-        "connect_ms": 426.2823249999883,
-        "response_ms": 1163.4635059999994,
+        "dns_ms": 582.5260020000087,
+        "connect_ms": 674.8240279999891,
+        "response_ms": 1257.3500299999978,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbe64e83e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 154.36833900002966,
+        "connect_ms": 1009.0265679999675,
+        "response_ms": 1163.3949069999971,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4989.382545000012,
+        "dns_ms": 8680.157707999912,
         "connect_ms": 0.0,
-        "response_ms": 992.1142530000111,
+        "response_ms": 4976.163208999992,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe63d6e710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 322.7416660000699,
+        "connect_ms": 331.45557999989705,
+        "response_ms": 654.197245999967,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "701622ce3a55e4b9645ec4f3c24ef49cce066ce8aad881084975187d48edf745",
+    "https://ardexpert.ru/article": "7198000f773e0cd45fb10159dc129f30ecbd612d58c3867137b31d26253705fb",
     "https://www.gostinfo.ru/News/List": "2a36c1e00830703e73218179146e8e4235c63528c1664d39448445d2bc516305",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "bb708a86fec21bae64ca59e3c15005adcf1c983a5934083a7ef241ce91bc99e6",
-    "https://eec.eaeunion.org/news/": "aeafd2831099a6c58c0b810c73bbf8d0987fd9f60da72cbdf5bf091896ec4bd3",
+    "https://eec.eaeunion.org/news/": "6bb659f81b2a4384ddfcc4933e297ef3c2ebb6aa0bd344581828682fc6bf3fb5",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "f1e24c298bdd1c827650a1cec1a6c7cb8c13f937010d8a0e592ac9b764740bf9",
-    "https://www.metalinfo.ru/ru/news": "17c19bbda1f29f04186f40337096ffdb3821e11ae79b6974cb1167b998b86386",
-    "https://www.pnp.ru/economics/": "fc1794b18ef28fe128ede305f21c0fa3b9e61f87841d3fdb820b2b53740ad997",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "71ddecd78ae71f702a97c99ed894644686c11aee2b8eb5167ec6b5d8b96b27da",
+    "https://www.metalinfo.ru/ru/news": "697829e257c9deb457baa30ea8e6bf0601852195e06a1fdbdf491887eb2a0e13",
+    "https://www.pnp.ru/economics/": "dd54fa2412bbffde3d852edc0cb6fd0f6f7ecdd5d7ef3d5138ecda0750542429",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "43a7510c9ed180ccc6ce200c386d6f42ac8a8a4607b56361efaec7bc219e10be",
-    "http://government.ru/news/": "a562b06957a0528dcee9a113e4461af55b6574f2742490447e672fb622615ad3",
-    "https://stroygaz.ru/news/": "ff1eda1182581bc342cde3d08c8bfeac9acfc0c289132cc3572ae9d8a16221aa",
-    "https://realty.ria.ru/lenta/": "94e3d16cff9323dcd8675fef9e3b20199feac3b64630ceabca36e342b3f038e7",
-    "https://rg.ru/tema/ekonomika": "5d45f040a2ebf4fb442c89ed08ee16ca39da09d951882ab3c40efdd835941dc5",
-    "http://ancb.ru/publication": "eca9b1764e42857886d2b43d92c7b272f1398a0aa78474f3f56dffbd7a58524d",
+    "https://ria-stk.ru/news/vse-novosti.php": "427c3e4364b5bdf6f537aa4e66b4eabc11a5818fbc8c8175be59b117dee97d95",
+    "http://government.ru/news/": "203c01a8e44a897c7248dcbcdba1c917ba14513d44c1755d3cf9938e07b5fb53",
+    "https://stroygaz.ru/news/": "cc22f3c3bfcae0679d5a45c83834207b01a8a20711baad875f2dfe6c33ce1f72",
+    "https://realty.ria.ru/lenta/": "1c8bb9c00f0f4338a6c39ad10deb54b4e1fa04a14e4b8de4a9a6e2fa7ba502ec",
+    "https://rg.ru/tema/ekonomika": "d4bf256da4bf029af719807e801c819494e8e91fc63bbdb8afce2b00ba62ed75",
+    "http://ancb.ru/publication": "3f02276beaaf8a6ef8c85855cacf4c5a1a7161e69480ae3c587dd13767c0eda2",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -43195,6 +43203,7 @@
       "https://realty.ria.ru/20251226/zhk-2064781979.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/27/reg-cfo/rosaviaciia-dva-moskovskih-aeroporta-rabotaiut-s-ogranicheniiami.html",
       "https://rg.ru/2025/12/27/akort-mandariny-v-dekabre-2025-goda-podesheveli-na-25.html",
       "https://rg.ru/2025/12/27/reg-cfo/kanatnaia-doroga-na-vorobevyh-gorah-budet-rabotat-vsiu-novogodniuiu-noch.html",
       "https://rg.ru/2025/12/27/agentnaia-ekonomika-kak-ii-koncentriruet-vlast-i-perepisyvaet-pravila-igry.html",
@@ -43225,7 +43234,6 @@
       "https://rg.ru/2025/12/27/reg-sibfo/ekipazhi-samoletov-iz-moskvy-i-sochi-otkazalis-ot-posadki-v-aeroportu-krasnoiarska.html",
       "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html",
       "https://rg.ru/2025/12/26/na-ukraine-rassekretili-dannye-ob-iskopaemyh-iz-soglasheniia-s-ssha-po-nedram.html",
-      "https://rg.ru/2025/12/26/obnaruzhen-sklad-otkuda-postavlialsia-napitok-aloe-vera-s-acetonom.html",
       "https://rg.ru/2025/12/26/chto-budet-s-rublem-neftiu-i-birzhej-v-poslednie-dni-2025-goda.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
@@ -57551,7 +57559,8 @@
     "c5ab5f6cec42aa68adf3b51dc106fe85d80af96195133c60bc9418b74078e557": "2025-12-27T18:19:00+03:00",
     "b86644451c08a4efff3ce59dfbf33c393eaac203b4e76e782c3fce6ea8a4ce96": "2025-12-27T18:19:00+03:00",
     "7cf577acdf18d93dca3d1881a4675b650d5252c884a0a0022cf475225bdd6a0a": "2025-12-27T21:26:00+03:00",
-    "32b1e02ccd454deb7bdf39e985a3579a029db1882e01f8926ff763a8e6bfa4c0": "2025-12-27T21:26:00+03:00"
+    "32b1e02ccd454deb7bdf39e985a3579a029db1882e01f8926ff763a8e6bfa4c0": "2025-12-27T21:26:00+03:00",
+    "5eed12ba6034c2a946602220f155d87ccf41dd15ae2cbaf2e6bb69a4ca51691f": "2025-12-28T00:15:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -57582,8 +57591,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbe64e8fe10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 20,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1766859905.5103252
       },
       "warmup_done": false,
@@ -57593,31 +57602,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "ZF88esqztdE8VOXI",
+          "value": "zHefYiLsHhO0wBA7",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766861155
+          "expires": 1766871325
         },
         {
           "name": "__ddg10_",
-          "value": "1766859955",
+          "value": "1766870125",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766861155
+          "expires": 1766871325
         },
         {
           "name": "__ddg9_",
-          "value": "20.171.51.208",
+          "value": "64.236.160.193",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766861155
+          "expires": 1766871325
+        },
+        {
+          "name": "__ddg1_",
+          "value": "cOTiTXhxtSqdc5H3Psdy",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1798406125
         },
         {
           "name": "PHPSESSID",
-          "value": "fe20aa347647ed5a6b8c5a5c1e58a4e6",
+          "value": "606656d72baf0b0a3d9f8dfeab965543",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -57644,11 +57661,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "ad2jM34w6FKEt3UmlmQyR179rh3Fpp2y",
+          "value": "zw2Q1t89enqgX8GjO06KEHEwxTB3SWOX",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766827570
+          "expires": 1766880928
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -57656,12 +57673,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1797920770
+          "expires": 1797974128
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbe63d6ec10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 16,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1766859988.1828415
       },
       "warmup_done": false,
@@ -75250,7 +75267,8 @@
     "https://rg.ru/2025/12/27/v-aeroportu-vnukovo-vvedeny-ogranicheniia-na-ispolzovanie-vozdushnogo-prostranstva.html": "https://rg.ru/2025/12/27/v-aeroportu-vnukovo-vvedeny-ogranicheniia-na-ispolzovanie-vozdushnogo-prostranstva.html",
     "https://rg.ru/2025/12/27/reg-ufo/v-novogodnie-prazdniki-aeroport-sochi-planiruet-obsluzhit-417-tysiach-passazhirov.html": "https://rg.ru/2025/12/27/reg-ufo/v-novogodnie-prazdniki-aeroport-sochi-planiruet-obsluzhit-417-tysiach-passazhirov.html",
     "https://rg.ru/2025/12/27/akort-mandariny-v-dekabre-2025-goda-podesheveli-na-25.html": "https://rg.ru/2025/12/27/akort-mandariny-v-dekabre-2025-goda-podesheveli-na-25.html",
-    "https://rg.ru/2025/12/27/reg-cfo/kanatnaia-doroga-na-vorobevyh-gorah-budet-rabotat-vsiu-novogodniuiu-noch.html": "https://rg.ru/2025/12/27/reg-cfo/kanatnaia-doroga-na-vorobevyh-gorah-budet-rabotat-vsiu-novogodniuiu-noch.html"
+    "https://rg.ru/2025/12/27/reg-cfo/kanatnaia-doroga-na-vorobevyh-gorah-budet-rabotat-vsiu-novogodniuiu-noch.html": "https://rg.ru/2025/12/27/reg-cfo/kanatnaia-doroga-na-vorobevyh-gorah-budet-rabotat-vsiu-novogodniuiu-noch.html",
+    "https://rg.ru/2025/12/27/reg-cfo/rosaviaciia-dva-moskovskih-aeroporta-rabotaiut-s-ogranicheniiami.html": "https://rg.ru/2025/12/27/reg-cfo/rosaviaciia-dva-moskovskih-aeroporta-rabotaiut-s-ogranicheniiami.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -89864,7 +89882,8 @@
     "583d87f02fca74929a410ad5809d013aa370da01": "https://rg.ru/2025/12/27/v-aeroportu-vnukovo-vvedeny-ogranicheniia-na-ispolzovanie-vozdushnogo-prostranstva.html",
     "cafba12d117d34240f69ffe98d7c5f94293d86a5": "https://rg.ru/2025/12/27/reg-ufo/v-novogodnie-prazdniki-aeroport-sochi-planiruet-obsluzhit-417-tysiach-passazhirov.html",
     "e412d7287be9bd3ee3d2cb188e722ff74c11dd1c": "https://rg.ru/2025/12/27/akort-mandariny-v-dekabre-2025-goda-podesheveli-na-25.html",
-    "68cd8512dc4418e51a1723c223ce4c9e921988d1": "https://rg.ru/2025/12/27/reg-cfo/kanatnaia-doroga-na-vorobevyh-gorah-budet-rabotat-vsiu-novogodniuiu-noch.html"
+    "68cd8512dc4418e51a1723c223ce4c9e921988d1": "https://rg.ru/2025/12/27/reg-cfo/kanatnaia-doroga-na-vorobevyh-gorah-budet-rabotat-vsiu-novogodniuiu-noch.html",
+    "cf4b98f110b41b71db374c189b68c0f1dd957454": "https://rg.ru/2025/12/27/reg-cfo/rosaviaciia-dva-moskovskih-aeroporta-rabotaiut-s-ogranicheniiami.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -109496,6 +109515,7 @@
     "https://rg.ru/2025/12/27/v-aeroportu-vnukovo-vvedeny-ogranicheniia-na-ispolzovanie-vozdushnogo-prostranstva.html": "c5ab5f6cec42aa68adf3b51dc106fe85d80af96195133c60bc9418b74078e557",
     "https://rg.ru/2025/12/27/reg-ufo/v-novogodnie-prazdniki-aeroport-sochi-planiruet-obsluzhit-417-tysiach-passazhirov.html": "b86644451c08a4efff3ce59dfbf33c393eaac203b4e76e782c3fce6ea8a4ce96",
     "https://rg.ru/2025/12/27/akort-mandariny-v-dekabre-2025-goda-podesheveli-na-25.html": "7cf577acdf18d93dca3d1881a4675b650d5252c884a0a0022cf475225bdd6a0a",
-    "https://rg.ru/2025/12/27/reg-cfo/kanatnaia-doroga-na-vorobevyh-gorah-budet-rabotat-vsiu-novogodniuiu-noch.html": "32b1e02ccd454deb7bdf39e985a3579a029db1882e01f8926ff763a8e6bfa4c0"
+    "https://rg.ru/2025/12/27/reg-cfo/kanatnaia-doroga-na-vorobevyh-gorah-budet-rabotat-vsiu-novogodniuiu-noch.html": "32b1e02ccd454deb7bdf39e985a3579a029db1882e01f8926ff763a8e6bfa4c0",
+    "https://rg.ru/2025/12/27/reg-cfo/rosaviaciia-dva-moskovskih-aeroporta-rabotaiut-s-ogranicheniiami.html": "5eed12ba6034c2a946602220f155d87ccf41dd15ae2cbaf2e6bb69a4ca51691f"
   }
 }
