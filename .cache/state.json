@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 27 Dec 2025 03:56:50 GMT"
+      "Last-Modified": "Sat, 27 Dec 2025 06:26:49 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"336m738z03dth\""
+      "ETag": "\"d6jc1g71u43cn2\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -33838,6 +33838,22 @@
     },
     "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html": {
       "ETag": "\"e0yy77p8o31n57\""
+    },
+    "http://ancb.ru/publication/read/20724": {},
+    "http://ancb.ru/publication/read/20723": {},
+    "http://ancb.ru/publication/read/20722": {},
+    "http://ancb.ru/publication/read/20720": {},
+    "https://rg.ru/2025/12/27/zapushchen-edinyj-geoportal-stran-sng.html": {
+      "ETag": "\"163fzes85vo1n76\""
+    },
+    "https://rg.ru/2025/12/27/v-gosdume-rasskazali-predstaviteli-kakih-professij-budut-rabotat-v-prazdniki.html": {
+      "ETag": "\"c78v4me4t61q5t\""
+    },
+    "https://rg.ru/2025/12/27/zarplaty-v-kosmose-i-rybolovstve-v-oktiabre-prevysili-200-tysiach-rublej.html": {
+      "ETag": "\"am9417ols81ogl\""
+    },
+    "https://rg.ru/2025/12/27/eksport-kakao-i-zelenogo-kofe-iz-kolumbii-v-rossiiu-vozros-pochti-v-poltora-raza.html": {
+      "ETag": "\"f3k2tks7ue1nwg\""
     }
   },
   "stats": {
@@ -42662,9 +42678,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6f9c6a3250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6f9c6a3390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6f9c6a3110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6f9c6a2c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6f9c6a2710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2025-12-27T03:57:11.436954+00:00",
+    "last_run": "2025-12-27T06:26:22.108288+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -42677,56 +42698,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 309.92843299998185,
-        "connect_ms": 339.54095800004325,
-        "response_ms": 649.4693910000251,
+        "dns_ms": 262.2504969999966,
+        "connect_ms": 465.5846229999838,
+        "response_ms": 727.8351199999804,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6f9d7bbe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 2.479015000005802,
+        "connect_ms": 263.85707599999364,
+        "response_ms": 266.33609099999944,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 9233.25973699997,
+        "dns_ms": 4441.328655000007,
         "connect_ms": 0.0,
-        "response_ms": 1079.1052599999489,
+        "response_ms": 781.7069240000194,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6f9c6a2710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 127.30793299999732,
+        "connect_ms": 449.143896999999,
+        "response_ms": 576.4518299999963,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "062846a49704fce95eca96ad8aecd57946689513c3879fe2692c928058c73e66",
+    "https://ardexpert.ru/article": "54592d408f6754463c05a38cbe3b6fe32381629e9ef166ebdf7509e26d9f88c7",
     "https://www.gostinfo.ru/News/List": "2a36c1e00830703e73218179146e8e4235c63528c1664d39448445d2bc516305",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "bb708a86fec21bae64ca59e3c15005adcf1c983a5934083a7ef241ce91bc99e6",
-    "https://eec.eaeunion.org/news/": "4bb3a1a54ce88da8ae6d5327dbfc51d2051d05a3d8d6df8a24df796a5faa98b6",
+    "https://eec.eaeunion.org/news/": "4921136921b267b95260e79c8529503e5cb70b7481e1e9f54ce4ee97e9d9a902",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "0219a1e8b21e6f28926b4c327685c8fc60c2373285c6f13b9e925cc486e030cd",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "ecfb1796ab0846d2796b1159522a5784dc7d39d3d71b9d1b6a8237ba170261c5",
     "https://www.metalinfo.ru/ru/news": "3fd07b1e250a153508fb39289ced50701951e2db9a5e8ab0f8e7065c7fa55a34",
-    "https://www.pnp.ru/economics/": "6cc93c71654ea0c42535bafa9e962c5a062c81bf4a2b8418debd356dd574f62c",
+    "https://www.pnp.ru/economics/": "ec9f5d438f8adcb77cd51a4732b61cdd7d1f7540c0a482a909cac9a55f4433ce",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "688b1321658127737c7da380bfbced9e7de2536fe0480b9ecfa1a8fecc68d7f6",
-    "http://government.ru/news/": "d2eb4124047e734024688dce02ce013249ef55ef12fc75500f41664ccc9faf29",
-    "https://stroygaz.ru/news/": "6e9aa63cd3eea4bb2df40ce62ec20ceee5126aab418ff40b1bb3dcb8595b7488",
-    "https://realty.ria.ru/lenta/": "fcbf3720ece06a4cae824321b4358d08685810d138f82f00a93857ddbba973bb",
-    "https://rg.ru/tema/ekonomika": "9c3ad5f9257f7dde2974a2c24359ac624ec39bd109b6b1383e788a9b12a1f0d1",
-    "http://ancb.ru/publication": "827ec9463a45e8c50e21ebfb86d7a883fffeef7b3ad1f6bbd43bd52a00c175e1",
+    "https://ria-stk.ru/news/vse-novosti.php": "a039fa603cccda187aaf64aebb3d478a3ddbd88063c150f5a1e9e24284388ef8",
+    "http://government.ru/news/": "5a8afe1e1b5ef0633d7f5a426277af52fae37ddcd864b216639f948eb85e1175",
+    "https://stroygaz.ru/news/": "30a09aa8abf2e3b37cc606b761187043dea0ff8ed1ffdff25eeff4befff633b2",
+    "https://realty.ria.ru/lenta/": "48e3b8b6578a0fd66bd574edb2761b6928c06584764332576997b1cf4aef7922",
+    "https://rg.ru/tema/ekonomika": "29fbe8527597e04ece5bb3b67ba2a97083ad2df18c2cc1b3ab499d70a15fcf34",
+    "http://ancb.ru/publication": "3f02276beaaf8a6ef8c85855cacf4c5a1a7161e69480ae3c587dd13767c0eda2",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -43030,6 +43051,10 @@
       "https://realty.ria.ru/20251226/zhk-2064781979.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/27/zapushchen-edinyj-geoportal-stran-sng.html",
+      "https://rg.ru/2025/12/27/v-gosdume-rasskazali-predstaviteli-kakih-professij-budut-rabotat-v-prazdniki.html",
+      "https://rg.ru/2025/12/27/zarplaty-v-kosmose-i-rybolovstve-v-oktiabre-prevysili-200-tysiach-rublej.html",
+      "https://rg.ru/2025/12/27/eksport-kakao-i-zelenogo-kofe-iz-kolumbii-v-rossiiu-vozros-pochti-v-poltora-raza.html",
       "https://rg.ru/2025/12/27/premiia-po-garantii.html",
       "https://rg.ru/2025/12/27/reg-sibfo/ekipazhi-samoletov-iz-moskvy-i-sochi-otkazalis-ot-posadki-v-aeroportu-krasnoiarska.html",
       "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html",
@@ -43060,13 +43085,13 @@
       "https://rg.ru/2025/12/26/velikij-ustiug-na-novyj-god-kak-dobratsia-chto-posmotret-gde-zhit-i-skolko-eto-stoit.html",
       "https://rg.ru/2025/12/26/s-2023-goda-marketplejsy-zablokirovali-133-mln-kartochek-tovarov-posle-zhalob.html",
       "https://rg.ru/2025/12/26/minzdrav-iskliuchil-20-lekarstv-iz-spiska-zhiznenno-neobhodimyh.html",
-      "https://rg.ru/2025/12/26/reg-cfo/v-moskve-zarabotal-gorodskoj-vokzal-petrovsko-razumovskaia-mcd-1.html",
-      "https://rg.ru/2025/12/26/reg-cfo/v-moskve-elektrosuda-prodolzhaiut-hodit-na-vseh-marshrutah-blagodaria-ledokolam.html",
-      "https://rg.ru/2025/12/26/potok-posetitelej-krupnyh-tc-v-rossii-snizhaetsia.html",
-      "https://rg.ru/2025/12/26/reg-cfo/v-moskovskih-aeroportah-zaderzhany-24-rejsa.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20724",
+      "http://ancb.ru/publication/read/20723",
+      "http://ancb.ru/publication/read/20722",
+      "http://ancb.ru/publication/read/20720",
       "http://ancb.ru/publication/read/20716",
       "http://ancb.ru/publication/read/20710",
       "http://ancb.ru/publication/read/20706",
@@ -43097,11 +43122,7 @@
       "http://ancb.ru/publication/read/20605",
       "http://ancb.ru/publication/read/20604",
       "http://ancb.ru/publication/read/20603",
-      "http://ancb.ru/publication/read/20600",
-      "http://ancb.ru/publication/read/20590",
-      "http://ancb.ru/publication/read/20589",
-      "http://ancb.ru/publication/read/20584",
-      "http://ancb.ru/publication/read/20580"
+      "http://ancb.ru/publication/read/20600"
     ]
   },
   "first_seen": {
@@ -57349,7 +57370,15 @@
     "1a916219d96b7f5ddcbfe647e9c88983474e79df85b5e910e3a4b00254c6727b": "2025-12-27T06:57:00+03:00",
     "af5f4e076743da9fc1e85f8b393d7f4860c187ee350dd0812b1fb060a949367e": "2025-12-27T06:57:00+03:00",
     "859fc07f95419b4f691ddbc02e21f1049013faad788321a6d94fbe35147d55d4": "2025-12-27T06:57:00+03:00",
-    "3f76500554ebc74ab3d4a17740c10dfa110da18c555a6991f6e47ca189ca8e7a": "2025-12-27T06:57:00+03:00"
+    "3f76500554ebc74ab3d4a17740c10dfa110da18c555a6991f6e47ca189ca8e7a": "2025-12-27T06:57:00+03:00",
+    "f63e2997511d2f3433a4abad39d70f308fa0eb4b2b1a181052511523d4ac4411": "2025-12-27T09:25:00+03:00",
+    "8ec722c93a50218c9af11e6513dd87d4f4764c64fee03f6b580527b405ff1677": "2025-12-27T09:25:00+03:00",
+    "448b7eff2606e03c319c986771de2fc1a677a345237a6eb9710b4d99b9819931": "2025-12-27T09:25:00+03:00",
+    "4881b8112a67eabcf0765d5d1ac74f0fb77511a8af7c7d02a2dc50da16ed2f78": "2025-12-27T09:25:00+03:00",
+    "8fc2eca680eb69270028db9c35325973a5dd616d7e28137b363ec79fd94c3c63": "2025-12-27T09:26:00+03:00",
+    "40274ba9fd2b8cde9de52745c0bf7fa064d482fac941d25bf7fe27677f46c18f": "2025-12-27T09:26:00+03:00",
+    "5e36799044ad7ea9578353737926e05095d364b06fc916b295c4374df72e3515": "2025-12-27T09:26:00+03:00",
+    "d59fb39113c8861b1aeb4896167e64554cb70e67c39339e9ae1823755793c7ba": "2025-12-27T09:26:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -57380,8 +57409,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6f9d79fe10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 30,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1766807717.6220353
       },
       "warmup_done": false,
@@ -57391,39 +57420,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "XS1V7ipJEvs0xirE",
+          "value": "HkmD7MHjWLGo4V2q",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766808969
+          "expires": 1766817968
         },
         {
           "name": "__ddg10_",
-          "value": "1766807769",
+          "value": "1766816768",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766808969
+          "expires": 1766817968
         },
         {
           "name": "__ddg9_",
-          "value": "172.183.94.162",
+          "value": "4.236.158.49",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766808969
-        },
-        {
-          "name": "__ddg1_",
-          "value": "NwxSqr2D87OxXjMotO4a",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1798343769
+          "expires": 1766817968
         },
         {
           "name": "PHPSESSID",
-          "value": "97de011797c48ed036ee3b33c16e78e4",
+          "value": "f660ee74cfce540fd837a63321585cfd",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -57450,11 +57471,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "xezDItxNWUV2mpIEd3CuW0u21moRCZJF",
+          "value": "ad2jM34w6FKEt3UmlmQyR179rh3Fpp2y",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766751763
+          "expires": 1766827570
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -57462,12 +57483,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1797844963
+          "expires": 1797920770
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6f9c6a2c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 24,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1766807801.9631317
       },
       "warmup_done": false,
@@ -75019,7 +75040,15 @@
     "https://realty.ria.ru/20251227/rayon-2064605492.html": "https://realty.ria.ru/20251227/rayon-2064605492.html",
     "https://rg.ru/2025/12/27/premiia-po-garantii.html": "https://rg.ru/2025/12/27/premiia-po-garantii.html",
     "https://rg.ru/2025/12/27/reg-sibfo/ekipazhi-samoletov-iz-moskvy-i-sochi-otkazalis-ot-posadki-v-aeroportu-krasnoiarska.html": "https://rg.ru/2025/12/27/reg-sibfo/ekipazhi-samoletov-iz-moskvy-i-sochi-otkazalis-ot-posadki-v-aeroportu-krasnoiarska.html",
-    "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html": "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html"
+    "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html": "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html",
+    "http://ancb.ru/publication/read/20724": "http://ancb.ru/publication/read/20724",
+    "http://ancb.ru/publication/read/20723": "http://ancb.ru/publication/read/20723",
+    "http://ancb.ru/publication/read/20722": "http://ancb.ru/publication/read/20722",
+    "http://ancb.ru/publication/read/20720": "http://ancb.ru/publication/read/20720",
+    "https://rg.ru/2025/12/27/zapushchen-edinyj-geoportal-stran-sng.html": "https://rg.ru/2025/12/27/zapushchen-edinyj-geoportal-stran-sng.html",
+    "https://rg.ru/2025/12/27/v-gosdume-rasskazali-predstaviteli-kakih-professij-budut-rabotat-v-prazdniki.html": "https://rg.ru/2025/12/27/v-gosdume-rasskazali-predstaviteli-kakih-professij-budut-rabotat-v-prazdniki.html",
+    "https://rg.ru/2025/12/27/zarplaty-v-kosmose-i-rybolovstve-v-oktiabre-prevysili-200-tysiach-rublej.html": "https://rg.ru/2025/12/27/zarplaty-v-kosmose-i-rybolovstve-v-oktiabre-prevysili-200-tysiach-rublej.html",
+    "https://rg.ru/2025/12/27/eksport-kakao-i-zelenogo-kofe-iz-kolumbii-v-rossiiu-vozros-pochti-v-poltora-raza.html": "https://rg.ru/2025/12/27/eksport-kakao-i-zelenogo-kofe-iz-kolumbii-v-rossiiu-vozros-pochti-v-poltora-raza.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -89596,7 +89625,15 @@
     "cc84dcefac98118f5081b5171673681b29affe32": "https://realty.ria.ru/20251227/rayon-2064605492.html",
     "e98e08e35d10b5828fadfba5906c160c190bce9f": "https://rg.ru/2025/12/27/premiia-po-garantii.html",
     "15a7f970163629ad2d6edc4872097fcf7fdc674e": "https://rg.ru/2025/12/27/reg-sibfo/ekipazhi-samoletov-iz-moskvy-i-sochi-otkazalis-ot-posadki-v-aeroportu-krasnoiarska.html",
-    "7ba491387d3db522fb284a0422da7b2002dc897f": "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html"
+    "7ba491387d3db522fb284a0422da7b2002dc897f": "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html",
+    "59d4bae21686b37615b85d77588f84b29afb1bbf": "http://ancb.ru/publication/read/20724",
+    "645e3823003bedd72936ddb1a13eec2a7a6d8bbc": "http://ancb.ru/publication/read/20723",
+    "fd29b1a6df2fca4d564e147161bee00849cb8b9a": "http://ancb.ru/publication/read/20722",
+    "3c87cfa192a8b6f98024d424092824537106a1fd": "http://ancb.ru/publication/read/20720",
+    "4c926bd444bcb777d0dfe6065d3e29efe6ab99cf": "https://rg.ru/2025/12/27/zapushchen-edinyj-geoportal-stran-sng.html",
+    "37581e305d5b5a25acdcd06fa184fc40ce6bafa2": "https://rg.ru/2025/12/27/v-gosdume-rasskazali-predstaviteli-kakih-professij-budut-rabotat-v-prazdniki.html",
+    "52d9f83d24117011cfd96ea90e84b5a555ac397f": "https://rg.ru/2025/12/27/zarplaty-v-kosmose-i-rybolovstve-v-oktiabre-prevysili-200-tysiach-rublej.html",
+    "b1050eebdea95f52513ddb824079fe40bd87ed69": "https://rg.ru/2025/12/27/eksport-kakao-i-zelenogo-kofe-iz-kolumbii-v-rossiiu-vozros-pochti-v-poltora-raza.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -109184,6 +109221,14 @@
     "https://realty.ria.ru/20251227/rayon-2064605492.html": "1a916219d96b7f5ddcbfe647e9c88983474e79df85b5e910e3a4b00254c6727b",
     "https://rg.ru/2025/12/27/premiia-po-garantii.html": "af5f4e076743da9fc1e85f8b393d7f4860c187ee350dd0812b1fb060a949367e",
     "https://rg.ru/2025/12/27/reg-sibfo/ekipazhi-samoletov-iz-moskvy-i-sochi-otkazalis-ot-posadki-v-aeroportu-krasnoiarska.html": "859fc07f95419b4f691ddbc02e21f1049013faad788321a6d94fbe35147d55d4",
-    "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html": "3f76500554ebc74ab3d4a17740c10dfa110da18c555a6991f6e47ca189ca8e7a"
+    "https://rg.ru/2025/12/27/reg-dfo/aeroport-magadana-zakryli-iz-za-nepogody.html": "3f76500554ebc74ab3d4a17740c10dfa110da18c555a6991f6e47ca189ca8e7a",
+    "http://ancb.ru/publication/read/20724": "f63e2997511d2f3433a4abad39d70f308fa0eb4b2b1a181052511523d4ac4411",
+    "http://ancb.ru/publication/read/20723": "8ec722c93a50218c9af11e6513dd87d4f4764c64fee03f6b580527b405ff1677",
+    "http://ancb.ru/publication/read/20722": "448b7eff2606e03c319c986771de2fc1a677a345237a6eb9710b4d99b9819931",
+    "http://ancb.ru/publication/read/20720": "4881b8112a67eabcf0765d5d1ac74f0fb77511a8af7c7d02a2dc50da16ed2f78",
+    "https://rg.ru/2025/12/27/zapushchen-edinyj-geoportal-stran-sng.html": "8fc2eca680eb69270028db9c35325973a5dd616d7e28137b363ec79fd94c3c63",
+    "https://rg.ru/2025/12/27/v-gosdume-rasskazali-predstaviteli-kakih-professij-budut-rabotat-v-prazdniki.html": "40274ba9fd2b8cde9de52745c0bf7fa064d482fac941d25bf7fe27677f46c18f",
+    "https://rg.ru/2025/12/27/zarplaty-v-kosmose-i-rybolovstve-v-oktiabre-prevysili-200-tysiach-rublej.html": "5e36799044ad7ea9578353737926e05095d364b06fc916b295c4374df72e3515",
+    "https://rg.ru/2025/12/27/eksport-kakao-i-zelenogo-kofe-iz-kolumbii-v-rossiiu-vozros-pochti-v-poltora-raza.html": "d59fb39113c8861b1aeb4896167e64554cb70e67c39339e9ae1823755793c7ba"
   }
 }
