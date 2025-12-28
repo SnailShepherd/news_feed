@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 28 Dec 2025 12:34:06 GMT"
+      "Last-Modified": "Sun, 28 Dec 2025 15:18:50 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"140chlauh3dfa\""
+      "ETag": "\"6f36v40b0e3h4q\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -33999,6 +33999,12 @@
     },
     "https://rg.ru/2025/12/28/rossiia-narastila-eksport-syrov-i-tvoroga-na-13-v-2025-godu.html": {
       "ETag": "\"vnm4776y0g1pek\""
+    },
+    "https://rg.ru/2025/12/28/putin-dal-dobrovolcam-na-svo-pravo-na-pensiiu-po-vysluge-let.html": {
+      "ETag": "\"fmc2ut6s241z56\""
+    },
+    "https://rg.ru/2025/12/28/reg-ufo/v-rostovskoj-oblasti-vosstanovili-dvizhenie-no-39-poezdov-otstaiut-ot-grafika.html": {
+      "ETag": "\"3kdup3dgv51pqp\""
     }
   },
   "stats": {
@@ -42950,9 +42956,26 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe7635a8ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe7635a2490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe7635a2350>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe7646c36f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe7646c3e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe7646d7d10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe7635a3750>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe7635a3250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe7635a2c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe7635a2ad0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe7635a2850>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2025-12-28T12:33:39.500590+00:00",
+    "last_run": "2025-12-28T15:19:06.830180+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -42965,56 +42988,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 399.87486999996236,
-        "connect_ms": 573.2971110001017,
-        "response_ms": 973.1719810000641,
+        "dns_ms": 125.82955400000628,
+        "connect_ms": 730.9002239999813,
+        "response_ms": 856.7297779999876,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 296.97572999998556,
-        "connect_ms": 0.0,
-        "response_ms": 293.65583900005277,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe7646d7d10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 4458.4790029999795,
+        "dns_ms": 4627.187676000005,
         "connect_ms": 0.0,
-        "response_ms": 612.3044230000687,
+        "response_ms": 873.3548309999719,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 292.30989400002727,
-        "connect_ms": 367.77916999994886,
-        "response_ms": 660.0890639999761,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe7635a2850>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "41fd4a039508dc4f6cd7abed18fb050475c96b9d1c69c18c2649c722352ef6bb",
+    "https://ardexpert.ru/article": "c11e4c686e552ba264434ffefed9de274e5aaf82ce76d2e3e54f6c1bbf6850fb",
     "https://www.gostinfo.ru/News/List": "2a36c1e00830703e73218179146e8e4235c63528c1664d39448445d2bc516305",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "bb708a86fec21bae64ca59e3c15005adcf1c983a5934083a7ef241ce91bc99e6",
-    "https://eec.eaeunion.org/news/": "353e1e565fe28d1bf6448833e2fbafdd8eec55d2623c73f56c7e945de5859243",
+    "https://eec.eaeunion.org/news/": "25c54e7f62e2f5253dcb9a420b57f100dd461d9a21fec1893bf25425743b1fb5",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "5b7a9a3ba4de0be591371d27371a2b13972ba0905a929600ab2be376021c4639",
-    "https://www.metalinfo.ru/ru/news": "1eab374aa1a134f8b93d6e3398d2a80e971b28ab1ffe390c9f30ebf3c2640396",
-    "https://www.pnp.ru/economics/": "dfdddafa69a75eefb70e030a30ab398c17a96e70dd44cb3bd46a18fc1dc3a22f",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "08b7eecb9d0dea393e5189d4bcf2041e7e896eebe5320d1219d9dfd52f09f36b",
+    "https://www.metalinfo.ru/ru/news": "31547147a2fcfab7b0f1d02d3459cf605560e07fbc0c6de6d1f0e86a938ea550",
+    "https://www.pnp.ru/economics/": "cb629ed65489f3820352d8b4515b11f6d2ce706e3f0890709a4b56120be1cf0c",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "73c68edbb2a35db05e89fd334b590b86ab0989f1df2db8cf282789c038586b99",
-    "http://government.ru/news/": "cb720c0364569e836b7dff005fa63306df72bde26d579f0cc44bc36b082993ff",
-    "https://stroygaz.ru/news/": "4c6ae3614d7fad94920a69e5c930c4984e119154836e53cc5ff2d443df4bcad1",
-    "https://realty.ria.ru/lenta/": "e370a2565b1ccc9b794e3ced9cc857a2d5fbc1d316905ea4638f7c36926a47a3",
-    "https://rg.ru/tema/ekonomika": "5d7eaa697125b9d1bf540f93c0ea23fb61899c811dfbc30d171fb1ecdf3c0f6d",
-    "http://ancb.ru/publication": "660b428fbc4593ae09988ba3022e215f8e073888b264d49e4696c4a82f6003ba",
+    "https://ria-stk.ru/news/vse-novosti.php": "d95773a736038a803bf9b048f8942012ed4505f4c96fa35437b531357dba83e7",
+    "http://government.ru/news/": "c457859d23aa449e4d39f175b774bad267728c333bab5b7703ad91133c20301c",
+    "https://stroygaz.ru/news/": "3672f2503bce1f7e041b414a22c01218fa8c4455b1d497e48863a9e4fc6efa25",
+    "https://realty.ria.ru/lenta/": "52e5c5d059e2d8532e0314323e29071ac56f4dd7e6f6408a5bcc8013abf3daef",
+    "https://rg.ru/tema/ekonomika": "23cca545751ab5c72a1d74ea7c559e17782cc7bcf3bfbb81423805f66a75831b",
+    "http://ancb.ru/publication": "cc26d1dec93d48cd20690dda4babbfe8998cb9375ffc69aca9273ac920ce8647",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -43318,6 +43341,8 @@
       "https://realty.ria.ru/20251226/zhk-2064781979.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2025/12/28/putin-dal-dobrovolcam-na-svo-pravo-na-pensiiu-po-vysluge-let.html",
+      "https://rg.ru/2025/12/28/reg-ufo/v-rostovskoj-oblasti-vosstanovili-dvizhenie-no-39-poezdov-otstaiut-ot-grafika.html",
       "https://rg.ru/2025/12/28/evropa-v-prazdniki-prodolzhaet-rekordno-snizhat-zapasy-gaza-v-hranilishchah.html",
       "https://rg.ru/2025/12/28/v-op-napomnili-skolko-pensionnyh-ballov-nuzhno-dlia-vyhoda-na-pensiiu.html",
       "https://rg.ru/2025/12/28/rossiia-narastila-eksport-syrov-i-tvoroga-na-13-v-2025-godu.html",
@@ -43348,8 +43373,6 @@
       "https://rg.ru/2025/12/27/reg-cfo/v-dvuh-moskovskih-aeroportah-sheremetevo-i-vnukovo-ogranicheny-polety.html",
       "https://rg.ru/2025/12/27/reg-ufo/v-rostovskoj-oblasti-pekut-hleb-iz-vinogradnoj-muki.html",
       "https://rg.ru/2025/12/27/v-aeroportu-vnukovo-vvedeny-ogranicheniia-na-ispolzovanie-vozdushnogo-prostranstva.html",
-      "https://rg.ru/2025/12/27/reg-ufo/v-novogodnie-prazdniki-aeroport-sochi-planiruet-obsluzhit-417-tysiach-passazhirov.html",
-      "https://rg.ru/2025/12/27/kuda-zhalovatsia-na-neubrannyj-sneg-v-moskve-i-podmoskove.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -57699,7 +57722,9 @@
     "bfb6270f19bffd2e924dd426e70d620a7b3d93baf74d5b5a504c9a9d0216549e": "2025-12-28T15:33:00+03:00",
     "5967c85ead8b9177d696dcf32e067597b0b8af56e597f301d53929af756ce3be": "2025-12-28T15:33:00+03:00",
     "7e85660d93ec9e02c950e9f45bce3f787e52b25f36cd299003cb4366fcf052c0": "2025-12-28T15:33:00+03:00",
-    "87f911420e0bd08bb10ded0a67c27d9e836c9e0b168805918dc2713f834e53e2": "2025-12-28T15:33:00+03:00"
+    "87f911420e0bd08bb10ded0a67c27d9e836c9e0b168805918dc2713f834e53e2": "2025-12-28T15:33:00+03:00",
+    "8533fb0eecc8643c7d3dd1242e704cfaf6c51d713caf9aabe04f1bd60df60105": "2025-12-28T18:19:00+03:00",
+    "dd842fad161ba72e390ef7f2aea10580ec26415fb258183012004192cda1f640": "2025-12-28T18:19:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -57730,9 +57755,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1766913549.7618673
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe7646c3e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1766935044.7390456
       },
       "warmup_done": false,
       "last_success_path": null
@@ -57741,31 +57766,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "OpuDGCXPXwkRrIoP",
+          "value": "3K8eTUWr18GlPxe9",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766926406
+          "expires": 1766936290
         },
         {
           "name": "__ddg10_",
-          "value": "1766925206",
+          "value": "1766935090",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766926406
+          "expires": 1766936290
         },
         {
           "name": "__ddg9_",
-          "value": "48.214.54.52",
+          "value": "172.174.223.245",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1766926406
+          "expires": 1766936290
+        },
+        {
+          "name": "__ddg1_",
+          "value": "xTL6OpOi06X7C9JxbHqp",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1798471090
         },
         {
           "name": "PHPSESSID",
-          "value": "87b1b2142be308a0364d1c5a79c65ac0",
+          "value": "a6e3f0a5986f2f11bfcd9e1a7d9b0468",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -57808,9 +57841,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1766913631.6656034
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe7635a2ad0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 4,
+        "last_ts": 1766935122.022496
       },
       "warmup_done": false,
       "last_success_path": null
@@ -75423,7 +75456,9 @@
     "http://ancb.ru/publication/read/20725": "http://ancb.ru/publication/read/20725",
     "https://rg.ru/2025/12/28/evropa-v-prazdniki-prodolzhaet-rekordno-snizhat-zapasy-gaza-v-hranilishchah.html": "https://rg.ru/2025/12/28/evropa-v-prazdniki-prodolzhaet-rekordno-snizhat-zapasy-gaza-v-hranilishchah.html",
     "https://rg.ru/2025/12/28/v-op-napomnili-skolko-pensionnyh-ballov-nuzhno-dlia-vyhoda-na-pensiiu.html": "https://rg.ru/2025/12/28/v-op-napomnili-skolko-pensionnyh-ballov-nuzhno-dlia-vyhoda-na-pensiiu.html",
-    "https://rg.ru/2025/12/28/rossiia-narastila-eksport-syrov-i-tvoroga-na-13-v-2025-godu.html": "https://rg.ru/2025/12/28/rossiia-narastila-eksport-syrov-i-tvoroga-na-13-v-2025-godu.html"
+    "https://rg.ru/2025/12/28/rossiia-narastila-eksport-syrov-i-tvoroga-na-13-v-2025-godu.html": "https://rg.ru/2025/12/28/rossiia-narastila-eksport-syrov-i-tvoroga-na-13-v-2025-godu.html",
+    "https://rg.ru/2025/12/28/putin-dal-dobrovolcam-na-svo-pravo-na-pensiiu-po-vysluge-let.html": "https://rg.ru/2025/12/28/putin-dal-dobrovolcam-na-svo-pravo-na-pensiiu-po-vysluge-let.html",
+    "https://rg.ru/2025/12/28/reg-ufo/v-rostovskoj-oblasti-vosstanovili-dvizhenie-no-39-poezdov-otstaiut-ot-grafika.html": "https://rg.ru/2025/12/28/reg-ufo/v-rostovskoj-oblasti-vosstanovili-dvizhenie-no-39-poezdov-otstaiut-ot-grafika.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -90062,7 +90097,9 @@
     "125421594ab7a5482f1e0c4adb475913994aeb2a": "http://ancb.ru/publication/read/20725",
     "44927b1b2998d917fdad577a5a422fda73ae07fb": "https://rg.ru/2025/12/28/evropa-v-prazdniki-prodolzhaet-rekordno-snizhat-zapasy-gaza-v-hranilishchah.html",
     "737cb9cdaaee9dc431a2d2959e6ef5cd1a7f108d": "https://rg.ru/2025/12/28/v-op-napomnili-skolko-pensionnyh-ballov-nuzhno-dlia-vyhoda-na-pensiiu.html",
-    "ff73e54f60824cb8243954b75479a70499e2a801": "https://rg.ru/2025/12/28/rossiia-narastila-eksport-syrov-i-tvoroga-na-13-v-2025-godu.html"
+    "ff73e54f60824cb8243954b75479a70499e2a801": "https://rg.ru/2025/12/28/rossiia-narastila-eksport-syrov-i-tvoroga-na-13-v-2025-godu.html",
+    "936b8d7c7b571b6b3f6b879f38fd48456e2b2f6a": "https://rg.ru/2025/12/28/putin-dal-dobrovolcam-na-svo-pravo-na-pensiiu-po-vysluge-let.html",
+    "dabad44caf7686cea09f37f692aac0e8bce6cb80": "https://rg.ru/2025/12/28/reg-ufo/v-rostovskoj-oblasti-vosstanovili-dvizhenie-no-39-poezdov-otstaiut-ot-grafika.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -109721,6 +109758,8 @@
     "http://ancb.ru/publication/read/20725": "bfb6270f19bffd2e924dd426e70d620a7b3d93baf74d5b5a504c9a9d0216549e",
     "https://rg.ru/2025/12/28/evropa-v-prazdniki-prodolzhaet-rekordno-snizhat-zapasy-gaza-v-hranilishchah.html": "5967c85ead8b9177d696dcf32e067597b0b8af56e597f301d53929af756ce3be",
     "https://rg.ru/2025/12/28/v-op-napomnili-skolko-pensionnyh-ballov-nuzhno-dlia-vyhoda-na-pensiiu.html": "7e85660d93ec9e02c950e9f45bce3f787e52b25f36cd299003cb4366fcf052c0",
-    "https://rg.ru/2025/12/28/rossiia-narastila-eksport-syrov-i-tvoroga-na-13-v-2025-godu.html": "87f911420e0bd08bb10ded0a67c27d9e836c9e0b168805918dc2713f834e53e2"
+    "https://rg.ru/2025/12/28/rossiia-narastila-eksport-syrov-i-tvoroga-na-13-v-2025-godu.html": "87f911420e0bd08bb10ded0a67c27d9e836c9e0b168805918dc2713f834e53e2",
+    "https://rg.ru/2025/12/28/putin-dal-dobrovolcam-na-svo-pravo-na-pensiiu-po-vysluge-let.html": "8533fb0eecc8643c7d3dd1242e704cfaf6c51d713caf9aabe04f1bd60df60105",
+    "https://rg.ru/2025/12/28/reg-ufo/v-rostovskoj-oblasti-vosstanovili-dvizhenie-no-39-poezdov-otstaiut-ot-grafika.html": "dd842fad161ba72e390ef7f2aea10580ec26415fb258183012004192cda1f640"
   }
 }
