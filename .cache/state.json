@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 01 Jan 2026 12:37:16 GMT"
+      "Last-Modified": "Thu, 01 Jan 2026 15:19:00 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"saipyp5bq33d8j\""
+      "ETag": "\"web3qz1qek3ckn\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -35041,6 +35041,12 @@
     },
     "https://rg.ru/2026/01/01/postavki-gaza-iz-rf-v-evropu-po-tureckomu-potoku-v-2025-godu-stali-rekordnymi.html": {
       "ETag": "\"qn95rig3vq1ol4\""
+    },
+    "https://rg.ru/2026/01/01/reg-ufo/v-aeroportu-krasnodara-vveli-vremennye-ogranicheniia-poletov.html": {
+      "ETag": "\"xfh7ele6fe1n6e\""
+    },
+    "https://rg.ru/2026/01/01/v-rossii-vstupil-v-silu-gost-na-fermerskuiu-produkciiu.html": {
+      "ETag": "\"15sriwjsp4a1mc7\""
     }
   },
   "stats": {
@@ -44470,9 +44476,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fedcdc34550>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fedcf247390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fedcdc34910>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fedcdc34b90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fedcdc34e10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-01T12:37:39.355861+00:00",
+    "last_run": "2026-01-01T15:18:29.903962+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -44485,56 +44496,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 617.1836910000081,
-        "connect_ms": 333.6703539999917,
-        "response_ms": 950.8540449999998,
+        "dns_ms": 293.2871739999996,
+        "connect_ms": 646.3605160000157,
+        "response_ms": 939.6476900000152,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fedcf1f3e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 296.7203400000358,
+        "connect_ms": 945.9097269999575,
+        "response_ms": 1242.6300669999932,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 3725.442762,
+        "dns_ms": 1744.7982369999977,
         "connect_ms": 0.0,
-        "response_ms": 690.025994999985,
+        "response_ms": 850.3649600000358,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fedcdc34e10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 149.47013300002254,
+        "connect_ms": 494.63456500001257,
+        "response_ms": 644.1046980000351,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "e4420e097ea1069d84232da4ebe77cf1c60e2fd55a6e2b83777a5258d87cf634",
+    "https://ardexpert.ru/article": "88b92eb8d8905ae100f577ca874a2f572de2c40e42221ebaecbbee0ce9638d87",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "f6be9baf4e72151af1442c20d2a8e3aa9bcde1a373a5b86b645ceba2be9124e2",
+    "https://eec.eaeunion.org/news/": "c88195f52f32ab1143a9108384ccf53115aa37ab1ef379851f8d9fb219f5c8ac",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "ec40f8b673de68a9ed0aa11eba13a4eb6dd49a4d36ed8deddd224253a8312d58",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "390735b74dea3d9f797ab3a0d0c536be28f19b2c50b9b8091c73cf7ce3344f5b",
     "https://www.metalinfo.ru/ru/news": "fc4fe802bb269cb49808478200fd6ec31d82077d5b080087b9eaedb2149f520a",
-    "https://www.pnp.ru/economics/": "3b8feadcbf8d3e3174a0de750a6361a358343a7f928b3a7114cdc8ac629dfc2b",
+    "https://www.pnp.ru/economics/": "54480af1fe165c50f721e4038bcad614ee54f5f156e5c9681e78e821398ff766",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "8fa78407044c3c7302dc5f025d3e624890cb687480ff8f7ada0015e4dbf7283a",
-    "http://government.ru/news/": "284b86cdf8b1103c301e50b62e3c8052eac1dfb4adb7eac50e3c9873255555a1",
-    "https://stroygaz.ru/news/": "c0fcf1ba5f6e1145dbf67835b5cf499618fe2a2d61d593d4b3e651421ff741ea",
-    "https://realty.ria.ru/lenta/": "104ab1b78d52559c83897596ff0c6b79d796c95198c9932da113e3b5a8cc4d74",
-    "https://rg.ru/tema/ekonomika": "c6277694c4f248dfd877a130c26b929fe0e55a6afd34c0bd4ea3fe6a8c457a07",
-    "http://ancb.ru/publication": "9d3a59f2b083966efea183dcc50eb49eb1f216b78ee338a10bd51d86199cc2f6",
+    "https://ria-stk.ru/news/vse-novosti.php": "751de9896a6a9da26da49ecabf6bf80ed5e6a651e809ed94f3144030d2f125a7",
+    "http://government.ru/news/": "e2212856eac77fdae4ed2321a9f016c5edaef321905660c1d77edf1ae0ce5756",
+    "https://stroygaz.ru/news/": "42812af91e9e996948a53bd826251c1da1d148d7ec2bbd196a0d0de107967c90",
+    "https://realty.ria.ru/lenta/": "339baf7a4916a83de5ccc551a2d8b26eb7e0896acf17ee7e1f0f116efa0b7800",
+    "https://rg.ru/tema/ekonomika": "8b0e1db42f4bd724c7cf66a8b8a9a187e3ce98b068a4357880c602b02d6b6784",
+    "http://ancb.ru/publication": "f529efbbddc70413961e4a3ea629aeb053a3409615709bf33478ef29eebd5603",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -44838,6 +44849,8 @@
       "https://realty.ria.ru/20251229/avarii-2065445053.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/01/reg-ufo/v-aeroportu-krasnodara-vveli-vremennye-ogranicheniia-poletov.html",
+      "https://rg.ru/2026/01/01/v-rossii-vstupil-v-silu-gost-na-fermerskuiu-produkciiu.html",
       "https://rg.ru/2026/01/01/reg-ufo/na-kubani-zadejstvovali-bolee-1000-zheleznodorozhnikov-v-raschistke-snezhnyh-zanosov.html",
       "https://rg.ru/2026/01/01/reg-pfo/energoblok-s-otechestvennoj-gazovoj-turbinoj.html",
       "https://rg.ru/2026/01/01/reg-cfo/na-kurskoj-aes-zarabotal-novyj-energoblok.html",
@@ -44868,8 +44881,6 @@
       "https://rg.ru/2025/12/31/mishustin-utverdil-poriadok-primeneniia-ponizhennyh-stavok-dlia-usn.html",
       "https://rg.ru/2025/12/31/v-rossii-predlozhili-vvesti-lgoty-dlia-rabotaiushchih-v-novogodniuiu-noch.html",
       "https://rg.ru/2025/12/31/reg-szfo/pulkovo-hrabrovo-prokuratura.html",
-      "https://rg.ru/2025/12/31/reg-cfo/sobianin-rasskazal-o-novoj-doroge-v-rajone-stancii-ostafevo-mcd-2.html",
-      "https://rg.ru/2025/12/31/reg-szfo/krajne-slozhnaia-obstanovka-kaliningrad.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -59677,7 +59688,9 @@
     "7666b764c2a9fac2885328ac42d2bf060c677cf4a1f1550714ac0f31543b4e54": "2026-01-01T15:37:00+03:00",
     "feda4e77a2b393291b141f0eb8724165ed5115d4765ffa146aeb60fc63d6e86f": "2026-01-01T15:37:00+03:00",
     "204aa16a77244585d73751970bd4bb1ea27d22124a58835f513978c2811c3f85": "2026-01-01T15:37:00+03:00",
-    "52897ffeff5874958318c640a33870043597ee88fc7b310b8a97c8f76eaca6e9": "2026-01-01T15:37:00+03:00"
+    "52897ffeff5874958318c640a33870043597ee88fc7b310b8a97c8f76eaca6e9": "2026-01-01T15:37:00+03:00",
+    "1c400d50a48efcf4d050447ae4c911bb088c9830ef0b846ca493293b5a20f11a": "2026-01-01T18:18:00+03:00",
+    "e24148b6e41a29d4d36bbd584b12ce5a26949992a33805745417f1811611f80a": "2026-01-01T18:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -59708,8 +59721,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fedcf1ffe10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 30,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767270950.5791433
       },
       "warmup_done": false,
@@ -59719,31 +59732,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "4Hx7ldOsyltXab7a",
+          "value": "JBZZpNWAgpP4hVAG",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767272195
+          "expires": 1767281899
         },
         {
           "name": "__ddg10_",
-          "value": "1767270995",
+          "value": "1767280699",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767272195
+          "expires": 1767281899
         },
         {
           "name": "__ddg9_",
-          "value": "20.161.58.224",
+          "value": "64.236.177.114",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767272195
+          "expires": 1767281899
+        },
+        {
+          "name": "__ddg1_",
+          "value": "13GDmwex4H5jj68MiEdD",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1798816699
         },
         {
           "name": "PHPSESSID",
-          "value": "53d3118c7fd20a6ac3a322c934d92fb4",
+          "value": "1ab471a76ab0aef24181582a809009ef",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -59770,11 +59791,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "Fw9U7NTcLBgvSk0q1CyIjAPrLg54IaM7",
+          "value": "UUwBE4hsNyElbpeD0IjPKIgiJAErFYra",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767216317
+          "expires": 1767291501
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -59782,12 +59803,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1798309517
+          "expires": 1798384701
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fedcdc34b90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 24,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767271027.2071795
       },
       "warmup_done": false,
@@ -77938,7 +77959,9 @@
     "https://rg.ru/2026/01/01/reg-ufo/na-kubani-zadejstvovali-bolee-1000-zheleznodorozhnikov-v-raschistke-snezhnyh-zanosov.html": "https://rg.ru/2026/01/01/reg-ufo/na-kubani-zadejstvovali-bolee-1000-zheleznodorozhnikov-v-raschistke-snezhnyh-zanosov.html",
     "https://rg.ru/2026/01/01/reg-pfo/energoblok-s-otechestvennoj-gazovoj-turbinoj.html": "https://rg.ru/2026/01/01/reg-pfo/energoblok-s-otechestvennoj-gazovoj-turbinoj.html",
     "https://rg.ru/2026/01/01/reg-cfo/na-kurskoj-aes-zarabotal-novyj-energoblok.html": "https://rg.ru/2026/01/01/reg-cfo/na-kurskoj-aes-zarabotal-novyj-energoblok.html",
-    "https://rg.ru/2026/01/01/postavki-gaza-iz-rf-v-evropu-po-tureckomu-potoku-v-2025-godu-stali-rekordnymi.html": "https://rg.ru/2026/01/01/postavki-gaza-iz-rf-v-evropu-po-tureckomu-potoku-v-2025-godu-stali-rekordnymi.html"
+    "https://rg.ru/2026/01/01/postavki-gaza-iz-rf-v-evropu-po-tureckomu-potoku-v-2025-godu-stali-rekordnymi.html": "https://rg.ru/2026/01/01/postavki-gaza-iz-rf-v-evropu-po-tureckomu-potoku-v-2025-godu-stali-rekordnymi.html",
+    "https://rg.ru/2026/01/01/reg-ufo/v-aeroportu-krasnodara-vveli-vremennye-ogranicheniia-poletov.html": "https://rg.ru/2026/01/01/reg-ufo/v-aeroportu-krasnodara-vveli-vremennye-ogranicheniia-poletov.html",
+    "https://rg.ru/2026/01/01/v-rossii-vstupil-v-silu-gost-na-fermerskuiu-produkciiu.html": "https://rg.ru/2026/01/01/v-rossii-vstupil-v-silu-gost-na-fermerskuiu-produkciiu.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -93040,7 +93063,9 @@
     "d79283ff0c0f5cd34d7897f2400963d0f04e22dc": "https://rg.ru/2026/01/01/reg-ufo/na-kubani-zadejstvovali-bolee-1000-zheleznodorozhnikov-v-raschistke-snezhnyh-zanosov.html",
     "b2b4d0771e3421f62fcd52123d88531ad8d341fb": "https://rg.ru/2026/01/01/reg-pfo/energoblok-s-otechestvennoj-gazovoj-turbinoj.html",
     "50efacdcbcf621403143c23497ce7839519bdaa5": "https://rg.ru/2026/01/01/reg-cfo/na-kurskoj-aes-zarabotal-novyj-energoblok.html",
-    "f9da698c915ad41b2cd62b85b300d9e85c8a8ed4": "https://rg.ru/2026/01/01/postavki-gaza-iz-rf-v-evropu-po-tureckomu-potoku-v-2025-godu-stali-rekordnymi.html"
+    "f9da698c915ad41b2cd62b85b300d9e85c8a8ed4": "https://rg.ru/2026/01/01/postavki-gaza-iz-rf-v-evropu-po-tureckomu-potoku-v-2025-godu-stali-rekordnymi.html",
+    "78d6dfadd3a1357416f39afa907b72ff64addf57": "https://rg.ru/2026/01/01/reg-ufo/v-aeroportu-krasnodara-vveli-vremennye-ogranicheniia-poletov.html",
+    "713896d5ddc2bba2b67b8a59312de2d74838efde": "https://rg.ru/2026/01/01/v-rossii-vstupil-v-silu-gost-na-fermerskuiu-produkciiu.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -113296,6 +113321,8 @@
     "https://rg.ru/2026/01/01/reg-ufo/na-kubani-zadejstvovali-bolee-1000-zheleznodorozhnikov-v-raschistke-snezhnyh-zanosov.html": "7666b764c2a9fac2885328ac42d2bf060c677cf4a1f1550714ac0f31543b4e54",
     "https://rg.ru/2026/01/01/reg-pfo/energoblok-s-otechestvennoj-gazovoj-turbinoj.html": "feda4e77a2b393291b141f0eb8724165ed5115d4765ffa146aeb60fc63d6e86f",
     "https://rg.ru/2026/01/01/reg-cfo/na-kurskoj-aes-zarabotal-novyj-energoblok.html": "204aa16a77244585d73751970bd4bb1ea27d22124a58835f513978c2811c3f85",
-    "https://rg.ru/2026/01/01/postavki-gaza-iz-rf-v-evropu-po-tureckomu-potoku-v-2025-godu-stali-rekordnymi.html": "52897ffeff5874958318c640a33870043597ee88fc7b310b8a97c8f76eaca6e9"
+    "https://rg.ru/2026/01/01/postavki-gaza-iz-rf-v-evropu-po-tureckomu-potoku-v-2025-godu-stali-rekordnymi.html": "52897ffeff5874958318c640a33870043597ee88fc7b310b8a97c8f76eaca6e9",
+    "https://rg.ru/2026/01/01/reg-ufo/v-aeroportu-krasnodara-vveli-vremennye-ogranicheniia-poletov.html": "1c400d50a48efcf4d050447ae4c911bb088c9830ef0b846ca493293b5a20f11a",
+    "https://rg.ru/2026/01/01/v-rossii-vstupil-v-silu-gost-na-fermerskuiu-produkciiu.html": "e24148b6e41a29d4d36bbd584b12ce5a26949992a33805745417f1811611f80a"
   }
 }
