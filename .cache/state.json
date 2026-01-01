@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 01 Jan 2026 01:29:23 GMT"
+      "Last-Modified": "Thu, 01 Jan 2026 04:11:06 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"yspy9j15bn38mr\""
+      "ETag": "\"4c3j9q7jlm3964\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -34987,6 +34987,16 @@
     },
     "https://rg.ru/2026/01/01/reg-dfo/dalnevostochnyj-prefrezhim-dlia-biznesa-vyhodit-na-mezhdunarodnyj-uroven.html": {
       "ETag": "\"12ycaicap551w43\""
+    },
+    "https://eec.eaeunion.org/news/bakytzhan-sagintaev-pozdravil-migelya-dias-kanelya-bermudesa-s-dnem-osvobozhdeniya-kuby 01.01.2026/": {},
+    "https://realty.ria.ru/20260101/migranty-2065707446.html": {
+      "Last-Modified": "Thu, 01 Jan 2026 04:00:01 GMT"
+    },
+    "https://realty.ria.ru/20260101/zakony-2064568838.html": {
+      "Last-Modified": "Thu, 01 Jan 2026 02:30:05 GMT"
+    },
+    "https://rg.ru/2026/01/01/reg-dfo/na-kolyme-poteriavshego-soznanie-rabotnika-arteli-evakuirovali-vertoletom-mchs.html": {
+      "ETag": "\"150puhdvgp1qtn\""
     }
   },
   "stats": {
@@ -44348,9 +44358,26 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd79e347250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd79e347390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd79e347110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd79e346c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd79e346710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f33396c0ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f33396b2710>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f33396b25d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f333a91f6f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f333a91fe10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f333a933e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f33396b2fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f33396b3110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f33396b2c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f33396b2710>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f33396b1d10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2026-01-01T01:29:46.143991+00:00",
+    "last_run": "2026-01-01T04:11:28.801681+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -44363,9 +44390,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 485.2565059999847,
-        "connect_ms": 345.2199940000469,
-        "response_ms": 830.4765000000316,
+        "dns_ms": 371.47964599995476,
+        "connect_ms": 836.6138700000647,
+        "response_ms": 1208.0935160000195,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -44376,12 +44403,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd79f613e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f333a933e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 4763.14465300004,
-        "connect_ms": 500.9014649999699,
-        "response_ms": 5264.04611800001,
+        "dns_ms": 1804.125450000015,
+        "connect_ms": 0.0,
+        "response_ms": 1022.170382000013,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -44392,26 +44419,26 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd79e346710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f33396b1d10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "ccc29105b8e94645b826c809bc92a836a38d0653eeb0feb7ac2cabcf328542cc",
+    "https://ardexpert.ru/article": "3d9278dfc802318f62a1ac665e4dbf29839a4f6331badd8f8c9e17622a922e6b",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "cc80b6df43a7afb6ea9c11aa29f4b010f35e5d5a1c8fd5b5bffc2ae0066b7879",
+    "https://eec.eaeunion.org/news/": "56185c0fdacf23f68629d9ca6a67701fd0cfa2b7e7bc02585a50e449188a6487",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "83240bdc9ceaab85a61d614305aa6f9a32449e61399299671ed21cc28e30f340",
-    "https://www.metalinfo.ru/ru/news": "fc4fe802bb269cb49808478200fd6ec31d82077d5b080087b9eaedb2149f520a",
-    "https://www.pnp.ru/economics/": "ead09ab63a997fd3ea8873f3600b0a137d140c1cb5415138203da50f54e596a8",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "15bd229e3b158018edf6014924f980ed5d0132351e1f68ec4160b9663cb5a0b4",
+    "https://www.metalinfo.ru/ru/news": "3f079ed654a3ecb00d02eed4f96b8eb770df96d643ed4893386e50739466cb38",
+    "https://www.pnp.ru/economics/": "d570b1e140d1faf37eb0a3f71db1e38da2e50eb1c20698d5f1b343c3ca07f072",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
     "https://ria-stk.ru/news/vse-novosti.php": "8fa78407044c3c7302dc5f025d3e624890cb687480ff8f7ada0015e4dbf7283a",
-    "http://government.ru/news/": "b696f51df820084e8fd2952f1f2bb262814cb15d4bc609df2714a95e98472cf4",
-    "https://stroygaz.ru/news/": "9773258ad5b792939e049885404eebb4f68db2be8c82240abe2fab15b8407b74",
-    "https://realty.ria.ru/lenta/": "1979a33bf1a51df69d62ff15b22671f53ac944bcca4a8bea7c08a7767addb51e",
-    "https://rg.ru/tema/ekonomika": "9d7a2a8402bf53328839f586f34ab8aabe24e7dbf4bab5c35afc361a2b51189e",
+    "http://government.ru/news/": "2b89cc912d6521e300ab53010956e2a8d4bfca33ec8b3039cff39f621b1f8404",
+    "https://stroygaz.ru/news/": "db76cf8deadf023812df3d12bc1c359bb49a92d11555e681bd021233d615c9a4",
+    "https://realty.ria.ru/lenta/": "dfaa83cf9c7a1cb49d71ca771054d4a7eed658be6d2b3ec96d2a4b7e75532580",
+    "https://rg.ru/tema/ekonomika": "62e2970a72e3903f9a8b5cd5c60e28a3b660bdf2a605ca788a28b6a69920e68f",
     "http://ancb.ru/publication": "9d3a59f2b083966efea183dcc50eb49eb1f216b78ee338a10bd51d86199cc2f6",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -44481,6 +44508,7 @@
     ],
     "ФАУ ФЦС": [],
     "ЕЭК ЕАЭС": [
+      "https://eec.eaeunion.org/news/bakytzhan-sagintaev-pozdravil-migelya-dias-kanelya-bermudesa-s-dnem-osvobozhdeniya-kuby 01.01.2026/",
       "https://eec.eaeunion.org/news/predsedatel-kollegii-eek-bakytzhan-sagintaev-pozdravil-s-novym-godom 2026/",
       "https://eec.eaeunion.org/news/obrashchenie-prezidenta-kasym-zhomarta-tokaeva-k-glavam-gosudarstv-chlenov-evraziyskogo-ekonomichesk/",
       "https://eec.eaeunion.org/news/registratsiya-meditsinskikh-izdeliy-po-natsionalnym-pravilam-zavershitsya-k-2028-godu/",
@@ -44491,8 +44519,7 @@
       "https://eec.eaeunion.org/news/aktualizirovany-standarty-k-tekhreglamentu-eaes-na-magistralnye-truboprovody-dlya-transportirovaniya/",
       "https://eec.eaeunion.org/news/eek-obnulila-vvoznye-poshliny-na-otkhody-i-lom-dragmetallov-do-kontsa-2028-goda/",
       "https://eec.eaeunion.org/news/izmeneny-perechni-standartov-k-tekhreglamentu-eaes-na-sredstva-obespecheniya-pozharnoy-bezopasnosti-/",
-      "https://eec.eaeunion.org/news/kollegiya-eek-utverdila-temu-po-zashchite-prav-potrebiteley-v-stranakh-soyuza/",
-      "https://eec.eaeunion.org/news/24-dekabrya-vstupyat-v-silu-izmeneniya-v-tekhreglament-na-parfyumerno-kosmeticheskuyu-produktsiyu/"
+      "https://eec.eaeunion.org/news/kollegiya-eek-utverdila-temu-po-zashchite-prav-potrebiteley-v-stranakh-soyuza/"
     ],
     "Минфин России": [
       "https://minfin.gov.ru/ru/press-center/contacts/",
@@ -44694,6 +44721,8 @@
       "https://stroygaz.ru/news/infrastructure/s-2026-goda-regiony-budut-poluchat-federalnuyu-podderzhku-na-obnovlenie-parka-obshchestvennogo-trans/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260101/migranty-2065707446.html",
+      "https://realty.ria.ru/20260101/zakony-2064568838.html",
       "https://realty.ria.ru/20251231/moskva-2065866618.html",
       "https://realty.ria.ru/20251231/rosseti-2065862190.html",
       "https://realty.ria.ru/20251231/tysjachi-2065816105.html",
@@ -44711,11 +44740,10 @@
       "https://realty.ria.ru/20251229/moszhilinspektsiya-2065482908.html",
       "https://realty.ria.ru/20251229/banki-2065475980.html",
       "https://realty.ria.ru/20251229/avarii-2065445053.html",
-      "https://realty.ria.ru/20251229/zhile-2065441679.html",
-      "https://realty.ria.ru/20251229/energodar-2065439930.html",
-      "https://realty.ria.ru/20251229/mekhanizm-2065430310.html"
+      "https://realty.ria.ru/20251229/zhile-2065441679.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/01/reg-dfo/na-kolyme-poteriavshego-soznanie-rabotnika-arteli-evakuirovali-vertoletom-mchs.html",
       "https://rg.ru/2026/01/01/rossiiane-s-novogo-goda-nachnut-poluchat-ezhegodnuiu-semejnuiu-vyplatu.html",
       "https://rg.ru/2026/01/01/s-1-ianvaria-2026-goda-mrot-sostavit-27-093-rublej.html",
       "https://rg.ru/2026/01/01/reg-dfo/dalnevostochnyj-prefrezhim-dlia-biznesa-vyhodit-na-mezhdunarodnyj-uroven.html",
@@ -44747,7 +44775,6 @@
       "https://rg.ru/2025/12/31/reg-dfo/v-buriatii-i-zabajkale-vvedut-kruglogodichnyj-zapret-majninga-kriptovaliut.html",
       "https://rg.ru/2025/12/31/reg-ufo/rosaviaciia-ogranichila-polety-v-aeroportah-krasnodara-i-gelendzhika.html",
       "https://rg.ru/2025/12/31/deputat-aksakov-pokupat-zoloto-na-pike-stoimosti-riskovanno.html",
-      "https://rg.ru/2025/12/31/reg-sibfo/eksperty-rasskazali-mogut-li-otmenit-nalichnye-dengi.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -59537,7 +59564,11 @@
     "4de54a8d625ceec15ef9ebd208f4d22003a19a2037dddf52ba90c0ff77ecf7ee": "2026-01-01T04:29:00+03:00",
     "73e7b886a84913abda0533621d522ee7e593f99b95a1ce29bcc321cc695c5f84": "2026-01-01T04:29:00+03:00",
     "1d5167e7fedbbcb75fd496bf8e326c5129580ad325456aed0ea01eafc66b80b0": "2026-01-01T04:29:00+03:00",
-    "1229e9a7aa0d2109961dddbd243b9ff191797e3cbcfe151e6b9ba2d12077d5bf": "2026-01-01T04:29:00+03:00"
+    "1229e9a7aa0d2109961dddbd243b9ff191797e3cbcfe151e6b9ba2d12077d5bf": "2026-01-01T04:29:00+03:00",
+    "a7704cae223d3c26e1a91b581dd26b4711c29f05132886d3c4289c762f22525f": "2026-01-01T07:10:00+03:00",
+    "7ac05aa03bee9b98120dd3072b40cca54727f9ba4bbb7ba8fe31de059006cd8a": "2026-01-01T07:11:00+03:00",
+    "5d95b89e7a680876ed88979f78820a352c93a84465d54c2d13ed5ae537967f34": "2026-01-01T07:11:00+03:00",
+    "e21cea42187a63a666b2febbf128e42a4af838bf60351e3be687abdda807e3cb": "2026-01-01T07:11:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -59568,9 +59599,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd79f5f7e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
-        "last_ts": 1767230867.917666
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f333a91fe10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 15,
+        "last_ts": 1767240577.9217916
       },
       "warmup_done": false,
       "last_success_path": null
@@ -59579,31 +59610,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "3FZb6tbzTQoQ5G68",
+          "value": "YkVOILDp71L1yV2u",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767232122
+          "expires": 1767241825
         },
         {
           "name": "__ddg10_",
-          "value": "1767230922",
+          "value": "1767240625",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767232122
+          "expires": 1767241825
         },
         {
           "name": "__ddg9_",
-          "value": "52.176.124.226",
+          "value": "13.83.162.3",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767232122
+          "expires": 1767241825
+        },
+        {
+          "name": "__ddg1_",
+          "value": "SP4ZvzxTIAZTDEN3PEqj",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1798776625
         },
         {
           "name": "PHPSESSID",
-          "value": "83baab0bab42d640c2d04d93ee5ddbae",
+          "value": "0dcb3e27de95d9ebbf000fc2d96a3f27",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -59646,9 +59685,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fd79e346c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
-        "last_ts": 1767230954.4573781
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f33396b2710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 12,
+        "last_ts": 1767240658.7234178
       },
       "warmup_done": false,
       "last_success_path": null
@@ -77780,7 +77819,11 @@
     "http://government.ru/news/57464": "http://government.ru/news/57464",
     "https://rg.ru/2026/01/01/rossiiane-s-novogo-goda-nachnut-poluchat-ezhegodnuiu-semejnuiu-vyplatu.html": "https://rg.ru/2026/01/01/rossiiane-s-novogo-goda-nachnut-poluchat-ezhegodnuiu-semejnuiu-vyplatu.html",
     "https://rg.ru/2026/01/01/s-1-ianvaria-2026-goda-mrot-sostavit-27-093-rublej.html": "https://rg.ru/2026/01/01/s-1-ianvaria-2026-goda-mrot-sostavit-27-093-rublej.html",
-    "https://rg.ru/2026/01/01/reg-dfo/dalnevostochnyj-prefrezhim-dlia-biznesa-vyhodit-na-mezhdunarodnyj-uroven.html": "https://rg.ru/2026/01/01/reg-dfo/dalnevostochnyj-prefrezhim-dlia-biznesa-vyhodit-na-mezhdunarodnyj-uroven.html"
+    "https://rg.ru/2026/01/01/reg-dfo/dalnevostochnyj-prefrezhim-dlia-biznesa-vyhodit-na-mezhdunarodnyj-uroven.html": "https://rg.ru/2026/01/01/reg-dfo/dalnevostochnyj-prefrezhim-dlia-biznesa-vyhodit-na-mezhdunarodnyj-uroven.html",
+    "https://eec.eaeunion.org/news/bakytzhan-sagintaev-pozdravil-migelya-dias-kanelya-bermudesa-s-dnem-osvobozhdeniya-kuby 01.01.2026": "https://eec.eaeunion.org/news/bakytzhan-sagintaev-pozdravil-migelya-dias-kanelya-bermudesa-s-dnem-osvobozhdeniya-kuby 01.01.2026",
+    "https://realty.ria.ru/20260101/migranty-2065707446.html": "https://realty.ria.ru/20260101/migranty-2065707446.html",
+    "https://realty.ria.ru/20260101/zakony-2064568838.html": "https://realty.ria.ru/20260101/zakony-2064568838.html",
+    "https://rg.ru/2026/01/01/reg-dfo/na-kolyme-poteriavshego-soznanie-rabotnika-arteli-evakuirovali-vertoletom-mchs.html": "https://rg.ru/2026/01/01/reg-dfo/na-kolyme-poteriavshego-soznanie-rabotnika-arteli-evakuirovali-vertoletom-mchs.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -92865,7 +92908,10 @@
     "d207be95b49abc5fc471b42324bd357b809449ea": "http://government.ru/news/57464",
     "74b63161674ff9577be00a631aca12c3d873e546": "https://rg.ru/2026/01/01/rossiiane-s-novogo-goda-nachnut-poluchat-ezhegodnuiu-semejnuiu-vyplatu.html",
     "81b2750d5306e1fe76fac7535b1f077f4909355e": "https://rg.ru/2026/01/01/s-1-ianvaria-2026-goda-mrot-sostavit-27-093-rublej.html",
-    "9a64f24771fe84dc8b729b6dcfeb785ccbab50dd": "https://rg.ru/2026/01/01/reg-dfo/dalnevostochnyj-prefrezhim-dlia-biznesa-vyhodit-na-mezhdunarodnyj-uroven.html"
+    "9a64f24771fe84dc8b729b6dcfeb785ccbab50dd": "https://rg.ru/2026/01/01/reg-dfo/dalnevostochnyj-prefrezhim-dlia-biznesa-vyhodit-na-mezhdunarodnyj-uroven.html",
+    "4fc465794bbf9207526fb49b6f2558d6067bbb62": "https://realty.ria.ru/20260101/migranty-2065707446.html",
+    "f646f3b17960742f657d72860277936d561d97d0": "https://realty.ria.ru/20260101/zakony-2064568838.html",
+    "4da1a52f369bfe18da9966f684baca32d781e653": "https://rg.ru/2026/01/01/reg-dfo/na-kolyme-poteriavshego-soznanie-rabotnika-arteli-evakuirovali-vertoletom-mchs.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -113100,6 +113146,11 @@
     "http://government.ru/news/57464/": "4de54a8d625ceec15ef9ebd208f4d22003a19a2037dddf52ba90c0ff77ecf7ee",
     "https://rg.ru/2026/01/01/rossiiane-s-novogo-goda-nachnut-poluchat-ezhegodnuiu-semejnuiu-vyplatu.html": "73e7b886a84913abda0533621d522ee7e593f99b95a1ce29bcc321cc695c5f84",
     "https://rg.ru/2026/01/01/s-1-ianvaria-2026-goda-mrot-sostavit-27-093-rublej.html": "1d5167e7fedbbcb75fd496bf8e326c5129580ad325456aed0ea01eafc66b80b0",
-    "https://rg.ru/2026/01/01/reg-dfo/dalnevostochnyj-prefrezhim-dlia-biznesa-vyhodit-na-mezhdunarodnyj-uroven.html": "1229e9a7aa0d2109961dddbd243b9ff191797e3cbcfe151e6b9ba2d12077d5bf"
+    "https://rg.ru/2026/01/01/reg-dfo/dalnevostochnyj-prefrezhim-dlia-biznesa-vyhodit-na-mezhdunarodnyj-uroven.html": "1229e9a7aa0d2109961dddbd243b9ff191797e3cbcfe151e6b9ba2d12077d5bf",
+    "https://eec.eaeunion.org/news/bakytzhan-sagintaev-pozdravil-migelya-dias-kanelya-bermudesa-s-dnem-osvobozhdeniya-kuby 01.01.2026": "a7704cae223d3c26e1a91b581dd26b4711c29f05132886d3c4289c762f22525f",
+    "https://eec.eaeunion.org/news/bakytzhan-sagintaev-pozdravil-migelya-dias-kanelya-bermudesa-s-dnem-osvobozhdeniya-kuby 01.01.2026/": "a7704cae223d3c26e1a91b581dd26b4711c29f05132886d3c4289c762f22525f",
+    "https://realty.ria.ru/20260101/migranty-2065707446.html": "7ac05aa03bee9b98120dd3072b40cca54727f9ba4bbb7ba8fe31de059006cd8a",
+    "https://realty.ria.ru/20260101/zakony-2064568838.html": "5d95b89e7a680876ed88979f78820a352c93a84465d54c2d13ed5ae537967f34",
+    "https://rg.ru/2026/01/01/reg-dfo/na-kolyme-poteriavshego-soznanie-rabotnika-arteli-evakuirovali-vertoletom-mchs.html": "e21cea42187a63a666b2febbf128e42a4af838bf60351e3be687abdda807e3cb"
   }
 }
