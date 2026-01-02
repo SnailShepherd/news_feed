@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 01 Jan 2026 21:18:59 GMT"
+      "Last-Modified": "Fri, 02 Jan 2026 01:21:37 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Thu, 01 Jan 2026 08:10:59 GMT"
+      "Last-Modified": "Thu, 01 Jan 2026 21:01:22 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"12jrfcwxfeh3egn\""
+      "ETag": "\"tfl81pkntm3ev4\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -35065,6 +35065,12 @@
     },
     "https://rg.ru/2026/01/01/finansist-balynin-rasskazal-kakie-posobiia-vyrastut-vmeste-s-mrot.html": {
       "ETag": "\"ir3qwwth2i1t3l\""
+    },
+    "https://stroygaz.ru/news/dwelling/gotovykh-massovykh-novostroek-v-moskve-stalo-v-1-5-raza-menshe-elitnykh-v-2-raza-bolshe/": {
+      "Last-Modified": "Thu, 01 Jan 2026 21:01:22 GMT"
+    },
+    "https://rg.ru/2026/01/02/v-aeroportah-domodedovo-zhukovskij-penzy-i-samary-vveli-ogranicheniia.html": {
+      "ETag": "\"k5klv39u6x1o81\""
     }
   },
   "stats": {
@@ -44533,9 +44539,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9a5c4f7250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9a5c4f7390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9a5c4f7110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9a5c4f6c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9a5c4f6710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-01T21:19:14.219883+00:00",
+    "last_run": "2026-01-02T01:21:09.017886+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -44548,56 +44559,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 408.7869580000074,
-        "connect_ms": 291.75690599998916,
-        "response_ms": 700.5438639999966,
+        "dns_ms": 587.9721439999912,
+        "connect_ms": 501.26065500001005,
+        "response_ms": 1089.2327990000013,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9a5d76be30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 442.74095699998384,
+        "connect_ms": 1045.1304360000222,
+        "response_ms": 1487.871393000006,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 5695.232946000005,
-        "connect_ms": 0.0,
-        "response_ms": 596.4960210000072,
+        "dns_ms": 479.5164829999976,
+        "connect_ms": 415.5228809999869,
+        "response_ms": 895.0393639999845,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9a5c4f6710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 404.04052299999194,
+        "connect_ms": 350.7814660000008,
+        "response_ms": 754.8219889999928,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "dd329ef08bf94b3c62a17292567b59a267841248fe045d7856032cdad40d411c",
+    "https://ardexpert.ru/article": "3b6359ad5bdf8fc19f7547f9ebc5dba051dc57daed7669d48178039dc6399cdf",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "a01bb211fd9d0732473a6c7dd3debd3cb73f81cdd37f1d5cb422751860169ae4",
+    "https://eec.eaeunion.org/news/": "1fae7c0097df8450b2c210dec30232bce6859f3204de5ccdff0b868c7233a1bf",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "227859a44ca64bac1bf62bb7111f942f5aaba2cbc57bd4be1be75b4be0e7d3f6",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "e27e25d035394a0c3bfdeeea768bba1a79d4813b3df2523c67e20d474ceccc83",
     "https://www.metalinfo.ru/ru/news": "611608d83c061ce97bb2d50a2715860e8bf82f7afacdf9ac1d56ffaa723678f6",
-    "https://www.pnp.ru/economics/": "6e81e44901e424e4f9ecf57dcbc3318750ffe2aae7e78c30ec132449067e2e12",
+    "https://www.pnp.ru/economics/": "88efd782cf054403cef19016c3d9871d3064d4748aa615fc3a15df38bc3fc06d",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "bdae2143e55515e6359e67f683adf99cd4c05a7716411c0ba761b4c94057bec7",
-    "http://government.ru/news/": "f248875f724d84b98a1580281b81faa26a999236f72dd677324f6fe3179755f5",
-    "https://stroygaz.ru/news/": "6c0bd765e02399825efa0d2842a2ec30a6a37e56ecea05270bb3a0c9e8378521",
-    "https://realty.ria.ru/lenta/": "f22a09ba07194f438adcd7769562b0bf9ab8109a8401b2b2da1a157c36ed9f94",
-    "https://rg.ru/tema/ekonomika": "204023e0a7ff60e84e6a6daaaec1f1db46cfe438fc8a0460246b8f474400cfef",
-    "http://ancb.ru/publication": "9d3a59f2b083966efea183dcc50eb49eb1f216b78ee338a10bd51d86199cc2f6",
+    "https://ria-stk.ru/news/vse-novosti.php": "6d7b5b89c67020721a6e8a48c7388e31ebdbc896347f45549e6398f52e94c3b6",
+    "http://government.ru/news/": "31a2748f930cb21b23c6334674c605cdbe350308d5c699aff3ec3b6421e7ed11",
+    "https://stroygaz.ru/news/": "f64e362d8b3e048c5a1e622b6e28a8209674108bca5d063c47acd12e74ad0d78",
+    "https://realty.ria.ru/lenta/": "923e529535ad26db89b30bed661de645beb903354072c8e6c8f1c5177dedd532",
+    "https://rg.ru/tema/ekonomika": "ebb7d54cbfb1be55752e33279abe8ef1a59ed6fe78413468f35d6880cdad8de1",
+    "http://ancb.ru/publication": "f529efbbddc70413961e4a3ea629aeb053a3409615709bf33478ef29eebd5603",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -44857,6 +44868,7 @@
       "http://government.ru/news/57451/"
     ],
     "Стройгаз.ру": [
+      "https://stroygaz.ru/news/dwelling/gotovykh-massovykh-novostroek-v-moskve-stalo-v-1-5-raza-menshe-elitnykh-v-2-raza-bolshe/",
       "https://stroygaz.ru/news/dwelling/pochti-tret-kvartir-po-semeynoy-ipoteke-v-peterburge-prodayutsya-s-meblirovkoy/",
       "https://stroygaz.ru/news/dwelling/investitsii-v-nedvizhimost-sankt-peterburga-sokratilis-vdvoe-/",
       "https://stroygaz.ru/news/kadry/pochti-polovina-rossiyan-rasschityvayut-na-13-yu-zarplatu-po-itogam-2025-goda/",
@@ -44875,8 +44887,7 @@
       "https://stroygaz.ru/news/zkh/irek-fayzullin-soobshchil-chto-srok-ustraneniya-avariy-v-zhkkh-snizilsya-/",
       "https://stroygaz.ru/news/commercial/na-rossiyskom-rynke-v-dva-raza-sokratilis-vykhody-mezhdunarodnykh-brendov/",
       "https://stroygaz.ru/news/dwelling/zaversheny-klyuchevye-etapy-fundamentnykh-i-monolitnykh-rabot-v-proekte-na-severo-zapade-moskvy/",
-      "https://stroygaz.ru/news/dwelling/krupnyy-rossiyskiy-zastroyshchik-postroit-novyy-zhk-v-predelakh-ttk/",
-      "https://stroygaz.ru/news/infrastructure/s-2026-goda-regiony-budut-poluchat-federalnuyu-podderzhku-na-obnovlenie-parka-obshchestvennogo-trans/"
+      "https://stroygaz.ru/news/dwelling/krupnyy-rossiyskiy-zastroyshchik-postroit-novyy-zhk-v-predelakh-ttk/"
     ],
     "РИА Недвижимость: лента": [
       "https://realty.ria.ru/20260101/zhile-2065926802.html",
@@ -44901,6 +44912,7 @@
       "https://realty.ria.ru/20251229/avarii-2065445053.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/02/v-aeroportah-domodedovo-zhukovskij-penzy-i-samary-vveli-ogranicheniia.html",
       "https://rg.ru/2026/01/01/finansist-balynin-rasskazal-kakie-posobiia-vyrastut-vmeste-s-mrot.html",
       "https://rg.ru/2026/01/01/eksperty-rasskazali-u-kogo-sledom-za-uvelicheniem-mrot-vyrastut-zarplaty.html",
       "https://rg.ru/2026/01/01/v-semi-regionah-rf-s-1-ianvaria-2026-goda-vveden-turisticheskij-nalog.html",
@@ -44932,7 +44944,6 @@
       "https://rg.ru/2025/12/31/iz-za-nepogody-iz-aeroporta-sochi-ne-mogut-uletet-29-tysiachi-passazhirov.html",
       "https://rg.ru/2025/12/31/reg-szfo/trebovali-zameny-ekipazha.html",
       "https://rg.ru/2025/12/31/selskie-zhiteli-smogut-pokupat-lekarstva-v-otdeleniiah-pochty-rossii.html",
-      "https://rg.ru/2025/12/31/uvelichennye-pensii-za-ianvar-zaranee-nachisleny-pochti-polovine-poluchatelej.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -59748,7 +59759,9 @@
     "565528830b285db8d9e7230f692d720bb534516a2dc1a278599f06d0110822ba": "2026-01-01T21:28:00+03:00",
     "3be5a2bb7d9bec5b7c4405ce9a9d54be771fcf73cc1e935349e9d95c007b1bdf": "2026-01-01T21:28:00+03:00",
     "9cd738d8311f9ce8b3b871aa58089792be898384344f76e9acb1985cef8f2eb5": "2026-01-01T21:28:00+03:00",
-    "013171657906166379ef43df30ec3cd5933d8fa63c1448288e7790311e7a2546": "2026-01-02T00:19:00+03:00"
+    "013171657906166379ef43df30ec3cd5933d8fa63c1448288e7790311e7a2546": "2026-01-02T00:19:00+03:00",
+    "af7c29e338ca6e6664856c2bb25983903dc42ffcf5b5e797318177255994b346": "2026-01-02T04:21:00+03:00",
+    "c0a1f9137364681f3d681970a2aeacf23925c5b391ff4b64c3d1e58265ee1ae6": "2026-01-02T04:21:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -59779,8 +59792,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9a5d757e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767302251.971095
       },
       "warmup_done": false,
@@ -59790,39 +59803,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "pmVR5eAmLIXJZKHx",
+          "value": "Q1jF1Z5P5TF2Cf9a",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767303498
+          "expires": 1767318055
         },
         {
           "name": "__ddg10_",
-          "value": "1767302298",
+          "value": "1767316855",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767303498
+          "expires": 1767318055
         },
         {
           "name": "__ddg9_",
-          "value": "135.119.238.200",
+          "value": "132.196.82.1",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767303498
-        },
-        {
-          "name": "__ddg1_",
-          "value": "Nh6WWgljQP2IpN0gd8eL",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1798838298
+          "expires": 1767318055
         },
         {
           "name": "PHPSESSID",
-          "value": "de01288b57ecdc64ef7c7ddb00d66e79",
+          "value": "b8771852b046f5805ad809fd7a48a775",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -59849,11 +59854,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "UUwBE4hsNyElbpeD0IjPKIgiJAErFYra",
+          "value": "4tBIJp0LGOyBRoRxWZ46L9PJ90oik7vm",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767291501
+          "expires": 1767327658
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -59861,12 +59866,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1798384701
+          "expires": 1798420857
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9a5c4f6c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767302330.3080547
       },
       "warmup_done": false,
@@ -78025,7 +78030,9 @@
     "https://rg.ru/2026/01/01/v-rossii-nachali-vydavat-cheki-so-stavkoj-nds-22.html": "https://rg.ru/2026/01/01/v-rossii-nachali-vydavat-cheki-so-stavkoj-nds-22.html",
     "https://rg.ru/2026/01/01/reg-ufo/iz-za-snegopadov-v-krasnodarskom-krae-s-opozdaniem-sleduet-46-poezdov.html": "https://rg.ru/2026/01/01/reg-ufo/iz-za-snegopadov-v-krasnodarskom-krae-s-opozdaniem-sleduet-46-poezdov.html",
     "https://rg.ru/2026/01/01/deputat-razvorotneva-avarijnye-doma-stanut-interesnee-dlia-upravliaiushchih-kompanij.html": "https://rg.ru/2026/01/01/deputat-razvorotneva-avarijnye-doma-stanut-interesnee-dlia-upravliaiushchih-kompanij.html",
-    "https://rg.ru/2026/01/01/finansist-balynin-rasskazal-kakie-posobiia-vyrastut-vmeste-s-mrot.html": "https://rg.ru/2026/01/01/finansist-balynin-rasskazal-kakie-posobiia-vyrastut-vmeste-s-mrot.html"
+    "https://rg.ru/2026/01/01/finansist-balynin-rasskazal-kakie-posobiia-vyrastut-vmeste-s-mrot.html": "https://rg.ru/2026/01/01/finansist-balynin-rasskazal-kakie-posobiia-vyrastut-vmeste-s-mrot.html",
+    "https://stroygaz.ru/news/dwelling/gotovykh-massovykh-novostroek-v-moskve-stalo-v-1-5-raza-menshe-elitnykh-v-2-raza-bolshe": "https://stroygaz.ru/news/dwelling/gotovykh-massovykh-novostroek-v-moskve-stalo-v-1-5-raza-menshe-elitnykh-v-2-raza-bolshe",
+    "https://rg.ru/2026/01/02/v-aeroportah-domodedovo-zhukovskij-penzy-i-samary-vveli-ogranicheniia.html": "https://rg.ru/2026/01/02/v-aeroportah-domodedovo-zhukovskij-penzy-i-samary-vveli-ogranicheniia.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -93135,7 +93142,9 @@
     "c2f21b31f9d2571b015ad7035023e43e1fb9b62b": "https://rg.ru/2026/01/01/v-rossii-nachali-vydavat-cheki-so-stavkoj-nds-22.html",
     "c3f551470a6142dd42815efe746976a21a7db21c": "https://rg.ru/2026/01/01/reg-ufo/iz-za-snegopadov-v-krasnodarskom-krae-s-opozdaniem-sleduet-46-poezdov.html",
     "166f382617e9778dedc172de555f569c8caf9d32": "https://rg.ru/2026/01/01/deputat-razvorotneva-avarijnye-doma-stanut-interesnee-dlia-upravliaiushchih-kompanij.html",
-    "994a982c5fcab42ca0f0309253d57691e70d99e9": "https://rg.ru/2026/01/01/finansist-balynin-rasskazal-kakie-posobiia-vyrastut-vmeste-s-mrot.html"
+    "994a982c5fcab42ca0f0309253d57691e70d99e9": "https://rg.ru/2026/01/01/finansist-balynin-rasskazal-kakie-posobiia-vyrastut-vmeste-s-mrot.html",
+    "6ae4c14d1dd8df606119e34f2bfc5e35a82d7a31": "https://stroygaz.ru/news/dwelling/gotovykh-massovykh-novostroek-v-moskve-stalo-v-1-5-raza-menshe-elitnykh-v-2-raza-bolshe",
+    "b3ccd05a5f456b06d12499d739949e3db41b0a08": "https://rg.ru/2026/01/02/v-aeroportah-domodedovo-zhukovskij-penzy-i-samary-vveli-ogranicheniia.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -113399,6 +113408,9 @@
     "https://rg.ru/2026/01/01/v-rossii-nachali-vydavat-cheki-so-stavkoj-nds-22.html": "565528830b285db8d9e7230f692d720bb534516a2dc1a278599f06d0110822ba",
     "https://rg.ru/2026/01/01/reg-ufo/iz-za-snegopadov-v-krasnodarskom-krae-s-opozdaniem-sleduet-46-poezdov.html": "3be5a2bb7d9bec5b7c4405ce9a9d54be771fcf73cc1e935349e9d95c007b1bdf",
     "https://rg.ru/2026/01/01/deputat-razvorotneva-avarijnye-doma-stanut-interesnee-dlia-upravliaiushchih-kompanij.html": "9cd738d8311f9ce8b3b871aa58089792be898384344f76e9acb1985cef8f2eb5",
-    "https://rg.ru/2026/01/01/finansist-balynin-rasskazal-kakie-posobiia-vyrastut-vmeste-s-mrot.html": "013171657906166379ef43df30ec3cd5933d8fa63c1448288e7790311e7a2546"
+    "https://rg.ru/2026/01/01/finansist-balynin-rasskazal-kakie-posobiia-vyrastut-vmeste-s-mrot.html": "013171657906166379ef43df30ec3cd5933d8fa63c1448288e7790311e7a2546",
+    "https://stroygaz.ru/news/dwelling/gotovykh-massovykh-novostroek-v-moskve-stalo-v-1-5-raza-menshe-elitnykh-v-2-raza-bolshe": "af7c29e338ca6e6664856c2bb25983903dc42ffcf5b5e797318177255994b346",
+    "https://stroygaz.ru/news/dwelling/gotovykh-massovykh-novostroek-v-moskve-stalo-v-1-5-raza-menshe-elitnykh-v-2-raza-bolshe/": "af7c29e338ca6e6664856c2bb25983903dc42ffcf5b5e797318177255994b346",
+    "https://rg.ru/2026/01/02/v-aeroportah-domodedovo-zhukovskij-penzy-i-samary-vveli-ogranicheniia.html": "c0a1f9137364681f3d681970a2aeacf23925c5b391ff4b64c3d1e58265ee1ae6"
   }
 }
