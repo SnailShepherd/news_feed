@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 02 Jan 2026 21:16:33 GMT"
+      "Last-Modified": "Sat, 03 Jan 2026 01:16:48 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"2qci2guit3fq2\""
+      "ETag": "\"gnoytz8xek3dgk\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -35092,7 +35092,7 @@
       "ETag": "\"32go8duhxr1vl1\""
     },
     "https://rg.ru/2026/01/02/deputat-panesh-rasskazal-kto-vyjdet-na-pensiiu-v-2026-godu.html": {
-      "ETag": "\"in1akgtkz51qnz\""
+      "ETag": "\"h9vc7c6ggr1qo2\""
     },
     "https://rg.ru/2026/01/02/v-2026-godu-podorozhaiut-alkogol-i-sigarety.html": {
       "ETag": "\"toem48tsil1xas\""
@@ -35204,6 +35204,12 @@
     "https://rg.ru/amp/2026/01/02/reg-ufo/rosaviaciia-aeroport-volgograda-priostanovil-rabotu.html": {},
     "https://rg.ru/2026/01/02/reg-szfo/minenergo-kontroliruet-remont-povrezhdennyh-iz-za-pogody-setej-v-regionah-rossii.html": {
       "ETag": "\"xrf0vszafg1u9p\""
+    },
+    "https://rg.ru/2026/01/03/ekspert-podolskaia-v-2026-godu-rossiian-zhdut-118-dnej-otdyha.html": {
+      "ETag": "\"jf42r4yt3r1nl4\""
+    },
+    "https://rg.ru/2026/01/03/v-gd-raskryli-zarplaty-traktoristov-rech-idet-o-300-tysiachah-rublej-v-sezon.html": {
+      "ETag": "\"zmqnzcqsa11oyl\""
     }
   },
   "stats": {
@@ -44784,9 +44790,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1bfde4c550>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1bff297390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1bfde4c910>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1bfde4cb90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1bfde4ce10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-02T21:16:48.853850+00:00",
+    "last_run": "2026-01-03T01:16:19.545036+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -44799,56 +44810,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 819.6951589999912,
-        "connect_ms": 519.6829420000029,
-        "response_ms": 1339.378100999994,
+        "dns_ms": 454.03732499994476,
+        "connect_ms": 609.5961080000052,
+        "response_ms": 1063.63343299995,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1bff243e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 175.0841850000029,
+        "connect_ms": 1039.7388789999695,
+        "response_ms": 1214.8230639999724,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 1832.9148239999995,
-        "connect_ms": 2542.0933330000253,
-        "response_ms": 4375.008157000025,
+        "dns_ms": 4616.501485000072,
+        "connect_ms": 0.0,
+        "response_ms": 504.6816230000104,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1bfde4ce10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 177.00896700000612,
+        "connect_ms": 524.1643150000073,
+        "response_ms": 701.1732820000134,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "9c5d9bb3d7f0eaf36366b3b1896444d2e378e1593fec56cabecd414f293c2e9b",
+    "https://ardexpert.ru/article": "a5070b8a778fab400eb5142bdf9e1b4b9819abf4f9f4a49a53f972c5490836ee",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "3142e8ce907c1bdebfb4f15650ce1b5299b2efd589f7fd9a3abeadc8ec59dbf5",
+    "https://eec.eaeunion.org/news/": "6152a43a1f6dac1edce6ca5c1c56d40ea7577edb8ff53044268f8caa28e8da9a",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "d76b5529241b48fe6b95640bc1f9b108801053bcdb5910e109e4c7671ce561fc",
-    "https://www.metalinfo.ru/ru/news": "55598df4feb418ca0a3ec9325102908cc593c5244613692031c5c5b9d2dae318",
-    "https://www.pnp.ru/economics/": "e0ed392b2aead100379e43937eb37e1ee5e21f9192087a0b310da065f4d6682d",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "971bca97ce060f649017c6a2d1c18b43f7736a05cfcbd195c79db2c843e7ba66",
+    "https://www.metalinfo.ru/ru/news": "260aabd5062a5052a0500071e4eb84069e0bd4dc1b32e78a2bf93f513172e0e3",
+    "https://www.pnp.ru/economics/": "4a3bd833a88b15040a5b54cd79e59ecbf439341230305a387b039be0a3f05797",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "32075c232daef2091f9099e098032a1f5184054d5c213b2052c00f2028710b49",
-    "http://government.ru/news/": "1a2bdeffbb7d4d156f8ac98e46bd583617f68e3b6d7565de89cef563deb9b031",
-    "https://stroygaz.ru/news/": "de216be3bec8265526c94484f41f8b40b9726b370a8bd8ed532e18a7a2215af5",
-    "https://realty.ria.ru/lenta/": "54c03f8675422a24d1c608c2a9f22f0a1763711da7b5dfdc0d4cf5712a6eb4bb",
-    "https://rg.ru/tema/ekonomika": "950f2708508c340fb32fe4f316181a99fcb492e8e21e16d7fb15234e514dce2b",
-    "http://ancb.ru/publication": "9d3a59f2b083966efea183dcc50eb49eb1f216b78ee338a10bd51d86199cc2f6",
+    "https://ria-stk.ru/news/vse-novosti.php": "9705b936ca566bce4034d6441a77ec0c2ebbb8dfd11c74ed0f4e956395c93c11",
+    "http://government.ru/news/": "ea755b5ccd4198386a7ace82d01976795698aaa89abd1d80d595e99714bac2eb",
+    "https://stroygaz.ru/news/": "366dc44e309cd28dc9060e71589f98d1222306a7fb26f9f9421258722bdc6ea1",
+    "https://realty.ria.ru/lenta/": "9e4c5cbe89e099ac98000cba33f27451baf64ca5ecc5e12f94ae48aa15f1233c",
+    "https://rg.ru/tema/ekonomika": "b876506e44e881f1da5fb1f5a77dd6205a444891d9b019bd31055b3df3eb777d",
+    "http://ancb.ru/publication": "f529efbbddc70413961e4a3ea629aeb053a3409615709bf33478ef29eebd5603",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -45152,6 +45163,9 @@
       "https://realty.ria.ru/20251229/pereplanirovka-2065486373.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/02/deputat-panesh-rasskazal-kto-vyjdet-na-pensiiu-v-2026-godu.html",
+      "https://rg.ru/2026/01/03/ekspert-podolskaia-v-2026-godu-rossiian-zhdut-118-dnej-otdyha.html",
+      "https://rg.ru/2026/01/03/v-gd-raskryli-zarplaty-traktoristov-rech-idet-o-300-tysiachah-rublej-v-sezon.html",
       "https://rg.ru/2026/01/02/reg-ufo/rosaviaciia-aeroport-volgograda-priostanovil-rabotu.html",
       "https://rg.ru/2026/01/02/reg-szfo/minenergo-kontroliruet-remont-povrezhdennyh-iz-za-pogody-setej-v-regionah-rossii.html",
       "https://rg.ru/2026/01/02/reg-szfo/novye-zakony-zashchitili-novoselov-ot-ocheredej-v-iasli-i-prava-zhilcov-staryh-domov.html",
@@ -45164,8 +45178,6 @@
       "https://rg.ru/2026/01/02/reg-pfo/v-kazani-i-cheboksarah-priostanovili-polety-samoletov.html",
       "https://rg.ru/2026/01/02/passazhiropotok-rossijskih-aviakompanij-v-2025-godu-upal-na-27.html",
       "https://rg.ru/2026/01/02/ekspert-marchel-obiasnil-kakaia-strahovka-teper-nuzhna-dlia-poezdok-v-gruziiu.html",
-      "https://rg.ru/2026/01/02/v-nikaragua-turistov-privlekaet-marshrut-s-zagadochnymi-statuiami.html",
-      "https://rg.ru/2026/01/02/rozhdestvenskie-festivali-chudotvornaia-ikona-car-samovar-i-glintvejn-s-kliukvoj.html",
       "https://rg.ru/2026/01/02/reg-szfo/v-peterburge-razmoroziat-zakon-o-renovacii-hrushchevok.html",
       "https://rg.ru/2026/01/02/reg-ufo/v-aeroportu-sochi-zaderzhivaiutsia-shest-rejsov.html",
       "https://rg.ru/2026/01/02/sbory-filma-buratino-za-pervyj-den-prokata-prevysili-226-mln-rublej.html",
@@ -45183,7 +45195,6 @@
       "https://rg.ru/2026/01/02/v-2025-godu-rubl-byl-naibolee-podorozhavshim-k-dollaru.html",
       "https://rg.ru/2026/01/02/reg-cfo/stoimost-proezda-v-obshchestvennom-transporte-moskvy-vyrosla-so-2-ianvaria.html",
       "https://rg.ru/2026/01/02/opredeleny-piat-glavnyh-sobytij-na-rynke-nedvizhimosti-v-2025-godu.html",
-      "https://rg.ru/2026/01/02/ria-novosti-rossiiane-mogut-zarabotat-do-200-tysiach-rublej-v-period-prazdnikov.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -60048,7 +60059,9 @@
     "2677d8faad5d1053da1e953a5bbcbbc44230009924381bbcfd1cc5672cd783ae": "2026-01-02T18:21:00+03:00",
     "d4af25cd0c604472f28ea5060f9fe1399a5d121df25ce2a3456a1f07d330101d": "2026-01-02T21:28:00+03:00",
     "a601085182471c37b1842e2c177dd64fe7eada0383f77e971ae30a29ac15a27a": "2026-01-02T21:28:00+03:00",
-    "d4c34f6c4df01c608ba11455a343179da1fb08deb86c087f30a6666c31c94395": "2026-01-02T21:28:00+03:00"
+    "d4c34f6c4df01c608ba11455a343179da1fb08deb86c087f30a6666c31c94395": "2026-01-02T21:28:00+03:00",
+    "559cf28bc86df134bc547371dcc53b9eaa2fd7db0c450291c6c1aa5f1d2b27fa": "2026-01-03T04:16:00+03:00",
+    "81936942fd5d623bb1bc0e796049fad29561acfe37bf6c68cf2903de08a98227": "2026-01-03T04:16:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -60079,8 +60092,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1bff227e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 30,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767388494.6813145
       },
       "warmup_done": false,
@@ -60090,39 +60103,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "jD1wbpfWm1tTgclO",
+          "value": "mMMRuGwFmNOdzslk",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767389752
+          "expires": 1767404166
         },
         {
           "name": "__ddg10_",
-          "value": "1767388552",
+          "value": "1767402966",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767389752
+          "expires": 1767404166
         },
         {
           "name": "__ddg9_",
-          "value": "128.24.162.178",
+          "value": "64.236.193.18",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767389752
-        },
-        {
-          "name": "__ddg1_",
-          "value": "rOsQ2NdwWePV1VCVbDc7",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1798924552
+          "expires": 1767404166
         },
         {
           "name": "PHPSESSID",
-          "value": "c5ad8561284f182770c7aae72e21763b",
+          "value": "d0179f22cfa59d7efbed851de2a38c77",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -60149,11 +60154,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "fRfEOoN1HbFQ43W7xktbOaBP0rUFewGC",
+          "value": "W58c5xHgZZhfawEOuxieOJusWhPlFUU5",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767337383
+          "expires": 1767413768
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -60161,12 +60166,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1798430583
+          "expires": 1798506968
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1bfde4cb90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 24,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767388584.6174994
       },
       "warmup_done": false,
@@ -78375,7 +78380,9 @@
     "https://rg.ru/2026/01/02/passazhiropotok-rossijskih-aviakompanij-v-2025-godu-upal-na-27.html": "https://rg.ru/2026/01/02/passazhiropotok-rossijskih-aviakompanij-v-2025-godu-upal-na-27.html",
     "http://government.ru/news/57487": "http://government.ru/news/57487",
     "https://rg.ru/2026/01/02/reg-ufo/rosaviaciia-aeroport-volgograda-priostanovil-rabotu.html": "https://rg.ru/2026/01/02/reg-ufo/rosaviaciia-aeroport-volgograda-priostanovil-rabotu.html",
-    "https://rg.ru/2026/01/02/reg-szfo/minenergo-kontroliruet-remont-povrezhdennyh-iz-za-pogody-setej-v-regionah-rossii.html": "https://rg.ru/2026/01/02/reg-szfo/minenergo-kontroliruet-remont-povrezhdennyh-iz-za-pogody-setej-v-regionah-rossii.html"
+    "https://rg.ru/2026/01/02/reg-szfo/minenergo-kontroliruet-remont-povrezhdennyh-iz-za-pogody-setej-v-regionah-rossii.html": "https://rg.ru/2026/01/02/reg-szfo/minenergo-kontroliruet-remont-povrezhdennyh-iz-za-pogody-setej-v-regionah-rossii.html",
+    "https://rg.ru/2026/01/03/ekspert-podolskaia-v-2026-godu-rossiian-zhdut-118-dnej-otdyha.html": "https://rg.ru/2026/01/03/ekspert-podolskaia-v-2026-godu-rossiian-zhdut-118-dnej-otdyha.html",
+    "https://rg.ru/2026/01/03/v-gd-raskryli-zarplaty-traktoristov-rech-idet-o-300-tysiachah-rublej-v-sezon.html": "https://rg.ru/2026/01/03/v-gd-raskryli-zarplaty-traktoristov-rech-idet-o-300-tysiachah-rublej-v-sezon.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -93534,7 +93541,10 @@
     "47df3b22ba64da8f44a1a6865d4dde259a7eedbd": "https://rg.ru/2026/01/02/passazhiropotok-rossijskih-aviakompanij-v-2025-godu-upal-na-27.html",
     "526513fb95fcd7454bac5158d9b0958b80ecc895": "http://government.ru/news/57487",
     "647c2a652e218573fdcf26be0d4a7a70c81de6e9": "https://rg.ru/2026/01/02/reg-ufo/rosaviaciia-aeroport-volgograda-priostanovil-rabotu.html",
-    "7ac591c39c248b75430dfebc00f914f29fc54b20": "https://rg.ru/2026/01/02/reg-szfo/minenergo-kontroliruet-remont-povrezhdennyh-iz-za-pogody-setej-v-regionah-rossii.html"
+    "7ac591c39c248b75430dfebc00f914f29fc54b20": "https://rg.ru/2026/01/02/reg-szfo/minenergo-kontroliruet-remont-povrezhdennyh-iz-za-pogody-setej-v-regionah-rossii.html",
+    "138f8695bf2353126a7d070b150e42d3b38d6ea1": "https://rg.ru/2026/01/02/deputat-panesh-rasskazal-kto-vyjdet-na-pensiiu-v-2026-godu.html",
+    "984097757e58459f2a21d0e092b8ecddaa909c4a": "https://rg.ru/2026/01/03/ekspert-podolskaia-v-2026-godu-rossiian-zhdut-118-dnej-otdyha.html",
+    "1c8dc0b4e42e4c81453401cf69a74318a80eb9ec": "https://rg.ru/2026/01/03/v-gd-raskryli-zarplaty-traktoristov-rech-idet-o-300-tysiachah-rublej-v-sezon.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -113853,6 +113863,8 @@
     "http://government.ru/news/57487": "d4af25cd0c604472f28ea5060f9fe1399a5d121df25ce2a3456a1f07d330101d",
     "http://government.ru/news/57487/": "d4af25cd0c604472f28ea5060f9fe1399a5d121df25ce2a3456a1f07d330101d",
     "https://rg.ru/2026/01/02/reg-ufo/rosaviaciia-aeroport-volgograda-priostanovil-rabotu.html": "a601085182471c37b1842e2c177dd64fe7eada0383f77e971ae30a29ac15a27a",
-    "https://rg.ru/2026/01/02/reg-szfo/minenergo-kontroliruet-remont-povrezhdennyh-iz-za-pogody-setej-v-regionah-rossii.html": "d4c34f6c4df01c608ba11455a343179da1fb08deb86c087f30a6666c31c94395"
+    "https://rg.ru/2026/01/02/reg-szfo/minenergo-kontroliruet-remont-povrezhdennyh-iz-za-pogody-setej-v-regionah-rossii.html": "d4c34f6c4df01c608ba11455a343179da1fb08deb86c087f30a6666c31c94395",
+    "https://rg.ru/2026/01/03/ekspert-podolskaia-v-2026-godu-rossiian-zhdut-118-dnej-otdyha.html": "559cf28bc86df134bc547371dcc53b9eaa2fd7db0c450291c6c1aa5f1d2b27fa",
+    "https://rg.ru/2026/01/03/v-gd-raskryli-zarplaty-traktoristov-rech-idet-o-300-tysiachah-rublej-v-sezon.html": "81936942fd5d623bb1bc0e796049fad29561acfe37bf6c68cf2903de08a98227"
   }
 }
