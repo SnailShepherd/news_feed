@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 04 Jan 2026 09:19:31 GMT"
+      "Last-Modified": "Sun, 04 Jan 2026 12:34:00 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"1611yeiqare3k92\""
+      "ETag": "\"kdb34b2vpm3qay\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -35368,6 +35368,30 @@
     },
     "https://rg.ru/2026/01/04/v-2026-godu-planiruetsia-razrabotka-gostov-na-komponenty-bespilotnikov.html": {
       "ETag": "\"b9vo73xs391psi\""
+    },
+    "http://ancb.ru/publication/read/20738": {},
+    "http://government.ru/news/57477/": {},
+    "https://rg.ru/2026/01/04/neft-venesuely-ne-vinovata-v-napadenii-ssha-na-stranu.html": {
+      "ETag": "\"m78goww7bj1wu7\""
+    },
+    "https://rg.ru/2026/01/04/ator-zhalob-ot-otdyhaiushchih-na-kube-i-v-meksike-turistov-iz-rf-ne-postupalo.html": {
+      "ETag": "\"r7o8icdzfl1xbz\""
+    },
+    "https://rg.ru/2024/04/23/brigadir-ivan-varshavskij-o-bame-my-bralis-za-liuboe-zadanie-ne-tolko-relsy-ukladyvali.html": {
+      "ETag": "\"kz34a6rczz53kh\""
+    },
+    "https://rg.ru/2026/01/04/mirzaian-vtorzhenie-ssha-v-otrasl-venesuely-mozhet-snizit-mirovye-ceny-na-neft.html": {
+      "ETag": "\"1yvfc9hnyk1zps\""
+    },
+    "https://rg.ru/2026/01/04/reg-cfo/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html": {
+      "ETag": "\"104v3wo9ddz1okh\""
+    },
+    "https://rg.ru/amp/2026/01/04/reg-cfo/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html": {},
+    "https://rg.ru/2026/01/04/uroven-zapasov-gaza-v-phg-francii-k-nachalu-ianvaria-opustilsia-nizhe-60.html": {
+      "ETag": "\"uuzmdwdh3f1q9h\""
+    },
+    "https://rg.ru/2026/01/04/rossiia-sohranit-vtoroe-mesto-v-spiske-krupnejshih-eksporterov-rapsovogo-masla.html": {
+      "ETag": "\"eaocdtsk511prw\""
     }
   },
   "stats": {
@@ -45092,9 +45116,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb4f807f250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb4f807f390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb4f807f110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb4f807ec10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb4f807e710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-04T09:21:10.989331+00:00",
+    "last_run": "2026-01-04T12:34:37.143582+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -45107,56 +45136,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 537.677704000032,
-        "connect_ms": 1293.1289360000164,
-        "response_ms": 1830.8066400000484,
+        "dns_ms": 494.0874959999064,
+        "connect_ms": 778.5128730000679,
+        "response_ms": 1272.6003689999743,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb4f92dfe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 421.22097800006486,
+        "connect_ms": 0.0,
+        "response_ms": 317.9102649999095,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 356.02440699994986,
-        "connect_ms": 633.8688440000624,
-        "response_ms": 989.8932510000122,
+        "dns_ms": 673.2297390000213,
+        "connect_ms": 369.123267999953,
+        "response_ms": 1042.3530069999742,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb4f807e710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 144.43445500000962,
+        "connect_ms": 459.10107399993194,
+        "response_ms": 603.5355289999416,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "f319a00e7a78ceb6c818653d610ed1d899bc1d4d058bf62f0ddbda6bf5a365d5",
+    "https://ardexpert.ru/article": "3aaca2fa7e98166e8ea9c5ea0778ab661575ea5a963c3e9b9cdbaf2078433017",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "83b1b6a66bc40d50e360e121c7a3846b214a09dd3890c084b49f31e2d492eea0",
+    "https://eec.eaeunion.org/news/": "61babf8e1ec4f697b697d60bcd8fa23f37437b3af5099959c559c2f39285bd99",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "27de220dfff9a6e0368ad45326fbe36cd629cec89b2f269e288ddf9f9deeb117",
-    "https://www.metalinfo.ru/ru/news": "9f1864c495f3ae30d6aebbedacda9bbfabf79276e3b894dfd6485c44a01fa29d",
-    "https://www.pnp.ru/economics/": "b47c873774401bbd67d55d5540c6b309e9f9e5db33495d0ca9232622bd723306",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "515127a1903567fd4f231965146a91f10a876437636541ee26a22bce1697d774",
+    "https://www.metalinfo.ru/ru/news": "55598df4feb418ca0a3ec9325102908cc593c5244613692031c5c5b9d2dae318",
+    "https://www.pnp.ru/economics/": "994d3d46919890540670fe3f76c0381aab99aaa8bfab2c54cda0f0bcf5db7bad",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "1413aad9c4715bb0f5043d9be7ae967194f2e5686fe2d707c1dff17ef070677a",
-    "http://government.ru/news/": "eb5d406ae39eee152d8dafdbc15ee8b1a7f253a34756c46814adc2fba776df6a",
-    "https://stroygaz.ru/news/": "244f404636f13ef26d473f8553386dea46ffb42785cb1a4c73c2ca73084a10bc",
-    "https://realty.ria.ru/lenta/": "b9c23731746d42bade88ba91c24324fba498880c9ac612798cf13c142cf8c8ec",
-    "https://rg.ru/tema/ekonomika": "e4cfa1e3f4d726284c9b474800fdaa1bcfe9ebb9440beab81a06dc28dcce4f94",
-    "http://ancb.ru/publication": "9d3a59f2b083966efea183dcc50eb49eb1f216b78ee338a10bd51d86199cc2f6",
+    "https://ria-stk.ru/news/vse-novosti.php": "ad5f6ba09f4d67032d0b1017174a3fc256dc9af9d17f41c1ea831ab6df4350dd",
+    "http://government.ru/news/": "981750c22e4676ffdea0e785ac934c3eb0a29a009a6f06454e9cbde5e0381b90",
+    "https://stroygaz.ru/news/": "1829d07416b6560e12a6da23a3c3f75804badb9c8bd422ef4a976ac427ef39b1",
+    "https://realty.ria.ru/lenta/": "581eb8934529a65e6968a622a71b3cfa57c5ca68050f416fd27979223980564a",
+    "https://rg.ru/tema/ekonomika": "5ee55f32f8077ea6eb886d9bdb163a946e1548d76fa84dabbdb3e7798fc42196",
+    "http://ancb.ru/publication": "9aa04a91923c8fddddbfea3e41ef51d84f05501af3817b671ab27036471f92c2",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -45394,26 +45423,26 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=247592&all_news=Y"
     ],
     "Правительство РФ": [
-      "http://government.ru/news/57088/",
-      "http://government.ru/news/57087/",
-      "http://government.ru/news/57086/",
-      "http://government.ru/news/57084/",
-      "http://government.ru/news/57082/",
-      "http://government.ru/news/57081/",
-      "http://government.ru/news/57076/",
-      "http://government.ru/news/57075/",
-      "http://government.ru/news/57074/",
-      "http://government.ru/news/57067/",
-      "http://government.ru/news/57080/",
-      "http://government.ru/news/57079/",
-      "http://government.ru/news/57078/",
-      "http://government.ru/news/57072/",
-      "http://government.ru/news/57073/",
-      "http://government.ru/news/57077/",
-      "http://government.ru/news/57069/",
-      "http://government.ru/news/57071/",
-      "http://government.ru/news/57070/",
-      "http://government.ru/news/57068/"
+      "http://government.ru/news/57477/",
+      "http://government.ru/news/57468/",
+      "http://government.ru/news/57476/",
+      "http://government.ru/news/57487/",
+      "http://government.ru/news/57486/",
+      "http://government.ru/news/57485/",
+      "http://government.ru/news/57464/",
+      "http://government.ru/news/57484/",
+      "http://government.ru/news/57483/",
+      "http://government.ru/news/57475/",
+      "http://government.ru/news/57473/",
+      "http://government.ru/news/57474/",
+      "http://government.ru/news/57466/",
+      "http://government.ru/news/57463/",
+      "http://government.ru/news/57462/",
+      "http://government.ru/news/57461/",
+      "http://government.ru/news/57460/",
+      "http://government.ru/news/57457/",
+      "http://government.ru/news/57455/",
+      "http://government.ru/news/57458/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/commercial/investitsii-v-nedvizhimost-moskvy-sokratilis-bolee-chem-na-tret/",
@@ -45461,6 +45490,13 @@
       "https://realty.ria.ru/20251230/nabsovet-2065654572.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/04/neft-venesuely-ne-vinovata-v-napadenii-ssha-na-stranu.html",
+      "https://rg.ru/2026/01/04/ator-zhalob-ot-otdyhaiushchih-na-kube-i-v-meksike-turistov-iz-rf-ne-postupalo.html",
+      "https://rg.ru/2024/04/23/brigadir-ivan-varshavskij-o-bame-my-bralis-za-liuboe-zadanie-ne-tolko-relsy-ukladyvali.html",
+      "https://rg.ru/2026/01/04/mirzaian-vtorzhenie-ssha-v-otrasl-venesuely-mozhet-snizit-mirovye-ceny-na-neft.html",
+      "https://rg.ru/2026/01/04/reg-cfo/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html",
+      "https://rg.ru/2026/01/04/uroven-zapasov-gaza-v-phg-francii-k-nachalu-ianvaria-opustilsia-nizhe-60.html",
+      "https://rg.ru/2026/01/04/rossiia-sohranit-vtoroe-mesto-v-spiske-krupnejshih-eksporterov-rapsovogo-masla.html",
       "https://rg.ru/2026/01/04/v-rossii-nabiraiut-populiarnost-garazhnye-rasprodazhi.html",
       "https://rg.ru/2026/01/04/kuda-uehat-iz-moskvy-na-novogodnih-kanikulah-bez-lishnih-trat.html",
       "https://rg.ru/2026/01/04/issledovanie-molodye-blogery-vybiraiut-telegram-i-tiktok.html",
@@ -45480,24 +45516,18 @@
       "https://rg.ru/2026/01/03/glava-fneb-simonov-k-voprosu-o-nalogah-v-neftianoj-otrasli-neobhodimo-vernutsia.html",
       "https://rg.ru/2026/01/03/reg-ufo/v-aeroportu-krasnodara-vveli-vremennye-ogranicheniia.html",
       "https://rg.ru/2026/01/03/v-ator-rasskazali-chem-turisty-mogut-zamenit-venesuelu-v-novogodnie-prazdniki.html",
-      "https://rg.ru/2026/01/03/ator-v-venesuele-net-organizovannyh-turistov-iz-rf.html",
-      "https://rg.ru/2026/01/03/zarplata-gruzchika-prevysila-zarplatu-direktora-po-it-sostaviv-352-tysiachi-rublej.html",
       "https://rg.ru/2026/01/03/dolia-dollara-v-raschetah-cherez-swift-ponizilas-vpervye-za-piat-let.html",
       "https://rg.ru/2026/01/03/ochered-u-krymskogo-mosta-za-chas-vyrosla-v-dva-raza.html",
       "https://rg.ru/2026/01/03/aviarejs-iz-rossii-v-venesuelu-zaplanirovannyj-na-5-ianvaria-otmenen.html",
       "https://rg.ru/2026/01/03/v-ocheredi-u-krymskogo-mosta-skopilos-560-mashin.html",
       "https://rg.ru/2026/01/03/mintrans-vopros-zakrytiia-aviasoobshcheniia-s-venesueloj-ne-rassmatrivaetsia.html",
       "https://rg.ru/2026/01/03/sobianin-rasskazal-pochemu-parki-stanoviatsia-populiarnymi.html",
-      "https://rg.ru/2026/01/03/v-hhru-modnymi-professiiami-dlia-obucheniia-nazvali-razrabotchika-po-i-svarshchika.html",
-      "https://rg.ru/2026/01/03/reg-ufo/park-krasnodar-vstretil-gostej-unikalnym-prazdnichnym-ubranstvom.html",
-      "https://rg.ru/2026/01/03/v-rossii-rastet-nedoverie-k-turisticheskim-onlajn-servisam-iz-za-kibermoshennikov.html",
-      "https://rg.ru/2026/01/03/reg-ufo/dvizhenie-poezdov-v-krasnodarskom-krae-vosstanovleno.html",
-      "https://rg.ru/2026/01/03/tass-pensii-v-rossii-prodolzhat-indeksirovat-ne-nizhe-urovnia-infliacii.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20738",
       "http://ancb.ru/publication/read/20737",
       "http://ancb.ru/publication/read/20725",
       "http://ancb.ru/publication/read/20724",
@@ -45531,8 +45561,7 @@
       "http://ancb.ru/publication/read/20616",
       "http://ancb.ru/publication/read/20615",
       "http://ancb.ru/publication/read/20609",
-      "http://ancb.ru/publication/read/20605",
-      "http://ancb.ru/publication/read/20604"
+      "http://ancb.ru/publication/read/20605"
     ]
   },
   "first_seen": {
@@ -60412,7 +60441,16 @@
     "57bf483010e32414cf7b57a82fc50ae806cfd06f6e19edcc7baa127ad30db149": "2026-01-04T12:21:00+03:00",
     "39526ea7f20a382f99623315a34f52d94e9dd1d531b61b34ce2f09ef1ae57b81": "2026-01-04T12:21:00+03:00",
     "c4a0170e2211092d64a3797157400b07f226e8cf7a920be411df88ac1a54ad41": "2026-01-04T12:21:00+03:00",
-    "c6e2e4bd81cc8cdd5d6c0c408bf07eb0cd6ea4a86aff213b92182ba0172499d7": "2026-01-04T12:21:00+03:00"
+    "c6e2e4bd81cc8cdd5d6c0c408bf07eb0cd6ea4a86aff213b92182ba0172499d7": "2026-01-04T12:21:00+03:00",
+    "8ddf41804e59816c8c307b71724d38e052cea4237befeb184ec32e12082707f8": "2026-01-04T15:33:00+03:00",
+    "1e472ad520f80f2b9d137b15d284134e59ab401207fdba0e68ccda3b6bbc04bd": "2026-01-04T15:33:00+03:00",
+    "1332557b43011237bfbf1d1f5578a30f0cffb4e7adceafc4ee2be517a36b038e": "2026-01-04T15:34:00+03:00",
+    "d14a4c492c972688e8c53cfc4001850f2dd7d3c2e2118670131787292606706c": "2026-01-04T15:34:00+03:00",
+    "d4b4ea03edde0e606ed273471745ffc0ecf78bdb7a948e56d325353a93e64599": "2026-01-04T15:34:00+03:00",
+    "5d6695eb48c21de07dc3317a7ca7eab14964a380df94ec555a30ab2807cc04c0": "2026-01-04T15:34:00+03:00",
+    "7973732e90f54f0b692d399b2d441c352622a18ab7ff069fda2589af58220dee": "2026-01-04T15:34:00+03:00",
+    "c5394698639c840d949ccd4bc5c02f1712d1c2a89693ad61debb9c0d9f1f1535": "2026-01-04T15:34:00+03:00",
+    "fbde6214a21b2e933bdd0b803444f8a950a3dfc000cdafd87f59f5c1d79bee96": "2026-01-04T15:34:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -60443,8 +60481,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb4f92f3e10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 35,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767518286.884838
       },
       "warmup_done": false,
@@ -60454,39 +60492,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "BGn0LLvP0ogSVmZ1",
+          "value": "Av33kgxMgOYFzw1f",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767519529
+          "expires": 1767531199
         },
         {
           "name": "__ddg10_",
-          "value": "1767518329",
+          "value": "1767529999",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767519529
+          "expires": 1767531199
         },
         {
           "name": "__ddg9_",
-          "value": "20.171.127.96",
+          "value": "4.236.158.50",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767519529
-        },
-        {
-          "name": "__ddg1_",
-          "value": "Ir5lu9XjrM6cPGRV7Xx0",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1799054329
+          "expires": 1767531199
         },
         {
           "name": "PHPSESSID",
-          "value": "46db6a59619a5ea17338fcf30e475e28",
+          "value": "17333df6e15bfc22b98c687eddf3e830",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -60513,11 +60543,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "pg7VnBle9oxzGHbURDM6g5TCAmeThmWn",
+          "value": "Dwi8PbAfq6jSx2p8J0sGH3BmC22nLaO2",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767454386
+          "expires": 1767540801
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -60525,12 +60555,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1798547586
+          "expires": 1798634001
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb4f807ec10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 28,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767518362.3666844
       },
       "warmup_done": false,
@@ -78794,7 +78824,16 @@
     "https://rg.ru/2026/01/04/issledovanie-molodye-blogery-vybiraiut-telegram-i-tiktok.html": "https://rg.ru/2026/01/04/issledovanie-molodye-blogery-vybiraiut-telegram-i-tiktok.html",
     "https://rg.ru/2026/01/04/docent-rudneva-avans-posle-prazdnikov-mozhet-byt-menshe-obychnogo.html": "https://rg.ru/2026/01/04/docent-rudneva-avans-posle-prazdnikov-mozhet-byt-menshe-obychnogo.html",
     "https://rg.ru/2026/01/04/rosaviaciia-sniala-ogranicheniia-v-aeroportu-vnukovo.html": "https://rg.ru/2026/01/04/rosaviaciia-sniala-ogranicheniia-v-aeroportu-vnukovo.html",
-    "https://rg.ru/2026/01/04/v-2026-godu-planiruetsia-razrabotka-gostov-na-komponenty-bespilotnikov.html": "https://rg.ru/2026/01/04/v-2026-godu-planiruetsia-razrabotka-gostov-na-komponenty-bespilotnikov.html"
+    "https://rg.ru/2026/01/04/v-2026-godu-planiruetsia-razrabotka-gostov-na-komponenty-bespilotnikov.html": "https://rg.ru/2026/01/04/v-2026-godu-planiruetsia-razrabotka-gostov-na-komponenty-bespilotnikov.html",
+    "http://ancb.ru/publication/read/20738": "http://ancb.ru/publication/read/20738",
+    "http://government.ru/news/57477": "http://government.ru/news/57477",
+    "https://rg.ru/2026/01/04/neft-venesuely-ne-vinovata-v-napadenii-ssha-na-stranu.html": "https://rg.ru/2026/01/04/neft-venesuely-ne-vinovata-v-napadenii-ssha-na-stranu.html",
+    "https://rg.ru/2026/01/04/ator-zhalob-ot-otdyhaiushchih-na-kube-i-v-meksike-turistov-iz-rf-ne-postupalo.html": "https://rg.ru/2026/01/04/ator-zhalob-ot-otdyhaiushchih-na-kube-i-v-meksike-turistov-iz-rf-ne-postupalo.html",
+    "https://rg.ru/2024/04/23/brigadir-ivan-varshavskij-o-bame-my-bralis-za-liuboe-zadanie-ne-tolko-relsy-ukladyvali.html": "https://rg.ru/2024/04/23/brigadir-ivan-varshavskij-o-bame-my-bralis-za-liuboe-zadanie-ne-tolko-relsy-ukladyvali.html",
+    "https://rg.ru/2026/01/04/mirzaian-vtorzhenie-ssha-v-otrasl-venesuely-mozhet-snizit-mirovye-ceny-na-neft.html": "https://rg.ru/2026/01/04/mirzaian-vtorzhenie-ssha-v-otrasl-venesuely-mozhet-snizit-mirovye-ceny-na-neft.html",
+    "https://rg.ru/2026/01/04/reg-cfo/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html": "https://rg.ru/2026/01/04/reg-cfo/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html",
+    "https://rg.ru/2026/01/04/uroven-zapasov-gaza-v-phg-francii-k-nachalu-ianvaria-opustilsia-nizhe-60.html": "https://rg.ru/2026/01/04/uroven-zapasov-gaza-v-phg-francii-k-nachalu-ianvaria-opustilsia-nizhe-60.html",
+    "https://rg.ru/2026/01/04/rossiia-sohranit-vtoroe-mesto-v-spiske-krupnejshih-eksporterov-rapsovogo-masla.html": "https://rg.ru/2026/01/04/rossiia-sohranit-vtoroe-mesto-v-spiske-krupnejshih-eksporterov-rapsovogo-masla.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -94009,7 +94048,19 @@
     "1a1d3ec8c19d3e953a94e1c31bdbc2b97cb2cc66": "https://rg.ru/2026/01/04/issledovanie-molodye-blogery-vybiraiut-telegram-i-tiktok.html",
     "14945e86ee44f89460444679a7253eae18096989": "https://rg.ru/2026/01/04/docent-rudneva-avans-posle-prazdnikov-mozhet-byt-menshe-obychnogo.html",
     "885549556c461aaffd312eec314e0ff88ae1f4cc": "https://rg.ru/2026/01/04/rosaviaciia-sniala-ogranicheniia-v-aeroportu-vnukovo.html",
-    "58d99e9f1e04238bf337817aa02fc5cfe8f61f0d": "https://rg.ru/2026/01/04/v-2026-godu-planiruetsia-razrabotka-gostov-na-komponenty-bespilotnikov.html"
+    "58d99e9f1e04238bf337817aa02fc5cfe8f61f0d": "https://rg.ru/2026/01/04/v-2026-godu-planiruetsia-razrabotka-gostov-na-komponenty-bespilotnikov.html",
+    "41f289ff31a796476cbfc0003684821566107147": "http://ancb.ru/publication/read/20738",
+    "1697f846554e99f5325a24a5d7780c92144d2684": "http://government.ru/news/57477",
+    "6e2c3abe99ddf69dc153fa15820458e42ac02034": "http://government.ru/news/57485",
+    "b69c86b35b929fa322879d1629a39326c9316c3d": "http://government.ru/news/57484",
+    "44be72f6d3507e31e43fe7b504a12842cc88b91b": "http://government.ru/news/57474",
+    "50c6dd3e56244361219cda87c1958084f50497f6": "https://rg.ru/2026/01/04/neft-venesuely-ne-vinovata-v-napadenii-ssha-na-stranu.html",
+    "b7d1c7132bfae6ef3307c9af59b4b9868a732139": "https://rg.ru/2026/01/04/ator-zhalob-ot-otdyhaiushchih-na-kube-i-v-meksike-turistov-iz-rf-ne-postupalo.html",
+    "07b0584d00f57ac8b6faafa1a1d6ff9d47b33ace": "https://rg.ru/2024/04/23/brigadir-ivan-varshavskij-o-bame-my-bralis-za-liuboe-zadanie-ne-tolko-relsy-ukladyvali.html",
+    "acaa62678aaf266f44d56e8e6ca5ca849869d754": "https://rg.ru/2026/01/04/mirzaian-vtorzhenie-ssha-v-otrasl-venesuely-mozhet-snizit-mirovye-ceny-na-neft.html",
+    "70c97343b5efd29de9472c8c2a0c7b23caf78b77": "https://rg.ru/2026/01/04/reg-cfo/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html",
+    "00400116c3c03de9c15fa750fce56439e1ac613d": "https://rg.ru/2026/01/04/uroven-zapasov-gaza-v-phg-francii-k-nachalu-ianvaria-opustilsia-nizhe-60.html",
+    "7d7104208400df3edb7be7815709c0439d18cecb": "https://rg.ru/2026/01/04/rossiia-sohranit-vtoroe-mesto-v-spiske-krupnejshih-eksporterov-rapsovogo-masla.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -114389,6 +114440,16 @@
     "https://rg.ru/2026/01/04/issledovanie-molodye-blogery-vybiraiut-telegram-i-tiktok.html": "57bf483010e32414cf7b57a82fc50ae806cfd06f6e19edcc7baa127ad30db149",
     "https://rg.ru/2026/01/04/docent-rudneva-avans-posle-prazdnikov-mozhet-byt-menshe-obychnogo.html": "39526ea7f20a382f99623315a34f52d94e9dd1d531b61b34ce2f09ef1ae57b81",
     "https://rg.ru/2026/01/04/rosaviaciia-sniala-ogranicheniia-v-aeroportu-vnukovo.html": "c4a0170e2211092d64a3797157400b07f226e8cf7a920be411df88ac1a54ad41",
-    "https://rg.ru/2026/01/04/v-2026-godu-planiruetsia-razrabotka-gostov-na-komponenty-bespilotnikov.html": "c6e2e4bd81cc8cdd5d6c0c408bf07eb0cd6ea4a86aff213b92182ba0172499d7"
+    "https://rg.ru/2026/01/04/v-2026-godu-planiruetsia-razrabotka-gostov-na-komponenty-bespilotnikov.html": "c6e2e4bd81cc8cdd5d6c0c408bf07eb0cd6ea4a86aff213b92182ba0172499d7",
+    "http://ancb.ru/publication/read/20738": "8ddf41804e59816c8c307b71724d38e052cea4237befeb184ec32e12082707f8",
+    "http://government.ru/news/57477": "1e472ad520f80f2b9d137b15d284134e59ab401207fdba0e68ccda3b6bbc04bd",
+    "http://government.ru/news/57477/": "1e472ad520f80f2b9d137b15d284134e59ab401207fdba0e68ccda3b6bbc04bd",
+    "https://rg.ru/2026/01/04/neft-venesuely-ne-vinovata-v-napadenii-ssha-na-stranu.html": "1332557b43011237bfbf1d1f5578a30f0cffb4e7adceafc4ee2be517a36b038e",
+    "https://rg.ru/2026/01/04/ator-zhalob-ot-otdyhaiushchih-na-kube-i-v-meksike-turistov-iz-rf-ne-postupalo.html": "d14a4c492c972688e8c53cfc4001850f2dd7d3c2e2118670131787292606706c",
+    "https://rg.ru/2024/04/23/brigadir-ivan-varshavskij-o-bame-my-bralis-za-liuboe-zadanie-ne-tolko-relsy-ukladyvali.html": "d4b4ea03edde0e606ed273471745ffc0ecf78bdb7a948e56d325353a93e64599",
+    "https://rg.ru/2026/01/04/mirzaian-vtorzhenie-ssha-v-otrasl-venesuely-mozhet-snizit-mirovye-ceny-na-neft.html": "5d6695eb48c21de07dc3317a7ca7eab14964a380df94ec555a30ab2807cc04c0",
+    "https://rg.ru/2026/01/04/reg-cfo/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html": "7973732e90f54f0b692d399b2d441c352622a18ab7ff069fda2589af58220dee",
+    "https://rg.ru/2026/01/04/uroven-zapasov-gaza-v-phg-francii-k-nachalu-ianvaria-opustilsia-nizhe-60.html": "c5394698639c840d949ccd4bc5c02f1712d1c2a89693ad61debb9c0d9f1f1535",
+    "https://rg.ru/2026/01/04/rossiia-sohranit-vtoroe-mesto-v-spiske-krupnejshih-eksporterov-rapsovogo-masla.html": "fbde6214a21b2e933bdd0b803444f8a950a3dfc000cdafd87f59f5c1d79bee96"
   }
 }
