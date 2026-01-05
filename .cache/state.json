@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 05 Jan 2026 09:32:22 GMT"
+      "Last-Modified": "Mon, 05 Jan 2026 12:41:41 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Sun, 04 Jan 2026 15:42:14 GMT"
+      "Last-Modified": "Mon, 05 Jan 2026 08:51:17 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"qoprcsph6w3t0y\""
+      "ETag": "\"1o32ue4tvr3wr8\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -35510,6 +35510,27 @@
     },
     "https://rg.ru/2026/01/05/mer-tur-po-rossii-obojdetsia-inostrannomu-turistu-v-srednem-v-200-tysiach-rublej.html": {
       "ETag": "\"7o4fbnq9hi1t34\""
+    },
+    "https://stroygaz.ru/news/infrastructure/bolee-300-kilometrov-dorog-k-mestam-zimnego-otdykha-obnovili-v-2025-godu/": {
+      "Last-Modified": "Mon, 05 Jan 2026 08:51:17 GMT"
+    },
+    "https://rg.ru/2026/01/05/v-2026-godu-rossiiu-zhdet-novyj-sostav-gosdumy-i-neskolko-mezhdunarodnyh-forumov.html": {
+      "ETag": "\"fecpt2j33u2jd4\""
+    },
+    "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-o-novom-dublere-altufevskogo-shosse-kotoryj-proshel-ot-kostromskoj-ulicy-do-moskovskogo-skorostnogo-diametra.html": {
+      "ETag": "\"152tdj74s701st9\""
+    },
+    "https://rg.ru/2026/01/05/rosaviaciia-v-2026-godu-ozhidaet-postavku-treh-samoletov-il-114-300.html": {
+      "ETag": "\"htcyse7mvu1rm8\""
+    },
+    "https://rg.ru/2026/01/05/reg-cfo/samolet-aviakompanii-conviasa-vyletel-iz-moskvy-v-karakas.html": {
+      "ETag": "\"4ar13bph8k1t2k\""
+    },
+    "https://rg.ru/2026/01/05/obshchestvennyj-gortransport-moskvy-v-rozhdestvenskuiu-noch-budet-rabotat-dolshe.html": {
+      "ETag": "\"7a9l89ws7i1qo7\""
+    },
+    "https://rg.ru/2026/01/05/reg-ufo/v-2026-godu-zapustiat-priamye-rejsy-iz-sochi-v-odin-iz-starejshih-gorodov-kazahstana.html": {
+      "ETag": "\"v4g1ud7ony1osm\""
     }
   },
   "stats": {
@@ -45345,9 +45366,32 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "HTTPSConnectionPool(host='minfin.gov.ru', port=443): Max retries exceeded with url: /ru/press-center/news/ (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='minfin.gov.ru', port=443): Read timed out. (read timeout=10.0)\"))"
+      },
+      {
+        "source": "Гостинформ",
+        "url": "https://www.gostinfo.ru/News/List",
+        "error": "temporary unavailable -> used cache: www.gostinfo.ru: HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e210>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)')), HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e350>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)')), HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e490>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)')), HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e5d0>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)')), HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e710>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb7bb821940>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb7bb80ec10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb7bb80ee90>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb7bb6fc8a0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb7bb6fc9d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb7bcaa3e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb7bb80f250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb7bb80f110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb7bb80ee90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e710>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e490>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2026-01-05T09:32:15.722803+00:00",
+    "last_run": "2026-01-05T12:42:12.126014+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -45365,51 +45409,51 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fc123662710>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))"
+        "error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e710>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))"
       },
       "ancb.ru": {
-        "dns_ms": 130.7425779998539,
-        "connect_ms": 867.0185090002178,
-        "response_ms": 997.7610870000717,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb7bcaa3e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 296.2408610001148,
-        "connect_ms": 485.801328999969,
-        "response_ms": 782.0421900000838,
+        "dns_ms": 539.1906259999928,
+        "connect_ms": 4673.830377000002,
+        "response_ms": 5213.021002999994,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 526.7005579999022,
-        "connect_ms": 35.63869000026898,
-        "response_ms": 562.3392480001712,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e490>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "761f6896bf07e78490e4c76b7b4fa165ea085275395e04aebab2901cb039080c",
+    "https://ardexpert.ru/article": "4e1b06f6efb13a2377cc011190f859489f09afba8b719f9cc1a28d510fb9a5c5",
     "https://www.gostinfo.ru/News/List": "3e3719096e72d9015442f264b3175caabe10e124cad4ef6c124cb406bd1d7d90",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "42511625a436e8ecb9949866dfa77fd5afd26b081acb3c9e40c498f19ab36b52",
+    "https://eec.eaeunion.org/news/": "bbe7486377a8f757ff408cdfbc76033b3a8b6971d92ff4e5a3d9ce2d6bb71148",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "c6af8aa186fd31ab7e29b1ce4490b3ca54d3c0fc4ff547f928e28edab2ff6ec1",
-    "https://www.metalinfo.ru/ru/news": "944f992bbd58ec9112ea2f403b92e8794f924217279289c93d107e0f7342f81a",
-    "https://www.pnp.ru/economics/": "944f8f5198333c103bf6e1c8e35a7a9d3d321f74420378378e0d2413e8be9bff",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "3c1c9092708755e22f94ccf2a779d6dd4154337b31a2f66cef7c870ec76d92e9",
+    "https://www.metalinfo.ru/ru/news": "7da4a4cf712aa182746eb0e01913339d3b3c006dd68a3df2b0f8abf81072325b",
+    "https://www.pnp.ru/economics/": "4315dbe582aea78139f010ffb72a8345314588a78bbfecb37a099fc10da8bc1a",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "72ef1cb428758ea06dec56de852bac1fceca76a67fcb8b7af4d4b874cb420a40",
-    "http://government.ru/news/": "e7d5e4e5ffdcebd471c0dba20ceaf3b7e127aa693c74576f43295f77c863bedc",
-    "https://stroygaz.ru/news/": "45203bf80191385b488e504d658d8659930df7b578f41f942a9e7a9d116f61e1",
-    "https://realty.ria.ru/lenta/": "fa2b8e9c669d1ef180b8f4268be04555b280697f1cdc617e9dcc408c3c7390ed",
-    "https://rg.ru/tema/ekonomika": "d6d6f253d8dbfcd0072d254b04a45dc8bf59c7db50d3d4caad0cf57748a8c563",
-    "http://ancb.ru/publication": "9aa04a91923c8fddddbfea3e41ef51d84f05501af3817b671ab27036471f92c2",
+    "https://ria-stk.ru/news/vse-novosti.php": "ff997f3546e0eba96b84f9f10870796cdf6e617e3b74f0a48231668b9a189faf",
+    "http://government.ru/news/": "432a51526579f5cfb4f4ef27919f13b6e268217de313644673ce8810342e7373",
+    "https://stroygaz.ru/news/": "02cde0205d92587008b446b0d091a6b9671b887da2a9922c103deb6859897809",
+    "https://realty.ria.ru/lenta/": "668ced130b80be6bc0e71acf8f5c673e14d832ef1d9678fb5a9a564f4d5e8a42",
+    "https://rg.ru/tema/ekonomika": "e88fd7b701a1fef8b2892908ac5cf6eca8db823ca69936bcb00d160b9229fe53",
+    "http://ancb.ru/publication": "2a6d1d9087fcb685624721654641198e8c0549a2853bc9c99cb91df6a16fc5e6",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -45669,6 +45713,7 @@
       "http://government.ru/news/57460/"
     ],
     "Стройгаз.ру": [
+      "https://stroygaz.ru/news/infrastructure/bolee-300-kilometrov-dorog-k-mestam-zimnego-otdykha-obnovili-v-2025-godu/",
       "https://stroygaz.ru/news/projection/na-sozdanie-komfortnoy-gorodskoy-sredy-ryadu-regionov-budet-vydeleno-dopolnitelnoe-finansirovanie-/",
       "https://stroygaz.ru/news/infrastructure/stantsiyu-metro-zvenigorodskaya-otdelayut-sibirskim-granitom-i-nerzhaveyushchey-stalyu/",
       "https://stroygaz.ru/news/commercial/investitsii-v-nedvizhimost-moskvy-sokratilis-bolee-chem-na-tret/",
@@ -45687,7 +45732,6 @@
       "https://stroygaz.ru/news/commercial/zakrytye-paevye-investitsionnye-fondy-zpify-nedvizhimosti-ukreplyayut-pozitsii-v-segmente-skladskoy-/",
       "https://stroygaz.ru/news/infrastructure/spetsialisty-pristupili-k-zaklyuchitelnym-rabotam-po-kapremontu-moskovskogo-universiteta-/",
       "https://stroygaz.ru/news/hypothec/pokupateli-speshat-oformit-ipoteku-do-vvedeniya-pravila-odna-semya-odna-ipoteka-ekspert-/",
-      "https://stroygaz.ru/news/commercial/moskovskiy-region-vernulsya-k-urovnyu-2018-goda-vakantnykh-skladov/",
       "https://stroygaz.ru/news/zkh/v-novogodnie-prazdniki-monitoring-obektov-kommunalnoy-infrastruktury-budet-usilen-glava-minstroya-ro/"
     ],
     "РИА Недвижимость: лента": [
@@ -45713,6 +45757,12 @@
       "https://realty.ria.ru/20251231/rosseti-2065862190.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/05/v-2026-godu-rossiiu-zhdet-novyj-sostav-gosdumy-i-neskolko-mezhdunarodnyh-forumov.html",
+      "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-o-novom-dublere-altufevskogo-shosse-kotoryj-proshel-ot-kostromskoj-ulicy-do-moskovskogo-skorostnogo-diametra.html",
+      "https://rg.ru/2026/01/05/rosaviaciia-v-2026-godu-ozhidaet-postavku-treh-samoletov-il-114-300.html",
+      "https://rg.ru/2026/01/05/reg-cfo/samolet-aviakompanii-conviasa-vyletel-iz-moskvy-v-karakas.html",
+      "https://rg.ru/2026/01/05/obshchestvennyj-gortransport-moskvy-v-rozhdestvenskuiu-noch-budet-rabotat-dolshe.html",
+      "https://rg.ru/2026/01/05/reg-ufo/v-2026-godu-zapustiat-priamye-rejsy-iz-sochi-v-odin-iz-starejshih-gorodov-kazahstana.html",
       "https://rg.ru/2026/01/05/professor-abramov-reshenie-opek-mozhet-byt-reakciej-na-situaciiu-v-venesuele.html",
       "https://rg.ru/2026/01/05/obem-goszakupok-igrushek-v-rossii-prevysil-28-milliarda-rublej.html",
       "https://rg.ru/2026/01/05/reg-ufo/v-aeroportu-sochi-zaderzhivaiutsia-17-rejsov.html",
@@ -45737,14 +45787,8 @@
       "https://rg.ru/2026/01/04/v-aeroportah-vnukovo-i-zhukovskij-vnov-vveli-ogranicheniia.html",
       "https://rg.ru/2026/01/04/reg-ufo/kak-v-novogodnie-prazdniki-turisty-otdyhaiut-u-moria-v-sochi.html",
       "https://rg.ru/2026/01/04/iurist-sirotina-rasskazala-kak-ustanovit-gibkij-grafik-na-rabote.html",
-      "https://rg.ru/2026/01/04/klientskie-sluzhby-socfonda-budut-rabotat-5-ianvaria.html",
-      "https://rg.ru/2026/01/04/vygodnaia-investiciia-chem-rossiiane-natorgovali-na-kvadrilliony-rublej-na-birzhe.html",
       "https://rg.ru/2026/01/04/zametnee-vsego-zarplaty-v-rossii-za-god-vyrosli-u-izdatelej-po.html",
       "https://rg.ru/2026/01/04/v-treh-moskovskih-aeroportah-ogranichili-polety.html",
-      "https://rg.ru/2026/01/04/v-moskovskom-aeroportu-vnukovo-ogranichili-polety-samoletov-vtoroj-raz-za-sutki.html",
-      "https://rg.ru/2026/01/04/socfond-bolee-tysiachi-samozaniatyh-oformili-dostup-k-oplachivaemym-bolnichnym.html",
-      "https://rg.ru/2026/01/04/neft-venesuely-ne-vinovata-v-napadenii-ssha-na-stranu.html",
-      "https://rg.ru/2026/01/04/reg-cfo/rosaviaciia-vvela-vremennye-ogranicheniia-v-aeroportu-kalugi.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -60715,7 +60759,14 @@
     "a2d6b4ede0728f7867747c461a9dd8d2d0df0cffc3b069b642df503a0b317987": "2026-01-05T12:32:00+03:00",
     "97741b5f04abd6715546a57a4ab2a589b815329b8791e3c635a11b34c5de7db0": "2026-01-05T12:32:00+03:00",
     "35917bb152fa16d52a8f24a74d1a30671fc366c4f31eb2bd57efb38a7816475f": "2026-01-05T12:32:00+03:00",
-    "2b2a7e9e46acdb5b03354b534fbe6f0a21b4e56e07657b2bb5caf72bccde5257": "2026-01-05T12:32:00+03:00"
+    "2b2a7e9e46acdb5b03354b534fbe6f0a21b4e56e07657b2bb5caf72bccde5257": "2026-01-05T12:32:00+03:00",
+    "d1cf22739ac3b7d91a20322ec486346f16cd6da03c626d88e068ad089e72d6b1": "2026-01-05T15:41:00+03:00",
+    "e9dbd50351fdc7debd9266dc9e47151f303ea087e7351bb13567f6a56bc2839f": "2026-01-05T15:42:00+03:00",
+    "dbfb2798e51d041f0641dd145e925e3ad1db5517554f7458b931a6088b349ef3": "2026-01-05T15:42:00+03:00",
+    "89cba0ebf273a20b5ce0031a9457dc960d3890dc26edcd09df3950757a1b24b4": "2026-01-05T15:42:00+03:00",
+    "3f231e3ee5851d671424dd3116d3aba5c7f7e2ea4ee9ebaa8293611f9c76b27b": "2026-01-05T15:42:00+03:00",
+    "e3401a47d72d54888e423d5d8fe9e05c7d50e763256200ed5c93c78c035e85a1": "2026-01-05T15:42:00+03:00",
+    "276a7aba268300b69889d0a99c355c1044387aadba31513c8668bf751a8838c0": "2026-01-05T15:42:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -60727,9 +60778,9 @@
     "www.gostinfo.ru": {
       "cookies": [],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fc1236625d0>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))",
-        "consecutive": 20,
-        "last_ts": 1767605396.4628243
+        "last_error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e5d0>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))",
+        "consecutive": 24,
+        "last_ts": 1767616747.517962
       },
       "warmup_done": false,
       "last_success_path": null
@@ -60746,9 +60797,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1767586632.9421396
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb7bb6fc9d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1767616814.2367673
       },
       "warmup_done": false,
       "last_success_path": null
@@ -60757,39 +60808,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "6eZhrSbIVoZMuyjH",
+          "value": "GiD9JecYmlw2CcZM",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767606701
+          "expires": 1767618060
         },
         {
           "name": "__ddg10_",
-          "value": "1767605501",
+          "value": "1767616860",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767606701
+          "expires": 1767618060
         },
         {
           "name": "__ddg9_",
-          "value": "145.132.102.49",
+          "value": "20.51.206.85",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767606701
-        },
-        {
-          "name": "__ddg1_",
-          "value": "1HkIiseKGo53NAv58U9R",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1799141501
+          "expires": 1767618060
         },
         {
           "name": "PHPSESSID",
-          "value": "2850dc49371c66068e1168f614853ef4",
+          "value": "6aaeb7c8457e199bf6d62c5e809f31a2",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -60832,9 +60875,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1767586711.1657085
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb7bb80e710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 4,
+        "last_ts": 1767616892.0780103
       },
       "warmup_done": false,
       "last_success_path": null
@@ -79148,7 +79191,14 @@
     "https://rg.ru/2026/01/05/reg-pfo/rosaviaciia-vremenno-ogranichila-polety-v-aeroportu-saratova.html": "https://rg.ru/2026/01/05/reg-pfo/rosaviaciia-vremenno-ogranichila-polety-v-aeroportu-saratova.html",
     "https://rg.ru/2026/01/05/ekspert-aleksej-voronkov-bilet-v-kino-v-rossii-v-srednem-stoit-bolee-400-rublej.html": "https://rg.ru/2026/01/05/ekspert-aleksej-voronkov-bilet-v-kino-v-rossii-v-srednem-stoit-bolee-400-rublej.html",
     "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-pro-griadushchie-novoselia-po-renovacii-v-stolichnom-rajone-solncevo.html": "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-pro-griadushchie-novoselia-po-renovacii-v-stolichnom-rajone-solncevo.html",
-    "https://rg.ru/2026/01/05/mer-tur-po-rossii-obojdetsia-inostrannomu-turistu-v-srednem-v-200-tysiach-rublej.html": "https://rg.ru/2026/01/05/mer-tur-po-rossii-obojdetsia-inostrannomu-turistu-v-srednem-v-200-tysiach-rublej.html"
+    "https://rg.ru/2026/01/05/mer-tur-po-rossii-obojdetsia-inostrannomu-turistu-v-srednem-v-200-tysiach-rublej.html": "https://rg.ru/2026/01/05/mer-tur-po-rossii-obojdetsia-inostrannomu-turistu-v-srednem-v-200-tysiach-rublej.html",
+    "https://stroygaz.ru/news/infrastructure/bolee-300-kilometrov-dorog-k-mestam-zimnego-otdykha-obnovili-v-2025-godu": "https://stroygaz.ru/news/infrastructure/bolee-300-kilometrov-dorog-k-mestam-zimnego-otdykha-obnovili-v-2025-godu",
+    "https://rg.ru/2026/01/05/v-2026-godu-rossiiu-zhdet-novyj-sostav-gosdumy-i-neskolko-mezhdunarodnyh-forumov.html": "https://rg.ru/2026/01/05/v-2026-godu-rossiiu-zhdet-novyj-sostav-gosdumy-i-neskolko-mezhdunarodnyh-forumov.html",
+    "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-o-novom-dublere-altufevskogo-shosse-kotoryj-proshel-ot-kostromskoj-ulicy-do-moskovskogo-skorostnogo-diametra.html": "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-o-novom-dublere-altufevskogo-shosse-kotoryj-proshel-ot-kostromskoj-ulicy-do-moskovskogo-skorostnogo-diametra.html",
+    "https://rg.ru/2026/01/05/rosaviaciia-v-2026-godu-ozhidaet-postavku-treh-samoletov-il-114-300.html": "https://rg.ru/2026/01/05/rosaviaciia-v-2026-godu-ozhidaet-postavku-treh-samoletov-il-114-300.html",
+    "https://rg.ru/2026/01/05/reg-cfo/samolet-aviakompanii-conviasa-vyletel-iz-moskvy-v-karakas.html": "https://rg.ru/2026/01/05/reg-cfo/samolet-aviakompanii-conviasa-vyletel-iz-moskvy-v-karakas.html",
+    "https://rg.ru/2026/01/05/obshchestvennyj-gortransport-moskvy-v-rozhdestvenskuiu-noch-budet-rabotat-dolshe.html": "https://rg.ru/2026/01/05/obshchestvennyj-gortransport-moskvy-v-rozhdestvenskuiu-noch-budet-rabotat-dolshe.html",
+    "https://rg.ru/2026/01/05/reg-ufo/v-2026-godu-zapustiat-priamye-rejsy-iz-sochi-v-odin-iz-starejshih-gorodov-kazahstana.html": "https://rg.ru/2026/01/05/reg-ufo/v-2026-godu-zapustiat-priamye-rejsy-iz-sochi-v-odin-iz-starejshih-gorodov-kazahstana.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -94417,7 +94467,14 @@
     "0b610c8c7bd60d5b716c587440f4fd06743afe18": "https://rg.ru/2026/01/05/reg-pfo/rosaviaciia-vremenno-ogranichila-polety-v-aeroportu-saratova.html",
     "4f465b439917b747c30dd4d0769a9286d2cceae2": "https://rg.ru/2026/01/05/ekspert-aleksej-voronkov-bilet-v-kino-v-rossii-v-srednem-stoit-bolee-400-rublej.html",
     "469dddd72165025eac49909b13aa83cbcfa67c8a": "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-pro-griadushchie-novoselia-po-renovacii-v-stolichnom-rajone-solncevo.html",
-    "d778e8651b2d80beaef75db839e8ba1c3c7890ad": "https://rg.ru/2026/01/05/mer-tur-po-rossii-obojdetsia-inostrannomu-turistu-v-srednem-v-200-tysiach-rublej.html"
+    "d778e8651b2d80beaef75db839e8ba1c3c7890ad": "https://rg.ru/2026/01/05/mer-tur-po-rossii-obojdetsia-inostrannomu-turistu-v-srednem-v-200-tysiach-rublej.html",
+    "31a8d60335cbad2ce3990a00e7f3a02ba3f2dfce": "https://stroygaz.ru/news/infrastructure/bolee-300-kilometrov-dorog-k-mestam-zimnego-otdykha-obnovili-v-2025-godu",
+    "56fecc8a4d3cef87fcf3c0de054d7c54ca2bcb2c": "https://rg.ru/2026/01/05/v-2026-godu-rossiiu-zhdet-novyj-sostav-gosdumy-i-neskolko-mezhdunarodnyh-forumov.html",
+    "9992b50b3a628adea7cc73f3c8356020f6f32a4a": "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-o-novom-dublere-altufevskogo-shosse-kotoryj-proshel-ot-kostromskoj-ulicy-do-moskovskogo-skorostnogo-diametra.html",
+    "b477e146bc41baddff6be23158ef1aded140620f": "https://rg.ru/2026/01/05/rosaviaciia-v-2026-godu-ozhidaet-postavku-treh-samoletov-il-114-300.html",
+    "8628ea93537d88161765f9c1c9a40e7bd5fc5cf6": "https://rg.ru/2026/01/05/reg-cfo/samolet-aviakompanii-conviasa-vyletel-iz-moskvy-v-karakas.html",
+    "b193eb36472765b5546401662251f6c685079340": "https://rg.ru/2026/01/05/obshchestvennyj-gortransport-moskvy-v-rozhdestvenskuiu-noch-budet-rabotat-dolshe.html",
+    "b438f7a4fa2f4832e92029ab31fd26f09b2dfb86": "https://rg.ru/2026/01/05/reg-ufo/v-2026-godu-zapustiat-priamye-rejsy-iz-sochi-v-odin-iz-starejshih-gorodov-kazahstana.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -114854,6 +114911,14 @@
     "https://rg.ru/2026/01/05/reg-pfo/rosaviaciia-vremenno-ogranichila-polety-v-aeroportu-saratova.html": "a2d6b4ede0728f7867747c461a9dd8d2d0df0cffc3b069b642df503a0b317987",
     "https://rg.ru/2026/01/05/ekspert-aleksej-voronkov-bilet-v-kino-v-rossii-v-srednem-stoit-bolee-400-rublej.html": "97741b5f04abd6715546a57a4ab2a589b815329b8791e3c635a11b34c5de7db0",
     "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-pro-griadushchie-novoselia-po-renovacii-v-stolichnom-rajone-solncevo.html": "35917bb152fa16d52a8f24a74d1a30671fc366c4f31eb2bd57efb38a7816475f",
-    "https://rg.ru/2026/01/05/mer-tur-po-rossii-obojdetsia-inostrannomu-turistu-v-srednem-v-200-tysiach-rublej.html": "2b2a7e9e46acdb5b03354b534fbe6f0a21b4e56e07657b2bb5caf72bccde5257"
+    "https://rg.ru/2026/01/05/mer-tur-po-rossii-obojdetsia-inostrannomu-turistu-v-srednem-v-200-tysiach-rublej.html": "2b2a7e9e46acdb5b03354b534fbe6f0a21b4e56e07657b2bb5caf72bccde5257",
+    "https://stroygaz.ru/news/infrastructure/bolee-300-kilometrov-dorog-k-mestam-zimnego-otdykha-obnovili-v-2025-godu": "d1cf22739ac3b7d91a20322ec486346f16cd6da03c626d88e068ad089e72d6b1",
+    "https://stroygaz.ru/news/infrastructure/bolee-300-kilometrov-dorog-k-mestam-zimnego-otdykha-obnovili-v-2025-godu/": "d1cf22739ac3b7d91a20322ec486346f16cd6da03c626d88e068ad089e72d6b1",
+    "https://rg.ru/2026/01/05/v-2026-godu-rossiiu-zhdet-novyj-sostav-gosdumy-i-neskolko-mezhdunarodnyh-forumov.html": "e9dbd50351fdc7debd9266dc9e47151f303ea087e7351bb13567f6a56bc2839f",
+    "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-o-novom-dublere-altufevskogo-shosse-kotoryj-proshel-ot-kostromskoj-ulicy-do-moskovskogo-skorostnogo-diametra.html": "dbfb2798e51d041f0641dd145e925e3ad1db5517554f7458b931a6088b349ef3",
+    "https://rg.ru/2026/01/05/rosaviaciia-v-2026-godu-ozhidaet-postavku-treh-samoletov-il-114-300.html": "89cba0ebf273a20b5ce0031a9457dc960d3890dc26edcd09df3950757a1b24b4",
+    "https://rg.ru/2026/01/05/reg-cfo/samolet-aviakompanii-conviasa-vyletel-iz-moskvy-v-karakas.html": "3f231e3ee5851d671424dd3116d3aba5c7f7e2ea4ee9ebaa8293611f9c76b27b",
+    "https://rg.ru/2026/01/05/obshchestvennyj-gortransport-moskvy-v-rozhdestvenskuiu-noch-budet-rabotat-dolshe.html": "e3401a47d72d54888e423d5d8fe9e05c7d50e763256200ed5c93c78c035e85a1",
+    "https://rg.ru/2026/01/05/reg-ufo/v-2026-godu-zapustiat-priamye-rejsy-iz-sochi-v-odin-iz-starejshih-gorodov-kazahstana.html": "276a7aba268300b69889d0a99c355c1044387aadba31513c8668bf751a8838c0"
   }
 }
