@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 06 Jan 2026 06:30:51 GMT"
+      "Last-Modified": "Tue, 06 Jan 2026 09:27:22 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"17me93wed513xrr\""
+      "ETag": "\"xxx2eqh2ll3vz7\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -35593,6 +35593,23 @@
     },
     "https://rg.ru/2026/01/06/eksport-rossijskih-chipsov-po-itogam-2025-goda-mozhet-stat-rekordnym.html": {
       "ETag": "\"t9n6xpioy21t3r\""
+    },
+    "https://www.metalinfo.ru/ru/news/180122": {},
+    "https://www.metalinfo.ru/ru/news/180121": {},
+    "https://realty.ria.ru/20260106/fayzullin-2066579600.html": {
+      "Last-Modified": "Tue, 06 Jan 2026 07:05:33 GMT"
+    },
+    "https://rg.ru/2026/01/06/reg-szfo/v-kaliningrade-zavershilos-stroitelstvo-novogo-zheleznodorozhnogo-mosta.html": {
+      "ETag": "\"17wyfxh6y391u21\""
+    },
+    "https://rg.ru/2026/01/06/reg-cfo/v-voronezhskoj-oblasti-posle-padeniia-bpla-vosstanovili-dvizhenie-poezdov.html": {
+      "ETag": "\"15ha3vubce31nyk\""
+    },
+    "https://rg.ru/2026/01/06/v-rf-namereny-razvivat-udalennuiu-rabotu-dlia-pensionerov.html": {
+      "ETag": "\"g2159ng7ni1q8d\""
+    },
+    "https://rg.ru/2026/01/06/deputat-aksenenko-uslugi-zhkh-za-dekabr-neobhodimo-oplatit-do-12-ianvaria.html": {
+      "ETag": "\"10mko12qs2h1nd7\""
     }
   },
   "stats": {
@@ -45565,9 +45582,20 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Гостинформ",
+        "url": "https://www.gostinfo.ru/News/List",
+        "error": "temporary unavailable -> used cache: www.gostinfo.ru: HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f877f22e210>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)')), HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f877f22e350>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)')), HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f877f22e490>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)')), HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f877f22e5d0>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)')), HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f877f22e710>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-06T06:30:23.598778+00:00",
+    "last_run": "2026-01-06T09:26:59.068899+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -45585,28 +45613,28 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fc79ec66990>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))"
+        "error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f877f22e710>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))"
       },
       "ancb.ru": {
-        "dns_ms": 176.33158900000012,
-        "connect_ms": 971.177750999999,
-        "response_ms": 1147.5093399999992,
+        "dns_ms": 300.03020499998456,
+        "connect_ms": 720.522711000001,
+        "response_ms": 1020.5529159999855,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4763.971885000018,
+        "dns_ms": 5060.295879000023,
         "connect_ms": 0.0,
-        "response_ms": 949.4183559999954,
+        "response_ms": 692.0350039999903,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 170.69217799999592,
-        "connect_ms": 460.36218300000087,
-        "response_ms": 631.0543609999968,
+        "dns_ms": 450.69395500001974,
+        "connect_ms": 190.92904099994712,
+        "response_ms": 641.6229959999669,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -45615,20 +45643,20 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "9b1208f821b3643637c1458132e8b3f979b03149b10de379e70b58557bac0ede",
+    "https://ardexpert.ru/article": "96cb889252c970632b1819cd8f1b81cd4d3c6cc3713efba38ffab2e91511fc03",
     "https://www.gostinfo.ru/News/List": "3e3719096e72d9015442f264b3175caabe10e124cad4ef6c124cb406bd1d7d90",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "9a1f26f850c52475c8c37ed60a7aed7341f3e34d668db81b59944b1f05631183",
+    "https://eec.eaeunion.org/news/": "a509988e5995effe61f202e2d2f2c0771317e7661e99f67156c15edd1bdfb5d9",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "7efff14661c8b8bcd0be4565cb6fd7fc3797bcea161ea1e1efb99893148e34a7",
-    "https://www.metalinfo.ru/ru/news": "3b9fa3a3f70c9cd347395b2f009767417b615d5c797b8800f70a01e2b7bf1536",
-    "https://www.pnp.ru/economics/": "a1d39aa65fb1c9263c71a73a339da0b35e93bdb099d2547ca7cf868301d1cce9",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "0a5b6ab3d6a2d09fcba5c56846bdd2e75eb88fd68f04133a031bca6d1dcddc7d",
+    "https://www.metalinfo.ru/ru/news": "cba073a2c96043764681ef4b003eb3afefbe742061850fc13645b6221f7aa13d",
+    "https://www.pnp.ru/economics/": "dad1afc3abfca10a97436f5ea124ffb3c6aa9ee2a35787d1d613646720418aaf",
     "https://erzrf.ru/news/": "5c4e853861483d01955f3673a8f4f6b1fb6450cec90b5bbdca64df7810b50edd",
-    "https://ria-stk.ru/news/vse-novosti.php": "3c0961870fafd2717cddc2bbf2e207e06b1a90737ac60bb1b8582c5075c78ded",
-    "http://government.ru/news/": "a8e6cc184d83934c356085e3fd6fbb8370170ef384550391bb5b64db4ce5bc8a",
-    "https://stroygaz.ru/news/": "c0704a6dd4d0622564e0861eae075f64239f432080d370fd604b453f47d2a361",
-    "https://realty.ria.ru/lenta/": "de4f3447132fcc4bf982242f3031940121fc2ed83be3db7c560d9f8f57c5cdc1",
-    "https://rg.ru/tema/ekonomika": "ab8a8f88198bf9d77884dd914f91e9e01c0ca64250f1b148a55491f43f381594",
+    "https://ria-stk.ru/news/vse-novosti.php": "d44a7652c872c9f74e923db74fceca38256580f5b1dd5785f5c9c9dbb4d2931b",
+    "http://government.ru/news/": "1c34cde7af5bbbc7442ad73ae58eb8f94925b195240cfc1437d29df1d2a6fbbe",
+    "https://stroygaz.ru/news/": "3f1643382de3cf1d4bffb4da0d3586a4b68c7650cf7ee7d5dec427b5f5bc33a9",
+    "https://realty.ria.ru/lenta/": "86ab105e059de43129852118e2fa0ffd6a5703c1a2f33ccc1e287715f522f2b0",
+    "https://rg.ru/tema/ekonomika": "31996fe227cff1d8d8951a390d0dadbe890a09b07cffa6c7d18936abee9b5a23",
     "http://ancb.ru/publication": "d40f32758e41a6200310346ddc785c461a2cf2e0dbe90e88b60d028451e55d89",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -45763,6 +45791,8 @@
       "https://www.interfax-russia.ru/realty/news/putin-podpisal-zakon-o-domovyh-chatah-v-messendzhere-max"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/180122",
+      "https://www.metalinfo.ru/ru/news/180121",
       "https://www.metalinfo.ru/ru/news/180120",
       "https://www.metalinfo.ru/ru/news/180114",
       "https://www.metalinfo.ru/ru/news/180115",
@@ -45780,9 +45810,7 @@
       "https://www.metalinfo.ru/ru/news/180107",
       "https://www.metalinfo.ru/ru/news/180092",
       "https://www.metalinfo.ru/ru/news/180000",
-      "https://www.metalinfo.ru/ru/news/180108",
-      "https://www.metalinfo.ru/ru/news/180106",
-      "https://www.metalinfo.ru/ru/news/180101"
+      "https://www.metalinfo.ru/ru/news/180108"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -45911,6 +45939,7 @@
       "https://stroygaz.ru/news/hypothec/pokupateli-speshat-oformit-ipoteku-do-vvedeniya-pravila-odna-semya-odna-ipoteka-ekspert-/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260106/fayzullin-2066579600.html",
       "https://realty.ria.ru/20260106/operator-2064600262.html",
       "https://realty.ria.ru/20260106/remont-2062581782.html",
       "https://realty.ria.ru/20260105/moszhilinspektsiya-2066496141.html",
@@ -45929,10 +45958,13 @@
       "https://realty.ria.ru/20260103/zodiak-2065297685.html",
       "https://realty.ria.ru/20260102/moszhilinspektsiya-2066092454.html",
       "https://realty.ria.ru/20260102/pozharnyy-2064580260.html",
-      "https://realty.ria.ru/20260102/zhkkh-2064334791.html",
-      "https://realty.ria.ru/20260101/zhile-2065926802.html"
+      "https://realty.ria.ru/20260102/zhkkh-2064334791.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/06/reg-szfo/v-kaliningrade-zavershilos-stroitelstvo-novogo-zheleznodorozhnogo-mosta.html",
+      "https://rg.ru/2026/01/06/reg-cfo/v-voronezhskoj-oblasti-posle-padeniia-bpla-vosstanovili-dvizhenie-poezdov.html",
+      "https://rg.ru/2026/01/06/v-rf-namereny-razvivat-udalennuiu-rabotu-dlia-pensionerov.html",
+      "https://rg.ru/2026/01/06/deputat-aksenenko-uslugi-zhkh-za-dekabr-neobhodimo-oplatit-do-12-ianvaria.html",
       "https://rg.ru/2026/01/06/deputat-razvorotneva-rasskazala-o-samyh-vazhnyh-zakonah-2025-goda-v-sfere-zhkh.html",
       "https://rg.ru/2026/01/06/eksport-rossijskih-chipsov-po-itogam-2025-goda-mozhet-stat-rekordnym.html",
       "https://rg.ru/2026/01/06/dachnikov-nachnut-shtrafovat-za-neispolzovanie-dachnoj-zemli-i-za-borshchevik.html",
@@ -45955,16 +45987,12 @@
       "https://rg.ru/2026/01/05/obshchestvennyj-gortransport-moskvy-v-rozhdestvenskuiu-noch-budet-rabotat-dolshe.html",
       "https://rg.ru/2026/01/05/reg-ufo/v-2026-godu-zapustiat-priamye-rejsy-iz-sochi-v-odin-iz-starejshih-gorodov-kazahstana.html",
       "https://rg.ru/2026/01/05/professor-abramov-reshenie-opek-mozhet-byt-reakciej-na-situaciiu-v-venesuele.html",
-      "https://rg.ru/2026/01/05/obem-goszakupok-igrushek-v-rossii-prevysil-28-milliarda-rublej.html",
       "https://rg.ru/2026/01/05/reg-ufo/v-aeroportu-sochi-zaderzhivaiutsia-17-rejsov.html",
       "https://rg.ru/2026/01/05/reg-dfo/rzhd-v-amurskoj-oblasti-iz-za-shoda-vagonov-vozmozhny-zaderzhki-poezdov.html",
       "https://rg.ru/2026/01/05/reg-pfo/rosaviaciia-vremenno-ogranichila-polety-v-aeroportu-saratova.html",
       "https://rg.ru/2026/01/05/ekspert-aleksej-voronkov-bilet-v-kino-v-rossii-v-srednem-stoit-bolee-400-rublej.html",
       "https://rg.ru/2026/01/05/reg-cfo/sobianin-rasskazal-pro-griadushchie-novoselia-po-renovacii-v-stolichnom-rajone-solncevo.html",
       "https://rg.ru/2026/01/05/mer-tur-po-rossii-obojdetsia-inostrannomu-turistu-v-srednem-v-200-tysiach-rublej.html",
-      "https://rg.ru/2026/01/05/socialnyj-kontrakt-stal-dostupnee-dlia-uchastnikov-specoperacii.html",
-      "https://rg.ru/2026/01/05/kakie-izmeneniia-v-2026-godu-budut-na-rynke-nedvizhimosti.html",
-      "https://rg.ru/2026/01/05/nazvany-specialnosti-s-samym-vysokim-ozhidaemym-rostom-zarplat-v-2026-godu.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -60964,7 +60992,14 @@
     "771adce21f628a33fd84537d0b6849eb7956d41c8e8e0d9df401d58766a1d643": "2026-01-06T09:30:00+03:00",
     "701f249d062f1fde6c81b6564648d616e3fd22920d1812fe78a535a08d9ada92": "2026-01-06T09:30:00+03:00",
     "d2e2f24c40a8075e864a0ae955bea9ba20e64d7c05a8c56ad9ccb760ffd9913c": "2026-01-06T09:30:00+03:00",
-    "d1fb98c04b07731b1874ffdfeb1026c21138f9b280e47fabd2475dab718c73cc": "2026-01-06T09:30:00+03:00"
+    "d1fb98c04b07731b1874ffdfeb1026c21138f9b280e47fabd2475dab718c73cc": "2026-01-06T09:30:00+03:00",
+    "4c00b6d9bfe3021467b178d42bb783fcd65113094e036622fa45a074092e6c10": "2026-01-06T12:26:00+03:00",
+    "49c0c8d7bf46f0b23efa7460381b3874e37732251cad05f6ecdd0ce9a131a722": "2026-01-06T12:26:00+03:00",
+    "de9b8f7b96510d3791d6ece385b6ad823abceed960463cdd00a11decda3dac06": "2026-01-06T12:26:00+03:00",
+    "0cefda36e30e5b5b8d4b98ed961d7ac648d5b8e9b41c280dea0140356b4c443f": "2026-01-06T12:26:00+03:00",
+    "826259b1cad025f833e9dc3129d469a8752b876c5bddcd4579ac65871d3ed04d": "2026-01-06T12:26:00+03:00",
+    "11298c8dae4923b9912de7e301c79e06d5545dda20de8ce420ff1e800508bb53": "2026-01-06T12:26:00+03:00",
+    "bf3e427114a17c84d088e01312c0b820c2f57065e69830e5abca4000c5231ead": "2026-01-06T12:26:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -60976,9 +61011,9 @@
     "www.gostinfo.ru": {
       "cookies": [],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fc79ec66850>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))",
-        "consecutive": 48,
-        "last_ts": 1767680973.6018555
+        "last_error": "HTTPSConnectionPool(host='www.gostinfo.ru', port=443): Max retries exceeded with url: /News/List (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f877f22e5d0>, 'Connection to www.gostinfo.ru timed out. (connect timeout=5.0)'))",
+        "consecutive": 52,
+        "last_ts": 1767691546.9471798
       },
       "warmup_done": false,
       "last_success_path": null
@@ -61006,31 +61041,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "oAyaMwC2JmMhMZ3H",
+          "value": "YMS7Dbmsik5iHeYc",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767682210
+          "expires": 1767692800
         },
         {
           "name": "__ddg10_",
-          "value": "1767681010",
+          "value": "1767691600",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767682210
+          "expires": 1767692800
         },
         {
           "name": "__ddg9_",
-          "value": "64.236.133.176",
+          "value": "64.236.135.10",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767682210
+          "expires": 1767692800
+        },
+        {
+          "name": "__ddg1_",
+          "value": "UeFPJ36LZkgzorwtVKRh",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1799227600
         },
         {
           "name": "PHPSESSID",
-          "value": "048d1b1dcdbe0c07345b7ec370b40dec",
+          "value": "767a205267823651c1d0bbd820206105",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -79418,7 +79461,16 @@
     "https://www.interfax-russia.ru/realty/news/eksperty-sostavili-spisok-prazdnichnyh-pokupok-po-cene-kv-m-v-elitnoy-novostroyke-moskvy": "https://www.interfax-russia.ru/realty/news/eksperty-sostavili-spisok-prazdnichnyh-pokupok-po-cene-kv-m-v-elitnoy-novostroyke-moskvy",
     "https://stroygaz.ru/news/regulation/v-rossii-budet-provedena-odnovremennaya-kadastrovaya-otsenka-vsekh-zemelnykh-uchastkov-i-obektov-ned": "https://stroygaz.ru/news/regulation/v-rossii-budet-provedena-odnovremennaya-kadastrovaya-otsenka-vsekh-zemelnykh-uchastkov-i-obektov-ned",
     "https://rg.ru/2026/01/06/deputat-razvorotneva-rasskazala-o-samyh-vazhnyh-zakonah-2025-goda-v-sfere-zhkh.html": "https://rg.ru/2026/01/06/deputat-razvorotneva-rasskazala-o-samyh-vazhnyh-zakonah-2025-goda-v-sfere-zhkh.html",
-    "https://rg.ru/2026/01/06/eksport-rossijskih-chipsov-po-itogam-2025-goda-mozhet-stat-rekordnym.html": "https://rg.ru/2026/01/06/eksport-rossijskih-chipsov-po-itogam-2025-goda-mozhet-stat-rekordnym.html"
+    "https://rg.ru/2026/01/06/eksport-rossijskih-chipsov-po-itogam-2025-goda-mozhet-stat-rekordnym.html": "https://rg.ru/2026/01/06/eksport-rossijskih-chipsov-po-itogam-2025-goda-mozhet-stat-rekordnym.html",
+    "https://www.metalinfo.ru/ru/news/180122": "http://www.metalinfo.ru/ru/news/180122",
+    "http://www.metalinfo.ru/ru/news/180122": "http://www.metalinfo.ru/ru/news/180122",
+    "https://www.metalinfo.ru/ru/news/180121": "http://www.metalinfo.ru/ru/news/180121",
+    "http://www.metalinfo.ru/ru/news/180121": "http://www.metalinfo.ru/ru/news/180121",
+    "https://realty.ria.ru/20260106/fayzullin-2066579600.html": "https://realty.ria.ru/20260106/fayzullin-2066579600.html",
+    "https://rg.ru/2026/01/06/reg-szfo/v-kaliningrade-zavershilos-stroitelstvo-novogo-zheleznodorozhnogo-mosta.html": "https://rg.ru/2026/01/06/reg-szfo/v-kaliningrade-zavershilos-stroitelstvo-novogo-zheleznodorozhnogo-mosta.html",
+    "https://rg.ru/2026/01/06/reg-cfo/v-voronezhskoj-oblasti-posle-padeniia-bpla-vosstanovili-dvizhenie-poezdov.html": "https://rg.ru/2026/01/06/reg-cfo/v-voronezhskoj-oblasti-posle-padeniia-bpla-vosstanovili-dvizhenie-poezdov.html",
+    "https://rg.ru/2026/01/06/v-rf-namereny-razvivat-udalennuiu-rabotu-dlia-pensionerov.html": "https://rg.ru/2026/01/06/v-rf-namereny-razvivat-udalennuiu-rabotu-dlia-pensionerov.html",
+    "https://rg.ru/2026/01/06/deputat-aksenenko-uslugi-zhkh-za-dekabr-neobhodimo-oplatit-do-12-ianvaria.html": "https://rg.ru/2026/01/06/deputat-aksenenko-uslugi-zhkh-za-dekabr-neobhodimo-oplatit-do-12-ianvaria.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -94716,7 +94768,14 @@
     "b9d65a1a94a942bf11cf4103ce394ab809c8955b": "https://www.interfax-russia.ru/realty/news/eksperty-sostavili-spisok-prazdnichnyh-pokupok-po-cene-kv-m-v-elitnoy-novostroyke-moskvy",
     "523bc44dec7c53aa4fe2732da800148a492021b5": "https://stroygaz.ru/news/regulation/v-rossii-budet-provedena-odnovremennaya-kadastrovaya-otsenka-vsekh-zemelnykh-uchastkov-i-obektov-ned",
     "1789518c458f0be3d06d5e83ff7f4f6af543ab25": "https://rg.ru/2026/01/06/deputat-razvorotneva-rasskazala-o-samyh-vazhnyh-zakonah-2025-goda-v-sfere-zhkh.html",
-    "442d19af8e234315368ae3d66f4ad71a1f9de01d": "https://rg.ru/2026/01/06/eksport-rossijskih-chipsov-po-itogam-2025-goda-mozhet-stat-rekordnym.html"
+    "442d19af8e234315368ae3d66f4ad71a1f9de01d": "https://rg.ru/2026/01/06/eksport-rossijskih-chipsov-po-itogam-2025-goda-mozhet-stat-rekordnym.html",
+    "7660e6ac808ee11febd36476c11c1d1c6771dec8": "http://www.metalinfo.ru/ru/news/180122",
+    "41a966a371d010a0b56d1e02ada9946088478a97": "http://www.metalinfo.ru/ru/news/180121",
+    "647fee0a68bc87f50b947c6e31bf9367dce2671e": "https://realty.ria.ru/20260106/fayzullin-2066579600.html",
+    "8245fe6dc97f1ae3a66acb78e4670a7990d4c007": "https://rg.ru/2026/01/06/reg-szfo/v-kaliningrade-zavershilos-stroitelstvo-novogo-zheleznodorozhnogo-mosta.html",
+    "4673b3fb8c452c31ecdf798d227c58c56e8296b0": "https://rg.ru/2026/01/06/reg-cfo/v-voronezhskoj-oblasti-posle-padeniia-bpla-vosstanovili-dvizhenie-poezdov.html",
+    "6f0380d5c4a394d28555a0604f6ea11f7502aacf": "https://rg.ru/2026/01/06/v-rf-namereny-razvivat-udalennuiu-rabotu-dlia-pensionerov.html",
+    "625f465a6143246f635e9e9ee1dadc65e1b71ac9": "https://rg.ru/2026/01/06/deputat-aksenenko-uslugi-zhkh-za-dekabr-neobhodimo-oplatit-do-12-ianvaria.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -115184,6 +115243,15 @@
     "https://stroygaz.ru/news/regulation/v-rossii-budet-provedena-odnovremennaya-kadastrovaya-otsenka-vsekh-zemelnykh-uchastkov-i-obektov-ned": "701f249d062f1fde6c81b6564648d616e3fd22920d1812fe78a535a08d9ada92",
     "https://stroygaz.ru/news/regulation/v-rossii-budet-provedena-odnovremennaya-kadastrovaya-otsenka-vsekh-zemelnykh-uchastkov-i-obektov-ned/": "701f249d062f1fde6c81b6564648d616e3fd22920d1812fe78a535a08d9ada92",
     "https://rg.ru/2026/01/06/deputat-razvorotneva-rasskazala-o-samyh-vazhnyh-zakonah-2025-goda-v-sfere-zhkh.html": "d2e2f24c40a8075e864a0ae955bea9ba20e64d7c05a8c56ad9ccb760ffd9913c",
-    "https://rg.ru/2026/01/06/eksport-rossijskih-chipsov-po-itogam-2025-goda-mozhet-stat-rekordnym.html": "d1fb98c04b07731b1874ffdfeb1026c21138f9b280e47fabd2475dab718c73cc"
+    "https://rg.ru/2026/01/06/eksport-rossijskih-chipsov-po-itogam-2025-goda-mozhet-stat-rekordnym.html": "d1fb98c04b07731b1874ffdfeb1026c21138f9b280e47fabd2475dab718c73cc",
+    "http://www.metalinfo.ru/ru/news/180122": "4c00b6d9bfe3021467b178d42bb783fcd65113094e036622fa45a074092e6c10",
+    "https://www.metalinfo.ru/ru/news/180122": "4c00b6d9bfe3021467b178d42bb783fcd65113094e036622fa45a074092e6c10",
+    "http://www.metalinfo.ru/ru/news/180121": "49c0c8d7bf46f0b23efa7460381b3874e37732251cad05f6ecdd0ce9a131a722",
+    "https://www.metalinfo.ru/ru/news/180121": "49c0c8d7bf46f0b23efa7460381b3874e37732251cad05f6ecdd0ce9a131a722",
+    "https://realty.ria.ru/20260106/fayzullin-2066579600.html": "de9b8f7b96510d3791d6ece385b6ad823abceed960463cdd00a11decda3dac06",
+    "https://rg.ru/2026/01/06/reg-szfo/v-kaliningrade-zavershilos-stroitelstvo-novogo-zheleznodorozhnogo-mosta.html": "0cefda36e30e5b5b8d4b98ed961d7ac648d5b8e9b41c280dea0140356b4c443f",
+    "https://rg.ru/2026/01/06/reg-cfo/v-voronezhskoj-oblasti-posle-padeniia-bpla-vosstanovili-dvizhenie-poezdov.html": "826259b1cad025f833e9dc3129d469a8752b876c5bddcd4579ac65871d3ed04d",
+    "https://rg.ru/2026/01/06/v-rf-namereny-razvivat-udalennuiu-rabotu-dlia-pensionerov.html": "11298c8dae4923b9912de7e301c79e06d5545dda20de8ce420ff1e800508bb53",
+    "https://rg.ru/2026/01/06/deputat-aksenenko-uslugi-zhkh-za-dekabr-neobhodimo-oplatit-do-12-ianvaria.html": "bf3e427114a17c84d088e01312c0b820c2f57065e69830e5abca4000c5231ead"
   }
 }
