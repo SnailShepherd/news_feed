@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 08 Jan 2026 15:24:10 GMT"
+      "Last-Modified": "Thu, 08 Jan 2026 18:26:34 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"5ept9skwdi3d12\""
+      "ETag": "\"w6lyccqbw93dgk\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -35874,6 +35874,19 @@
     },
     "https://rg.ru/2026/01/08/manturov-nazval-sposob-uderzhat-ceny-na-energooborudovanie.html": {
       "ETag": "\"tne1078a9d1pn0\""
+    },
+    "https://www.metalinfo.ru/ru/news/180124": {},
+    "https://rg.ru/2026/01/08/rossiianam-nazvali-usloviia-dlia-oformleniia-semejnoj-nalogovoj-vyplaty.html": {
+      "ETag": "\"e8ol39sx0i1rem\""
+    },
+    "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html": {
+      "ETag": "\"17sgx7qxjxz1wmi\""
+    },
+    "https://rg.ru/2026/01/08/ekipazh-rejsa-utair-reshil-vernutsia-v-dubaj-iz-za-vibracii-silovoj-ustanovki.html": {
+      "ETag": "\"5z8c34b5s21p99\""
+    },
+    "https://rg.ru/2026/01/08/reg-ufo/piat-poezdov-tavriia-zaderzhivaiutsia-na-puti-iz-kryma.html": {
+      "ETag": "\"kzxlepn7hm1pmi\""
     }
   },
   "stats": {
@@ -46157,9 +46170,26 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f02efc3c550>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f02f123b390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f02efc3c910>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f02efc3cb90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f02efc3ce10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fcedce80c20>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fcedce6e710>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fcedce6e5d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fcede0a3820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fcedcd64050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fcede097e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fcedce6de50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fcedce6da90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fcedce6d950>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fcedce6ccd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fcedce6c910>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2026-01-08T15:24:36.873299+00:00",
+    "last_run": "2026-01-08T18:26:56.378285+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -46172,9 +46202,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 399.3705460000001,
-        "connect_ms": 642.1307329999877,
-        "response_ms": 1041.5012789999878,
+        "dns_ms": 183.94046200000957,
+        "connect_ms": 1043.0175759999827,
+        "response_ms": 1226.9580379999923,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -46185,12 +46215,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f02f11ebe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fcede097e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 4633.476255000005,
-        "connect_ms": 0.0,
-        "response_ms": 474.0305239999998,
+        "dns_ms": 609.326746000022,
+        "connect_ms": 281.3853889999791,
+        "response_ms": 890.7121350000011,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -46201,26 +46231,26 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f02efc3ce10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fcedce6c910>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "4d9ad4034e0466efb4d911e6a0b4a06c3be5b9e41b27584a9505aa36de3da450",
+    "https://ardexpert.ru/article": "6afd840b3b2b43db4f2413bd5e1dfdcbe2edf2f66ec0d9fb2ca9c96c43a1bd11",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "1c0316805941d84ef4aa178c760770d11ae604a0ad3e06339bc22e5996513685",
+    "https://eec.eaeunion.org/news/": "485813af43c71dc66860c577c85b060f965e08dd7b54af6c9da4b9257640d9c8",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "fb46a1082ffd129957057282bbfd7a498251ea9696a9a50284c3b6cd5a738ca3",
-    "https://www.metalinfo.ru/ru/news": "eb801f57ecd83c4e025227148a5a5364c73bbf613f5c7c7f5be6d8d3a84ee76b",
-    "https://www.pnp.ru/economics/": "904132815a408e961889b389efabf80bbf17650dbaf36948e2a3ebc8371d8062",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "8fff5ec7ff110766f0364e5f44eeb1ab5a3434d74f609b1a2adf53ac616f741e",
+    "https://www.metalinfo.ru/ru/news": "9a8b3ddb193a07d666bc233ed8b65f13b405f0ad5b04530f1f60153c723efeab",
+    "https://www.pnp.ru/economics/": "69014cd68626a6b97e540fc1797833641b71c1dfbee85e6addda6c5e34d73e6e",
     "https://erzrf.ru/news/": "e8d7cae473259e1f3987f1036be1c09935b5f4d97cae326963c20d649032b249",
     "https://ria-stk.ru/news/vse-novosti.php": "4cee9ed5511e509bf0c1f74f814192165fdabe5e961a5a93d290f88801273eb5",
-    "http://government.ru/news/": "d8a51d5f69c047bc4eee31058db9f510140248378f8958a2305e8de3cd0977c1",
-    "https://stroygaz.ru/news/": "01786f0414a73a339527d0c08961c959f7035ae416a3e0930ed4af4313a49280",
-    "https://realty.ria.ru/lenta/": "d3ef5cb6df0cb5e0a32f1dd447d876de02868626df646306707b4c369f1deb47",
-    "https://rg.ru/tema/ekonomika": "6a855e13967233e346fc8fba79b0f5455bfde36ba6daa7308ca57fa174152d31",
+    "http://government.ru/news/": "d74019db42eb7900e50d58d37c7e55b871bd9d3795dabce54c7a6e0e28480021",
+    "https://stroygaz.ru/news/": "501e27a6b0e11bc75b849db3f8f865c7990317886ab0655e7fbce76eb128979d",
+    "https://realty.ria.ru/lenta/": "d252dfc5ad1185c44f976bf50dd7634a6e03331a7df7d5be6eb0d5725a19940c",
+    "https://rg.ru/tema/ekonomika": "54d47725714f983c60ea66ae198baabb3a8bf283b97b66780932f85b079cc841",
     "http://ancb.ru/publication": "af214fd9d46b1bc9f0d469491160e335d6eef2e4b8b0c14888474bffd12fac2c",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -46355,6 +46385,7 @@
       "https://www.interfax-russia.ru/realty/news/putin-podpisal-zakon-o-domovyh-chatah-v-messendzhere-max"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/180124",
       "https://www.metalinfo.ru/ru/news/180123",
       "https://www.metalinfo.ru/ru/news/180122",
       "https://www.metalinfo.ru/ru/news/180121",
@@ -46373,8 +46404,7 @@
       "https://www.metalinfo.ru/ru/news/180111",
       "https://www.metalinfo.ru/ru/news/180006",
       "https://www.metalinfo.ru/ru/news/180107",
-      "https://www.metalinfo.ru/ru/news/180092",
-      "https://www.metalinfo.ru/ru/news/180000"
+      "https://www.metalinfo.ru/ru/news/180092"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -46525,6 +46555,10 @@
       "https://realty.ria.ru/20260104/elka-2066362597.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/08/rossiianam-nazvali-usloviia-dlia-oformleniia-semejnoj-nalogovoj-vyplaty.html",
+      "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html",
+      "https://rg.ru/2026/01/08/ekipazh-rejsa-utair-reshil-vernutsia-v-dubaj-iz-za-vibracii-silovoj-ustanovki.html",
+      "https://rg.ru/2026/01/08/reg-ufo/piat-poezdov-tavriia-zaderzhivaiutsia-na-puti-iz-kryma.html",
       "https://rg.ru/2026/01/08/samolet-dubaj-moskva-blagopoluchno-prizemlilsia-v-aeroportu-vyleta.html",
       "https://rg.ru/2026/01/08/samolet-dubaj-moskva-gotovitsia-k-posadke-v-aeroportu-vyleta.html",
       "https://rg.ru/2026/01/08/reg-urfo/mer-kurgana-izvinilsia-za-snezhnyj-kollaps.html",
@@ -46553,10 +46587,6 @@
       "https://rg.ru/2026/01/07/rassledovaniem-krusheniia-vertoleta-robinson-r44-v-permskom-krae-zajmetsia-mak.html",
       "https://rg.ru/2026/01/07/chetyre-strany-opek-soobshchili-o-planah-kompensacij-pereproizvodstva-nefti.html",
       "https://rg.ru/2026/01/07/rosaviaciia-vremenno-ogranichila-polety-v-aeroportu-volgograda.html",
-      "https://rg.ru/2026/01/07/rossijskie-rybaki-v-2025-godu-obnovili-rekord-po-dobyche-mintaia.html",
-      "https://rg.ru/2026/01/07/rospotrebnadzor-pasport-ne-mozhet-byt-zalogom-pri-arende-sportinventaria.html",
-      "https://rg.ru/2026/01/07/v-ator-ozhidaiut-chto-rost-vnutrennego-turizma-v-rossii-zamedlitsia-v-2026-godu.html",
-      "https://rg.ru/2026/01/07/minpromtorg-bolee-poloviny-lekarstv-ot-saharnogo-diabeta-proizvodiatsia-v-rf.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -61655,7 +61685,12 @@
     "668191fabe7e666b406319086e4ade1ae32346bbfa9d369392ed0be6b1638504": "2026-01-08T18:24:00+03:00",
     "c12d826231e18939530a73e386648e0cc428d5a966362a7f78c14c3c8b3425d7": "2026-01-08T18:24:00+03:00",
     "adfbf8c61742fe4a352dbdaa2bc0465aa5561178216e12cb9258b3ab363664b6": "2026-01-08T18:24:00+03:00",
-    "b62c1ed31e271b8c7e77e58a32b24e7eabb5cb248a888835d2f34089f888b11b": "2026-01-08T18:24:00+03:00"
+    "b62c1ed31e271b8c7e77e58a32b24e7eabb5cb248a888835d2f34089f888b11b": "2026-01-08T18:24:00+03:00",
+    "54a5bdb696f8b483711a16f840bcaa6467128b01bd13f818659bc42712e9c78b": "2026-01-08T21:25:00+03:00",
+    "ad59a55b81cbe04f182a29fc679f8878a02a0728c0f7a00c4a964af949df6ced": "2026-01-08T21:26:00+03:00",
+    "731d8ddb0040f3075b702d7d5f27f404c405f2554069c1570ce7aac59be69d77": "2026-01-08T21:26:00+03:00",
+    "e67c6d744c75c4004b3b65b1633f6f0a27c5dcbd8b44c2ee26c4c36dc349dd29": "2026-01-08T21:26:00+03:00",
+    "ea6dec1acfe6ed04d7ae620a2460b3def5482c3241b2518eed34971746ff7a26": "2026-01-08T21:26:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -61686,9 +61721,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f02efe74050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
-        "last_ts": 1767885763.3010206
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fcedcd64050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 20,
+        "last_ts": 1767896699.766683
       },
       "warmup_done": false,
       "last_success_path": null
@@ -61697,39 +61732,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "nDpjo44Lpnyp0I4n",
+          "value": "44tcVssRnk2PK5zZ",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767887008
+          "expires": 1767897952
         },
         {
           "name": "__ddg10_",
-          "value": "1767885808",
+          "value": "1767896752",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767887008
+          "expires": 1767897952
         },
         {
           "name": "__ddg9_",
-          "value": "20.161.70.181",
+          "value": "172.184.211.81",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767887008
-        },
-        {
-          "name": "__ddg1_",
-          "value": "Es3GQzU6ttQ2akB5mc0W",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1799421808
+          "expires": 1767897952
         },
         {
           "name": "PHPSESSID",
-          "value": "59b36dbb35a04a566258054e68f773e4",
+          "value": "5c9a5155b6d2b3dc1af4dff0b3389e8e",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -61772,9 +61799,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f02efc3cb90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
-        "last_ts": 1767885840.0988412
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fcedce6ccd0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 16,
+        "last_ts": 1767896784.4163167
       },
       "warmup_done": false,
       "last_success_path": null
@@ -80219,7 +80246,13 @@
     "https://rg.ru/2026/01/08/reg-urfo/mer-kurgana-izvinilsia-za-snezhnyj-kollaps.html": "https://rg.ru/2026/01/08/reg-urfo/mer-kurgana-izvinilsia-za-snezhnyj-kollaps.html",
     "https://rg.ru/2026/01/08/manturov-zaiavil-o-gotovnosti-proekta-dorozhnoj-karty-po-nactorgovle.html": "https://rg.ru/2026/01/08/manturov-zaiavil-o-gotovnosti-proekta-dorozhnoj-karty-po-nactorgovle.html",
     "https://rg.ru/2026/01/08/reg-ufo/tri-giganta-2026-go-kak-novye-trassy-voda-i-relsy-izmeniat-rostovskuiu-oblast.html": "https://rg.ru/2026/01/08/reg-ufo/tri-giganta-2026-go-kak-novye-trassy-voda-i-relsy-izmeniat-rostovskuiu-oblast.html",
-    "https://rg.ru/2026/01/08/manturov-nazval-sposob-uderzhat-ceny-na-energooborudovanie.html": "https://rg.ru/2026/01/08/manturov-nazval-sposob-uderzhat-ceny-na-energooborudovanie.html"
+    "https://rg.ru/2026/01/08/manturov-nazval-sposob-uderzhat-ceny-na-energooborudovanie.html": "https://rg.ru/2026/01/08/manturov-nazval-sposob-uderzhat-ceny-na-energooborudovanie.html",
+    "https://www.metalinfo.ru/ru/news/180124": "http://www.metalinfo.ru/ru/news/180124",
+    "http://www.metalinfo.ru/ru/news/180124": "http://www.metalinfo.ru/ru/news/180124",
+    "https://rg.ru/2026/01/08/rossiianam-nazvali-usloviia-dlia-oformleniia-semejnoj-nalogovoj-vyplaty.html": "https://rg.ru/2026/01/08/rossiianam-nazvali-usloviia-dlia-oformleniia-semejnoj-nalogovoj-vyplaty.html",
+    "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html": "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html",
+    "https://rg.ru/2026/01/08/ekipazh-rejsa-utair-reshil-vernutsia-v-dubaj-iz-za-vibracii-silovoj-ustanovki.html": "https://rg.ru/2026/01/08/ekipazh-rejsa-utair-reshil-vernutsia-v-dubaj-iz-za-vibracii-silovoj-ustanovki.html",
+    "https://rg.ru/2026/01/08/reg-ufo/piat-poezdov-tavriia-zaderzhivaiutsia-na-puti-iz-kryma.html": "https://rg.ru/2026/01/08/reg-ufo/piat-poezdov-tavriia-zaderzhivaiutsia-na-puti-iz-kryma.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -95616,7 +95649,12 @@
     "897ea14ff9b31ed3a189e0225f3d484f4ee2a3f8": "https://rg.ru/2026/01/08/reg-urfo/mer-kurgana-izvinilsia-za-snezhnyj-kollaps.html",
     "e8a38fb1fd3f1b0a5bbbfb8ec10ee195436b1c9f": "https://rg.ru/2026/01/08/manturov-zaiavil-o-gotovnosti-proekta-dorozhnoj-karty-po-nactorgovle.html",
     "f5dfb1742184504167853ee96fdf03ab8eb1f2d7": "https://rg.ru/2026/01/08/reg-ufo/tri-giganta-2026-go-kak-novye-trassy-voda-i-relsy-izmeniat-rostovskuiu-oblast.html",
-    "dce2ec21c50ec3a60c2e012b6382337359b527f7": "https://rg.ru/2026/01/08/manturov-nazval-sposob-uderzhat-ceny-na-energooborudovanie.html"
+    "dce2ec21c50ec3a60c2e012b6382337359b527f7": "https://rg.ru/2026/01/08/manturov-nazval-sposob-uderzhat-ceny-na-energooborudovanie.html",
+    "51ae43437f4898304d6edb76cafe17e6d9df341f": "http://www.metalinfo.ru/ru/news/180124",
+    "fec05c681b877d1927375960d7ea9d38c8d06fad": "https://rg.ru/2026/01/08/rossiianam-nazvali-usloviia-dlia-oformleniia-semejnoj-nalogovoj-vyplaty.html",
+    "d23c321bee474367f414412ccfcadc1e4f03759f": "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html",
+    "601c5c0ff8de2a9c86b92ab5de45ab9999c855d4": "https://rg.ru/2026/01/08/ekipazh-rejsa-utair-reshil-vernutsia-v-dubaj-iz-za-vibracii-silovoj-ustanovki.html",
+    "0e4a4b4e5860c7ee14bdc4d395a4856360d479bb": "https://rg.ru/2026/01/08/reg-ufo/piat-poezdov-tavriia-zaderzhivaiutsia-na-puti-iz-kryma.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -116197,6 +116235,12 @@
     "https://rg.ru/2026/01/08/reg-urfo/mer-kurgana-izvinilsia-za-snezhnyj-kollaps.html": "668191fabe7e666b406319086e4ade1ae32346bbfa9d369392ed0be6b1638504",
     "https://rg.ru/2026/01/08/manturov-zaiavil-o-gotovnosti-proekta-dorozhnoj-karty-po-nactorgovle.html": "c12d826231e18939530a73e386648e0cc428d5a966362a7f78c14c3c8b3425d7",
     "https://rg.ru/2026/01/08/reg-ufo/tri-giganta-2026-go-kak-novye-trassy-voda-i-relsy-izmeniat-rostovskuiu-oblast.html": "adfbf8c61742fe4a352dbdaa2bc0465aa5561178216e12cb9258b3ab363664b6",
-    "https://rg.ru/2026/01/08/manturov-nazval-sposob-uderzhat-ceny-na-energooborudovanie.html": "b62c1ed31e271b8c7e77e58a32b24e7eabb5cb248a888835d2f34089f888b11b"
+    "https://rg.ru/2026/01/08/manturov-nazval-sposob-uderzhat-ceny-na-energooborudovanie.html": "b62c1ed31e271b8c7e77e58a32b24e7eabb5cb248a888835d2f34089f888b11b",
+    "http://www.metalinfo.ru/ru/news/180124": "54a5bdb696f8b483711a16f840bcaa6467128b01bd13f818659bc42712e9c78b",
+    "https://www.metalinfo.ru/ru/news/180124": "54a5bdb696f8b483711a16f840bcaa6467128b01bd13f818659bc42712e9c78b",
+    "https://rg.ru/2026/01/08/rossiianam-nazvali-usloviia-dlia-oformleniia-semejnoj-nalogovoj-vyplaty.html": "ad59a55b81cbe04f182a29fc679f8878a02a0728c0f7a00c4a964af949df6ced",
+    "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html": "731d8ddb0040f3075b702d7d5f27f404c405f2554069c1570ce7aac59be69d77",
+    "https://rg.ru/2026/01/08/ekipazh-rejsa-utair-reshil-vernutsia-v-dubaj-iz-za-vibracii-silovoj-ustanovki.html": "e67c6d744c75c4004b3b65b1633f6f0a27c5dcbd8b44c2ee26c4c36dc349dd29",
+    "https://rg.ru/2026/01/08/reg-ufo/piat-poezdov-tavriia-zaderzhivaiutsia-na-puti-iz-kryma.html": "ea6dec1acfe6ed04d7ae620a2460b3def5482c3241b2518eed34971746ff7a26"
   }
 }
