@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 08 Jan 2026 09:27:55 GMT"
+      "Last-Modified": "Thu, 08 Jan 2026 12:40:37 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"jz98brk9o23dcb\""
+      "ETag": "\"272aysextn3f92\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -35841,6 +35841,15 @@
     },
     "https://rg.ru/2026/01/08/reg-dfo/v-magadane-vseh-zhelaiushchih-priglashaiut-prokatitsia-na-sobachih-upriazhkah.html": {
       "ETag": "\"woi2qy3cu31so2\""
+    },
+    "https://realty.ria.ru/20260108/sobyanin-2066868446.html": {
+      "Last-Modified": "Thu, 08 Jan 2026 11:13:08 GMT"
+    },
+    "https://rg.ru/2026/01/08/reg-ufo/aeroporty-stavropolia-obsluzhili-za-god-rekordnye-5-mln-passazhirov.html": {
+      "ETag": "\"123zqjefojs1pmt\""
+    },
+    "https://rg.ru/2026/01/08/reg-ufo/v-sochi-za-god-obem-vvoda-novogo-zhilia-umenshilsia-pochti-na-40-procentov.html": {
+      "ETag": "\"16y1vb84g7h1ffy\""
     }
   },
   "stats": {
@@ -46090,9 +46099,26 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f303993e490>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f303993da90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f303993d090>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f303993cf50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f303993d450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6640000c20>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f663ffee710>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f663ffee5d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f664122b820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f663feec050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f664121fe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f663ffef250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f663ffef390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f663ffef110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f663ffeec10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f663ffee710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2026-01-08T09:28:24.540818+00:00",
+    "last_run": "2026-01-08T12:40:56.883951+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -46105,9 +46131,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 372.59515400000964,
-        "connect_ms": 734.5355559999973,
-        "response_ms": 1107.130710000007,
+        "dns_ms": 465.0973439999859,
+        "connect_ms": 874.6960750000312,
+        "response_ms": 1339.7934190000171,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -46118,12 +46144,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f303ab73d10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f664121fe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 589.4507480000186,
-        "connect_ms": 0.0,
-        "response_ms": 464.94855500000654,
+        "dns_ms": 764.3075370000076,
+        "connect_ms": 4103.187313000006,
+        "response_ms": 4867.494850000014,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -46134,26 +46160,26 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f303993d450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f663ffee710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "a2fe9ba5f9d8bbffd1b373d3038c9adb2b415a0b37b95d4c79155a5b1dcd581c",
+    "https://ardexpert.ru/article": "1cad48d3d58965ba9ee9c27396a2d4f585485da5b72ab891ce68a52dce81c148",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "bef88a1d2c61c79eebdfb04f58ba180ba38ebfed4c5bda6ec9ef9c7bbf4be3aa",
+    "https://eec.eaeunion.org/news/": "42bd117f7c47ce57dc09681fd32f2f3ea018697a753205219aa0a8b163454f28",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "8043396133eb67e62ee435cf669e0b431193a9747d851837ac9468b2bfbb736d",
-    "https://www.metalinfo.ru/ru/news": "08d59c13c32a7034361d1f2fe64426c4d8db66796a7b8cee21385e5e5f8c16c3",
-    "https://www.pnp.ru/economics/": "e3a2b688752569bacf5f209286910c4b614690149e16ec9153a249d66b80b770",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "d33868ae1520701f2e29f15b9a8e26b4f5538cadf040d122c886bbbb1c9c653a",
+    "https://www.metalinfo.ru/ru/news": "eb801f57ecd83c4e025227148a5a5364c73bbf613f5c7c7f5be6d8d3a84ee76b",
+    "https://www.pnp.ru/economics/": "af84a05644e6bd7a62807cccd458106ddaeeb19f09939135acae3034a9f2a1ae",
     "https://erzrf.ru/news/": "e8d7cae473259e1f3987f1036be1c09935b5f4d97cae326963c20d649032b249",
     "https://ria-stk.ru/news/vse-novosti.php": "4cee9ed5511e509bf0c1f74f814192165fdabe5e961a5a93d290f88801273eb5",
-    "http://government.ru/news/": "53f88283c7df30e321b0840107c2db20ca3c63e6d0c3c69345a70fe05e29ee85",
-    "https://stroygaz.ru/news/": "3dc09b8f87b5bf8f29bd1f2948a3c70da68fa677d894dd05af5a13bac786c673",
-    "https://realty.ria.ru/lenta/": "55afb1569ea9c894de767fec44d1b862d9f50df609696e2063aeb1d1c15eb74f",
-    "https://rg.ru/tema/ekonomika": "4a016526fb30539fdd4893627c233850da00ea7d379084ed6e0ce80312b3cdb3",
+    "http://government.ru/news/": "5ad9349c8a18724b79222b8f9a73a2a05b2ef5d7b9da5a17a3111ebfd5fda78e",
+    "https://stroygaz.ru/news/": "edc7cdcbbbc7a304381f7c2ea8017d96778d6588cd9b27ad98b4fce64072ec23",
+    "https://realty.ria.ru/lenta/": "ce877cbd52aff99eb7ff0d5be223bd0c464417e4ec4b371cbad3ecdec6fd6d71",
+    "https://rg.ru/tema/ekonomika": "b27bfc69f660abb6229db07351439ed2032a297262c67ec9a03fb28d06e6e471",
     "http://ancb.ru/publication": "af214fd9d46b1bc9f0d469491160e335d6eef2e4b8b0c14888474bffd12fac2c",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -46436,6 +46462,7 @@
       "https://stroygaz.ru/news/construction/v-moskve-utverdili-kontseptsiyu-samogo-vysokogo-zhilogo-kompleksa-rossii-i-evropy-/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260108/sobyanin-2066868446.html",
       "https://realty.ria.ru/20260108/sobyanin-2066849413.html",
       "https://realty.ria.ru/20260108/doma-2064629180.html",
       "https://realty.ria.ru/20260107/fayzullin--2066711613.html",
@@ -46454,10 +46481,11 @@
       "https://realty.ria.ru/20260105/kvartira-2063260566.html",
       "https://realty.ria.ru/20260104/rosseti-2066368373.html",
       "https://realty.ria.ru/20260104/elka-2066362597.html",
-      "https://realty.ria.ru/20260104/led-2064590072.html",
-      "https://realty.ria.ru/20260104/dizaynery-2060558755.html"
+      "https://realty.ria.ru/20260104/led-2064590072.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/08/reg-ufo/aeroporty-stavropolia-obsluzhili-za-god-rekordnye-5-mln-passazhirov.html",
+      "https://rg.ru/2026/01/08/reg-ufo/v-sochi-za-god-obem-vvoda-novogo-zhilia-umenshilsia-pochti-na-40-procentov.html",
       "https://rg.ru/2026/01/08/postavki-perev-ptic-i-puha-iz-rossii-v-drugie-strany-vyrosli-do-21-mln-dollarov.html",
       "https://rg.ru/2026/01/08/v-ator-schitaiut-chto-v-rf-usugubitsia-deficit-samoletov-na-vnutrennih-napravleniiah.html",
       "https://rg.ru/2026/01/08/alihanov-marketplejsy-pri-poiske-budut-snachala-pokazyvat-rossijskie-tovary.html",
@@ -46488,8 +46516,6 @@
       "https://rg.ru/2026/01/07/bolee-26-mlrd-opasnyh-produktov-s-aprelia-zablokirovano-na-kassah-cherez-qr-kod.html",
       "https://rg.ru/2026/01/07/reg-szfo/v-belarusi-po-tehnicheskim-prichinam-zaderzhali-poezd-iz-peterburga.html",
       "https://rg.ru/2026/01/07/reg-cfo/poezda-vremenno-ne-budut-hodit-mezhdu-stanciiami-novokosino-i-novogireevo.html",
-      "https://rg.ru/2026/01/07/reg-cfo/kak-rabotaiut-elektrosuda-na-moskve-reke.html",
-      "https://rg.ru/2026/01/07/v-sovfede-poiasnili-kogda-pensioneru-polozhena-subsidiia-na-oplatu-uslug-zhkh.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -61577,7 +61603,10 @@
     "59723e11ee077cc3498ed504aafcd82a2ffd15c33f67c1e3fe70756a07354d2e": "2026-01-08T12:28:00+03:00",
     "ff5b87360c896f153b7f83d0e2cf85bd3286d72ff5d6f06f8e0e9b2131ef5e46": "2026-01-08T12:28:00+03:00",
     "2051570e97b9585c1803fac491fb74d17f1ef6083108e3655c11461b28549a1c": "2026-01-08T12:28:00+03:00",
-    "98d34fd97bc1603ae57c50d3d6ea140b40570dcf85504e27dc61720f8c72d5df": "2026-01-08T12:28:00+03:00"
+    "98d34fd97bc1603ae57c50d3d6ea140b40570dcf85504e27dc61720f8c72d5df": "2026-01-08T12:28:00+03:00",
+    "08b73c58e03bfac32dd79b545e41b5fe771d86ed673789dca35a25c27276376e": "2026-01-08T15:40:00+03:00",
+    "27307238163cddaf45fcd63ba67e3a96b055e0feee251e4ee2246c0684b57b49": "2026-01-08T15:40:00+03:00",
+    "1f0af41262555b1cf3b989ef230891d043c74632c6e107b0c19cccfdfb1d62fb": "2026-01-08T15:40:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -61608,9 +61637,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f3039848050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1767864383.043871
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f663feec050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1767875946.840384
       },
       "warmup_done": false,
       "last_success_path": null
@@ -61619,39 +61648,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "2TPAnxz445iDmcXV",
+          "value": "fnTx7DPXSuspxcnk",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767865633
+          "expires": 1767877195
         },
         {
           "name": "__ddg10_",
-          "value": "1767864433",
+          "value": "1767875995",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767865633
+          "expires": 1767877195
         },
         {
           "name": "__ddg9_",
-          "value": "172.172.87.192",
+          "value": "52.154.132.178",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767865633
-        },
-        {
-          "name": "__ddg1_",
-          "value": "l2zIPTpSj8LsJl16cXAs",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1799400433
+          "expires": 1767877195
         },
         {
           "name": "PHPSESSID",
-          "value": "24e5f3ba8107e0352d388845cbcf436b",
+          "value": "8252b83bbdd710ee277f13fddc426a29",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -61694,9 +61715,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f303993cf50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
-        "last_ts": 1767864464.9610775
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f663ffeec10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 8,
+        "last_ts": 1767876028.368052
       },
       "warmup_done": false,
       "last_success_path": null
@@ -80130,7 +80151,10 @@
     "https://rg.ru/2026/01/08/postavki-perev-ptic-i-puha-iz-rossii-v-drugie-strany-vyrosli-do-21-mln-dollarov.html": "https://rg.ru/2026/01/08/postavki-perev-ptic-i-puha-iz-rossii-v-drugie-strany-vyrosli-do-21-mln-dollarov.html",
     "https://rg.ru/2026/01/08/v-ator-schitaiut-chto-v-rf-usugubitsia-deficit-samoletov-na-vnutrennih-napravleniiah.html": "https://rg.ru/2026/01/08/v-ator-schitaiut-chto-v-rf-usugubitsia-deficit-samoletov-na-vnutrennih-napravleniiah.html",
     "https://rg.ru/2026/01/08/alihanov-marketplejsy-pri-poiske-budut-snachala-pokazyvat-rossijskie-tovary.html": "https://rg.ru/2026/01/08/alihanov-marketplejsy-pri-poiske-budut-snachala-pokazyvat-rossijskie-tovary.html",
-    "https://rg.ru/2026/01/08/reg-dfo/v-magadane-vseh-zhelaiushchih-priglashaiut-prokatitsia-na-sobachih-upriazhkah.html": "https://rg.ru/2026/01/08/reg-dfo/v-magadane-vseh-zhelaiushchih-priglashaiut-prokatitsia-na-sobachih-upriazhkah.html"
+    "https://rg.ru/2026/01/08/reg-dfo/v-magadane-vseh-zhelaiushchih-priglashaiut-prokatitsia-na-sobachih-upriazhkah.html": "https://rg.ru/2026/01/08/reg-dfo/v-magadane-vseh-zhelaiushchih-priglashaiut-prokatitsia-na-sobachih-upriazhkah.html",
+    "https://realty.ria.ru/20260108/sobyanin-2066868446.html": "https://realty.ria.ru/20260108/sobyanin-2066868446.html",
+    "https://rg.ru/2026/01/08/reg-ufo/aeroporty-stavropolia-obsluzhili-za-god-rekordnye-5-mln-passazhirov.html": "https://rg.ru/2026/01/08/reg-ufo/aeroporty-stavropolia-obsluzhili-za-god-rekordnye-5-mln-passazhirov.html",
+    "https://rg.ru/2026/01/08/reg-ufo/v-sochi-za-god-obem-vvoda-novogo-zhilia-umenshilsia-pochti-na-40-procentov.html": "https://rg.ru/2026/01/08/reg-ufo/v-sochi-za-god-obem-vvoda-novogo-zhilia-umenshilsia-pochti-na-40-procentov.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -95516,7 +95540,10 @@
     "5d6767fcf857d1f656d29d198a004170ed1e7523": "https://rg.ru/2026/01/08/postavki-perev-ptic-i-puha-iz-rossii-v-drugie-strany-vyrosli-do-21-mln-dollarov.html",
     "3739c7513f568129d89eaebfb87b713b045fdaab": "https://rg.ru/2026/01/08/v-ator-schitaiut-chto-v-rf-usugubitsia-deficit-samoletov-na-vnutrennih-napravleniiah.html",
     "2077ef280fbea18366cd5aee7846ea214460be42": "https://rg.ru/2026/01/08/alihanov-marketplejsy-pri-poiske-budut-snachala-pokazyvat-rossijskie-tovary.html",
-    "d6677fb68f4b9449dbc355bdd0d7ea38043bab3b": "https://rg.ru/2026/01/08/reg-dfo/v-magadane-vseh-zhelaiushchih-priglashaiut-prokatitsia-na-sobachih-upriazhkah.html"
+    "d6677fb68f4b9449dbc355bdd0d7ea38043bab3b": "https://rg.ru/2026/01/08/reg-dfo/v-magadane-vseh-zhelaiushchih-priglashaiut-prokatitsia-na-sobachih-upriazhkah.html",
+    "0d616725409cabfd000ed9dff3e81ff68d43d362": "https://realty.ria.ru/20260108/sobyanin-2066868446.html",
+    "1ca7d376e8f6ea4c13dfafd9aa1e52de053ab8f3": "https://rg.ru/2026/01/08/reg-ufo/aeroporty-stavropolia-obsluzhili-za-god-rekordnye-5-mln-passazhirov.html",
+    "4b7eca265f7657799b6e5ef9e2b802175c31f8ac": "https://rg.ru/2026/01/08/reg-ufo/v-sochi-za-god-obem-vvoda-novogo-zhilia-umenshilsia-pochti-na-40-procentov.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -116085,6 +116112,9 @@
     "https://rg.ru/2026/01/08/postavki-perev-ptic-i-puha-iz-rossii-v-drugie-strany-vyrosli-do-21-mln-dollarov.html": "59723e11ee077cc3498ed504aafcd82a2ffd15c33f67c1e3fe70756a07354d2e",
     "https://rg.ru/2026/01/08/v-ator-schitaiut-chto-v-rf-usugubitsia-deficit-samoletov-na-vnutrennih-napravleniiah.html": "ff5b87360c896f153b7f83d0e2cf85bd3286d72ff5d6f06f8e0e9b2131ef5e46",
     "https://rg.ru/2026/01/08/alihanov-marketplejsy-pri-poiske-budut-snachala-pokazyvat-rossijskie-tovary.html": "2051570e97b9585c1803fac491fb74d17f1ef6083108e3655c11461b28549a1c",
-    "https://rg.ru/2026/01/08/reg-dfo/v-magadane-vseh-zhelaiushchih-priglashaiut-prokatitsia-na-sobachih-upriazhkah.html": "98d34fd97bc1603ae57c50d3d6ea140b40570dcf85504e27dc61720f8c72d5df"
+    "https://rg.ru/2026/01/08/reg-dfo/v-magadane-vseh-zhelaiushchih-priglashaiut-prokatitsia-na-sobachih-upriazhkah.html": "98d34fd97bc1603ae57c50d3d6ea140b40570dcf85504e27dc61720f8c72d5df",
+    "https://realty.ria.ru/20260108/sobyanin-2066868446.html": "08b73c58e03bfac32dd79b545e41b5fe771d86ed673789dca35a25c27276376e",
+    "https://rg.ru/2026/01/08/reg-ufo/aeroporty-stavropolia-obsluzhili-za-god-rekordnye-5-mln-passazhirov.html": "27307238163cddaf45fcd63ba67e3a96b055e0feee251e4ee2246c0684b57b49",
+    "https://rg.ru/2026/01/08/reg-ufo/v-sochi-za-god-obem-vvoda-novogo-zhilia-umenshilsia-pochti-na-40-procentov.html": "1f0af41262555b1cf3b989ef230891d043c74632c6e107b0c19cccfdfb1d62fb"
   }
 }
