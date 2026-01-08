@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 08 Jan 2026 04:03:54 GMT"
+      "Last-Modified": "Thu, 08 Jan 2026 06:30:21 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"fa9n7m6m8n38vu\""
+      "ETag": "\"nu4kruclhw398e\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -35808,6 +35808,18 @@
     },
     "https://rg.ru/2026/01/08/v-gosdume-hotiat-chtoby-v-rf-podniali-nadbavku-k-pensii-na-uhod-do-urovnia-mrot.html": {
       "ETag": "\"119h7xq0s8v1pb9\""
+    },
+    "https://rg.ru/2026/01/08/banki-nachali-zaprashivat-podtverzhdenie-dohodov-pered-vydachej-avtokreditov.html": {
+      "ETag": "\"zmo1v7fj3k22tg\""
+    },
+    "https://rg.ru/2026/01/08/na-rynke-rekrutinga-perestali-rabotat-klassicheskie-metody-poiska-rabotnikov.html": {
+      "ETag": "\"opgmq1aczk28u1\""
+    },
+    "https://rg.ru/2026/01/08/v-2025-godu-naibolshij-uroven-falsifikata-vyiavlen-v-mede-syre-v-picce-i-badah.html": {
+      "ETag": "\"bxpe77fvnj1phz\""
+    },
+    "https://rg.ru/2026/01/08/reg-dfo/v-zabajkale-vozrodili-zabytyj-format-torgovli.html": {
+      "ETag": "\"u3ph9la8jm1otd\""
     }
   },
   "stats": {
@@ -46035,9 +46047,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfbda4f750>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfbda4f250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfbda4ed50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfbda4ead0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfbda4e850>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-08T04:04:15.100029+00:00",
+    "last_run": "2026-01-08T06:29:53.734005+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -46050,56 +46067,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 748.2554460000017,
-        "connect_ms": 551.2682899999959,
-        "response_ms": 1299.5237359999976,
+        "dns_ms": 402.21209799997837,
+        "connect_ms": 558.1074020000187,
+        "response_ms": 960.3194999999971,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbfbec7bd10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 363.53228000001536,
+        "connect_ms": 914.7474169999725,
+        "response_ms": 1278.279696999988,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 944.496155999957,
+        "dns_ms": 4542.044008000004,
         "connect_ms": 0.0,
-        "response_ms": 806.4962610000066,
+        "response_ms": 856.3405470000021,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfbda4e850>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 236.0542060000057,
+        "connect_ms": 349.3553389999988,
+        "response_ms": 585.4095450000045,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "2506c37822f6b129546dfc92d945c131a25dff28ec5e3951950b0f3f6dd7b78a",
+    "https://ardexpert.ru/article": "d74f391c1cfb6aaaf1b5cef42b892f894d5c5964d2aad8078e086c31383c34b2",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "eed492e54e859b5c5c30a9839c3e9401675f46b3a0a4a61197206639aa82b5d0",
+    "https://eec.eaeunion.org/news/": "1456d421dd2c2af4b0b415ffb2ef998c7d39df3df5b0b4ebe5d0ae910c380744",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "88cf46b8b5441d0fe9ed6d1c8d4b02dabb66b1d6a360f83ec235905304246e80",
-    "https://www.metalinfo.ru/ru/news": "f2e26236eccd9b13645807b66be781b0abdb09da86db09708652866e7f5e3c5a",
-    "https://www.pnp.ru/economics/": "a1ee260b2e00741fe087a8d80390e456b1e1b8eecafcb5caa21c5afb6e2eb025",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "43212be1825047a9281d4856b0d7d9a500fcbe53f7d3a50913c4249bdc32ae59",
+    "https://www.metalinfo.ru/ru/news": "272fe53027f2d733d66508613ed8d33dad57dff4cd49d17a90585efd9b43cc1d",
+    "https://www.pnp.ru/economics/": "bceb2fb56470aeac482b5d0852b7a649b53ea1a03a3478a2372fb26e15947d79",
     "https://erzrf.ru/news/": "e8d7cae473259e1f3987f1036be1c09935b5f4d97cae326963c20d649032b249",
-    "https://ria-stk.ru/news/vse-novosti.php": "2adb56cfd746b5fbc919a01da03515ef08577043dcdf73133db073f70b09bd1f",
-    "http://government.ru/news/": "f9145209a3d3202cc8b28efef441a875ecc04575da06749f8620d98759cdb68e",
-    "https://stroygaz.ru/news/": "d489a75c92dc3686a9933796968a1217f8282b7f71fe58a178b8d1b20d1af956",
-    "https://realty.ria.ru/lenta/": "31a91c46bf55eec1f8b5bd39b1a060651a1cefa5263ae4f372d2e093a22675a6",
-    "https://rg.ru/tema/ekonomika": "6a649e6b4b2f98f02a62b0a0935aa07cece09feb1bc70c7ac07e598cc1dd0094",
-    "http://ancb.ru/publication": "af214fd9d46b1bc9f0d469491160e335d6eef2e4b8b0c14888474bffd12fac2c",
+    "https://ria-stk.ru/news/vse-novosti.php": "71c8d1f30c5e495c3689d35b1f9aae6ada238565f258c7d11841f292f5def15c",
+    "http://government.ru/news/": "ea75c0ccd73235adfd86aa996848b61f8ae5dc6bd2bfc16c4f7cc4716478b86b",
+    "https://stroygaz.ru/news/": "a198c3d5498978314833f5063ebb8aad36f43b27d4ddb89ce0781ad548c9c2cb",
+    "https://realty.ria.ru/lenta/": "943d6dd056a84f84dcd7dff1bfbef68c40bbfa647e67adb7ef2004d38ee7d644",
+    "https://rg.ru/tema/ekonomika": "5f0751e4434921e6aa3ecaf2d02c72fb24f8568225321fd8e31f2549feb48f04",
+    "http://ancb.ru/publication": "e12b0318aa629c06fd19a0d7574562ee97dcf4b1caa154fd4ab58a9b549c54f2",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -46403,6 +46420,10 @@
       "https://realty.ria.ru/20260103/osobnyak-2066210838.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/08/banki-nachali-zaprashivat-podtverzhdenie-dohodov-pered-vydachej-avtokreditov.html",
+      "https://rg.ru/2026/01/08/na-rynke-rekrutinga-perestali-rabotat-klassicheskie-metody-poiska-rabotnikov.html",
+      "https://rg.ru/2026/01/08/v-2025-godu-naibolshij-uroven-falsifikata-vyiavlen-v-mede-syre-v-picce-i-badah.html",
+      "https://rg.ru/2026/01/08/reg-dfo/v-zabajkale-vozrodili-zabytyj-format-torgovli.html",
       "https://rg.ru/2026/01/08/v-gosdume-hotiat-chtoby-v-rf-podniali-nadbavku-k-pensii-na-uhod-do-urovnia-mrot.html",
       "https://rg.ru/2026/01/08/ekspert-podolskaia-rasskazala-komu-nevygodno-brat-otpusk-v-ianvare.html",
       "https://rg.ru/2026/01/07/rosaviaciia-sniala-vremennye-ogranicheniia-na-polety-v-aeroportu-volgograda.html",
@@ -46431,10 +46452,6 @@
       "https://rg.ru/2026/01/07/alihanov-ocenil-snizhenie-nelegalnogo-oborota-tovarov-za-schet-markirovki.html",
       "https://rg.ru/2026/01/07/v-rossii-poiaviatsia-gosty-na-sneki-i-batonchiki-iz-amaranta.html",
       "https://rg.ru/2026/01/07/rossiianam-napomnili-ob-indeksacii-matkapitala-s-1-fevralia.html",
-      "https://rg.ru/2026/01/07/v-rf-mogut-vvesti-reguliarnyj-monitoring-finansovogo-polozheniia-pensionerov.html",
-      "https://rg.ru/2026/01/07/neobychnye-i-perspektivnye-professii-kotorye-kazhdyj-mozhet-osvoit-v-2026-godu.html",
-      "https://rg.ru/2026/01/07/v-kompaniiah-rastet-chislo-sotrudnikov-imitiruiushchih-rabotu-i-ne-daiushchih-rezultat.html",
-      "https://rg.ru/2026/01/07/ekspert-tereshkin-v-2026-godu-ceny-na-benzin-prodolzhat-rasti.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -61509,7 +61526,11 @@
     "746415215c7f72581846ece92539029558c623a893584b2002cb8726f3c9f42e": "2026-01-07T21:30:00+03:00",
     "66ab221234a8bcbce78e1b08f37e9398bf2dad9aeea92e8649c027a5e36e4278": "2026-01-08T04:21:00+03:00",
     "ca4c96527edec97dc5c70c4e7d736ddc92112a3ab2aea5b76b49fe75084e62f0": "2026-01-08T07:04:00+03:00",
-    "b22163107048a8157d4fdca66834d7c75fd8bf600321f5dfd821fe20166b17a2": "2026-01-08T07:04:00+03:00"
+    "b22163107048a8157d4fdca66834d7c75fd8bf600321f5dfd821fe20166b17a2": "2026-01-08T07:04:00+03:00",
+    "9b4b09919f37630628dd7007a31787704838495c0f509e4c2fbf0184bcd297a1": "2026-01-08T09:29:00+03:00",
+    "60a8565288ede7788fb375cb23b8f99024a34ac77340982375bdda1465f78f3b": "2026-01-08T09:29:00+03:00",
+    "8b0bfa07071e97c4eb02847b6f2688d09bbb60bf83cada0989b3db8c5e5d01ef": "2026-01-08T09:29:00+03:00",
+    "e939dad6abbb7f0ff736dcd245b75c7d5021cd7693f77aa01439bc477da093b2": "2026-01-08T09:29:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -61540,8 +61561,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbfbd948050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767844948.152368
       },
       "warmup_done": false,
@@ -61551,39 +61572,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "u47zb0GhET8lDFgz",
+          "value": "nEm0cXwHihhUKdJJ",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767846193
+          "expires": 1767854979
         },
         {
           "name": "__ddg10_",
-          "value": "1767844993",
+          "value": "1767853779",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767846193
+          "expires": 1767854979
         },
         {
           "name": "__ddg9_",
-          "value": "172.182.213.148",
+          "value": "145.132.100.67",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767846193
-        },
-        {
-          "name": "__ddg1_",
-          "value": "Q33w4Getz8XDpqhDMgIt",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1799380993
+          "expires": 1767854979
         },
         {
           "name": "PHPSESSID",
-          "value": "d483da1ce043b9db47eeee995f4b5f6e",
+          "value": "d1b2c7f34d157037c45136403a9b733f",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -61610,11 +61623,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "w224eDsBy1uutmtN3yjsd0gEb17UVwiX",
+          "value": "0Zl0Mync5X5amZNDPuzeCAKF6U6XW4Qe",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767846078
+          "expires": 1767864581
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -61622,12 +61635,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1798939278
+          "expires": 1798957781
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbfbda4ead0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767845025.4629855
       },
       "warmup_done": false,
@@ -80048,7 +80061,11 @@
     "https://rg.ru/2026/01/07/reg-ufo/rosaviaciia-sniala-vremennye-ogranicheniia-v-aeroportu-volgograda.html": "https://rg.ru/2026/01/07/reg-ufo/rosaviaciia-sniala-vremennye-ogranicheniia-v-aeroportu-volgograda.html",
     "https://rg.ru/2026/01/08/ekspert-podolskaia-rasskazala-komu-nevygodno-brat-otpusk-v-ianvare.html": "https://rg.ru/2026/01/08/ekspert-podolskaia-rasskazala-komu-nevygodno-brat-otpusk-v-ianvare.html",
     "https://realty.ria.ru/20260108/doma-2064629180.html": "https://realty.ria.ru/20260108/doma-2064629180.html",
-    "https://rg.ru/2026/01/08/v-gosdume-hotiat-chtoby-v-rf-podniali-nadbavku-k-pensii-na-uhod-do-urovnia-mrot.html": "https://rg.ru/2026/01/08/v-gosdume-hotiat-chtoby-v-rf-podniali-nadbavku-k-pensii-na-uhod-do-urovnia-mrot.html"
+    "https://rg.ru/2026/01/08/v-gosdume-hotiat-chtoby-v-rf-podniali-nadbavku-k-pensii-na-uhod-do-urovnia-mrot.html": "https://rg.ru/2026/01/08/v-gosdume-hotiat-chtoby-v-rf-podniali-nadbavku-k-pensii-na-uhod-do-urovnia-mrot.html",
+    "https://rg.ru/2026/01/08/banki-nachali-zaprashivat-podtverzhdenie-dohodov-pered-vydachej-avtokreditov.html": "https://rg.ru/2026/01/08/banki-nachali-zaprashivat-podtverzhdenie-dohodov-pered-vydachej-avtokreditov.html",
+    "https://rg.ru/2026/01/08/na-rynke-rekrutinga-perestali-rabotat-klassicheskie-metody-poiska-rabotnikov.html": "https://rg.ru/2026/01/08/na-rynke-rekrutinga-perestali-rabotat-klassicheskie-metody-poiska-rabotnikov.html",
+    "https://rg.ru/2026/01/08/v-2025-godu-naibolshij-uroven-falsifikata-vyiavlen-v-mede-syre-v-picce-i-badah.html": "https://rg.ru/2026/01/08/v-2025-godu-naibolshij-uroven-falsifikata-vyiavlen-v-mede-syre-v-picce-i-badah.html",
+    "https://rg.ru/2026/01/08/reg-dfo/v-zabajkale-vozrodili-zabytyj-format-torgovli.html": "https://rg.ru/2026/01/08/reg-dfo/v-zabajkale-vozrodili-zabytyj-format-torgovli.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -95421,7 +95438,11 @@
     "98400002158b2efc28dbdedb33d22f40da812371": "https://rg.ru/2026/01/07/reg-ufo/rosaviaciia-sniala-vremennye-ogranicheniia-v-aeroportu-volgograda.html",
     "32fd6171b54c1c5f8d70af15bde503add49c65db": "https://rg.ru/2026/01/08/ekspert-podolskaia-rasskazala-komu-nevygodno-brat-otpusk-v-ianvare.html",
     "9a34bd7475c98a52468229ce89e1a2b6db29dd8d": "https://realty.ria.ru/20260108/doma-2064629180.html",
-    "500ba935587969344965868e73d1155bbe09e055": "https://rg.ru/2026/01/08/v-gosdume-hotiat-chtoby-v-rf-podniali-nadbavku-k-pensii-na-uhod-do-urovnia-mrot.html"
+    "500ba935587969344965868e73d1155bbe09e055": "https://rg.ru/2026/01/08/v-gosdume-hotiat-chtoby-v-rf-podniali-nadbavku-k-pensii-na-uhod-do-urovnia-mrot.html",
+    "c73516de4158c273f5080ca19067203a3f60631f": "https://rg.ru/2026/01/08/banki-nachali-zaprashivat-podtverzhdenie-dohodov-pered-vydachej-avtokreditov.html",
+    "004e1f9051894336aa1aab307871c613e1f77030": "https://rg.ru/2026/01/08/na-rynke-rekrutinga-perestali-rabotat-klassicheskie-metody-poiska-rabotnikov.html",
+    "a204eb9cb9af248199464521917238c5826233cc": "https://rg.ru/2026/01/08/v-2025-godu-naibolshij-uroven-falsifikata-vyiavlen-v-mede-syre-v-picce-i-badah.html",
+    "bf249c4a7bf1fbfe81691fd81d49d29ec65c17f6": "https://rg.ru/2026/01/08/reg-dfo/v-zabajkale-vozrodili-zabytyj-format-torgovli.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -115973,6 +115994,10 @@
     "https://rg.ru/2026/01/07/reg-ufo/rosaviaciia-sniala-vremennye-ogranicheniia-v-aeroportu-volgograda.html": "746415215c7f72581846ece92539029558c623a893584b2002cb8726f3c9f42e",
     "https://rg.ru/2026/01/08/ekspert-podolskaia-rasskazala-komu-nevygodno-brat-otpusk-v-ianvare.html": "66ab221234a8bcbce78e1b08f37e9398bf2dad9aeea92e8649c027a5e36e4278",
     "https://realty.ria.ru/20260108/doma-2064629180.html": "ca4c96527edec97dc5c70c4e7d736ddc92112a3ab2aea5b76b49fe75084e62f0",
-    "https://rg.ru/2026/01/08/v-gosdume-hotiat-chtoby-v-rf-podniali-nadbavku-k-pensii-na-uhod-do-urovnia-mrot.html": "b22163107048a8157d4fdca66834d7c75fd8bf600321f5dfd821fe20166b17a2"
+    "https://rg.ru/2026/01/08/v-gosdume-hotiat-chtoby-v-rf-podniali-nadbavku-k-pensii-na-uhod-do-urovnia-mrot.html": "b22163107048a8157d4fdca66834d7c75fd8bf600321f5dfd821fe20166b17a2",
+    "https://rg.ru/2026/01/08/banki-nachali-zaprashivat-podtverzhdenie-dohodov-pered-vydachej-avtokreditov.html": "9b4b09919f37630628dd7007a31787704838495c0f509e4c2fbf0184bcd297a1",
+    "https://rg.ru/2026/01/08/na-rynke-rekrutinga-perestali-rabotat-klassicheskie-metody-poiska-rabotnikov.html": "60a8565288ede7788fb375cb23b8f99024a34ac77340982375bdda1465f78f3b",
+    "https://rg.ru/2026/01/08/v-2025-godu-naibolshij-uroven-falsifikata-vyiavlen-v-mede-syre-v-picce-i-badah.html": "8b0bfa07071e97c4eb02847b6f2688d09bbb60bf83cada0989b3db8c5e5d01ef",
+    "https://rg.ru/2026/01/08/reg-dfo/v-zabajkale-vozrodili-zabytyj-format-torgovli.html": "e939dad6abbb7f0ff736dcd245b75c7d5021cd7693f77aa01439bc477da093b2"
   }
 }
