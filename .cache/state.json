@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 08 Jan 2026 21:20:38 GMT"
+      "Last-Modified": "Fri, 09 Jan 2026 01:22:31 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"svgcxf6meo3epm\""
+      "ETag": "\"10g9866eib73i1w\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -35890,6 +35890,17 @@
     },
     "https://rg.ru/2026/01/09/eksperty-ozhidaiut-chto-v-2026-godu-puteshestviia-stanut-dorozhe-dlia-rossiian-na-5-12.html": {
       "ETag": "\"11fvm3j0cmm1zmo\""
+    },
+    "http://ancb.ru/publication/read/20742": {},
+    "http://ancb.ru/publication/read/20741": {},
+    "https://realty.ria.ru/20260109/snegopady-2065359749.html": {
+      "Last-Modified": "Fri, 09 Jan 2026 00:00:02 GMT"
+    },
+    "https://rg.ru/2026/01/09/ekspert-grinkova-sostavila-top-10-samyh-vostrebovannyh-professij-v-2026-godu.html": {
+      "ETag": "\"pzeraj2g1o2bc1\""
+    },
+    "https://rg.ru/2026/01/09/ekspert-sitnikov-s-fevralia-meniaiutsia-pravila-refinansirovaniia-zhilishchnyh-kreditov.html": {
+      "ETag": "\"rxvhycslpm1p4x\""
     }
   },
   "stats": {
@@ -46207,9 +46218,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff1227134d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff122713390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff122713110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff122712c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff122712710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-08T21:20:51.707633+00:00",
+    "last_run": "2026-01-09T01:22:07.456151+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -46222,56 +46238,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 408.94970699997657,
-        "connect_ms": 693.769006000025,
-        "response_ms": 1102.7187130000016,
+        "dns_ms": 575.2873690000797,
+        "connect_ms": 709.0510929998572,
+        "response_ms": 1284.338461999937,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff12392be30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 1.9505330000129106,
+        "connect_ms": 514.4323790000271,
+        "response_ms": 516.38291200004,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4546.287492999994,
+        "dns_ms": 9146.110226999896,
         "connect_ms": 0.0,
-        "response_ms": 618.9948610000044,
+        "response_ms": 5070.999282999992,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff122712710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 538.0219300000135,
+        "connect_ms": 223.53388099998028,
+        "response_ms": 761.5558109999938,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "5aca24f168a6c4a02832ae81717f2875291d1dbf6a99a6ecf745d7d22159182b",
+    "https://ardexpert.ru/article": "cd1dd176978c7e544e1b02fa590ee29e0c71bda7226f204e774a27877e1f3cba",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "ebc47b271736c9ae56956ad1244e6bfd5ee5de3e2ae668d3dcf4f138ac7c1c55",
+    "https://eec.eaeunion.org/news/": "6146608ff8520a2667ffd47b90d9eac88060cc4bdffbc8f86efa458ba637bb73",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "05278aa3ff0357834bb8366ba64ff98503a9aee9ddcfb4725a2c1668ca371e69",
-    "https://www.metalinfo.ru/ru/news": "29114e538fa4614e6086f2be085cb25ac7ab38521e6aeaf6e4f4672d61bf274d",
-    "https://www.pnp.ru/economics/": "01b8e816578bc06ed8357e00d937fc5ea5f9e357395f89d02a5ecfe146c63f4f",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "ee1b8eee1bef783738f064bd51c7295e11a16b7d47c2921d2609ad1101426aa6",
+    "https://www.metalinfo.ru/ru/news": "9a8b3ddb193a07d666bc233ed8b65f13b405f0ad5b04530f1f60153c723efeab",
+    "https://www.pnp.ru/economics/": "6baa78d6f3cc564003ac4f92ff65e955a9043c44447dd7ce34d958ba0ba8b2f5",
     "https://erzrf.ru/news/": "e8d7cae473259e1f3987f1036be1c09935b5f4d97cae326963c20d649032b249",
-    "https://ria-stk.ru/news/vse-novosti.php": "4cee9ed5511e509bf0c1f74f814192165fdabe5e961a5a93d290f88801273eb5",
-    "http://government.ru/news/": "ac9d0e62a676a49cbbcf8d3abb2fc8da033c3cc2d76fc81d53e486a592cac19f",
-    "https://stroygaz.ru/news/": "f02c63346c3621d15e756d84bb5f5f2bcbc69f288b08b52511a65cbba7f75552",
-    "https://realty.ria.ru/lenta/": "f08be285866e22b92b09d90894322eabd933572e704a54ec23c13f6e87a6deb2",
-    "https://rg.ru/tema/ekonomika": "62f4ed2f25decc4b428538d19c1d3fee0f0d640e57eb9270159386818e0be886",
-    "http://ancb.ru/publication": "af214fd9d46b1bc9f0d469491160e335d6eef2e4b8b0c14888474bffd12fac2c",
+    "https://ria-stk.ru/news/vse-novosti.php": "36dfcd07024c21a1116024c550bac5b903d13d859bc02ecebe7d53cabcf257ac",
+    "http://government.ru/news/": "924e650cd7b62c9e544d477f5db4ef55628ac9be8217ec5eea53580f56563254",
+    "https://stroygaz.ru/news/": "a36e7629b66fd68a030c95dd80a150e89d5e2a433c370cea164aadab3967d455",
+    "https://realty.ria.ru/lenta/": "ae6addf99baafa5b6ef0bf32604c2031d21dfbed2adda807e6b47acaa002d419",
+    "https://rg.ru/tema/ekonomika": "3df4dec30bd7fd111d8228b821591915e67e36106173a91f9798724e4a9ddc07",
+    "http://ancb.ru/publication": "cbd14c7cd563bc3a54cf62d8be0affc8dca93a509d24c6a646b65c6e2bc87e21",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -46553,6 +46569,7 @@
       "https://stroygaz.ru/news/construction/v-moskve-utverdili-kontseptsiyu-samogo-vysokogo-zhilogo-kompleksa-rossii-i-evropy-/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260109/snegopady-2065359749.html",
       "https://realty.ria.ru/20260108/moszhilinspektsiya-2066890196.html",
       "https://realty.ria.ru/20260108/sobyanin-2066868446.html",
       "https://realty.ria.ru/20260108/sobyanin-2066849413.html",
@@ -46571,10 +46588,11 @@
       "https://realty.ria.ru/20260105/zhkkh-2066447656.html",
       "https://realty.ria.ru/20260105/samostroy-2066445194.html",
       "https://realty.ria.ru/20260105/kvartira-2063260566.html",
-      "https://realty.ria.ru/20260104/rosseti-2066368373.html",
-      "https://realty.ria.ru/20260104/elka-2066362597.html"
+      "https://realty.ria.ru/20260104/rosseti-2066368373.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/09/ekspert-grinkova-sostavila-top-10-samyh-vostrebovannyh-professij-v-2026-godu.html",
+      "https://rg.ru/2026/01/09/ekspert-sitnikov-s-fevralia-meniaiutsia-pravila-refinansirovaniia-zhilishchnyh-kreditov.html",
       "https://rg.ru/2026/01/09/eksperty-ozhidaiut-chto-v-2026-godu-puteshestviia-stanut-dorozhe-dlia-rossiian-na-5-12.html",
       "https://rg.ru/2026/01/08/rossiianam-nazvali-usloviia-dlia-oformleniia-semejnoj-nalogovoj-vyplaty.html",
       "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html",
@@ -46605,13 +46623,13 @@
       "https://rg.ru/2026/01/07/reg-ufo/rosaviaciia-sniala-vremennye-ogranicheniia-v-aeroportu-volgograda.html",
       "https://rg.ru/2026/01/07/mintrans-rf-prokommentiroval-zaderzhanie-neftianogo-tankera-marinera.html",
       "https://rg.ru/2026/01/07/rassledovaniem-krusheniia-vertoleta-robinson-r44-v-permskom-krae-zajmetsia-mak.html",
-      "https://rg.ru/2026/01/07/chetyre-strany-opek-soobshchili-o-planah-kompensacij-pereproizvodstva-nefti.html",
-      "https://rg.ru/2026/01/07/rosaviaciia-vremenno-ogranichila-polety-v-aeroportu-volgograda.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20742",
+      "http://ancb.ru/publication/read/20741",
       "http://ancb.ru/publication/read/20740",
       "http://ancb.ru/publication/read/20739",
       "http://ancb.ru/publication/read/20738",
@@ -46644,9 +46662,7 @@
       "http://ancb.ru/publication/read/20624",
       "http://ancb.ru/publication/read/20623",
       "http://ancb.ru/publication/read/20622",
-      "http://ancb.ru/publication/read/20617",
-      "http://ancb.ru/publication/read/20616",
-      "http://ancb.ru/publication/read/20615"
+      "http://ancb.ru/publication/read/20617"
     ]
   },
   "first_seen": {
@@ -61711,7 +61727,12 @@
     "731d8ddb0040f3075b702d7d5f27f404c405f2554069c1570ce7aac59be69d77": "2026-01-08T21:26:00+03:00",
     "e67c6d744c75c4004b3b65b1633f6f0a27c5dcbd8b44c2ee26c4c36dc349dd29": "2026-01-08T21:26:00+03:00",
     "ea6dec1acfe6ed04d7ae620a2460b3def5482c3241b2518eed34971746ff7a26": "2026-01-08T21:26:00+03:00",
-    "29bd83b556822da3074d0e99fe08b9fcaac113dbbde1495ab0d3c92dd0bfcd40": "2026-01-09T00:20:00+03:00"
+    "29bd83b556822da3074d0e99fe08b9fcaac113dbbde1495ab0d3c92dd0bfcd40": "2026-01-09T00:20:00+03:00",
+    "c2d99e6651e3bdeb25214b51e83b5588c253c8d1a762d37bb8017da711b8c823": "2026-01-09T04:21:00+03:00",
+    "9e6d26d489a96c8fb4783567737a9c76368463a94dbd1c3b430687fcebb2c381": "2026-01-09T04:21:00+03:00",
+    "391877f42ec4a4b3f55e15b3b2dbffb66d261c163acc0ba15cc88c1e550aa834": "2026-01-09T04:21:00+03:00",
+    "b22fe9ea445d1c00209e0336057c12b126db4027e6cc01b6dd5229969827880c": "2026-01-09T04:22:00+03:00",
+    "ae9056540a2607d46b335fb93096dceebf0ceb66a6783513d53e2a96c5089bdc": "2026-01-09T04:22:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -61742,8 +61763,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff122600050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 25,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767907152.1086957
       },
       "warmup_done": false,
@@ -61753,39 +61774,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "FTJFNKCrYVF5VoHD",
+          "value": "x9ZAlnbpsJXsJ4sJ",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767908396
+          "expires": 1767922909
         },
         {
           "name": "__ddg10_",
-          "value": "1767907196",
+          "value": "1767921709",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767908396
+          "expires": 1767922909
         },
         {
           "name": "__ddg9_",
-          "value": "20.161.58.226",
+          "value": "57.151.137.129",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767908396
-        },
-        {
-          "name": "__ddg1_",
-          "value": "MZ4XFgege6QGMSqVawFT",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1799443196
+          "expires": 1767922909
         },
         {
           "name": "PHPSESSID",
-          "value": "e68cc3d0a82605df7eb8bdc160a87c67",
+          "value": "36e73abde1b387c82c7e74a21496b4ca",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -61812,11 +61825,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "0Zl0Mync5X5amZNDPuzeCAKF6U6XW4Qe",
+          "value": "cJjTaGOENpCfZID0qdK7gUo8xMyZbUwd",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767864581
+          "expires": 1767932512
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -61824,12 +61837,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1798957781
+          "expires": 1799025712
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff122712c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 20,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767907228.0749984
       },
       "warmup_done": false,
@@ -80282,7 +80295,12 @@
     "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html": "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html",
     "https://rg.ru/2026/01/08/ekipazh-rejsa-utair-reshil-vernutsia-v-dubaj-iz-za-vibracii-silovoj-ustanovki.html": "https://rg.ru/2026/01/08/ekipazh-rejsa-utair-reshil-vernutsia-v-dubaj-iz-za-vibracii-silovoj-ustanovki.html",
     "https://rg.ru/2026/01/08/reg-ufo/piat-poezdov-tavriia-zaderzhivaiutsia-na-puti-iz-kryma.html": "https://rg.ru/2026/01/08/reg-ufo/piat-poezdov-tavriia-zaderzhivaiutsia-na-puti-iz-kryma.html",
-    "https://rg.ru/2026/01/09/eksperty-ozhidaiut-chto-v-2026-godu-puteshestviia-stanut-dorozhe-dlia-rossiian-na-5-12.html": "https://rg.ru/2026/01/09/eksperty-ozhidaiut-chto-v-2026-godu-puteshestviia-stanut-dorozhe-dlia-rossiian-na-5-12.html"
+    "https://rg.ru/2026/01/09/eksperty-ozhidaiut-chto-v-2026-godu-puteshestviia-stanut-dorozhe-dlia-rossiian-na-5-12.html": "https://rg.ru/2026/01/09/eksperty-ozhidaiut-chto-v-2026-godu-puteshestviia-stanut-dorozhe-dlia-rossiian-na-5-12.html",
+    "http://ancb.ru/publication/read/20742": "http://ancb.ru/publication/read/20742",
+    "http://ancb.ru/publication/read/20741": "http://ancb.ru/publication/read/20741",
+    "https://realty.ria.ru/20260109/snegopady-2065359749.html": "https://realty.ria.ru/20260109/snegopady-2065359749.html",
+    "https://rg.ru/2026/01/09/ekspert-grinkova-sostavila-top-10-samyh-vostrebovannyh-professij-v-2026-godu.html": "https://rg.ru/2026/01/09/ekspert-grinkova-sostavila-top-10-samyh-vostrebovannyh-professij-v-2026-godu.html",
+    "https://rg.ru/2026/01/09/ekspert-sitnikov-s-fevralia-meniaiutsia-pravila-refinansirovaniia-zhilishchnyh-kreditov.html": "https://rg.ru/2026/01/09/ekspert-sitnikov-s-fevralia-meniaiutsia-pravila-refinansirovaniia-zhilishchnyh-kreditov.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -95685,7 +95703,12 @@
     "d23c321bee474367f414412ccfcadc1e4f03759f": "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html",
     "601c5c0ff8de2a9c86b92ab5de45ab9999c855d4": "https://rg.ru/2026/01/08/ekipazh-rejsa-utair-reshil-vernutsia-v-dubaj-iz-za-vibracii-silovoj-ustanovki.html",
     "0e4a4b4e5860c7ee14bdc4d395a4856360d479bb": "https://rg.ru/2026/01/08/reg-ufo/piat-poezdov-tavriia-zaderzhivaiutsia-na-puti-iz-kryma.html",
-    "5305df42034cf3a76ed17b835ede2dc5ec4a9e1b": "https://rg.ru/2026/01/09/eksperty-ozhidaiut-chto-v-2026-godu-puteshestviia-stanut-dorozhe-dlia-rossiian-na-5-12.html"
+    "5305df42034cf3a76ed17b835ede2dc5ec4a9e1b": "https://rg.ru/2026/01/09/eksperty-ozhidaiut-chto-v-2026-godu-puteshestviia-stanut-dorozhe-dlia-rossiian-na-5-12.html",
+    "a3a762495db1b0485b44c5a57299e2ffbf6de8fd": "http://ancb.ru/publication/read/20742",
+    "f1636780721da8e5ccf27132d2943936a903a0ab": "http://ancb.ru/publication/read/20741",
+    "dacf3e7a8d51f99e355db5a5bb86165c49e99537": "https://realty.ria.ru/20260109/snegopady-2065359749.html",
+    "3a260ae585e117ef372b0514e73cc04affb7d9b2": "https://rg.ru/2026/01/09/ekspert-grinkova-sostavila-top-10-samyh-vostrebovannyh-professij-v-2026-godu.html",
+    "b244b07179f8a98e17ac7cedbc996e08bf1175d1": "https://rg.ru/2026/01/09/ekspert-sitnikov-s-fevralia-meniaiutsia-pravila-refinansirovaniia-zhilishchnyh-kreditov.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -116273,6 +116296,11 @@
     "https://rg.ru/2026/01/08/reg-cfo/k-2030-godu-bespilotnymi-tehnologiiami-osnastiat-bolshinstvo-moskovskih-tramvaev.html": "731d8ddb0040f3075b702d7d5f27f404c405f2554069c1570ce7aac59be69d77",
     "https://rg.ru/2026/01/08/ekipazh-rejsa-utair-reshil-vernutsia-v-dubaj-iz-za-vibracii-silovoj-ustanovki.html": "e67c6d744c75c4004b3b65b1633f6f0a27c5dcbd8b44c2ee26c4c36dc349dd29",
     "https://rg.ru/2026/01/08/reg-ufo/piat-poezdov-tavriia-zaderzhivaiutsia-na-puti-iz-kryma.html": "ea6dec1acfe6ed04d7ae620a2460b3def5482c3241b2518eed34971746ff7a26",
-    "https://rg.ru/2026/01/09/eksperty-ozhidaiut-chto-v-2026-godu-puteshestviia-stanut-dorozhe-dlia-rossiian-na-5-12.html": "29bd83b556822da3074d0e99fe08b9fcaac113dbbde1495ab0d3c92dd0bfcd40"
+    "https://rg.ru/2026/01/09/eksperty-ozhidaiut-chto-v-2026-godu-puteshestviia-stanut-dorozhe-dlia-rossiian-na-5-12.html": "29bd83b556822da3074d0e99fe08b9fcaac113dbbde1495ab0d3c92dd0bfcd40",
+    "http://ancb.ru/publication/read/20742": "c2d99e6651e3bdeb25214b51e83b5588c253c8d1a762d37bb8017da711b8c823",
+    "http://ancb.ru/publication/read/20741": "9e6d26d489a96c8fb4783567737a9c76368463a94dbd1c3b430687fcebb2c381",
+    "https://realty.ria.ru/20260109/snegopady-2065359749.html": "391877f42ec4a4b3f55e15b3b2dbffb66d261c163acc0ba15cc88c1e550aa834",
+    "https://rg.ru/2026/01/09/ekspert-grinkova-sostavila-top-10-samyh-vostrebovannyh-professij-v-2026-godu.html": "b22fe9ea445d1c00209e0336057c12b126db4027e6cc01b6dd5229969827880c",
+    "https://rg.ru/2026/01/09/ekspert-sitnikov-s-fevralia-meniaiutsia-pravila-refinansirovaniia-zhilishchnyh-kreditov.html": "ae9056540a2607d46b335fb93096dceebf0ceb66a6783513d53e2a96c5089bdc"
   }
 }
