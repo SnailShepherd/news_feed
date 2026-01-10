@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 09 Jan 2026 21:20:29 GMT"
+      "Last-Modified": "Sat, 10 Jan 2026 01:19:22 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"kqeye58qa63f1z\""
+      "ETag": "\"1805yjqjfuy3f26\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -36031,6 +36031,12 @@
     },
     "https://rg.ru/2026/01/09/situaciiu-s-zaderzhkoj-bagazha-v-sheremetevo-vzial-pod-kontrol-rostransnadzor.html": {
       "ETag": "\"o0i89v22xq1paa\""
+    },
+    "https://rg.ru/2026/01/10/v-sheremetevo-soobshchili-chto-dostaviat-bagazh-passazhiram-adresno.html": {
+      "ETag": "\"h4ur8j9ue91o78\""
+    },
+    "https://rg.ru/2026/01/10/dvizhenie-po-iaroslavskomu-shosse-vosstanovleno-v-obe-storony.html": {
+      "ETag": "\"a13ndn4ilp1o30\""
     }
   },
   "stats": {
@@ -46460,9 +46466,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa06bd78550>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa06d317390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa06bd78910>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa06bd78b90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa06bd78e10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-09T21:20:48.019722+00:00",
+    "last_run": "2026-01-10T01:18:50.445273+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -46475,56 +46486,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 508.65464000000316,
-        "connect_ms": 730.3132339999934,
-        "response_ms": 1238.9678739999965,
+        "dns_ms": 465.1937900000007,
+        "connect_ms": 389.1807539999945,
+        "response_ms": 854.3745439999952,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa06d2bfe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 177.0864030000041,
+        "connect_ms": 988.7844149999978,
+        "response_ms": 1165.870818000002,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 881.4584499999967,
-        "connect_ms": 4001.287474000009,
-        "response_ms": 4882.745924000005,
+        "dns_ms": 4406.968518000013,
+        "connect_ms": 0.0,
+        "response_ms": 1028.4247280000045,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa06bd78e10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 174.53450100001078,
+        "connect_ms": 449.56672599997205,
+        "response_ms": 624.1012269999828,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "949a55a366e4d05af2efc4ebd246dadf629620932b82a87ba769a5c0ddfedbb7",
+    "https://ardexpert.ru/article": "3f02f79e076d9ac8c56d2aa9687208081424a8dc9c30d1f4b6043d7d5692d58e",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "3595c60f4b8ce5c685b6202a99ad0ca82bae1d633cfbb265aab09dcf1657ec08",
+    "https://eec.eaeunion.org/news/": "007345f327c696bd8d881126be9a74fb9b38fc64c904c5667658ff25eda28c2e",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "5baa6d9c675bb2f94d255c5eed607fd4fe34d0125be43a0ac7d84816107a6c7a",
-    "https://www.metalinfo.ru/ru/news": "8d30ee171cd64fc01941099ea201da260d85781f4b02eebe6c67c528c14aeb2d",
-    "https://www.pnp.ru/economics/": "f024f8beadb9c40bc3b31204c40fac265756936a7689688fa9bf9950f138bc90",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "1a9f096a1e357fa91fb52560eabcdb56caa6d8268811bcc088e801ec6203278c",
+    "https://www.metalinfo.ru/ru/news": "5298c9cdcdc9776423aa049521e5b766f70f3966a6ffc4e32ce9b1f312e8bb83",
+    "https://www.pnp.ru/economics/": "c966dcc8fbfc21cd83ea3b7ae53468fa78cb66ba014ce0f0278a550f084bf53e",
     "https://erzrf.ru/news/": "e8d7cae473259e1f3987f1036be1c09935b5f4d97cae326963c20d649032b249",
-    "https://ria-stk.ru/news/vse-novosti.php": "549a566e06fd8f5b672712bc45516e549439cca61bd8d5f29f8c7de7ecc64ed6",
-    "http://government.ru/news/": "deb3226d36645f8846e37d08255e1f09c257be682fc1bc4bf1a8240013fe37c1",
-    "https://stroygaz.ru/news/": "ff44c2f636dad673eeacef4ca384c212b0ebc4db2027223e5102bfcc31c1ffd6",
-    "https://realty.ria.ru/lenta/": "24dadb30dc1279058db888d55c8d508ad179b7d9d04ec0131450f594ec39de7c",
-    "https://rg.ru/tema/ekonomika": "8d91cd4b2704caed8fd69fec49b04fb5b8e082f2785fbdeb5d0ffd289d8edadd",
-    "http://ancb.ru/publication": "ad3dad538072f07aa8c4c72519a6ec526d713ce821b5b270708aaf4fe562f5c7",
+    "https://ria-stk.ru/news/vse-novosti.php": "1ba3e77bed2b8d328e5c6a1007c8f4568b4a8e54c19de4bb8f03f4a2f07c9dc6",
+    "http://government.ru/news/": "230ae300b79c01058c5f6852818cc80d79893c3a28744154b685e87f61631adf",
+    "https://stroygaz.ru/news/": "07ba9517c3d8ba23f3e0ed67445e6ab2b27f532d733c0d71ae6973eacebb74ef",
+    "https://realty.ria.ru/lenta/": "7593018e5a7ea1176df8a5fc2bac46811b98b1da61d6f3a1d11dfb4ae4102a1f",
+    "https://rg.ru/tema/ekonomika": "62dd96076eaf4bcd4d2ee242b58b2dbd316651f0ae38aa8fe68af7a2380fadbe",
+    "http://ancb.ru/publication": "cbd14c7cd563bc3a54cf62d8be0affc8dca93a509d24c6a646b65c6e2bc87e21",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -46828,6 +46839,8 @@
       "https://realty.ria.ru/20260105/samostroy-2066445194.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/10/v-sheremetevo-soobshchili-chto-dostaviat-bagazh-passazhiram-adresno.html",
+      "https://rg.ru/2026/01/10/dvizhenie-po-iaroslavskomu-shosse-vosstanovleno-v-obe-storony.html",
       "https://rg.ru/2026/01/09/passazhiry-aeroporta-sheremetevo-soobshchaiut-o-zaderzhkah-vydachi-bagazha.html",
       "https://rg.ru/2026/01/09/situaciiu-s-zaderzhkoj-bagazha-v-sheremetevo-vzial-pod-kontrol-rostransnadzor.html",
       "https://rg.ru/2026/01/09/ekspert-koleda-deficit-kadrov-vo-mnogom-iavliaetsia-iskusstvennym.html",
@@ -46858,8 +46871,6 @@
       "https://rg.ru/2026/01/09/reg-ufo/dva-poezda-iz-kryma-zaderzhivaiutsia-v-puti.html",
       "https://rg.ru/2026/01/09/v-2025-godu-rossiiane-stali-aktivnee-vkladyvatsia-v-zolotye-slitki.html",
       "https://rg.ru/2026/01/09/v-ator-ne-ozhidaiut-snizheniia-turpotoka-iz-rossii-v-evropu.html",
-      "https://rg.ru/2026/01/09/v-minpromtorge-nazvali-neaktualnym-prognoz-po-parallelnomu-importu-v-2025-godu.html",
-      "https://rg.ru/2026/01/09/deficita-krasnoj-ikry-k-maslenice-ne-ozhidaetsia.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -62015,7 +62026,9 @@
     "ea007f39c802c56f02155ad349f50d50d2ab5504892ed46f5d833994d52eeedc": "2026-01-09T21:29:00+03:00",
     "8463866ac02ce52bdab45f473e77611815e93c07e23c37b46eefdd317e96e1d2": "2026-01-10T00:20:00+03:00",
     "fbc95580a2cc3eacee635b95fada45b19cbf0bd9db4ae0d987f742cbd3c1ff76": "2026-01-10T00:20:00+03:00",
-    "45c4c1903c8b8939f97de265d22f17accc572d39b5b3c21f1247a1f283e1be7d": "2026-01-10T00:20:00+03:00"
+    "45c4c1903c8b8939f97de265d22f17accc572d39b5b3c21f1247a1f283e1be7d": "2026-01-10T00:20:00+03:00",
+    "6d989e2ba7820b6865c752432b3f25af43c2ad367417201dd2c005a91c5136cb": "2026-01-10T04:18:00+03:00",
+    "f14873c576d39f97ea6b260a30721f36267accef8ae3daa5453171d2e50a37a5": "2026-01-10T04:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -62046,8 +62059,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa06bf9c050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767993540.5925636
       },
       "warmup_done": false,
@@ -62057,39 +62070,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "vHzYOLCIwH7J7O1X",
+          "value": "ri59bL3cZgW8RKZi",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767994787
+          "expires": 1768009120
         },
         {
           "name": "__ddg10_",
-          "value": "1767993587",
+          "value": "1768007920",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767994787
+          "expires": 1768009120
         },
         {
           "name": "__ddg9_",
-          "value": "52.165.251.242",
+          "value": "135.232.200.69",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767994787
-        },
-        {
-          "name": "__ddg1_",
-          "value": "ETvbpXCzUIyWvhi5XdKh",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1799529587
+          "expires": 1768009120
         },
         {
           "name": "PHPSESSID",
-          "value": "53c2add4cb6876a289fbeb0df56b92f9",
+          "value": "4679acd0553d6d1ce96b79c2f016bd2f",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -62116,11 +62121,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "qb7q8Zq9k7r2VQU49GVs3domL9wSgVka",
+          "value": "oedmHRjwf47zvGvLfEmnXT4NrxnSwPh7",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1767973035
+          "expires": 1768018722
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -62128,12 +62133,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1799066235
+          "expires": 1799111922
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa06bd78b90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1767993619.4279537
       },
       "warmup_done": false,
@@ -80637,7 +80642,9 @@
     "https://rg.ru/2026/01/09/manturov-zaiavil-chto-v-rf-polnostiu-osvoen-vypusk-podshipnikov.html": "https://rg.ru/2026/01/09/manturov-zaiavil-chto-v-rf-polnostiu-osvoen-vypusk-podshipnikov.html",
     "https://stroygaz.ru/news/zkh/lzhekommunalshchiki-aktivizirovalis-v-prazdnichnye-dni": "https://stroygaz.ru/news/zkh/lzhekommunalshchiki-aktivizirovalis-v-prazdnichnye-dni",
     "https://rg.ru/2026/01/09/passazhiry-aeroporta-sheremetevo-soobshchaiut-o-zaderzhkah-vydachi-bagazha.html": "https://rg.ru/2026/01/09/passazhiry-aeroporta-sheremetevo-soobshchaiut-o-zaderzhkah-vydachi-bagazha.html",
-    "https://rg.ru/2026/01/09/situaciiu-s-zaderzhkoj-bagazha-v-sheremetevo-vzial-pod-kontrol-rostransnadzor.html": "https://rg.ru/2026/01/09/situaciiu-s-zaderzhkoj-bagazha-v-sheremetevo-vzial-pod-kontrol-rostransnadzor.html"
+    "https://rg.ru/2026/01/09/situaciiu-s-zaderzhkoj-bagazha-v-sheremetevo-vzial-pod-kontrol-rostransnadzor.html": "https://rg.ru/2026/01/09/situaciiu-s-zaderzhkoj-bagazha-v-sheremetevo-vzial-pod-kontrol-rostransnadzor.html",
+    "https://rg.ru/2026/01/10/v-sheremetevo-soobshchili-chto-dostaviat-bagazh-passazhiram-adresno.html": "https://rg.ru/2026/01/10/v-sheremetevo-soobshchili-chto-dostaviat-bagazh-passazhiram-adresno.html",
+    "https://rg.ru/2026/01/10/dvizhenie-po-iaroslavskomu-shosse-vosstanovleno-v-obe-storony.html": "https://rg.ru/2026/01/10/dvizhenie-po-iaroslavskomu-shosse-vosstanovleno-v-obe-storony.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -96091,7 +96098,9 @@
     "20f1f4ec3de73bef0e2195a412ddea5bd7f497c8": "https://rg.ru/2026/01/09/manturov-zaiavil-chto-v-rf-polnostiu-osvoen-vypusk-podshipnikov.html",
     "8b22c758ff20a80490b6f53d96c58f61963e73ab": "https://stroygaz.ru/news/zkh/lzhekommunalshchiki-aktivizirovalis-v-prazdnichnye-dni",
     "be20ba1f7599dc17bebf7c3ca12fc352e96e917b": "https://rg.ru/2026/01/09/passazhiry-aeroporta-sheremetevo-soobshchaiut-o-zaderzhkah-vydachi-bagazha.html",
-    "43905e68df72c780b8b1b70cbd62947dd5eec4e9": "https://rg.ru/2026/01/09/situaciiu-s-zaderzhkoj-bagazha-v-sheremetevo-vzial-pod-kontrol-rostransnadzor.html"
+    "43905e68df72c780b8b1b70cbd62947dd5eec4e9": "https://rg.ru/2026/01/09/situaciiu-s-zaderzhkoj-bagazha-v-sheremetevo-vzial-pod-kontrol-rostransnadzor.html",
+    "73729a29908432ed0eddf8d2670f58a3828e2266": "https://rg.ru/2026/01/10/v-sheremetevo-soobshchili-chto-dostaviat-bagazh-passazhiram-adresno.html",
+    "d207e29ede0c749c5539ae2d986ee78cc763e529": "https://rg.ru/2026/01/10/dvizhenie-po-iaroslavskomu-shosse-vosstanovleno-v-obe-storony.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -116737,6 +116746,8 @@
     "https://stroygaz.ru/news/zkh/lzhekommunalshchiki-aktivizirovalis-v-prazdnichnye-dni": "8463866ac02ce52bdab45f473e77611815e93c07e23c37b46eefdd317e96e1d2",
     "https://stroygaz.ru/news/zkh/lzhekommunalshchiki-aktivizirovalis-v-prazdnichnye-dni/": "8463866ac02ce52bdab45f473e77611815e93c07e23c37b46eefdd317e96e1d2",
     "https://rg.ru/2026/01/09/passazhiry-aeroporta-sheremetevo-soobshchaiut-o-zaderzhkah-vydachi-bagazha.html": "fbc95580a2cc3eacee635b95fada45b19cbf0bd9db4ae0d987f742cbd3c1ff76",
-    "https://rg.ru/2026/01/09/situaciiu-s-zaderzhkoj-bagazha-v-sheremetevo-vzial-pod-kontrol-rostransnadzor.html": "45c4c1903c8b8939f97de265d22f17accc572d39b5b3c21f1247a1f283e1be7d"
+    "https://rg.ru/2026/01/09/situaciiu-s-zaderzhkoj-bagazha-v-sheremetevo-vzial-pod-kontrol-rostransnadzor.html": "45c4c1903c8b8939f97de265d22f17accc572d39b5b3c21f1247a1f283e1be7d",
+    "https://rg.ru/2026/01/10/v-sheremetevo-soobshchili-chto-dostaviat-bagazh-passazhiram-adresno.html": "6d989e2ba7820b6865c752432b3f25af43c2ad367417201dd2c005a91c5136cb",
+    "https://rg.ru/2026/01/10/dvizhenie-po-iaroslavskomu-shosse-vosstanovleno-v-obe-storony.html": "f14873c576d39f97ea6b260a30721f36267accef8ae3daa5453171d2e50a37a5"
   }
 }
