@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 11 Jan 2026 06:29:05 GMT"
+      "Last-Modified": "Sun, 11 Jan 2026 09:19:13 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"jx44z90zuz3ibt\""
+      "ETag": "\"7zxp6zw3sq3jqx\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -36193,6 +36193,25 @@
     },
     "https://rg.ru/2026/01/11/v-gosdume-napomnili-chto-s-1-marta-srok-oplaty-uslug-zhkh-perenesut-na-piat-dnej.html": {
       "ETag": "\"1490i1kz0261oi3\""
+    },
+    "http://government.ru/news/57482/": {},
+    "https://rg.ru/2026/01/11/politolog-bovt-ssha-vykrav-prezidenta-maduro-uzhe-smenili-rezhim-v-venesuele.html": {
+      "ETag": "\"8qlyaz9io427or\""
+    },
+    "https://rg.ru/2026/01/11/biznes-vybiraet-medstrahovanie-vmesto-oplaty-bolnichnyh.html": {
+      "ETag": "\"dyzyt2c3fv20z6\""
+    },
+    "https://rg.ru/2026/01/11/rossiiane-stali-agressivnee-i-nastojchivee-pri-priobretenii-zhilia.html": {
+      "ETag": "\"alozea62sx1dz7\""
+    },
+    "https://rg.ru/2026/01/11/reg-szfo/v-pulkovo-soobshchili-o-besperebojnoj-rabote-aeroporta.html": {
+      "ETag": "\"jar0j9j8bd1r0y\""
+    },
+    "https://rg.ru/2026/01/11/alihanov-uhod-inostrannyh-brendov-stal-tochkoj-rosta-dlia-fashion-rynka-rf.html": {
+      "ETag": "\"3nuglfshva1pde\""
+    },
+    "https://rg.ru/2026/01/11/reg-urfo/na-iuzhnom-urale-zapuskaiut-proizvodstvo-sovremennyh-avtocistern.html": {
+      "ETag": "\"uklex079fw1pt1\""
     }
   },
   "stats": {
@@ -46737,9 +46756,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fae59aa2fd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fae59aa2e90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fae59aa2ad0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fae59aa25d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fae59aa1e50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-11T06:29:26.171796+00:00",
+    "last_run": "2026-01-11T09:18:52.372693+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -46752,56 +46776,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 707.7624360000527,
-        "connect_ms": 636.3200979999419,
-        "response_ms": 1344.0825339999947,
+        "dns_ms": 257.2600370000089,
+        "connect_ms": 322.6890309999817,
+        "response_ms": 579.9490679999906,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae5ac3fe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 123.6886719999859,
+        "connect_ms": 844.7630250000202,
+        "response_ms": 968.4516970000061,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4519.047445000069,
-        "connect_ms": 0.0,
-        "response_ms": 1381.1839640000017,
+        "dns_ms": 606.8906789999744,
+        "connect_ms": 4945.648616000028,
+        "response_ms": 5552.539295000002,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fae59aa1e50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 130.29790500002036,
+        "connect_ms": 427.97987899996315,
+        "response_ms": 558.2777839999835,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "317a2d8a5dad1e5f764b147bbb379e42ee54996f5251d1c3a040f9e2a76dad90",
+    "https://ardexpert.ru/article": "b3d76678aa2619585d89affe63fefa71e955c2f8dcacc69894a76b8f2637cb0f",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "ba1e80cf1a8c7011b596ab57fa1cb98fe1cf499c5083b9d9d8af4a5beaca366a",
+    "https://eec.eaeunion.org/news/": "870469f89b1cfe2da92d3f6e3589f5e408a5e3f0a6ecea5db801ae9ca8dae6dd",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "91a0f169a1091d240b53ddef522602040d4d114c504d1381263d712e871d29b2",
-    "https://www.metalinfo.ru/ru/news": "6db7886984a17618286e007ea8d78c2239cebb89dea995c285132e1ff4db105a",
-    "https://www.pnp.ru/economics/": "857a7e25447aa743c33c82ddf58dd83660b9daa9bccb69a91705ee500382bda9",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "9b043519da0097aa701a4254d5fcf8b955689e645b0efbf2428f6b43e19b34e8",
+    "https://www.metalinfo.ru/ru/news": "72e91262dd69e0f964cef82a10e729b53ed319ee655a0d5bc8bec4537d83d6eb",
+    "https://www.pnp.ru/economics/": "84a27ad8840d30d33056395bc3d84d65e4dfa88842654ce60cbcd491f9f7c723",
     "https://erzrf.ru/news/": "e8d7cae473259e1f3987f1036be1c09935b5f4d97cae326963c20d649032b249",
-    "https://ria-stk.ru/news/vse-novosti.php": "d9d3212576cd8be354d3ab07c1b828c72ecfe7cb14300b9f251963ebb90e9a82",
-    "http://government.ru/news/": "6dafca8fa08d8ce73a014898ce994ee4c2347cf111cf2a7a142f3e474fe32d8e",
-    "https://stroygaz.ru/news/": "9a78fcfa44cf278cac72a21cc15d410f4f30e423468bc08154626bf355ed2660",
-    "https://realty.ria.ru/lenta/": "dc3710c181806587d82101e6270dd8372d16b91ffde61ba86962a8ea37b2745c",
-    "https://rg.ru/tema/ekonomika": "ce4cd4677fb1a93423ae24fc386efe7741c611c556e0df403254e48ab87e6095",
-    "http://ancb.ru/publication": "ad3dad538072f07aa8c4c72519a6ec526d713ce821b5b270708aaf4fe562f5c7",
+    "https://ria-stk.ru/news/vse-novosti.php": "87a4e8abf19092529a17056e27c5b8e3b1a244651fbfbff76868e0e435963a15",
+    "http://government.ru/news/": "4c0ca999ff048603edda5ca3c5d0c3a6039157e43268916d3320c681373df250",
+    "https://stroygaz.ru/news/": "fa3b7fdfffe15b7ea12259bd60387ead219427716b24d177ce497a87f16d66a4",
+    "https://realty.ria.ru/lenta/": "877f1ff38842b00f2709d906e63df6b52dc12ccdccb973a15fea45b21080f00b",
+    "https://rg.ru/tema/ekonomika": "157621403b4c1836e89afe961f06482f558a1f394f62442ad1afcaaaa2f3c57d",
+    "http://ancb.ru/publication": "cbd14c7cd563bc3a54cf62d8be0affc8dca93a509d24c6a646b65c6e2bc87e21",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -47039,6 +47063,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=247592&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57482/",
       "http://government.ru/news/57495/",
       "http://government.ru/news/57494/",
       "http://government.ru/news/57481/",
@@ -47057,8 +47082,7 @@
       "http://government.ru/news/57477/",
       "http://government.ru/news/57468/",
       "http://government.ru/news/57476/",
-      "http://government.ru/news/57487/",
-      "http://government.ru/news/57486/"
+      "http://government.ru/news/57487/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/projection/v-moskve-po-programme-lgotnoy-arendy-chastnye-investory-otrestavrirovali-vosem-obektov-kulturnogo-na/",
@@ -47105,6 +47129,12 @@
       "https://realty.ria.ru/20260105/zhkkh-2066447656.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/11/politolog-bovt-ssha-vykrav-prezidenta-maduro-uzhe-smenili-rezhim-v-venesuele.html",
+      "https://rg.ru/2026/01/11/biznes-vybiraet-medstrahovanie-vmesto-oplaty-bolnichnyh.html",
+      "https://rg.ru/2026/01/11/rossiiane-stali-agressivnee-i-nastojchivee-pri-priobretenii-zhilia.html",
+      "https://rg.ru/2026/01/11/reg-szfo/v-pulkovo-soobshchili-o-besperebojnoj-rabote-aeroporta.html",
+      "https://rg.ru/2026/01/11/alihanov-uhod-inostrannyh-brendov-stal-tochkoj-rosta-dlia-fashion-rynka-rf.html",
+      "https://rg.ru/2026/01/11/reg-urfo/na-iuzhnom-urale-zapuskaiut-proizvodstvo-sovremennyh-avtocistern.html",
       "https://rg.ru/2026/01/11/novye-roli-v-rabote-v-rossii-formiruetsia-rynok-gibridnyh-professij.html",
       "https://rg.ru/2026/01/11/stankevich-gosregulirovanie-cen-na-azs-privedet-k-idealnomu-shtormu-na-rynke.html",
       "https://rg.ru/2026/01/11/v-gosdume-napomnili-chto-s-1-marta-srok-oplaty-uslug-zhkh-perenesut-na-piat-dnej.html",
@@ -47131,12 +47161,6 @@
       "https://rg.ru/2026/01/10/passazhir-mozhet-potrebovat-shtraf-ot-aviakompanii-za-nesvoevremennuiu-dostavku.html",
       "https://rg.ru/2026/01/10/dmitriev-postavki-nefteproduktov-iz-rossii-znachitelno-vyrosli.html",
       "https://rg.ru/2026/01/10/reg-skfo/gornolyzhnyj-kurort-elbrus-zakrylsia-iz-za-lavinoopasnosti.html",
-      "https://rg.ru/2026/01/10/reg-ufo/v-aeroportu-sochi-zaderzhali-vylet-11-samoletov.html",
-      "https://rg.ru/2026/01/10/v-aeroportu-sheremetevo-vozobnovili-vylety-samoletov.html",
-      "https://rg.ru/2026/01/10/reg-szfo/v-pulkovo-oprovergli-informaciiu-o-zastriavshem-v-sugrobe-samolete.html",
-      "https://rg.ru/2026/01/10/reg-cfo/sergej-sobianin-moskovskie-kreativnye-industrii-vyshli-na-novyj-uroven.html",
-      "https://rg.ru/2026/01/10/reg-urfo/sverdlovskie-vlasti-prodolzhat-platit-fermeram-za-zhile-dlia-rabotnikov.html",
-      "https://rg.ru/2026/01/10/aeroport-sheremetevo-vozobnovil-rabotu-v-shtatnom-rezhime.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -62347,7 +62371,14 @@
     "b3acd339d03d38416ad53def7f3f6fab779055b23b143dd5d28d54203f55fa12": "2026-01-11T04:28:00+03:00",
     "3ba77fdaafbb6d0b6588bb719fda096b56bbfefd17764e9474d79bc3cf3bb931": "2026-01-11T09:29:00+03:00",
     "685ff308d99059cc71bf885b2c84b6c095ad73000a4c31ed7eb49a99ab944dd4": "2026-01-11T09:29:00+03:00",
-    "200cd14925c912d330021558ad5b88cf5a4b765edb0f393dededa70bf2e587b5": "2026-01-11T09:29:00+03:00"
+    "200cd14925c912d330021558ad5b88cf5a4b765edb0f393dededa70bf2e587b5": "2026-01-11T09:29:00+03:00",
+    "e8f1da04734b870dd6edaafbb447d4b26fdc28d2d68ca898d67b516ff4ed00ec": "2026-01-11T12:18:00+03:00",
+    "926000bafb8db0c89244d442e5d1607282cbd145d10d050a1063ee21d1944dd2": "2026-01-11T12:18:00+03:00",
+    "6bc56009310ed2c514a369ae8a130e18db1af22ffe56b8d5f494b697dc1e45ae": "2026-01-11T12:18:00+03:00",
+    "3aaff9d9e62a1023330fc64314a8d26ccc926731bb282bcb1e19351bba1ec15a": "2026-01-11T12:18:00+03:00",
+    "ad1fed700191961194a1fecc89d854254a207e3853ce82a2e56aee045b59087a": "2026-01-11T12:18:00+03:00",
+    "7a4f8fb85b1a86c77b2064a081551d57cd78610e353facb0f322880b2181c852": "2026-01-11T12:18:00+03:00",
+    "f62027411a2600d4244cac09be53bbcb6d5fbb32475e5a96bf25767f40cb09aa": "2026-01-11T12:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -62378,8 +62409,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae5999c050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1768112854.4427586
       },
       "warmup_done": false,
@@ -62389,31 +62420,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "WWUXgyeDhLMoLp2S",
+          "value": "X5Vcm8vdQbRhsFnJ",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768114102
+          "expires": 1768124311
         },
         {
           "name": "__ddg10_",
-          "value": "1768112902",
+          "value": "1768123111",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768114102
+          "expires": 1768124311
         },
         {
           "name": "__ddg9_",
-          "value": "172.182.202.194",
+          "value": "4.236.158.83",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768114102
+          "expires": 1768124311
+        },
+        {
+          "name": "__ddg1_",
+          "value": "0IF88E3bENtlo9SQ0lyJ",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1799659111
         },
         {
           "name": "PHPSESSID",
-          "value": "5a543c6f29d62ca4c4d222b876e3a64e",
+          "value": "f518910272c1afe964c2b6db52b22be6",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -62440,11 +62479,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "o3jiN1EeMcVM139YIuR4Muu9byKs7eOr",
+          "value": "muYjUjtRAIqqvxn0rkBFZXMUnBaHX0be",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768105704
+          "expires": 1768133913
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -62452,12 +62491,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1799198904
+          "expires": 1799227113
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fae59aa25d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1768112935.555242
       },
       "warmup_done": false,
@@ -81017,7 +81056,14 @@
     "https://rg.ru/2026/01/11/deputat-nilov-rasskazal-vozmozhna-li-doindeksaciia-strahovyh-pensij-v-fevrale.html": "https://rg.ru/2026/01/11/deputat-nilov-rasskazal-vozmozhna-li-doindeksaciia-strahovyh-pensij-v-fevrale.html",
     "https://rg.ru/2026/01/11/novye-roli-v-rabote-v-rossii-formiruetsia-rynok-gibridnyh-professij.html": "https://rg.ru/2026/01/11/novye-roli-v-rabote-v-rossii-formiruetsia-rynok-gibridnyh-professij.html",
     "https://rg.ru/2026/01/11/stankevich-gosregulirovanie-cen-na-azs-privedet-k-idealnomu-shtormu-na-rynke.html": "https://rg.ru/2026/01/11/stankevich-gosregulirovanie-cen-na-azs-privedet-k-idealnomu-shtormu-na-rynke.html",
-    "https://rg.ru/2026/01/11/v-gosdume-napomnili-chto-s-1-marta-srok-oplaty-uslug-zhkh-perenesut-na-piat-dnej.html": "https://rg.ru/2026/01/11/v-gosdume-napomnili-chto-s-1-marta-srok-oplaty-uslug-zhkh-perenesut-na-piat-dnej.html"
+    "https://rg.ru/2026/01/11/v-gosdume-napomnili-chto-s-1-marta-srok-oplaty-uslug-zhkh-perenesut-na-piat-dnej.html": "https://rg.ru/2026/01/11/v-gosdume-napomnili-chto-s-1-marta-srok-oplaty-uslug-zhkh-perenesut-na-piat-dnej.html",
+    "http://government.ru/news/57482": "http://government.ru/news/57482",
+    "https://rg.ru/2026/01/11/politolog-bovt-ssha-vykrav-prezidenta-maduro-uzhe-smenili-rezhim-v-venesuele.html": "https://rg.ru/2026/01/11/politolog-bovt-ssha-vykrav-prezidenta-maduro-uzhe-smenili-rezhim-v-venesuele.html",
+    "https://rg.ru/2026/01/11/biznes-vybiraet-medstrahovanie-vmesto-oplaty-bolnichnyh.html": "https://rg.ru/2026/01/11/biznes-vybiraet-medstrahovanie-vmesto-oplaty-bolnichnyh.html",
+    "https://rg.ru/2026/01/11/rossiiane-stali-agressivnee-i-nastojchivee-pri-priobretenii-zhilia.html": "https://rg.ru/2026/01/11/rossiiane-stali-agressivnee-i-nastojchivee-pri-priobretenii-zhilia.html",
+    "https://rg.ru/2026/01/11/reg-szfo/v-pulkovo-soobshchili-o-besperebojnoj-rabote-aeroporta.html": "https://rg.ru/2026/01/11/reg-szfo/v-pulkovo-soobshchili-o-besperebojnoj-rabote-aeroporta.html",
+    "https://rg.ru/2026/01/11/alihanov-uhod-inostrannyh-brendov-stal-tochkoj-rosta-dlia-fashion-rynka-rf.html": "https://rg.ru/2026/01/11/alihanov-uhod-inostrannyh-brendov-stal-tochkoj-rosta-dlia-fashion-rynka-rf.html",
+    "https://rg.ru/2026/01/11/reg-urfo/na-iuzhnom-urale-zapuskaiut-proizvodstvo-sovremennyh-avtocistern.html": "https://rg.ru/2026/01/11/reg-urfo/na-iuzhnom-urale-zapuskaiut-proizvodstvo-sovremennyh-avtocistern.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -96526,7 +96572,14 @@
     "44dc22d3331bc42c50ad9b3745ba98997b1c3598": "https://rg.ru/2026/01/11/deputat-nilov-rasskazal-vozmozhna-li-doindeksaciia-strahovyh-pensij-v-fevrale.html",
     "906835f2e5898cd9da114c4b1981c7ab8b686bbd": "https://rg.ru/2026/01/11/novye-roli-v-rabote-v-rossii-formiruetsia-rynok-gibridnyh-professij.html",
     "4de31219a495a76fd7a5347c7fa4328e0cf03a1e": "https://rg.ru/2026/01/11/stankevich-gosregulirovanie-cen-na-azs-privedet-k-idealnomu-shtormu-na-rynke.html",
-    "3aeffbce0a20a294741a734648f67ae356a5d985": "https://rg.ru/2026/01/11/v-gosdume-napomnili-chto-s-1-marta-srok-oplaty-uslug-zhkh-perenesut-na-piat-dnej.html"
+    "3aeffbce0a20a294741a734648f67ae356a5d985": "https://rg.ru/2026/01/11/v-gosdume-napomnili-chto-s-1-marta-srok-oplaty-uslug-zhkh-perenesut-na-piat-dnej.html",
+    "7bc8a58082ed35dd231d98758ee4ca8880365fcb": "http://government.ru/news/57482",
+    "66c501d5ccafec15fc84492364f2b0635348bf33": "https://rg.ru/2026/01/11/politolog-bovt-ssha-vykrav-prezidenta-maduro-uzhe-smenili-rezhim-v-venesuele.html",
+    "0f558b131f7c85598c0a37765cd722cb4c67c280": "https://rg.ru/2026/01/11/biznes-vybiraet-medstrahovanie-vmesto-oplaty-bolnichnyh.html",
+    "1950c4cb8e003be7429e91ff1f8bc3b59777ac1f": "https://rg.ru/2026/01/11/rossiiane-stali-agressivnee-i-nastojchivee-pri-priobretenii-zhilia.html",
+    "7533f50eaca280288f405d7ab7f28b5b11fa1ed6": "https://rg.ru/2026/01/11/reg-szfo/v-pulkovo-soobshchili-o-besperebojnoj-rabote-aeroporta.html",
+    "abbf7a10975e77580a5eca0e90e9f111b1be23de": "https://rg.ru/2026/01/11/alihanov-uhod-inostrannyh-brendov-stal-tochkoj-rosta-dlia-fashion-rynka-rf.html",
+    "e2857065ecbb6713c52ffeb7b451fc42d659c19a": "https://rg.ru/2026/01/11/reg-urfo/na-iuzhnom-urale-zapuskaiut-proizvodstvo-sovremennyh-avtocistern.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -117233,6 +117286,14 @@
     "https://rg.ru/2026/01/11/deputat-nilov-rasskazal-vozmozhna-li-doindeksaciia-strahovyh-pensij-v-fevrale.html": "b3acd339d03d38416ad53def7f3f6fab779055b23b143dd5d28d54203f55fa12",
     "https://rg.ru/2026/01/11/novye-roli-v-rabote-v-rossii-formiruetsia-rynok-gibridnyh-professij.html": "3ba77fdaafbb6d0b6588bb719fda096b56bbfefd17764e9474d79bc3cf3bb931",
     "https://rg.ru/2026/01/11/stankevich-gosregulirovanie-cen-na-azs-privedet-k-idealnomu-shtormu-na-rynke.html": "685ff308d99059cc71bf885b2c84b6c095ad73000a4c31ed7eb49a99ab944dd4",
-    "https://rg.ru/2026/01/11/v-gosdume-napomnili-chto-s-1-marta-srok-oplaty-uslug-zhkh-perenesut-na-piat-dnej.html": "200cd14925c912d330021558ad5b88cf5a4b765edb0f393dededa70bf2e587b5"
+    "https://rg.ru/2026/01/11/v-gosdume-napomnili-chto-s-1-marta-srok-oplaty-uslug-zhkh-perenesut-na-piat-dnej.html": "200cd14925c912d330021558ad5b88cf5a4b765edb0f393dededa70bf2e587b5",
+    "http://government.ru/news/57482": "e8f1da04734b870dd6edaafbb447d4b26fdc28d2d68ca898d67b516ff4ed00ec",
+    "http://government.ru/news/57482/": "e8f1da04734b870dd6edaafbb447d4b26fdc28d2d68ca898d67b516ff4ed00ec",
+    "https://rg.ru/2026/01/11/politolog-bovt-ssha-vykrav-prezidenta-maduro-uzhe-smenili-rezhim-v-venesuele.html": "926000bafb8db0c89244d442e5d1607282cbd145d10d050a1063ee21d1944dd2",
+    "https://rg.ru/2026/01/11/biznes-vybiraet-medstrahovanie-vmesto-oplaty-bolnichnyh.html": "6bc56009310ed2c514a369ae8a130e18db1af22ffe56b8d5f494b697dc1e45ae",
+    "https://rg.ru/2026/01/11/rossiiane-stali-agressivnee-i-nastojchivee-pri-priobretenii-zhilia.html": "3aaff9d9e62a1023330fc64314a8d26ccc926731bb282bcb1e19351bba1ec15a",
+    "https://rg.ru/2026/01/11/reg-szfo/v-pulkovo-soobshchili-o-besperebojnoj-rabote-aeroporta.html": "ad1fed700191961194a1fecc89d854254a207e3853ce82a2e56aee045b59087a",
+    "https://rg.ru/2026/01/11/alihanov-uhod-inostrannyh-brendov-stal-tochkoj-rosta-dlia-fashion-rynka-rf.html": "7a4f8fb85b1a86c77b2064a081551d57cd78610e353facb0f322880b2181c852",
+    "https://rg.ru/2026/01/11/reg-urfo/na-iuzhnom-urale-zapuskaiut-proizvodstvo-sovremennyh-avtocistern.html": "f62027411a2600d4244cac09be53bbcb6d5fbb32475e5a96bf25767f40cb09aa"
   }
 }
