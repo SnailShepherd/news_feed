@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 10 Jan 2026 21:18:12 GMT"
+      "Last-Modified": "Sun, 11 Jan 2026 01:29:04 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"13f1vi64ni13hat\""
+      "ETag": "\"117ekno59xr3hys\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -36181,6 +36181,9 @@
     },
     "https://rg.ru/2026/01/11/v-2026-godu-meniaiutsia-pravila-vyezda-iz-strany-dlia-detej-do-14-let.html": {
       "ETag": "\"o930r3iss61uhs\""
+    },
+    "https://rg.ru/2026/01/11/deputat-nilov-rasskazal-vozmozhna-li-doindeksaciia-strahovyh-pensij-v-fevrale.html": {
+      "ETag": "\"yi3lq2c12v2bgs\""
     }
   },
   "stats": {
@@ -46686,9 +46689,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdcdc977250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdcdc977390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdcdc977110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdcdc976c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdcdc976710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-10T21:18:25.651424+00:00",
+    "last_run": "2026-01-11T01:28:34.299903+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -46701,56 +46709,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 255.80281800012017,
-        "connect_ms": 767.290625999749,
-        "response_ms": 1023.0934439998691,
+        "dns_ms": 526.0168010000257,
+        "connect_ms": 402.4524679999786,
+        "response_ms": 928.4692690000043,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdcddbafe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 317.85564500000874,
+        "connect_ms": 642.6080520000141,
+        "response_ms": 960.4636970000229,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 997.5509289999991,
-        "connect_ms": 189.0385399999559,
-        "response_ms": 1186.589468999955,
+        "dns_ms": 5020.932419000019,
+        "connect_ms": 0.0,
+        "response_ms": 593.5645219999515,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdcdc976710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 500.9852740000156,
+        "connect_ms": 240.08553699997037,
+        "response_ms": 741.070810999986,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "4dfea29d33ebde6a42fe21e1d59d9856531ccbeb53ea487647f81dd5ab580c5b",
+    "https://ardexpert.ru/article": "076bcc75b973b499c187e0e149b616f77fadcc556936c3dfc6b2e1f4c340164e",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "3e0ee552184d25ecb253a26eb4330a59d7393974b36dbaeffa430dbd946a090a",
+    "https://eec.eaeunion.org/news/": "91dbeed143245435a1f823242c98d4eef64876eb78a3be12e70310c384291130",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "ff556cba49d1e70d904d60d563699cbc129dee72371eac6ece50127f4aeddcd0",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "99d07b36c44201be295a22eab310892d0497282b58c21b9d3306c2d4e7a56037",
     "https://www.metalinfo.ru/ru/news": "72e91262dd69e0f964cef82a10e729b53ed319ee655a0d5bc8bec4537d83d6eb",
-    "https://www.pnp.ru/economics/": "1d8ce0cc705d3851e226f969c6c308ab0d5d0223af8d84104cfc82eb56e2f4af",
+    "https://www.pnp.ru/economics/": "c54fb0069c99697173e25624926e41fa09ba171faf3fb273324b8e73e4180043",
     "https://erzrf.ru/news/": "e8d7cae473259e1f3987f1036be1c09935b5f4d97cae326963c20d649032b249",
-    "https://ria-stk.ru/news/vse-novosti.php": "f14e3619f4fe7f9e2cc86fb3f7474c16ec0bce00ab68c0202b48c32f5d024b45",
-    "http://government.ru/news/": "e06e564ee8661d1ce59c92092444f2e7285f412ee0db058cac428f0748af394f",
-    "https://stroygaz.ru/news/": "a0e855c92b6d7459261aebfc504b7b0c1628b77cd10aece0f1dd41249e541286",
-    "https://realty.ria.ru/lenta/": "120a7f2f223fa86f235b523f83465605d6a2b7195c64cc56837cf722f36fcc97",
-    "https://rg.ru/tema/ekonomika": "ea4276e41d43b0cdf9e3177456e14e75a978681e05dda45d8e27f3217ad0b7d3",
-    "http://ancb.ru/publication": "ad3dad538072f07aa8c4c72519a6ec526d713ce821b5b270708aaf4fe562f5c7",
+    "https://ria-stk.ru/news/vse-novosti.php": "24560d8a4606a39e1e40d231c0e5e6294a7e9e0699cdbf1a3952c970e4a698dd",
+    "http://government.ru/news/": "9612b825a68f31dbd46f7b1969fbcc8fba7058dcb7698c5e99a8ae20b50ec9c5",
+    "https://stroygaz.ru/news/": "edd5ffa6eb236e94bfe026b82896e2615e30aadf35a2a4f9059b5503b13eaaa5",
+    "https://realty.ria.ru/lenta/": "65e24465d5b3f3cf7447d140b822536550f08bf7c82169f9fb879a7e689c25b4",
+    "https://rg.ru/tema/ekonomika": "5a874c1a7683f0fb1d472b63cf5e36e5c65c5491734993ea6e70f041982be5e6",
+    "http://ancb.ru/publication": "cbd14c7cd563bc3a54cf62d8be0affc8dca93a509d24c6a646b65c6e2bc87e21",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -47054,6 +47062,7 @@
       "https://realty.ria.ru/20260105/zhkkh-2066447656.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/11/deputat-nilov-rasskazal-vozmozhna-li-doindeksaciia-strahovyh-pensij-v-fevrale.html",
       "https://rg.ru/2026/01/11/v-2026-godu-meniaiutsia-pravila-vyezda-iz-strany-dlia-detej-do-14-let.html",
       "https://rg.ru/2026/01/10/ran-rossiia-sohranit-lidiruiushchie-pozicii-v-mire-po-eksportu-pshenicy.html",
       "https://rg.ru/2026/01/10/mash-nazval-stoimost-samoj-dorogoj-kvartiry-sredi-rossijskih-regionov.html",
@@ -47083,7 +47092,6 @@
       "https://rg.ru/2026/01/10/reg-urfo/sverdlovskie-vlasti-prodolzhat-platit-fermeram-za-zhile-dlia-rabotnikov.html",
       "https://rg.ru/2026/01/10/aeroport-sheremetevo-vozobnovil-rabotu-v-shtatnom-rezhime.html",
       "https://rg.ru/2026/01/10/genprokuratura-v-moskovskih-aeroportah-otkryty-mobilnye-priemnye-dlia-passazhirov.html",
-      "https://rg.ru/2026/01/10/reg-cfo/vladislav-ovchinskij-v-stolichnom-rajone-solncevo-mozhno-budet-stroit-chastnye-doma.html",
       "https://rg.ru/2026/01/10/v-stolichnom-aeroportu-sheremetevo-prodolzhaetsia-perenos-vremeni-vyleta-samoletov.html",
       "https://rg.ru/2026/01/10/ria-novosti-ssha-v-2025-godu-vnesli-11-novyh-antirossijskih-zakonoproektov.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
@@ -62292,7 +62300,8 @@
     "cbbfd8155de254f45fb1f9ceedaeabd10c2b705fd882daaa24ad1d2ed462a729": "2026-01-10T21:26:00+03:00",
     "0c1d2b85effd6594b7237d809e02dfb90a20fffbb101a8841b006bf6cf8afa0a": "2026-01-10T21:27:00+03:00",
     "a4bacc008f36e2d2d4d4f0d990e271439f870788a1508aa2d7927c2978fc98a3": "2026-01-10T21:27:00+03:00",
-    "e8f042754d2d5ceb6cc1b43f331a05b2ba9bde5d630b475be661396b67f3ab01": "2026-01-11T00:18:00+03:00"
+    "e8f042754d2d5ceb6cc1b43f331a05b2ba9bde5d630b475be661396b67f3ab01": "2026-01-11T00:18:00+03:00",
+    "b3acd339d03d38416ad53def7f3f6fab779055b23b143dd5d28d54203f55fa12": "2026-01-11T04:28:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -62323,8 +62332,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fdcdc868050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1768079807.4753406
       },
       "warmup_done": false,
@@ -62334,39 +62343,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "f4vj6iTIvlpmryHJ",
+          "value": "5fa7U8eJPG6ctG58",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768081050
+          "expires": 1768096102
         },
         {
           "name": "__ddg10_",
-          "value": "1768079850",
+          "value": "1768094902",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768081050
+          "expires": 1768096102
         },
         {
           "name": "__ddg9_",
-          "value": "172.172.158.2",
+          "value": "57.151.128.133",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768081050
-        },
-        {
-          "name": "__ddg1_",
-          "value": "j0vKsjCIDeiqCcYAPoMz",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1799615850
+          "expires": 1768096102
         },
         {
           "name": "PHPSESSID",
-          "value": "b010d3124c5dea55e4b3f2169319b8ee",
+          "value": "1d6ef6793644b0bc1da1661751c5efa3",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -62393,11 +62394,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "jiC1f5HJNjF78sgTpe6FZJdUQif18PHl",
+          "value": "o3jiN1EeMcVM139YIuR4Muu9byKs7eOr",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768059185
+          "expires": 1768105704
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -62405,12 +62406,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1799152385
+          "expires": 1799198904
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdcdc976c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1768079882.2125952
       },
       "warmup_done": false,
@@ -80966,7 +80967,8 @@
     "https://rg.ru/2026/01/10/mash-nazval-stoimost-samoj-dorogoj-kvartiry-sredi-rossijskih-regionov.html": "https://rg.ru/2026/01/10/mash-nazval-stoimost-samoj-dorogoj-kvartiry-sredi-rossijskih-regionov.html",
     "https://rg.ru/2026/01/10/reg-szfo/v-vologde-vyberut-nazvaniia-dlia-novyh-rechnyh-tramvaev.html": "https://rg.ru/2026/01/10/reg-szfo/v-vologde-vyberut-nazvaniia-dlia-novyh-rechnyh-tramvaev.html",
     "https://rg.ru/2026/01/10/rossiianam-rasskazali-kogda-nelzia-poluchit-nalogovoj-vychet-pri-pokupke-zhilia.html": "https://rg.ru/2026/01/10/rossiianam-rasskazali-kogda-nelzia-poluchit-nalogovoj-vychet-pri-pokupke-zhilia.html",
-    "https://rg.ru/2026/01/11/v-2026-godu-meniaiutsia-pravila-vyezda-iz-strany-dlia-detej-do-14-let.html": "https://rg.ru/2026/01/11/v-2026-godu-meniaiutsia-pravila-vyezda-iz-strany-dlia-detej-do-14-let.html"
+    "https://rg.ru/2026/01/11/v-2026-godu-meniaiutsia-pravila-vyezda-iz-strany-dlia-detej-do-14-let.html": "https://rg.ru/2026/01/11/v-2026-godu-meniaiutsia-pravila-vyezda-iz-strany-dlia-detej-do-14-let.html",
+    "https://rg.ru/2026/01/11/deputat-nilov-rasskazal-vozmozhna-li-doindeksaciia-strahovyh-pensij-v-fevrale.html": "https://rg.ru/2026/01/11/deputat-nilov-rasskazal-vozmozhna-li-doindeksaciia-strahovyh-pensij-v-fevrale.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -96471,7 +96473,8 @@
     "6e7b7fae54df7364bf3fc044cf218699bcf47640": "https://rg.ru/2026/01/10/mash-nazval-stoimost-samoj-dorogoj-kvartiry-sredi-rossijskih-regionov.html",
     "0036158b1692bd29b6df1abc44163f4df7cfa3da": "https://rg.ru/2026/01/10/reg-szfo/v-vologde-vyberut-nazvaniia-dlia-novyh-rechnyh-tramvaev.html",
     "f62ae44445b956347ecc20b2051a8ae1fe42b29d": "https://rg.ru/2026/01/10/rossiianam-rasskazali-kogda-nelzia-poluchit-nalogovoj-vychet-pri-pokupke-zhilia.html",
-    "d779a05418b77c265c86138bed7c303f86bac155": "https://rg.ru/2026/01/11/v-2026-godu-meniaiutsia-pravila-vyezda-iz-strany-dlia-detej-do-14-let.html"
+    "d779a05418b77c265c86138bed7c303f86bac155": "https://rg.ru/2026/01/11/v-2026-godu-meniaiutsia-pravila-vyezda-iz-strany-dlia-detej-do-14-let.html",
+    "44dc22d3331bc42c50ad9b3745ba98997b1c3598": "https://rg.ru/2026/01/11/deputat-nilov-rasskazal-vozmozhna-li-doindeksaciia-strahovyh-pensij-v-fevrale.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -117174,6 +117177,7 @@
     "https://rg.ru/2026/01/10/mash-nazval-stoimost-samoj-dorogoj-kvartiry-sredi-rossijskih-regionov.html": "cbbfd8155de254f45fb1f9ceedaeabd10c2b705fd882daaa24ad1d2ed462a729",
     "https://rg.ru/2026/01/10/reg-szfo/v-vologde-vyberut-nazvaniia-dlia-novyh-rechnyh-tramvaev.html": "0c1d2b85effd6594b7237d809e02dfb90a20fffbb101a8841b006bf6cf8afa0a",
     "https://rg.ru/2026/01/10/rossiianam-rasskazali-kogda-nelzia-poluchit-nalogovoj-vychet-pri-pokupke-zhilia.html": "a4bacc008f36e2d2d4d4f0d990e271439f870788a1508aa2d7927c2978fc98a3",
-    "https://rg.ru/2026/01/11/v-2026-godu-meniaiutsia-pravila-vyezda-iz-strany-dlia-detej-do-14-let.html": "e8f042754d2d5ceb6cc1b43f331a05b2ba9bde5d630b475be661396b67f3ab01"
+    "https://rg.ru/2026/01/11/v-2026-godu-meniaiutsia-pravila-vyezda-iz-strany-dlia-detej-do-14-let.html": "e8f042754d2d5ceb6cc1b43f331a05b2ba9bde5d630b475be661396b67f3ab01",
+    "https://rg.ru/2026/01/11/deputat-nilov-rasskazal-vozmozhna-li-doindeksaciia-strahovyh-pensij-v-fevrale.html": "b3acd339d03d38416ad53def7f3f6fab779055b23b143dd5d28d54203f55fa12"
   }
 }
