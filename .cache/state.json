@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 11 Jan 2026 01:29:04 GMT"
+      "Last-Modified": "Sun, 11 Jan 2026 04:11:12 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -46694,9 +46694,26 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff548f44c20>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff548f32490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff548f32350>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff54a147820>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff548e2c050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff54a13bd10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff548f33750>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff548f33250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff548f32d50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff548f32ad0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff548f32850>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2026-01-11T01:28:34.299903+00:00",
+    "last_run": "2026-01-11T04:11:22.561606+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -46709,56 +46726,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 526.0168010000257,
-        "connect_ms": 402.4524679999786,
-        "response_ms": 928.4692690000043,
+        "dns_ms": 402.48886799997763,
+        "connect_ms": 612.289517000022,
+        "response_ms": 1014.7783849999996,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 317.85564500000874,
-        "connect_ms": 642.6080520000141,
-        "response_ms": 960.4636970000229,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff54a13bd10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 5020.932419000019,
+        "dns_ms": 586.052460000019,
         "connect_ms": 0.0,
-        "response_ms": 593.5645219999515,
+        "response_ms": 497.0536940000443,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 500.9852740000156,
-        "connect_ms": 240.08553699997037,
-        "response_ms": 741.070810999986,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff548f32850>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "076bcc75b973b499c187e0e149b616f77fadcc556936c3dfc6b2e1f4c340164e",
+    "https://ardexpert.ru/article": "7ae19f44f3708fa78eae03e1e66142e89f851e648e26192dc0708283940221c4",
     "https://www.gostinfo.ru/News/List": "b6953b4edb077aab96de07b4d6bf7fc754c6e61c78b9f8cafbda6a2f056c0783",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3abdade2d7f0e28058016cae2de3a81ebc1652d57da7dc868c08772bb0c678ea",
-    "https://eec.eaeunion.org/news/": "91dbeed143245435a1f823242c98d4eef64876eb78a3be12e70310c384291130",
+    "https://eec.eaeunion.org/news/": "fad015b4099e73f8373d469289fa81f08177506182969290a32c515e6b7fea59",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "99d07b36c44201be295a22eab310892d0497282b58c21b9d3306c2d4e7a56037",
-    "https://www.metalinfo.ru/ru/news": "72e91262dd69e0f964cef82a10e729b53ed319ee655a0d5bc8bec4537d83d6eb",
-    "https://www.pnp.ru/economics/": "c54fb0069c99697173e25624926e41fa09ba171faf3fb273324b8e73e4180043",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "8027dcbc27f3d3b6a7e329d340c2873f85ca199d0744795829d4e76bbf69cbad",
+    "https://www.metalinfo.ru/ru/news": "c4f68c4222c246c1312ab0352df376ed1e682f8ad5fcfe9cddaa8b07face0819",
+    "https://www.pnp.ru/economics/": "d73891ad285b9bc2f3553042b1c148eb8f4ad6490a99aa535c6a0b0344eadfad",
     "https://erzrf.ru/news/": "e8d7cae473259e1f3987f1036be1c09935b5f4d97cae326963c20d649032b249",
-    "https://ria-stk.ru/news/vse-novosti.php": "24560d8a4606a39e1e40d231c0e5e6294a7e9e0699cdbf1a3952c970e4a698dd",
-    "http://government.ru/news/": "9612b825a68f31dbd46f7b1969fbcc8fba7058dcb7698c5e99a8ae20b50ec9c5",
-    "https://stroygaz.ru/news/": "edd5ffa6eb236e94bfe026b82896e2615e30aadf35a2a4f9059b5503b13eaaa5",
-    "https://realty.ria.ru/lenta/": "65e24465d5b3f3cf7447d140b822536550f08bf7c82169f9fb879a7e689c25b4",
+    "https://ria-stk.ru/news/vse-novosti.php": "d9d3212576cd8be354d3ab07c1b828c72ecfe7cb14300b9f251963ebb90e9a82",
+    "http://government.ru/news/": "7ca92cccd44e29073fab2e3852cd6089a84c27fad99aac42e1db35d0b044a1a9",
+    "https://stroygaz.ru/news/": "369c956dad8b0f8e64373257ac9d8a0db374a68f7f22ed844923d1b7e9960326",
+    "https://realty.ria.ru/lenta/": "d974452b484a093fa3ccefa581e2fd5d88d5285f99fa7877895ee5415e9db535",
     "https://rg.ru/tema/ekonomika": "5a874c1a7683f0fb1d472b63cf5e36e5c65c5491734993ea6e70f041982be5e6",
-    "http://ancb.ru/publication": "cbd14c7cd563bc3a54cf62d8be0affc8dca93a509d24c6a646b65c6e2bc87e21",
+    "http://ancb.ru/publication": "ad3dad538072f07aa8c4c72519a6ec526d713ce821b5b270708aaf4fe562f5c7",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -62332,9 +62349,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1768079807.4753406
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff548e2c050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1768104587.6207044
       },
       "warmup_done": false,
       "last_success_path": null
@@ -62343,31 +62360,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "5fa7U8eJPG6ctG58",
+          "value": "wwoYGvPkWYOLQjuo",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768096102
+          "expires": 1768105829
         },
         {
           "name": "__ddg10_",
-          "value": "1768094902",
+          "value": "1768104629",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768096102
+          "expires": 1768105829
         },
         {
           "name": "__ddg9_",
-          "value": "57.151.128.133",
+          "value": "135.119.238.200",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768096102
+          "expires": 1768105829
+        },
+        {
+          "name": "__ddg1_",
+          "value": "h5XvhdCFb9WVzOloVVWw",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1799640629
         },
         {
           "name": "PHPSESSID",
-          "value": "1d6ef6793644b0bc1da1661751c5efa3",
+          "value": "c2f8e906972bad037a8619a70e89aeb5",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -62410,9 +62435,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1768079882.2125952
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff548f32ad0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 4,
+        "last_ts": 1768104661.5543437
       },
       "warmup_done": false,
       "last_success_path": null
