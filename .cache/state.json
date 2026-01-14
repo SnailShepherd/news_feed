@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 13 Jan 2026 21:19:01 GMT"
+      "Last-Modified": "Wed, 14 Jan 2026 01:25:53 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"1uopy8e2lx3p2i\""
+      "ETag": "\"ullsm35wor3sf0\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -37062,6 +37062,9 @@
     },
     "https://rg.ru/2026/01/13/toyota-i-kia-zaregistrirovali-v-rossii-novye-tovarnye-znaki.html": {
       "ETag": "\"uxjc2obo3w294o\""
+    },
+    "https://rg.ru/2026/01/13/vyshli-na-plato.html": {
+      "ETag": "\"8uppjbxfek1sbb\""
     }
   },
   "stats": {
@@ -47849,9 +47852,26 @@
         "source": "Минфин России",
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbb9f61cc20>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbb9f60e490>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbb9f60e350>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbba09875c0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbba0987ce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbba099bd10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbb9f3387d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbb9f338a50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbb9f338cd0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbb9f338f50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbb9f3391d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2026-01-13T21:18:44.788086+00:00",
+    "last_run": "2026-01-14T01:26:06.088206+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -47864,56 +47884,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 389.10450999992463,
-        "connect_ms": 526.0795040001085,
-        "response_ms": 915.1840140000331,
+        "dns_ms": 136.09726900000396,
+        "connect_ms": 749.9876159999985,
+        "response_ms": 886.0848850000025,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 294.98161599997275,
-        "connect_ms": 733.0897330000425,
-        "response_ms": 1028.0713490000153,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 6,
+        "status": null,
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbba099bd10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 563.3791330000122,
-        "connect_ms": 64.73453399996743,
-        "response_ms": 628.1136669999796,
+        "dns_ms": 731.125306999985,
+        "connect_ms": 238.62210199999367,
+        "response_ms": 969.7474089999787,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.5464450000545185,
-        "connect_ms": 315.5623289999312,
-        "response_ms": 316.1087739999857,
-        "attempts": 1,
-        "status": 200,
-        "error": null
+        "dns_ms": null,
+        "connect_ms": null,
+        "response_ms": null,
+        "attempts": 5,
+        "status": null,
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbb9f3391d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "d35e6b25557230bfbabadca3e3a30f02e6927c2dd8c6e6ce91f850718ad5acfd",
+    "https://ardexpert.ru/article": "9b46d54143a769880ccce6f36c9eb289205344ba27d088d53c4c90e2531e59c5",
     "https://www.gostinfo.ru/News/List": "127dead13bca194bdec776ee6972f6fa69d52e5a01968f6221cae01b212315dd",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "916fd348b3e0a98243156131f628fd810a1df6ed19c67101d062d9c737d6ee83",
-    "https://eec.eaeunion.org/news/": "1f2e85cc970e4ac810ae262aecced0ec2e8c31ac997b2b558090857904f3848f",
+    "https://eec.eaeunion.org/news/": "dffa61b868a508c9ca4c70a3ea7cf76bb7303a9693a2d6fe67b85426e82d517e",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "0a6f94d3e817e24f186148d0f3db3a84f013c0923a364c31d180f377fec535b7",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "a92cc91151b52fb7981a980a06b1ac63c21929e24ae3928cefdaf0da2a4fb7eb",
     "https://www.metalinfo.ru/ru/news": "477f57f9a7b699504eb70c105086afea3d1b9349566a0b464851df5613b1669e",
-    "https://www.pnp.ru/economics/": "91beea1e45303073cea83588025f1c6b6c13857a169c43edd8f0d94a870c7c76",
+    "https://www.pnp.ru/economics/": "650e8524ed26e6c55c6e5ab415c32dc7f9bb7953e6de7062cba66b85ddcabec3",
     "https://erzrf.ru/news/": "a14e6ca7bec08a862875ae8712b583254f6cab11f666f02591d128e69e6e17fe",
-    "https://ria-stk.ru/news/vse-novosti.php": "f7cd0d7f05a2803b847db84f512ccfed00cbafdd9a6bafba8b80cae32f8500d4",
-    "http://government.ru/news/": "acab77d95580bedf06da09d54df7802dcd221b04f1f17d62696057ec11df20fb",
-    "https://stroygaz.ru/news/": "90972a7f2161f510d7444c76f410203cbe98fc75b4e3428024fc3a92f45b4dba",
-    "https://realty.ria.ru/lenta/": "f7c05b91ceca6eb189cc398009abde2692ff1cde6d9c0ecbd79a8ae256e37743",
-    "https://rg.ru/tema/ekonomika": "f98fcba22d213a1dbbdd58735aca094f119f5781119bd4a31e90299d96e391c7",
-    "http://ancb.ru/publication": "b88c28dfa16bc9257647e6bbc374c0cd9d805dcdba8a9e2fe990e83deb824ea4",
+    "https://ria-stk.ru/news/vse-novosti.php": "c4151dc4f5c50583a686ffeef604ea009ea12c1a1f2189b66bd2dfdc88505e21",
+    "http://government.ru/news/": "b1c290555fcba5e4ee6b66d72be42e7c5923827bbcfc571b8512d703090153e7",
+    "https://stroygaz.ru/news/": "c11f0bb40fe14d9c10884d14ba286bee724aa74baa10ed7ed4da815eb4bfcdc1",
+    "https://realty.ria.ru/lenta/": "135d05656155ad7f590973bac059b418179ab5b49cd7e3a8cf16f66623a2fcbb",
+    "https://rg.ru/tema/ekonomika": "1147bda061848f082b55e22754a250e13ab2e32e088847b654c5fb930f9c5cbe",
+    "http://ancb.ru/publication": "794d2eaeb3e0c456e8e119c7cf2ecf579b5ef3dd7ab1b70b28a67e6accbf5e30",
     "https://notim.ru": "18134fea44acac90745084d139f378761bc0fcb4a766beb94b41869318839518",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -48217,6 +48237,7 @@
       "https://realty.ria.ru/20260112/rossija-2067351965.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/13/vyshli-na-plato.html",
       "https://rg.ru/2026/01/13/reg-cfo/byl-sugrob-i-net-ego.html",
       "https://rg.ru/2026/01/13/minzdrav-novye-normy-proverki-rabotnikov-u-psihiatra-nosiat-tehnicheskij-harakter.html",
       "https://rg.ru/2026/01/13/reg-cfo/sila-toka.html",
@@ -48248,7 +48269,6 @@
       "https://rg.ru/2026/01/13/apple-povysit-ceny-na-platnye-servisy-v-rossii.html",
       "https://rg.ru/2026/01/13/stoimost-serebra-obnovila-istoricheskij-maksimum-prevysiv-87-dollarov.html",
       "https://rg.ru/2026/01/13/cb-zapustil-servis-anonimnogo-informirovaniia-ob-insajderskoj-torgovle.html",
-      "https://rg.ru/2026/01/13/mezhdunarodnye-rezervy-rf-za-nedeliu-vyrosli-na-113-mlrd-dollarov.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -63853,7 +63873,8 @@
     "a8652cc6cdbdf6a12f4be52d0394e6e446fc1c109c44be2f9d0b27690943df1f": "2026-01-14T00:18:00+03:00",
     "967331126a6f44fe6c427bc9258e63e880f3822e1580cdca8dd7908e85d5642b": "2026-01-14T00:18:00+03:00",
     "688470393cee77c590f86fc3704a52e1e873e5efcbc089fd069e4ab59d680a9f": "2026-01-14T00:18:00+03:00",
-    "644d11eb9d7fc7b53bd48d8209fa9ec1620748e2cf656281b3f1b3922e44a08f": "2026-01-14T00:18:00+03:00"
+    "644d11eb9d7fc7b53bd48d8209fa9ec1620748e2cf656281b3f1b3922e44a08f": "2026-01-14T00:18:00+03:00",
+    "35abe211ffc551224529849d4317cdd15751eefe96492a9beb9e2ffb8b28ae82": "2026-01-14T04:26:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -63884,9 +63905,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1768317775.4457006
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbba0987ce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 5,
+        "last_ts": 1768353867.239094
       },
       "warmup_done": false,
       "last_success_path": null
@@ -63895,39 +63916,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "ugBlHyV3kTNLLGoX",
+          "value": "V6glvHVaENxpxB9o",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768340298
+          "expires": 1768355110
         },
         {
           "name": "__ddg10_",
-          "value": "1768339098",
+          "value": "1768353910",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768340298
+          "expires": 1768355110
         },
         {
           "name": "__ddg9_",
-          "value": "4.246.134.181",
+          "value": "135.119.236.48",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768340298
-        },
-        {
-          "name": "__ddg1_",
-          "value": "FW8GVMVdfwmXEQIlwrLH",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1799875098
+          "expires": 1768355110
         },
         {
           "name": "PHPSESSID",
-          "value": "ef0fee17793499a98cc96303c58db90c",
+          "value": "b2cd7ce5ea444e5a501c17441471c23b",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -63970,9 +63983,9 @@
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
-        "last_ts": 1768317934.5382464
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbb9f338f50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 4,
+        "last_ts": 1768353942.806633
       },
       "warmup_done": false,
       "last_success_path": null
@@ -83003,7 +83016,8 @@
     "https://rg.ru/2026/01/13/minzdrav-novye-normy-proverki-rabotnikov-u-psihiatra-nosiat-tehnicheskij-harakter.html": "https://rg.ru/2026/01/13/minzdrav-novye-normy-proverki-rabotnikov-u-psihiatra-nosiat-tehnicheskij-harakter.html",
     "https://rg.ru/2026/01/13/reg-cfo/sila-toka.html": "https://rg.ru/2026/01/13/reg-cfo/sila-toka.html",
     "https://rg.ru/2026/01/13/reg-cfo/dostaviat-vovremia.html": "https://rg.ru/2026/01/13/reg-cfo/dostaviat-vovremia.html",
-    "https://rg.ru/2026/01/13/toyota-i-kia-zaregistrirovali-v-rossii-novye-tovarnye-znaki.html": "https://rg.ru/2026/01/13/toyota-i-kia-zaregistrirovali-v-rossii-novye-tovarnye-znaki.html"
+    "https://rg.ru/2026/01/13/toyota-i-kia-zaregistrirovali-v-rossii-novye-tovarnye-znaki.html": "https://rg.ru/2026/01/13/toyota-i-kia-zaregistrirovali-v-rossii-novye-tovarnye-znaki.html",
+    "https://rg.ru/2026/01/13/vyshli-na-plato.html": "https://rg.ru/2026/01/13/vyshli-na-plato.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -98908,7 +98922,8 @@
     "572a25e1ba13913151ca95f365d646ded9380b23": "https://rg.ru/2026/01/13/minzdrav-novye-normy-proverki-rabotnikov-u-psihiatra-nosiat-tehnicheskij-harakter.html",
     "1c55bb7a7d9947ea7d85fc865d816ca62b4a3954": "https://rg.ru/2026/01/13/reg-cfo/sila-toka.html",
     "5f4550879af7a223a4d8ffd16fa19695e87adc39": "https://rg.ru/2026/01/13/reg-cfo/dostaviat-vovremia.html",
-    "0e1f8f810da14cfded387c0b9b3789b825bdb1a7": "https://rg.ru/2026/01/13/toyota-i-kia-zaregistrirovali-v-rossii-novye-tovarnye-znaki.html"
+    "0e1f8f810da14cfded387c0b9b3789b825bdb1a7": "https://rg.ru/2026/01/13/toyota-i-kia-zaregistrirovali-v-rossii-novye-tovarnye-znaki.html",
+    "376569bae71dcc5503b0e8b470c3fa26d3959361": "https://rg.ru/2026/01/13/vyshli-na-plato.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -120136,6 +120151,7 @@
     "https://rg.ru/2026/01/13/minzdrav-novye-normy-proverki-rabotnikov-u-psihiatra-nosiat-tehnicheskij-harakter.html": "a8652cc6cdbdf6a12f4be52d0394e6e446fc1c109c44be2f9d0b27690943df1f",
     "https://rg.ru/2026/01/13/reg-cfo/sila-toka.html": "967331126a6f44fe6c427bc9258e63e880f3822e1580cdca8dd7908e85d5642b",
     "https://rg.ru/2026/01/13/reg-cfo/dostaviat-vovremia.html": "688470393cee77c590f86fc3704a52e1e873e5efcbc089fd069e4ab59d680a9f",
-    "https://rg.ru/2026/01/13/toyota-i-kia-zaregistrirovali-v-rossii-novye-tovarnye-znaki.html": "644d11eb9d7fc7b53bd48d8209fa9ec1620748e2cf656281b3f1b3922e44a08f"
+    "https://rg.ru/2026/01/13/toyota-i-kia-zaregistrirovali-v-rossii-novye-tovarnye-znaki.html": "644d11eb9d7fc7b53bd48d8209fa9ec1620748e2cf656281b3f1b3922e44a08f",
+    "https://rg.ru/2026/01/13/vyshli-na-plato.html": "35abe211ffc551224529849d4317cdd15751eefe96492a9beb9e2ffb8b28ae82"
   }
 }
