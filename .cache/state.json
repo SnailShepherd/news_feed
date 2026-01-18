@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 18 Jan 2026 01:29:08 GMT"
+      "Last-Modified": "Sun, 18 Jan 2026 04:05:38 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"g12mn6bumc3lba\""
+      "ETag": "\"doz97nm7jj3lbw\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -38224,6 +38224,9 @@
     },
     "https://rg.ru/2026/01/18/deputat-iakubovskij-s-1-marta-v-rossii-vvodiatsia-novye-pravila-aviapereletov.html": {
       "ETag": "\"ufa2g9is6a1q64\""
+    },
+    "https://rg.ru/2026/01/18/reg-pfo/rezhim-kover-vveli-v-penzenskoj-oblasti-gde-obiavlena-ugroza-ataki-bpla.html": {
+      "ETag": "\"6lmu6jsg4p1nh8\""
     }
   },
   "stats": {
@@ -49416,9 +49419,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fab3c557610>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fab3d8f7390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fab3c557390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fab3c557110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fab3c556c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-18T01:29:28.000752+00:00",
+    "last_run": "2026-01-18T04:05:05.384898+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -49431,56 +49439,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 548.9480100000037,
-        "connect_ms": 683.8019680000116,
-        "response_ms": 1232.7499780000153,
+        "dns_ms": 304.1330670000093,
+        "connect_ms": 641.1034710000081,
+        "response_ms": 945.2365380000174,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fab3d89fe30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 180.95288000000664,
+        "connect_ms": 1175.275432999996,
+        "response_ms": 1356.2283130000026,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 810.3677900000434,
-        "connect_ms": 198.4187519999523,
-        "response_ms": 1008.7865419999957,
+        "dns_ms": 825.60207100002,
+        "connect_ms": 0.0,
+        "response_ms": 535.8083179999937,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fab3c556c10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 398.94826500000136,
+        "connect_ms": 253.06924000000208,
+        "response_ms": 652.0175050000034,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "5f845cf3eff1ba4c76004eaf4159b9be7b40f60d289b310ca48c7e0670e84920",
+    "https://ardexpert.ru/article": "dbca6e446f730746bd14b3cee4206438e4ed253f0451861c4378de2358a4e2b5",
     "https://www.gostinfo.ru/News/List": "439521adc1c452aac2764b58f716ba8313788dc3491075cb4f9c2199fb70b7ec",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "916fd348b3e0a98243156131f628fd810a1df6ed19c67101d062d9c737d6ee83",
-    "https://eec.eaeunion.org/news/": "552e3f0796f17bfb7d3aec7997afcaa00eb231500ad671888768c72ea2fb7186",
+    "https://eec.eaeunion.org/news/": "bceff03ae45c32e4670c8019227565ce408125f054813b7c651bc78488a3cd4e",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "4f03e511e18babfe87e804a3332603c926684a7318ffafc99f957fde8df1c575",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "eb6f9878885b721622dbce2cb957ccf4184ff040c45cae518bbcf4fdeb47dd57",
     "https://www.metalinfo.ru/ru/news": "8c52924ba2ae478e1eae107863b877e4ce41ffea50ab8f19f860722954d45327",
-    "https://www.pnp.ru/economics/": "33d53db140c0fd28a129ce7bc5fee70da9637236786045dc2af23b132f4cf775",
+    "https://www.pnp.ru/economics/": "0e381ed7a75ef74ef96b57c2f0a78a9bb6447b608c883ce47d67af7e2933a0bd",
     "https://erzrf.ru/news/": "a14e6ca7bec08a862875ae8712b583254f6cab11f666f02591d128e69e6e17fe",
-    "https://ria-stk.ru/news/vse-novosti.php": "55406749d11dc996019b653e96f61906fd8ac6f53d48a4b4f0401755f8bb70a8",
-    "http://government.ru/news/": "9257cc1450939ea2dcfc24b804b1264827d185f33c56e2310701e78c81c4c4a9",
-    "https://stroygaz.ru/news/": "44bd710e59a370f978974b1f2a5873c0c0c1902ec80a0850f4d0b5ed4dbf90e1",
-    "https://realty.ria.ru/lenta/": "57f6079c7e4cc3d46e155d06571b502115ac3d508924e393e254e90d7a8fb99b",
-    "https://rg.ru/tema/ekonomika": "ff80ce966a600091b9fc59475353839d06d6b9046a62b12430a8cd5e31a63b31",
-    "http://ancb.ru/publication": "a82a227174ab7402ec5a4f7c6b7f5de3da17fbbb3c79f4142d8d3b7feed0b073",
+    "https://ria-stk.ru/news/vse-novosti.php": "367a2f9e0ad335099df611fface2781120c8142c43523040f000c687da8ab1bc",
+    "http://government.ru/news/": "b4c2dec8f38f4f041b792a6c03002fb3053946a8efafa8186396d806dd69de09",
+    "https://stroygaz.ru/news/": "34bb693888fe225e69bfdcdeedc79bee28e82533dd3619d1302da07aa3a53b45",
+    "https://realty.ria.ru/lenta/": "c8680f6900b5cb0de17b0ca69bf21600e17bd6525db9ea657702020d39b11028",
+    "https://rg.ru/tema/ekonomika": "7afe295e70433b8bcfb563893e48cb074758c6628a49cdced167dc751efa08f7",
+    "http://ancb.ru/publication": "3deb2dbd51a63a6f5ea994f3fb765e4a37521d71f029f02ef14efb29c9280dc2",
     "https://notim.ru": "4a22d79c44aa2ff71880fcf9ec2a15468a447d183649e6d077bba4d25f52a037",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -49784,6 +49792,7 @@
       "https://realty.ria.ru/20260114/glava-2067859134.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/18/reg-pfo/rezhim-kover-vveli-v-penzenskoj-oblasti-gde-obiavlena-ugroza-ataki-bpla.html",
       "https://rg.ru/2026/01/18/ekspert-irina-andrievskaia-nakopit-million-k-pensii-po-pds-realno.html",
       "https://rg.ru/2026/01/18/deputat-iakubovskij-s-1-marta-v-rossii-vvodiatsia-novye-pravila-aviapereletov.html",
       "https://rg.ru/2026/01/18/ekspert-kovalenko-poiasnil-pochemu-analogi-lekarstv-deshevle-originalnyh.html",
@@ -49815,7 +49824,6 @@
       "https://rg.ru/2026/01/16/v-rkn-oprovergli-vvedenie-novyh-ogranichenij-v-otnoshenii-telegram.html",
       "https://rg.ru/2026/01/16/putin-prizval-k-povsemestnomu-ispolzovaniiu-bespilotnyh-sistem.html",
       "https://rg.ru/2026/01/16/v-sochi-iz-za-shoda-shod-grunta-na-zheleznuiu-dorogu-zaderzhany-chetyre-poezda.html",
-      "https://rg.ru/2026/01/16/za-tri-goda-rzhd-planiruiut-pustit-pochti-140-bespilotnyh-elektropoezdov.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -65968,7 +65976,8 @@
     "7c5af38d7d9e7771b5078bb5a553d11f27c6a3ac941db180ce62ed374fd43e0f": "2026-01-18T00:18:00+03:00",
     "25791777a87101c4df53a180f8cb5de060c3bc4c6fef396ef3bb4f06f62f5f30": "2026-01-18T00:18:00+03:00",
     "5b6cbcf05e437390a7b28948040cb82aac2867ba133cb9040a338daef2311520": "2026-01-18T04:29:00+03:00",
-    "3bf1a5663a32f22975cacec4d888228a3aa95bd3b78492ce255820ce7a13b55b": "2026-01-18T04:29:00+03:00"
+    "3bf1a5663a32f22975cacec4d888228a3aa95bd3b78492ce255820ce7a13b55b": "2026-01-18T04:29:00+03:00",
+    "8caf96085f331144da3696feaae30bdd0070619abfb37ab097b3894881ca3287": "2026-01-18T07:05:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -65999,8 +66008,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fab3d887ce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1768699659.939731
       },
       "warmup_done": false,
@@ -66010,31 +66019,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "8XjFEjpkUPUee66U",
+          "value": "zRhoYhVVq5oNoRx4",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768700905
+          "expires": 1768710295
         },
         {
           "name": "__ddg10_",
-          "value": "1768699705",
+          "value": "1768709095",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768700905
+          "expires": 1768710295
         },
         {
           "name": "__ddg9_",
-          "value": "52.159.229.163",
+          "value": "135.232.201.48",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768700905
+          "expires": 1768710295
+        },
+        {
+          "name": "__ddg1_",
+          "value": "Nd2hiHNRQeODB9tapRYG",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1800245095
         },
         {
           "name": "PHPSESSID",
-          "value": "62d1c24e56bf0704e0e3cc2a5fa8fca2",
+          "value": "47b547535ab98895d14e61d006de4ca2",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -66061,11 +66078,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "uJCHEKsLyiogR6tZT1ktZ0tiwjGTArpg",
+          "value": "YTCmuC1g29eaXDIpvmzwt84Q6F9EF9tG",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768685035
+          "expires": 1768719897
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -66073,12 +66090,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1799778235
+          "expires": 1799813097
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fab3c557110>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1768699737.7238593
       },
       "warmup_done": false,
@@ -85799,7 +85816,8 @@
     "https://rg.ru/2026/01/18/ekspert-kovalenko-poiasnil-pochemu-analogi-lekarstv-deshevle-originalnyh.html": "https://rg.ru/2026/01/18/ekspert-kovalenko-poiasnil-pochemu-analogi-lekarstv-deshevle-originalnyh.html",
     "https://rg.ru/2026/01/17/politolog-bovt-donald-tramp-ottopchetsia-na-globalistah-v-davose.html": "https://rg.ru/2026/01/17/politolog-bovt-donald-tramp-ottopchetsia-na-globalistah-v-davose.html",
     "https://rg.ru/2026/01/18/ekspert-irina-andrievskaia-nakopit-million-k-pensii-po-pds-realno.html": "https://rg.ru/2026/01/18/ekspert-irina-andrievskaia-nakopit-million-k-pensii-po-pds-realno.html",
-    "https://rg.ru/2026/01/18/deputat-iakubovskij-s-1-marta-v-rossii-vvodiatsia-novye-pravila-aviapereletov.html": "https://rg.ru/2026/01/18/deputat-iakubovskij-s-1-marta-v-rossii-vvodiatsia-novye-pravila-aviapereletov.html"
+    "https://rg.ru/2026/01/18/deputat-iakubovskij-s-1-marta-v-rossii-vvodiatsia-novye-pravila-aviapereletov.html": "https://rg.ru/2026/01/18/deputat-iakubovskij-s-1-marta-v-rossii-vvodiatsia-novye-pravila-aviapereletov.html",
+    "https://rg.ru/2026/01/18/reg-pfo/rezhim-kover-vveli-v-penzenskoj-oblasti-gde-obiavlena-ugroza-ataki-bpla.html": "https://rg.ru/2026/01/18/reg-pfo/rezhim-kover-vveli-v-penzenskoj-oblasti-gde-obiavlena-ugroza-ataki-bpla.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -102254,7 +102272,8 @@
     "c42a0cb23f9aa45bf2460a3d26552892f21af7a9": "https://rg.ru/2026/01/18/ekspert-kovalenko-poiasnil-pochemu-analogi-lekarstv-deshevle-originalnyh.html",
     "7292400bfa36c2ff9f9fb53c6271d908b7d21dd0": "https://rg.ru/2026/01/17/politolog-bovt-donald-tramp-ottopchetsia-na-globalistah-v-davose.html",
     "46cedc4887d9ed60d35060c1fbadd55b1cf8873b": "https://rg.ru/2026/01/18/ekspert-irina-andrievskaia-nakopit-million-k-pensii-po-pds-realno.html",
-    "d315380318e89d935343592aad3577a4f3fab522": "https://rg.ru/2026/01/18/deputat-iakubovskij-s-1-marta-v-rossii-vvodiatsia-novye-pravila-aviapereletov.html"
+    "d315380318e89d935343592aad3577a4f3fab522": "https://rg.ru/2026/01/18/deputat-iakubovskij-s-1-marta-v-rossii-vvodiatsia-novye-pravila-aviapereletov.html",
+    "b61d8333f3629741dbfc8db93a99ae8fd669a614": "https://rg.ru/2026/01/18/reg-pfo/rezhim-kover-vveli-v-penzenskoj-oblasti-gde-obiavlena-ugroza-ataki-bpla.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -124227,6 +124246,7 @@
     "https://rg.ru/2026/01/18/ekspert-kovalenko-poiasnil-pochemu-analogi-lekarstv-deshevle-originalnyh.html": "7c5af38d7d9e7771b5078bb5a553d11f27c6a3ac941db180ce62ed374fd43e0f",
     "https://rg.ru/2026/01/17/politolog-bovt-donald-tramp-ottopchetsia-na-globalistah-v-davose.html": "25791777a87101c4df53a180f8cb5de060c3bc4c6fef396ef3bb4f06f62f5f30",
     "https://rg.ru/2026/01/18/ekspert-irina-andrievskaia-nakopit-million-k-pensii-po-pds-realno.html": "5b6cbcf05e437390a7b28948040cb82aac2867ba133cb9040a338daef2311520",
-    "https://rg.ru/2026/01/18/deputat-iakubovskij-s-1-marta-v-rossii-vvodiatsia-novye-pravila-aviapereletov.html": "3bf1a5663a32f22975cacec4d888228a3aa95bd3b78492ce255820ce7a13b55b"
+    "https://rg.ru/2026/01/18/deputat-iakubovskij-s-1-marta-v-rossii-vvodiatsia-novye-pravila-aviapereletov.html": "3bf1a5663a32f22975cacec4d888228a3aa95bd3b78492ce255820ce7a13b55b",
+    "https://rg.ru/2026/01/18/reg-pfo/rezhim-kover-vveli-v-penzenskoj-oblasti-gde-obiavlena-ugroza-ataki-bpla.html": "8caf96085f331144da3696feaae30bdd0070619abfb37ab097b3894881ca3287"
   }
 }
