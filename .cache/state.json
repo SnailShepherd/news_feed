@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 20 Jan 2026 01:22:53 GMT"
+      "Last-Modified": "Tue, 20 Jan 2026 04:09:19 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"132gm31scft4eef\""
+      "ETag": "\"xlo2jxyy384ld4\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -38688,6 +38688,22 @@
     },
     "https://rg.ru/2026/01/20/reg-szfo/s-1-ianvaria-u-severnogo-zavoza-poiavilis-morskoj-operator-i-cifrovaia-platforma.html": {
       "ETag": "\"hhr08yzzzd2561\""
+    },
+    "https://www.metalinfo.ru/ru/news/180384": {},
+    "https://www.metalinfo.ru/ru/news/180395": {},
+    "https://www.metalinfo.ru/ru/news/180393": {},
+    "https://www.metalinfo.ru/ru/news/180391": {},
+    "https://www.metalinfo.ru/ru/news/180380": {},
+    "https://www.metalinfo.ru/ru/news/180369": {},
+    "https://www.metalinfo.ru/ru/news/180364": {},
+    "https://realty.ria.ru/20260120/rieltory-2068242640.html": {
+      "Last-Modified": "Tue, 20 Jan 2026 02:00:04 GMT"
+    },
+    "https://rg.ru/2026/01/20/zhizn-nad-oblakami.html": {
+      "ETag": "\"12tu88jib3l242t\""
+    },
+    "https://rg.ru/2026/01/20/reg-pfo/kakie-goroda-i-sela-vkliuchat-v-zolotoe-kolco-rossii.html": {
+      "ETag": "\"2mrz2imk7l2w1e\""
     }
   },
   "stats": {
@@ -50061,9 +50077,26 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6863cc8550>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6863cc8910>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6863cc8b90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6863cc8e10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6863cc9090>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe918fe8d70>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe918fde710>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe918fde5d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe91a2bb5c0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe91a2bbce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe91a2a7bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe918fdf9d0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe91a2fb390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe91a2fbb10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe918984050>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe9189842d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2026-01-20T01:23:10.460291+00:00",
+    "last_run": "2026-01-20T04:09:40.128984+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -50076,9 +50109,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 400.20523400002617,
-        "connect_ms": 632.7645169999698,
-        "response_ms": 1032.969750999996,
+        "dns_ms": 904.0410130000112,
+        "connect_ms": 439.4229729999779,
+        "response_ms": 1343.463985999989,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -50089,12 +50122,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6865457ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe91a2a7bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 1200.8788370000048,
-        "connect_ms": 3341.8738029999986,
-        "response_ms": 4542.752640000003,
+        "dns_ms": 776.8613279999954,
+        "connect_ms": 250.49235700004147,
+        "response_ms": 1027.3536850000369,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -50105,26 +50138,26 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6863cc9090>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe9189842d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "62a0e601388a244f815b607ad2c85130dbfdff203c9db908a7dee885006cc750",
+    "https://ardexpert.ru/article": "e2faa2d749c001bca860f5119961c0ce88e665db81a844b888d191b9962e5745",
     "https://www.gostinfo.ru/News/List": "069ffa6a609a7affc8a8103891f46f151ce7e1b81e271be6869e131f1aa0415c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "916fd348b3e0a98243156131f628fd810a1df6ed19c67101d062d9c737d6ee83",
-    "https://eec.eaeunion.org/news/": "9cc7f5942b07b9019ba5dbd5b5c0fb1ceab717b920d7cdea2873b6bc16eddbe1",
+    "https://eec.eaeunion.org/news/": "67ed5291b0725ddb3c9ba0fbbca2e73a4ab6b00aebb3564f67e9e6967272f008",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "023c4f7cda1310e837cd5dfae62fe494f21e529a422fe140afc1801c4db03e47",
-    "https://www.metalinfo.ru/ru/news": "e11b5b0b6356a33c869ff989a293529bb3d72cd043f629377f448c7f46abc105",
-    "https://www.pnp.ru/economics/": "27059a550c6a03afe17a200f842fc1e089e8e86cf5d04e6dd200f430dda8c7ff",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "eec4055fd2172e62d5d24273f97868fd78d821b3ef25b31df65c7e911a8a0000",
+    "https://www.metalinfo.ru/ru/news": "85a62c3db34b356d9fa8de20f938fa4222594daea8eba16dd1c6df52b89c7833",
+    "https://www.pnp.ru/economics/": "80a7f169c6313175d51d8a8b0142f62080d8bddb91e26c9e397769e1126d07af",
     "https://erzrf.ru/news/": "a14e6ca7bec08a862875ae8712b583254f6cab11f666f02591d128e69e6e17fe",
     "https://ria-stk.ru/news/vse-novosti.php": "355f8fb54620db86ad0537cc1ad394fcf0bc626d0c7fd5bab310f2556b2a826e",
-    "http://government.ru/news/": "986979dc83a623f98bd85b005e2a9a9e0c9c855d784315476eef677f00045466",
-    "https://stroygaz.ru/news/": "1f2a71d658598713f97b4b98ef54bf1ac6f811466c7ab996b000f8c77a82439f",
-    "https://realty.ria.ru/lenta/": "b29c89bf72e03be66f409a85ac5f0f641ac438c552919c3f1e548df44463043e",
-    "https://rg.ru/tema/ekonomika": "1e9a87801b6f012263c44ec65111b0c08105ab85f651929466c0c46daf8471f3",
+    "http://government.ru/news/": "af4f69fe95893f0b618c9b72594aaf521e4107c0fc153e2a4cd44af2fc28f456",
+    "https://stroygaz.ru/news/": "5c1f2d19161500b5c578f56cd0209d8ea60014f1dcb3c26114bc1777344fedfc",
+    "https://realty.ria.ru/lenta/": "6a185bb01e82b227fccc1587e674457e5e626028d05565737b6a0f25517c51dc",
+    "https://rg.ru/tema/ekonomika": "7cde18f6bf66c3d4f3a9acc5efe01173ddc5be0be34259e59059e1a02a44c5ca",
     "http://ancb.ru/publication": "7b7e9331d28b20686e3a3da4967b0b3d8d7247cf5238cb0a50db00dda96ec64b",
     "https://notim.ru": "4a22d79c44aa2ff71880fcf9ec2a15468a447d183649e6d077bba4d25f52a037",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -50259,6 +50292,13 @@
       "https://www.interfax-russia.ru/realty/news/strit-riteyl-oshchutit-vliyanie-nds-i-snizheniya-sprosa-prognoz"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/180384",
+      "https://www.metalinfo.ru/ru/news/180395",
+      "https://www.metalinfo.ru/ru/news/180393",
+      "https://www.metalinfo.ru/ru/news/180391",
+      "https://www.metalinfo.ru/ru/news/180380",
+      "https://www.metalinfo.ru/ru/news/180369",
+      "https://www.metalinfo.ru/ru/news/180364",
       "https://www.metalinfo.ru/ru/news/180387",
       "https://www.metalinfo.ru/ru/news/180377",
       "https://www.metalinfo.ru/ru/news/180385",
@@ -50271,14 +50311,7 @@
       "https://www.metalinfo.ru/ru/news/180378",
       "https://www.metalinfo.ru/ru/news/180379",
       "https://www.metalinfo.ru/ru/news/180370",
-      "https://www.metalinfo.ru/ru/news/180375",
-      "https://www.metalinfo.ru/ru/news/180374",
-      "https://www.metalinfo.ru/ru/news/180368",
-      "https://www.metalinfo.ru/ru/news/180372",
-      "https://www.metalinfo.ru/ru/news/180366",
-      "https://www.metalinfo.ru/ru/news/180371",
-      "https://www.metalinfo.ru/ru/news/180348",
-      "https://www.metalinfo.ru/ru/news/180359"
+      "https://www.metalinfo.ru/ru/news/180375"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -50407,6 +50440,7 @@
       "https://stroygaz.ru/news/construction/odobren-proekt-aerovokzala-v-gorno-altayske/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260120/rieltory-2068242640.html",
       "https://realty.ria.ru/20260119/tsemros-2068867266.html",
       "https://realty.ria.ru/20260119/minstroy-2068862891.html",
       "https://realty.ria.ru/20260119/sud-2068830201.html",
@@ -50425,10 +50459,11 @@
       "https://realty.ria.ru/20260119/fond-2068305112.html",
       "https://realty.ria.ru/20260119/kvartiry-2068290672.html",
       "https://realty.ria.ru/20260116/pravitelstvo-2068372823.html",
-      "https://realty.ria.ru/20260116/banki-2068363904.html",
-      "https://realty.ria.ru/20260116/moek-2068280440.html"
+      "https://realty.ria.ru/20260116/banki-2068363904.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/20/zhizn-nad-oblakami.html",
+      "https://rg.ru/2026/01/20/reg-pfo/kakie-goroda-i-sela-vkliuchat-v-zolotoe-kolco-rossii.html",
       "https://rg.ru/2026/01/20/turistam-sovetuiut-povyshat-limit-pri-vybore-polisa-medstrahovaniia.html",
       "https://rg.ru/2026/01/20/ria-novosti-vlasti-turcii-obsuzhdaiut-izmeneniia-v-sisteme-vse-vkliucheno-v-oteliah.html",
       "https://rg.ru/2026/01/20/reg-szfo/avarijnye-doma-v-pomore-i-nao-nachnut-rasseliat-za-schet-dolevogo-stroitelstva.html",
@@ -50454,13 +50489,11 @@
       "https://rg.ru/2026/01/19/v-rossii-obnoviat-banknoty-nominalom-500-50-i-10-rublej.html",
       "https://rg.ru/2026/01/19/cb-predlagaet-zapretit-izgotovlenie-predmetov-pohozhih-na-rossijskie-banknoty.html",
       "https://rg.ru/2026/01/19/s-1-fevralia-vstupiat-v-silu-izmeneniia-v-usloviiah-refinansirovaniia-ipoteki.html",
-      "https://rg.ru/2026/01/19/rosteh-proekt-vosstanovleniia-samoletov-zapushchen-iz-za-sankcij-protiv-rf.html",
       "https://rg.ru/2026/01/19/minfin-dohody-federalnogo-biudzheta-v-2025-godu-sostavili-37-284-mlrd-rublej.html",
       "https://rg.ru/2026/01/19/samozaniatym-predlagaiut-rasshirit-socialnye-garantii.html",
       "https://rg.ru/2026/01/19/veteranov-specoperacii-zashchitiat-ot-sokrashchenij-na-rabote.html",
       "https://rg.ru/2026/01/19/v-vojska-postupili-antidronovye-patrony-s-drobiu-s-volframom.html",
       "https://rg.ru/2026/01/19/reg-pfo/nizhnij-novgorod-stal-oficialnoj-stolicej-zakatov.html",
-      "https://rg.ru/2026/01/19/deputat-gosdumy-razvorotneva-uslugi-zhkh-podorozhaiut-v-ianvare-i-oktiabre.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -66827,7 +66860,17 @@
     "69d1e4d31fbc6ade7e8a8bfb9206f354afdbcba20d03523e443c2a685a940afa": "2026-01-20T04:23:00+03:00",
     "68f1855d0312c47dbe64522160b936ba957e380ed2b0109ed13ad00860442a13": "2026-01-20T04:23:00+03:00",
     "0c34aad2194e640ae826b921a23213968c4e897ed2db336a41645eae9869e13c": "2026-01-20T04:23:00+03:00",
-    "14cd5323f405e9d62067f49b01125b2d747f9acb1ab729ed03feebe226e04ebf": "2026-01-20T04:23:00+03:00"
+    "14cd5323f405e9d62067f49b01125b2d747f9acb1ab729ed03feebe226e04ebf": "2026-01-20T04:23:00+03:00",
+    "b293a9fa8916eb02caeb9c8e5b5738a3eec173b428b4959da10ec7f378c7a583": "2026-01-20T07:07:00+03:00",
+    "e1ede5f8fec4e38c5383f2da49fe690baff397c63e9a5b05538ea731ca8cc87c": "2026-01-20T07:07:00+03:00",
+    "fc830eaf71a31804765bfb158d829a660b07717d11882b0fb22a7e4429c2ff46": "2026-01-20T07:07:00+03:00",
+    "52121630e52f1fa9c32573b85af8e0926ff61bf5506be50534be69922152f7d9": "2026-01-20T07:08:00+03:00",
+    "52add0da7e64fbbb47ba22095ff6d9565ee4b70cb85e8092c90abbe72249ccdb": "2026-01-20T07:08:00+03:00",
+    "344a7fbd523414312879bbd292a2aa105433b243df738525875639df73f8a1bd": "2026-01-20T07:08:00+03:00",
+    "62949ffca40540d4cbb90ed59ecaba385779ce89554bad4991856cc56e825988": "2026-01-20T07:08:00+03:00",
+    "665ef1b84e5ea7f95ad7f4b7bf17f3d241703f9a7c6db2d3e5fffcb089b0be19": "2026-01-20T07:09:00+03:00",
+    "2b05ffd2f5cafc9687b76b88d7d90748795e8ff0f4d5418768a75c0283596801": "2026-01-20T07:09:00+03:00",
+    "421b5753e5d52839b1fd5daa21adde15ce702b901d1fed852cbce4b23327130b": "2026-01-20T07:09:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -66858,9 +66901,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f686543fce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1768872084.7247274
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe91a2bbce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1768882011.3305268
       },
       "warmup_done": false,
       "last_success_path": null
@@ -66869,31 +66912,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "59GH95No8KntzyRu",
+          "value": "Net2nBDIEehwIs6D",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768873329
+          "expires": 1768883315
         },
         {
           "name": "__ddg10_",
-          "value": "1768872129",
+          "value": "1768882115",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768873329
+          "expires": 1768883315
         },
         {
           "name": "__ddg9_",
-          "value": "20.102.47.192",
+          "value": "20.169.74.52",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1768873329
+          "expires": 1768883315
+        },
+        {
+          "name": "__ddg1_",
+          "value": "u06r53C0iibf6FRJ9CSi",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1800418115
         },
         {
           "name": "PHPSESSID",
-          "value": "de4e68503cd96f0d137e2d1752640405",
+          "value": "aed023e455e74d3ef34113ed464a5d20",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -66936,9 +66987,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6863cc8e10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
-        "last_ts": 1768872161.650183
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe918984050>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 8,
+        "last_ts": 1768882148.4311593
       },
       "warmup_done": false,
       "last_success_path": null
@@ -86919,7 +86970,24 @@
     "https://rg.ru/2026/01/20/turistam-sovetuiut-povyshat-limit-pri-vybore-polisa-medstrahovaniia.html": "https://rg.ru/2026/01/20/turistam-sovetuiut-povyshat-limit-pri-vybore-polisa-medstrahovaniia.html",
     "https://rg.ru/2026/01/20/ria-novosti-vlasti-turcii-obsuzhdaiut-izmeneniia-v-sisteme-vse-vkliucheno-v-oteliah.html": "https://rg.ru/2026/01/20/ria-novosti-vlasti-turcii-obsuzhdaiut-izmeneniia-v-sisteme-vse-vkliucheno-v-oteliah.html",
     "https://rg.ru/2026/01/20/reg-szfo/avarijnye-doma-v-pomore-i-nao-nachnut-rasseliat-za-schet-dolevogo-stroitelstva.html": "https://rg.ru/2026/01/20/reg-szfo/avarijnye-doma-v-pomore-i-nao-nachnut-rasseliat-za-schet-dolevogo-stroitelstva.html",
-    "https://rg.ru/2026/01/20/reg-szfo/s-1-ianvaria-u-severnogo-zavoza-poiavilis-morskoj-operator-i-cifrovaia-platforma.html": "https://rg.ru/2026/01/20/reg-szfo/s-1-ianvaria-u-severnogo-zavoza-poiavilis-morskoj-operator-i-cifrovaia-platforma.html"
+    "https://rg.ru/2026/01/20/reg-szfo/s-1-ianvaria-u-severnogo-zavoza-poiavilis-morskoj-operator-i-cifrovaia-platforma.html": "https://rg.ru/2026/01/20/reg-szfo/s-1-ianvaria-u-severnogo-zavoza-poiavilis-morskoj-operator-i-cifrovaia-platforma.html",
+    "https://www.metalinfo.ru/ru/news/180384": "http://www.metalinfo.ru/ru/news/180384",
+    "http://www.metalinfo.ru/ru/news/180384": "http://www.metalinfo.ru/ru/news/180384",
+    "https://www.metalinfo.ru/ru/news/180395": "http://www.metalinfo.ru/ru/news/180395",
+    "http://www.metalinfo.ru/ru/news/180395": "http://www.metalinfo.ru/ru/news/180395",
+    "https://www.metalinfo.ru/ru/news/180393": "http://www.metalinfo.ru/ru/news/180393",
+    "http://www.metalinfo.ru/ru/news/180393": "http://www.metalinfo.ru/ru/news/180393",
+    "https://www.metalinfo.ru/ru/news/180391": "http://www.metalinfo.ru/ru/news/180391",
+    "http://www.metalinfo.ru/ru/news/180391": "http://www.metalinfo.ru/ru/news/180391",
+    "https://www.metalinfo.ru/ru/news/180380": "http://www.metalinfo.ru/ru/news/180380",
+    "http://www.metalinfo.ru/ru/news/180380": "http://www.metalinfo.ru/ru/news/180380",
+    "https://www.metalinfo.ru/ru/news/180369": "http://www.metalinfo.ru/ru/news/180369",
+    "http://www.metalinfo.ru/ru/news/180369": "http://www.metalinfo.ru/ru/news/180369",
+    "https://www.metalinfo.ru/ru/news/180364": "http://www.metalinfo.ru/ru/news/180364",
+    "http://www.metalinfo.ru/ru/news/180364": "http://www.metalinfo.ru/ru/news/180364",
+    "https://realty.ria.ru/20260120/rieltory-2068242640.html": "https://realty.ria.ru/20260120/rieltory-2068242640.html",
+    "https://rg.ru/2026/01/20/zhizn-nad-oblakami.html": "https://rg.ru/2026/01/20/zhizn-nad-oblakami.html",
+    "https://rg.ru/2026/01/20/reg-pfo/kakie-goroda-i-sela-vkliuchat-v-zolotoe-kolco-rossii.html": "https://rg.ru/2026/01/20/reg-pfo/kakie-goroda-i-sela-vkliuchat-v-zolotoe-kolco-rossii.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -103592,7 +103660,17 @@
     "c285335cef6755d8782a126b0a5501df117c0383": "https://rg.ru/2026/01/20/turistam-sovetuiut-povyshat-limit-pri-vybore-polisa-medstrahovaniia.html",
     "d98330a7b46048c9bb94ec865494a0b547045387": "https://rg.ru/2026/01/20/ria-novosti-vlasti-turcii-obsuzhdaiut-izmeneniia-v-sisteme-vse-vkliucheno-v-oteliah.html",
     "c47a2d8a413ec94b4be19b66e95bc03bdca3f293": "https://rg.ru/2026/01/20/reg-szfo/avarijnye-doma-v-pomore-i-nao-nachnut-rasseliat-za-schet-dolevogo-stroitelstva.html",
-    "33e0370f2cfdec8b996627596482f4d64720bf44": "https://rg.ru/2026/01/20/reg-szfo/s-1-ianvaria-u-severnogo-zavoza-poiavilis-morskoj-operator-i-cifrovaia-platforma.html"
+    "33e0370f2cfdec8b996627596482f4d64720bf44": "https://rg.ru/2026/01/20/reg-szfo/s-1-ianvaria-u-severnogo-zavoza-poiavilis-morskoj-operator-i-cifrovaia-platforma.html",
+    "65db4c7b4081ee09fb8450af27c1ff81a8ee3506": "http://www.metalinfo.ru/ru/news/180384",
+    "753b509afb55151ec5136a217f8a0cdaa395eac1": "http://www.metalinfo.ru/ru/news/180395",
+    "45dc841bf6f3f2f14d6b5c72d0fda31ef267f432": "http://www.metalinfo.ru/ru/news/180393",
+    "dca907daa60538ed3d3442c4a70c21b43e9f2f91": "http://www.metalinfo.ru/ru/news/180391",
+    "26101f41761820c8f1b5c64ccda99697ccb93b44": "http://www.metalinfo.ru/ru/news/180380",
+    "77744e4079cb2fb23a06bd4dc873213e85bfd6b8": "http://www.metalinfo.ru/ru/news/180369",
+    "4d8bf714ec1cd97941d1edb9b9599dd3d48f2939": "http://www.metalinfo.ru/ru/news/180364",
+    "d97e01ef6e1a3df99c53781956765a797f9a16b3": "https://realty.ria.ru/20260120/rieltory-2068242640.html",
+    "2258e5c87710173a3a64ca1f3ffdd808beae383c": "https://rg.ru/2026/01/20/zhizn-nad-oblakami.html",
+    "8cb2d4eb3eec661db4d82c573f6e361f716ed141": "https://rg.ru/2026/01/20/reg-pfo/kakie-goroda-i-sela-vkliuchat-v-zolotoe-kolco-rossii.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -125835,6 +125913,23 @@
     "https://rg.ru/2026/01/20/turistam-sovetuiut-povyshat-limit-pri-vybore-polisa-medstrahovaniia.html": "69d1e4d31fbc6ade7e8a8bfb9206f354afdbcba20d03523e443c2a685a940afa",
     "https://rg.ru/2026/01/20/ria-novosti-vlasti-turcii-obsuzhdaiut-izmeneniia-v-sisteme-vse-vkliucheno-v-oteliah.html": "68f1855d0312c47dbe64522160b936ba957e380ed2b0109ed13ad00860442a13",
     "https://rg.ru/2026/01/20/reg-szfo/avarijnye-doma-v-pomore-i-nao-nachnut-rasseliat-za-schet-dolevogo-stroitelstva.html": "0c34aad2194e640ae826b921a23213968c4e897ed2db336a41645eae9869e13c",
-    "https://rg.ru/2026/01/20/reg-szfo/s-1-ianvaria-u-severnogo-zavoza-poiavilis-morskoj-operator-i-cifrovaia-platforma.html": "14cd5323f405e9d62067f49b01125b2d747f9acb1ab729ed03feebe226e04ebf"
+    "https://rg.ru/2026/01/20/reg-szfo/s-1-ianvaria-u-severnogo-zavoza-poiavilis-morskoj-operator-i-cifrovaia-platforma.html": "14cd5323f405e9d62067f49b01125b2d747f9acb1ab729ed03feebe226e04ebf",
+    "http://www.metalinfo.ru/ru/news/180384": "b293a9fa8916eb02caeb9c8e5b5738a3eec173b428b4959da10ec7f378c7a583",
+    "https://www.metalinfo.ru/ru/news/180384": "b293a9fa8916eb02caeb9c8e5b5738a3eec173b428b4959da10ec7f378c7a583",
+    "http://www.metalinfo.ru/ru/news/180395": "e1ede5f8fec4e38c5383f2da49fe690baff397c63e9a5b05538ea731ca8cc87c",
+    "https://www.metalinfo.ru/ru/news/180395": "e1ede5f8fec4e38c5383f2da49fe690baff397c63e9a5b05538ea731ca8cc87c",
+    "http://www.metalinfo.ru/ru/news/180393": "fc830eaf71a31804765bfb158d829a660b07717d11882b0fb22a7e4429c2ff46",
+    "https://www.metalinfo.ru/ru/news/180393": "fc830eaf71a31804765bfb158d829a660b07717d11882b0fb22a7e4429c2ff46",
+    "http://www.metalinfo.ru/ru/news/180391": "52121630e52f1fa9c32573b85af8e0926ff61bf5506be50534be69922152f7d9",
+    "https://www.metalinfo.ru/ru/news/180391": "52121630e52f1fa9c32573b85af8e0926ff61bf5506be50534be69922152f7d9",
+    "http://www.metalinfo.ru/ru/news/180380": "52add0da7e64fbbb47ba22095ff6d9565ee4b70cb85e8092c90abbe72249ccdb",
+    "https://www.metalinfo.ru/ru/news/180380": "52add0da7e64fbbb47ba22095ff6d9565ee4b70cb85e8092c90abbe72249ccdb",
+    "http://www.metalinfo.ru/ru/news/180369": "344a7fbd523414312879bbd292a2aa105433b243df738525875639df73f8a1bd",
+    "https://www.metalinfo.ru/ru/news/180369": "344a7fbd523414312879bbd292a2aa105433b243df738525875639df73f8a1bd",
+    "http://www.metalinfo.ru/ru/news/180364": "62949ffca40540d4cbb90ed59ecaba385779ce89554bad4991856cc56e825988",
+    "https://www.metalinfo.ru/ru/news/180364": "62949ffca40540d4cbb90ed59ecaba385779ce89554bad4991856cc56e825988",
+    "https://realty.ria.ru/20260120/rieltory-2068242640.html": "665ef1b84e5ea7f95ad7f4b7bf17f3d241703f9a7c6db2d3e5fffcb089b0be19",
+    "https://rg.ru/2026/01/20/zhizn-nad-oblakami.html": "2b05ffd2f5cafc9687b76b88d7d90748795e8ff0f4d5418768a75c0283596801",
+    "https://rg.ru/2026/01/20/reg-pfo/kakie-goroda-i-sela-vkliuchat-v-zolotoe-kolco-rossii.html": "421b5753e5d52839b1fd5daa21adde15ce702b901d1fed852cbce4b23327130b"
   }
 }
