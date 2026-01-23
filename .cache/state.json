@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 23 Jan 2026 01:23:51 GMT"
+      "Last-Modified": "Fri, 23 Jan 2026 04:05:45 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d1ca-YQlFarhh8VqHuKtG7oztqyeHJ1A\""
+      "ETag": "W/\"1d172-7gMN7plmuatdVVMxOX/McejuLaI\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"rocqku00jm3ueh\""
+      "ETag": "\"169rc1xh7g03vaw\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -39936,6 +39936,22 @@
     },
     "https://rg.ru/2026/01/23/robotam-pri-obzvonah-predlozhili-zapretit-govorit-po-chelovecheski.html": {
       "ETag": "\"inh1kdlhoc1ue9\""
+    },
+    "http://ancb.ru/publication/read/20818": {},
+    "https://www.metalinfo.ru/ru/news/180511": {},
+    "https://www.metalinfo.ru/ru/news/180507": {},
+    "https://www.metalinfo.ru/ru/news/180520": {},
+    "https://www.metalinfo.ru/ru/news/180493": {},
+    "https://www.metalinfo.ru/ru/news/180510": {},
+    "https://www.metalinfo.ru/ru/news/180517": {},
+    "https://realty.ria.ru/20260123/turisty-2069282561.html": {
+      "Last-Modified": "Fri, 23 Jan 2026 02:00:03 GMT"
+    },
+    "https://rg.ru/2026/01/23/chto-polozhit-v-koshelek-2026-god.html": {
+      "ETag": "\"e0o12zprje2hpb\""
+    },
+    "https://rg.ru/2026/01/23/reg-dfo/v-iakutske-na-marshruty-vyjdut-50-novyh-avtobusov-povyshennoj-vmestimosti.html": {
+      "ETag": "\"uzwqgin34p1s00\""
     }
   },
   "stats": {
@@ -51592,9 +51608,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fadff60fc50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fadff60f610>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fadff60f250>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fadff60f390>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fadff60f110>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-23T01:24:06.919439+00:00",
+    "last_run": "2026-01-23T04:05:14.447866+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -51607,56 +51628,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 276.05874399989716,
-        "connect_ms": 631.4634770001248,
-        "response_ms": 907.522221000022,
+        "dns_ms": 456.0506450000048,
+        "connect_ms": 617.416822999985,
+        "response_ms": 1073.4674679999898,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae00a37bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 416.00302799997735,
+        "connect_ms": 0.0,
+        "response_ms": 328.22623399999884,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 388.53031499991175,
-        "connect_ms": 4022.981562000041,
-        "response_ms": 4411.511876999953,
+        "dns_ms": 494.4010789999993,
+        "connect_ms": 4658.7779279999495,
+        "response_ms": 5153.179006999949,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fadff60f110>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 155.51517599999443,
+        "connect_ms": 763.8404120000359,
+        "response_ms": 919.3555880000304,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "a6fba18371be1ba7698b57f476c48df9dc4dc4914f8de3086b28cbb18a70694e",
+    "https://ardexpert.ru/article": "faa32b4303dfe383f9f94e160d0108a32332819af8d41e9378231a81cff87b88",
     "https://www.gostinfo.ru/News/List": "069ffa6a609a7affc8a8103891f46f151ce7e1b81e271be6869e131f1aa0415c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "916fd348b3e0a98243156131f628fd810a1df6ed19c67101d062d9c737d6ee83",
-    "https://eec.eaeunion.org/news/": "7f926d41e5d22cec45957d172c9db1f0f262c60d638e7c6bb8641ee7f9ae8c92",
+    "https://eec.eaeunion.org/news/": "4f8a99a0603c48572239208af141185ee397396467ef242e974f45bd2e6bd4b5",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "34a35c6ad4f8402236f11d584f8523eafa00156d07e1084a2d9927e2b2459c75",
-    "https://www.metalinfo.ru/ru/news": "0e5b3c50c708cab4bb2e76588bb411349a24af6d833adaa106051653cd9251de",
-    "https://www.pnp.ru/economics/": "5f67689e9ee7d9c6fd05fbe3b5be41d372f652cb1f68d06e871a144f97a8435c",
-    "https://erzrf.ru/news/": "e17005c1de9a8dbd0931c71a66fc9b2fc6e680872c00cb1a850e8bf3a492ae52",
-    "https://ria-stk.ru/news/vse-novosti.php": "536802536d7a0b488953a2c6b2f402b507ede8c58ecb27f442bed1cc39ce44bd",
-    "http://government.ru/news/": "2f7cd8d0d1819689273e56d1ad6d57538e0e7a6cd8bdd55301e7b02944e242d2",
-    "https://stroygaz.ru/news/": "e6a609de8628eb0991c85b653cf22516033f1d4110d9b7c7eb1d8e79395b6d8e",
-    "https://realty.ria.ru/lenta/": "ec3f999b0062250b61f450bf65c6beff748ad2eb568c8da4bc12d325bfadafb6",
-    "https://rg.ru/tema/ekonomika": "a2f37fb897b3871396b60b1b81dcdd41e65d0beb2ebe24368d7c1c5030383c7f",
-    "http://ancb.ru/publication": "aaa9bcaa0a62e29f0267571ddd18f90b508f4bcb5d3205e52426ccb90a743dc7",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "c979ed048aae72bf3b051a26678a3fafc3228a2330ccdefc39cf24dec265144c",
+    "https://www.metalinfo.ru/ru/news": "d93159c8efe441ad9c9f9f2c949173f81f51fc6d8742f3a4c26ae8716ef15265",
+    "https://www.pnp.ru/economics/": "b8df1999995f65b7a2cd7dfc598e41ad46325bbf6daf63bd399b1eed269a280b",
+    "https://erzrf.ru/news/": "07ad394b952daf25a95e1e86995a82023f2231dcac5db8ddacc61d5486def21d",
+    "https://ria-stk.ru/news/vse-novosti.php": "22b40e33e90fbf5c7caa4345b9d1e72db68b22884e4e9e2d872fb2556841beec",
+    "http://government.ru/news/": "65938e9f0b3a20553eee0e1a93e48a81bb6ce4dbf50fbd0e4d1a6aa2d1522e39",
+    "https://stroygaz.ru/news/": "8d76793ec358a3a3e5f55e147b446f4c74b97d67632f44c58bf3204de9c568eb",
+    "https://realty.ria.ru/lenta/": "144051c49da008a6c5f8a60bf64d8e18cbb35f3f579301e7204dcb0a19e51d7c",
+    "https://rg.ru/tema/ekonomika": "5639adfe80d714ebfeeee41eb9444e8e911b7958634dd611ed220fec89c7a58d",
+    "http://ancb.ru/publication": "11ed45d8ea21669081d493ad6eb7f113c87621e7ad89ed7147ccd99ba33b8ea2",
     "https://notim.ru": "4a22d79c44aa2ff71880fcf9ec2a15468a447d183649e6d077bba4d25f52a037",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -51791,6 +51812,12 @@
       "https://www.interfax-russia.ru/realty/news/shest-kovorking-centrov-otkryli-v-proshlom-godu-v-peterburge"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/180511",
+      "https://www.metalinfo.ru/ru/news/180507",
+      "https://www.metalinfo.ru/ru/news/180520",
+      "https://www.metalinfo.ru/ru/news/180493",
+      "https://www.metalinfo.ru/ru/news/180510",
+      "https://www.metalinfo.ru/ru/news/180517",
       "https://www.metalinfo.ru/ru/news/180516",
       "https://www.metalinfo.ru/ru/news/180508",
       "https://www.metalinfo.ru/ru/news/180514",
@@ -51804,13 +51831,7 @@
       "https://www.metalinfo.ru/ru/news/180506",
       "https://www.metalinfo.ru/ru/news/180499",
       "https://www.metalinfo.ru/ru/news/180490",
-      "https://www.metalinfo.ru/ru/news/180501",
-      "https://www.metalinfo.ru/ru/news/180498",
-      "https://www.metalinfo.ru/ru/news/180496",
-      "https://www.metalinfo.ru/ru/news/180485",
-      "https://www.metalinfo.ru/ru/news/180494",
-      "https://www.metalinfo.ru/ru/news/180470",
-      "https://www.metalinfo.ru/ru/news/180492"
+      "https://www.metalinfo.ru/ru/news/180501"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -51939,6 +51960,7 @@
       "https://stroygaz.ru/news/construction/odobren-proekt-aerovokzala-v-gorno-altayske/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260123/turisty-2069282561.html",
       "https://realty.ria.ru/20260123/mts-2069664688.html",
       "https://realty.ria.ru/20260123/spros-2069514587.html",
       "https://realty.ria.ru/20260122/gals-development-2069659662.html",
@@ -51957,10 +51979,11 @@
       "https://realty.ria.ru/20260122/kompleks-2069494679.html",
       "https://realty.ria.ru/20260122/prokuratura-2069487949.html",
       "https://realty.ria.ru/20260122/zaliv-2069350115.html",
-      "https://realty.ria.ru/20260122/moskva-2069273591.html",
-      "https://realty.ria.ru/20260121/butiki-2069418582.html"
+      "https://realty.ria.ru/20260122/moskva-2069273591.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/23/chto-polozhit-v-koshelek-2026-god.html",
+      "https://rg.ru/2026/01/23/reg-dfo/v-iakutske-na-marshruty-vyjdut-50-novyh-avtobusov-povyshennoj-vmestimosti.html",
       "https://rg.ru/2026/01/23/robotam-pri-obzvonah-predlozhili-zapretit-govorit-po-chelovecheski.html",
       "https://rg.ru/2026/01/23/reg-cfo/tishe-edesh.html",
       "https://rg.ru/2026/01/22/reg-cfo/snezhnye-lapy.html",
@@ -51985,19 +52008,18 @@
       "https://rg.ru/2026/01/22/indeks-rts-pokazal-rost-bolee-chem-na-2-posle-korrektirovki-kursov-valiut-cb.html",
       "https://rg.ru/2026/01/22/posejdon-raskryvaet-sekrety.html",
       "https://rg.ru/2026/01/22/ator-banki-mogut-zablokirovat-oplatu-turov-cherez-sbp.html",
-      "https://rg.ru/2026/01/22/razdel-dobychi.html",
       "https://rg.ru/2026/01/22/oficialnyj-kurs-dollara-na-23-ianvaria-opustilsia-do-7604-rublia.html",
       "https://rg.ru/2026/01/22/v-rossii-idet-rabota-po-sozdaniiu-reestra-marketplejsov.html",
       "https://rg.ru/2026/01/22/v-sovfede-predlozhili-stimuly-dlia-dereviannogo-domostroeniia.html",
       "https://rg.ru/2026/01/22/reg-cfo/glava-uk-v-dome-kotoroj-v-obninske-pogib-pensioner-zakliuchen-pod-strazhu.html",
       "https://rg.ru/2026/01/22/reg-cfo/v-iaroslavskoj-oblasti-obediniaiut-ministerstva-turizma-i-kultury.html",
       "https://rg.ru/2026/01/22/reg-cfo/v-moskve-iz-za-silnyh-morozov-povysiat-temperaturu-v-sisteme-otopleniia.html",
-      "https://rg.ru/2026/01/22/reg-cfo/v-obninske-zaderzhan-glava-uk-v-dome-kotoroj-pensioner-poluchil-smertelnye-ozhogi.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20818",
       "http://ancb.ru/publication/read/20808",
       "http://ancb.ru/publication/read/20807",
       "http://ancb.ru/publication/read/20799",
@@ -52031,8 +52053,7 @@
       "http://ancb.ru/publication/read/20694",
       "http://ancb.ru/publication/read/20692",
       "http://ancb.ru/publication/read/20686",
-      "http://ancb.ru/publication/read/20685",
-      "http://ancb.ru/publication/read/20684"
+      "http://ancb.ru/publication/read/20685"
     ]
   },
   "first_seen": {
@@ -68950,7 +68971,17 @@
     "2ceabaf20d1f0e7dd6db0e4bdc955f6bb401c58800ef1f2f477ad7e9cbff0bed": "2026-01-23T00:29:00+03:00",
     "9eee15b37df99d1488faafcafe3dc22c64a087c772fbcc92e21cdce55d5a4b3e": "2026-01-23T04:24:00+03:00",
     "237e6ff12840bcc687e9c6265d613a5bc5fcbcdb5c40d8d584b6f545e9ee165b": "2026-01-23T04:24:00+03:00",
-    "4090e429f4b7a0f6b131aa7a179ac0bf21b28a0d0c15402fd09645f99cb12b3f": "2026-01-23T04:24:00+03:00"
+    "4090e429f4b7a0f6b131aa7a179ac0bf21b28a0d0c15402fd09645f99cb12b3f": "2026-01-23T04:24:00+03:00",
+    "ff5bedf582c0ee5c7890650bfb90dc532a4773b616a38edbef402a0c64e8a35a": "2026-01-23T07:03:00+03:00",
+    "878f2272d160d16db3768aad7436f1edd8f5c064ee7c78a4df55876e42652521": "2026-01-23T07:04:00+03:00",
+    "83630609561a94c3397640a13025acf9940de9098d111ea13da9e581713fa981": "2026-01-23T07:04:00+03:00",
+    "469f409f099069c5cc74b71211c6f7737f4fbd67682f418199de66776095c6d7": "2026-01-23T07:04:00+03:00",
+    "7cbe0617726c66e3782d95a88dc35b4801d6cd4050c6c05f8bee238563709709": "2026-01-23T07:04:00+03:00",
+    "ae7005babb4b6f020dd9b4b31a82861dc90ac5b5259e08f1275e7510e33745d9": "2026-01-23T07:04:00+03:00",
+    "b67faf86bdd44a7f3f5010235e0e62f6f502914f4f36757e2e73b8b376cf07fd": "2026-01-23T07:04:00+03:00",
+    "5196ce50524f60c3be09424107e8dcb8537ced4b6bf6e2af7140a3ab5786b0fd": "2026-01-23T07:05:00+03:00",
+    "d0dd93d61eba67dbc188ddd6bdcabb6bd20576f886705c3b683473ddb0375969": "2026-01-23T07:05:00+03:00",
+    "c578db6487100c289dc4f3cfd32731f2bf251b2a05e518f326f624721c93265b": "2026-01-23T07:05:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -68981,8 +69012,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fae00a47ce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 20,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769131344.6255744
       },
       "warmup_done": false,
@@ -68992,39 +69023,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "vSfPkjXlg2D08Dte",
+          "value": "ubkZQGP2igcCA0vU",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769132588
+          "expires": 1769142301
         },
         {
           "name": "__ddg10_",
-          "value": "1769131388",
+          "value": "1769141101",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769132588
+          "expires": 1769142301
         },
         {
           "name": "__ddg9_",
-          "value": "20.57.77.201",
+          "value": "64.236.142.226",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769132588
-        },
-        {
-          "name": "__ddg1_",
-          "value": "U3yExhAIxtRNrBx5ViHr",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1800667388
+          "expires": 1769142301
         },
         {
           "name": "PHPSESSID",
-          "value": "017441d077db4aeb281fd276508b5987",
+          "value": "30578559e64ca8832a82f1ed5a5e4845",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -69051,11 +69074,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "kjO9BAmoaRdzP0TR4ZayqUgREqMB0B00",
+          "value": "6lMjZtpDj8OK62HLjkubZMpB6ZGZU8EO",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769096555
+          "expires": 1769151904
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -69063,12 +69086,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1800189755
+          "expires": 1800245104
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fadff60f390>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 16,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769131420.4104588
       },
       "warmup_done": false,
@@ -89774,7 +89797,23 @@
     "https://rg.ru/2026/01/22/manturov-soobshchil-o-45-procentnoj-dole-produkcii-rf-na-vnutrennem-rynke-legproma.html": "https://rg.ru/2026/01/22/manturov-soobshchil-o-45-procentnoj-dole-produkcii-rf-na-vnutrennem-rynke-legproma.html",
     "https://realty.ria.ru/20260123/mts-2069664688.html": "https://realty.ria.ru/20260123/mts-2069664688.html",
     "https://realty.ria.ru/20260123/spros-2069514587.html": "https://realty.ria.ru/20260123/spros-2069514587.html",
-    "https://rg.ru/2026/01/23/robotam-pri-obzvonah-predlozhili-zapretit-govorit-po-chelovecheski.html": "https://rg.ru/2026/01/23/robotam-pri-obzvonah-predlozhili-zapretit-govorit-po-chelovecheski.html"
+    "https://rg.ru/2026/01/23/robotam-pri-obzvonah-predlozhili-zapretit-govorit-po-chelovecheski.html": "https://rg.ru/2026/01/23/robotam-pri-obzvonah-predlozhili-zapretit-govorit-po-chelovecheski.html",
+    "http://ancb.ru/publication/read/20818": "http://ancb.ru/publication/read/20818",
+    "https://www.metalinfo.ru/ru/news/180511": "http://www.metalinfo.ru/ru/news/180511",
+    "http://www.metalinfo.ru/ru/news/180511": "http://www.metalinfo.ru/ru/news/180511",
+    "https://www.metalinfo.ru/ru/news/180507": "http://www.metalinfo.ru/ru/news/180507",
+    "http://www.metalinfo.ru/ru/news/180507": "http://www.metalinfo.ru/ru/news/180507",
+    "https://www.metalinfo.ru/ru/news/180520": "http://www.metalinfo.ru/ru/news/180520",
+    "http://www.metalinfo.ru/ru/news/180520": "http://www.metalinfo.ru/ru/news/180520",
+    "https://www.metalinfo.ru/ru/news/180493": "http://www.metalinfo.ru/ru/news/180493",
+    "http://www.metalinfo.ru/ru/news/180493": "http://www.metalinfo.ru/ru/news/180493",
+    "https://www.metalinfo.ru/ru/news/180510": "http://www.metalinfo.ru/ru/news/180510",
+    "http://www.metalinfo.ru/ru/news/180510": "http://www.metalinfo.ru/ru/news/180510",
+    "https://www.metalinfo.ru/ru/news/180517": "http://www.metalinfo.ru/ru/news/180517",
+    "http://www.metalinfo.ru/ru/news/180517": "http://www.metalinfo.ru/ru/news/180517",
+    "https://realty.ria.ru/20260123/turisty-2069282561.html": "https://realty.ria.ru/20260123/turisty-2069282561.html",
+    "https://rg.ru/2026/01/23/chto-polozhit-v-koshelek-2026-god.html": "https://rg.ru/2026/01/23/chto-polozhit-v-koshelek-2026-god.html",
+    "https://rg.ru/2026/01/23/reg-dfo/v-iakutske-na-marshruty-vyjdut-50-novyh-avtobusov-povyshennoj-vmestimosti.html": "https://rg.ru/2026/01/23/reg-dfo/v-iakutske-na-marshruty-vyjdut-50-novyh-avtobusov-povyshennoj-vmestimosti.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -107040,7 +107079,17 @@
     "8e85472b0492df5937f6c52cd45031979290b0f1": "https://rg.ru/2026/01/22/manturov-soobshchil-o-45-procentnoj-dole-produkcii-rf-na-vnutrennem-rynke-legproma.html",
     "8144c7a7532f8e9cafe338e9714770f97dfb33f7": "https://realty.ria.ru/20260123/mts-2069664688.html",
     "4019fcf8d13168414f99e1b2cb6345b6f1deb801": "https://realty.ria.ru/20260123/spros-2069514587.html",
-    "9f83567acb5b6780bf06e1e66d16315d1899a877": "https://rg.ru/2026/01/23/robotam-pri-obzvonah-predlozhili-zapretit-govorit-po-chelovecheski.html"
+    "9f83567acb5b6780bf06e1e66d16315d1899a877": "https://rg.ru/2026/01/23/robotam-pri-obzvonah-predlozhili-zapretit-govorit-po-chelovecheski.html",
+    "59bd515f32ae862f2901b90610f25e78f41b668c": "http://ancb.ru/publication/read/20818",
+    "51a3df34ac8a62acd1025434a4689d9bc6b4c0ce": "http://www.metalinfo.ru/ru/news/180511",
+    "1253ca7bbdf2f5d7d3d48ce55bca2ed53c33eca0": "http://www.metalinfo.ru/ru/news/180507",
+    "adf4fc46161638395c90842dea4e2bc7f871d7b9": "http://www.metalinfo.ru/ru/news/180520",
+    "9628b97b33b29b077bc13087dd4a3c8041c68c90": "http://www.metalinfo.ru/ru/news/180493",
+    "9491aa52c2adac47db1eba84d14fc2b20bb3e724": "http://www.metalinfo.ru/ru/news/180510",
+    "acf2995c7f0b87888572e23b876af0caf3514741": "http://www.metalinfo.ru/ru/news/180517",
+    "646aa25b11e71494b45e8daa6ff7690863a4ea74": "https://realty.ria.ru/20260123/turisty-2069282561.html",
+    "e4f5725c7c380cd12adc9408325dc34d87ea9326": "https://rg.ru/2026/01/23/chto-polozhit-v-koshelek-2026-god.html",
+    "89d72221377c3cdfbcf38317912371a5327a8d76": "https://rg.ru/2026/01/23/reg-dfo/v-iakutske-na-marshruty-vyjdut-50-novyh-avtobusov-povyshennoj-vmestimosti.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -130050,6 +130099,22 @@
     "https://rg.ru/2026/01/22/manturov-soobshchil-o-45-procentnoj-dole-produkcii-rf-na-vnutrennem-rynke-legproma.html": "2ceabaf20d1f0e7dd6db0e4bdc955f6bb401c58800ef1f2f477ad7e9cbff0bed",
     "https://realty.ria.ru/20260123/mts-2069664688.html": "9eee15b37df99d1488faafcafe3dc22c64a087c772fbcc92e21cdce55d5a4b3e",
     "https://realty.ria.ru/20260123/spros-2069514587.html": "237e6ff12840bcc687e9c6265d613a5bc5fcbcdb5c40d8d584b6f545e9ee165b",
-    "https://rg.ru/2026/01/23/robotam-pri-obzvonah-predlozhili-zapretit-govorit-po-chelovecheski.html": "4090e429f4b7a0f6b131aa7a179ac0bf21b28a0d0c15402fd09645f99cb12b3f"
+    "https://rg.ru/2026/01/23/robotam-pri-obzvonah-predlozhili-zapretit-govorit-po-chelovecheski.html": "4090e429f4b7a0f6b131aa7a179ac0bf21b28a0d0c15402fd09645f99cb12b3f",
+    "http://ancb.ru/publication/read/20818": "ff5bedf582c0ee5c7890650bfb90dc532a4773b616a38edbef402a0c64e8a35a",
+    "http://www.metalinfo.ru/ru/news/180511": "878f2272d160d16db3768aad7436f1edd8f5c064ee7c78a4df55876e42652521",
+    "https://www.metalinfo.ru/ru/news/180511": "878f2272d160d16db3768aad7436f1edd8f5c064ee7c78a4df55876e42652521",
+    "http://www.metalinfo.ru/ru/news/180507": "83630609561a94c3397640a13025acf9940de9098d111ea13da9e581713fa981",
+    "https://www.metalinfo.ru/ru/news/180507": "83630609561a94c3397640a13025acf9940de9098d111ea13da9e581713fa981",
+    "http://www.metalinfo.ru/ru/news/180520": "469f409f099069c5cc74b71211c6f7737f4fbd67682f418199de66776095c6d7",
+    "https://www.metalinfo.ru/ru/news/180520": "469f409f099069c5cc74b71211c6f7737f4fbd67682f418199de66776095c6d7",
+    "http://www.metalinfo.ru/ru/news/180493": "7cbe0617726c66e3782d95a88dc35b4801d6cd4050c6c05f8bee238563709709",
+    "https://www.metalinfo.ru/ru/news/180493": "7cbe0617726c66e3782d95a88dc35b4801d6cd4050c6c05f8bee238563709709",
+    "http://www.metalinfo.ru/ru/news/180510": "ae7005babb4b6f020dd9b4b31a82861dc90ac5b5259e08f1275e7510e33745d9",
+    "https://www.metalinfo.ru/ru/news/180510": "ae7005babb4b6f020dd9b4b31a82861dc90ac5b5259e08f1275e7510e33745d9",
+    "http://www.metalinfo.ru/ru/news/180517": "b67faf86bdd44a7f3f5010235e0e62f6f502914f4f36757e2e73b8b376cf07fd",
+    "https://www.metalinfo.ru/ru/news/180517": "b67faf86bdd44a7f3f5010235e0e62f6f502914f4f36757e2e73b8b376cf07fd",
+    "https://realty.ria.ru/20260123/turisty-2069282561.html": "5196ce50524f60c3be09424107e8dcb8537ced4b6bf6e2af7140a3ab5786b0fd",
+    "https://rg.ru/2026/01/23/chto-polozhit-v-koshelek-2026-god.html": "d0dd93d61eba67dbc188ddd6bdcabb6bd20576f886705c3b683473ddb0375969",
+    "https://rg.ru/2026/01/23/reg-dfo/v-iakutske-na-marshruty-vyjdut-50-novyh-avtobusov-povyshennoj-vmestimosti.html": "c578db6487100c289dc4f3cfd32731f2bf251b2a05e518f326f624721c93265b"
   }
 }
