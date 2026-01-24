@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 24 Jan 2026 09:20:13 GMT"
+      "Last-Modified": "Sat, 24 Jan 2026 12:34:49 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d052-DgHaeqVv9Qmosqu1koQAFU5gW5c\""
+      "ETag": "W/\"1d151-1ciy5jaMfd1nidI4uKJmG6Nn9tM\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"l08w4us31m37nu\""
+      "ETag": "\"z1r81xyirp389f\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -40246,6 +40246,17 @@
     },
     "https://rg.ru/2026/01/24/centrobank-ogranichenie-ekvajringovoj-komissii-ne-privedet-k-snizheniiu-cen.html": {
       "ETag": "\"4q9neiyl1p1qd6\""
+    },
+    "http://government.ru/news/57677/": {},
+    "http://government.ru/news/57676/": {},
+    "https://rg.ru/2026/01/24/reg-cfo/aeroporty-sheremetevo-i-domodedovo-podgotovilis-k-silnym-morozam.html": {
+      "ETag": "\"5rfrkfykbk1rem\""
+    },
+    "https://rg.ru/2026/01/24/kitaj-sokratil-import-sladostej-iz-rossii-do-minimuma-za-vosem-let.html": {
+      "ETag": "\"ftdrzmaffe1p4t\""
+    },
+    "https://rg.ru/2026/01/24/reg-szfo/v-murmanskoj-oblasti-podkliuchaiut-energosnabzhenie-narushennoe-posle-padeniia-lep.html": {
+      "ETag": "\"v7fkvyqt8u1rtl\""
     }
   },
   "stats": {
@@ -52041,9 +52052,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7febd8377ed0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7febd8377c50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7febd8377750>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7febd8377890>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7febd8377610>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-24T09:20:35.108973+00:00",
+    "last_run": "2026-01-24T12:34:26.652272+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -52056,56 +52072,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 387.87989599998696,
-        "connect_ms": 568.1705580000198,
-        "response_ms": 956.0504540000068,
+        "dns_ms": 459.8833849999835,
+        "connect_ms": 625.1840240000206,
+        "response_ms": 1085.067409000004,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7febd976fad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 300.23304900001335,
+        "connect_ms": 872.8036779999684,
+        "response_ms": 1173.0367269999817,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 8812.34286199998,
+        "dns_ms": 8292.879174999996,
         "connect_ms": 0.0,
-        "response_ms": 4410.864134999997,
+        "response_ms": 5124.52829099999,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7febd8377610>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 547.216216999999,
+        "connect_ms": 119.22252399998001,
+        "response_ms": 666.438740999979,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "baa887c360dc38d39ab5b696cab751df015044b822b441f4de1ded151d6d6747",
+    "https://ardexpert.ru/article": "1d37f54130a3ad88122f313292fd50bd212f18e3a041b0551e2d00a2de1b3adc",
     "https://www.gostinfo.ru/News/List": "069ffa6a609a7affc8a8103891f46f151ce7e1b81e271be6869e131f1aa0415c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "49d5bf3467947592432d14ffd878fcbc025913a3db95192c59c6c7dcdff82590",
-    "https://eec.eaeunion.org/news/": "6e86888fe2494971d6b7595faf75152053b1635b01275d920fd0ec9a3956f832",
+    "https://eec.eaeunion.org/news/": "10f0ace5ff0f5894e909d826c1c12d1c9a824ff293d190f780300edb43dc5158",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "e954fe5dbcd42797519c2222c31a3d58f6be0c933fdc7ea3963dbdc16be00981",
-    "https://www.metalinfo.ru/ru/news": "441eea23c2fbe4239d998c47809010e6369ffcd5bf34211fb28f4ac6c6a1a064",
-    "https://www.pnp.ru/economics/": "8b320871659a62ff93c762155fff25238f5552830847b1b28bb07f983bcbb6d2",
-    "https://erzrf.ru/news/": "24648b5a7f404413652cf0173ad6889c0853d2ccabc64002cc11dc3e7e9fee64",
-    "https://ria-stk.ru/news/vse-novosti.php": "62ab23dc4de8c0c62fe53b3470da0131c90be07c3ec7dd3f64ae0fec44fffb3d",
-    "http://government.ru/news/": "82d6c84ef05a33f1704fa54bbeaa9581263134ed19d5b0f53bee9c691ef8814b",
-    "https://stroygaz.ru/news/": "e2fe956b0ae7871f9b3c109550081839b0f05cac3afa70a7e5c661835349021b",
-    "https://realty.ria.ru/lenta/": "effe1f74c9fc74a61adaf94e4c0c1bccd94b148dc16518a49ab1148a00e5a5f6",
-    "https://rg.ru/tema/ekonomika": "63a759d8d80545ae043fcb2998f058b676a055428cc4afbdc6a7fda79b5a4d29",
-    "http://ancb.ru/publication": "95f9c92b7e2b0ef06b080a303c896c4332f77fad81e532bda669252f68386ebb",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "ca545bf5816c38f6ee6d295cb34ccad2388e6b2375af9cbed763676c7c408fba",
+    "https://www.metalinfo.ru/ru/news": "64c5ed9038e8afda578314b100e8a00eae624bdfbedbd52c97a5c18b1cb1948e",
+    "https://www.pnp.ru/economics/": "bdfa9de90f0068060d62d39cfacee6281a6394e7839f17476c26dec1d0d15bcf",
+    "https://erzrf.ru/news/": "974dcd46b6326ada595f775d7848a3c86502cf966da0763893ffa0d873185c78",
+    "https://ria-stk.ru/news/vse-novosti.php": "cba032d6c332d0ba53a2db6010300a838079aee78608894728135e226e52078d",
+    "http://government.ru/news/": "8e50a432f9b0fdcd1767ba187adcffac6420079df7d7a081fbb3607dca1f7f6f",
+    "https://stroygaz.ru/news/": "5e96256015528fd801d8bc5ebbb604bed473a51103a4863c2bc842929a77c585",
+    "https://realty.ria.ru/lenta/": "f94775f2bbea9ac7e236e73e2338518f8391bf854ca7d945a3e1e53a455702a0",
+    "https://rg.ru/tema/ekonomika": "1766a77ae294436f83c908038440a3cf1914529114b64a5cba78810b6439ebf9",
+    "http://ancb.ru/publication": "deb47b6b3b8769aa93b2428a0e2ce196186075c9fb505ec694c9a36a171b82e5",
     "https://notim.ru": "4a22d79c44aa2ff71880fcf9ec2a15468a447d183649e6d077bba4d25f52a037",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -52343,6 +52359,8 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248241&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57677/",
+      "http://government.ru/news/57676/",
       "http://government.ru/news/57675/",
       "http://government.ru/news/57674/",
       "http://government.ru/news/57604/",
@@ -52360,9 +52378,7 @@
       "http://government.ru/news/57588/",
       "http://government.ru/news/57587/",
       "http://government.ru/news/57586/",
-      "http://government.ru/news/57584/",
-      "http://government.ru/news/57590/",
-      "http://government.ru/news/57589/"
+      "http://government.ru/news/57584/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/v-peterburge-tret-sdelok-s-zemelnymi-uchastkami-prikhodilas-na-uchastki-s-gotovymi-razresheniyami/",
@@ -52409,6 +52425,9 @@
       "https://realty.ria.ru/20260122/brendy-2069551062.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/24/reg-cfo/aeroporty-sheremetevo-i-domodedovo-podgotovilis-k-silnym-morozam.html",
+      "https://rg.ru/2026/01/24/kitaj-sokratil-import-sladostej-iz-rossii-do-minimuma-za-vosem-let.html",
+      "https://rg.ru/2026/01/24/reg-szfo/v-murmanskoj-oblasti-podkliuchaiut-energosnabzhenie-narushennoe-posle-padeniia-lep.html",
       "https://rg.ru/2026/01/24/il-114-300-gotovitsia-k-mezhdunarodnoj-premere-na-aviasalone-wings-india.html",
       "https://rg.ru/2026/01/24/maksimalnaia-vyplata-iz-za-travmy-na-proizvodstve-vyrastet-do-503-tysiach-rublej.html",
       "https://rg.ru/2026/01/24/eksport-rossijskoj-vodki-v-gruziiu-pobil-istoricheskij-rekord.html",
@@ -52438,9 +52457,6 @@
       "https://rg.ru/2026/01/23/ac-vciom-na-moskovskom-rynke-truda-nuzhny-rabochie-professii.html",
       "https://rg.ru/2026/01/23/proficit-vneshnej-torgovli-rf-v-konce-2025-goda-snizilsia-do-68-mlrd-dollarov.html",
       "https://rg.ru/2026/01/23/reg-ufo/na-kubani-sud-oshtrafoval-magazin-svetofor-i-postanovil-unichtozhit-tovary.html",
-      "https://rg.ru/2026/01/23/alihanov-peregovory-o-postavkah-tu-214-dolzhny-vstupit-v-superaktivnuiu-fazu.html",
-      "https://rg.ru/2026/01/23/senator-karelova-podvela-predvaritelnye-itogi-konkursa-lidery-v-interesah-zhenshchin.html",
-      "https://rg.ru/2026/01/23/cena-platiny-na-nymex-podnialas-vyshe-27-tysiachi-dollarov-za-trojskuiu-unciiu.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -69549,7 +69565,12 @@
     "e5e34fb57f1b337dba58e1c3071119762a4fcbbcaedc16b6c250d3c9fef230bf": "2026-01-24T12:20:00+03:00",
     "85fa0ce5ffab3d9e991b013e231f8f94cde5fa3dfdbbd2d5b4f5266f3cea5258": "2026-01-24T12:20:00+03:00",
     "020c0dffd7c52af5ffffee77dc45ed4a3d83b0c9111b751b045f2b3c1c1c402f": "2026-01-24T12:20:00+03:00",
-    "c278e4a453fd1d6448303be1dc6ce9db706c620d0be922a084b11a6f09f9d859": "2026-01-24T12:20:00+03:00"
+    "c278e4a453fd1d6448303be1dc6ce9db706c620d0be922a084b11a6f09f9d859": "2026-01-24T12:20:00+03:00",
+    "128f81cdd5abb5e8049bbf3a75711defa05fbafcbea7f83275e18632e6ebc38c": "2026-01-24T15:34:00+03:00",
+    "83a67de304ae300fdb4d47f5622c276f3b1480340a0bb763ec726d88ee5d624b": "2026-01-24T15:34:00+03:00",
+    "5f3d2d029101a6444b58b4a09c1b9cda688d291fade536713cefec7c1e3cc687": "2026-01-24T15:34:00+03:00",
+    "df7ee0dff2ee4fa1f6fcd8f6d66f722d5701afe1ad278620b895fe027d0fb421": "2026-01-24T15:34:00+03:00",
+    "bec44978a985dfb34de837416b98570a2b13b882d6f7b02d90a54a66520168e9": "2026-01-24T15:34:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -69580,8 +69601,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7febd9783ce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769246317.101204
       },
       "warmup_done": false,
@@ -69591,31 +69612,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "thocbmalAkMZdPZN",
+          "value": "gvudLK76fhS4FT1v",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769247569
+          "expires": 1769259245
         },
         {
           "name": "__ddg10_",
-          "value": "1769246369",
+          "value": "1769258045",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769247569
+          "expires": 1769259245
         },
         {
           "name": "__ddg9_",
-          "value": "40.76.238.177",
+          "value": "135.232.232.68",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769247569
+          "expires": 1769259245
+        },
+        {
+          "name": "__ddg1_",
+          "value": "Sz4fEWykqzMkAosjFNC1",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1800794045
         },
         {
           "name": "PHPSESSID",
-          "value": "8195bf6d0640b8b196f9c6d0291914ce",
+          "value": "34384255c3cf893517a02fd740f92585",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -69642,11 +69671,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "8gL3245bNag42TxZt5g5BBQfl1jh3yFD",
+          "value": "VCRI9qDVbUJbogFGClf6V26dz2aJuWzM",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769246838
+          "expires": 1769268848
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -69654,12 +69683,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1800340038
+          "expires": 1800362048
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7febd8377890>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769246402.7515306
       },
       "warmup_done": false,
@@ -90559,7 +90588,12 @@
     "https://rg.ru/2026/01/24/maksimalnaia-vyplata-iz-za-travmy-na-proizvodstve-vyrastet-do-503-tysiach-rublej.html": "https://rg.ru/2026/01/24/maksimalnaia-vyplata-iz-za-travmy-na-proizvodstve-vyrastet-do-503-tysiach-rublej.html",
     "https://rg.ru/2026/01/24/eksport-rossijskoj-vodki-v-gruziiu-pobil-istoricheskij-rekord.html": "https://rg.ru/2026/01/24/eksport-rossijskoj-vodki-v-gruziiu-pobil-istoricheskij-rekord.html",
     "https://rg.ru/2026/01/24/reg-urfo/na-urale-vosstanovleno-teplosnabzhenie-v-zamerzaiushchem-karabashe.html": "https://rg.ru/2026/01/24/reg-urfo/na-urale-vosstanovleno-teplosnabzhenie-v-zamerzaiushchem-karabashe.html",
-    "https://rg.ru/2026/01/24/centrobank-ogranichenie-ekvajringovoj-komissii-ne-privedet-k-snizheniiu-cen.html": "https://rg.ru/2026/01/24/centrobank-ogranichenie-ekvajringovoj-komissii-ne-privedet-k-snizheniiu-cen.html"
+    "https://rg.ru/2026/01/24/centrobank-ogranichenie-ekvajringovoj-komissii-ne-privedet-k-snizheniiu-cen.html": "https://rg.ru/2026/01/24/centrobank-ogranichenie-ekvajringovoj-komissii-ne-privedet-k-snizheniiu-cen.html",
+    "http://government.ru/news/57677": "http://government.ru/news/57677",
+    "http://government.ru/news/57676": "http://government.ru/news/57676",
+    "https://rg.ru/2026/01/24/reg-cfo/aeroporty-sheremetevo-i-domodedovo-podgotovilis-k-silnym-morozam.html": "https://rg.ru/2026/01/24/reg-cfo/aeroporty-sheremetevo-i-domodedovo-podgotovilis-k-silnym-morozam.html",
+    "https://rg.ru/2026/01/24/kitaj-sokratil-import-sladostej-iz-rossii-do-minimuma-za-vosem-let.html": "https://rg.ru/2026/01/24/kitaj-sokratil-import-sladostej-iz-rossii-do-minimuma-za-vosem-let.html",
+    "https://rg.ru/2026/01/24/reg-szfo/v-murmanskoj-oblasti-podkliuchaiut-energosnabzhenie-narushennoe-posle-padeniia-lep.html": "https://rg.ru/2026/01/24/reg-szfo/v-murmanskoj-oblasti-podkliuchaiut-energosnabzhenie-narushennoe-posle-padeniia-lep.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -107978,7 +108012,12 @@
     "4deb2a9503ae163e83ffb62148ff78f9584411ef": "https://rg.ru/2026/01/24/maksimalnaia-vyplata-iz-za-travmy-na-proizvodstve-vyrastet-do-503-tysiach-rublej.html",
     "84fea494e9f632b34ac3f3eff45b489d1102833f": "https://rg.ru/2026/01/24/eksport-rossijskoj-vodki-v-gruziiu-pobil-istoricheskij-rekord.html",
     "76017e20dbdad2690ca6bfb6a0ba1bf33e6b7914": "https://rg.ru/2026/01/24/reg-urfo/na-urale-vosstanovleno-teplosnabzhenie-v-zamerzaiushchem-karabashe.html",
-    "aa4aad685fb9455727065d50dfdae2acc3b20ae8": "https://rg.ru/2026/01/24/centrobank-ogranichenie-ekvajringovoj-komissii-ne-privedet-k-snizheniiu-cen.html"
+    "aa4aad685fb9455727065d50dfdae2acc3b20ae8": "https://rg.ru/2026/01/24/centrobank-ogranichenie-ekvajringovoj-komissii-ne-privedet-k-snizheniiu-cen.html",
+    "f872338be568a53436b161b9cbef66fc167a8e2e": "http://government.ru/news/57677",
+    "d26968919b2d37b8e7488cbf2be07bf02e0f0cca": "http://government.ru/news/57676",
+    "c815c942c7d2adc3d3a451d454482272fb9a74eb": "https://rg.ru/2026/01/24/reg-cfo/aeroporty-sheremetevo-i-domodedovo-podgotovilis-k-silnym-morozam.html",
+    "a1a1f9256fbc471b13749f50c7dd70dad4f5621a": "https://rg.ru/2026/01/24/kitaj-sokratil-import-sladostej-iz-rossii-do-minimuma-za-vosem-let.html",
+    "96db0c459b54cc6ddf23401949e4ff5c417862ec": "https://rg.ru/2026/01/24/reg-szfo/v-murmanskoj-oblasti-podkliuchaiut-energosnabzhenie-narushennoe-posle-padeniia-lep.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -131193,6 +131232,13 @@
     "https://rg.ru/2026/01/24/maksimalnaia-vyplata-iz-za-travmy-na-proizvodstve-vyrastet-do-503-tysiach-rublej.html": "e5e34fb57f1b337dba58e1c3071119762a4fcbbcaedc16b6c250d3c9fef230bf",
     "https://rg.ru/2026/01/24/eksport-rossijskoj-vodki-v-gruziiu-pobil-istoricheskij-rekord.html": "85fa0ce5ffab3d9e991b013e231f8f94cde5fa3dfdbbd2d5b4f5266f3cea5258",
     "https://rg.ru/2026/01/24/reg-urfo/na-urale-vosstanovleno-teplosnabzhenie-v-zamerzaiushchem-karabashe.html": "020c0dffd7c52af5ffffee77dc45ed4a3d83b0c9111b751b045f2b3c1c1c402f",
-    "https://rg.ru/2026/01/24/centrobank-ogranichenie-ekvajringovoj-komissii-ne-privedet-k-snizheniiu-cen.html": "c278e4a453fd1d6448303be1dc6ce9db706c620d0be922a084b11a6f09f9d859"
+    "https://rg.ru/2026/01/24/centrobank-ogranichenie-ekvajringovoj-komissii-ne-privedet-k-snizheniiu-cen.html": "c278e4a453fd1d6448303be1dc6ce9db706c620d0be922a084b11a6f09f9d859",
+    "http://government.ru/news/57677": "128f81cdd5abb5e8049bbf3a75711defa05fbafcbea7f83275e18632e6ebc38c",
+    "http://government.ru/news/57677/": "128f81cdd5abb5e8049bbf3a75711defa05fbafcbea7f83275e18632e6ebc38c",
+    "http://government.ru/news/57676": "83a67de304ae300fdb4d47f5622c276f3b1480340a0bb763ec726d88ee5d624b",
+    "http://government.ru/news/57676/": "83a67de304ae300fdb4d47f5622c276f3b1480340a0bb763ec726d88ee5d624b",
+    "https://rg.ru/2026/01/24/reg-cfo/aeroporty-sheremetevo-i-domodedovo-podgotovilis-k-silnym-morozam.html": "5f3d2d029101a6444b58b4a09c1b9cda688d291fade536713cefec7c1e3cc687",
+    "https://rg.ru/2026/01/24/kitaj-sokratil-import-sladostej-iz-rossii-do-minimuma-za-vosem-let.html": "df7ee0dff2ee4fa1f6fcd8f6d66f722d5701afe1ad278620b895fe027d0fb421",
+    "https://rg.ru/2026/01/24/reg-szfo/v-murmanskoj-oblasti-podkliuchaiut-energosnabzhenie-narushennoe-posle-padeniia-lep.html": "bec44978a985dfb34de837416b98570a2b13b882d6f7b02d90a54a66520168e9"
   }
 }
