@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 24 Jan 2026 18:27:39 GMT"
+      "Last-Modified": "Sat, 24 Jan 2026 21:18:11 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d2c0-b0Vl+YKheb9Teg7MdvsagArRVjc\""
+      "ETag": "W/\"1d077-jslUc+KLBmfpfsMT0oOLb05UD1o\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"losiwegtmb35qd\""
+      "ETag": "\"11tsu0p4cv839ie\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -40283,6 +40283,12 @@
     },
     "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html": {
       "ETag": "\"13pmvmw3n9n1p83\""
+    },
+    "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html": {
+      "ETag": "\"18tv2oiq9822xt\""
+    },
+    "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html": {
+      "ETag": "\"2b2og3qpk4220d\""
     }
   },
   "stats": {
@@ -52117,9 +52123,26 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2b2011f110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2b2011ec10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2b2011e710>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2b2011dd10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2b2011d310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbc96ed4d70>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbc96eca710>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbc96eca5d0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbc983275c0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbc98327ce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbc98313bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ecb110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ecac10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96eca710>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ec9d10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ec9310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
       }
     ],
-    "last_run": "2026-01-24T18:28:01.628260+00:00",
+    "last_run": "2026-01-24T21:18:27.012799+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -52132,9 +52155,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 943.3007499999917,
-        "connect_ms": 0.0,
-        "response_ms": 751.963155999988,
+        "dns_ms": 411.64591200003997,
+        "connect_ms": 609.1915929999914,
+        "response_ms": 1020.8375050000313,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -52145,12 +52168,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2b21523bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbc98313bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 7638.704736999955,
+        "dns_ms": 9297.788749000007,
         "connect_ms": 0.0,
-        "response_ms": 798.9100549999648,
+        "response_ms": 4285.229221999998,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -52161,26 +52184,26 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2b2011d310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ec9310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "5e84f9ac8c6f5f515526b40e6260ebf50a68e1f39959536d0fc328710bc36355",
+    "https://ardexpert.ru/article": "90d14bca7352abcb9555599ef9c069ce8b4893b4cdd8869f9ed61721f8902473",
     "https://www.gostinfo.ru/News/List": "069ffa6a609a7affc8a8103891f46f151ce7e1b81e271be6869e131f1aa0415c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "49d5bf3467947592432d14ffd878fcbc025913a3db95192c59c6c7dcdff82590",
-    "https://eec.eaeunion.org/news/": "04d7cd2ed0b0a38a58bb2bf1b3524ceef84106e7a729bddc5b37b00dc36dcf5e",
+    "https://eec.eaeunion.org/news/": "5f590e493624a02ac10a8a0c855f3777f4dade72dcb35b00bc93694ae9709864",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "bac5a31c037b93a1633dc36b9611cf7e7dd0cede768e71d86824546c7e98dbd1",
-    "https://www.metalinfo.ru/ru/news": "69f6827fd0b17c31dc16550a45ca7078a97801cfe914e456232d192242942305",
-    "https://www.pnp.ru/economics/": "d5d1bdaff605690339615279f40642c3e1564d171ec22ceb0c74c90cc2c40341",
-    "https://erzrf.ru/news/": "1e85bbb38653de765e221071a6da62ac137044dd8a240467083490e1bf92c6e1",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "b8cb6e6f96d6e4bea061c38aa1d2e81c03d5e54b84cba7f4e2918b0d9fb6e0ea",
+    "https://www.metalinfo.ru/ru/news": "64c5ed9038e8afda578314b100e8a00eae624bdfbedbd52c97a5c18b1cb1948e",
+    "https://www.pnp.ru/economics/": "506a532c8836b8b54dbcc2f056132f84712463be033c7c340dd4b7e932ac80aa",
+    "https://erzrf.ru/news/": "64fce4d4f1e932b16425099e140cf297050d25a817fcdb94c1771062758e498f",
     "https://ria-stk.ru/news/vse-novosti.php": "c3732d7b4348734a127b6f108fc4ab4c0717873100717aed502033b7218f156c",
-    "http://government.ru/news/": "5c6f10bddb275631fe42fbad73cfee77cab71db1bb3af4c7b0776e8f1312d263",
-    "https://stroygaz.ru/news/": "797ca07c0e84ad293cb8f7e079cc5416f6fd734a302f67a58aa6385892ccb4d4",
-    "https://realty.ria.ru/lenta/": "c56249d6813cf5ef49b356b211f13f44f741c6456f3f8ede26008951b75fa566",
-    "https://rg.ru/tema/ekonomika": "68ad55d8b3205b58f51933abbdb02daa30cc417df16e34b9b860d250d8fe361d",
+    "http://government.ru/news/": "04e82f6a1ddf75a9b667d83bdf30d7b5f9a53821bf4252bd0efbc206ef057b2e",
+    "https://stroygaz.ru/news/": "8d4cbcba0dd2ace1ba885ce453030a4319e71922b840faf7f690eb4daa370e50",
+    "https://realty.ria.ru/lenta/": "a309fbaee6c17310d9abc135db2f5b7103f570d6f96a099e4b51aa9d8ec88d4b",
+    "https://rg.ru/tema/ekonomika": "495437ff233afa3f0454db594aa84f6c44d108413707941712c032961731a002",
     "http://ancb.ru/publication": "95f9c92b7e2b0ef06b080a303c896c4332f77fad81e532bda669252f68386ebb",
     "https://notim.ru": "4a22d79c44aa2ff71880fcf9ec2a15468a447d183649e6d077bba4d25f52a037",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
@@ -52485,6 +52508,8 @@
       "https://realty.ria.ru/20260122/brendy-2069551062.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html",
+      "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html",
       "https://rg.ru/2026/01/24/eksperty-napomnili-o-prave-na-nalogovyj-vychet-dlia-uchastnikov-pds.html",
       "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html",
       "https://rg.ru/2026/01/24/v-gosdume-prokommentirovali-izmeneniia-v-zakon-o-dachnikah.html",
@@ -52514,9 +52539,7 @@
       "https://rg.ru/2026/01/23/v-rospotrebnadzore-rasskazali-kak-pravilno-vybrat-pirog-k-stolu.html",
       "https://rg.ru/2026/01/23/rossiianam-obiasnili-chto-delat-esli-bank-lishili-licenzii.html",
       "https://rg.ru/2026/01/23/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-26-ianvaria-po-1-fevralia.html",
-      "https://rg.ru/2026/01/23/stoimost-serebra-preodolela-rekordnuiu-otmetku-v-100-dollarov-za-unciiu.html",
       "https://rg.ru/2026/01/23/v-cb-ne-vidiat-osnovanij-govorit-o-puzyre-cen-na-rynke-zhilia-v-2025-godu.html",
-      "https://rg.ru/2026/01/23/evropa-importiruet-rekordno-kolichestvo-spg-v-2026-godu.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -69640,7 +69663,9 @@
     "f5079eede5c42bf5f6836d4d34cf6202798938ed726d65b766eff3049581378d": "2026-01-24T21:27:00+03:00",
     "72a391396b57b6d6b7bab0ccf3ac50a73364e605ecd1a1e3d4565b9d6544c633": "2026-01-24T21:27:00+03:00",
     "9a192065fe5d43f1fb4e8a31c6754de0feb8afaa3535a14cde0f31eba3757d52": "2026-01-24T21:27:00+03:00",
-    "dad511ae0f7ad371887cdee11df13fbb85657c8116a532a0260b405fe28b2c39": "2026-01-24T21:28:00+03:00"
+    "dad511ae0f7ad371887cdee11df13fbb85657c8116a532a0260b405fe28b2c39": "2026-01-24T21:28:00+03:00",
+    "8bfb5151b10ef13ae49cff11e8cf7df72db22791c57dc0accb907cba25353c89": "2026-01-25T00:18:00+03:00",
+    "169f425add028dee37e34a77e853ec6beb0e9ef15073c02a7c761e7a924598cc": "2026-01-25T00:18:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -69671,9 +69696,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2b2152fce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
-        "last_ts": 1769279163.9195476
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbc98327ce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 15,
+        "last_ts": 1769289393.5729067
       },
       "warmup_done": false,
       "last_success_path": null
@@ -69682,39 +69707,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "XQhhgjs3i5pIV95G",
+          "value": "iqkZWYgXewqvMTso",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769280415
+          "expires": 1769290647
         },
         {
           "name": "__ddg10_",
-          "value": "1769279215",
+          "value": "1769289447",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769280415
+          "expires": 1769290647
         },
         {
           "name": "__ddg9_",
-          "value": "20.169.72.165",
+          "value": "172.172.87.81",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769280415
-        },
-        {
-          "name": "__ddg1_",
-          "value": "RFHPd7sdfO7MLM2T4B5u",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1800815215
+          "expires": 1769290647
         },
         {
           "name": "PHPSESSID",
-          "value": "6a47050f46c73724f6444def39331ecf",
+          "value": "f2c4d269fdde84dedeee11066efb0a21",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -69757,9 +69774,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2b2011dd10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
-        "last_ts": 1769279248.056677
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ec9d10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 12,
+        "last_ts": 1769289480.1177924
       },
       "warmup_done": false,
       "last_success_path": null
@@ -90673,7 +90690,9 @@
     "http://government.ru/news/57680": "http://government.ru/news/57680",
     "http://government.ru/news/57678": "http://government.ru/news/57678",
     "https://rg.ru/2026/01/24/eksperty-napomnili-o-prave-na-nalogovyj-vychet-dlia-uchastnikov-pds.html": "https://rg.ru/2026/01/24/eksperty-napomnili-o-prave-na-nalogovyj-vychet-dlia-uchastnikov-pds.html",
-    "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html": "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html"
+    "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html": "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html",
+    "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html": "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html",
+    "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html": "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -108107,7 +108126,9 @@
     "977423e84cbc4d84aad983fd52041eb778addc11": "http://government.ru/news/57680",
     "519838031c47c254906d8cfcfc8fe925a5173810": "http://government.ru/news/57678",
     "e2d5ae26c1c49c42935989e10e97f40dbcbd159c": "https://rg.ru/2026/01/24/eksperty-napomnili-o-prave-na-nalogovyj-vychet-dlia-uchastnikov-pds.html",
-    "3cc234c4f460abdad34da49e637bd913cdaa88b1": "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html"
+    "3cc234c4f460abdad34da49e637bd913cdaa88b1": "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html",
+    "e9d82b22d650ec7c2e5f73183b3fa57cd5ea57bd": "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html",
+    "21439fd55ce52b56cf895b9e9de881afd976ad90": "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -131341,6 +131362,8 @@
     "http://government.ru/news/57678": "72a391396b57b6d6b7bab0ccf3ac50a73364e605ecd1a1e3d4565b9d6544c633",
     "http://government.ru/news/57678/": "72a391396b57b6d6b7bab0ccf3ac50a73364e605ecd1a1e3d4565b9d6544c633",
     "https://rg.ru/2026/01/24/eksperty-napomnili-o-prave-na-nalogovyj-vychet-dlia-uchastnikov-pds.html": "9a192065fe5d43f1fb4e8a31c6754de0feb8afaa3535a14cde0f31eba3757d52",
-    "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html": "dad511ae0f7ad371887cdee11df13fbb85657c8116a532a0260b405fe28b2c39"
+    "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html": "dad511ae0f7ad371887cdee11df13fbb85657c8116a532a0260b405fe28b2c39",
+    "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html": "8bfb5151b10ef13ae49cff11e8cf7df72db22791c57dc0accb907cba25353c89",
+    "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html": "169f425add028dee37e34a77e853ec6beb0e9ef15073c02a7c761e7a924598cc"
   }
 }
