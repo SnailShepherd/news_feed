@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 24 Jan 2026 21:18:11 GMT"
+      "Last-Modified": "Sun, 25 Jan 2026 01:29:46 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d077-jslUc+KLBmfpfsMT0oOLb05UD1o\""
+      "ETag": "W/\"1d24e-spfQiD4zkWhBdwhYFiaCsCsQIsQ\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"11tsu0p4cv839ie\""
+      "ETag": "\"122v4p3uw083bdj\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -40289,6 +40289,15 @@
     },
     "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html": {
       "ETag": "\"2b2og3qpk4220d\""
+    },
+    "https://rg.ru/2026/01/25/kazhdyj-piatyj-rossiianin-nameren-vziat-semejnuiu-ipoteku-do-1-fevralia.html": {
+      "ETag": "\"s34mhjeauw1pvn\""
+    },
+    "https://rg.ru/2026/01/25/dlia-stroitelstva-dereviannyh-mnogoetazhek-bolshe-prepiatstvij-net.html": {
+      "ETag": "\"khn970ywz124r9\""
+    },
+    "https://rg.ru/2026/01/25/puteshestviia-dlia-introvertov-kuda-ehat-tem-kto-cenit-tishinu.html": {
+      "ETag": "\"mhskevah1n1wys\""
     }
   },
   "stats": {
@@ -52140,9 +52149,14 @@
         "url": "https://ria-stk.ru/news/vse-novosti.php",
         "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ecb110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ecac10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96eca710>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ec9d10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ec9310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
       }
     ],
-    "last_run": "2026-01-24T21:18:27.012799+00:00",
+    "last_run": "2026-01-25T01:29:30.852194+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -52155,56 +52169,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 411.64591200003997,
-        "connect_ms": 609.1915929999914,
-        "response_ms": 1020.8375050000313,
+        "dns_ms": 411.76662699999156,
+        "connect_ms": 595.5077550000141,
+        "response_ms": 1007.2743820000056,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbc98313bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 140.95376099999157,
+        "connect_ms": 867.4300970000104,
+        "response_ms": 1008.383858000002,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 9297.788749000007,
+        "dns_ms": 8549.761527000015,
         "connect_ms": 0.0,
-        "response_ms": 4285.229221999998,
+        "response_ms": 598.66513099999,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ec9310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 4134.812009999991,
+        "connect_ms": 0.0,
+        "response_ms": 602.1129510000094,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "90d14bca7352abcb9555599ef9c069ce8b4893b4cdd8869f9ed61721f8902473",
+    "https://ardexpert.ru/article": "d8463e4eb97be53ccbd39c3bbc7252ab8ffaf08c5cc628f372583a56cefca166",
     "https://www.gostinfo.ru/News/List": "069ffa6a609a7affc8a8103891f46f151ce7e1b81e271be6869e131f1aa0415c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "49d5bf3467947592432d14ffd878fcbc025913a3db95192c59c6c7dcdff82590",
-    "https://eec.eaeunion.org/news/": "5f590e493624a02ac10a8a0c855f3777f4dade72dcb35b00bc93694ae9709864",
+    "https://eec.eaeunion.org/news/": "8d184594df80cc2636e207b05d600a39529bb12c5594bbb2ba78c1f8ed60b849",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "b8cb6e6f96d6e4bea061c38aa1d2e81c03d5e54b84cba7f4e2918b0d9fb6e0ea",
-    "https://www.metalinfo.ru/ru/news": "64c5ed9038e8afda578314b100e8a00eae624bdfbedbd52c97a5c18b1cb1948e",
-    "https://www.pnp.ru/economics/": "506a532c8836b8b54dbcc2f056132f84712463be033c7c340dd4b7e932ac80aa",
-    "https://erzrf.ru/news/": "64fce4d4f1e932b16425099e140cf297050d25a817fcdb94c1771062758e498f",
-    "https://ria-stk.ru/news/vse-novosti.php": "c3732d7b4348734a127b6f108fc4ab4c0717873100717aed502033b7218f156c",
-    "http://government.ru/news/": "04e82f6a1ddf75a9b667d83bdf30d7b5f9a53821bf4252bd0efbc206ef057b2e",
-    "https://stroygaz.ru/news/": "8d4cbcba0dd2ace1ba885ce453030a4319e71922b840faf7f690eb4daa370e50",
-    "https://realty.ria.ru/lenta/": "a309fbaee6c17310d9abc135db2f5b7103f570d6f96a099e4b51aa9d8ec88d4b",
-    "https://rg.ru/tema/ekonomika": "495437ff233afa3f0454db594aa84f6c44d108413707941712c032961731a002",
-    "http://ancb.ru/publication": "95f9c92b7e2b0ef06b080a303c896c4332f77fad81e532bda669252f68386ebb",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "1a9d7b4cb687b2b06067f5e0e5906f2794cda82b9b09cf1b9d1dd73ef6ab3ef0",
+    "https://www.metalinfo.ru/ru/news": "441eea23c2fbe4239d998c47809010e6369ffcd5bf34211fb28f4ac6c6a1a064",
+    "https://www.pnp.ru/economics/": "84377af6cfbc851c0043d00e0f0b9f8c172ba26f9aa985d70251730c1c3e1312",
+    "https://erzrf.ru/news/": "ca11d927883d202c0a82c6311a2d8d71c3e482e2769a8a5c6668915c502e0691",
+    "https://ria-stk.ru/news/vse-novosti.php": "79adfc4d2ec796c7a9693baff5c865e8119a624c10734668654446a3051da1a5",
+    "http://government.ru/news/": "9a00c4f650d985542888f1cb3a680f3bcce3b77e130a83d3e1f5693b1eba564f",
+    "https://stroygaz.ru/news/": "af19b6a1c915252b310d57dba891aff54f51974418b95af9fc618174d073f911",
+    "https://realty.ria.ru/lenta/": "0bc957d9dc45b72118830660c8e0fc08f9b09e55da6afd347e7ee664ce304ffd",
+    "https://rg.ru/tema/ekonomika": "2969613182c11fc2a4547da42909303f67d1e644c44b5d8f457fcc9a5dd54cb9",
+    "http://ancb.ru/publication": "deb47b6b3b8769aa93b2428a0e2ce196186075c9fb505ec694c9a36a171b82e5",
     "https://notim.ru": "4a22d79c44aa2ff71880fcf9ec2a15468a447d183649e6d077bba4d25f52a037",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -52508,6 +52522,9 @@
       "https://realty.ria.ru/20260122/brendy-2069551062.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/25/kazhdyj-piatyj-rossiianin-nameren-vziat-semejnuiu-ipoteku-do-1-fevralia.html",
+      "https://rg.ru/2026/01/25/dlia-stroitelstva-dereviannyh-mnogoetazhek-bolshe-prepiatstvij-net.html",
+      "https://rg.ru/2026/01/25/puteshestviia-dlia-introvertov-kuda-ehat-tem-kto-cenit-tishinu.html",
       "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html",
       "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html",
       "https://rg.ru/2026/01/24/eksperty-napomnili-o-prave-na-nalogovyj-vychet-dlia-uchastnikov-pds.html",
@@ -52537,9 +52554,6 @@
       "https://rg.ru/2026/01/24/trutnev-zakonoproekt-o-edinoj-tor-na-dalnem-vostoke-uzhe-razrabotan.html",
       "https://rg.ru/2026/01/23/v-cb-obiasnili-chem-opasno-rezkoe-snizhenie-kliuchevoj-stavki.html",
       "https://rg.ru/2026/01/23/v-rospotrebnadzore-rasskazali-kak-pravilno-vybrat-pirog-k-stolu.html",
-      "https://rg.ru/2026/01/23/rossiianam-obiasnili-chto-delat-esli-bank-lishili-licenzii.html",
-      "https://rg.ru/2026/01/23/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-26-ianvaria-po-1-fevralia.html",
-      "https://rg.ru/2026/01/23/v-cb-ne-vidiat-osnovanij-govorit-o-puzyre-cen-na-rynke-zhilia-v-2025-godu.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
@@ -69665,7 +69679,10 @@
     "9a192065fe5d43f1fb4e8a31c6754de0feb8afaa3535a14cde0f31eba3757d52": "2026-01-24T21:27:00+03:00",
     "dad511ae0f7ad371887cdee11df13fbb85657c8116a532a0260b405fe28b2c39": "2026-01-24T21:28:00+03:00",
     "8bfb5151b10ef13ae49cff11e8cf7df72db22791c57dc0accb907cba25353c89": "2026-01-25T00:18:00+03:00",
-    "169f425add028dee37e34a77e853ec6beb0e9ef15073c02a7c761e7a924598cc": "2026-01-25T00:18:00+03:00"
+    "169f425add028dee37e34a77e853ec6beb0e9ef15073c02a7c761e7a924598cc": "2026-01-25T00:18:00+03:00",
+    "606fefe6ce52c035ff2dcb248bcd3e723955879a94d1e0226596bca7da3b6503": "2026-01-25T04:29:00+03:00",
+    "24a496da66f2904472b375a6c2903885253d923283e776b5e8630f5c5226c732": "2026-01-25T04:29:00+03:00",
+    "1d1cc9ddc6bf905d5d5d95421be16326157d0e3a56de0a6d1c24a17b187b39fc": "2026-01-25T04:29:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -69696,8 +69713,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fbc98327ce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769289393.5729067
       },
       "warmup_done": false,
@@ -69707,31 +69724,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "iqkZWYgXewqvMTso",
+          "value": "SqUhrNukSXmMgL71",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769290647
+          "expires": 1769305743
         },
         {
           "name": "__ddg10_",
-          "value": "1769289447",
+          "value": "1769304543",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769290647
+          "expires": 1769305743
         },
         {
           "name": "__ddg9_",
-          "value": "172.172.87.81",
+          "value": "145.132.99.96",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769290647
+          "expires": 1769305743
+        },
+        {
+          "name": "__ddg1_",
+          "value": "dxq7oFLQqd799lLtLcEv",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1800840543
         },
         {
           "name": "PHPSESSID",
-          "value": "f2c4d269fdde84dedeee11066efb0a21",
+          "value": "2f753526e5177c4fbdbbd99384d64ece",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -69758,11 +69783,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "VCRI9qDVbUJbogFGClf6V26dz2aJuWzM",
+          "value": "zY94fa50RCExwal0f03Tm2OarhTzSEYJ",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769268848
+          "expires": 1769315360
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -69770,12 +69795,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1800362048
+          "expires": 1800408560
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fbc96ec9d10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769289480.1177924
       },
       "warmup_done": false,
@@ -90692,7 +90717,10 @@
     "https://rg.ru/2026/01/24/eksperty-napomnili-o-prave-na-nalogovyj-vychet-dlia-uchastnikov-pds.html": "https://rg.ru/2026/01/24/eksperty-napomnili-o-prave-na-nalogovyj-vychet-dlia-uchastnikov-pds.html",
     "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html": "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html",
     "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html": "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html",
-    "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html": "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html"
+    "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html": "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html",
+    "https://rg.ru/2026/01/25/kazhdyj-piatyj-rossiianin-nameren-vziat-semejnuiu-ipoteku-do-1-fevralia.html": "https://rg.ru/2026/01/25/kazhdyj-piatyj-rossiianin-nameren-vziat-semejnuiu-ipoteku-do-1-fevralia.html",
+    "https://rg.ru/2026/01/25/dlia-stroitelstva-dereviannyh-mnogoetazhek-bolshe-prepiatstvij-net.html": "https://rg.ru/2026/01/25/dlia-stroitelstva-dereviannyh-mnogoetazhek-bolshe-prepiatstvij-net.html",
+    "https://rg.ru/2026/01/25/puteshestviia-dlia-introvertov-kuda-ehat-tem-kto-cenit-tishinu.html": "https://rg.ru/2026/01/25/puteshestviia-dlia-introvertov-kuda-ehat-tem-kto-cenit-tishinu.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -108128,7 +108156,10 @@
     "e2d5ae26c1c49c42935989e10e97f40dbcbd159c": "https://rg.ru/2026/01/24/eksperty-napomnili-o-prave-na-nalogovyj-vychet-dlia-uchastnikov-pds.html",
     "3cc234c4f460abdad34da49e637bd913cdaa88b1": "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html",
     "e9d82b22d650ec7c2e5f73183b3fa57cd5ea57bd": "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html",
-    "21439fd55ce52b56cf895b9e9de881afd976ad90": "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html"
+    "21439fd55ce52b56cf895b9e9de881afd976ad90": "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html",
+    "8bd507f600987e91036a6985faf183aadf194870": "https://rg.ru/2026/01/25/kazhdyj-piatyj-rossiianin-nameren-vziat-semejnuiu-ipoteku-do-1-fevralia.html",
+    "53eebc8a47ecb8ecb21c63805daa570020e92831": "https://rg.ru/2026/01/25/dlia-stroitelstva-dereviannyh-mnogoetazhek-bolshe-prepiatstvij-net.html",
+    "50db5d6d9433311d6193d8043265ff3a8a969451": "https://rg.ru/2026/01/25/puteshestviia-dlia-introvertov-kuda-ehat-tem-kto-cenit-tishinu.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -131364,6 +131395,9 @@
     "https://rg.ru/2026/01/24/eksperty-napomnili-o-prave-na-nalogovyj-vychet-dlia-uchastnikov-pds.html": "9a192065fe5d43f1fb4e8a31c6754de0feb8afaa3535a14cde0f31eba3757d52",
     "https://rg.ru/2026/01/24/v-op-predlozhili-zastrojshchikam-otchisliat-sredstva-v-novyj-gosfond.html": "dad511ae0f7ad371887cdee11df13fbb85657c8116a532a0260b405fe28b2c39",
     "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html": "8bfb5151b10ef13ae49cff11e8cf7df72db22791c57dc0accb907cba25353c89",
-    "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html": "169f425add028dee37e34a77e853ec6beb0e9ef15073c02a7c761e7a924598cc"
+    "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html": "169f425add028dee37e34a77e853ec6beb0e9ef15073c02a7c761e7a924598cc",
+    "https://rg.ru/2026/01/25/kazhdyj-piatyj-rossiianin-nameren-vziat-semejnuiu-ipoteku-do-1-fevralia.html": "606fefe6ce52c035ff2dcb248bcd3e723955879a94d1e0226596bca7da3b6503",
+    "https://rg.ru/2026/01/25/dlia-stroitelstva-dereviannyh-mnogoetazhek-bolshe-prepiatstvij-net.html": "24a496da66f2904472b375a6c2903885253d923283e776b5e8630f5c5226c732",
+    "https://rg.ru/2026/01/25/puteshestviia-dlia-introvertov-kuda-ehat-tem-kto-cenit-tishinu.html": "1d1cc9ddc6bf905d5d5d95421be16326157d0e3a56de0a6d1c24a17b187b39fc"
   }
 }
