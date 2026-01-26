@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Mon, 26 Jan 2026 01:29:52 GMT"
+      "Last-Modified": "Mon, 26 Jan 2026 04:17:33 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d151-CJ7FFz7qNpoYbeWML1mxi5a32+s\""
+      "ETag": "W/\"1d151-nVSBss7uAGPUPyGR0pYC3KY8qi8\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -632,7 +632,7 @@
       "Last-Modified": "Mon, 22 Sep 2025 14:02:35 GMT"
     },
     "https://rg.ru/tema/ekonomika": {
-      "ETag": "\"t66ed7ad1s4381\""
+      "ETag": "\"11w3sp75hao3yhp\""
     },
     "https://rg.ru/2025/09/22/reg-szfo/istoriia-iz-merzloty.html": {
       "ETag": "\"pn89kcin5m1vxu\""
@@ -40384,6 +40384,27 @@
     },
     "https://rg.ru/2026/01/26/eksperty-rasskazali-kak-nakopit-na-vtoruiu-zarplatu-pri-nebolshom-dohode.html": {
       "ETag": "\"17g3w1s6f4220dr\""
+    },
+    "http://ancb.ru/publication/read/20826": {},
+    "https://www.metalinfo.ru/ru/news/180553": {},
+    "https://www.metalinfo.ru/ru/news/180561": {},
+    "https://www.metalinfo.ru/ru/news/180545": {},
+    "https://www.metalinfo.ru/ru/news/180566": {},
+    "https://www.metalinfo.ru/ru/news/180555": {},
+    "https://www.metalinfo.ru/ru/news/180543": {},
+    "https://www.metalinfo.ru/ru/news/180519": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248298&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248297&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248296&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248295&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248294&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248293&all_news=Y": {},
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248292&all_news=Y": {},
+    "https://rg.ru/2026/01/26/iurist-krasovskaia-rasskazala-o-riske-pereplaty-pensii-kotoruiu-pridetsia-vernut.html": {
+      "ETag": "\"wqohta7m7e1or2\""
+    },
+    "https://rg.ru/2026/01/26/fedresurs-v-2025-godu-zafiksirovano-svyshe-500-tysiach-sudebnyh-bankrotstv-rossiian.html": {
+      "ETag": "\"dt4weqw4je1ws3\""
     }
   },
   "stats": {
@@ -52369,9 +52390,19 @@
         "source": "Стройгаз.ру",
         "url": "https://stroygaz.ru/news/",
         "error": "HTTPSConnectionPool(host='stroygaz.ru', port=443): Max retries exceeded with url: /news/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9089e6bd90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Стройгаз.ру",
+        "url": "https://stroygaz.ru/news/",
+        "error": "HTTPSConnectionPool(host='stroygaz.ru', port=443): Max retries exceeded with url: /news/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2693986210>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     ],
-    "last_run": "2026-01-26T01:30:37.440470+00:00",
+    "last_run": "2026-01-26T04:17:43.210753+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -52384,56 +52415,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 755.3707749999887,
-        "connect_ms": 1632.172164999986,
-        "response_ms": 2387.542939999975,
+        "dns_ms": 418.15433100001087,
+        "connect_ms": 167.95942999999625,
+        "response_ms": 586.1137610000071,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9089e1bbf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 273.16139699999553,
+        "connect_ms": 28.220424000011235,
+        "response_ms": 301.38182100000677,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 9580.780916999971,
-        "connect_ms": 0.0,
-        "response_ms": 626.3325089999512,
+        "dns_ms": 4695.867703999994,
+        "connect_ms": 3932.286590000019,
+        "response_ms": 8628.154294000013,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9088a1d950>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 0.6378069999755098,
+        "connect_ms": 328.12586400001464,
+        "response_ms": 328.76367099999015,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "85b6a753f806fb0b1f76d9dd167a039742350cfc3e6a768ef5dac7e5aae0699c",
+    "https://ardexpert.ru/article": "d33f0640d949a3e1ce2859995e0a4437e93c9e0816546c42708f7585212c4a18",
     "https://www.gostinfo.ru/News/List": "069ffa6a609a7affc8a8103891f46f151ce7e1b81e271be6869e131f1aa0415c",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "49d5bf3467947592432d14ffd878fcbc025913a3db95192c59c6c7dcdff82590",
-    "https://eec.eaeunion.org/news/": "138ba72d9776582fe5bfef2fdf07377fe760fabc0ca0767e04bafe710814d823",
+    "https://eec.eaeunion.org/news/": "1a6ceef4a317474fc3f5a6b031239c4fdb548c1bc22ebd79eb1a234749894ace",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "e6be7a442ffd1d1271051d202f324919d5ca6b246da6d134dcb1b5657b43447a",
-    "https://www.metalinfo.ru/ru/news": "441eea23c2fbe4239d998c47809010e6369ffcd5bf34211fb28f4ac6c6a1a064",
-    "https://www.pnp.ru/economics/": "cce5e65eba565b0e2de912fac1a42fde5b63e94eae7d45b6b3a808ceb94ff740",
-    "https://erzrf.ru/news/": "a74567e647e7e9a5b5c8792ba720ea2d1c31f437a5af6bb2c31fe69900e1680a",
-    "https://ria-stk.ru/news/vse-novosti.php": "cd2ab0dbfd2fe5ec498977cec53c7597a76e26f9e25b1c20493bacaecf61a042",
-    "http://government.ru/news/": "a933c9db4ca966a288c85ef1297620a83e6a9351315b61ef3a5a5bc38f53c105",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "c9bfa716a4cc7721668f6849f128342f7c0ca56c7acd8fc65cf730f9cae3eba9",
+    "https://www.metalinfo.ru/ru/news": "a7f87f3aeae75138618370ca3d825bf5607c8e856a8a7f19b1b5c932fb9c922b",
+    "https://www.pnp.ru/economics/": "7dd6b2c0fb49c42a54f5579e50c09c4a9ce8a05b194cbb6564122f8c256f0161",
+    "https://erzrf.ru/news/": "136667b5782432266cb5931bfe7cd6fbfa92265eeabf3a9c89d7c034380be0f5",
+    "https://ria-stk.ru/news/vse-novosti.php": "e444c7896b88d16cbe65b1cfb94124c95e55bc91f1be8e3a66edbbd8b9dbdcf4",
+    "http://government.ru/news/": "68adeb29f9a311167e2ed385e4aa7dffcf9cac73f84120eb671674b341f22af5",
     "https://stroygaz.ru/news/": "bf4e04b6760cfdabdbf28d918df5bc672e361036bada415899f39cacafd8c4c0",
-    "https://realty.ria.ru/lenta/": "7e4d95976c2f4991279792ce7f3e9f55fbda03d0b706a0c4e31f53c262dbf623",
-    "https://rg.ru/tema/ekonomika": "c8b76e100226fbb154275e6f7151e00a471239598561545db1bbc48f8b716669",
-    "http://ancb.ru/publication": "51c87a28f1dfdcef6fc125b5f6b2d78b06d68bf055aee7d4e70ac6c74dd15716",
+    "https://realty.ria.ru/lenta/": "37941aeef25a5f42d3f07398c8c26b30cb85615d2b8ebd233a6574db74813015",
+    "https://rg.ru/tema/ekonomika": "babe5b0342c52ff21198d9520ad28e8ba0236d529b8689e09a26e21c402976f9",
+    "http://ancb.ru/publication": "196f9ca0b4fceff79fdaedd9a5d1985fd2d8f4f9a79b2d18ed28320fb002512a",
     "https://notim.ru": "4a22d79c44aa2ff71880fcf9ec2a15468a447d183649e6d077bba4d25f52a037",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -52567,6 +52598,13 @@
       "https://www.interfax-russia.ru/realty/news/lenta-pereimenuet-set-obi-v-dom-lenta"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/180553",
+      "https://www.metalinfo.ru/ru/news/180561",
+      "https://www.metalinfo.ru/ru/news/180545",
+      "https://www.metalinfo.ru/ru/news/180566",
+      "https://www.metalinfo.ru/ru/news/180555",
+      "https://www.metalinfo.ru/ru/news/180543",
+      "https://www.metalinfo.ru/ru/news/180519",
       "https://www.metalinfo.ru/ru/news/180534",
       "https://www.metalinfo.ru/ru/news/180558",
       "https://www.metalinfo.ru/ru/news/180559",
@@ -52579,14 +52617,7 @@
       "https://www.metalinfo.ru/ru/news/180547",
       "https://www.metalinfo.ru/ru/news/180548",
       "https://www.metalinfo.ru/ru/news/180546",
-      "https://www.metalinfo.ru/ru/news/180541",
-      "https://www.metalinfo.ru/ru/news/180538",
-      "https://www.metalinfo.ru/ru/news/180526",
-      "https://www.metalinfo.ru/ru/news/180536",
-      "https://www.metalinfo.ru/ru/news/180540",
-      "https://www.metalinfo.ru/ru/news/180544",
-      "https://www.metalinfo.ru/ru/news/180529",
-      "https://www.metalinfo.ru/ru/news/180539"
+      "https://www.metalinfo.ru/ru/news/180541"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -52649,6 +52680,13 @@
       "https://erzrf.ru/news/news-archive"
     ],
     "РИА СТК": [
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248298&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248297&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248296&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248295&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248294&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248293&all_news=Y",
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248292&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248276&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248275&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248273&all_news=Y",
@@ -52661,14 +52699,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248274&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248259&all_news=Y",
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248258&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248257&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248256&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248252&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248249&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248248&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248247&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248242&all_news=Y",
-      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248241&all_news=Y"
+      "https://ria-stk.ru/news/index.php?ELEMENT_ID=248257&all_news=Y"
     ],
     "Правительство РФ": [
       "http://government.ru/news/57682/",
@@ -52737,6 +52768,8 @@
       "https://realty.ria.ru/20260122/krasnogorsk-2069553237.html"
     ],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/01/26/iurist-krasovskaia-rasskazala-o-riske-pereplaty-pensii-kotoruiu-pridetsia-vernut.html",
+      "https://rg.ru/2026/01/26/fedresurs-v-2025-godu-zafiksirovano-svyshe-500-tysiach-sudebnyh-bankrotstv-rossiian.html",
       "https://rg.ru/2026/01/26/eksperty-rasskazali-kak-nakopit-na-vtoruiu-zarplatu-pri-nebolshom-dohode.html",
       "https://rg.ru/2026/01/26/bolee-85-puteshestvij-v-rossii-2025-godu-prishlos-na-poezdki-vyhodnogo-dnia.html",
       "https://rg.ru/2026/01/25/docent-shcherbachenko-obiasnil-spor-bankov-s-cb-o-sroke-dejstviia-platezhnyh-kart.html",
@@ -52767,13 +52800,12 @@
       "https://rg.ru/2026/01/25/kazhdyj-piatyj-rossiianin-nameren-vziat-semejnuiu-ipoteku-do-1-fevralia.html",
       "https://rg.ru/2026/01/25/dlia-stroitelstva-dereviannyh-mnogoetazhek-bolshe-prepiatstvij-net.html",
       "https://rg.ru/2026/01/25/puteshestviia-dlia-introvertov-kuda-ehat-tem-kto-cenit-tishinu.html",
-      "https://rg.ru/2026/01/25/patriotizm-i-obaianie.html",
-      "https://rg.ru/2026/01/24/georgij-bovt-my-stanovimsia-stranoj-pereucheta-kotoryj-kormit-ordy-biurokratov.html",
       "https://rg.ru/2025/12/26/novyj-god-v-soiuzmultparke-na-vdnh.html",
       "https://rg.ru/2025/12/26/sovet-bezopasnosti-rossii-nagradil-predstavitelej-gazprom-media-holdinga.html",
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/20826",
       "http://ancb.ru/publication/read/20825",
       "http://ancb.ru/publication/read/20822",
       "http://ancb.ru/publication/read/20818",
@@ -52807,8 +52839,7 @@
       "http://ancb.ru/publication/read/20716",
       "http://ancb.ru/publication/read/20710",
       "http://ancb.ru/publication/read/20706",
-      "http://ancb.ru/publication/read/20694",
-      "http://ancb.ru/publication/read/20692"
+      "http://ancb.ru/publication/read/20694"
     ]
   },
   "first_seen": {
@@ -69929,7 +69960,24 @@
     "f24791d8a75d2a36939410f2f3791042df61f69c8bdb2fc5c65468815ccc1e51": "2026-01-26T00:19:00+03:00",
     "8732d2acabda43582781ba65c7a21745e83415008692e4f80bdf1a8c8d178fcf": "2026-01-26T00:19:00+03:00",
     "2ba79e170d8b767471f0a7961968c07452543b976f207133ae366c113308cf94": "2026-01-26T04:30:00+03:00",
-    "f3b08e88d8753880c139039e44e07df9a220cd6c7939a093f67fc52650135539": "2026-01-26T04:30:00+03:00"
+    "f3b08e88d8753880c139039e44e07df9a220cd6c7939a093f67fc52650135539": "2026-01-26T04:30:00+03:00",
+    "079f4294b4996be206d24bcb72618168fe4ce58283cb091e72c5eb6ee373f28d": "2026-01-26T07:15:00+03:00",
+    "cbdcb7a5327da367a9346185a7c8c9cc1c34250128eaf9ab8d8bd14916d8f74a": "2026-01-26T07:15:00+03:00",
+    "b5c0a4cc483153d5bbd633a103e233584fb957549d4ee511295ba50c1fdc8d3f": "2026-01-26T07:15:00+03:00",
+    "c4b5b1e47346445896d8a901b1197819aa721c255a2a1348301c1e4967ac7398": "2026-01-26T07:16:00+03:00",
+    "66e15fc90f2bb26dd7389764457d1843b3ae8eef73c09b45c7e851731ae333f3": "2026-01-26T07:16:00+03:00",
+    "ec212e5d9d76ca0b803f98428073e4d8ad1c5b300bbbf0b1e0a325400ca9019b": "2026-01-26T07:16:00+03:00",
+    "b5e8d0d4479dc8e7c1f99f61e1d0c3a9ea93e91c01a734f73a50a8f0a69c3624": "2026-01-26T07:16:00+03:00",
+    "7b2fb049706e4efc2b924adc5d59b533d2f127c9dd9c1b44d373ab45d2f3015a": "2026-01-26T07:16:00+03:00",
+    "6c653757d728cb75f0530e0b9549bee628f01e3760b95acd381d519e621fb894": "2026-01-26T07:16:00+03:00",
+    "f5aa79f02248db72d9f8b6a80ffba8b02a468bbc7f0b71d56e5cf9c0afbbfde6": "2026-01-26T07:16:00+03:00",
+    "f92bfb8adb0a4172ec952c5a691c54352e7fa0f8b8d9d375bbc33509b2a214f1": "2026-01-26T07:16:00+03:00",
+    "f86d8ac309fa540aab5dd02ce467470518d725b7d6fe756108ed66dd85060cfe": "2026-01-26T07:16:00+03:00",
+    "7c3185bfdc0e92bf9005c5511f159dce4192c56969a5dba5be68c7931b193a19": "2026-01-26T07:17:00+03:00",
+    "590dc7d21b5acb894aa0fbb071a51a3134102f30cf373226f9b1a194cca39c0e": "2026-01-26T07:17:00+03:00",
+    "aabf6b79b64867e4676eaef39b47d5a86552ff2436e82f81f4e926d4c474195e": "2026-01-26T07:17:00+03:00",
+    "86bb282ca5a68acc87ba27def335a0777a3141e62b984ef5955b30555c4428ad": "2026-01-26T07:17:00+03:00",
+    "81ec11adc10cc15cc3e16a7da307a0f356ce911b49f74f9ae16ae7508205fec0": "2026-01-26T07:17:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -69960,8 +70008,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9089e27ce0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769390895.895993
       },
       "warmup_done": false,
@@ -69971,39 +70019,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "tMjpbIlj3dbkOs34",
+          "value": "mRgRt7zF65f5SmEg",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769392148
+          "expires": 1769402209
         },
         {
           "name": "__ddg10_",
-          "value": "1769390948",
+          "value": "1769401009",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769392148
+          "expires": 1769402209
         },
         {
           "name": "__ddg9_",
-          "value": "20.168.6.180",
+          "value": "48.211.210.115",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769392148
-        },
-        {
-          "name": "__ddg1_",
-          "value": "mwZM3FzAAdn4FplUQTuP",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1800926948
+          "expires": 1769402209
         },
         {
           "name": "PHPSESSID",
-          "value": "78e094202abdf440678f692c50df5887",
+          "value": "844a0ec6636b183329a0fa185a6fe813",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -70030,11 +70070,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "g13iLlCXPKJHuKOYioCPia8vpsRGXiFH",
+          "value": "YbGUiXOOBv4jMBRrZTkBWzSHkf1jK2Yt",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769365091
+          "expires": 1769411812
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -70042,12 +70082,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1800458291
+          "expires": 1800505012
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9088a1da90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769390981.7813916
       },
       "warmup_done": false,
@@ -90999,7 +91039,31 @@
     "https://rg.ru/2026/01/25/iurist-haminskij-rabotniki-dolzhny-hranit-sluzhebnuiu-tajnu.html": "https://rg.ru/2026/01/25/iurist-haminskij-rabotniki-dolzhny-hranit-sluzhebnuiu-tajnu.html",
     "https://rg.ru/2026/01/25/reg-szfo/po-ldu-kak-po-krysham.html": "https://rg.ru/2026/01/25/reg-szfo/po-ldu-kak-po-krysham.html",
     "https://realty.ria.ru/20260126/iski-2069530593.html": "https://realty.ria.ru/20260126/iski-2069530593.html",
-    "https://rg.ru/2026/01/26/eksperty-rasskazali-kak-nakopit-na-vtoruiu-zarplatu-pri-nebolshom-dohode.html": "https://rg.ru/2026/01/26/eksperty-rasskazali-kak-nakopit-na-vtoruiu-zarplatu-pri-nebolshom-dohode.html"
+    "https://rg.ru/2026/01/26/eksperty-rasskazali-kak-nakopit-na-vtoruiu-zarplatu-pri-nebolshom-dohode.html": "https://rg.ru/2026/01/26/eksperty-rasskazali-kak-nakopit-na-vtoruiu-zarplatu-pri-nebolshom-dohode.html",
+    "http://ancb.ru/publication/read/20826": "http://ancb.ru/publication/read/20826",
+    "https://www.metalinfo.ru/ru/news/180553": "http://www.metalinfo.ru/ru/news/180553",
+    "http://www.metalinfo.ru/ru/news/180553": "http://www.metalinfo.ru/ru/news/180553",
+    "https://www.metalinfo.ru/ru/news/180561": "http://www.metalinfo.ru/ru/news/180561",
+    "http://www.metalinfo.ru/ru/news/180561": "http://www.metalinfo.ru/ru/news/180561",
+    "https://www.metalinfo.ru/ru/news/180545": "http://www.metalinfo.ru/ru/news/180545",
+    "http://www.metalinfo.ru/ru/news/180545": "http://www.metalinfo.ru/ru/news/180545",
+    "https://www.metalinfo.ru/ru/news/180566": "http://www.metalinfo.ru/ru/news/180566",
+    "http://www.metalinfo.ru/ru/news/180566": "http://www.metalinfo.ru/ru/news/180566",
+    "https://www.metalinfo.ru/ru/news/180555": "http://www.metalinfo.ru/ru/news/180555",
+    "http://www.metalinfo.ru/ru/news/180555": "http://www.metalinfo.ru/ru/news/180555",
+    "https://www.metalinfo.ru/ru/news/180543": "http://www.metalinfo.ru/ru/news/180543",
+    "http://www.metalinfo.ru/ru/news/180543": "http://www.metalinfo.ru/ru/news/180543",
+    "https://www.metalinfo.ru/ru/news/180519": "http://www.metalinfo.ru/ru/news/180519",
+    "http://www.metalinfo.ru/ru/news/180519": "http://www.metalinfo.ru/ru/news/180519",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248298&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248298&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248297&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248297&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248296&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248296&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248295&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248295&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248294&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248294&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248293&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248293&all_news=Y",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248292&all_news=Y": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248292&all_news=Y",
+    "https://rg.ru/2026/01/26/iurist-krasovskaia-rasskazala-o-riske-pereplaty-pensii-kotoruiu-pridetsia-vernut.html": "https://rg.ru/2026/01/26/iurist-krasovskaia-rasskazala-o-riske-pereplaty-pensii-kotoruiu-pridetsia-vernut.html",
+    "https://rg.ru/2026/01/26/fedresurs-v-2025-godu-zafiksirovano-svyshe-500-tysiach-sudebnyh-bankrotstv-rossiian.html": "https://rg.ru/2026/01/26/fedresurs-v-2025-godu-zafiksirovano-svyshe-500-tysiach-sudebnyh-bankrotstv-rossiian.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -108470,7 +108534,24 @@
     "8567594a96ab48628b8c8d2e18ea9facb090397b": "https://rg.ru/2026/01/25/iurist-haminskij-rabotniki-dolzhny-hranit-sluzhebnuiu-tajnu.html",
     "9fb9c97d8b679db1e84b67fa3fef62f311809969": "https://rg.ru/2026/01/25/reg-szfo/po-ldu-kak-po-krysham.html",
     "74e05c5eb7d0dcc656703afd709dd74d2abd2e9c": "https://realty.ria.ru/20260126/iski-2069530593.html",
-    "e2944cdaae0d9d1ed7ad0fdc3af8be081e576c89": "https://rg.ru/2026/01/26/eksperty-rasskazali-kak-nakopit-na-vtoruiu-zarplatu-pri-nebolshom-dohode.html"
+    "e2944cdaae0d9d1ed7ad0fdc3af8be081e576c89": "https://rg.ru/2026/01/26/eksperty-rasskazali-kak-nakopit-na-vtoruiu-zarplatu-pri-nebolshom-dohode.html",
+    "6fc3d810a61770276b20776fb540e4114a23ae93": "http://ancb.ru/publication/read/20826",
+    "206a4dde92a3afff2ed18b1b0a8cc47716e99c0d": "http://www.metalinfo.ru/ru/news/180553",
+    "3e51ae432c0e5a231d92cb80f2ac55e2e507334e": "http://www.metalinfo.ru/ru/news/180561",
+    "0be04c09db10cff2d1e6fa1bd250a3463b85e96e": "http://www.metalinfo.ru/ru/news/180545",
+    "5f178b11135fcfd80ab7f6705eac694017fd8d73": "http://www.metalinfo.ru/ru/news/180566",
+    "837defd3020cc130aa5a0a26e9ebada4d22d4777": "http://www.metalinfo.ru/ru/news/180555",
+    "32d369bec738f25aa615c425cd9a749e39c13070": "http://www.metalinfo.ru/ru/news/180543",
+    "cf7cd2a073ec9b6344dc6bb689b499ab3d7cb016": "http://www.metalinfo.ru/ru/news/180519",
+    "1693d463801ef21d76b5e716811c2ff2cfde1ad3": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248298&all_news=Y",
+    "9ef4c53b251e36e1381a85a4fa20b42363f97d06": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248297&all_news=Y",
+    "bc5c3f9d41aea3b9b2f06f3902b756d946e17571": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248296&all_news=Y",
+    "80c6a7bc1054b724067c4770e0ae3aa883778eda": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248295&all_news=Y",
+    "0bffb64a20528bc1b3f4a26bc137e540d9ade452": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248294&all_news=Y",
+    "701733c70b5fa0c605f6746da7a5b7baec2467b9": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248293&all_news=Y",
+    "87d6e503ffbed4de3817374a27dbd72539bdbbce": "https://ria-stk.ru/news/index.php?ELEMENT_ID=248292&all_news=Y",
+    "d2fc7894089f43db0b2edb482f95a3428b84e3b5": "https://rg.ru/2026/01/26/iurist-krasovskaia-rasskazala-o-riske-pereplaty-pensii-kotoruiu-pridetsia-vernut.html",
+    "3693ce88460fc8ecc428cda187475fc259fc9539": "https://rg.ru/2026/01/26/fedresurs-v-2025-godu-zafiksirovano-svyshe-500-tysiach-sudebnyh-bankrotstv-rossiian.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -131745,6 +131826,30 @@
     "https://rg.ru/2026/01/25/iurist-haminskij-rabotniki-dolzhny-hranit-sluzhebnuiu-tajnu.html": "f24791d8a75d2a36939410f2f3791042df61f69c8bdb2fc5c65468815ccc1e51",
     "https://rg.ru/2026/01/25/reg-szfo/po-ldu-kak-po-krysham.html": "8732d2acabda43582781ba65c7a21745e83415008692e4f80bdf1a8c8d178fcf",
     "https://realty.ria.ru/20260126/iski-2069530593.html": "2ba79e170d8b767471f0a7961968c07452543b976f207133ae366c113308cf94",
-    "https://rg.ru/2026/01/26/eksperty-rasskazali-kak-nakopit-na-vtoruiu-zarplatu-pri-nebolshom-dohode.html": "f3b08e88d8753880c139039e44e07df9a220cd6c7939a093f67fc52650135539"
+    "https://rg.ru/2026/01/26/eksperty-rasskazali-kak-nakopit-na-vtoruiu-zarplatu-pri-nebolshom-dohode.html": "f3b08e88d8753880c139039e44e07df9a220cd6c7939a093f67fc52650135539",
+    "http://ancb.ru/publication/read/20826": "079f4294b4996be206d24bcb72618168fe4ce58283cb091e72c5eb6ee373f28d",
+    "http://www.metalinfo.ru/ru/news/180553": "cbdcb7a5327da367a9346185a7c8c9cc1c34250128eaf9ab8d8bd14916d8f74a",
+    "https://www.metalinfo.ru/ru/news/180553": "cbdcb7a5327da367a9346185a7c8c9cc1c34250128eaf9ab8d8bd14916d8f74a",
+    "http://www.metalinfo.ru/ru/news/180561": "b5c0a4cc483153d5bbd633a103e233584fb957549d4ee511295ba50c1fdc8d3f",
+    "https://www.metalinfo.ru/ru/news/180561": "b5c0a4cc483153d5bbd633a103e233584fb957549d4ee511295ba50c1fdc8d3f",
+    "http://www.metalinfo.ru/ru/news/180545": "c4b5b1e47346445896d8a901b1197819aa721c255a2a1348301c1e4967ac7398",
+    "https://www.metalinfo.ru/ru/news/180545": "c4b5b1e47346445896d8a901b1197819aa721c255a2a1348301c1e4967ac7398",
+    "http://www.metalinfo.ru/ru/news/180566": "66e15fc90f2bb26dd7389764457d1843b3ae8eef73c09b45c7e851731ae333f3",
+    "https://www.metalinfo.ru/ru/news/180566": "66e15fc90f2bb26dd7389764457d1843b3ae8eef73c09b45c7e851731ae333f3",
+    "http://www.metalinfo.ru/ru/news/180555": "ec212e5d9d76ca0b803f98428073e4d8ad1c5b300bbbf0b1e0a325400ca9019b",
+    "https://www.metalinfo.ru/ru/news/180555": "ec212e5d9d76ca0b803f98428073e4d8ad1c5b300bbbf0b1e0a325400ca9019b",
+    "http://www.metalinfo.ru/ru/news/180543": "b5e8d0d4479dc8e7c1f99f61e1d0c3a9ea93e91c01a734f73a50a8f0a69c3624",
+    "https://www.metalinfo.ru/ru/news/180543": "b5e8d0d4479dc8e7c1f99f61e1d0c3a9ea93e91c01a734f73a50a8f0a69c3624",
+    "http://www.metalinfo.ru/ru/news/180519": "7b2fb049706e4efc2b924adc5d59b533d2f127c9dd9c1b44d373ab45d2f3015a",
+    "https://www.metalinfo.ru/ru/news/180519": "7b2fb049706e4efc2b924adc5d59b533d2f127c9dd9c1b44d373ab45d2f3015a",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248298&all_news=Y": "6c653757d728cb75f0530e0b9549bee628f01e3760b95acd381d519e621fb894",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248297&all_news=Y": "f5aa79f02248db72d9f8b6a80ffba8b02a468bbc7f0b71d56e5cf9c0afbbfde6",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248296&all_news=Y": "f92bfb8adb0a4172ec952c5a691c54352e7fa0f8b8d9d375bbc33509b2a214f1",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248295&all_news=Y": "f86d8ac309fa540aab5dd02ce467470518d725b7d6fe756108ed66dd85060cfe",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248294&all_news=Y": "7c3185bfdc0e92bf9005c5511f159dce4192c56969a5dba5be68c7931b193a19",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248293&all_news=Y": "590dc7d21b5acb894aa0fbb071a51a3134102f30cf373226f9b1a194cca39c0e",
+    "https://ria-stk.ru/news/index.php?ELEMENT_ID=248292&all_news=Y": "aabf6b79b64867e4676eaef39b47d5a86552ff2436e82f81f4e926d4c474195e",
+    "https://rg.ru/2026/01/26/iurist-krasovskaia-rasskazala-o-riske-pereplaty-pensii-kotoruiu-pridetsia-vernut.html": "86bb282ca5a68acc87ba27def335a0777a3141e62b984ef5955b30555c4428ad",
+    "https://rg.ru/2026/01/26/fedresurs-v-2025-godu-zafiksirovano-svyshe-500-tysiach-sudebnyh-bankrotstv-rossiian.html": "81ec11adc10cc15cc3e16a7da307a0f356ce911b49f74f9ae16ae7508205fec0"
   }
 }
