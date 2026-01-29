@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 29 Jan 2026 09:44:10 GMT"
+      "Last-Modified": "Thu, 29 Jan 2026 12:07:55 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1e310-KI81QIj3EGtJ1HnpMS9hfyghjpI\""
+      "ETag": "W/\"1e5c5-w9TKXiokyKsNKPmakyzsgY0vt1I\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Thu, 29 Jan 2026 09:30:15 GMT"
+      "Last-Modified": "Thu, 29 Jan 2026 11:13:42 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -41466,6 +41466,36 @@
     },
     "https://realty.ria.ru/20260129/kommersant-2070917068.html": {
       "Last-Modified": "Thu, 29 Jan 2026 07:09:27 GMT"
+    },
+    "https://eec.eaeunion.org/news/eek-provela-seminar-dlya-italyanskogo-biznesa/": {},
+    "https://eec.eaeunion.org/news/itogi-oprosa-biznesa-stran-eaes-o-praktike-oformleniya-razresheniya-na-vyvoz-tovarov-/": {},
+    "https://www.interfax-russia.ru/realty/news/ansambl-krasnoy-doliny-v-pavlovske-otrestavriruyut-v-2026-godu": {},
+    "https://www.interfax-russia.ru/realty/news/onkocentr-v-petrozavodske-nachnut-stroit-v-2027-godu": {},
+    "https://www.metalinfo.ru/ru/news/180761": {},
+    "https://www.metalinfo.ru/ru/news/180736": {},
+    "https://www.metalinfo.ru/ru/news/180748": {},
+    "https://www.metalinfo.ru/ru/news/180758": {},
+    "https://www.metalinfo.ru/ru/news/180747": {},
+    "https://www.metalinfo.ru/ru/news/180754": {},
+    "https://www.metalinfo.ru/ru/news/180734": {},
+    "https://www.metalinfo.ru/ru/news/180753": {},
+    "https://www.metalinfo.ru/ru/news/180751": {},
+    "https://www.metalinfo.ru/ru/news/180741": {},
+    "https://www.metalinfo.ru/ru/news/180752": {},
+    "https://www.metalinfo.ru/ru/news/180732": {},
+    "http://government.ru/news/57716/": {},
+    "http://government.ru/news/57715/": {},
+    "https://realty.ria.ru/20260129/obemy-2070994251.html": {
+      "Last-Modified": "Thu, 29 Jan 2026 11:50:38 GMT"
+    },
+    "https://realty.ria.ru/20260129/dom-2070984725.html": {
+      "Last-Modified": "Thu, 29 Jan 2026 11:26:23 GMT"
+    },
+    "https://realty.ria.ru/20260129/samolet-2070968078.html": {
+      "Last-Modified": "Thu, 29 Jan 2026 10:21:20 GMT"
+    },
+    "https://realty.ria.ru/20260129/sud-2070960137.html": {
+      "Last-Modified": "Thu, 29 Jan 2026 10:04:03 GMT"
     }
   },
   "stats": {
@@ -53891,9 +53921,19 @@
         "source": "Российская газета: Экономика",
         "url": "https://rg.ru/tema/ekonomika",
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Российская газета: Экономика",
+        "url": "https://rg.ru/tema/ekonomika",
+        "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
       }
     ],
-    "last_run": "2026-01-29T09:44:41.790153+00:00",
+    "last_run": "2026-01-29T12:07:32.402402+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -53906,56 +53946,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 426.9996440000057,
-        "connect_ms": 429.861418999991,
-        "response_ms": 856.8610629999966,
+        "dns_ms": 455.69117499999834,
+        "connect_ms": 654.7061740000117,
+        "response_ms": 1110.39734900001,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc7339dfd10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 161.4873380000006,
+        "connect_ms": 961.3940780000121,
+        "response_ms": 1122.8814160000127,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 3961.429269000007,
+        "dns_ms": 20014.344403000025,
         "connect_ms": 0.0,
-        "response_ms": 604.8608360000003,
+        "response_ms": 1188.277090999975,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc732471950>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 597.2218439999892,
+        "connect_ms": 124.4496950000098,
+        "response_ms": 721.671538999999,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "da1e34d99d96d7a7b124306c3973d6a3d6be11cfb975e00e150930557f4602dd",
+    "https://ardexpert.ru/article": "01b15da681bcbfdcb9ebda0ac58340110cbc911e076464a98993f40282baab36",
     "https://www.gostinfo.ru/News/List": "f9522df72aa8bfc0dc583ecc952ddd6f246a5ddc7cd80b3f773aec06c60b7375",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "6654ac8b33ce488f15baf708aab1180a673f7945a0420264ba98501be4d2e2ca",
-    "https://eec.eaeunion.org/news/": "2433d448362152dc3ddeb1d3f8ec08d3d856835df8ee89347c848e5bf2fdd826",
+    "https://eec.eaeunion.org/news/": "2e28c980d1fa634cbcfa8889245a4e5bf66400f04486e7f24cefc6ebddb6a40a",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "bfbc179cdd9c07ef77228f3c84f318aaddb51249b099f24ecd11ef1668b0ebc5",
-    "https://www.metalinfo.ru/ru/news": "aafef8c712105810d1518aab76de025122a56784f9eba4b9f9887910a04737f0",
-    "https://www.pnp.ru/economics/": "ed43d33f2fabaaa03cc04c0b2cd65b1844949eb0de988dbb7d3f2cd0415e9fc7",
-    "https://erzrf.ru/news/": "7f0c45c10c8e2ad821c578544b9a382d5afb9bf83053614654b413ded7f92d24",
-    "https://ria-stk.ru/news/vse-novosti.php": "e15d6e6feb6877e1fefa13685ac3beab05537fa57f84ad619d5cea1e09b117b0",
-    "http://government.ru/news/": "07ecdda0b32eaf374387bef93d808471db580f64d9c043b60069fd5c8ec91f67",
-    "https://stroygaz.ru/news/": "d98c3c745d1c33f7f647ba9716ec33efe0824674ef5a2f7da2799e58e99ba341",
-    "https://realty.ria.ru/lenta/": "7df74cb5e3e1b1f6fd1a12c97bd19fbd554d0ac50816328f0b32a10eba887caa",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "f28c39877d00d3cacc13f62b99042c7e3a97b8c944066add69b0515a094a7c4e",
+    "https://www.metalinfo.ru/ru/news": "79b454a24b1a98a5221a52df92730e47a70155f45d1b16ee2b8b13a734debd03",
+    "https://www.pnp.ru/economics/": "00dae3258b6254406ab7eae0c389e5d1f6dc3b14350827ca7ed1c8dd3fb3331c",
+    "https://erzrf.ru/news/": "c06fb9421e568ebcaaf2a45942eec1cce4e056652fa9303092be1df1739f623e",
+    "https://ria-stk.ru/news/vse-novosti.php": "089ba6271ca2ac7a3c45b0aeadb6321aaf5a2916181d4c84e52b89d309120864",
+    "http://government.ru/news/": "a4735890fbe7cc9414ecedd1d441347326866bac762b263fa8779c45706608c8",
+    "https://stroygaz.ru/news/": "36c1e6f539fbbe62609216fa0cd23e8ad3064cc96013409b8c43faef7e70ffc1",
+    "https://realty.ria.ru/lenta/": "bf6586656ca54ebc525096c78f4877ca6ce11a0ca8166cc33ac97eaec192c446",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
-    "http://ancb.ru/publication": "684991d9abc525040a2ec77fededb41587eaf0325dd49966e5314f5bde9a412f",
+    "http://ancb.ru/publication": "f20d6fc2a3fc7c6c52763e7100d6ce1c716db4e2cad05b61f4726504c1240c26",
     "https://notim.ru": "49149ed28de6698ee1035f0f70a39730c1b96c81b25396615449470e0bb0467f",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -54024,6 +54064,8 @@
     ],
     "ФАУ ФЦС": [],
     "ЕЭК ЕАЭС": [
+      "https://eec.eaeunion.org/news/eek-provela-seminar-dlya-italyanskogo-biznesa/",
+      "https://eec.eaeunion.org/news/itogi-oprosa-biznesa-stran-eaes-o-praktike-oformleniya-razresheniya-na-vyvoz-tovarov-/",
       "https://eec.eaeunion.org/news/goar-barsegyan-i-anton-alikhanov-obsudili-realizatsiyu-mekhanizma-finansirovaniya-promkooperatsii/",
       "https://eec.eaeunion.org/news/andrey-slepnev-vstretilsya-s-zamestitelem-ministra-inostrannykh-del-irana-khamidom-ganbri/",
       "https://eec.eaeunion.org/news/arzybek-kozhoshev-provel-rabochuyu-vstrechu-s-ministrom-nefti-i-prirodnogo-gaza-indii-khardipom-sing/",
@@ -54033,9 +54075,7 @@
       "https://eec.eaeunion.org/news/v-eek-obsudili-voprosy-podscheta-uglerodnogo-sleda-produktsii/",
       "https://eec.eaeunion.org/news/naira-karapetyan-mekhanizm-finansovoy-podderzhki-v-apk-budet-vostrebovan-i-v-zhivotnovodstve-/",
       "https://eec.eaeunion.org/news/andrey-slepnev-vstretilsya-s-poslom-pakistana-faysalom-niazom-tirmizi/",
-      "https://eec.eaeunion.org/news/zamestitelem-direktora-departamenta-razvitiya-predprinimatelskoy-deyatelnosti-eek-naznachena-aynura-/",
-      "https://eec.eaeunion.org/news/sovet-eek-napravil-proekt-soglasheniya-ob-elektronnoy-torgovle-v-strany-soyuza-dlya-podgotovki-k-pod/",
-      "https://eec.eaeunion.org/news/bakytzhan-sagintaev-provel-peregovory-s-novym-postpredom-kuby-pri-eek-enrike-orta-gonsalesom/"
+      "https://eec.eaeunion.org/news/zamestitelem-direktora-departamenta-razvitiya-predprinimatelskoy-deyatelnosti-eek-naznachena-aynura-/"
     ],
     "Минфин России": [
       "https://minfin.gov.ru/ru/press-center/contacts/",
@@ -54047,6 +54087,8 @@
       "https://minfin.gov.ru/ru/press-center/contacts/"
     ],
     "Интерфакс-Недвижимость": [
+      "https://www.interfax-russia.ru/realty/news/ansambl-krasnoy-doliny-v-pavlovske-otrestavriruyut-v-2026-godu",
+      "https://www.interfax-russia.ru/realty/news/onkocentr-v-petrozavodske-nachnut-stroit-v-2027-godu",
       "https://www.interfax-russia.ru/realty/news/sotnya-samyh-dorogih-kvartir-moskvy-stoit-nemnogim-menee-2-mlrd",
       "https://www.interfax-russia.ru/realty/news/gk-samolet-v-2026-godu-zhdet-snizheniya-stavok-po-ipoteke-do-14-15",
       "https://www.interfax-russia.ru/realty/news/investicii-v-nedvizhimost-moskvy-snizilis-na-30-za-god",
@@ -54084,11 +54126,21 @@
       "https://www.interfax-russia.ru/realty/news/korpus-instituta-eksperimentalnoy-kardiologii-vveden-v-ekspluataciyu-moskve",
       "https://www.interfax-russia.ru/realty/news/novyy-etap-modernizacii-aeroporta-arhangelska-nachnetsya-vesnoy",
       "https://www.interfax-russia.ru/realty/news/soyuzmultfilm-mozhet-otkryt-do-chetyreh-parkov-razvlecheniy",
-      "https://www.interfax-russia.ru/realty/news/snegosplavnye-punkty-v-moskve-rabotayut-kruglosutochno",
-      "https://www.interfax-russia.ru/realty/news/gorodskih-planirovshchikov-budut-gotovit-v-niu-vshe",
-      "https://www.interfax-russia.ru/realty/news/prezident-nopriz-predlozhil-vnesti-ekologicheskie-kriterii-v-standart-ocenki-delovoy-reputacii-stroykompaniy"
+      "https://www.interfax-russia.ru/realty/news/snegosplavnye-punkty-v-moskve-rabotayut-kruglosutochno"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/180761",
+      "https://www.metalinfo.ru/ru/news/180736",
+      "https://www.metalinfo.ru/ru/news/180748",
+      "https://www.metalinfo.ru/ru/news/180758",
+      "https://www.metalinfo.ru/ru/news/180747",
+      "https://www.metalinfo.ru/ru/news/180754",
+      "https://www.metalinfo.ru/ru/news/180734",
+      "https://www.metalinfo.ru/ru/news/180753",
+      "https://www.metalinfo.ru/ru/news/180751",
+      "https://www.metalinfo.ru/ru/news/180741",
+      "https://www.metalinfo.ru/ru/news/180752",
+      "https://www.metalinfo.ru/ru/news/180732",
       "https://www.metalinfo.ru/ru/news/180746",
       "https://www.metalinfo.ru/ru/news/180735",
       "https://www.metalinfo.ru/ru/news/180731",
@@ -54096,19 +54148,7 @@
       "https://www.metalinfo.ru/ru/news/180739",
       "https://www.metalinfo.ru/ru/news/180737",
       "https://www.metalinfo.ru/ru/news/180733",
-      "https://www.metalinfo.ru/ru/news/180715",
-      "https://www.metalinfo.ru/ru/news/180722",
-      "https://www.metalinfo.ru/ru/news/180730",
-      "https://www.metalinfo.ru/ru/news/180729",
-      "https://www.metalinfo.ru/ru/news/180711",
-      "https://www.metalinfo.ru/ru/news/180728",
-      "https://www.metalinfo.ru/ru/news/180717",
-      "https://www.metalinfo.ru/ru/news/180721",
-      "https://www.metalinfo.ru/ru/news/180727",
-      "https://www.metalinfo.ru/ru/news/180709",
-      "https://www.metalinfo.ru/ru/news/180712",
-      "https://www.metalinfo.ru/ru/news/180720",
-      "https://www.metalinfo.ru/ru/news/180726"
+      "https://www.metalinfo.ru/ru/news/180715"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -54193,6 +54233,8 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248305&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57716/",
+      "http://government.ru/news/57715/",
       "http://government.ru/news/57710/",
       "http://government.ru/news/57709/",
       "http://government.ru/news/57708/",
@@ -54210,9 +54252,7 @@
       "http://government.ru/news/57694/",
       "http://government.ru/news/57693/",
       "http://government.ru/news/57689/",
-      "http://government.ru/news/57691/",
-      "http://government.ru/news/57690/",
-      "http://government.ru/news/57683/"
+      "http://government.ru/news/57691/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/v-peterburge-tret-sdelok-s-zemelnymi-uchastkami-prikhodilas-na-uchastki-s-gotovymi-razresheniyami/",
@@ -54237,6 +54277,10 @@
       "https://stroygaz.ru/news/construction/odobren-proekt-aerovokzala-v-gorno-altayske/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260129/obemy-2070994251.html",
+      "https://realty.ria.ru/20260129/dom-2070984725.html",
+      "https://realty.ria.ru/20260129/samolet-2070968078.html",
+      "https://realty.ria.ru/20260129/sud-2070960137.html",
       "https://realty.ria.ru/20260129/samolet-2070957623.html",
       "https://realty.ria.ru/20260129/developer-2070957227.html",
       "https://realty.ria.ru/20260129/samolet-2070956596.html",
@@ -54252,11 +54296,7 @@
       "https://realty.ria.ru/20260129/torgi-2070910212.html",
       "https://realty.ria.ru/20260129/brendy-2070819981.html",
       "https://realty.ria.ru/20260129/prodavets-2070580338.html",
-      "https://realty.ria.ru/20260128/siriya-2070846529.html",
-      "https://realty.ria.ru/20260128/larki-2070844033.html",
-      "https://realty.ria.ru/20260128/domklik-2070797555.html",
-      "https://realty.ria.ru/20260128/moskva-2070772477.html",
-      "https://realty.ria.ru/20260128/prodazhi-2070744648.html"
+      "https://realty.ria.ru/20260128/siriya-2070846529.html"
     ],
     "Российская газета: Экономика": [
       "https://rg.ru/2026/01/28/stoimost-nefti-brent-prevysila-68-dollarov-vpervye-s-sentiabria-2025-goda.html",
@@ -72015,7 +72055,29 @@
     "08bc192ca93e7f6a6500aacb23ce658c7a5e31d28eb355c071f96c7206b6efb8": "2026-01-29T12:44:00+03:00",
     "2fbe82e371bb2893825f52e709b88726b362db47f0e9160c2a8a861b40ce5bf0": "2026-01-29T12:44:00+03:00",
     "be8dd39341d2ba02cedcb4ce6dd64d8e5077bedbbe16c4f70e7b909700436d3e": "2026-01-29T12:44:00+03:00",
-    "5cdd957b2eb84dc8dd530152d275806cc525815731d16e359a73241829a213be": "2026-01-29T12:44:00+03:00"
+    "5cdd957b2eb84dc8dd530152d275806cc525815731d16e359a73241829a213be": "2026-01-29T12:44:00+03:00",
+    "0e767f4c6f44814dbb094938e8ea7c849e962b5c962f550f317c8ab63514584d": "2026-01-29T15:05:00+03:00",
+    "c13960bf9753fe27989fd78054e17bff5c8a8d7a9380023120e98af481aea728": "2026-01-29T15:05:00+03:00",
+    "ba4a6a4317342021fef62cde2f50f1f403006ec4bcf437419d5352f36383c8f8": "2026-01-29T15:05:00+03:00",
+    "2f5ec06b50d09ea09e7f562283b1321dda1458393c8d563ae0141177980b56c6": "2026-01-29T15:05:00+03:00",
+    "fac4c74c2698f06871aa644ce174be20bb9ab2092137f9a13872ca4d9ef79f7e": "2026-01-29T15:05:00+03:00",
+    "b16a16e8d1dcc15bbea822a28351e3dd4dd7bfba6eaf2dff1ab75aeee3f7ede2": "2026-01-29T15:05:00+03:00",
+    "b0c0a4f5f72e709875921149dca73735fe356eee196c2fab2cc43d7a0c95c3b6": "2026-01-29T15:05:00+03:00",
+    "cfc619cf26eb88bc58bcc842ace7eda47c90646fb5ab91050c38cccb3ddb32e8": "2026-01-29T15:05:00+03:00",
+    "7460ec8cd609f31aac23019977c52406fc8377f3bf036abc0d114c72440e8e85": "2026-01-29T15:05:00+03:00",
+    "4111944ae332d9dd8df7e00b4a4266c8526ce25494715e75c731489b2a8ef9a8": "2026-01-29T15:05:00+03:00",
+    "a67fd3ee11352c10ceab0bdcdcb99ba06643e71e949330e3d0aa483ae0f2bd68": "2026-01-29T15:06:00+03:00",
+    "af2c93f1593a7cc0cd5df44d5608e1f1a478e76935ef3c533e38bebb4ebfa600": "2026-01-29T15:06:00+03:00",
+    "b0c9d902bdf0e7f4015139098d9d3e4b1e0526aa00a97e8f94830d0b66c47f9e": "2026-01-29T15:06:00+03:00",
+    "bfab1bcbefb17466c73d9212b72ff7648d685b941d859c6fe4f6d5271aa8292a": "2026-01-29T15:06:00+03:00",
+    "8edc5226a78178b6fe29cedf197e63dab47605087d9db26bd0391dda25468e96": "2026-01-29T15:06:00+03:00",
+    "3393e12f6da8dbb5bcabd95a864351e0c61dbcbb88802db4705dccc116a1e7c3": "2026-01-29T15:06:00+03:00",
+    "69127eb55a296149be301b7312e5afb6d701a7dbfd1b79f260c9d97883ead204": "2026-01-29T15:07:00+03:00",
+    "db29917de2d7627ece6a74b0128e5462a47e9ac442ff26025243f9a8038eb4fe": "2026-01-29T15:07:00+03:00",
+    "a52b7bb82ee1a2a500577c1af768fc3ee9d7ceff2da12daebcd8f4c88a14b28c": "2026-01-29T15:07:00+03:00",
+    "1cae1ce299b9e2e4ea5a8877c036f63c7b586e97bd198b3156211a7012d361d8": "2026-01-29T15:07:00+03:00",
+    "182c315420d51dd4ec0923f3f1f2c8e3580ca2e01bd9321d900a6e068cf10390": "2026-01-29T15:07:00+03:00",
+    "391d2fdaf751b698a609cfc75966f735b432301272fe3cb85023e483c4e426f9": "2026-01-29T15:07:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -72046,8 +72108,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc7339edf30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769679605.520403
       },
       "warmup_done": false,
@@ -72057,39 +72119,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "v7ABLaxH7oXs383T",
+          "value": "Tb1wTYfyjyeLaDMO",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769681006
+          "expires": 1769689631
         },
         {
           "name": "__ddg10_",
-          "value": "1769679806",
+          "value": "1769688431",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769681006
+          "expires": 1769689631
         },
         {
           "name": "__ddg9_",
-          "value": "172.172.87.197",
+          "value": "64.236.135.6",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769681006
-        },
-        {
-          "name": "__ddg1_",
-          "value": "tWVMiUMkiz19rCwgLsFd",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1801215806
+          "expires": 1769689631
         },
         {
           "name": "PHPSESSID",
-          "value": "a1bff89a1f6527003d877d7f0766da0e",
+          "value": "efc03f5fec2e85a47ccd9d9aec614407",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -72116,11 +72170,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "KXY5RsDzBf29RgIx5fXrLg2a80h7dxqD",
+          "value": "ir19yQXel5eX6TP8beCUJXT5ZYMdWmiJ",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769661870
+          "expires": 1769699235
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -72128,12 +72182,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1800755070
+          "expires": 1800792435
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc732470f50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769679838.1788595
       },
       "warmup_done": false,
@@ -93822,7 +93876,41 @@
     "https://realty.ria.ru/20260129/stroitelstvo-2070938101.html": "https://realty.ria.ru/20260129/stroitelstvo-2070938101.html",
     "https://realty.ria.ru/20260129/moskva-2070924442.html": "https://realty.ria.ru/20260129/moskva-2070924442.html",
     "https://realty.ria.ru/20260129/fas-2070923610.html": "https://realty.ria.ru/20260129/fas-2070923610.html",
-    "https://realty.ria.ru/20260129/kommersant-2070917068.html": "https://realty.ria.ru/20260129/kommersant-2070917068.html"
+    "https://realty.ria.ru/20260129/kommersant-2070917068.html": "https://realty.ria.ru/20260129/kommersant-2070917068.html",
+    "https://eec.eaeunion.org/news/eek-provela-seminar-dlya-italyanskogo-biznesa": "https://eec.eaeunion.org/news/eek-provela-seminar-dlya-italyanskogo-biznesa",
+    "https://eec.eaeunion.org/news/itogi-oprosa-biznesa-stran-eaes-o-praktike-oformleniya-razresheniya-na-vyvoz-tovarov-": "https://eec.eaeunion.org/news/itogi-oprosa-biznesa-stran-eaes-o-praktike-oformleniya-razresheniya-na-vyvoz-tovarov-",
+    "https://www.interfax-russia.ru/realty/news/ansambl-krasnoy-doliny-v-pavlovske-otrestavriruyut-v-2026-godu": "https://www.interfax-russia.ru/realty/news/ansambl-krasnoy-doliny-v-pavlovske-otrestavriruyut-v-2026-godu",
+    "https://www.interfax-russia.ru/realty/news/onkocentr-v-petrozavodske-nachnut-stroit-v-2027-godu": "https://www.interfax-russia.ru/realty/news/onkocentr-v-petrozavodske-nachnut-stroit-v-2027-godu",
+    "https://www.metalinfo.ru/ru/news/180761": "http://www.metalinfo.ru/ru/news/180761",
+    "http://www.metalinfo.ru/ru/news/180761": "http://www.metalinfo.ru/ru/news/180761",
+    "https://www.metalinfo.ru/ru/news/180736": "http://www.metalinfo.ru/ru/news/180736",
+    "http://www.metalinfo.ru/ru/news/180736": "http://www.metalinfo.ru/ru/news/180736",
+    "https://www.metalinfo.ru/ru/news/180748": "http://www.metalinfo.ru/ru/news/180748",
+    "http://www.metalinfo.ru/ru/news/180748": "http://www.metalinfo.ru/ru/news/180748",
+    "https://www.metalinfo.ru/ru/news/180758": "http://www.metalinfo.ru/ru/news/180758",
+    "http://www.metalinfo.ru/ru/news/180758": "http://www.metalinfo.ru/ru/news/180758",
+    "https://www.metalinfo.ru/ru/news/180747": "http://www.metalinfo.ru/ru/news/180747",
+    "http://www.metalinfo.ru/ru/news/180747": "http://www.metalinfo.ru/ru/news/180747",
+    "https://www.metalinfo.ru/ru/news/180754": "http://www.metalinfo.ru/ru/news/180754",
+    "http://www.metalinfo.ru/ru/news/180754": "http://www.metalinfo.ru/ru/news/180754",
+    "https://www.metalinfo.ru/ru/news/180734": "http://www.metalinfo.ru/ru/news/180734",
+    "http://www.metalinfo.ru/ru/news/180734": "http://www.metalinfo.ru/ru/news/180734",
+    "https://www.metalinfo.ru/ru/news/180753": "http://www.metalinfo.ru/ru/news/180753",
+    "http://www.metalinfo.ru/ru/news/180753": "http://www.metalinfo.ru/ru/news/180753",
+    "https://www.metalinfo.ru/ru/news/180751": "http://www.metalinfo.ru/ru/news/180751",
+    "http://www.metalinfo.ru/ru/news/180751": "http://www.metalinfo.ru/ru/news/180751",
+    "https://www.metalinfo.ru/ru/news/180741": "http://www.metalinfo.ru/ru/news/180741",
+    "http://www.metalinfo.ru/ru/news/180741": "http://www.metalinfo.ru/ru/news/180741",
+    "https://www.metalinfo.ru/ru/news/180752": "http://www.metalinfo.ru/ru/news/180752",
+    "http://www.metalinfo.ru/ru/news/180752": "http://www.metalinfo.ru/ru/news/180752",
+    "https://www.metalinfo.ru/ru/news/180732": "http://www.metalinfo.ru/ru/news/180732",
+    "http://www.metalinfo.ru/ru/news/180732": "http://www.metalinfo.ru/ru/news/180732",
+    "http://government.ru/news/57716": "http://government.ru/news/57716",
+    "http://government.ru/news/57715": "http://government.ru/news/57715",
+    "https://realty.ria.ru/20260129/obemy-2070994251.html": "https://realty.ria.ru/20260129/obemy-2070994251.html",
+    "https://realty.ria.ru/20260129/dom-2070984725.html": "https://realty.ria.ru/20260129/dom-2070984725.html",
+    "https://realty.ria.ru/20260129/samolet-2070968078.html": "https://realty.ria.ru/20260129/samolet-2070968078.html",
+    "https://realty.ria.ru/20260129/sud-2070960137.html": "https://realty.ria.ru/20260129/sud-2070960137.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -111858,7 +111946,29 @@
     "4eac2b880dcf1e97a8039567fc5c962d4cc3afdf": "https://realty.ria.ru/20260129/stroitelstvo-2070938101.html",
     "a7b0f862df5cb3265d071bbddf88d491f71020fa": "https://realty.ria.ru/20260129/moskva-2070924442.html",
     "c83f6cca3a12ebbc54ecc79a609ea448e1917992": "https://realty.ria.ru/20260129/fas-2070923610.html",
-    "06a2c20dc41f82894d9522c0d916b49a6038bdc9": "https://realty.ria.ru/20260129/kommersant-2070917068.html"
+    "06a2c20dc41f82894d9522c0d916b49a6038bdc9": "https://realty.ria.ru/20260129/kommersant-2070917068.html",
+    "ff618aa1de82f67cec1d8808c00df68c2bf4c08d": "https://eec.eaeunion.org/news/eek-provela-seminar-dlya-italyanskogo-biznesa",
+    "e7b907ad9cad5136c41804f555a8b3e788a8c5cb": "https://eec.eaeunion.org/news/itogi-oprosa-biznesa-stran-eaes-o-praktike-oformleniya-razresheniya-na-vyvoz-tovarov-",
+    "c0808254c124ccfba9c9fbe9ac5d67139b751cb4": "https://www.interfax-russia.ru/realty/news/ansambl-krasnoy-doliny-v-pavlovske-otrestavriruyut-v-2026-godu",
+    "e467e8965cd1e5c09e27eff91ce79578ee71f484": "https://www.interfax-russia.ru/realty/news/onkocentr-v-petrozavodske-nachnut-stroit-v-2027-godu",
+    "f5a17643d62ea7f29c1aad42825a251fbf6fc7f5": "http://www.metalinfo.ru/ru/news/180761",
+    "8247d611d75401d387ba2bbd8bf830d4f65af0bd": "http://www.metalinfo.ru/ru/news/180736",
+    "e6e9e842385bb2672da37e842c5853aa04c2b39d": "http://www.metalinfo.ru/ru/news/180748",
+    "cbf4a730f23f4fa3fe05dc3420900603af2124ee": "http://www.metalinfo.ru/ru/news/180758",
+    "e0ce71d03395d11068967753dbe5201ae160153b": "http://www.metalinfo.ru/ru/news/180747",
+    "9c530e73c7201a434a3d514115ca4c73a6c3e387": "http://www.metalinfo.ru/ru/news/180754",
+    "aa2ee4d8e5cacd8bfe09bda51cead52dc50dcb13": "http://www.metalinfo.ru/ru/news/180734",
+    "8631a70591c8844bb977590ae08b43e39cd6c330": "http://www.metalinfo.ru/ru/news/180753",
+    "a2e887ae2b287a84bbc3c41982eb60f7c6d4d12a": "http://www.metalinfo.ru/ru/news/180751",
+    "2a2692e87c2a0e83d02eac3b8b3ac93b95a53150": "http://www.metalinfo.ru/ru/news/180741",
+    "2bbb6f0921365c0a59bba408a5c699d26fdbc166": "http://www.metalinfo.ru/ru/news/180752",
+    "6fc90b02cee178ec837d53ec2ebbd62ac36ffe34": "http://www.metalinfo.ru/ru/news/180732",
+    "d76c0215c0385820f02c3da55a012f73a08d812c": "http://government.ru/news/57716",
+    "7da21c2cf62a051d3674ffc8d9732e7f1ffc5332": "http://government.ru/news/57715",
+    "31f95b8f6503dc32cbb8e45f7df85e82a7163733": "https://realty.ria.ru/20260129/obemy-2070994251.html",
+    "09886a67e1fff5f8256126f0806208bd5afdc4b1": "https://realty.ria.ru/20260129/dom-2070984725.html",
+    "993e6f4ffc8a330f503863ac5fb7baa4cf8a3361": "https://realty.ria.ru/20260129/samolet-2070968078.html",
+    "42b31725988d731c45d302b41e4f11bb01618411": "https://realty.ria.ru/20260129/sud-2070960137.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -135905,6 +136015,44 @@
     "https://realty.ria.ru/20260129/stroitelstvo-2070938101.html": "08bc192ca93e7f6a6500aacb23ce658c7a5e31d28eb355c071f96c7206b6efb8",
     "https://realty.ria.ru/20260129/moskva-2070924442.html": "2fbe82e371bb2893825f52e709b88726b362db47f0e9160c2a8a861b40ce5bf0",
     "https://realty.ria.ru/20260129/fas-2070923610.html": "be8dd39341d2ba02cedcb4ce6dd64d8e5077bedbbe16c4f70e7b909700436d3e",
-    "https://realty.ria.ru/20260129/kommersant-2070917068.html": "5cdd957b2eb84dc8dd530152d275806cc525815731d16e359a73241829a213be"
+    "https://realty.ria.ru/20260129/kommersant-2070917068.html": "5cdd957b2eb84dc8dd530152d275806cc525815731d16e359a73241829a213be",
+    "https://eec.eaeunion.org/news/eek-provela-seminar-dlya-italyanskogo-biznesa": "0e767f4c6f44814dbb094938e8ea7c849e962b5c962f550f317c8ab63514584d",
+    "https://eec.eaeunion.org/news/eek-provela-seminar-dlya-italyanskogo-biznesa/": "0e767f4c6f44814dbb094938e8ea7c849e962b5c962f550f317c8ab63514584d",
+    "https://eec.eaeunion.org/news/itogi-oprosa-biznesa-stran-eaes-o-praktike-oformleniya-razresheniya-na-vyvoz-tovarov-": "c13960bf9753fe27989fd78054e17bff5c8a8d7a9380023120e98af481aea728",
+    "https://eec.eaeunion.org/news/itogi-oprosa-biznesa-stran-eaes-o-praktike-oformleniya-razresheniya-na-vyvoz-tovarov-/": "c13960bf9753fe27989fd78054e17bff5c8a8d7a9380023120e98af481aea728",
+    "https://www.interfax-russia.ru/realty/news/ansambl-krasnoy-doliny-v-pavlovske-otrestavriruyut-v-2026-godu": "ba4a6a4317342021fef62cde2f50f1f403006ec4bcf437419d5352f36383c8f8",
+    "https://www.interfax-russia.ru/realty/news/onkocentr-v-petrozavodske-nachnut-stroit-v-2027-godu": "2f5ec06b50d09ea09e7f562283b1321dda1458393c8d563ae0141177980b56c6",
+    "http://www.metalinfo.ru/ru/news/180761": "fac4c74c2698f06871aa644ce174be20bb9ab2092137f9a13872ca4d9ef79f7e",
+    "https://www.metalinfo.ru/ru/news/180761": "fac4c74c2698f06871aa644ce174be20bb9ab2092137f9a13872ca4d9ef79f7e",
+    "http://www.metalinfo.ru/ru/news/180736": "b16a16e8d1dcc15bbea822a28351e3dd4dd7bfba6eaf2dff1ab75aeee3f7ede2",
+    "https://www.metalinfo.ru/ru/news/180736": "b16a16e8d1dcc15bbea822a28351e3dd4dd7bfba6eaf2dff1ab75aeee3f7ede2",
+    "http://www.metalinfo.ru/ru/news/180748": "b0c0a4f5f72e709875921149dca73735fe356eee196c2fab2cc43d7a0c95c3b6",
+    "https://www.metalinfo.ru/ru/news/180748": "b0c0a4f5f72e709875921149dca73735fe356eee196c2fab2cc43d7a0c95c3b6",
+    "http://www.metalinfo.ru/ru/news/180758": "cfc619cf26eb88bc58bcc842ace7eda47c90646fb5ab91050c38cccb3ddb32e8",
+    "https://www.metalinfo.ru/ru/news/180758": "cfc619cf26eb88bc58bcc842ace7eda47c90646fb5ab91050c38cccb3ddb32e8",
+    "http://www.metalinfo.ru/ru/news/180747": "7460ec8cd609f31aac23019977c52406fc8377f3bf036abc0d114c72440e8e85",
+    "https://www.metalinfo.ru/ru/news/180747": "7460ec8cd609f31aac23019977c52406fc8377f3bf036abc0d114c72440e8e85",
+    "http://www.metalinfo.ru/ru/news/180754": "4111944ae332d9dd8df7e00b4a4266c8526ce25494715e75c731489b2a8ef9a8",
+    "https://www.metalinfo.ru/ru/news/180754": "4111944ae332d9dd8df7e00b4a4266c8526ce25494715e75c731489b2a8ef9a8",
+    "http://www.metalinfo.ru/ru/news/180734": "a67fd3ee11352c10ceab0bdcdcb99ba06643e71e949330e3d0aa483ae0f2bd68",
+    "https://www.metalinfo.ru/ru/news/180734": "a67fd3ee11352c10ceab0bdcdcb99ba06643e71e949330e3d0aa483ae0f2bd68",
+    "http://www.metalinfo.ru/ru/news/180753": "af2c93f1593a7cc0cd5df44d5608e1f1a478e76935ef3c533e38bebb4ebfa600",
+    "https://www.metalinfo.ru/ru/news/180753": "af2c93f1593a7cc0cd5df44d5608e1f1a478e76935ef3c533e38bebb4ebfa600",
+    "http://www.metalinfo.ru/ru/news/180751": "b0c9d902bdf0e7f4015139098d9d3e4b1e0526aa00a97e8f94830d0b66c47f9e",
+    "https://www.metalinfo.ru/ru/news/180751": "b0c9d902bdf0e7f4015139098d9d3e4b1e0526aa00a97e8f94830d0b66c47f9e",
+    "http://www.metalinfo.ru/ru/news/180741": "bfab1bcbefb17466c73d9212b72ff7648d685b941d859c6fe4f6d5271aa8292a",
+    "https://www.metalinfo.ru/ru/news/180741": "bfab1bcbefb17466c73d9212b72ff7648d685b941d859c6fe4f6d5271aa8292a",
+    "http://www.metalinfo.ru/ru/news/180752": "8edc5226a78178b6fe29cedf197e63dab47605087d9db26bd0391dda25468e96",
+    "https://www.metalinfo.ru/ru/news/180752": "8edc5226a78178b6fe29cedf197e63dab47605087d9db26bd0391dda25468e96",
+    "http://www.metalinfo.ru/ru/news/180732": "3393e12f6da8dbb5bcabd95a864351e0c61dbcbb88802db4705dccc116a1e7c3",
+    "https://www.metalinfo.ru/ru/news/180732": "3393e12f6da8dbb5bcabd95a864351e0c61dbcbb88802db4705dccc116a1e7c3",
+    "http://government.ru/news/57716": "69127eb55a296149be301b7312e5afb6d701a7dbfd1b79f260c9d97883ead204",
+    "http://government.ru/news/57716/": "69127eb55a296149be301b7312e5afb6d701a7dbfd1b79f260c9d97883ead204",
+    "http://government.ru/news/57715": "db29917de2d7627ece6a74b0128e5462a47e9ac442ff26025243f9a8038eb4fe",
+    "http://government.ru/news/57715/": "db29917de2d7627ece6a74b0128e5462a47e9ac442ff26025243f9a8038eb4fe",
+    "https://realty.ria.ru/20260129/obemy-2070994251.html": "a52b7bb82ee1a2a500577c1af768fc3ee9d7ceff2da12daebcd8f4c88a14b28c",
+    "https://realty.ria.ru/20260129/dom-2070984725.html": "1cae1ce299b9e2e4ea5a8877c036f63c7b586e97bd198b3156211a7012d361d8",
+    "https://realty.ria.ru/20260129/samolet-2070968078.html": "182c315420d51dd4ec0923f3f1f2c8e3580ca2e01bd9321d900a6e068cf10390",
+    "https://realty.ria.ru/20260129/sud-2070960137.html": "391d2fdaf751b698a609cfc75966f735b432301272fe3cb85023e483c4e426f9"
   }
 }
