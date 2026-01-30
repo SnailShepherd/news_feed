@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 30 Jan 2026 04:32:11 GMT"
+      "Last-Modified": "Fri, 30 Jan 2026 06:44:55 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1e32c-qJEX8WlOrVnueIUcrxEy0giewmM\""
+      "ETag": "W/\"1e453-uI5OXW8tNpztN5AGjJxLPNZ0+QI\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -41580,7 +41580,15 @@
     "https://www.metalinfo.ru/ru/news/180744": {},
     "https://realty.ria.ru/20260130/skandaly-2070738686.html": {
       "Last-Modified": "Fri, 30 Jan 2026 02:00:03 GMT"
-    }
+    },
+    "https://www.interfax-russia.ru/realty/news/pochti-7-tys-dogovorov-pereustupki-prav-po-ddu-zaregistrirovali-v-moskve-v-proshlom-godu": {},
+    "https://www.interfax-russia.ru/realty/news/zhilishchnoe-stroitelstvo-v-rf-v-2025-g-vyroslo-na-0-4-posle-snizheniya-na-v-2024-g-rosstat": {},
+    "https://www.metalinfo.ru/ru/news/180768": {},
+    "https://www.metalinfo.ru/ru/news/180750": {},
+    "https://www.metalinfo.ru/ru/news/180763": {},
+    "https://www.metalinfo.ru/ru/news/180782": {},
+    "https://www.metalinfo.ru/ru/news/180767": {},
+    "https://www.metalinfo.ru/ru/news/180762": {}
   },
   "stats": {
     "cooldowns": {
@@ -54145,9 +54153,19 @@
         "source": "Российская газета: Экономика",
         "url": "https://rg.ru/tema/ekonomika",
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Российская газета: Экономика",
+        "url": "https://rg.ru/tema/ekonomika",
+        "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
       }
     ],
-    "last_run": "2026-01-30T04:32:24.656709+00:00",
+    "last_run": "2026-01-30T06:44:17.938700+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -54160,56 +54178,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 437.0668140000191,
-        "connect_ms": 134.9089210000045,
-        "response_ms": 571.9757350000236,
+        "dns_ms": 478.4881470000073,
+        "connect_ms": 694.7603010000023,
+        "response_ms": 1173.2484480000096,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f60b42e3d10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 312.6550049999821,
+        "connect_ms": 943.7184450000302,
+        "response_ms": 1256.3734500000123,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4904.673046000027,
-        "connect_ms": 133.78475999996954,
-        "response_ms": 5038.457805999997,
+        "dns_ms": 484.23170000000937,
+        "connect_ms": 216.53340800000365,
+        "response_ms": 700.765108000013,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f60b2d4b110>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 185.3651090000028,
+        "connect_ms": 504.8046010000178,
+        "response_ms": 690.1697100000206,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "0012f11ae990284abdc104b21365c8693ab56c76db03fa064efe4251b2487a8c",
+    "https://ardexpert.ru/article": "011c94b0b22d014030b4394ce6a7a2d8009feee699b82597710cede11fe0ec89",
     "https://www.gostinfo.ru/News/List": "c3437b448a5c3b8fa3398d4d76ab6ad24c5d1a778f9aa3da4123d22b3127c3af",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "6336506a2c23685dd321282abc1e6815caececce1405d25b10d31fc2ff1974fb",
-    "https://eec.eaeunion.org/news/": "306b9e1bbdffad4bfcc492929ea33f81a713683d419116e76d120ee904f83154",
+    "https://eec.eaeunion.org/news/": "27c01a0c709541d9842b527af1bb39012d45332268a9d0577a153929e7cf1a73",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "b2e85437e33ebb207e4bd80269ee7552dfb398bc626c61f9fb499d7b38866f9c",
-    "https://www.metalinfo.ru/ru/news": "43960b66c31bdccc37ffbd0cf2b8194343f85c4e7c9c2783989823dc7099bc07",
-    "https://www.pnp.ru/economics/": "a1b26855580dbdfad43e0e6df75823b78e59af468c65103dd6425ae1a8e2c01a",
-    "https://erzrf.ru/news/": "c80197bbd31e8fcad7cdfaba2e100e2406870c568d994fd45588ce8d181326a8",
-    "https://ria-stk.ru/news/vse-novosti.php": "afe75ee578092e62b1bfffbc6f0b0bdba8990d3d95af272344e9c29f2d705ce6",
-    "http://government.ru/news/": "46c69b49daacc2f3c44a8234bc39b437aaf85a11b95ab720515167859e45b9e7",
-    "https://stroygaz.ru/news/": "f8e4f57e1bef7511cc0148d4240a6f79ce4af41bc437eb43053f59a2f8e522ca",
-    "https://realty.ria.ru/lenta/": "d580c31299b351e3e00af8b1dace50ae4ccddab19c0629f56fd56f7856909a66",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "4f254e605000ffd50ec89794c5172c72f2778265190312906ede1908eaba2d81",
+    "https://www.metalinfo.ru/ru/news": "d4eaf648f263e1b647e407c65814e3c19a261b02085268c98da58d4df6e3f96f",
+    "https://www.pnp.ru/economics/": "880f6cdd78316dbaa87dae4cb1243b8e4e4ba860274acf5a2b153a5eb4c58ede",
+    "https://erzrf.ru/news/": "3c06ee39d016aa9ebf3dc614a50ad0c749ba64a3858886577099efd1e7473b72",
+    "https://ria-stk.ru/news/vse-novosti.php": "86d9ecfdcb98109c7a5f05004e39fedf1129813ae57701ccc05065a15721ec2d",
+    "http://government.ru/news/": "ee47ce53b66a901d0780af8275a8ad0b0005dd27b321c73a4f6ad696da6255d9",
+    "https://stroygaz.ru/news/": "36fb3ab503856fd1f36ffcf877921b2e6e6568c7c0bd0326bd81804753aebf81",
+    "https://realty.ria.ru/lenta/": "54395abafd7048b051c5013789548a536b2e66224af9479084bbe704f727b902",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
-    "http://ancb.ru/publication": "5c78e1c3adfe0888cef93fea0895d36111b147329a51c82b2e0d6c5e0681caf5",
+    "http://ancb.ru/publication": "15e214eeae52bd4f29fa5726fb87616dde53fdee4ee72d71ac149e792c745e5f",
     "https://notim.ru": "49149ed28de6698ee1035f0f70a39730c1b96c81b25396615449470e0bb0467f",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -54301,6 +54319,8 @@
       "https://minfin.gov.ru/ru/press-center/contacts/"
     ],
     "Интерфакс-Недвижимость": [
+      "https://www.interfax-russia.ru/realty/news/pochti-7-tys-dogovorov-pereustupki-prav-po-ddu-zaregistrirovali-v-moskve-v-proshlom-godu",
+      "https://www.interfax-russia.ru/realty/news/zhilishchnoe-stroitelstvo-v-rf-v-2025-g-vyroslo-na-0-4-posle-snizheniya-na-v-2024-g-rosstat",
       "https://www.interfax-russia.ru/realty/news/sheremetevo-pobedilo-v-torgah-po-aeroportu-domodedovo-gazeta",
       "https://www.interfax-russia.ru/realty/news/avariya-ostavila-bez-vody-okolo-100-tys-zhiteley-saratova",
       "https://www.interfax-russia.ru/realty/news/samyy-dorogoy-ofis-v-rf-vystavlen-na-prodazhu-v-moskve",
@@ -54338,11 +54358,15 @@
       "https://www.interfax-russia.ru/realty/news/spros-na-dorogie-novostroyki-v-moskve-po-ddu-upal-na-15-za-god",
       "https://www.interfax-russia.ru/realty/news/vlasti-rf-podumayut-nad-uvelicheniem-sredstv-na-programmu-arendnogo-zhilya-v-dfo",
       "https://www.interfax-russia.ru/realty/news/bolee-120-tys-ddu-s-eskrou-zaregistrirovano-v-moskve-za-god",
-      "https://www.interfax-russia.ru/realty/news/sber-primet-uchastie-v-razvitii-obshchestvennogo-prostranstva-v-arhangelskom",
-      "https://www.interfax-russia.ru/realty/news/eshche-odin-proekt-krt-realizuyut-v-izmaylove",
-      "https://www.interfax-russia.ru/realty/news/vladimira-resina-mogut-snova-vydvinut-v-gosdumu-gazeta"
+      "https://www.interfax-russia.ru/realty/news/sber-primet-uchastie-v-razvitii-obshchestvennogo-prostranstva-v-arhangelskom"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/180768",
+      "https://www.metalinfo.ru/ru/news/180750",
+      "https://www.metalinfo.ru/ru/news/180763",
+      "https://www.metalinfo.ru/ru/news/180782",
+      "https://www.metalinfo.ru/ru/news/180767",
+      "https://www.metalinfo.ru/ru/news/180762",
       "https://www.metalinfo.ru/ru/news/180781",
       "https://www.metalinfo.ru/ru/news/180756",
       "https://www.metalinfo.ru/ru/news/180760",
@@ -54356,13 +54380,7 @@
       "https://www.metalinfo.ru/ru/news/180773",
       "https://www.metalinfo.ru/ru/news/180759",
       "https://www.metalinfo.ru/ru/news/180771",
-      "https://www.metalinfo.ru/ru/news/180740",
-      "https://www.metalinfo.ru/ru/news/180770",
-      "https://www.metalinfo.ru/ru/news/180757",
-      "https://www.metalinfo.ru/ru/news/180765",
-      "https://www.metalinfo.ru/ru/news/180766",
-      "https://www.metalinfo.ru/ru/news/180755",
-      "https://www.metalinfo.ru/ru/news/180738"
+      "https://www.metalinfo.ru/ru/news/180740"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -72347,7 +72365,15 @@
     "95f274258d02ff79d51e4d2a31b0597e21317fe0b6283be2cd4a784b3434507f": "2026-01-30T07:30:00+03:00",
     "bb86e26a36a34b961ee8907babaa8c2030cfdd7f31a56bff70cb011b4cd3e345": "2026-01-30T07:31:00+03:00",
     "5148c0d9629f6296c2800332eb00c9f822d8bb5d2eb3a872bda9c725b1ae12cc": "2026-01-30T07:31:00+03:00",
-    "90f2bbee40e17da127abb76826cdbb1dcb1be362e841151ed52723f589b191d7": "2026-01-30T07:32:00+03:00"
+    "90f2bbee40e17da127abb76826cdbb1dcb1be362e841151ed52723f589b191d7": "2026-01-30T07:32:00+03:00",
+    "256591496becebfb9027cdcff74c72d65225e1233a5e58c69b412fe7e177e517": "2026-01-30T09:43:00+03:00",
+    "226572fff7699a58e559751561e9d886e707ee9bb6a50b5c535747cd0dfc52d5": "2026-01-30T09:43:00+03:00",
+    "7bf2ba023bf5dc92528f72abfc5413b1101a222ef9cd9ec7777c4661edd3f71c": "2026-01-30T09:43:00+03:00",
+    "79c7bfabe020f113e59ccb25dd2cd8d7258fcebf2e8a1502c25bbbbac059fa6d": "2026-01-30T09:43:00+03:00",
+    "974ebf259b9d7d17b77e9cbd6cb7781c7b2ffd7b7d07223ba7c0dd0e184a86ce": "2026-01-30T09:43:00+03:00",
+    "f20e366b4f77860905a46309ac7e6d9888e187d1ca08dea09543f3fb2a245092": "2026-01-30T09:43:00+03:00",
+    "0bf33c46e4472354ca2facf2646c483eb7f307150eebd15a088d754be63cc4c1": "2026-01-30T09:43:00+03:00",
+    "43663a234bc26b968c7b787d700532275bb6cfe055e4f43370eefea06db2622d": "2026-01-30T09:44:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -72378,8 +72404,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f60b2c30510>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 20,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769747378.2334597
       },
       "warmup_done": false,
@@ -72389,39 +72415,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "akoSDpV4Sn7Qm0m4",
+          "value": "Kh4RPRkmNdGPtta7",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769748686
+          "expires": 1769756651
         },
         {
           "name": "__ddg10_",
-          "value": "1769747486",
+          "value": "1769755451",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769748686
+          "expires": 1769756651
         },
         {
           "name": "__ddg9_",
-          "value": "40.76.191.130",
+          "value": "132.196.83.38",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769748686
-        },
-        {
-          "name": "__ddg1_",
-          "value": "9Tve88Rba1IsNZmNaBkj",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1801283486
+          "expires": 1769756651
         },
         {
           "name": "PHPSESSID",
-          "value": "d2c4bdbf39a83e80f3caf31bbeb4655c",
+          "value": "02f72d39f8d714329585dc1efaeaa448",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -72448,11 +72466,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "YgynZYfaCh2bT5WoQv5ioYm7VfsMLb46",
+          "value": "JVOVfgL9S7VZ1svt9SRYS996ZVw9qh2q",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769722745
+          "expires": 1769766253
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -72460,12 +72478,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1800815944
+          "expires": 1800859453
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f60b2d48f50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 16,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1769747518.9389887
       },
       "warmup_done": false,
@@ -94266,7 +94284,21 @@
     "http://www.metalinfo.ru/ru/news/180745": "http://www.metalinfo.ru/ru/news/180745",
     "https://www.metalinfo.ru/ru/news/180744": "http://www.metalinfo.ru/ru/news/180744",
     "http://www.metalinfo.ru/ru/news/180744": "http://www.metalinfo.ru/ru/news/180744",
-    "https://realty.ria.ru/20260130/skandaly-2070738686.html": "https://realty.ria.ru/20260130/skandaly-2070738686.html"
+    "https://realty.ria.ru/20260130/skandaly-2070738686.html": "https://realty.ria.ru/20260130/skandaly-2070738686.html",
+    "https://www.interfax-russia.ru/realty/news/pochti-7-tys-dogovorov-pereustupki-prav-po-ddu-zaregistrirovali-v-moskve-v-proshlom-godu": "https://www.interfax-russia.ru/realty/news/pochti-7-tys-dogovorov-pereustupki-prav-po-ddu-zaregistrirovali-v-moskve-v-proshlom-godu",
+    "https://www.interfax-russia.ru/realty/news/zhilishchnoe-stroitelstvo-v-rf-v-2025-g-vyroslo-na-0-4-posle-snizheniya-na-v-2024-g-rosstat": "https://www.interfax-russia.ru/realty/news/zhilishchnoe-stroitelstvo-v-rf-v-2025-g-vyroslo-na-0-4-posle-snizheniya-na-v-2024-g-rosstat",
+    "https://www.metalinfo.ru/ru/news/180768": "http://www.metalinfo.ru/ru/news/180768",
+    "http://www.metalinfo.ru/ru/news/180768": "http://www.metalinfo.ru/ru/news/180768",
+    "https://www.metalinfo.ru/ru/news/180750": "http://www.metalinfo.ru/ru/news/180750",
+    "http://www.metalinfo.ru/ru/news/180750": "http://www.metalinfo.ru/ru/news/180750",
+    "https://www.metalinfo.ru/ru/news/180763": "http://www.metalinfo.ru/ru/news/180763",
+    "http://www.metalinfo.ru/ru/news/180763": "http://www.metalinfo.ru/ru/news/180763",
+    "https://www.metalinfo.ru/ru/news/180782": "http://www.metalinfo.ru/ru/news/180782",
+    "http://www.metalinfo.ru/ru/news/180782": "http://www.metalinfo.ru/ru/news/180782",
+    "https://www.metalinfo.ru/ru/news/180767": "http://www.metalinfo.ru/ru/news/180767",
+    "http://www.metalinfo.ru/ru/news/180767": "http://www.metalinfo.ru/ru/news/180767",
+    "https://www.metalinfo.ru/ru/news/180762": "http://www.metalinfo.ru/ru/news/180762",
+    "http://www.metalinfo.ru/ru/news/180762": "http://www.metalinfo.ru/ru/news/180762"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -112381,7 +112413,15 @@
     "8014330a36f59812db3576307966a1444ea2d1df": "http://www.metalinfo.ru/ru/news/180780",
     "3984b4a26529998decd9aee15ea566b6fb4307c7": "http://www.metalinfo.ru/ru/news/180745",
     "a68d1808c5dd19d5cfb08b107aae768836412f56": "http://www.metalinfo.ru/ru/news/180744",
-    "ee0f04a7064e85d4440d498747feb9845ca89ecd": "https://realty.ria.ru/20260130/skandaly-2070738686.html"
+    "ee0f04a7064e85d4440d498747feb9845ca89ecd": "https://realty.ria.ru/20260130/skandaly-2070738686.html",
+    "89ae6782b9236aaccc339d79a4ca09b8cb79f53a": "https://www.interfax-russia.ru/realty/news/pochti-7-tys-dogovorov-pereustupki-prav-po-ddu-zaregistrirovali-v-moskve-v-proshlom-godu",
+    "cc3b11e474054c2825985fdef673a5eb4ddef4e7": "https://www.interfax-russia.ru/realty/news/zhilishchnoe-stroitelstvo-v-rf-v-2025-g-vyroslo-na-0-4-posle-snizheniya-na-v-2024-g-rosstat",
+    "2122039f1bbefe4e591c3be34f90b28a4d59b010": "http://www.metalinfo.ru/ru/news/180768",
+    "6ab8485f4d160e7d3795308d8db84599c1a4a2d1": "http://www.metalinfo.ru/ru/news/180750",
+    "3506d4e3e1cfba73f7dfb66a69d439879a8acca5": "http://www.metalinfo.ru/ru/news/180763",
+    "b8cd8e2ec781c44d6a9612bd1d075501f54345fb": "http://www.metalinfo.ru/ru/news/180782",
+    "7d794ece3531dba94ff5c5bb65e80dbc608b2e6a": "http://www.metalinfo.ru/ru/news/180767",
+    "9d2e0a347e10288a8ad9585be3ce81fbbb2d432d": "http://www.metalinfo.ru/ru/news/180762"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -136555,6 +136595,20 @@
     "https://www.metalinfo.ru/ru/news/180745": "bb86e26a36a34b961ee8907babaa8c2030cfdd7f31a56bff70cb011b4cd3e345",
     "http://www.metalinfo.ru/ru/news/180744": "5148c0d9629f6296c2800332eb00c9f822d8bb5d2eb3a872bda9c725b1ae12cc",
     "https://www.metalinfo.ru/ru/news/180744": "5148c0d9629f6296c2800332eb00c9f822d8bb5d2eb3a872bda9c725b1ae12cc",
-    "https://realty.ria.ru/20260130/skandaly-2070738686.html": "90f2bbee40e17da127abb76826cdbb1dcb1be362e841151ed52723f589b191d7"
+    "https://realty.ria.ru/20260130/skandaly-2070738686.html": "90f2bbee40e17da127abb76826cdbb1dcb1be362e841151ed52723f589b191d7",
+    "https://www.interfax-russia.ru/realty/news/pochti-7-tys-dogovorov-pereustupki-prav-po-ddu-zaregistrirovali-v-moskve-v-proshlom-godu": "256591496becebfb9027cdcff74c72d65225e1233a5e58c69b412fe7e177e517",
+    "https://www.interfax-russia.ru/realty/news/zhilishchnoe-stroitelstvo-v-rf-v-2025-g-vyroslo-na-0-4-posle-snizheniya-na-v-2024-g-rosstat": "226572fff7699a58e559751561e9d886e707ee9bb6a50b5c535747cd0dfc52d5",
+    "http://www.metalinfo.ru/ru/news/180768": "7bf2ba023bf5dc92528f72abfc5413b1101a222ef9cd9ec7777c4661edd3f71c",
+    "https://www.metalinfo.ru/ru/news/180768": "7bf2ba023bf5dc92528f72abfc5413b1101a222ef9cd9ec7777c4661edd3f71c",
+    "http://www.metalinfo.ru/ru/news/180750": "79c7bfabe020f113e59ccb25dd2cd8d7258fcebf2e8a1502c25bbbbac059fa6d",
+    "https://www.metalinfo.ru/ru/news/180750": "79c7bfabe020f113e59ccb25dd2cd8d7258fcebf2e8a1502c25bbbbac059fa6d",
+    "http://www.metalinfo.ru/ru/news/180763": "974ebf259b9d7d17b77e9cbd6cb7781c7b2ffd7b7d07223ba7c0dd0e184a86ce",
+    "https://www.metalinfo.ru/ru/news/180763": "974ebf259b9d7d17b77e9cbd6cb7781c7b2ffd7b7d07223ba7c0dd0e184a86ce",
+    "http://www.metalinfo.ru/ru/news/180782": "f20e366b4f77860905a46309ac7e6d9888e187d1ca08dea09543f3fb2a245092",
+    "https://www.metalinfo.ru/ru/news/180782": "f20e366b4f77860905a46309ac7e6d9888e187d1ca08dea09543f3fb2a245092",
+    "http://www.metalinfo.ru/ru/news/180767": "0bf33c46e4472354ca2facf2646c483eb7f307150eebd15a088d754be63cc4c1",
+    "https://www.metalinfo.ru/ru/news/180767": "0bf33c46e4472354ca2facf2646c483eb7f307150eebd15a088d754be63cc4c1",
+    "http://www.metalinfo.ru/ru/news/180762": "43663a234bc26b968c7b787d700532275bb6cfe055e4f43370eefea06db2622d",
+    "https://www.metalinfo.ru/ru/news/180762": "43663a234bc26b968c7b787d700532275bb6cfe055e4f43370eefea06db2622d"
   }
 }
