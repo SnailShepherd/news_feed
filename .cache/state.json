@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 31 Jan 2026 18:28:07 GMT"
+      "Last-Modified": "Sat, 31 Jan 2026 21:20:31 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1d839-cxAFzRYt82tAk/po/PbSPfabars\""
+      "ETag": "W/\"1da42-Puwk6YPrQUmdMLcY/NeOV8pyiiM\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -41741,7 +41741,10 @@
     "https://ardexpert.ru/article/28674": {},
     "https://ardexpert.ru/article/28677": {},
     "http://government.ru/news/57726/": {},
-    "http://government.ru/news/57731/": {}
+    "http://government.ru/news/57731/": {},
+    "https://realty.ria.ru/20260201/ipoteka-2070299784.html": {
+      "Last-Modified": "Sat, 31 Jan 2026 21:00:01 GMT"
+    }
   },
   "stats": {
     "cooldowns": {
@@ -54535,9 +54538,24 @@
         "source": "Российская газета: Экономика",
         "url": "https://rg.ru/tema/ekonomika",
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Интерфакс-Недвижимость",
+        "url": "https://www.interfax-russia.ru/realty/news?per-page=32",
+        "error": "HTTPSConnectionPool(host='www.interfax-russia.ru', port=443): Max retries exceeded with url: /realty/news?per-page=32 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))"
+      },
+      {
+        "source": "Российская газета: Экономика",
+        "url": "https://rg.ru/tema/ekonomika",
+        "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
       }
     ],
-    "last_run": "2026-01-31T18:27:28.258531+00:00",
+    "last_run": "2026-01-31T21:19:57.752118+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -54550,33 +54568,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 430.65020099999174,
-        "connect_ms": 588.4782220000062,
-        "response_ms": 1019.128422999998,
+        "dns_ms": 584.1658939999945,
+        "connect_ms": 818.2048270000166,
+        "response_ms": 1402.3707210000111,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 130.7993819999922,
-        "connect_ms": 737.0863619999994,
-        "response_ms": 867.8857439999916,
+        "dns_ms": 597.1441609999886,
+        "connect_ms": 1029.3572090000112,
+        "response_ms": 1626.5013699999997,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 476.6862769999989,
-        "connect_ms": 17.549457000001212,
-        "response_ms": 494.2357340000001,
+        "dns_ms": 3061.5230160000237,
+        "connect_ms": 0.0,
+        "response_ms": 2593.822637999949,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 269.8239860000058,
-        "connect_ms": 277.4405879999904,
-        "response_ms": 547.2645739999962,
+        "dns_ms": 192.54106100004265,
+        "connect_ms": 619.6986739999488,
+        "response_ms": 812.2397349999915,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -54585,19 +54603,19 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "3e3f01a66e43ce8e6b3332dce76b1210737464eea5206a4bf9bfac012277a75f",
+    "https://ardexpert.ru/article": "2707162985dcc315b942758b487e3ebc534f73672d29ac9a33adbc7a390c6022",
     "https://www.gostinfo.ru/News/List": "9fe94faa41804587866e182713bb3ce045254c4c15b587c6e7b33f02af5101e3",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "6336506a2c23685dd321282abc1e6815caececce1405d25b10d31fc2ff1974fb",
-    "https://eec.eaeunion.org/news/": "16c7610ab73808af887b59fd8f39804d3d034fa6b4283a19c2afa078aa3af8c8",
+    "https://eec.eaeunion.org/news/": "2dce3b3753434f616a4875200fc341a9107bfa21a0f438377bb833cf43922fe0",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
     "https://www.interfax-russia.ru/realty/news?per-page=32": "4329cdc6c07ef02db2bbd04549364f29df2a412a3fac2384e011ea66ed5055b9",
-    "https://www.metalinfo.ru/ru/news": "4bf2544a01f349c36d82638292dc58a3242922912c3cf324514d21fbda5e36f0",
-    "https://www.pnp.ru/economics/": "462cf6cb0420f2596e5a79ef3bc78950537fc080a0229e4fe9da4e87596e6195",
-    "https://erzrf.ru/news/": "04ac441e51f59dfb43fd81f9e6d392a2eb898bd532742d571171b768ee566fd9",
-    "https://ria-stk.ru/news/vse-novosti.php": "180f1e5f57224a96004cd0d389937c190bf7017a95c0c9690253bc53dd3fa6bd",
-    "http://government.ru/news/": "b1a054eb85368ced9f771def054d364f02120b0f65d921807292ac2a11bcc300",
-    "https://stroygaz.ru/news/": "f9fd76bdabca43e25e79bdbbf8643ceaa974212cc8b9cf4d00882810e1022d40",
-    "https://realty.ria.ru/lenta/": "ba7713870eb28cf9ba5d4aa7f1cff6bacfed2ce6c61e612481c76839365ee48c",
+    "https://www.metalinfo.ru/ru/news": "f5561ad3f504ffb5b8d61b9b3a4b094a170a50d6b0aaa6de4ccedf6802627a4f",
+    "https://www.pnp.ru/economics/": "20c21674086dec94e6764f340ef32c0ad906c0e343713c44cf910b88645509ef",
+    "https://erzrf.ru/news/": "da8691b330391084496f3db6c4d4c81f5d17a98f1f1e92bd6e8b828751cd62f3",
+    "https://ria-stk.ru/news/vse-novosti.php": "771ea624954916d891937f5931d41ba89febcc6cfbd1ef1b860fc231af81c8de",
+    "http://government.ru/news/": "399c814d147477a728158bc74d78f1958cdbcb45cf28026eef549b8383145c22",
+    "https://stroygaz.ru/news/": "03b1853a79411e7fb7d1b448d11945da8b349c7c1e41fd969ba44f8b0dc130c1",
+    "https://realty.ria.ru/lenta/": "4feda690a0d3f7745ce67c6a453d563cd8dbdad4f1b8df1c9e59eccdba66fa59",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
     "http://ancb.ru/publication": "c70ae23953f062eb6080504e8f7999faa93cbbad5eb8654f3a6ce8f70046de07",
     "https://notim.ru": "49149ed28de6698ee1035f0f70a39730c1b96c81b25396615449470e0bb0467f",
@@ -54881,6 +54899,7 @@
       "https://stroygaz.ru/news/construction/odobren-proekt-aerovokzala-v-gorno-altayske/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260201/ipoteka-2070299784.html",
       "https://realty.ria.ru/20260130/a101-2071319644.html",
       "https://realty.ria.ru/20260130/rosseti--2071316880.html",
       "https://realty.ria.ru/20260130/dolja-2071313884.html",
@@ -54899,8 +54918,7 @@
       "https://realty.ria.ru/20260130/fond-2071169953.html",
       "https://realty.ria.ru/20260130/skandaly-2070738686.html",
       "https://realty.ria.ru/20260130/tsement-2070757522.html",
-      "https://realty.ria.ru/20260129/rosstat-khusnullin-2071098726.html",
-      "https://realty.ria.ru/20260129/rosstat-2071069357.html"
+      "https://realty.ria.ru/20260129/rosstat-khusnullin-2071098726.html"
     ],
     "Российская газета: Экономика": [
       "https://rg.ru/2026/01/28/stoimost-nefti-brent-prevysila-68-dollarov-vpervye-s-sentiabria-2025-goda.html",
@@ -72855,7 +72873,8 @@
     "6fe055df77f599fcb4813a31c66fcdc2b12719cc2f818eee310a112b2b08995a": "2026-01-31T09:33:00+03:00",
     "c446dde878881b326fd6e8be263fe4fcc9f9d95afa5483ba6a3f6a76a4157bfe": "2026-01-31T12:24:00+03:00",
     "bab404fb39f3c33903bb41072adc6f82a758aac3d2f2b68913540dea9d36fb8d": "2026-01-31T12:25:00+03:00",
-    "40b886d13cd84adde664645471139410c91189f6170f2f3f92f2002f70e35c97": "2026-01-31T15:42:00+03:00"
+    "40b886d13cd84adde664645471139410c91189f6170f2f3f92f2002f70e35c97": "2026-01-31T15:42:00+03:00",
+    "bc511a970eb9dfba7ffdd8e3f80d51a51a68cbaf9844812627430d12d0c1fd5a": "2026-02-01T00:19:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -72897,31 +72916,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "zh0buGtqqTObJi7W",
+          "value": "9LNvw0P4r9yiV9z0",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769885242
+          "expires": 1769895586
         },
         {
           "name": "__ddg10_",
-          "value": "1769884042",
+          "value": "1769894386",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769885242
+          "expires": 1769895586
         },
         {
           "name": "__ddg9_",
-          "value": "145.132.103.178",
+          "value": "68.220.61.202",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769885242
+          "expires": 1769895586
+        },
+        {
+          "name": "__ddg1_",
+          "value": "AJh1nKIxoTm2q7gZkmAz",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1801430386
         },
         {
           "name": "PHPSESSID",
-          "value": "f136ce49f62ee7056b50a76d91789e2e",
+          "value": "ff112ecdf74f3e9a8d5cd82c17e6e4e9",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -72948,11 +72975,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "AdLo3SWd52a9rHKN2hpp3uboaHP8snKe",
+          "value": "fDvu2TDC5c6NwhQlGHwK4PRtQP9Qh718",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769894844
+          "expires": 1769905189
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -72960,7 +72987,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1800988044
+          "expires": 1800998389
         }
       ],
       "failures": {
@@ -94938,7 +94965,8 @@
     "https://ardexpert.ru/article/28674": "https://ardexpert.ru/article/28674",
     "https://ardexpert.ru/article/28677": "https://ardexpert.ru/article/28677",
     "http://government.ru/news/57726": "http://government.ru/news/57726",
-    "http://government.ru/news/57731": "http://government.ru/news/57731"
+    "http://government.ru/news/57731": "http://government.ru/news/57731",
+    "https://realty.ria.ru/20260201/ipoteka-2070299784.html": "https://realty.ria.ru/20260201/ipoteka-2070299784.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -113173,7 +113201,8 @@
     "300506d7a2eaef320c87b32372f94043eba7a16e": "https://ardexpert.ru/article/28674",
     "9cc77aaf2d31926de4dc50121c8626f979f9048a": "https://ardexpert.ru/article/28677",
     "3e7aeba4b1d7c072a6f969bf0b5b64be02883bb3": "http://government.ru/news/57726",
-    "392411457baa89cd76086eb53151c53ce6ed33fa": "http://government.ru/news/57731"
+    "392411457baa89cd76086eb53151c53ce6ed33fa": "http://government.ru/news/57731",
+    "07eb89530a0ef57ef21a4f139d0d3f447a3e02b1": "https://realty.ria.ru/20260201/ipoteka-2070299784.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -137534,6 +137563,7 @@
     "http://government.ru/news/57726": "bab404fb39f3c33903bb41072adc6f82a758aac3d2f2b68913540dea9d36fb8d",
     "http://government.ru/news/57726/": "bab404fb39f3c33903bb41072adc6f82a758aac3d2f2b68913540dea9d36fb8d",
     "http://government.ru/news/57731": "40b886d13cd84adde664645471139410c91189f6170f2f3f92f2002f70e35c97",
-    "http://government.ru/news/57731/": "40b886d13cd84adde664645471139410c91189f6170f2f3f92f2002f70e35c97"
+    "http://government.ru/news/57731/": "40b886d13cd84adde664645471139410c91189f6170f2f3f92f2002f70e35c97",
+    "https://realty.ria.ru/20260201/ipoteka-2070299784.html": "bc511a970eb9dfba7ffdd8e3f80d51a51a68cbaf9844812627430d12d0c1fd5a"
   }
 }
