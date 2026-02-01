@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 31 Jan 2026 21:20:31 GMT"
+      "Last-Modified": "Sun, 01 Feb 2026 01:59:10 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1da42-Puwk6YPrQUmdMLcY/NeOV8pyiiM\""
+      "ETag": "W/\"1d8c1-bRaKKzG9l4k7g+Boip4+OIIFFCE\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -54553,9 +54553,24 @@
         "source": "Российская газета: Экономика",
         "url": "https://rg.ru/tema/ekonomika",
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Интерфакс-Недвижимость",
+        "url": "https://www.interfax-russia.ru/realty/news?per-page=32",
+        "error": "HTTPSConnectionPool(host='www.interfax-russia.ru', port=443): Max retries exceeded with url: /realty/news?per-page=32 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))"
+      },
+      {
+        "source": "Российская газета: Экономика",
+        "url": "https://rg.ru/tema/ekonomika",
+        "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
       }
     ],
-    "last_run": "2026-01-31T21:19:57.752118+00:00",
+    "last_run": "2026-02-01T01:58:34.717194+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -54568,33 +54583,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 584.1658939999945,
-        "connect_ms": 818.2048270000166,
-        "response_ms": 1402.3707210000111,
+        "dns_ms": 317.47242400001596,
+        "connect_ms": 779.2212189999645,
+        "response_ms": 1096.6936429999805,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 597.1441609999886,
-        "connect_ms": 1029.3572090000112,
-        "response_ms": 1626.5013699999997,
+        "dns_ms": 152.18691100000115,
+        "connect_ms": 990.2832850000038,
+        "response_ms": 1142.470196000005,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 3061.5230160000237,
-        "connect_ms": 0.0,
-        "response_ms": 2593.822637999949,
+        "dns_ms": 867.4168320000035,
+        "connect_ms": 3823.5604820000053,
+        "response_ms": 4690.977314000009,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 192.54106100004265,
-        "connect_ms": 619.6986739999488,
-        "response_ms": 812.2397349999915,
+        "dns_ms": 180.04095899999584,
+        "connect_ms": 422.1997409999858,
+        "response_ms": 602.2406999999816,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -54603,19 +54618,19 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "2707162985dcc315b942758b487e3ebc534f73672d29ac9a33adbc7a390c6022",
+    "https://ardexpert.ru/article": "12b881e5e2bbf10286ead141f77741cb00f30aa2d8f968649fffb8562b8a32b7",
     "https://www.gostinfo.ru/News/List": "9fe94faa41804587866e182713bb3ce045254c4c15b587c6e7b33f02af5101e3",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "6336506a2c23685dd321282abc1e6815caececce1405d25b10d31fc2ff1974fb",
-    "https://eec.eaeunion.org/news/": "2dce3b3753434f616a4875200fc341a9107bfa21a0f438377bb833cf43922fe0",
+    "https://eec.eaeunion.org/news/": "15ede7ce8654fefddfa65941cba112b0defb6a824b2fcd194d5b13befed10d0f",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
     "https://www.interfax-russia.ru/realty/news?per-page=32": "4329cdc6c07ef02db2bbd04549364f29df2a412a3fac2384e011ea66ed5055b9",
-    "https://www.metalinfo.ru/ru/news": "f5561ad3f504ffb5b8d61b9b3a4b094a170a50d6b0aaa6de4ccedf6802627a4f",
-    "https://www.pnp.ru/economics/": "20c21674086dec94e6764f340ef32c0ad906c0e343713c44cf910b88645509ef",
-    "https://erzrf.ru/news/": "da8691b330391084496f3db6c4d4c81f5d17a98f1f1e92bd6e8b828751cd62f3",
-    "https://ria-stk.ru/news/vse-novosti.php": "771ea624954916d891937f5931d41ba89febcc6cfbd1ef1b860fc231af81c8de",
-    "http://government.ru/news/": "399c814d147477a728158bc74d78f1958cdbcb45cf28026eef549b8383145c22",
-    "https://stroygaz.ru/news/": "03b1853a79411e7fb7d1b448d11945da8b349c7c1e41fd969ba44f8b0dc130c1",
-    "https://realty.ria.ru/lenta/": "4feda690a0d3f7745ce67c6a453d563cd8dbdad4f1b8df1c9e59eccdba66fa59",
+    "https://www.metalinfo.ru/ru/news": "750c1a649ca9402008d12cdaa01695a045824bb4c2e8088ea519991344d9d857",
+    "https://www.pnp.ru/economics/": "ea283e34df74cb942eb27ff7369278d4a8c991e9ebaa9c3c3ade5adbf71df00a",
+    "https://erzrf.ru/news/": "ee1bcae3ad81f1b3f42404967190688b76129a3b4a0347420d2e12ee35b967e7",
+    "https://ria-stk.ru/news/vse-novosti.php": "597ecdc753328f367801efaae008738443bc6e8ac4414c69c6bfbb914f228593",
+    "http://government.ru/news/": "8cd500ec651f5521201ac3ef52a1ef0d719514deefb0c0e021b66ed07c39c59a",
+    "https://stroygaz.ru/news/": "2a1221c7b7bcfdac221afa9a065e477a214fefa8362105e36baab9ecc9cb8d96",
+    "https://realty.ria.ru/lenta/": "268211e97ce0728a9217b4955e34306fa4a7021f886f1568b44b0ffd0f412769",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
     "http://ancb.ru/publication": "c70ae23953f062eb6080504e8f7999faa93cbbad5eb8654f3a6ce8f70046de07",
     "https://notim.ru": "49149ed28de6698ee1035f0f70a39730c1b96c81b25396615449470e0bb0467f",
@@ -72916,39 +72931,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "9LNvw0P4r9yiV9z0",
+          "value": "9OzRvyYwMkA5yYLk",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769895586
+          "expires": 1769912305
         },
         {
           "name": "__ddg10_",
-          "value": "1769894386",
+          "value": "1769911105",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769895586
+          "expires": 1769912305
         },
         {
           "name": "__ddg9_",
-          "value": "68.220.61.202",
+          "value": "64.236.160.18",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769895586
-        },
-        {
-          "name": "__ddg1_",
-          "value": "AJh1nKIxoTm2q7gZkmAz",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1801430386
+          "expires": 1769912305
         },
         {
           "name": "PHPSESSID",
-          "value": "ff112ecdf74f3e9a8d5cd82c17e6e4e9",
+          "value": "6ea5153acc9461908f1d5079a3e13890",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -72975,11 +72982,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "fDvu2TDC5c6NwhQlGHwK4PRtQP9Qh718",
+          "value": "T5ynaCzJvlDEM5STvgwDy9sbtart2n4g",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1769905189
+          "expires": 1769921910
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -72987,7 +72994,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1800998389
+          "expires": 1801015110
         }
       ],
       "failures": {
