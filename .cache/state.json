@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 03 Feb 2026 04:49:02 GMT"
+      "Last-Modified": "Tue, 03 Feb 2026 06:48:54 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1dc7c-H+XUhEwjqD/iMGXFtgJMXf6rIsQ\""
+      "ETag": "W/\"1ddcc-h+4UnxbnbOo43VOGY05h3WIKaeY\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -41904,6 +41904,20 @@
     "https://www.metalinfo.ru/ru/news/180891": {},
     "https://realty.ria.ru/20260203/novostroyki-2071678537.html": {
       "Last-Modified": "Tue, 03 Feb 2026 02:00:03 GMT"
+    },
+    "https://www.interfax-russia.ru/realty/news/novoe-derevyannoe-zdanie-dlya-hrama-v-stolichnom-mitine-dostraivayut-v-stolice": {},
+    "https://www.interfax-russia.ru/realty/news/odobren-proekt-stroitelstva-sizo-na-4-tys-mest-v-podmoskove": {},
+    "https://www.interfax-russia.ru/realty/news/bank-dom-rf-predostavit-35-5-mlrd-rubley-dlya-stroitelstva-otelya-v-sochi": {},
+    "https://www.metalinfo.ru/ru/news/180903": {},
+    "https://www.metalinfo.ru/ru/news/180902": {},
+    "https://www.metalinfo.ru/ru/news/180896": {},
+    "https://www.metalinfo.ru/ru/news/180892": {},
+    "https://www.metalinfo.ru/ru/news/180887": {},
+    "https://www.metalinfo.ru/ru/news/180905": {},
+    "https://www.metalinfo.ru/ru/news/180889": {},
+    "http://government.ru/news/57741/": {},
+    "https://realty.ria.ru/20260203/fns-2071859593.html": {
+      "Last-Modified": "Tue, 03 Feb 2026 06:34:44 GMT"
     }
   },
   "stats": {
@@ -55136,9 +55150,31 @@
         "source": "Российская газета: Экономика",
         "url": "https://rg.ru/tema/ekonomika",
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9ecc80e510>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9ecbb2ec10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9ecbb2ead0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9ecba28180>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9ecba282b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9ecd037d10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9ecb7a4a50>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9ecd087610>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9ecb7a4e10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9ecb7a5090>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9ecb7a5310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
+      },
+      {
+        "source": "Российская газета: Экономика",
+        "url": "https://rg.ru/tema/ekonomika",
+        "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
       }
     ],
-    "last_run": "2026-02-03T04:49:15.695951+00:00",
+    "last_run": "2026-02-03T06:49:14.646882+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -55151,9 +55187,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 531.6967129999739,
-        "connect_ms": 1117.5159350000285,
-        "response_ms": 1649.2126480000024,
+        "dns_ms": 184.71080599999823,
+        "connect_ms": 907.495066000024,
+        "response_ms": 1092.2058720000223,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -55164,12 +55200,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f59a9c03d10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9ecd037d10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 4842.498628999976,
-        "connect_ms": 0.0,
-        "response_ms": 987.1645159999503,
+        "dns_ms": 758.6875419999615,
+        "connect_ms": 317.9490990000886,
+        "response_ms": 1076.63664100005,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -55180,25 +55216,25 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f59a86a7c50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9ecb7a5310>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "68062d1c8f73174d2f744987cca54993b6efb551345846ef215cc2facd33bc56",
+    "https://ardexpert.ru/article": "60584d6d5d5871d34a41581d78e5364dfe3736ba9c78a77defd38f810e4135ed",
     "https://www.gostinfo.ru/News/List": "9fe94faa41804587866e182713bb3ce045254c4c15b587c6e7b33f02af5101e3",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "6336506a2c23685dd321282abc1e6815caececce1405d25b10d31fc2ff1974fb",
-    "https://eec.eaeunion.org/news/": "7981fd0eefdb0def7cf0b57bc9d0b173255875b86ed4ae3d667b312137d75900",
+    "https://eec.eaeunion.org/news/": "505cbad0aeb179e2cd2832c8f6eb1a19bc66f0a8404c869792fcc66a406a9b09",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "1515f79506643449bedbab846b966a5dc9b04d363c6a9eeba589e1a3ec2b8218",
-    "https://www.metalinfo.ru/ru/news": "e7a9da7d4125ca831d6e5d939a67b7413701df6a6a3d7bb054c79888dc6eca47",
-    "https://www.pnp.ru/economics/": "8ddba393ac40211ed65e957685993c26e016a2c7c9d4f7353b2b6474fe068c6b",
-    "https://erzrf.ru/news/": "69e5577bbed29446892df0d02c5f8eb6571e7d2a2be776fdadb11156dc2a16ca",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "27729288f9f7be67778d625f18ff44c492b61de0fd1cb44f87151a9e4e28ce48",
+    "https://www.metalinfo.ru/ru/news": "948042add5fde9929d0262afebe963916eb63aab78529e4216d11688d3dc1c14",
+    "https://www.pnp.ru/economics/": "4c1506c184a95b61335e335116b9ade9796496a721fd532f43e3d1997e2492ed",
+    "https://erzrf.ru/news/": "572de6cb6a4e639740958243eb0d8cda96e93909316de732be8ce0bd411079ce",
     "https://ria-stk.ru/news/vse-novosti.php": "e1f06a427610e9047f765e2fad34063e692bafd759ca6f3765bcb64d2db78e20",
-    "http://government.ru/news/": "d4257249a188dd945baaa97c28d5406b0249cc5c039ab65774bcdff42b0ffd11",
-    "https://stroygaz.ru/news/": "05a6e172174bf64394b14978d010c57bf9647ad0ec8165ee06bea609f5b4fced",
-    "https://realty.ria.ru/lenta/": "492f77255a2840cc68c0dde229518fd3b2d1f495c3a51f4e27646309db90ae0c",
+    "http://government.ru/news/": "6cb5b67060b2172fe20873463136d44b2135c51947ed8f1302bcc873ff1b4c04",
+    "https://stroygaz.ru/news/": "2380d2edb17b0d8703ead7847437f7385532d1acddcb597735888a2f4ff09603",
+    "https://realty.ria.ru/lenta/": "3adc55e1a299160a5ad447209eb7680f9f3629b9948ef1e6c21db5213f5feb64",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
     "http://ancb.ru/publication": "3f138be27c7e98bccd1f2d90ae18f76214ac6c77aa385204665fa4a314d8baba",
     "https://notim.ru": "b2cd53a56ef57a36075695c4c00d506de4c2a056013c3ffb6f535b7ec0b83440",
@@ -55292,6 +55328,9 @@
       "https://minfin.gov.ru/ru/press-center/contacts/"
     ],
     "Интерфакс-Недвижимость": [
+      "https://www.interfax-russia.ru/realty/news/novoe-derevyannoe-zdanie-dlya-hrama-v-stolichnom-mitine-dostraivayut-v-stolice",
+      "https://www.interfax-russia.ru/realty/news/odobren-proekt-stroitelstva-sizo-na-4-tys-mest-v-podmoskove",
+      "https://www.interfax-russia.ru/realty/news/bank-dom-rf-predostavit-35-5-mlrd-rubley-dlya-stroitelstva-otelya-v-sochi",
       "https://www.interfax-russia.ru/realty/news/deputaty-gd-predlagayut-uvelichit-shtrafy-za-neraschishchennye-zimoy-dvory-i-kryshi",
       "https://www.interfax-russia.ru/realty/news/bolshe-poloviny-rossiyskih-liftov-proizveli-v-moskve-za-11-mesyacev-2025-goda",
       "https://www.interfax-russia.ru/realty/news/byvshiy-zamglavy-minstroya-dagestana-osuzhden-zaochno-po-delu-o-hishchenii",
@@ -55328,12 +55367,16 @@
       "https://www.interfax-russia.ru/realty/news/zavershena-vydacha-klyuchey-pokupatelyam-doma-lavrushinskiy-v-centre-moskvy",
       "https://www.interfax-russia.ru/realty/news/prirost-nomernogo-fonda-sankt-peterburga-v-proshlom-godu-na-15-prevysil-pokazatel-2024-goda",
       "https://www.interfax-russia.ru/realty/news/pervyy-proekt-arendnogo-zhilya-v-arktike-realizuyut-v-2028-godu",
-      "https://www.interfax-russia.ru/realty/news/proekt-zakona-o-zashchite-ot-babushkinyh-shem-pokupateley-nedvizhimosti-vnesut-v-gosdumu-v-blizhayshee-vremya",
-      "https://www.interfax-russia.ru/realty/news/odobreny-proekty-krt-na-severe-i-v-centre-moskvy",
-      "https://www.interfax-russia.ru/realty/news/stroyashchayasya-stanciya-rublevo-arhangelskoy-linii-metro-poluchila-nazvanie-novorizhskaya",
-      "https://www.interfax-russia.ru/realty/news/kazhdyy-pyatyy-zaemshchik-po-rynochnoy-ipoteke-v-2025-godu-zakryl-kredit-dosrochno"
+      "https://www.interfax-russia.ru/realty/news/proekt-zakona-o-zashchite-ot-babushkinyh-shem-pokupateley-nedvizhimosti-vnesut-v-gosdumu-v-blizhayshee-vremya"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/180903",
+      "https://www.metalinfo.ru/ru/news/180902",
+      "https://www.metalinfo.ru/ru/news/180896",
+      "https://www.metalinfo.ru/ru/news/180892",
+      "https://www.metalinfo.ru/ru/news/180887",
+      "https://www.metalinfo.ru/ru/news/180905",
+      "https://www.metalinfo.ru/ru/news/180889",
       "https://www.metalinfo.ru/ru/news/180904",
       "https://www.metalinfo.ru/ru/news/180877",
       "https://www.metalinfo.ru/ru/news/180831",
@@ -55346,14 +55389,7 @@
       "https://www.metalinfo.ru/ru/news/180891",
       "https://www.metalinfo.ru/ru/news/180873",
       "https://www.metalinfo.ru/ru/news/180883",
-      "https://www.metalinfo.ru/ru/news/180872",
-      "https://www.metalinfo.ru/ru/news/180884",
-      "https://www.metalinfo.ru/ru/news/180857",
-      "https://www.metalinfo.ru/ru/news/180871",
-      "https://www.metalinfo.ru/ru/news/180886",
-      "https://www.metalinfo.ru/ru/news/180850",
-      "https://www.metalinfo.ru/ru/news/180882",
-      "https://www.metalinfo.ru/ru/news/180862"
+      "https://www.metalinfo.ru/ru/news/180872"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -55438,6 +55474,7 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248365&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57741/",
       "http://government.ru/news/57742/",
       "http://government.ru/news/57740/",
       "http://government.ru/news/57739/",
@@ -55456,8 +55493,7 @@
       "http://government.ru/news/57721/",
       "http://government.ru/news/57719/",
       "http://government.ru/news/57720/",
-      "http://government.ru/news/57718/",
-      "http://government.ru/news/57714/"
+      "http://government.ru/news/57718/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/v-peterburge-tret-sdelok-s-zemelnymi-uchastkami-prikhodilas-na-uchastki-s-gotovymi-razresheniyami/",
@@ -55482,6 +55518,7 @@
       "https://stroygaz.ru/news/construction/odobren-proekt-aerovokzala-v-gorno-altayske/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260203/fns-2071859593.html",
       "https://realty.ria.ru/20260203/novostroyki-2071678537.html",
       "https://realty.ria.ru/20260202/domrf-2071780150.html",
       "https://realty.ria.ru/20260202/dom-2071767629.html",
@@ -55500,8 +55537,7 @@
       "https://realty.ria.ru/20260130/rosseti--2071316880.html",
       "https://realty.ria.ru/20260130/dolja-2071313884.html",
       "https://realty.ria.ru/20260130/potentsial-2071296286.html",
-      "https://realty.ria.ru/20260130/glavpochtamt-2071282512.html",
-      "https://realty.ria.ru/20260130/ekspert-2071281611.html"
+      "https://realty.ria.ru/20260130/glavpochtamt-2071282512.html"
     ],
     "Российская газета: Экономика": [
       "https://rg.ru/2026/01/28/stoimost-nefti-brent-prevysila-68-dollarov-vpervye-s-sentiabria-2025-goda.html",
@@ -73580,7 +73616,19 @@
     "862fe9398f484db1a75a0670ae16204615ed4d10b7af0707989177c5730e8313": "2026-02-03T07:47:00+03:00",
     "c59f094f7d4eaa9c715dbd6b07ee704a1f628d6601918a64ff9ff96da376ac44": "2026-02-03T07:48:00+03:00",
     "dbe47c3bca7aca203ffcd2c76392ab91bfdea1b75d19dbcb274560866eee2170": "2026-02-03T07:48:00+03:00",
-    "4b6c4f892e2d06e5ad249606eb094cd352731f2688955e77d98108f1f3896947": "2026-02-03T07:49:00+03:00"
+    "4b6c4f892e2d06e5ad249606eb094cd352731f2688955e77d98108f1f3896947": "2026-02-03T07:49:00+03:00",
+    "0a4e555fe2cd939f9101cf0475e95d6fc145e0e6c41e5c2364ce9ac03caed5c6": "2026-02-03T09:47:00+03:00",
+    "f57381fe7ff8b1fc2d409b92d489a91a39bc627c6ed85ba16065057cc3078a8c": "2026-02-03T09:47:00+03:00",
+    "c28e509c28b6b8d50a4dda86697d3651379fdb806f070f56895407f146f3548e": "2026-02-03T09:47:00+03:00",
+    "1a443e96e9187c2d6182ff6616644486cd398c6e5333bcd380aaa0b6b714be1a": "2026-02-03T09:47:00+03:00",
+    "d4d37afddfe4a6d1f454eb903999b76c3657477a31fe06cc13b1834801d0d03e": "2026-02-03T09:47:00+03:00",
+    "744441747c5ee136e00bf38a6fa8796a49609885addf445d677e2ce4fcf10301": "2026-02-03T09:47:00+03:00",
+    "f1b84648975b0dc8d243cfb70c519d66234ee7912571153459546cf874bc7f61": "2026-02-03T09:47:00+03:00",
+    "444a4446931276804b49074bf3828df0efd0727037f057dcded766f2681d52fc": "2026-02-03T09:47:00+03:00",
+    "108b19ec6b3b7cf57dee7cad300e5d9b00964e285834159990df2b909528fcc5": "2026-02-03T09:47:00+03:00",
+    "e6eed9c8928453781760d625e612014cf410e08fd63f435711b379f64bee7107": "2026-02-03T09:48:00+03:00",
+    "f6fc7520de885808676d8fd9206ef25c68b59dc2cf7acd9a6951a216443ef532": "2026-02-03T09:49:00+03:00",
+    "87b75d87257e513924bdd6da2e9cf9f5f15f35a69a00c911d4e6931cefbcb432": "2026-02-03T09:49:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -73611,9 +73659,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f59a859c2b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 20,
-        "last_ts": 1770093973.1261153
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9ecba282b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 25,
+        "last_ts": 1770101182.572735
       },
       "warmup_done": false,
       "last_success_path": null
@@ -73622,31 +73670,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "qJJdBr1AWkAZlURK",
+          "value": "pM81Vwioy4bTJ5df",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770095297
+          "expires": 1770102489
         },
         {
           "name": "__ddg10_",
-          "value": "1770094097",
+          "value": "1770101289",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770095297
+          "expires": 1770102489
         },
         {
           "name": "__ddg9_",
-          "value": "20.169.75.33",
+          "value": "52.159.245.178",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770095297
+          "expires": 1770102489
+        },
+        {
+          "name": "__ddg1_",
+          "value": "SvfOlH78ZbMEOinba56a",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1801637289
         },
         {
           "name": "PHPSESSID",
-          "value": "1e297ff4c6c5fd3dd1f866fd872e128e",
+          "value": "736f2951d30668a4e3425278874ebc97",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -73689,9 +73745,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f59a85202d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 16,
-        "last_ts": 1770094130.1061337
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9ecb7a5090>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 20,
+        "last_ts": 1770101326.6684558
       },
       "warmup_done": false,
       "last_success_path": null
@@ -95853,7 +95909,26 @@
     "http://www.metalinfo.ru/ru/news/180876": "http://www.metalinfo.ru/ru/news/180876",
     "https://www.metalinfo.ru/ru/news/180891": "http://www.metalinfo.ru/ru/news/180891",
     "http://www.metalinfo.ru/ru/news/180891": "http://www.metalinfo.ru/ru/news/180891",
-    "https://realty.ria.ru/20260203/novostroyki-2071678537.html": "https://realty.ria.ru/20260203/novostroyki-2071678537.html"
+    "https://realty.ria.ru/20260203/novostroyki-2071678537.html": "https://realty.ria.ru/20260203/novostroyki-2071678537.html",
+    "https://www.interfax-russia.ru/realty/news/novoe-derevyannoe-zdanie-dlya-hrama-v-stolichnom-mitine-dostraivayut-v-stolice": "https://www.interfax-russia.ru/realty/news/novoe-derevyannoe-zdanie-dlya-hrama-v-stolichnom-mitine-dostraivayut-v-stolice",
+    "https://www.interfax-russia.ru/realty/news/odobren-proekt-stroitelstva-sizo-na-4-tys-mest-v-podmoskove": "https://www.interfax-russia.ru/realty/news/odobren-proekt-stroitelstva-sizo-na-4-tys-mest-v-podmoskove",
+    "https://www.interfax-russia.ru/realty/news/bank-dom-rf-predostavit-35-5-mlrd-rubley-dlya-stroitelstva-otelya-v-sochi": "https://www.interfax-russia.ru/realty/news/bank-dom-rf-predostavit-35-5-mlrd-rubley-dlya-stroitelstva-otelya-v-sochi",
+    "https://www.metalinfo.ru/ru/news/180903": "http://www.metalinfo.ru/ru/news/180903",
+    "http://www.metalinfo.ru/ru/news/180903": "http://www.metalinfo.ru/ru/news/180903",
+    "https://www.metalinfo.ru/ru/news/180902": "http://www.metalinfo.ru/ru/news/180902",
+    "http://www.metalinfo.ru/ru/news/180902": "http://www.metalinfo.ru/ru/news/180902",
+    "https://www.metalinfo.ru/ru/news/180896": "http://www.metalinfo.ru/ru/news/180896",
+    "http://www.metalinfo.ru/ru/news/180896": "http://www.metalinfo.ru/ru/news/180896",
+    "https://www.metalinfo.ru/ru/news/180892": "http://www.metalinfo.ru/ru/news/180892",
+    "http://www.metalinfo.ru/ru/news/180892": "http://www.metalinfo.ru/ru/news/180892",
+    "https://www.metalinfo.ru/ru/news/180887": "http://www.metalinfo.ru/ru/news/180887",
+    "http://www.metalinfo.ru/ru/news/180887": "http://www.metalinfo.ru/ru/news/180887",
+    "https://www.metalinfo.ru/ru/news/180905": "http://www.metalinfo.ru/ru/news/180905",
+    "http://www.metalinfo.ru/ru/news/180905": "http://www.metalinfo.ru/ru/news/180905",
+    "https://www.metalinfo.ru/ru/news/180889": "http://www.metalinfo.ru/ru/news/180889",
+    "http://www.metalinfo.ru/ru/news/180889": "http://www.metalinfo.ru/ru/news/180889",
+    "http://government.ru/news/57741": "http://government.ru/news/57741",
+    "https://realty.ria.ru/20260203/fns-2071859593.html": "https://realty.ria.ru/20260203/fns-2071859593.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -114212,7 +114287,19 @@
     "eb612a729d3c4172c8000de12f60aba5d5a6ca4b": "http://www.metalinfo.ru/ru/news/180890",
     "48f250237828f70be58ac5cae4daff9c8ab01dc6": "http://www.metalinfo.ru/ru/news/180876",
     "f233388340e885a64b11739e25f14cb8c311d97a": "http://www.metalinfo.ru/ru/news/180891",
-    "9d05c2fd9b49a489118aba7003c9d1931b6eaa04": "https://realty.ria.ru/20260203/novostroyki-2071678537.html"
+    "9d05c2fd9b49a489118aba7003c9d1931b6eaa04": "https://realty.ria.ru/20260203/novostroyki-2071678537.html",
+    "b2055e6de8466cdf4af852f623da50c3ce5a936f": "https://www.interfax-russia.ru/realty/news/novoe-derevyannoe-zdanie-dlya-hrama-v-stolichnom-mitine-dostraivayut-v-stolice",
+    "bffe7bf122a99d608340484a1fc8521f4fbef1e3": "https://www.interfax-russia.ru/realty/news/odobren-proekt-stroitelstva-sizo-na-4-tys-mest-v-podmoskove",
+    "a1adc0ab2c8709623c91e2e3cb14b697903fb3af": "https://www.interfax-russia.ru/realty/news/bank-dom-rf-predostavit-35-5-mlrd-rubley-dlya-stroitelstva-otelya-v-sochi",
+    "c764a68e393b5dd078e09f4dd6d565934c97f7f0": "http://www.metalinfo.ru/ru/news/180903",
+    "607144bbc5ac3a9131233776091e5d5cfe626250": "http://www.metalinfo.ru/ru/news/180902",
+    "95f9bf59320c46a10dda8c7aa2ec14b14f2954d6": "http://www.metalinfo.ru/ru/news/180896",
+    "595b0eb758004b1557bd5cfc7bcae876f222e9ae": "http://www.metalinfo.ru/ru/news/180892",
+    "39a9a1f5f040602720e591f6b21d32568bb899fb": "http://www.metalinfo.ru/ru/news/180887",
+    "3baa9e3890a36dd1a838b798a7db1132349061d7": "http://www.metalinfo.ru/ru/news/180905",
+    "bcd7a5694cbc03c1779e09836446c922d87ba9ae": "http://www.metalinfo.ru/ru/news/180889",
+    "6ddca93a13b4dcbef81c97638e9200ff3c92d828": "http://government.ru/news/57741",
+    "3517e5b03d65ab6d5b18d33f849ceb633d8fd1ef": "https://realty.ria.ru/20260203/fns-2071859593.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -138772,6 +138859,26 @@
     "https://www.metalinfo.ru/ru/news/180876": "c59f094f7d4eaa9c715dbd6b07ee704a1f628d6601918a64ff9ff96da376ac44",
     "http://www.metalinfo.ru/ru/news/180891": "dbe47c3bca7aca203ffcd2c76392ab91bfdea1b75d19dbcb274560866eee2170",
     "https://www.metalinfo.ru/ru/news/180891": "dbe47c3bca7aca203ffcd2c76392ab91bfdea1b75d19dbcb274560866eee2170",
-    "https://realty.ria.ru/20260203/novostroyki-2071678537.html": "4b6c4f892e2d06e5ad249606eb094cd352731f2688955e77d98108f1f3896947"
+    "https://realty.ria.ru/20260203/novostroyki-2071678537.html": "4b6c4f892e2d06e5ad249606eb094cd352731f2688955e77d98108f1f3896947",
+    "https://www.interfax-russia.ru/realty/news/novoe-derevyannoe-zdanie-dlya-hrama-v-stolichnom-mitine-dostraivayut-v-stolice": "0a4e555fe2cd939f9101cf0475e95d6fc145e0e6c41e5c2364ce9ac03caed5c6",
+    "https://www.interfax-russia.ru/realty/news/odobren-proekt-stroitelstva-sizo-na-4-tys-mest-v-podmoskove": "f57381fe7ff8b1fc2d409b92d489a91a39bc627c6ed85ba16065057cc3078a8c",
+    "https://www.interfax-russia.ru/realty/news/bank-dom-rf-predostavit-35-5-mlrd-rubley-dlya-stroitelstva-otelya-v-sochi": "c28e509c28b6b8d50a4dda86697d3651379fdb806f070f56895407f146f3548e",
+    "http://www.metalinfo.ru/ru/news/180903": "1a443e96e9187c2d6182ff6616644486cd398c6e5333bcd380aaa0b6b714be1a",
+    "https://www.metalinfo.ru/ru/news/180903": "1a443e96e9187c2d6182ff6616644486cd398c6e5333bcd380aaa0b6b714be1a",
+    "http://www.metalinfo.ru/ru/news/180902": "d4d37afddfe4a6d1f454eb903999b76c3657477a31fe06cc13b1834801d0d03e",
+    "https://www.metalinfo.ru/ru/news/180902": "d4d37afddfe4a6d1f454eb903999b76c3657477a31fe06cc13b1834801d0d03e",
+    "http://www.metalinfo.ru/ru/news/180896": "744441747c5ee136e00bf38a6fa8796a49609885addf445d677e2ce4fcf10301",
+    "https://www.metalinfo.ru/ru/news/180896": "744441747c5ee136e00bf38a6fa8796a49609885addf445d677e2ce4fcf10301",
+    "http://www.metalinfo.ru/ru/news/180892": "f1b84648975b0dc8d243cfb70c519d66234ee7912571153459546cf874bc7f61",
+    "https://www.metalinfo.ru/ru/news/180892": "f1b84648975b0dc8d243cfb70c519d66234ee7912571153459546cf874bc7f61",
+    "http://www.metalinfo.ru/ru/news/180887": "444a4446931276804b49074bf3828df0efd0727037f057dcded766f2681d52fc",
+    "https://www.metalinfo.ru/ru/news/180887": "444a4446931276804b49074bf3828df0efd0727037f057dcded766f2681d52fc",
+    "http://www.metalinfo.ru/ru/news/180905": "108b19ec6b3b7cf57dee7cad300e5d9b00964e285834159990df2b909528fcc5",
+    "https://www.metalinfo.ru/ru/news/180905": "108b19ec6b3b7cf57dee7cad300e5d9b00964e285834159990df2b909528fcc5",
+    "http://www.metalinfo.ru/ru/news/180889": "e6eed9c8928453781760d625e612014cf410e08fd63f435711b379f64bee7107",
+    "https://www.metalinfo.ru/ru/news/180889": "e6eed9c8928453781760d625e612014cf410e08fd63f435711b379f64bee7107",
+    "http://government.ru/news/57741": "f6fc7520de885808676d8fd9206ef25c68b59dc2cf7acd9a6951a216443ef532",
+    "http://government.ru/news/57741/": "f6fc7520de885808676d8fd9206ef25c68b59dc2cf7acd9a6951a216443ef532",
+    "https://realty.ria.ru/20260203/fns-2071859593.html": "87b75d87257e513924bdd6da2e9cf9f5f15f35a69a00c911d4e6931cefbcb432"
   }
 }
