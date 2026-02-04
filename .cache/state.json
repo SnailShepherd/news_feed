@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 04 Feb 2026 12:54:29 GMT"
+      "Last-Modified": "Wed, 04 Feb 2026 15:42:20 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1e6e5-2gFDGBFil3tYfxfJK6hHq6TfVgg\""
+      "ETag": "W/\"1dc59-mlQV9Cz20zNBh087vHcEpjkqxSM\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Wed, 04 Feb 2026 12:30:25 GMT"
+      "Last-Modified": "Wed, 04 Feb 2026 14:28:33 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -42150,6 +42150,24 @@
     },
     "https://realty.ria.ru/20260204/stavki-2072165944.html": {
       "Last-Modified": "Wed, 04 Feb 2026 10:16:40 GMT"
+    },
+    "https://ardexpert.ru/article/28686": {},
+    "https://ardexpert.ru/article/28685": {},
+    "https://eec.eaeunion.org/news/arzybek-kozhoshev-provel-vstrechu-s-ministrom-transporta-i-kommunikatsiy-kyrgyzskoy-respubliki/": {},
+    "https://www.interfax-russia.ru/realty/news/kapremont-obshchezhitiya-finansovogo-universiteta-v-moskve-zakonchat-k-2027-godu": {},
+    "https://www.interfax-russia.ru/realty/news/kapremont-obshchezhitiya-finansovogo-universiteta-v-moskve-zakonchat-k-2027-godu/amp": {},
+    "https://www.interfax-russia.ru/realty/news/opredeleny-podryadchiki-dlya-zhilyh-kompleksov-po-krt-v-dvuh-okrugah-moskvy": {},
+    "https://www.metalinfo.ru/ru/news/181005": {},
+    "https://www.metalinfo.ru/ru/news/181003": {},
+    "https://www.metalinfo.ru/ru/news/180970": {},
+    "https://www.metalinfo.ru/ru/news/180966": {},
+    "https://www.metalinfo.ru/ru/news/181000": {},
+    "https://www.metalinfo.ru/ru/news/180998": {},
+    "http://government.ru/news/57755/": {},
+    "http://government.ru/news/57754/": {},
+    "http://government.ru/news/57751/": {},
+    "https://realty.ria.ru/20260204/mchs-2072276818.html": {
+      "Last-Modified": "Wed, 04 Feb 2026 14:39:32 GMT"
     }
   },
   "stats": {
@@ -55570,9 +55588,31 @@
         "source": "Российская газета: Экономика",
         "url": "https://rg.ru/tema/ekonomika",
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f52e267b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f52175e50>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f52176710>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f5364dcd0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f52064050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f51d94a70>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0f51ea2ad0>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0f53693610>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0f51ea2e90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0f51ea3110>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0f51ea3390>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
+      },
+      {
+        "source": "Российская газета: Экономика",
+        "url": "https://rg.ru/tema/ekonomika",
+        "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
       }
     ],
-    "last_run": "2026-02-04T12:54:56.593804+00:00",
+    "last_run": "2026-02-04T15:42:35.786114+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -55585,9 +55625,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 309.8518980000051,
-        "connect_ms": 643.5009369999989,
-        "response_ms": 953.352835000004,
+        "dns_ms": 391.51903600000537,
+        "connect_ms": 615.3869540000017,
+        "response_ms": 1006.905990000007,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -55598,12 +55638,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8331663d10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f51d94a70>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 1082.1396389999904,
-        "connect_ms": 0.0,
-        "response_ms": 683.2331629999544,
+        "dns_ms": 403.4135489999926,
+        "connect_ms": 3651.5502540000284,
+        "response_ms": 4054.963803000021,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -55614,25 +55654,25 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f832fe0de50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0f51ea3390>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "41027f3fb7908680cc3c4d538da1000022a2acd0253bedbd513c33ba18943b3e",
+    "https://ardexpert.ru/article": "a4f45ce4aaf09d8cd1f989b3f22225015e2c6f9601da5c273743664c046ab405",
     "https://www.gostinfo.ru/News/List": "9fe94faa41804587866e182713bb3ce045254c4c15b587c6e7b33f02af5101e3",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3d705c7e67c0da431baa852691d2c9b7ff58ef59ee65348b60e634ea04660995",
-    "https://eec.eaeunion.org/news/": "7e947025e6bdd52a406f64c8bd93651e3034025e8c8c4f39b04f489afacdb8b7",
+    "https://eec.eaeunion.org/news/": "af5d009800a65060e816e5d0b44458ec29592e28fb545404994739b2cf09b94f",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "4fdcdbbf0e09090c3046590e3be988cba90ba07cd4d8322edde02b0cee460964",
-    "https://www.metalinfo.ru/ru/news": "17cdbdca754478d50b4ef496c03e10d2f3af674385419d49f73270d152224750",
-    "https://www.pnp.ru/economics/": "25ec1d561c1ef8425f16a968ac498abf83805f2fac974281b849007223b54fa8",
-    "https://erzrf.ru/news/": "48223850813b621922d20249306f2a8eccd8d08df9047df0559433eb439d3d23",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "9d957c15708c7a684ae3e38be0a741e25672f3b55fa645bbc2b1ffad3a8aa7f7",
+    "https://www.metalinfo.ru/ru/news": "c8109af0100d6df96a592168723eada7ec6dc7dd6dc4c1bd1adc9e3b823ca9fa",
+    "https://www.pnp.ru/economics/": "ea71027d36ceb6c0cc14826b7bf5361501c0ba98239a8974726d79a821657e5e",
+    "https://erzrf.ru/news/": "f8f478d3b9437892b5b37744da213497dc71fde56ed38413653164559925597d",
     "https://ria-stk.ru/news/vse-novosti.php": "25cee3d869166cf696cb5481507d824a0f52d70f61de7f9c38bdfd3fad516425",
-    "http://government.ru/news/": "3ecaeee60f5b3f559804bebdb91499d4b0a29e99d05c97d26ab0b660cfb02794",
-    "https://stroygaz.ru/news/": "a38f78bc4fa3f4e6b49c2ae31dcc23213d3d7b327dbcda05a79d46e1e2cdf682",
-    "https://realty.ria.ru/lenta/": "08cfb134f83483dfa3e0969c836026e592e259071f3f0fc46d5b87e18cb45855",
+    "http://government.ru/news/": "f788c82f30caecf8bcd9612448245127999f180415f1c914e0fa555d09ec162a",
+    "https://stroygaz.ru/news/": "c128686ccc43f5a4775ea373168a15e42f14521f228c99c7e9d54c3efd1dd4b9",
+    "https://realty.ria.ru/lenta/": "77dcca1d58b838fde61e1a9f7bb4cd6eb7199b35a7951d23ef33b0e7164b6b09",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
     "http://ancb.ru/publication": "16eb62d710910f22067c9520c45eb215bd9c49dd5d960054cc65bb6457dc6dd7",
     "https://notim.ru": "b2cd53a56ef57a36075695c4c00d506de4c2a056013c3ffb6f535b7ec0b83440",
@@ -55674,6 +55714,8 @@
       "https://notim.ru/news-partners/"
     ],
     "АРД: статьи": [
+      "https://ardexpert.ru/article/28686",
+      "https://ardexpert.ru/article/28685",
       "https://ardexpert.ru/article/28684",
       "https://ardexpert.ru/article/28683",
       "https://ardexpert.ru/article/28679",
@@ -55685,9 +55727,7 @@
       "https://ardexpert.ru/article/28669",
       "https://ardexpert.ru/article/28667",
       "https://ardexpert.ru/article/28666",
-      "https://ardexpert.ru/article/28665",
-      "https://www.nanocad.ru/press/article/sozdanie-i-nastroyka-spetsifikatsiy-v-nanocad-bim-stroitelstvo-obzor-dvukh-podkhodov-ot-eksperta-sof/",
-      "https://ardexpert.ru/article/28663"
+      "https://ardexpert.ru/article/28665"
     ],
     "Гостинформ": [
       "https://www.gostinfo.ru/News/Details/2065",
@@ -55703,6 +55743,7 @@
     ],
     "ФАУ ФЦС": [],
     "ЕЭК ЕАЭС": [
+      "https://eec.eaeunion.org/news/arzybek-kozhoshev-provel-vstrechu-s-ministrom-transporta-i-kommunikatsiy-kyrgyzskoy-respubliki/",
       "https://eec.eaeunion.org/news/evraziyskiy-ekonomicheskiy-forum-2026-v-astane-budet-posvyashchen-tsifrovizatsii-i-ekonomike-doveriya/",
       "https://eec.eaeunion.org/news/v-eaes-opredeleny-prioritetnye-napravleniya-kooperatsionnogo-sotrudnichestva-v-chernoy-metallurgii/",
       "https://eec.eaeunion.org/news/o-situatsii-na-kazakhstansko-kyrgyzskoy-granitse/",
@@ -55713,7 +55754,6 @@
       "https://eec.eaeunion.org/news/vnedrenie-ii-i-tsifrovykh-tekhnologiy-v-tamozhennoy-sfere-rassmotreli-v-abu-dabi/",
       "https://eec.eaeunion.org/news/sovet-eek-rassmotrel-rezultaty-monitoringa-razvitiya-evraziyskikh-transportnykh-koridorov/",
       "https://eec.eaeunion.org/news/bakytzhan-sagintaev-provel-vstrechu-s-poslom-belarusi-v-rossii-yuriem-seliverstovym/",
-      "https://eec.eaeunion.org/news/eaes-vozvrashchaet-namibiyu-v-perechen-razvivayushchikhsya-stran-polzovateley-edinoy-sistemy-tarifny/",
       "https://eec.eaeunion.org/news/eek-provela-seminar-dlya-italyanskogo-biznesa/"
     ],
     "Минфин России": [
@@ -55726,6 +55766,8 @@
       "https://minfin.gov.ru/ru/press-center/contacts/"
     ],
     "Интерфакс-Недвижимость": [
+      "https://www.interfax-russia.ru/realty/news/kapremont-obshchezhitiya-finansovogo-universiteta-v-moskve-zakonchat-k-2027-godu",
+      "https://www.interfax-russia.ru/realty/news/opredeleny-podryadchiki-dlya-zhilyh-kompleksov-po-krt-v-dvuh-okrugah-moskvy",
       "https://www.interfax-russia.ru/realty/news/bolshoy-smolenskiy-most-v-peterburge-budet-gotov-k-navigacii-uzhe-v-etom-godu",
       "https://www.interfax-russia.ru/realty/news/deputaty-gd-predlagayut-izmenit-pravila-vydeleniya-uchastkov-mnogodetnym-semyam",
       "https://www.interfax-russia.ru/realty/news/sberbank-uvelichil-vydachu-yanvarskoy-ipoteki-v-5-raz",
@@ -55763,11 +55805,15 @@
       "https://www.interfax-russia.ru/realty/news/bolshe-poloviny-rossiyskih-liftov-proizveli-v-moskve-za-11-mesyacev-2025-goda",
       "https://www.interfax-russia.ru/realty/news/byvshiy-zamglavy-minstroya-dagestana-osuzhden-zaochno-po-delu-o-hishchenii",
       "https://www.interfax-russia.ru/realty/news/remont-novyh-ofisov-v-moskva-siti-potrebuet-svyshe-100-mlrd-rubley-issledovanie",
-      "https://www.interfax-russia.ru/realty/news/proekt-kongress-centra-u-aeroporta-nizhnego-novgoroda-podorozhal-do-41-2-mlrd-rubley",
-      "https://www.interfax-russia.ru/realty/news/usadbu-hih-veka-v-ekaterinburge-vystavili-na-prodazhu-na-avito",
-      "https://www.interfax-russia.ru/realty/news/standart-po-unifikacii-liftovyh-shaht-hotyat-vypustit-v-rf"
+      "https://www.interfax-russia.ru/realty/news/proekt-kongress-centra-u-aeroporta-nizhnego-novgoroda-podorozhal-do-41-2-mlrd-rubley"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/181005",
+      "https://www.metalinfo.ru/ru/news/181003",
+      "https://www.metalinfo.ru/ru/news/180970",
+      "https://www.metalinfo.ru/ru/news/180966",
+      "https://www.metalinfo.ru/ru/news/181000",
+      "https://www.metalinfo.ru/ru/news/180998",
       "https://www.metalinfo.ru/ru/news/180993",
       "https://www.metalinfo.ru/ru/news/180991",
       "https://www.metalinfo.ru/ru/news/180971",
@@ -55781,13 +55827,7 @@
       "https://www.metalinfo.ru/ru/news/180961",
       "https://www.metalinfo.ru/ru/news/180984",
       "https://www.metalinfo.ru/ru/news/180965",
-      "https://www.metalinfo.ru/ru/news/180973",
-      "https://www.metalinfo.ru/ru/news/180951",
-      "https://www.metalinfo.ru/ru/news/180974",
-      "https://www.metalinfo.ru/ru/news/180969",
-      "https://www.metalinfo.ru/ru/news/180972",
-      "https://www.metalinfo.ru/ru/news/180937",
-      "https://www.metalinfo.ru/ru/news/180968"
+      "https://www.metalinfo.ru/ru/news/180973"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -55872,6 +55912,9 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248385&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57755/",
+      "http://government.ru/news/57754/",
+      "http://government.ru/news/57751/",
       "http://government.ru/news/57752/",
       "http://government.ru/news/57746/",
       "http://government.ru/news/57749/",
@@ -55888,10 +55931,7 @@
       "http://government.ru/news/57736/",
       "http://government.ru/news/57733/",
       "http://government.ru/news/57734/",
-      "http://government.ru/news/57731/",
-      "http://government.ru/news/57726/",
-      "http://government.ru/news/57729/",
-      "http://government.ru/news/57728/"
+      "http://government.ru/news/57731/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/v-peterburge-tret-sdelok-s-zemelnymi-uchastkami-prikhodilas-na-uchastki-s-gotovymi-razresheniyami/",
@@ -55916,6 +55956,7 @@
       "https://stroygaz.ru/news/construction/odobren-proekt-aerovokzala-v-gorno-altayske/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260204/mchs-2072276818.html",
       "https://realty.ria.ru/20260204/renovatsiya-2072238105.html",
       "https://realty.ria.ru/20260204/trebovanija-2072236073.html",
       "https://realty.ria.ru/20260204/damask-2072203088.html",
@@ -55934,8 +55975,7 @@
       "https://realty.ria.ru/20260203/fas-2071946513.html",
       "https://realty.ria.ru/20260203/portfel-2071926386.html",
       "https://realty.ria.ru/20260203/portfel-2071920644.html",
-      "https://realty.ria.ru/20260203/vydacha-2071919126.html",
-      "https://realty.ria.ru/20260203/vydacha-2071918067.html"
+      "https://realty.ria.ru/20260203/vydacha-2071919126.html"
     ],
     "Российская газета: Экономика": [
       "https://rg.ru/2026/01/28/stoimost-nefti-brent-prevysila-68-dollarov-vpervye-s-sentiabria-2025-goda.html",
@@ -74191,7 +74231,22 @@
     "647dd37f577f7ff186b2d7b1c9b5e56342785de51b42c308de5ade8919ebb57e": "2026-02-04T15:54:00+03:00",
     "400ea41a16d7ba2500f081b36b83cbe080f2179f66e540081eea30b57754990d": "2026-02-04T15:54:00+03:00",
     "e9f574622e4c9d127a4ba966e3b2945383a04c55da49c267f636d650571977a7": "2026-02-04T15:54:00+03:00",
-    "f517580f4c981c3761ed01d19218f5d88cdac9d071f89ef6e7a3f6e8ccd7fc02": "2026-02-04T15:54:00+03:00"
+    "f517580f4c981c3761ed01d19218f5d88cdac9d071f89ef6e7a3f6e8ccd7fc02": "2026-02-04T15:54:00+03:00",
+    "3f03872868c3a5b1bd71a53b1ed2a023fec31ccb0edc5a1f18d87875d2f03563": "2026-02-04T18:39:00+03:00",
+    "ce7316ea93ddd2847aea06125bd2eed2388fd518bd021bc946045605959d820a": "2026-02-04T18:39:00+03:00",
+    "3bcd0deedc7374eb2297f7ba9f7db91838858f91e19bf103285952f62e635491": "2026-02-04T18:40:00+03:00",
+    "65f72e27c6b82bc5d5166ae426d1c343adcfdf784c997c7e3b3f1d2c9b723094": "2026-02-04T18:40:00+03:00",
+    "a7e9f9e0edbddde168b0eb05ef136eb351324c5bea7612952694b4da5b5468c6": "2026-02-04T18:40:00+03:00",
+    "9f7256ce3f11578a2f3ea3e25f4fe48bd7a315d2a1f0c8abded66ffcbc0f1492": "2026-02-04T18:40:00+03:00",
+    "60828b424c96cce884245159304b0f8a4a0bef35448ad5ddc2f7f3e8af81b294": "2026-02-04T18:40:00+03:00",
+    "76cc4e7ff32eb6d849be1cb05964ee9b98ce3bdaa5ca237d45340fb2298df2c1": "2026-02-04T18:41:00+03:00",
+    "5d8f9221e2edeb1a067ce7a88b29f272ed2aae0c76699577348c9a14ac46438c": "2026-02-04T18:41:00+03:00",
+    "e90616491e82ddeaa8bfdaa2ebd9b701f150c121a5b2d0b3d32b28aef3d8bc97": "2026-02-04T18:41:00+03:00",
+    "c87d04679fe7c56f13004129ddd9bfac7ea65e61e4502d2387975a220f2f8ccb": "2026-02-04T18:41:00+03:00",
+    "424279a3972a899847d6b66e11862d9d642bf98121b52b79e30e83a244968a1b": "2026-02-04T18:42:00+03:00",
+    "70bb5ebb461fce77d6bca6d27a8891955417f4b94fc6e78b1a670033beb6f10a": "2026-02-04T18:42:00+03:00",
+    "1587a6eb9b26adafa9df2e70d4eeb3aed6d860dffdcaf50ce278dd0cef27d318": "2026-02-04T18:42:00+03:00",
+    "9f5d06b5a907216dbdea39844174470501b284c2a46aa518ba2ca374a406f844": "2026-02-04T18:42:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -74222,9 +74277,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f83300702b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
-        "last_ts": 1770209458.9499998
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f52064050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 15,
+        "last_ts": 1770219593.4316995
       },
       "warmup_done": false,
       "last_success_path": null
@@ -74233,39 +74288,31 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "6rjWIISIJXr2lES5",
+          "value": "VY4NHSK4TLSh1Rc6",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770210824
+          "expires": 1770220895
         },
         {
           "name": "__ddg10_",
-          "value": "1770209624",
+          "value": "1770219695",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770210824
+          "expires": 1770220895
         },
         {
           "name": "__ddg9_",
-          "value": "172.183.94.161",
+          "value": "172.174.166.197",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770210824
-        },
-        {
-          "name": "__ddg1_",
-          "value": "juJ6D535VQCzNIh5PcYs",
-          "domain": ".pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1801745624
+          "expires": 1770220895
         },
         {
           "name": "PHPSESSID",
-          "value": "4370d7794aa00a6200d98ee22cd464dd",
+          "value": "2dc377a5164355efc324cbfb5c1e72b7",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -74308,9 +74355,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f832fe0e0d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 8,
-        "last_ts": 1770209656.4752467
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0f51ea3110>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 12,
+        "last_ts": 1770219727.743523
       },
       "warmup_done": false,
       "last_success_path": null
@@ -96732,7 +96779,28 @@
     "https://realty.ria.ru/20260204/sud-2072201367.html": "https://realty.ria.ru/20260204/sud-2072201367.html",
     "https://realty.ria.ru/20260204/eks-2072173683.html": "https://realty.ria.ru/20260204/eks-2072173683.html",
     "https://realty.ria.ru/20260204/domklik-2072166886.html": "https://realty.ria.ru/20260204/domklik-2072166886.html",
-    "https://realty.ria.ru/20260204/stavki-2072165944.html": "https://realty.ria.ru/20260204/stavki-2072165944.html"
+    "https://realty.ria.ru/20260204/stavki-2072165944.html": "https://realty.ria.ru/20260204/stavki-2072165944.html",
+    "https://ardexpert.ru/article/28686": "https://ardexpert.ru/article/28686",
+    "https://ardexpert.ru/article/28685": "https://ardexpert.ru/article/28685",
+    "https://eec.eaeunion.org/news/arzybek-kozhoshev-provel-vstrechu-s-ministrom-transporta-i-kommunikatsiy-kyrgyzskoy-respubliki": "https://eec.eaeunion.org/news/arzybek-kozhoshev-provel-vstrechu-s-ministrom-transporta-i-kommunikatsiy-kyrgyzskoy-respubliki",
+    "https://www.interfax-russia.ru/realty/news/kapremont-obshchezhitiya-finansovogo-universiteta-v-moskve-zakonchat-k-2027-godu": "https://www.interfax-russia.ru/realty/news/kapremont-obshchezhitiya-finansovogo-universiteta-v-moskve-zakonchat-k-2027-godu",
+    "https://www.interfax-russia.ru/realty/news/opredeleny-podryadchiki-dlya-zhilyh-kompleksov-po-krt-v-dvuh-okrugah-moskvy": "https://www.interfax-russia.ru/realty/news/opredeleny-podryadchiki-dlya-zhilyh-kompleksov-po-krt-v-dvuh-okrugah-moskvy",
+    "https://www.metalinfo.ru/ru/news/181005": "http://www.metalinfo.ru/ru/news/181005",
+    "http://www.metalinfo.ru/ru/news/181005": "http://www.metalinfo.ru/ru/news/181005",
+    "https://www.metalinfo.ru/ru/news/181003": "http://www.metalinfo.ru/ru/news/181003",
+    "http://www.metalinfo.ru/ru/news/181003": "http://www.metalinfo.ru/ru/news/181003",
+    "https://www.metalinfo.ru/ru/news/180970": "http://www.metalinfo.ru/ru/news/180970",
+    "http://www.metalinfo.ru/ru/news/180970": "http://www.metalinfo.ru/ru/news/180970",
+    "https://www.metalinfo.ru/ru/news/180966": "http://www.metalinfo.ru/ru/news/180966",
+    "http://www.metalinfo.ru/ru/news/180966": "http://www.metalinfo.ru/ru/news/180966",
+    "https://www.metalinfo.ru/ru/news/181000": "http://www.metalinfo.ru/ru/news/181000",
+    "http://www.metalinfo.ru/ru/news/181000": "http://www.metalinfo.ru/ru/news/181000",
+    "https://www.metalinfo.ru/ru/news/180998": "http://www.metalinfo.ru/ru/news/180998",
+    "http://www.metalinfo.ru/ru/news/180998": "http://www.metalinfo.ru/ru/news/180998",
+    "http://government.ru/news/57755": "http://government.ru/news/57755",
+    "http://government.ru/news/57754": "http://government.ru/news/57754",
+    "http://government.ru/news/57751": "http://government.ru/news/57751",
+    "https://realty.ria.ru/20260204/mchs-2072276818.html": "https://realty.ria.ru/20260204/mchs-2072276818.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -115268,7 +115336,22 @@
     "f3569e97d8da2319435a1e20a9f04d9aed7129fc": "https://realty.ria.ru/20260204/sud-2072201367.html",
     "cb3f2b3d3288c13cd752fa810233fff4709c840a": "https://realty.ria.ru/20260204/eks-2072173683.html",
     "0cf4ab6e49ad76bf25e294353f71f8353c3bdb1b": "https://realty.ria.ru/20260204/domklik-2072166886.html",
-    "2eb86b7cd0595bd3d6eb123aca77078066c3485d": "https://realty.ria.ru/20260204/stavki-2072165944.html"
+    "2eb86b7cd0595bd3d6eb123aca77078066c3485d": "https://realty.ria.ru/20260204/stavki-2072165944.html",
+    "1045998104ab7a7a941d20ab1407a66cafad6ac5": "https://ardexpert.ru/article/28686",
+    "63e08541f43dc7e4b829bb29ce355217b94b27c1": "https://ardexpert.ru/article/28685",
+    "a3fea1753191e5d311fb2fe6272ae2ac319c40c8": "https://eec.eaeunion.org/news/arzybek-kozhoshev-provel-vstrechu-s-ministrom-transporta-i-kommunikatsiy-kyrgyzskoy-respubliki",
+    "81c9223d6be3bca0ede6a094c2c11872b241f775": "https://www.interfax-russia.ru/realty/news/kapremont-obshchezhitiya-finansovogo-universiteta-v-moskve-zakonchat-k-2027-godu",
+    "9dea3f51ad5c21834efb33825442d132a8a45778": "https://www.interfax-russia.ru/realty/news/opredeleny-podryadchiki-dlya-zhilyh-kompleksov-po-krt-v-dvuh-okrugah-moskvy",
+    "ead3095babc2022981f58708799bdafb74c0b011": "http://www.metalinfo.ru/ru/news/181005",
+    "44a81cd616da9ac0b3be11fb23c1a49c1faba3a1": "http://www.metalinfo.ru/ru/news/181003",
+    "7500b6f258cb053b195aaa64cdb4a81cdb99e46d": "http://www.metalinfo.ru/ru/news/180970",
+    "5f4cba615dec0ca8ff26eaadcddd7f96f4f2e700": "http://www.metalinfo.ru/ru/news/180966",
+    "82c6ac833707d0c2261a64156f136f2447b5a1a0": "http://www.metalinfo.ru/ru/news/181000",
+    "96267d97b146ba47a01604458ad9b1187e593db1": "http://www.metalinfo.ru/ru/news/180998",
+    "7b4c97f6daf43c74d5c01f94107e2951ed998aa9": "http://government.ru/news/57755",
+    "d7a16ca802e5481672e0c8b8c3d96c31611f2ec3": "http://government.ru/news/57754",
+    "ce32d1b30fb725d7a84e927d73ecb2f7e17da6c4": "http://government.ru/news/57751",
+    "6adaed374087dffda5fce0be5c36e5eda95eea04": "https://realty.ria.ru/20260204/mchs-2072276818.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -140101,6 +140184,31 @@
     "https://realty.ria.ru/20260204/sud-2072201367.html": "647dd37f577f7ff186b2d7b1c9b5e56342785de51b42c308de5ade8919ebb57e",
     "https://realty.ria.ru/20260204/eks-2072173683.html": "400ea41a16d7ba2500f081b36b83cbe080f2179f66e540081eea30b57754990d",
     "https://realty.ria.ru/20260204/domklik-2072166886.html": "e9f574622e4c9d127a4ba966e3b2945383a04c55da49c267f636d650571977a7",
-    "https://realty.ria.ru/20260204/stavki-2072165944.html": "f517580f4c981c3761ed01d19218f5d88cdac9d071f89ef6e7a3f6e8ccd7fc02"
+    "https://realty.ria.ru/20260204/stavki-2072165944.html": "f517580f4c981c3761ed01d19218f5d88cdac9d071f89ef6e7a3f6e8ccd7fc02",
+    "https://ardexpert.ru/article/28686": "3f03872868c3a5b1bd71a53b1ed2a023fec31ccb0edc5a1f18d87875d2f03563",
+    "https://ardexpert.ru/article/28685": "ce7316ea93ddd2847aea06125bd2eed2388fd518bd021bc946045605959d820a",
+    "https://eec.eaeunion.org/news/arzybek-kozhoshev-provel-vstrechu-s-ministrom-transporta-i-kommunikatsiy-kyrgyzskoy-respubliki": "3bcd0deedc7374eb2297f7ba9f7db91838858f91e19bf103285952f62e635491",
+    "https://eec.eaeunion.org/news/arzybek-kozhoshev-provel-vstrechu-s-ministrom-transporta-i-kommunikatsiy-kyrgyzskoy-respubliki/": "3bcd0deedc7374eb2297f7ba9f7db91838858f91e19bf103285952f62e635491",
+    "https://www.interfax-russia.ru/realty/news/kapremont-obshchezhitiya-finansovogo-universiteta-v-moskve-zakonchat-k-2027-godu": "65f72e27c6b82bc5d5166ae426d1c343adcfdf784c997c7e3b3f1d2c9b723094",
+    "https://www.interfax-russia.ru/realty/news/opredeleny-podryadchiki-dlya-zhilyh-kompleksov-po-krt-v-dvuh-okrugah-moskvy": "a7e9f9e0edbddde168b0eb05ef136eb351324c5bea7612952694b4da5b5468c6",
+    "http://www.metalinfo.ru/ru/news/181005": "9f7256ce3f11578a2f3ea3e25f4fe48bd7a315d2a1f0c8abded66ffcbc0f1492",
+    "https://www.metalinfo.ru/ru/news/181005": "9f7256ce3f11578a2f3ea3e25f4fe48bd7a315d2a1f0c8abded66ffcbc0f1492",
+    "http://www.metalinfo.ru/ru/news/181003": "60828b424c96cce884245159304b0f8a4a0bef35448ad5ddc2f7f3e8af81b294",
+    "https://www.metalinfo.ru/ru/news/181003": "60828b424c96cce884245159304b0f8a4a0bef35448ad5ddc2f7f3e8af81b294",
+    "http://www.metalinfo.ru/ru/news/180970": "76cc4e7ff32eb6d849be1cb05964ee9b98ce3bdaa5ca237d45340fb2298df2c1",
+    "https://www.metalinfo.ru/ru/news/180970": "76cc4e7ff32eb6d849be1cb05964ee9b98ce3bdaa5ca237d45340fb2298df2c1",
+    "http://www.metalinfo.ru/ru/news/180966": "5d8f9221e2edeb1a067ce7a88b29f272ed2aae0c76699577348c9a14ac46438c",
+    "https://www.metalinfo.ru/ru/news/180966": "5d8f9221e2edeb1a067ce7a88b29f272ed2aae0c76699577348c9a14ac46438c",
+    "http://www.metalinfo.ru/ru/news/181000": "e90616491e82ddeaa8bfdaa2ebd9b701f150c121a5b2d0b3d32b28aef3d8bc97",
+    "https://www.metalinfo.ru/ru/news/181000": "e90616491e82ddeaa8bfdaa2ebd9b701f150c121a5b2d0b3d32b28aef3d8bc97",
+    "http://www.metalinfo.ru/ru/news/180998": "c87d04679fe7c56f13004129ddd9bfac7ea65e61e4502d2387975a220f2f8ccb",
+    "https://www.metalinfo.ru/ru/news/180998": "c87d04679fe7c56f13004129ddd9bfac7ea65e61e4502d2387975a220f2f8ccb",
+    "http://government.ru/news/57755": "424279a3972a899847d6b66e11862d9d642bf98121b52b79e30e83a244968a1b",
+    "http://government.ru/news/57755/": "424279a3972a899847d6b66e11862d9d642bf98121b52b79e30e83a244968a1b",
+    "http://government.ru/news/57754": "70bb5ebb461fce77d6bca6d27a8891955417f4b94fc6e78b1a670033beb6f10a",
+    "http://government.ru/news/57754/": "70bb5ebb461fce77d6bca6d27a8891955417f4b94fc6e78b1a670033beb6f10a",
+    "http://government.ru/news/57751": "1587a6eb9b26adafa9df2e70d4eeb3aed6d860dffdcaf50ce278dd0cef27d318",
+    "http://government.ru/news/57751/": "1587a6eb9b26adafa9df2e70d4eeb3aed6d860dffdcaf50ce278dd0cef27d318",
+    "https://realty.ria.ru/20260204/mchs-2072276818.html": "9f5d06b5a907216dbdea39844174470501b284c2a46aa518ba2ca374a406f844"
   }
 }
