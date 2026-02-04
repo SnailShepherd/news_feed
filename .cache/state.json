@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 04 Feb 2026 15:42:20 GMT"
+      "Last-Modified": "Wed, 04 Feb 2026 18:43:50 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1dc59-mlQV9Cz20zNBh087vHcEpjkqxSM\""
+      "ETag": "W/\"1dd90-tNTr3xeSP9RLxJWKUgunoEFTW30\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -42168,7 +42168,11 @@
     "http://government.ru/news/57751/": {},
     "https://realty.ria.ru/20260204/mchs-2072276818.html": {
       "Last-Modified": "Wed, 04 Feb 2026 14:39:32 GMT"
-    }
+    },
+    "https://www.interfax-russia.ru/realty/news/deputat-ocenil-organichnost-proekta-kafedralnogo-sobora-sergieva-posada": {},
+    "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy": {},
+    "http://government.ru/news/57757/": {},
+    "http://government.ru/news/57756/": {}
   },
   "stats": {
     "cooldowns": {
@@ -55610,9 +55614,19 @@
         "source": "Российская газета: Экономика",
         "url": "https://rg.ru/tema/ekonomika",
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Российская газета: Экономика",
+        "url": "https://rg.ru/tema/ekonomika",
+        "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
       }
     ],
-    "last_run": "2026-02-04T15:42:35.786114+00:00",
+    "last_run": "2026-02-04T18:43:15.946951+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -55625,56 +55639,56 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 391.51903600000537,
-        "connect_ms": 615.3869540000017,
-        "response_ms": 1006.905990000007,
+        "dns_ms": 301.9288289999906,
+        "connect_ms": 826.4517070000181,
+        "response_ms": 1128.3805360000088,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f51d94a70>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 276.23876299999495,
+        "connect_ms": 887.2534359999946,
+        "response_ms": 1163.4921989999896,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 403.4135489999926,
-        "connect_ms": 3651.5502540000284,
-        "response_ms": 4054.963803000021,
+        "dns_ms": 772.593485999991,
+        "connect_ms": 222.98836000000222,
+        "response_ms": 995.5818459999932,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0f51ea3390>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 176.36717800002089,
+        "connect_ms": 435.0495099999705,
+        "response_ms": 611.4166879999914,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "a4f45ce4aaf09d8cd1f989b3f22225015e2c6f9601da5c273743664c046ab405",
+    "https://ardexpert.ru/article": "0ecdff3b90bcbf329afaef78f82c504c9e385695168d1e538d93f5ca806553a6",
     "https://www.gostinfo.ru/News/List": "9fe94faa41804587866e182713bb3ce045254c4c15b587c6e7b33f02af5101e3",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3d705c7e67c0da431baa852691d2c9b7ff58ef59ee65348b60e634ea04660995",
-    "https://eec.eaeunion.org/news/": "af5d009800a65060e816e5d0b44458ec29592e28fb545404994739b2cf09b94f",
+    "https://eec.eaeunion.org/news/": "72efbccdaf2a2fe49cef4ae7539c0f6e81c1f546ebd7f35d1326eac2ed13aa47",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "9d957c15708c7a684ae3e38be0a741e25672f3b55fa645bbc2b1ffad3a8aa7f7",
-    "https://www.metalinfo.ru/ru/news": "c8109af0100d6df96a592168723eada7ec6dc7dd6dc4c1bd1adc9e3b823ca9fa",
-    "https://www.pnp.ru/economics/": "ea71027d36ceb6c0cc14826b7bf5361501c0ba98239a8974726d79a821657e5e",
-    "https://erzrf.ru/news/": "f8f478d3b9437892b5b37744da213497dc71fde56ed38413653164559925597d",
-    "https://ria-stk.ru/news/vse-novosti.php": "25cee3d869166cf696cb5481507d824a0f52d70f61de7f9c38bdfd3fad516425",
-    "http://government.ru/news/": "f788c82f30caecf8bcd9612448245127999f180415f1c914e0fa555d09ec162a",
-    "https://stroygaz.ru/news/": "c128686ccc43f5a4775ea373168a15e42f14521f228c99c7e9d54c3efd1dd4b9",
-    "https://realty.ria.ru/lenta/": "77dcca1d58b838fde61e1a9f7bb4cd6eb7199b35a7951d23ef33b0e7164b6b09",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "45a04c18dc3249bfbd281aeb0d47923d63a7f1aacc69c3aaeef134dce8f82076",
+    "https://www.metalinfo.ru/ru/news": "6f3550c6fdb5bdad515571f5748e5e8ae3cbc9f2d0cc564be46437851f80b00d",
+    "https://www.pnp.ru/economics/": "405872529dffa97ac6b3ff3251efaed335d5c6cdcea1ef03001b3c68a8923bbb",
+    "https://erzrf.ru/news/": "efd0c8e151ab2240a4e6f9c440fa56b0c64d6b55ccaa173533642a09ed85ee81",
+    "https://ria-stk.ru/news/vse-novosti.php": "a0248714e4db6f90bde84b5ecfe65e73f87985fc4c289263a55a9a9be664608c",
+    "http://government.ru/news/": "ddf23210b37736b43c836570b96d637ad4ecd4e0b948de77f50c97752f6c4b8d",
+    "https://stroygaz.ru/news/": "4cf83346a5889c2519eb281211908a84c4acc6f69f00d97ac4681d8dd326ac3a",
+    "https://realty.ria.ru/lenta/": "7c477e03290e6d311610a50e769ae1d3d59514b6f4fb79c2b7644d3cb3a75e49",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
-    "http://ancb.ru/publication": "16eb62d710910f22067c9520c45eb215bd9c49dd5d960054cc65bb6457dc6dd7",
+    "http://ancb.ru/publication": "8347579fbc8fcf388c9fe9a8901025eed623b90541593c239ddc0fbc0e542bc8",
     "https://notim.ru": "b2cd53a56ef57a36075695c4c00d506de4c2a056013c3ffb6f535b7ec0b83440",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -55766,6 +55780,8 @@
       "https://minfin.gov.ru/ru/press-center/contacts/"
     ],
     "Интерфакс-Недвижимость": [
+      "https://www.interfax-russia.ru/realty/news/deputat-ocenil-organichnost-proekta-kafedralnogo-sobora-sergieva-posada",
+      "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy",
       "https://www.interfax-russia.ru/realty/news/kapremont-obshchezhitiya-finansovogo-universiteta-v-moskve-zakonchat-k-2027-godu",
       "https://www.interfax-russia.ru/realty/news/opredeleny-podryadchiki-dlya-zhilyh-kompleksov-po-krt-v-dvuh-okrugah-moskvy",
       "https://www.interfax-russia.ru/realty/news/bolshoy-smolenskiy-most-v-peterburge-budet-gotov-k-navigacii-uzhe-v-etom-godu",
@@ -55803,9 +55819,7 @@
       "https://www.interfax-russia.ru/realty/news/bank-dom-rf-predostavit-35-5-mlrd-rubley-dlya-stroitelstva-otelya-v-sochi",
       "https://www.interfax-russia.ru/realty/news/deputaty-gd-predlagayut-uvelichit-shtrafy-za-neraschishchennye-zimoy-dvory-i-kryshi",
       "https://www.interfax-russia.ru/realty/news/bolshe-poloviny-rossiyskih-liftov-proizveli-v-moskve-za-11-mesyacev-2025-goda",
-      "https://www.interfax-russia.ru/realty/news/byvshiy-zamglavy-minstroya-dagestana-osuzhden-zaochno-po-delu-o-hishchenii",
-      "https://www.interfax-russia.ru/realty/news/remont-novyh-ofisov-v-moskva-siti-potrebuet-svyshe-100-mlrd-rubley-issledovanie",
-      "https://www.interfax-russia.ru/realty/news/proekt-kongress-centra-u-aeroporta-nizhnego-novgoroda-podorozhal-do-41-2-mlrd-rubley"
+      "https://www.interfax-russia.ru/realty/news/byvshiy-zamglavy-minstroya-dagestana-osuzhden-zaochno-po-delu-o-hishchenii"
     ],
     "Металлоснабжение и сбыт": [
       "https://www.metalinfo.ru/ru/news/181005",
@@ -55912,6 +55926,8 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248385&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57757/",
+      "http://government.ru/news/57756/",
       "http://government.ru/news/57755/",
       "http://government.ru/news/57754/",
       "http://government.ru/news/57751/",
@@ -55929,9 +55945,7 @@
       "http://government.ru/news/57740/",
       "http://government.ru/news/57739/",
       "http://government.ru/news/57736/",
-      "http://government.ru/news/57733/",
-      "http://government.ru/news/57734/",
-      "http://government.ru/news/57731/"
+      "http://government.ru/news/57733/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/v-peterburge-tret-sdelok-s-zemelnymi-uchastkami-prikhodilas-na-uchastki-s-gotovymi-razresheniyami/",
@@ -74246,7 +74260,11 @@
     "424279a3972a899847d6b66e11862d9d642bf98121b52b79e30e83a244968a1b": "2026-02-04T18:42:00+03:00",
     "70bb5ebb461fce77d6bca6d27a8891955417f4b94fc6e78b1a670033beb6f10a": "2026-02-04T18:42:00+03:00",
     "1587a6eb9b26adafa9df2e70d4eeb3aed6d860dffdcaf50ce278dd0cef27d318": "2026-02-04T18:42:00+03:00",
-    "9f5d06b5a907216dbdea39844174470501b284c2a46aa518ba2ca374a406f844": "2026-02-04T18:42:00+03:00"
+    "9f5d06b5a907216dbdea39844174470501b284c2a46aa518ba2ca374a406f844": "2026-02-04T18:42:00+03:00",
+    "40b89af88c26faa58b32d4b81eb16030953b4d1c897bd75b3e7d65c3988b23b5": "2026-02-04T21:43:00+03:00",
+    "82f1928bd7a1dc08088dc95eea796f60c4f1dd8e07877b574b7a100dfdbc775a": "2026-02-04T21:43:00+03:00",
+    "61b4e2ab471df285973c4081f1574979056a6f8d819b4c8bcb9ff2399986a71d": "2026-02-04T21:43:00+03:00",
+    "c429ecd9a446e9e28eb563948d03076718722a4ad7238109eed1203751d3c97e": "2026-02-04T21:43:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -74277,8 +74295,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f0f52064050>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 15,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1770219593.4316995
       },
       "warmup_done": false,
@@ -74288,31 +74306,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "VY4NHSK4TLSh1Rc6",
+          "value": "EKcmzTVeR4KeGti5",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770220895
+          "expires": 1770231785
         },
         {
           "name": "__ddg10_",
-          "value": "1770219695",
+          "value": "1770230585",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770220895
+          "expires": 1770231785
         },
         {
           "name": "__ddg9_",
-          "value": "172.174.166.197",
+          "value": "64.236.201.36",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770220895
+          "expires": 1770231785
+        },
+        {
+          "name": "__ddg1_",
+          "value": "Wdz4SLKqMCiugngaAjPg",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1801766585
         },
         {
           "name": "PHPSESSID",
-          "value": "2dc377a5164355efc324cbfb5c1e72b7",
+          "value": "510813062e4efb74721d48212c0b11ef",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -74339,11 +74365,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "u4j7I5c2BgWUwE9JpIMXshR6h7O78L0K",
+          "value": "FNWkbNjXZK2mmnqW747UpvmB42b0sKRU",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770198380
+          "expires": 1770241387
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -74351,12 +74377,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1801291580
+          "expires": 1801334587
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0f51ea3110>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 12,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1770219727.743523
       },
       "warmup_done": false,
@@ -96800,7 +96826,11 @@
     "http://government.ru/news/57755": "http://government.ru/news/57755",
     "http://government.ru/news/57754": "http://government.ru/news/57754",
     "http://government.ru/news/57751": "http://government.ru/news/57751",
-    "https://realty.ria.ru/20260204/mchs-2072276818.html": "https://realty.ria.ru/20260204/mchs-2072276818.html"
+    "https://realty.ria.ru/20260204/mchs-2072276818.html": "https://realty.ria.ru/20260204/mchs-2072276818.html",
+    "https://www.interfax-russia.ru/realty/news/deputat-ocenil-organichnost-proekta-kafedralnogo-sobora-sergieva-posada": "https://www.interfax-russia.ru/realty/news/deputat-ocenil-organichnost-proekta-kafedralnogo-sobora-sergieva-posada",
+    "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy": "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy",
+    "http://government.ru/news/57757": "http://government.ru/news/57757",
+    "http://government.ru/news/57756": "http://government.ru/news/57756"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -115351,7 +115381,11 @@
     "7b4c97f6daf43c74d5c01f94107e2951ed998aa9": "http://government.ru/news/57755",
     "d7a16ca802e5481672e0c8b8c3d96c31611f2ec3": "http://government.ru/news/57754",
     "ce32d1b30fb725d7a84e927d73ecb2f7e17da6c4": "http://government.ru/news/57751",
-    "6adaed374087dffda5fce0be5c36e5eda95eea04": "https://realty.ria.ru/20260204/mchs-2072276818.html"
+    "6adaed374087dffda5fce0be5c36e5eda95eea04": "https://realty.ria.ru/20260204/mchs-2072276818.html",
+    "ae20cf8c54b729335bc05cd12697dd7e7800ffd3": "https://www.interfax-russia.ru/realty/news/deputat-ocenil-organichnost-proekta-kafedralnogo-sobora-sergieva-posada",
+    "ff737c2619f7b84e728ad8431ebe8a394671331d": "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy",
+    "1ccb35c64c7fe22996db9364b475ea47c548d31e": "http://government.ru/news/57757",
+    "e822a9fe82890873563e46470b1e2afbde4bacfb": "http://government.ru/news/57756"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -140209,6 +140243,12 @@
     "http://government.ru/news/57754/": "70bb5ebb461fce77d6bca6d27a8891955417f4b94fc6e78b1a670033beb6f10a",
     "http://government.ru/news/57751": "1587a6eb9b26adafa9df2e70d4eeb3aed6d860dffdcaf50ce278dd0cef27d318",
     "http://government.ru/news/57751/": "1587a6eb9b26adafa9df2e70d4eeb3aed6d860dffdcaf50ce278dd0cef27d318",
-    "https://realty.ria.ru/20260204/mchs-2072276818.html": "9f5d06b5a907216dbdea39844174470501b284c2a46aa518ba2ca374a406f844"
+    "https://realty.ria.ru/20260204/mchs-2072276818.html": "9f5d06b5a907216dbdea39844174470501b284c2a46aa518ba2ca374a406f844",
+    "https://www.interfax-russia.ru/realty/news/deputat-ocenil-organichnost-proekta-kafedralnogo-sobora-sergieva-posada": "40b89af88c26faa58b32d4b81eb16030953b4d1c897bd75b3e7d65c3988b23b5",
+    "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy": "82f1928bd7a1dc08088dc95eea796f60c4f1dd8e07877b574b7a100dfdbc775a",
+    "http://government.ru/news/57757": "61b4e2ab471df285973c4081f1574979056a6f8d819b4c8bcb9ff2399986a71d",
+    "http://government.ru/news/57757/": "61b4e2ab471df285973c4081f1574979056a6f8d819b4c8bcb9ff2399986a71d",
+    "http://government.ru/news/57756": "c429ecd9a446e9e28eb563948d03076718722a4ad7238109eed1203751d3c97e",
+    "http://government.ru/news/57756/": "c429ecd9a446e9e28eb563948d03076718722a4ad7238109eed1203751d3c97e"
   }
 }
