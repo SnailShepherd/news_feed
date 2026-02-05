@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Thu, 05 Feb 2026 15:40:47 GMT"
+      "Last-Modified": "Thu, 05 Feb 2026 18:44:20 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1e146-KxHKCz9x/+MjVgbzYboun+uba3s\""
+      "ETag": "W/\"1e1eb-dd5JNkJTT5rRfU1QMqQICd+BwPs\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -42313,7 +42313,10 @@
     },
     "https://realty.ria.ru/20260205/tsb-2072506576.html": {
       "Last-Modified": "Thu, 05 Feb 2026 13:27:28 GMT"
-    }
+    },
+    "http://government.ru/news/57759/": {},
+    "http://government.ru/news/57772/": {},
+    "http://government.ru/news/57760/": {}
   },
   "stats": {
     "cooldowns": {
@@ -55907,9 +55910,19 @@
         "source": "Российская газета: Экономика",
         "url": "https://rg.ru/tema/ekonomika",
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Российская газета: Экономика",
+        "url": "https://rg.ru/tema/ekonomika",
+        "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
       }
     ],
-    "last_run": "2026-02-05T15:40:40.391857+00:00",
+    "last_run": "2026-02-05T18:43:51.365163+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -55922,33 +55935,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 748.9691179999909,
-        "connect_ms": 502.1825880000108,
-        "response_ms": 1251.1517060000017,
+        "dns_ms": 553.5723560000179,
+        "connect_ms": 682.2210070000096,
+        "response_ms": 1235.7933630000275,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 435.5437680000023,
-        "connect_ms": 0.0,
-        "response_ms": 408.18865800000026,
+        "dns_ms": 395.1734110000302,
+        "connect_ms": 1106.3894689999643,
+        "response_ms": 1501.5628799999945,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 1452.2749739999767,
+        "dns_ms": 1620.960378999996,
         "connect_ms": 0.0,
-        "response_ms": 1048.0711299999825,
+        "response_ms": 1041.0473989999787,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 0.4803470000069865,
-        "connect_ms": 460.6988909999927,
-        "response_ms": 461.1792379999997,
+        "dns_ms": 383.7611779999861,
+        "connect_ms": 446.66932200004794,
+        "response_ms": 830.430500000034,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -55957,19 +55970,19 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "e0e8ee467ca18666c6e57326196fddc11de996cf18d4989eed5a8f99d8556d59",
+    "https://ardexpert.ru/article": "af0e58837c416bcf8216c1c2cfbe69df09738c14ba40bca889f76546cdbc1ca8",
     "https://www.gostinfo.ru/News/List": "9fe94faa41804587866e182713bb3ce045254c4c15b587c6e7b33f02af5101e3",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3d705c7e67c0da431baa852691d2c9b7ff58ef59ee65348b60e634ea04660995",
-    "https://eec.eaeunion.org/news/": "605dd24ecc9bfa51668491098ba9177d1aaf1aecf06aa233745e613151f592b7",
+    "https://eec.eaeunion.org/news/": "b4d5ca25cc0edb8435c269608ceeba1479a0b4e1b0f7189000368aae7a66384c",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "4d610a1b312712bcedf939f8fd6dee66fa3561d0278a551a7ae2f95a73879855",
-    "https://www.metalinfo.ru/ru/news": "5fa092a8a4ab7855aaf6fa0dd7efeb361bfffcc80200cbbbf2a6a2fa96bef647",
-    "https://www.pnp.ru/economics/": "04379e5ca511956410d6ba702fd7d6164aeaadcc39d2ee44145b7e36004d60b0",
-    "https://erzrf.ru/news/": "380a89b7a055cdb395860fd8de9f50b0a7be5a6ba32b03f0cd0fc77cb34662bf",
-    "https://ria-stk.ru/news/vse-novosti.php": "02b9a376d3d0e7f806602e5d9de6050c796c73c0d7c78102d5fda42b44ffc514",
-    "http://government.ru/news/": "764820353316612638e0b23d51830b2a2546ee16655f10d5624c30d12b0acc0f",
-    "https://stroygaz.ru/news/": "e390aeea559a389a2a81e13f52d461be95a14d77d0deff1524d18ae7b76a5399",
-    "https://realty.ria.ru/lenta/": "1ad13710074dc3919abb3213b691382fca9e4bcf8bd7fc2c86157c59021c8c42",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "ed47f29163a5be4bfed580d0073eb8ab556bd4377d430b34e37d5a6045eb8a92",
+    "https://www.metalinfo.ru/ru/news": "07f004e34f00481acfdbc76cbff089fecb665cdd44a79656af0b3690f358722e",
+    "https://www.pnp.ru/economics/": "68a3b296a6e40bd2c1c3b1f3e3cce0099afadff84b090d951587288315a8b1dc",
+    "https://erzrf.ru/news/": "c488b65554efb5288dae0d6dc973bb9b960e014f847a76b38acd70a68ca67481",
+    "https://ria-stk.ru/news/vse-novosti.php": "89009c32c0554e38bcdebaf267bea3fdfc3784f5473357ebc803db522603870e",
+    "http://government.ru/news/": "f9df24212c1ef6309f0f353b0bf5d2b1be757c98a6e1d315aea2c6c5a002fa74",
+    "https://stroygaz.ru/news/": "27f28b015a9fd5e6dc45530be54b9161839752fdd4dfcf1a1994b08ccac99288",
+    "https://realty.ria.ru/lenta/": "c1440a9c3e782f305e46238cf4f02437e7d92e252cc8aecd31d639c62a33dd7e",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
     "http://ancb.ru/publication": "4fbe92ba339f3daa871236dc5fba2a7505b4199483393741a85c0f652e7e6658",
     "https://notim.ru": "b2cd53a56ef57a36075695c4c00d506de4c2a056013c3ffb6f535b7ec0b83440",
@@ -56209,6 +56222,9 @@
       "https://ria-stk.ru/news/index.php?ELEMENT_ID=248396&all_news=Y"
     ],
     "Правительство РФ": [
+      "http://government.ru/news/57759/",
+      "http://government.ru/news/57772/",
+      "http://government.ru/news/57760/",
       "http://government.ru/news/57771/",
       "http://government.ru/news/57768/",
       "http://government.ru/news/57769/",
@@ -56225,10 +56241,7 @@
       "http://government.ru/news/57751/",
       "http://government.ru/news/57752/",
       "http://government.ru/news/57746/",
-      "http://government.ru/news/57749/",
-      "http://government.ru/news/57750/",
-      "http://government.ru/news/57748/",
-      "http://government.ru/news/57747/"
+      "http://government.ru/news/57749/"
     ],
     "Стройгаз.ру": [
       "https://stroygaz.ru/news/dwelling/v-peterburge-tret-sdelok-s-zemelnymi-uchastkami-prikhodilas-na-uchastki-s-gotovymi-razresheniyami/",
@@ -74657,7 +74670,10 @@
     "df53db56c54a1026c5f0de7c8bffe7f8012cf391bdcfa77f984ca9cc24af0f1c": "2026-02-05T18:40:00+03:00",
     "4081157405518ea227a752965067b543ae2f8354dc4485c24ef45271e4f6154e": "2026-02-05T18:40:00+03:00",
     "4fd9ef3a99f81001dae9ab66d1c644a440fe50fd611c5fd35d5c209a9942e764": "2026-02-05T18:40:00+03:00",
-    "c8e91dab9fc47c03c54b55cb40321b861381af07c4369ec566f507fa5e2b45b2": "2026-02-05T18:40:00+03:00"
+    "c8e91dab9fc47c03c54b55cb40321b861381af07c4369ec566f507fa5e2b45b2": "2026-02-05T18:40:00+03:00",
+    "a8bd7dde92e2db2f19b3c06efb8865a604e5878fdccc240ac1cef3e4c009af4e": "2026-02-05T21:43:00+03:00",
+    "f8dc5567bc25b65445e213426c52bf02f5630170b8cf6c4ca250de69c7e627b6": "2026-02-05T21:43:00+03:00",
+    "ad475022d05e6d140c6b5306157f5bb5add7c2e941712a4b71fdb7bb8e74210b": "2026-02-05T21:43:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -74699,31 +74715,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "QoWbwgZ2mnizzDJN",
+          "value": "XXTJeScpYsGaKdPv",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770307203
+          "expires": 1770318215
         },
         {
           "name": "__ddg10_",
-          "value": "1770306003",
+          "value": "1770317015",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770307203
+          "expires": 1770318215
         },
         {
           "name": "__ddg9_",
-          "value": "52.234.42.34",
+          "value": "68.220.61.9",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770307203
+          "expires": 1770318215
+        },
+        {
+          "name": "__ddg1_",
+          "value": "MxY6zlmFbYuQ1csCG4BQ",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1801853015
         },
         {
           "name": "PHPSESSID",
-          "value": "2b347884f2687529152539dc66dfaa1e",
+          "value": "79bc311c7ece82ae1e34241aa9bdaace",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -74750,11 +74774,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "Tce1HPR6pA8P5PYfa4h6YNnckaDzmsds",
+          "value": "kVnFf6WYgrRtYqYEYESz0u5p8kDS14gw",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770316806
+          "expires": 1770327817
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -74762,7 +74786,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1801410006
+          "expires": 1801421017
         }
       ],
       "failures": {
@@ -97380,7 +97404,10 @@
     "http://government.ru/news/57768": "http://government.ru/news/57768",
     "http://government.ru/news/57769": "http://government.ru/news/57769",
     "https://realty.ria.ru/20260205/fas-2072533289.html": "https://realty.ria.ru/20260205/fas-2072533289.html",
-    "https://realty.ria.ru/20260205/tsb-2072506576.html": "https://realty.ria.ru/20260205/tsb-2072506576.html"
+    "https://realty.ria.ru/20260205/tsb-2072506576.html": "https://realty.ria.ru/20260205/tsb-2072506576.html",
+    "http://government.ru/news/57759": "http://government.ru/news/57759",
+    "http://government.ru/news/57772": "http://government.ru/news/57772",
+    "http://government.ru/news/57760": "http://government.ru/news/57760"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -116045,7 +116072,10 @@
     "55f20cd714a14b93d7724271b484d0325ec1213d": "http://government.ru/news/57768",
     "1a627ff3308f26bd471eeaecb7e4d5d9d15a537f": "http://government.ru/news/57769",
     "7486fa309fe1af5ef7fcb13175fd4f0cbb653da7": "https://realty.ria.ru/20260205/fas-2072533289.html",
-    "1f759a6ca56cb3167615b5b447f7fd3ff13e92bb": "https://realty.ria.ru/20260205/tsb-2072506576.html"
+    "1f759a6ca56cb3167615b5b447f7fd3ff13e92bb": "https://realty.ria.ru/20260205/tsb-2072506576.html",
+    "58c1c0166d4f36d57d557fb2016c05be4225d2dc": "http://government.ru/news/57759",
+    "ec0e0f38ac1e8de63bc8df73506fc1efada3f146": "http://government.ru/news/57772",
+    "c1789ece7aa7e9f45182269fb7ce6f4a1563058e": "http://government.ru/news/57760"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -141084,6 +141114,12 @@
     "http://government.ru/news/57769": "4081157405518ea227a752965067b543ae2f8354dc4485c24ef45271e4f6154e",
     "http://government.ru/news/57769/": "4081157405518ea227a752965067b543ae2f8354dc4485c24ef45271e4f6154e",
     "https://realty.ria.ru/20260205/fas-2072533289.html": "4fd9ef3a99f81001dae9ab66d1c644a440fe50fd611c5fd35d5c209a9942e764",
-    "https://realty.ria.ru/20260205/tsb-2072506576.html": "c8e91dab9fc47c03c54b55cb40321b861381af07c4369ec566f507fa5e2b45b2"
+    "https://realty.ria.ru/20260205/tsb-2072506576.html": "c8e91dab9fc47c03c54b55cb40321b861381af07c4369ec566f507fa5e2b45b2",
+    "http://government.ru/news/57759": "a8bd7dde92e2db2f19b3c06efb8865a604e5878fdccc240ac1cef3e4c009af4e",
+    "http://government.ru/news/57759/": "a8bd7dde92e2db2f19b3c06efb8865a604e5878fdccc240ac1cef3e4c009af4e",
+    "http://government.ru/news/57772": "f8dc5567bc25b65445e213426c52bf02f5630170b8cf6c4ca250de69c7e627b6",
+    "http://government.ru/news/57772/": "f8dc5567bc25b65445e213426c52bf02f5630170b8cf6c4ca250de69c7e627b6",
+    "http://government.ru/news/57760": "ad475022d05e6d140c6b5306157f5bb5add7c2e941712a4b71fdb7bb8e74210b",
+    "http://government.ru/news/57760/": "ad475022d05e6d140c6b5306157f5bb5add7c2e941712a4b71fdb7bb8e74210b"
   }
 }
