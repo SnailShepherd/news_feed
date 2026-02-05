@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Wed, 04 Feb 2026 21:32:30 GMT"
+      "Last-Modified": "Thu, 05 Feb 2026 01:47:42 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1dc59-92nF4P1cxcElXIBUhWfdFETqiwE\""
+      "ETag": "W/\"1dd90-MUfoPxGLUmNYxAlMdS1m2DRGtSg\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -508,7 +508,7 @@
     "http://government.ru/news/56264/": {},
     "http://government.ru/news/?page=2": {},
     "https://stroygaz.ru/news/": {
-      "Last-Modified": "Wed, 04 Feb 2026 14:28:33 GMT"
+      "Last-Modified": "Thu, 05 Feb 2026 01:21:57 GMT"
     },
     "https://stroygaz.ru/news/kadry/stroitelstvo-stalo-samoy-vysokooplachivaemoy-otraslyu-promyshlennosti-etim-letom/": {
       "Last-Modified": "Mon, 22 Sep 2025 13:51:08 GMT"
@@ -42172,7 +42172,10 @@
     "https://www.interfax-russia.ru/realty/news/deputat-ocenil-organichnost-proekta-kafedralnogo-sobora-sergieva-posada": {},
     "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy": {},
     "http://government.ru/news/57757/": {},
-    "http://government.ru/news/57756/": {}
+    "http://government.ru/news/57756/": {},
+    "https://realty.ria.ru/20260205/ipoteka-2072286850.html": {
+      "Last-Modified": "Thu, 05 Feb 2026 00:00:03 GMT"
+    }
   },
   "stats": {
     "cooldowns": {
@@ -55646,9 +55649,31 @@
         "source": "Российская газета: Экономика",
         "url": "https://rg.ru/tema/ekonomika",
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
+      },
+      {
+        "source": "АНЦБ",
+        "url": "http://ancb.ru/publication",
+        "error": "temporary unavailable -> used cache: ancb.ru: HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc015e76510>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc015186c10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc015186ad0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc015070180>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc0150702b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)')), HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc0166a7e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": "cached"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "РИА СТК",
+        "url": "https://ria-stk.ru/news/vse-novosti.php",
+        "error": "temporary unavailable -> used cache: ria-stk.ru: HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc015186c10>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc015185f90>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc015186210>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc015185590>: Failed to establish a new connection: [Errno 101] Network is unreachable')), HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc015185450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": "cached"
+      },
+      {
+        "source": "Российская газета: Экономика",
+        "url": "https://rg.ru/tema/ekonomika",
+        "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
       }
     ],
-    "last_run": "2026-02-04T21:32:43.094774+00:00",
+    "last_run": "2026-02-05T01:47:53.643683+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -55661,9 +55686,9 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 815.2463060000059,
-        "connect_ms": 737.2788430000128,
-        "response_ms": 1552.5251490000187,
+        "dns_ms": 616.2978480000163,
+        "connect_ms": 688.8050549999889,
+        "response_ms": 1305.1029030000052,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -55674,12 +55699,12 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff3b35c3d10>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc0166a7e30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
       },
       "www.pnp.ru": {
-        "dns_ms": 10009.369840000034,
-        "connect_ms": 0.0,
-        "response_ms": 2210.016564,
+        "dns_ms": 802.8600589999542,
+        "connect_ms": 221.53913100004274,
+        "response_ms": 1024.399189999997,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -55690,25 +55715,25 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff3b20a1a90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc015185450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
       }
     }
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "c1f44aae7eca227ec3317d67456128f1e67d8156c2df2f27bcfe2f6b8d68fbb2",
+    "https://ardexpert.ru/article": "dfd73179c23bbc10fdcf099e3b093ba8e3ed4dfed83aba7f4365e440b8583623",
     "https://www.gostinfo.ru/News/List": "9fe94faa41804587866e182713bb3ce045254c4c15b587c6e7b33f02af5101e3",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3d705c7e67c0da431baa852691d2c9b7ff58ef59ee65348b60e634ea04660995",
-    "https://eec.eaeunion.org/news/": "6f82c9ca5bae9729168ff62033539ecb0e1a7f76c0d927a572856085be2a8c93",
+    "https://eec.eaeunion.org/news/": "ffe19dfaf8d659cf9016df33e874648e093a2b5bff3fe7b83235ea9766417644",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "5f75663b118767a2b25001217f7cb245241d87589fc4eb144c54096031648b07",
-    "https://www.metalinfo.ru/ru/news": "6f3550c6fdb5bdad515571f5748e5e8ae3cbc9f2d0cc564be46437851f80b00d",
-    "https://www.pnp.ru/economics/": "39bcb6bc3742a44e06143e976ef105c72a72fad6c80bff99aa769223f4262200",
-    "https://erzrf.ru/news/": "cc69a66aa88d69c1ef0f557a9e8209d2a3da86ae5e99110c88667a6e5b63f592",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "cc948a4cda482ba671644b74cb395c098bd5dde4ca6baaf1d82def6d3e74a554",
+    "https://www.metalinfo.ru/ru/news": "4206581aed2e9ae1ef07375c6258d861d87dc87198acbeb3c66e31e8bc53d495",
+    "https://www.pnp.ru/economics/": "f982264e4b58d1ba61e694906e275b0df95be7f534e28a54ba767f015e95dbc9",
+    "https://erzrf.ru/news/": "9f96b828810a68b03d2febafb116a2dc400949b72c6726177452dfe215404246",
     "https://ria-stk.ru/news/vse-novosti.php": "fbef2ea0f83e6e3b7ae84b47389c9de51e67a2fe8f68e5113a1622f9e5b0a8b5",
-    "http://government.ru/news/": "99d511c804c62f91ee824e2c8e33c067bd7701484156918c8a65bd972bc32d06",
-    "https://stroygaz.ru/news/": "72cdf6779f102b38ec533d3326df12a80791c82ff3df3aacab8b75b4ef76dde2",
-    "https://realty.ria.ru/lenta/": "3abc3ca94b04891457c5d2687ead280de6014114a86146f2756d778410a2e2a4",
+    "http://government.ru/news/": "59260c251ac734470be7559f077164f307f9fc383d25d8910900b1dbe2410135",
+    "https://stroygaz.ru/news/": "5bcacabccade8d46faf860591a7fddc3447f37f268fd823ba258b92dba6dc3a7",
+    "https://realty.ria.ru/lenta/": "7606e3e4df28900ceef3421919752c89c17ca2f760fcd9786465e633db5bdf1e",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
     "http://ancb.ru/publication": "16eb62d710910f22067c9520c45eb215bd9c49dd5d960054cc65bb6457dc6dd7",
     "https://notim.ru": "b2cd53a56ef57a36075695c4c00d506de4c2a056013c3ffb6f535b7ec0b83440",
@@ -55992,6 +56017,7 @@
       "https://stroygaz.ru/news/construction/odobren-proekt-aerovokzala-v-gorno-altayske/"
     ],
     "РИА Недвижимость: лента": [
+      "https://realty.ria.ru/20260205/ipoteka-2072286850.html",
       "https://realty.ria.ru/20260204/mchs-2072276818.html",
       "https://realty.ria.ru/20260204/renovatsiya-2072238105.html",
       "https://realty.ria.ru/20260204/trebovanija-2072236073.html",
@@ -56010,8 +56036,7 @@
       "https://realty.ria.ru/20260203/fas-2071980415.html",
       "https://realty.ria.ru/20260203/fas-2071946513.html",
       "https://realty.ria.ru/20260203/portfel-2071926386.html",
-      "https://realty.ria.ru/20260203/portfel-2071920644.html",
-      "https://realty.ria.ru/20260203/vydacha-2071919126.html"
+      "https://realty.ria.ru/20260203/portfel-2071920644.html"
     ],
     "Российская газета: Экономика": [
       "https://rg.ru/2026/01/28/stoimost-nefti-brent-prevysila-68-dollarov-vpervye-s-sentiabria-2025-goda.html",
@@ -74286,7 +74311,8 @@
     "40b89af88c26faa58b32d4b81eb16030953b4d1c897bd75b3e7d65c3988b23b5": "2026-02-04T21:43:00+03:00",
     "82f1928bd7a1dc08088dc95eea796f60c4f1dd8e07877b574b7a100dfdbc775a": "2026-02-04T21:43:00+03:00",
     "61b4e2ab471df285973c4081f1574979056a6f8d819b4c8bcb9ff2399986a71d": "2026-02-04T21:43:00+03:00",
-    "c429ecd9a446e9e28eb563948d03076718722a4ad7238109eed1203751d3c97e": "2026-02-04T21:43:00+03:00"
+    "c429ecd9a446e9e28eb563948d03076718722a4ad7238109eed1203751d3c97e": "2026-02-04T21:43:00+03:00",
+    "aa9a9b962fbcaa2a5283e02b4387658cbe206c98441e665dd6e24adf513964c2": "2026-02-05T04:47:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -74317,9 +74343,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ff3b1f8c2b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 5,
-        "last_ts": 1770240642.0220509
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc0150702b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 10,
+        "last_ts": 1770255974.2833285
       },
       "warmup_done": false,
       "last_success_path": null
@@ -74328,31 +74354,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "nylrOCzDhGa0MpCU",
+          "value": "X8NFIt0z0ycSsJ27",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770241905
+          "expires": 1770257217
         },
         {
           "name": "__ddg10_",
-          "value": "1770240705",
+          "value": "1770256017",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770241905
+          "expires": 1770257217
         },
         {
           "name": "__ddg9_",
-          "value": "128.24.160.162",
+          "value": "135.119.38.37",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770241905
+          "expires": 1770257217
+        },
+        {
+          "name": "__ddg1_",
+          "value": "7QFqSJgCKLx9Szdes43w",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1801792017
         },
         {
           "name": "PHPSESSID",
-          "value": "f77722e3f402dcbd84ea76b89fef8e27",
+          "value": "7f3367306cece38349639f7cdc027b62",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -74395,9 +74429,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ff3b20a20d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
-        "last_ts": 1770240739.2927516
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc015185590>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 8,
+        "last_ts": 1770256050.3310757
       },
       "warmup_done": false,
       "last_success_path": null
@@ -96844,7 +96878,8 @@
     "https://www.interfax-russia.ru/realty/news/deputat-ocenil-organichnost-proekta-kafedralnogo-sobora-sergieva-posada": "https://www.interfax-russia.ru/realty/news/deputat-ocenil-organichnost-proekta-kafedralnogo-sobora-sergieva-posada",
     "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy": "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy",
     "http://government.ru/news/57757": "http://government.ru/news/57757",
-    "http://government.ru/news/57756": "http://government.ru/news/57756"
+    "http://government.ru/news/57756": "http://government.ru/news/57756",
+    "https://realty.ria.ru/20260205/ipoteka-2072286850.html": "https://realty.ria.ru/20260205/ipoteka-2072286850.html"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -115399,7 +115434,8 @@
     "ae20cf8c54b729335bc05cd12697dd7e7800ffd3": "https://www.interfax-russia.ru/realty/news/deputat-ocenil-organichnost-proekta-kafedralnogo-sobora-sergieva-posada",
     "ff737c2619f7b84e728ad8431ebe8a394671331d": "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy",
     "1ccb35c64c7fe22996db9364b475ea47c548d31e": "http://government.ru/news/57757",
-    "e822a9fe82890873563e46470b1e2afbde4bacfb": "http://government.ru/news/57756"
+    "e822a9fe82890873563e46470b1e2afbde4bacfb": "http://government.ru/news/57756",
+    "4f25b05e18a70df358c7b8f3639e82c3cac58ea9": "https://realty.ria.ru/20260205/ipoteka-2072286850.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -140263,6 +140299,7 @@
     "http://government.ru/news/57757": "61b4e2ab471df285973c4081f1574979056a6f8d819b4c8bcb9ff2399986a71d",
     "http://government.ru/news/57757/": "61b4e2ab471df285973c4081f1574979056a6f8d819b4c8bcb9ff2399986a71d",
     "http://government.ru/news/57756": "c429ecd9a446e9e28eb563948d03076718722a4ad7238109eed1203751d3c97e",
-    "http://government.ru/news/57756/": "c429ecd9a446e9e28eb563948d03076718722a4ad7238109eed1203751d3c97e"
+    "http://government.ru/news/57756/": "c429ecd9a446e9e28eb563948d03076718722a4ad7238109eed1203751d3c97e",
+    "https://realty.ria.ru/20260205/ipoteka-2072286850.html": "aa9a9b962fbcaa2a5283e02b4387658cbe206c98441e665dd6e24adf513964c2"
   }
 }
