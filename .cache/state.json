@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Fri, 06 Feb 2026 21:28:28 GMT"
+      "Last-Modified": "Sat, 07 Feb 2026 01:43:20 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1e0cb-UUxAwjmXOrdKsDNOcGNrKGQ8v3Y\""
+      "ETag": "W/\"1e2c7-HhmaKd9ZwJQx4gP6tZIX8liibak\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -56188,9 +56188,19 @@
         "source": "Российская газета: Экономика",
         "url": "https://rg.ru/tema/ekonomika",
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
+      },
+      {
+        "source": "Российская газета: Экономика",
+        "url": "https://rg.ru/tema/ekonomika",
+        "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
       }
     ],
-    "last_run": "2026-02-06T21:27:50.773615+00:00",
+    "last_run": "2026-02-07T01:42:44.883245+00:00",
     "items": 500,
     "metrics": {
       "minstroyrf.gov.ru": {
@@ -56203,33 +56213,33 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 400.1035720000061,
-        "connect_ms": 323.48447499998656,
-        "response_ms": 723.5880469999927,
+        "dns_ms": 683.1660470000145,
+        "connect_ms": 0.0,
+        "response_ms": 635.717824000011,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": 137.14340600000696,
-        "connect_ms": 849.6495039999843,
-        "response_ms": 986.7929099999913,
+        "dns_ms": 293.80009700000187,
+        "connect_ms": 960.5098629999986,
+        "response_ms": 1254.3099600000005,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 9136.554775000037,
+        "dns_ms": 1886.888110000001,
         "connect_ms": 0.0,
-        "response_ms": 1013.5783380000021,
+        "response_ms": 994.6489689999964,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": 276.43711500002155,
-        "connect_ms": 278.75686300001234,
-        "response_ms": 555.1939780000339,
+        "dns_ms": 433.9365579999992,
+        "connect_ms": 197.46240800000692,
+        "response_ms": 631.3989660000061,
         "attempts": 1,
         "status": 200,
         "error": null
@@ -56238,19 +56248,19 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "ee523a4e59c0f5214c75b08e7861f173ad3b59d17b40bb0933429d3c813377e2",
+    "https://ardexpert.ru/article": "06e55a86c4ba2a9b8463f14ef55a30eb0a8b453ad3c6ec137f0540df06585a4a",
     "https://www.gostinfo.ru/News/List": "050b6bb7eed78a854fb3e1b8b92faa292f1780e409829acbdeec4878a088f896",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3d705c7e67c0da431baa852691d2c9b7ff58ef59ee65348b60e634ea04660995",
-    "https://eec.eaeunion.org/news/": "2e0f9df196187cb35fe02d4b71b6bc1ef9e5b975dae0957d1fc09439a9c2b203",
+    "https://eec.eaeunion.org/news/": "b068f1acac0815f8a05b78b6d24503f3af7bc1cfff27baf8594ee10c6c49c582",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "31525998f52d5333754342c2244a41b64a3df40953984dbea08097e44a5e9139",
-    "https://www.metalinfo.ru/ru/news": "797c9b837944439883c1030711e6a2215cd56fd1151d220de825540fa35b5ef6",
-    "https://www.pnp.ru/economics/": "371deb7b0b714bbc39d5ff7895263750192a486c30df0273542f49f62d0b741b",
-    "https://erzrf.ru/news/": "548fea6d68dad674c6ed01fa9e206adc6bbdc780ffdfecbf88049c9aaf82cf89",
-    "https://ria-stk.ru/news/vse-novosti.php": "6bc20bff312577307a27c67632e57651cc5383e16b483804317f4b49ad05c577",
-    "http://government.ru/news/": "16b07edde6768a1d62e5bc9821298dbd5ef666abd14dc5d943b2b2ea5d51a260",
-    "https://stroygaz.ru/news/": "eac0cd5a6054af512eaaaabba0d301d7729a0358debdff0b5a282026f5270f0c",
-    "https://realty.ria.ru/lenta/": "90b2f0ae7c52109bd722c54319b0c687c2e7415effd7516959032001d00b2ee8",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "96a827e72a9a1bcf45b433a5c20774848b7a29702c00a87c2afb05f0504a3c51",
+    "https://www.metalinfo.ru/ru/news": "c2d7bbd55eb1fa3b381f0a8d80d238e74448c936b038aae405df3360d84ec9ce",
+    "https://www.pnp.ru/economics/": "dec69ebb18e8665b61129e566961b8266f69af3b68d5191524a0a60e27d1269d",
+    "https://erzrf.ru/news/": "6339d9c9a4ea21fbcbe120d6d496540be54130feebe738f8566092258f28fe6a",
+    "https://ria-stk.ru/news/vse-novosti.php": "cafdb755689c134660add8679d7ebe76a60d8f545c5de9ffb56250c3d1bffbfd",
+    "http://government.ru/news/": "c76e57f7b76b594488949afce36c052f15a1e5d09bea552cfc94a264e90db968",
+    "https://stroygaz.ru/news/": "199b8216d0048217513295c2d79244980c5eb0659b7db64593e3d2d9a01ddaaa",
+    "https://realty.ria.ru/lenta/": "a2999a978aabd84f20400b918603bd632ff8c14c06c9eb1ee5f35d786ba48934",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
     "http://ancb.ru/publication": "32b813fea8938c0862a6b2a939e7725ce0903783a40edf6f1fadb6ec7ca5fc3a",
     "https://notim.ru": "b2cd53a56ef57a36075695c4c00d506de4c2a056013c3ffb6f535b7ec0b83440",
@@ -75084,31 +75094,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "TxfsUAYShBWaERlo",
+          "value": "81pYtDLnmeFMXaNS",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770414463
+          "expires": 1770429755
         },
         {
           "name": "__ddg10_",
-          "value": "1770413263",
+          "value": "1770428555",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770414463
+          "expires": 1770429755
         },
         {
           "name": "__ddg9_",
-          "value": "48.214.53.186",
+          "value": "64.236.200.113",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770414463
+          "expires": 1770429755
+        },
+        {
+          "name": "__ddg1_",
+          "value": "5OVQ2ExGvYAV7LfFMKa0",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1801964555
         },
         {
           "name": "PHPSESSID",
-          "value": "809212117e5939d1aea50dfecc4bdaac",
+          "value": "25c1bdf9e3824c0989bfb50874821394",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -75135,11 +75153,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "xXfwosykFuXraY20FUGrqmuhZxH7O1Om",
+          "value": "UPmJVpqF3taSNSGsA8xnWNmBtm3fnL1r",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770424066
+          "expires": 1770439359
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -75147,7 +75165,7 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1801517266
+          "expires": 1801532558
         }
       ],
       "failures": {
