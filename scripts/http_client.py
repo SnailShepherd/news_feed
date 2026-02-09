@@ -31,6 +31,7 @@ _DDOS_GUARD_COOKIE_PREFIXES = (
     "cf_clearance",
     "cf_bm",
     "cf_chl_",
+    "qrator",
 )
 
 
@@ -510,7 +511,7 @@ class HostClient:
 
     def _handle_retry_status(self, url: str, status_code: int) -> None:
         LOGGER.warning("Status %s for %s -> retry via strategy", status_code, url)
-        if status_code == 403 and self.strategy.selenium_fallback:
+        if status_code in {401, 403, 404} and self.strategy.selenium_fallback:
             if self._selenium_warmup(url):
                 return
         self._reset_session()
@@ -529,4 +530,3 @@ __all__ = [
     "WarmupConfig",
     "build_strategy_registry",
 ]
-

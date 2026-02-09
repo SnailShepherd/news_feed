@@ -161,6 +161,30 @@ def test_warmup_accepts_401_with_ddos_cookies(monkeypatch):
     assert "__ddg" in "".join(warmup_stats["cookies"])
 
 
+def test_warmup_accepts_401_with_qrator_cookies(monkeypatch):
+    state = {}
+    warmup = WarmupConfig(url="https://example.com/warm", delay_range=(0.0, 0.0))
+    strategy = RequestStrategy(warmup=warmup, selenium_fallback=True)
+    client = HostClient("example.com", strategy, state)
+    response_cookies = _cookie_jar_with("qrator_jsr")
+    client._session = DummySession(
+        [
+            DummyResponse(status_code=401, cookies=response_cookies),
+            DummyResponse(status_code=200),
+        ]
+    )
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    response = client.get("https://example.com/data", headers={})
+
+    assert response.status_code == 200
+    assert client.state_root["warmup_done"] is True
+    assert client.state_root["cookies"]
+    warmup_stats = state["stats"]["metrics"]["example.com"]["warmup"]
+    assert warmup_stats["result"] == "http_4xx_with_cookies"
+    assert "qrator" in "".join(warmup_stats["cookies"])
+
+
 def test_warmup_uses_default_headers(monkeypatch):
     state = {}
     warmup = WarmupConfig(url="https://example.com/warm", delay_range=(0.0, 0.0))
@@ -235,3 +259,28 @@ def test_warmup_401_without_cookies_and_failed_selenium(monkeypatch):
     warmup_stats = state["stats"]["metrics"]["example.com"]["warmup"]
     assert warmup_stats["result"] == "selenium_failed"
     assert client.state_root.get("warmup_done") is not True
+
+
+def test_retry_status_401_triggers_selenium(monkeypatch):
+    state = {}
+    strategy = RequestStrategy(max_attempts=2, backoff_factor=0, retry_statuses=[401], selenium_fallback=True)
+    client = HostClient("example.com", strategy, state)
+    client._session = DummySession(
+        [
+            DummyResponse(status_code=401),
+            DummyResponse(status_code=200),
+        ]
+    )
+    selenium_called = {"count": 0}
+
+    def fake_selenium(url):
+        selenium_called["count"] += 1
+        return True
+
+    monkeypatch.setattr(client, "_selenium_warmup", fake_selenium)
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    response = client.get("https://example.com/data", headers={})
+
+    assert response.status_code == 200
+    assert selenium_called["count"] == 1
