@@ -125,7 +125,39 @@
       ".news-detail__content",
       ".article__content",
       "[itemprop='articleBody']"
-    ]
+    ],
+    "request_strategy": {
+      "connect_timeout": 6,
+      "read_timeout": 30,
+      "max_attempts": 4,
+      "backoff_factor": 1.5,
+      "retry_statuses": [
+        401,
+        403,
+        404,
+        429,
+        500,
+        502,
+        503,
+        504
+      ],
+      "extra_headers": {
+        "Accept-Language": "ru-RU,ru;q=0.9,en;q=0.8",
+        "Referer": "https://minfin.gov.ru/"
+      },
+      "warmup": {
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "delay": [
+          2,
+          4
+        ],
+        "timeout": 40
+      },
+      "selenium_fallback": true,
+      "selenium_wait": 5,
+      "capture_cookies": true,
+      "record_path_on_success": true
+    }
   },
   {
     "name": "Интерфакс-Недвижимость",
@@ -304,6 +336,37 @@
       ".b-material-body__content",
       "[itemprop='articleBody']",
       "main article"
-    ]
+    ],
+    "request_strategy": {
+      "connect_timeout": 6,
+      "read_timeout": 30,
+      "max_attempts": 4,
+      "backoff_factor": 1.5,
+      "retry_statuses": [
+        401,
+        403,
+        429,
+        500,
+        502,
+        503,
+        504
+      ],
+      "extra_headers": {
+        "Accept-Language": "ru-RU,ru;q=0.9,en;q=0.8",
+        "Referer": "https://rg.ru/"
+      },
+      "warmup": {
+        "url": "https://rg.ru/tema/ekonomika",
+        "delay": [
+          2,
+          4
+        ],
+        "timeout": 40
+      },
+      "selenium_fallback": true,
+      "selenium_wait": 5,
+      "capture_cookies": true,
+      "record_path_on_success": true
+    }
   }
 ]
