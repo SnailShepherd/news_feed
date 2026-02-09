@@ -164,8 +164,8 @@ def is_listing_url(url: str | None, start_url: str | None = None) -> bool:
         if (
             len(segments) == 2
             and segments[0] in _SECTION_PREFIXES
-            and not segments[1].isdigit()
             and not is_eec_news
+            and (segments[1] in _LISTING_SEGMENTS or segments[1].isdigit())
         ):
             return True
     if any(segment in _LISTING_SEGMENTS for segment in segments):

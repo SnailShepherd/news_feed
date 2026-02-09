@@ -375,15 +375,17 @@ def fetch_page(url: str, src: dict | None = None) -> str:
     use_conditional = not (ARGS and getattr(ARGS, 'rebuild', False))
     try:
         content, _ = http_get(url, allow_conditional=use_conditional, src=src)
-    except requests.HTTPError as exc:
-        status = exc.response.status_code if exc.response is not None else None
-        if status in {500, 502, 503, 504} and page_path.exists():
+    except (requests.RequestException, SourceTemporarilyUnavailable) as exc:
+        status = None
+        if isinstance(exc, requests.HTTPError) and exc.response is not None:
+            status = exc.response.status_code
+        if page_path.exists():
             logging.warning(
-                "HTTP %s for %s — using cached copy", status, url
+                "Fetch failed for %s%s — using cached copy",
+                url,
+                f" (HTTP {status})" if status else "",
             )
             return page_path.read_text(encoding="utf-8")
-        raise
-    except SourceTemporarilyUnavailable:
         raise
     if content is None and page_path.exists():
         # Not modified -> reuse cached
@@ -1611,19 +1613,26 @@ def harvest_json_source(src: dict, force: bool = False):
     if sleep_for > 0:
         time.sleep(sleep_for)
 
-    resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
-    _last_req_at[host] = time.time()
-    if resp.status_code == 429:
-        ra = resp.headers.get("Retry-After")
-        try:
-            wait = int(ra) if ra else 5
-        except ValueError:
-            wait = 5
-        logging.warning("429 Too Many Requests (API): %s -> sleep %ss", endpoint, wait)
-        time.sleep(wait)
+    try:
         resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
         _last_req_at[host] = time.time()
-    resp.raise_for_status()
+        if resp.status_code == 429:
+            ra = resp.headers.get("Retry-After")
+            try:
+                wait = int(ra) if ra else 5
+            except ValueError:
+                wait = 5
+            logging.warning("429 Too Many Requests (API): %s -> sleep %ss", endpoint, wait)
+            time.sleep(wait)
+            resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
+            _last_req_at[host] = time.time()
+        resp.raise_for_status()
+    except requests.RequestException as exc:
+        logging.warning("API fetch failed for %s: %s", src_name, exc)
+        if src.get("html_fallback_on_empty_api"):
+            logging.info("API failed for %s — falling back to HTML index", src_name)
+            return harvest_source(src, force=ARGS.rebuild if ARGS else False)
+        raise
 
     text = resp.text
     idx_digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
@@ -1637,11 +1646,17 @@ def harvest_json_source(src: dict, force: bool = False):
         payload = resp.json()
     except ValueError as exc:
         logging.error("  invalid JSON for %s: %s", src.get("name"), exc)
+        if src.get("html_fallback_on_empty_api"):
+            logging.info("API invalid JSON for %s — falling back to HTML index", src_name)
+            return harvest_source(src, force=ARGS.rebuild if ARGS else False)
         return []
 
     data = payload.get("data") if isinstance(payload, dict) else payload
     if not isinstance(data, list):
         logging.warning("  unexpected API payload for %s", src.get("name"))
+        if src.get("html_fallback_on_empty_api"):
+            logging.info("API unexpected payload for %s — falling back to HTML index", src_name)
+            return harvest_source(src, force=ARGS.rebuild if ARGS else False)
         return []
 
     base_url = src.get("base_url") or endpoint
