@@ -344,7 +344,7 @@
     "https://www.metalinfo.ru/ru/news/176761": {},
     "https://www.metalinfo.ru/ru/news/176723": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 08 Feb 2026 21:25:25 GMT"
+      "Last-Modified": "Mon, 09 Feb 2026 05:00:59 GMT"
     },
     "https://www.pnp.ru/economics/ekspert-dopustil-chto-zapret-na-vyvoz-zolota-rasprostranyat-na-ukrasheniya.html": {
       "Last-Modified": "Wed, 24 Sep 2025 03:12:46 GMT"
@@ -401,7 +401,7 @@
       "Last-Modified": "Tue, 23 Sep 2025 02:04:22 GMT"
     },
     "https://erzrf.ru/news/": {
-      "ETag": "W/\"1e308-sk9mAUjdHTgGk507rwRJHEvyFco\""
+      "ETag": "W/\"1e115-uCxd8yAQjpLOjikyIk9IsEArZPA\""
     },
     "https://erzrf.ru/news/yerz-trendy-25-sentyabrya-v-1000-chto-zhdet-development-do-kontsa-2026-prognoz-razvitiya-po-itogam-iv-sammita-zastroyshchikov---": {
       "ETag": "W/\"2586d-g/QebDt55L8TeXhnGHNAUAEo++0\""
@@ -42468,7 +42468,13 @@
     "https://www.metalinfo.ru/ru/news/181096": {},
     "https://www.metalinfo.ru/ru/news/181100": {},
     "https://www.metalinfo.ru/ru/news/181085": {},
-    "https://www.metalinfo.ru/ru/news/181048": {}
+    "https://www.metalinfo.ru/ru/news/181048": {},
+    "https://www.metalinfo.ru/ru/news/181103": {},
+    "https://www.metalinfo.ru/ru/news/181105": {},
+    "https://www.metalinfo.ru/ru/news/181093": {},
+    "https://www.metalinfo.ru/ru/news/181104": {},
+    "https://www.metalinfo.ru/ru/news/181102": {},
+    "https://www.metalinfo.ru/ru/news/181098": {}
   },
   "stats": {
     "cooldowns": {
@@ -56580,10 +56586,16 @@
         "url": "https://minfin.gov.ru/ru/press-center/news/",
         "error": "temporary unavailable: minfin.gov.ru: 404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/",
         "status": "skipped"
+      },
+      {
+        "source": "Минфин России",
+        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "error": "temporary unavailable: minfin.gov.ru: 404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/",
+        "status": "skipped"
       }
     ],
-    "last_run": "2026-02-09T03:20:09.798636+00:00",
-    "items": 435,
+    "last_run": "2026-02-09T05:00:38.098185+00:00",
+    "items": 441,
     "metrics": {
       "minstroyrf.gov.ru": {
         "warmup": {
@@ -56595,36 +56607,36 @@
         }
       },
       "www.gostinfo.ru": {
-        "dns_ms": 527.5150530000019,
-        "connect_ms": 490.422867999996,
-        "response_ms": 1017.9379209999979,
+        "dns_ms": 133.42578000001026,
+        "connect_ms": 868.9192779999928,
+        "response_ms": 1002.3450580000031,
         "attempts": 1,
         "status": 200,
         "error": null
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 6,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication/read/20744 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc962a09bf0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))"
+        "dns_ms": 141.42818999999918,
+        "connect_ms": 138.51563399998668,
+        "response_ms": 279.94382399998585,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "www.pnp.ru": {
-        "dns_ms": 4272.927801000037,
-        "connect_ms": 0.0,
-        "response_ms": 240.47022800004925,
-        "attempts": 4,
-        "status": 502,
-        "error": "502 Server Error: Bad Gateway for url: https://www.pnp.ru/economics/"
+        "dns_ms": 4057.30843500001,
+        "connect_ms": 277.6808289999908,
+        "response_ms": 4334.989264000001,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
-        "attempts": 5,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc9626a25d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"
+        "dns_ms": 4885.438085000004,
+        "connect_ms": 0.0,
+        "response_ms": 559.216355999979,
+        "attempts": 1,
+        "status": 200,
+        "error": null
       },
       "minfin.gov.ru": {
         "warmup": {
@@ -56637,9 +56649,9 @@
             "_ym_uid"
           ]
         },
-        "dns_ms": 320.0510780000059,
+        "dns_ms": 281.294000999992,
         "connect_ms": 0.0,
-        "response_ms": 166.09912199999144,
+        "response_ms": 196.017573000006,
         "attempts": 4,
         "status": 404,
         "error": "404 Client Error: Not Found for url: https://minfin.gov.ru/ru/press-center/news/"
@@ -56653,9 +56665,9 @@
             "qrator_jsr"
           ]
         },
-        "dns_ms": 140.71948000002976,
+        "dns_ms": 187.39540300001067,
         "connect_ms": 0.0,
-        "response_ms": 8.767178999960379,
+        "response_ms": 7.522351000005756,
         "attempts": 4,
         "status": 401,
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/tema/ekonomika"
@@ -56664,21 +56676,21 @@
   },
   "index_hash": {
     "https://notim.ru/": "3a5fed99def5bea183ff7420fe66f6dc60cc9411c64e86b8d6a165ecf6039a94",
-    "https://ardexpert.ru/article": "a76fe76f7898f6827557ea95f866652e797327d3a521150d49da052e89cbe1bd",
+    "https://ardexpert.ru/article": "3c98f420301d2bbcca3b3a51e52ebe290273de7f8e7bc963b589c959ef00cca9",
     "https://www.gostinfo.ru/News/List": "050b6bb7eed78a854fb3e1b8b92faa292f1780e409829acbdeec4878a088f896",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3d705c7e67c0da431baa852691d2c9b7ff58ef59ee65348b60e634ea04660995",
-    "https://eec.eaeunion.org/news/": "85e8fe48f38b0d9b3cfce0c76db6bb980e059fa51c2cf697c8d4da044a8e65a5",
+    "https://eec.eaeunion.org/news/": "f5b9e97ac56dfb92f0bc69b5645c0fb916533d837e57355f6aafe9f8f25ef4f7",
     "https://minfin.gov.ru/ru/press-center/": "5c9c09637d53201689d017ad9058028ca9025020023405e73f481edc590658fb",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "8b62baba26a12365d5572e0b4c05ba7a9b324e50a8b270188d6a6e912672b878",
-    "https://www.metalinfo.ru/ru/news": "72b86306f7b29fbf71f539583a0c8d6f32fe7a45c4670944720484c9de678317",
-    "https://www.pnp.ru/economics/": "d5ccec70eee8c9cdd98b8287b57af1a00c7b04d80b6cfcfc92f6fa63f05beb3b",
-    "https://erzrf.ru/news/": "eae3dbaad72f57b906c3bc63e0ca7b87ffea4ae638260886042cecc3936e385a",
-    "https://ria-stk.ru/news/vse-novosti.php": "7a40124f8fd9f5923e957941f4d8cf46e1e89cc70b3c1a315506b48f1e530cb7",
-    "http://government.ru/news/": "7d80a83dc0ad501fb833382710077b3f4a124fa6fa9ed7f44f7e03cd833c4566",
-    "https://stroygaz.ru/news/": "29b2de32f647ef8267647c02a454d567ced36afafdddaff7375cf88482f6c2b4",
-    "https://realty.ria.ru/lenta/": "96b5fc904f32ea2558a6e77fd3794d92fa03584d597bcd10f6f2d281f025f668",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "d2af9a566d2f5c351bd22a69112590a09c3845cb63b77b1599cc174061d02d3f",
+    "https://www.metalinfo.ru/ru/news": "b0a3a79a38fc89a3126db030e274ca345f18ecba2865cdf51935efa714683880",
+    "https://www.pnp.ru/economics/": "55c94307429f7ab20f5fe3460dda9c338318267f47efeafaa8db503e24bbdad4",
+    "https://erzrf.ru/news/": "81facbde214a18d16b46881e8c6cae3aee0efff82bd3de37621669ba210b3c72",
+    "https://ria-stk.ru/news/vse-novosti.php": "8421d04fd7e0b7738f993c66a9b0261830fd25981805b157298de73c97820e54",
+    "http://government.ru/news/": "ced3766ef6e5fe214bfb4adb0b576a533e08115d1eed9f6b81b279a4d09e5af4",
+    "https://stroygaz.ru/news/": "884d0ed8bf58accd0ee64f2b19ef52576cc5e893e9a9a0658c715d1fb31eed5b",
+    "https://realty.ria.ru/lenta/": "cb501009a529735cbedd3bdb004de2d4040ecb128085c4203070930d9406db71",
     "https://rg.ru/tema/ekonomika": "1be28c8cd770891453c3de1d3f8c832be479a609e1228431709d47fa41348d83",
-    "http://ancb.ru/publication": "01309afd90a4a8cdf8af7a419e7571d92a944a0f5edd7bf2c6ef591cd9799453",
+    "http://ancb.ru/publication": "521002cca595855c5c9bdee126eed89c41f330e446103456b974e6063052e8b0",
     "https://notim.ru": "f0dbb36549c0be479826e5e9b661c5e262d7f437b7e628527e48145331962e32",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
@@ -56811,6 +56823,12 @@
       "https://www.interfax-russia.ru/realty/news/samolet-nazval-normalnoy-rynochnoy-praktikoy-obrashchenie-za-gospodderzhkoy"
     ],
     "Металлоснабжение и сбыт": [
+      "https://www.metalinfo.ru/ru/news/181103",
+      "https://www.metalinfo.ru/ru/news/181105",
+      "https://www.metalinfo.ru/ru/news/181093",
+      "https://www.metalinfo.ru/ru/news/181104",
+      "https://www.metalinfo.ru/ru/news/181102",
+      "https://www.metalinfo.ru/ru/news/181098",
       "https://www.metalinfo.ru/ru/news/181096",
       "https://www.metalinfo.ru/ru/news/181100",
       "https://www.metalinfo.ru/ru/news/181085",
@@ -56824,13 +56842,7 @@
       "https://www.metalinfo.ru/ru/news/181080",
       "https://www.metalinfo.ru/ru/news/181087",
       "https://www.metalinfo.ru/ru/news/181091",
-      "https://www.metalinfo.ru/ru/news/181045",
-      "https://www.metalinfo.ru/ru/news/181090",
-      "https://www.metalinfo.ru/ru/news/181075",
-      "https://www.metalinfo.ru/ru/news/181088",
-      "https://www.metalinfo.ru/ru/news/181071",
-      "https://www.metalinfo.ru/ru/news/181086",
-      "https://www.metalinfo.ru/ru/news/181053"
+      "https://www.metalinfo.ru/ru/news/181045"
     ],
     "Парламентская газета: Экономика": [
       "https://www.pnp.ru/economics/v-rossii-11-regionov-poluchat-sredstva-na-rasselenie-avariynogo-zhilya.html",
@@ -57018,7 +57030,7 @@
       "https://rg.ru/2025/12/25/xvi-moskovskij-rozhdestvenskij-festival-v-dome-muzyki.html"
     ],
     "АНЦБ": [
-      "http://ancb.ru/publication/read/20744",
+      "http://ancb.ru/publication/read/20908",
       "http://ancb.ru/publication/read/20905",
       "http://ancb.ru/publication/read/20899",
       "http://ancb.ru/publication/read/20897",
@@ -75484,7 +75496,13 @@
     "bdc9e06e1d7c9ef0bad91598809024795c056071927f71a48d8b0bf4f624c49a": "2026-02-09T06:18:00+03:00",
     "8e2367c8a6f619a51fb3e3bbecf6317061330c895eecc698f6b0b771e37c4871": "2026-02-09T06:18:00+03:00",
     "820d5bfc94d377f10e83fa3dd7fd41d231144e364d12a36d4b343a0d77fce29d": "2026-02-09T06:18:00+03:00",
-    "113d71db321c0b3e503d1fb3913a8fb7f091def353eabf578f19533298eb86ea": "2026-02-09T06:18:00+03:00"
+    "113d71db321c0b3e503d1fb3913a8fb7f091def353eabf578f19533298eb86ea": "2026-02-09T06:18:00+03:00",
+    "31ea52a3ad273a3b8321d27e1506a7052d61ba216683105ee0b3a1bd69ef84fe": "2026-02-09T07:59:00+03:00",
+    "3023f776ec1657d0207f630fd39f3db1cdba951b930ae86b11983cb722aec78f": "2026-02-09T07:59:00+03:00",
+    "3dfbd4cf8a70169c377a31a78cbe60a316cffc159bba0f6c0b2448d43f11525e": "2026-02-09T07:59:00+03:00",
+    "db98e4e1a717eb2bd03293fad994262e45057abbc9e89c0e6e2e13753923ffd3": "2026-02-09T07:59:00+03:00",
+    "301914b2b9ce59aa0e3a9562c2389331c56e76d6d3659ac4352d21ca255499e6": "2026-02-09T07:59:00+03:00",
+    "f33a21ac062eb9e17e44d69e4d8765ec7a78312a19881bcb0b53533b8d87cf1b": "2026-02-09T08:00:00+03:00"
   },
   "host_state": {
     "minstroyrf.gov.ru": {
@@ -75515,8 +75533,8 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication/read/20744 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc962a098c0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 10,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1770607000.5457401
       },
       "warmup_done": false,
@@ -75526,31 +75544,39 @@
       "cookies": [
         {
           "name": "__ddg8_",
-          "value": "JeziC410WEoJ9lYb",
+          "value": "QAeJWDd015sBe9qs",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770587080
+          "expires": 1770614414
         },
         {
           "name": "__ddg10_",
-          "value": "1770585880",
+          "value": "1770613214",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770587080
+          "expires": 1770614414
         },
         {
           "name": "__ddg9_",
-          "value": "52.173.163.32",
+          "value": "48.214.55.65",
           "domain": ".pnp.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770587080
+          "expires": 1770614414
+        },
+        {
+          "name": "__ddg1_",
+          "value": "jpOsNLGWL55HMsRdW5BA",
+          "domain": ".pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": 1802149214
         },
         {
           "name": "PHPSESSID",
-          "value": "155564b7c568ccb351488098c97ae43c",
+          "value": "8d4eff7635fd3deb7bc2a9b3dbd56e97",
           "domain": "www.pnp.ru",
           "path": "/",
           "secure": false,
@@ -75566,8 +75592,8 @@
         }
       ],
       "failures": {
-        "last_error": "502 Server Error: Bad Gateway for url: https://www.pnp.ru/economics/",
-        "consecutive": 12,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1770607131.4080637
       },
       "warmup_done": true,
@@ -75577,11 +75603,11 @@
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "qCSyxcxKPuU6mOVUyXaD9pZMzKyLXaeJ",
+          "value": "e3P8BOu2dIcTtZPTqMXV5d5QHVni1V47",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770615831
+          "expires": 1770624023
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -75589,12 +75615,12 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1801709030
+          "expires": 1801717223
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fc9626a2350>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 4,
+        "last_error": null,
+        "consecutive": 0,
         "last_ts": 1770607174.3497193
       },
       "warmup_done": false,
@@ -75608,23 +75634,23 @@
           "domain": ".minfin.gov.ru",
           "path": "/",
           "secure": true,
-          "expires": 1770679070
+          "expires": 1770685142
         },
         {
           "name": "_ym_d",
-          "value": "1770607071",
+          "value": "1770613143",
           "domain": ".minfin.gov.ru",
           "path": "/",
           "secure": true,
-          "expires": 1802143070
+          "expires": 1802149142
         },
         {
           "name": "_ym_uid",
-          "value": "1770607071977711572",
+          "value": "1770613143907961814",
           "domain": ".minfin.gov.ru",
           "path": "/",
           "secure": true,
-          "expires": 1802143070
+          "expires": 1802149142
         }
       ],
       "failures": {},
@@ -98428,7 +98454,19 @@
     "https://www.metalinfo.ru/ru/news/181085": "http://www.metalinfo.ru/ru/news/181085",
     "http://www.metalinfo.ru/ru/news/181085": "http://www.metalinfo.ru/ru/news/181085",
     "https://www.metalinfo.ru/ru/news/181048": "http://www.metalinfo.ru/ru/news/181048",
-    "http://www.metalinfo.ru/ru/news/181048": "http://www.metalinfo.ru/ru/news/181048"
+    "http://www.metalinfo.ru/ru/news/181048": "http://www.metalinfo.ru/ru/news/181048",
+    "https://www.metalinfo.ru/ru/news/181103": "http://www.metalinfo.ru/ru/news/181103",
+    "http://www.metalinfo.ru/ru/news/181103": "http://www.metalinfo.ru/ru/news/181103",
+    "https://www.metalinfo.ru/ru/news/181105": "http://www.metalinfo.ru/ru/news/181105",
+    "http://www.metalinfo.ru/ru/news/181105": "http://www.metalinfo.ru/ru/news/181105",
+    "https://www.metalinfo.ru/ru/news/181093": "http://www.metalinfo.ru/ru/news/181093",
+    "http://www.metalinfo.ru/ru/news/181093": "http://www.metalinfo.ru/ru/news/181093",
+    "https://www.metalinfo.ru/ru/news/181104": "http://www.metalinfo.ru/ru/news/181104",
+    "http://www.metalinfo.ru/ru/news/181104": "http://www.metalinfo.ru/ru/news/181104",
+    "https://www.metalinfo.ru/ru/news/181102": "http://www.metalinfo.ru/ru/news/181102",
+    "http://www.metalinfo.ru/ru/news/181102": "http://www.metalinfo.ru/ru/news/181102",
+    "https://www.metalinfo.ru/ru/news/181098": "http://www.metalinfo.ru/ru/news/181098",
+    "http://www.metalinfo.ru/ru/news/181098": "http://www.metalinfo.ru/ru/news/181098"
   },
   "content_hashes": {
     "fff4d08ba1e9f59ff11a19471c376a95ac7b9ce0": "https://notim.ru/news-partners",
@@ -117217,7 +117255,13 @@
     "7c620270173e9a9f9ff13a81b294f39236595623": "http://www.metalinfo.ru/ru/news/181096",
     "628a95ad9fab48cb361d92a0a3656f0e4e65fa68": "http://www.metalinfo.ru/ru/news/181100",
     "82010b72e898c93b7abf9d37b68c660b1ad825b9": "http://www.metalinfo.ru/ru/news/181085",
-    "4cee2ffca236cfb396b312fa29bb0df58f0810e3": "http://www.metalinfo.ru/ru/news/181048"
+    "4cee2ffca236cfb396b312fa29bb0df58f0810e3": "http://www.metalinfo.ru/ru/news/181048",
+    "02a5d3bbe360131fe136b6e07eb585e892a08b64": "http://www.metalinfo.ru/ru/news/181103",
+    "24c3cd70b15349341bf1573e95cbff84e66dbd0d": "http://www.metalinfo.ru/ru/news/181105",
+    "d0aa74ed4345dde8ea3e8cd5777c1c6ce5376bed": "http://www.metalinfo.ru/ru/news/181093",
+    "54587a5a94977f670a18415ea0c05f9d1c0a3cc7": "http://www.metalinfo.ru/ru/news/181104",
+    "be1cf7757e8e4d3c43bc255f0dfd02640e1f2773": "http://www.metalinfo.ru/ru/news/181102",
+    "377e27eb6cebd63b7a60ffa458e5abc10cb6085c": "http://www.metalinfo.ru/ru/news/181098"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -142456,6 +142500,18 @@
     "http://www.metalinfo.ru/ru/news/181085": "820d5bfc94d377f10e83fa3dd7fd41d231144e364d12a36d4b343a0d77fce29d",
     "https://www.metalinfo.ru/ru/news/181085": "820d5bfc94d377f10e83fa3dd7fd41d231144e364d12a36d4b343a0d77fce29d",
     "http://www.metalinfo.ru/ru/news/181048": "113d71db321c0b3e503d1fb3913a8fb7f091def353eabf578f19533298eb86ea",
-    "https://www.metalinfo.ru/ru/news/181048": "113d71db321c0b3e503d1fb3913a8fb7f091def353eabf578f19533298eb86ea"
+    "https://www.metalinfo.ru/ru/news/181048": "113d71db321c0b3e503d1fb3913a8fb7f091def353eabf578f19533298eb86ea",
+    "http://www.metalinfo.ru/ru/news/181103": "31ea52a3ad273a3b8321d27e1506a7052d61ba216683105ee0b3a1bd69ef84fe",
+    "https://www.metalinfo.ru/ru/news/181103": "31ea52a3ad273a3b8321d27e1506a7052d61ba216683105ee0b3a1bd69ef84fe",
+    "http://www.metalinfo.ru/ru/news/181105": "3023f776ec1657d0207f630fd39f3db1cdba951b930ae86b11983cb722aec78f",
+    "https://www.metalinfo.ru/ru/news/181105": "3023f776ec1657d0207f630fd39f3db1cdba951b930ae86b11983cb722aec78f",
+    "http://www.metalinfo.ru/ru/news/181093": "3dfbd4cf8a70169c377a31a78cbe60a316cffc159bba0f6c0b2448d43f11525e",
+    "https://www.metalinfo.ru/ru/news/181093": "3dfbd4cf8a70169c377a31a78cbe60a316cffc159bba0f6c0b2448d43f11525e",
+    "http://www.metalinfo.ru/ru/news/181104": "db98e4e1a717eb2bd03293fad994262e45057abbc9e89c0e6e2e13753923ffd3",
+    "https://www.metalinfo.ru/ru/news/181104": "db98e4e1a717eb2bd03293fad994262e45057abbc9e89c0e6e2e13753923ffd3",
+    "http://www.metalinfo.ru/ru/news/181102": "301914b2b9ce59aa0e3a9562c2389331c56e76d6d3659ac4352d21ca255499e6",
+    "https://www.metalinfo.ru/ru/news/181102": "301914b2b9ce59aa0e3a9562c2389331c56e76d6d3659ac4352d21ca255499e6",
+    "http://www.metalinfo.ru/ru/news/181098": "f33a21ac062eb9e17e44d69e4d8765ec7a78312a19881bcb0b53533b8d87cf1b",
+    "https://www.metalinfo.ru/ru/news/181098": "f33a21ac062eb9e17e44d69e4d8765ec7a78312a19881bcb0b53533b8d87cf1b"
   }
 }
