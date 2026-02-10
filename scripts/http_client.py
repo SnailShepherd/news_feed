@@ -421,6 +421,9 @@ class HostClient:
         from selenium import webdriver
         from selenium.webdriver.chrome.options import Options as ChromeOptions
 
+        from selenium import webdriver
+        from selenium.webdriver.chrome.options import Options as ChromeOptions
+
         options = ChromeOptions()
         options.add_argument("--headless=new")
         options.add_argument("--disable-gpu")
