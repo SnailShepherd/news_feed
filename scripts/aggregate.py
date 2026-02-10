@@ -2108,12 +2108,34 @@ def harvest_source(src: dict, force: bool = False):
                     exc,
                 )
 
-    base_host = urlparse(src["base_url"]).netloc.replace("www.", "")
+    raw_candidates: list[tuple[str, str, bool]] = []
     for a in soup.find_all("a"):
         href = a.get("href")
         if not href:
             continue
-        href = urljoin(src["base_url"], href)
+        raw_candidates.append((href, a.get_text(strip=True) or "", True))
+
+    for tag_name in ("loc", "link"):
+        for tag in soup.find_all(tag_name):
+            text = tag.get_text(strip=True)
+            if text.startswith("http"):
+                raw_candidates.append((text, text, False))
+
+    # Some protected/dynamic pages expose URLs only inside JSON blobs (e.g. script data).
+    if src.get("parse_embedded_links"):
+        expanded_html = index_html.replace("\\/", "/")
+        for match in re.findall(r'https?://[^\s"\'<>]+', expanded_html):
+            raw_candidates.append((match, "", False))
+
+        include_snippets = [str(pattern) for pattern in include_patterns if pattern]
+        for rel in re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html):
+            if include_snippets and not any(snippet in rel for snippet in include_snippets):
+                continue
+            raw_candidates.append((rel, "", False))
+
+    base_host = urlparse(src["base_url"]).netloc.replace("www.", "")
+    for raw_href, link_text, is_anchor in raw_candidates:
+        href = urljoin(src["base_url"], raw_href)
         if href.rstrip("/") == start_url.rstrip("/"):
             SOURCE_SUMMARY[src_name]["listing"] += 1
             continue
@@ -2132,16 +2154,10 @@ def harvest_source(src: dict, force: bool = False):
             continue
         if exclude_res and any(r.search(href) for r in exclude_res):
             continue
-        text_ok = (a.get_text(strip=True) or "")
-        # Allow empty anchors when source explicitly permits it
-        min_len = int(src.get("link_min_text_len", 0))
-        if len(text_ok) < min_len:
-            if src.get("accept_empty_anchor"):
-                # fallback to attributes
-                txt2 = a.get("title") or a.get("aria-label") or ""
-                if len(txt2) < min_len:
-                    pass  # still accept link
-            else:
+        if is_anchor:
+            # Allow empty anchors when source explicitly permits it.
+            min_len = int(src.get("link_min_text_len", 0))
+            if len(link_text) < min_len and not src.get("accept_empty_anchor"):
                 continue
         links.append(href)
 
