@@ -333,7 +333,7 @@ class HostClient:
                 "User-Agent": DEFAULT_USER_AGENT,
                 "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
                 "Accept-Language": "ru,en;q=0.9",
-                "Accept-Encoding": "gzip, deflate, br",
+                "Accept-Encoding": "gzip, deflate",
                 "Connection": "keep-alive",
             }
             warmup_headers.update(self.strategy.extra_headers)
@@ -405,10 +405,10 @@ class HostClient:
                 warmup_metrics.update({"mode": "selenium", "result": "selenium_failed"})
             raise SourceTemporarilyUnavailable(f"warm-up failed for {self.host}: {exc}")
 
-    def _selenium_warmup(self, url: str) -> bool:
+    def _selenium_warmup(self, url: str, force: bool = False) -> bool:
         if not self.strategy.selenium_fallback:
             return False
-        if self.strategy.capture_cookies and self._has_protection_cookies():
+        if not force and self.strategy.capture_cookies and self._has_protection_cookies():
             LOGGER.info("Skipping Selenium warm-up for %s: protection cookies already loaded", self.host)
             return True
         try:
@@ -422,6 +422,7 @@ class HostClient:
         options.add_argument("--headless=new")
         options.add_argument("--disable-gpu")
         options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
         binary_location = os.environ.get("CHROME_BINARY")
         if not binary_location:
             for candidate in ("chromium-browser", "chromium", "google-chrome", "google-chrome-stable"):
@@ -512,7 +513,7 @@ class HostClient:
     def _handle_retry_status(self, url: str, status_code: int) -> None:
         LOGGER.warning("Status %s for %s -> retry via strategy", status_code, url)
         if status_code in {401, 403, 404} and self.strategy.selenium_fallback:
-            if self._selenium_warmup(url):
+            if self._selenium_warmup(url, force=True):
                 return
         self._reset_session()
 

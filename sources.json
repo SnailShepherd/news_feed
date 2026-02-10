@@ -60,7 +60,7 @@
     "restrict_domain": true,
     "max_links": 50,
     "enabled": true,
-    "min_words": 70,
+    "min_words": 20,
     "html_fallback_on_empty_api": true
   },
   {
@@ -103,17 +103,22 @@
     ],
     "link_min_text_len": 8,
     "restrict_domain": true,
-    "enabled": true
+    "enabled": true,
+    "min_words": 60
   },
   {
     "name": "Минфин России",
     "base_url": "https://minfin.gov.ru",
-    "start_url": "https://minfin.gov.ru/ru/press-center/news/",
+    "start_url": "https://minfin.gov.ru/ru/press-center/",
     "include_patterns": [
       "/press-center/news/",
-      "/press-center/press-relizy/"
+      "/press-center/press-relizy/",
+      "/press-center/?id_4="
     ],
-    "include_regex": "^https?://(?:www\\.)?minfin\\.gov\\.ru/ru/press-center/(?:news|press-relizy)/[^/?#]+(?:/[^/?#]+)*/?$",
+    "include_regex": [
+      "^https?://(?:www\\.)?minfin\\.gov\\.ru/ru/press-center/(?:news|press-relizy)/[^/?#]+(?:/[^/?#]+)*/?$",
+      "^https?://(?:www\\.)?minfin\\.gov\\.ru/ru/press-center/\\?id_4=\\d+[^&#]*$"
+    ],
     "exclude_regex": [
       "^https?://(?:www\\.)?minfin\\.gov\\.ru/ru/press-center/(?:contacts|tags|rubrics|authors|search|subscribe|about|calendar|faq|glossary)/",
       "^https?://(?:www\\.)?minfin\\.gov\\.ru/ru/press-center/(?:news|press-relizy)/(?:tags|rubrics|authors|search|archive|page)/"
@@ -146,7 +151,7 @@
         "Referer": "https://minfin.gov.ru/"
       },
       "warmup": {
-        "url": "https://minfin.gov.ru/ru/press-center/news/",
+        "url": "https://minfin.gov.ru/ru/press-center/",
         "delay": [
           2,
           4
@@ -202,6 +207,7 @@
     "exclude_regex": "/economics/\\d+/?$",
     "restrict_domain": true,
     "enabled": true,
+    "min_words": 35,
     "request_strategy": {
       "connect_timeout": 6,
       "read_timeout": 30,
@@ -235,12 +241,12 @@
   {
     "name": "ЕРЗ.РФ",
     "base_url": "https://erzrf.ru",
-    "start_url": "https://erzrf.ru/news/",
+    "start_url": "https://erzrf.ru/news/news-archive",
     "include_patterns": [
       "/news/"
     ],
     "link_min_text_len": 8,
-    "include_regex": "^https?://(?:www\\.)?erzrf\\.ru/news/[^?#/]+/?$",
+    "include_regex": "^https?://(?:www\\.)?erzrf\\.ru/news/[^?#/]+/?(?:\\?.*)?$",
     "restrict_domain": true,
     "enabled": true
   },
@@ -324,7 +330,7 @@
   {
     "name": "Российская газета: Экономика",
     "base_url": "https://rg.ru",
-    "start_url": "https://rg.ru/tema/ekonomika",
+    "start_url": "https://rg.ru/rubric/tema/ekonomika",
     "include_patterns": [
       "/20"
     ],
@@ -356,7 +362,7 @@
         "Referer": "https://rg.ru/"
       },
       "warmup": {
-        "url": "https://rg.ru/tema/ekonomika",
+        "url": "https://rg.ru/rubric/tema/ekonomika",
         "delay": [
           2,
           4

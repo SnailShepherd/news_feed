@@ -184,6 +184,8 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
     "government.ru": [
         ".news__article-body",
         ".article__content",
+        ".reader_article_body",
+        "[itemprop='articleBody']",
     ],
     "minfin.gov.ru": [
         ".press-reliz-detail__content",
@@ -262,7 +264,7 @@ def http_get(url: str, allow_conditional: bool = True, src: dict | None = None):
         "User-Agent": USER_AGENT,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "ru,en;q=0.9",
-        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Encoding": "gzip, deflate",
         "Connection": "keep-alive",
     }
     hinfo = STATE["headers"].get(url, {})
@@ -2469,13 +2471,13 @@ def main():
         configured_min = DEFAULT_MIN_WORDS
         source_defined = int(src.get("min_words", 0) or 0)
         if source_defined > 0:
-            configured_min = max(source_defined, DEFAULT_MIN_WORDS)
+            configured_min = source_defined
         host = _get_host_for_source(src)
         if host:
             normalized_host = host.lower().lstrip("www.")
             override = HOST_MIN_WORD_OVERRIDES.get(normalized_host)
-            if override:
-                configured_min = max(configured_min, override)
+            if override and source_defined <= 0:
+                configured_min = override
         SOURCE_MIN_WORDS[src_name] = configured_min
         if runtime_expired():
             logging.info("Stop processing further sources due to max-runtime limit")
