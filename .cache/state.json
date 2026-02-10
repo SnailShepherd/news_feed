@@ -251,7 +251,7 @@
     "https://www.metalinfo.ru/ru/news/181113": {},
     "https://www.metalinfo.ru/ru/news/181137": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Tue, 10 Feb 2026 20:54:02 GMT"
+      "Last-Modified": "Tue, 10 Feb 2026 21:41:21 GMT"
     },
     "https://www.pnp.ru/economics/issledovatelskie-kompanii-predlozhili-osvobodit-ot-goskontrolya.html": {
       "Last-Modified": "Tue, 10 Feb 2026 20:55:06 GMT"
@@ -320,7 +320,7 @@
       "Last-Modified": "Tue, 10 Feb 2026 20:56:34 GMT"
     },
     "https://erzrf.ru/news/news-archive": {
-      "ETag": "W/\"26529-TTSkJl74lD2/gEJliOdjb78k7JU\""
+      "ETag": "W/\"2652a-Gus0GxI1gHNEw1yzScrL1tHKW0g\""
     },
     "https://erzrf.ru/news/rosreyestr-v-tretyem-kvartale-na-ipotechnom-rynke-stolichnykh-novostroyek-zafiksirovano-snizheniye?tag=%D0%A0%D0%BE%D1%81%D1%80%D0%B5%D0%B5%D1%81%D1%82%D1%80": {
       "ETag": "W/\"27195-TeNjAX5pXmvPCEGxJIUWaRpteXU\""
@@ -900,6 +900,18 @@
     },
     "https://www.pnp.ru/economics/senator-energoreforma-otkryla-dalnemu-vostoku-dostup-k-novym-investiciyam.html": {
       "Last-Modified": "Tue, 10 Feb 2026 20:54:14 GMT"
+    },
+    "https://www.pnp.ru/economics/gosduma-rassmotrit-uzhestochenie-nakazaniya-za-torgovlyu-bez-kass.html": {
+      "Last-Modified": "Tue, 10 Feb 2026 21:41:33 GMT"
+    },
+    "https://www.pnp.ru/economics/oformlenie-nalogovogo-vycheta-za-zanyatiya-sportom-khotyat-uprostit.html": {
+      "Last-Modified": "Tue, 10 Feb 2026 21:41:40 GMT"
+    },
+    "https://www.pnp.ru/economics/rossiyane-vybirayut-mintay-vmesto-semgi.html": {
+      "Last-Modified": "Tue, 10 Feb 2026 21:41:47 GMT"
+    },
+    "https://www.pnp.ru/economics/nezakonnuyu-onlayn-torgovlyu-alkogolem-trebuyut-prikryt.html": {
+      "Last-Modified": "Tue, 10 Feb 2026 21:41:54 GMT"
     }
   },
   "stats": {
@@ -914,9 +926,9 @@
     ],
     "metrics": {
       "www.gostinfo.ru": {
-        "dns_ms": 527.1346290000167,
-        "connect_ms": 0.0,
-        "response_ms": 415.6139650000057,
+        "dns_ms": 355.4704600000207,
+        "connect_ms": 1159.5060779999926,
+        "response_ms": 1514.9765380000133,
         "attempts": 1,
         "status": 200,
         "error": null,
@@ -925,9 +937,9 @@
             "attempt": 1,
             "status": 200,
             "proxy": null,
-            "dns_ms": 527.1346290000167,
-            "response_ms": 415.6139650000057,
-            "final_url": "https://www.gostinfo.ru/News/Details/2061"
+            "dns_ms": 355.4704600000207,
+            "response_ms": 1514.9765380000133,
+            "final_url": "https://www.gostinfo.ru/News/List"
           }
         ]
       },
@@ -937,36 +949,36 @@
         "response_ms": null,
         "attempts": 6,
         "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication/read/20779 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9c62cf1370>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9d63bc68b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
         "attempt_log": [
           {
             "attempt": 1,
-            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication/read/20779 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9c62cf17b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9d63bb0f50>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
             "proxy": null
           },
           {
             "attempt": 2,
-            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication/read/20779 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9c62cf07c0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9d6422eea0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
             "proxy": null
           },
           {
             "attempt": 3,
-            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication/read/20779 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9c62cf3680>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9d6401d810>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
             "proxy": null
           },
           {
             "attempt": 4,
-            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication/read/20779 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9c62cf2e00>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9d63ca6c30>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
             "proxy": null
           },
           {
             "attempt": 5,
-            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication/read/20779 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9c62cf3240>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9d63bc6360>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
             "proxy": null
           },
           {
             "attempt": 6,
-            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication/read/20779 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9c62cf1370>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9d63bc68b0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
             "proxy": null
           }
         ]
@@ -978,9 +990,9 @@
           "result": "http_success",
           "cookies": []
         },
-        "dns_ms": 2.437819000078889,
-        "connect_ms": 299.08498999975563,
-        "response_ms": 301.5228089998345,
+        "dns_ms": 443.05361800002174,
+        "connect_ms": 1068.5798749999549,
+        "response_ms": 1511.6334929999766,
         "attempts": 1,
         "status": 200,
         "error": null,
@@ -989,9 +1001,9 @@
             "attempt": 1,
             "status": 200,
             "proxy": null,
-            "dns_ms": 2.437819000078889,
-            "response_ms": 301.5228089998345,
-            "final_url": "https://minfin.gov.ru/ru/press-center/?id_4=40171-minfin_rossii_podgotovil_postanovlenie_pravitelstva_dlya_dopolnitelnoi_podderzhki_ugolnoi_otrasli"
+            "dns_ms": 443.05361800002174,
+            "response_ms": 1511.6334929999766,
+            "final_url": "https://minfin.gov.ru/ru/press-center/"
           }
         ]
       },
@@ -1009,9 +1021,9 @@
             "usr_abt_grp"
           ]
         },
-        "dns_ms": 2.5341370001115138,
-        "connect_ms": 375.4921220001961,
-        "response_ms": 378.0262590003076,
+        "dns_ms": 174.37090999999327,
+        "connect_ms": 186.55530400002363,
+        "response_ms": 360.9262140000169,
         "attempts": 1,
         "status": 200,
         "error": null,
@@ -1020,9 +1032,9 @@
             "attempt": 1,
             "status": 200,
             "proxy": null,
-            "dns_ms": 2.5341370001115138,
-            "response_ms": 378.0262590003076,
-            "final_url": "https://www.pnp.ru/economics/zashhitit-ot-kvartirnykh-moshennikov-pomozhet-kontrol-za-doverennostyami.html"
+            "dns_ms": 174.37090999999327,
+            "response_ms": 360.9262140000169,
+            "final_url": "https://www.pnp.ru/economics/nezakonnuyu-onlayn-torgovlyu-alkogolem-trebuyut-prikryt.html"
           }
         ]
       },
@@ -1032,31 +1044,31 @@
         "response_ms": null,
         "attempts": 5,
         "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/index.php?ELEMENT_ID=248460&all_news=Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9c60a39090>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9d63bb1950>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
         "attempt_log": [
           {
             "attempt": 1,
-            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/index.php?ELEMENT_ID=248460&all_news=Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9c60a3a710>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9d63bb25d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
             "proxy": null
           },
           {
             "attempt": 2,
-            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/index.php?ELEMENT_ID=248460&all_news=Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9c60a38e10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9d63bb0a50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
             "proxy": null
           },
           {
             "attempt": 3,
-            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/index.php?ELEMENT_ID=248460&all_news=Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9c60a3a210>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9d63bb0b90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
             "proxy": null
           },
           {
             "attempt": 4,
-            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/index.php?ELEMENT_ID=248460&all_news=Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9c60a38b90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9d63bb02d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
             "proxy": null
           },
           {
             "attempt": 5,
-            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/index.php?ELEMENT_ID=248460&all_news=Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9c60a39090>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9d63bb1950>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
             "proxy": null
           }
         ]
@@ -1070,9 +1082,9 @@
             "qrator_jsr"
           ]
         },
-        "dns_ms": 2.8553930005728034,
-        "connect_ms": 16.408010999839462,
-        "response_ms": 19.263404000412265,
+        "dns_ms": 3.047320000007403,
+        "connect_ms": 16.680055999984233,
+        "response_ms": 19.727375999991636,
         "attempts": 4,
         "status": 401,
         "error": "401 Client Error: Unauthorized for url: https://rg.ru/rubric/tema/ekonomika",
@@ -1081,32 +1093,32 @@
             "attempt": 1,
             "status": 401,
             "proxy": null,
-            "dns_ms": 1055.2994499994384,
-            "response_ms": 295.6407700003183,
+            "dns_ms": 1064.3892749999964,
+            "response_ms": 474.950218999993,
             "final_url": "https://rg.ru/rubric/tema/ekonomika"
           },
           {
             "attempt": 2,
             "status": 401,
             "proxy": null,
-            "dns_ms": 185.0340619994313,
-            "response_ms": 19.1070340006263,
+            "dns_ms": 1050.611726999989,
+            "response_ms": 19.845959000008406,
             "final_url": "https://rg.ru/rubric/tema/ekonomika"
           },
           {
             "attempt": 3,
             "status": 401,
             "proxy": null,
-            "dns_ms": 1067.8765319999002,
-            "response_ms": 18.983979000040563,
+            "dns_ms": 1079.7089920000076,
+            "response_ms": 19.29454000003261,
             "final_url": "https://rg.ru/rubric/tema/ekonomika"
           },
           {
             "attempt": 4,
             "status": 401,
             "proxy": null,
-            "dns_ms": 2.8553930005728034,
-            "response_ms": 19.263404000412265,
+            "dns_ms": 3.047320000007403,
+            "response_ms": 19.727375999991636,
             "final_url": "https://rg.ru/rubric/tema/ekonomika"
           },
           {
@@ -1126,27 +1138,27 @@
         }
       }
     },
-    "last_run": "2026-02-10T21:20:22.934900+00:00",
+    "last_run": "2026-02-10T21:44:01.757293+00:00",
     "items": 500
   },
   "index_hash": {
     "https://notim.ru": "f0dbb36549c0be479826e5e9b661c5e262d7f437b7e628527e48145331962e32",
-    "https://ardexpert.ru/article": "85245e033ca4034eb8889a4f1d7185fa7cd7a833ffd1977e703144e01d81c55d",
+    "https://ardexpert.ru/article": "c77d35ecf8d8587cf82ce2c4a0e82fb79a022b69707fd27cf3f5252b6d8d4de6",
     "https://www.gostinfo.ru/News/List": "52c0229dd6dfebba748d528936be98ff5899591bd2910780804dae482cd44bd2",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "3d705c7e67c0da431baa852691d2c9b7ff58ef59ee65348b60e634ea04660995",
     "http://ancb.ru/publication": "0a82d96b45c93ac9cfca1988a82bb417ad115bea7e0d62c4c65a79e983ffe337",
-    "https://eec.eaeunion.org/news/": "15aed2f9469abbd6dffd14a2b2157f0adb5773422b70e2a7225c28507bdb689f",
-    "https://minfin.gov.ru/ru/press-center/": "4d6c2a55f1c9922d62807fcb0c4c1d82c491679926fb5ed4c4c0debcb2f11ea7",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "67a4268464f3d46346e38da3ceda335ed4fc0df6019814f22b546a46ce785f50",
-    "https://www.metalinfo.ru/ru/news": "468a41423ce723c03b3f85d172aecc6de0d0910055f567fe589338f8904e71bd",
-    "https://www.pnp.ru/economics/": "e8b415ab53b6a048c9aff03df3d7bf627b695f52208f049bcd29ae0954dec9f3",
-    "https://erzrf.ru/news/news-archive": "1f5118a814f8e4cfaba48263a00b4adf76631040ea9d153247217e84c9acd290",
+    "https://eec.eaeunion.org/news/": "721691af891ecbffd8a470a562aa58e2f5193a979323b9f96ce0a2db7f635e41",
+    "https://minfin.gov.ru/ru/press-center/": "894c5430da48153ff8d980d3cce5871571ce13de20dcc8ce86a234d63e969cb1",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "742db086283cb1d83da984ac4fe5cb982323174874a13f31dace582a4ac34ccc",
+    "https://www.metalinfo.ru/ru/news": "adc1d33657ab1b0a234c28f285829be1fb544323381b611458e65644ea9badc2",
+    "https://www.pnp.ru/economics/": "f8610ecf04c6d3cdbab32851fc45e58ba072b732934fbc74f7f6770fe26ab178",
+    "https://erzrf.ru/news/news-archive": "63912052b03fd012ccd6b9889a4d75bf7e6653e6eeafd475030088887731f2f4",
     "https://ria-stk.ru/news/vse-novosti.php": "698ebc0ca6108885507293fafe9d0d48c043c2b00deb26a0036f8c6452f9345b",
-    "http://government.ru/news/": "6b027d2846c87315c79f158ea52105331777d7a3f433a1700457bbe4c7bea92f",
-    "https://stroygaz.ru/news/": "4ac68a69e2e30db4c03e0b844c3d923341dc3665bc85fae7fda7b52ffa3a1a9d",
-    "https://realty.ria.ru/lenta/": "eea81cdd82ebea8fb4ff174926646cd2ca3c01f5e0faff7bdca13f5d56effa7f",
-    "https://gge.ru/press-center/news/": "1e1584a7c153fa17c3d9c9c4c3468448eeb7124050bd2248c25b7a1bc0afff6e",
-    "https://rg.ru/rubric/tema/ekonomika": "91423d0ca15b840cbefa61e970df5908f4b0d08445506205781e93c21feb880f"
+    "http://government.ru/news/": "bee5e5c9ec39aff54fd6a762361d20b5d2d05cf87321e9ee58080ddbae1e0fde",
+    "https://stroygaz.ru/news/": "5117bb868e8c28980c45cc6247c3499243f03157b778be7a3bbb8dd3509bd7f2",
+    "https://realty.ria.ru/lenta/": "025cb473d6825e388d84d2a6229e4acc9ff14e4ffa9d514e49359a71db64f36d",
+    "https://gge.ru/press-center/news/": "0c5da7932d4560b80ba60fa27f1727da8a74652011aaa335adafef99ee18700a",
+    "https://rg.ru/rubric/tema/ekonomika": "80e742d53de94bf70f3603a065e1aedcc1cb6a726534034a2dc8baafaa2ccc47"
   },
   "seen_urls": {
     "НОТИМ": [
@@ -1963,6 +1975,10 @@
       "https://www.metalinfo.ru/ru/news/181185"
     ],
     "Парламентская газета: Экономика": [
+      "https://www.pnp.ru/economics/gosduma-rassmotrit-uzhestochenie-nakazaniya-za-torgovlyu-bez-kass.html",
+      "https://www.pnp.ru/economics/oformlenie-nalogovogo-vycheta-za-zanyatiya-sportom-khotyat-uprostit.html",
+      "https://www.pnp.ru/economics/rossiyane-vybirayut-mintay-vmesto-semgi.html",
+      "https://www.pnp.ru/economics/nezakonnuyu-onlayn-torgovlyu-alkogolem-trebuyut-prikryt.html",
       "https://www.pnp.ru/economics/senator-energoreforma-otkryla-dalnemu-vostoku-dostup-k-novym-investiciyam.html",
       "https://www.pnp.ru/economics/v-gosdumu-vnesli-proekt-ob-izmenenii-poryadka-privatizacii-korrupcionnogo-zhilya.html",
       "https://www.pnp.ru/economics/stroitelnye-soyuzy-stanut-zhestche-nakazyvat-za-nekachestvennuyu-rabotu.html",
@@ -1978,10 +1994,6 @@
       "https://www.pnp.ru/economics/v-2024-godu-pod-inostrannyy-kontrol-pereshli-429-italyanskikh-kompaniy.html",
       "https://www.pnp.ru/economics/v-minpromtorge-zayavili-o-gotovnosti-polnogo-perechnya-mashin-dlya-raboty-v-taksi.html",
       "https://www.pnp.ru/economics/optovye-ceny-na-gaz-s-1-oktyabrya-proindeksiruyut-pochti-na-10.html",
-      "https://www.pnp.ru/economics/prokladku-nefteprovodov-i-gazoprovodov-predlozhili-uskorit.html",
-      "https://www.pnp.ru/economics/kvesty-poprosili-ubrat-iz-mnogokvartirnykh-domov.html",
-      "https://www.pnp.ru/economics/putin-nazval-otlichnoy-dinamiku-ekonomicheskogo-rosta-moskvy.html",
-      "https://www.pnp.ru/economics/ekspert-sprognoziroval-snizhenie-klyuchevoy-stavki-cb-rf-do-155-13-fevralya.html",
       "https://www.pnp.ru/economics/mozhet-opustitsya-do-40-rubley-deputat-aksakov-usomnilsya-v-ustoychivosti-dollara.html",
       "https://www.pnp.ru/economics/zakony-vstupayushhie-v-silu-v-fevrale-3.html",
       "https://www.pnp.ru/economics/zashhitit-ot-kvartirnykh-moshennikov-pomozhet-kontrol-za-doverennostyami.html",
@@ -1999,10 +2011,6 @@
       "https://www.pnp.ru/economics/v-2024-godu-pod-inostrannyy-kontrol-pereshli-429-italyanskikh-kompaniy.html",
       "https://www.pnp.ru/economics/v-minpromtorge-zayavili-o-gotovnosti-polnogo-perechnya-mashin-dlya-raboty-v-taksi.html",
       "https://www.pnp.ru/economics/optovye-ceny-na-gaz-s-1-oktyabrya-proindeksiruyut-pochti-na-10.html",
-      "https://www.pnp.ru/economics/prokladku-nefteprovodov-i-gazoprovodov-predlozhili-uskorit.html",
-      "https://www.pnp.ru/economics/kvesty-poprosili-ubrat-iz-mnogokvartirnykh-domov.html",
-      "https://www.pnp.ru/economics/putin-nazval-otlichnoy-dinamiku-ekonomicheskogo-rosta-moskvy.html",
-      "https://www.pnp.ru/economics/ekspert-sprognoziroval-snizhenie-klyuchevoy-stavki-cb-rf-do-155-13-fevralya.html",
       "https://www.pnp.ru/economics/mozhet-opustitsya-do-40-rubley-deputat-aksakov-usomnilsya-v-ustoychivosti-dollara.html",
       "https://www.pnp.ru/economics/zakony-vstupayushhie-v-silu-v-fevrale-3.html",
       "https://www.pnp.ru/economics/zashhitit-ot-kvartirnykh-moshennikov-pomozhet-kontrol-za-doverennostyami.html",
@@ -2020,10 +2028,6 @@
       "https://www.pnp.ru/economics/v-2024-godu-pod-inostrannyy-kontrol-pereshli-429-italyanskikh-kompaniy.html",
       "https://www.pnp.ru/economics/v-minpromtorge-zayavili-o-gotovnosti-polnogo-perechnya-mashin-dlya-raboty-v-taksi.html",
       "https://www.pnp.ru/economics/optovye-ceny-na-gaz-s-1-oktyabrya-proindeksiruyut-pochti-na-10.html",
-      "https://www.pnp.ru/economics/prokladku-nefteprovodov-i-gazoprovodov-predlozhili-uskorit.html",
-      "https://www.pnp.ru/economics/kvesty-poprosili-ubrat-iz-mnogokvartirnykh-domov.html",
-      "https://www.pnp.ru/economics/putin-nazval-otlichnoy-dinamiku-ekonomicheskogo-rosta-moskvy.html",
-      "https://www.pnp.ru/economics/ekspert-sprognoziroval-snizhenie-klyuchevoy-stavki-cb-rf-do-155-13-fevralya.html",
       "https://www.pnp.ru/economics/zakony-vstupayushhie-v-silu-v-fevrale-3.html",
       "https://www.pnp.ru/economics/mozhet-opustitsya-do-40-rubley-deputat-aksakov-usomnilsya-v-ustoychivosti-dollara.html",
       "https://www.pnp.ru/economics/issledovatelskie-kompanii-predlozhili-osvobodit-ot-goskontrolya.html",
@@ -2034,10 +2038,6 @@
       "https://www.pnp.ru/economics/v-2024-godu-pod-inostrannyy-kontrol-pereshli-429-italyanskikh-kompaniy.html",
       "https://www.pnp.ru/economics/v-minpromtorge-zayavili-o-gotovnosti-polnogo-perechnya-mashin-dlya-raboty-v-taksi.html",
       "https://www.pnp.ru/economics/optovye-ceny-na-gaz-s-1-oktyabrya-proindeksiruyut-pochti-na-10.html",
-      "https://www.pnp.ru/economics/prokladku-nefteprovodov-i-gazoprovodov-predlozhili-uskorit.html",
-      "https://www.pnp.ru/economics/kvesty-poprosili-ubrat-iz-mnogokvartirnykh-domov.html",
-      "https://www.pnp.ru/economics/putin-nazval-otlichnoy-dinamiku-ekonomicheskogo-rosta-moskvy.html",
-      "https://www.pnp.ru/economics/ekspert-sprognoziroval-snizhenie-klyuchevoy-stavki-cb-rf-do-155-13-fevralya.html",
       "https://www.pnp.ru/economics/zakony-vstupayushhie-v-silu-v-fevrale-3.html",
       "https://www.pnp.ru/economics/mozhet-opustitsya-do-40-rubley-deputat-aksakov-usomnilsya-v-ustoychivosti-dollara.html"
     ],
@@ -3031,7 +3031,11 @@
     "8b7a1e593452eb824e498032c474770a3e3209c5661bf3aab1a585506a3b8c52": "2026-02-10T21:30:00+03:00",
     "c38bfb05a820229b639db6f05f56073df3191911593016aa7f107c6ac472b542": "2026-02-10T21:30:00+03:00",
     "4910ca8c5fea9a7ae10da26b09a0dfdc4897b5c203c86b9a7029cb840cc3c8c5": "2026-02-10T21:31:00+03:00",
-    "d247641c5cfaf5a3a11ff2d574f3442e0234e61a96c35ed6760ea76539bfa9b4": "2026-02-10T23:54:00+03:00"
+    "d247641c5cfaf5a3a11ff2d574f3442e0234e61a96c35ed6760ea76539bfa9b4": "2026-02-10T23:54:00+03:00",
+    "e3364759dd3cd0643ecfb584ad59ab6d864b174891c234d67621557816a82ca9": "2026-02-11T00:41:00+03:00",
+    "1dd5b50486312788afd5ef9333842d001422f821822b39c14679b7810d78b9ce": "2026-02-11T00:41:00+03:00",
+    "f4c77406af71f7a338703e947dba98d1b2c88870b0dc19531c1ed4af67d79f60": "2026-02-11T00:41:00+03:00",
+    "96451744558ec9da0ad6d2a43e6d9432138517e471dd2465cb6fb133b881ceed": "2026-02-11T00:41:00+03:00"
   },
   "host_state": {
     "www.gostinfo.ru": {
@@ -3055,9 +3059,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication/read/20779 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9c62cf3240>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-        "consecutive": 185,
-        "last_ts": 1770756427.351437
+        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9d63bc6360>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "consecutive": 190,
+        "last_ts": 1770759637.7449136
       },
       "warmup_done": false,
       "last_success_path": null
@@ -3087,7 +3091,7 @@
         "consecutive": 0
       },
       "warmup_done": true,
-      "last_success_path": "/economics/zashhitit-ot-kvartirnykh-moshennikov-pomozhet-kontrol-za-doverennostyami.html"
+      "last_success_path": "/economics/nezakonnuyu-onlayn-torgovlyu-alkogolem-trebuyut-prikryt.html"
     },
     "ria-stk.ru": {
       "cookies": [
@@ -3109,9 +3113,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/index.php?ELEMENT_ID=248460&all_news=Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9c60a38b90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-        "consecutive": 88,
-        "last_ts": 1770758177.1039
+        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9d63bb02d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "consecutive": 92,
+        "last_ts": 1770759747.9371822
       },
       "warmup_done": false,
       "last_success_path": null
@@ -3120,11 +3124,11 @@
       "cookies": [
         {
           "name": "qrator_jsr",
-          "value": "v2.0.1770758409.183.acb6d50c5VHe9DFl|t88aazDYbh3PX1nW|ZTf6kYmVDYWFZhB6hwhEipB5VDk5Azm6kYPWmxYwRdgrBTy32qWXvzREEgkvwC3HTlvJEgE7njAwSuhYCGz3Cw==-1GBOr9ZBh2pE6CrFrA3O1UDyxcQ=-00",
+          "value": "v2.0.1770759828.041.14a306b136W93iXv|2HB5P0VKYOxvwQJj|ROPUj7Ex+A/PSrtkSySEFJQffNP3wiYqf+PnEFr5TFjI1o3hI/ZBS43OFLoh1mML2bXk6w50ToYZwDUEZh09Xw==-YPYNG+LaYNSpGDJzlb88GLUttS4=-00",
           "domain": ".rg.ru",
           "path": "/",
           "secure": false,
-          "expires": 1770758709
+          "expires": 1770760128
         }
       ],
       "failures": {},
@@ -3747,7 +3751,11 @@
     "https://stroygaz.ru/news/srochno-v-nomer/nostroy-predlozhil-mery-podderzhki-podryadchikov-i-sro": "https://stroygaz.ru/news/srochno-v-nomer/nostroy-predlozhil-mery-podderzhki-podryadchikov-i-sro",
     "https://stroygaz.ru/news/srochno-v-nomer/anton-glushkov-oboznachil-klyuchevye-trendy-stroyotrasli-v-2026-godu": "https://stroygaz.ru/news/srochno-v-nomer/anton-glushkov-oboznachil-klyuchevye-trendy-stroyotrasli-v-2026-godu",
     "https://realty.ria.ru/20260210/nebosrebaurus-2073515930.html": "https://realty.ria.ru/20260210/nebosrebaurus-2073515930.html",
-    "https://www.pnp.ru/economics/senator-energoreforma-otkryla-dalnemu-vostoku-dostup-k-novym-investiciyam.html": "https://www.pnp.ru/economics/senator-energoreforma-otkryla-dalnemu-vostoku-dostup-k-novym-investiciyam.html"
+    "https://www.pnp.ru/economics/senator-energoreforma-otkryla-dalnemu-vostoku-dostup-k-novym-investiciyam.html": "https://www.pnp.ru/economics/senator-energoreforma-otkryla-dalnemu-vostoku-dostup-k-novym-investiciyam.html",
+    "https://www.pnp.ru/economics/gosduma-rassmotrit-uzhestochenie-nakazaniya-za-torgovlyu-bez-kass.html": "https://www.pnp.ru/economics/gosduma-rassmotrit-uzhestochenie-nakazaniya-za-torgovlyu-bez-kass.html",
+    "https://www.pnp.ru/economics/oformlenie-nalogovogo-vycheta-za-zanyatiya-sportom-khotyat-uprostit.html": "https://www.pnp.ru/economics/oformlenie-nalogovogo-vycheta-za-zanyatiya-sportom-khotyat-uprostit.html",
+    "https://www.pnp.ru/economics/rossiyane-vybirayut-mintay-vmesto-semgi.html": "https://www.pnp.ru/economics/rossiyane-vybirayut-mintay-vmesto-semgi.html",
+    "https://www.pnp.ru/economics/nezakonnuyu-onlayn-torgovlyu-alkogolem-trebuyut-prikryt.html": "https://www.pnp.ru/economics/nezakonnuyu-onlayn-torgovlyu-alkogolem-trebuyut-prikryt.html"
   },
   "content_hashes": {
     "def4ab53202a18cd047c5e28dda6555d7cca15a0": "https://notim.ru/news-partners",
@@ -4285,7 +4293,11 @@
     "457d7e0c94aa3b6532443d67312e70fcca2d504d": "http://government.ru/news/57810",
     "3f6be1de91f36d6728bbec8d4db032f6e021e842": "https://realty.ria.ru/20260210/situatsija-2073459765.html",
     "8517dfa0e31b07557f43505cd59e5d7a32703ed5": "https://realty.ria.ru/20260210/tsena-2073443490.html",
-    "34d2dd4203db22e81952af0d20cecc125e11a30f": "https://realty.ria.ru/20260209/investory-2073269802.html"
+    "34d2dd4203db22e81952af0d20cecc125e11a30f": "https://realty.ria.ru/20260209/investory-2073269802.html",
+    "b28756eac18eb5da52596a58f7b7f25cae00dfe4": "https://www.pnp.ru/economics/gosduma-rassmotrit-uzhestochenie-nakazaniya-za-torgovlyu-bez-kass.html",
+    "f1cebf303e30507cf73a2d978ec874b4fd242b09": "https://www.pnp.ru/economics/oformlenie-nalogovogo-vycheta-za-zanyatiya-sportom-khotyat-uprostit.html",
+    "034577797de14577c07500d716ce68d6991877b3": "https://www.pnp.ru/economics/rossiyane-vybirayut-mintay-vmesto-semgi.html",
+    "be885154b16f479b93e3e7343d40d53180e1ba6a": "https://www.pnp.ru/economics/nezakonnuyu-onlayn-torgovlyu-alkogolem-trebuyut-prikryt.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -5034,6 +5046,10 @@
     "https://stroygaz.ru/news/srochno-v-nomer/anton-glushkov-oboznachil-klyuchevye-trendy-stroyotrasli-v-2026-godu": "c38bfb05a820229b639db6f05f56073df3191911593016aa7f107c6ac472b542",
     "https://stroygaz.ru/news/srochno-v-nomer/anton-glushkov-oboznachil-klyuchevye-trendy-stroyotrasli-v-2026-godu/": "c38bfb05a820229b639db6f05f56073df3191911593016aa7f107c6ac472b542",
     "https://realty.ria.ru/20260210/nebosrebaurus-2073515930.html": "4910ca8c5fea9a7ae10da26b09a0dfdc4897b5c203c86b9a7029cb840cc3c8c5",
-    "https://www.pnp.ru/economics/senator-energoreforma-otkryla-dalnemu-vostoku-dostup-k-novym-investiciyam.html": "d247641c5cfaf5a3a11ff2d574f3442e0234e61a96c35ed6760ea76539bfa9b4"
+    "https://www.pnp.ru/economics/senator-energoreforma-otkryla-dalnemu-vostoku-dostup-k-novym-investiciyam.html": "d247641c5cfaf5a3a11ff2d574f3442e0234e61a96c35ed6760ea76539bfa9b4",
+    "https://www.pnp.ru/economics/gosduma-rassmotrit-uzhestochenie-nakazaniya-za-torgovlyu-bez-kass.html": "e3364759dd3cd0643ecfb584ad59ab6d864b174891c234d67621557816a82ca9",
+    "https://www.pnp.ru/economics/oformlenie-nalogovogo-vycheta-za-zanyatiya-sportom-khotyat-uprostit.html": "1dd5b50486312788afd5ef9333842d001422f821822b39c14679b7810d78b9ce",
+    "https://www.pnp.ru/economics/rossiyane-vybirayut-mintay-vmesto-semgi.html": "f4c77406af71f7a338703e947dba98d1b2c88870b0dc19531c1ed4af67d79f60",
+    "https://www.pnp.ru/economics/nezakonnuyu-onlayn-torgovlyu-alkogolem-trebuyut-prikryt.html": "96451744558ec9da0ad6d2a43e6d9432138517e471dd2465cb6fb133b881ceed"
   }
 }
