@@ -381,14 +381,24 @@ def fetch_page(url: str, src: dict | None = None) -> str:
         status = None
         if isinstance(exc, requests.HTTPError) and exc.response is not None:
             status = exc.response.status_code
-        if page_path.exists():
-            logging.warning(
-                "Fetch failed for %s%s — using cached copy",
-                url,
-                f" (HTTP {status})" if status else "",
-            )
-            return page_path.read_text(encoding="utf-8")
-        raise
+        client = get_host_client(url, src)
+        if client and client.strategy.selenium_fallback:
+            selenium_html = client.fetch_html_with_selenium(url)
+            if selenium_html:
+                content = selenium_html
+            else:
+                content = None
+        else:
+            content = None
+        if content is None:
+            if page_path.exists():
+                logging.warning(
+                    "Fetch failed for %s%s — using cached copy",
+                    url,
+                    f" (HTTP {status})" if status else "",
+                )
+                return page_path.read_text(encoding="utf-8")
+            raise
     if content is None and page_path.exists():
         # Not modified -> reuse cached
         return page_path.read_text(encoding="utf-8")

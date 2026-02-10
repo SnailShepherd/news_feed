@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import contextlib
+import importlib.util
 import json
 import logging
 import os
@@ -411,12 +412,12 @@ class HostClient:
         if not force and self.strategy.capture_cookies and self._has_protection_cookies():
             LOGGER.info("Skipping Selenium warm-up for %s: protection cookies already loaded", self.host)
             return True
-        try:
-            from selenium import webdriver
-            from selenium.webdriver.chrome.options import Options as ChromeOptions
-        except Exception as exc:  # pragma: no cover - optional dependency missing
-            LOGGER.warning("Selenium not available for %s: %s", self.host, exc)
+        if importlib.util.find_spec("selenium") is None:
+            LOGGER.warning("Selenium not available for %s: missing dependency", self.host)
             return False
+
+        from selenium import webdriver
+        from selenium.webdriver.chrome.options import Options as ChromeOptions
 
         options = ChromeOptions()
         options.add_argument("--headless=new")
@@ -456,6 +457,62 @@ class HostClient:
         except Exception as exc:
             LOGGER.warning("Selenium warm-up failed for %s: %s", self.host, exc)
             return False
+        finally:
+            with contextlib.suppress(Exception):
+                if driver is not None:
+                    driver.quit()
+
+    def fetch_html_with_selenium(self, url: str) -> Optional[str]:
+        if not self.strategy.selenium_fallback:
+            return None
+        if importlib.util.find_spec("selenium") is None:
+            LOGGER.warning("Selenium not available for %s: missing dependency", self.host)
+            return None
+
+        from selenium import webdriver
+        from selenium.webdriver.chrome.options import Options as ChromeOptions
+
+        options = ChromeOptions()
+        options.add_argument("--headless=new")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        binary_location = os.environ.get("CHROME_BINARY")
+        if not binary_location:
+            for candidate in ("chromium-browser", "chromium", "google-chrome", "google-chrome-stable"):
+                binary_location = shutil.which(candidate)
+                if binary_location:
+                    break
+        if binary_location:
+            options.binary_location = binary_location
+            LOGGER.debug("Using Chrome binary for %s: %s", self.host, binary_location)
+        for extra in self.strategy.selenium_extra_options:
+            options.add_argument(extra)
+
+        driver = None
+        try:
+            driver = webdriver.Chrome(options=options)
+            driver.get(url)
+            time.sleep(self.strategy.selenium_wait)
+            html = driver.page_source or ""
+            cookies = driver.get_cookies()
+            if cookies:
+                self._session.cookies.clear()
+                for cookie in cookies:
+                    params = {k: cookie.get(k) for k in ["name", "value", "domain", "path", "secure", "expiry"]}
+                    if params.get("expiry") is not None:
+                        params["expires"] = params.pop("expiry")
+                    params = {k: v for k, v in params.items() if v is not None}
+                    self._session.cookies.set(**params)
+                self._store_cookies()
+            if html.strip():
+                LOGGER.info("Selenium HTML fetch success for %s", self.host)
+                return html
+            LOGGER.warning("Selenium HTML fetch returned empty page for %s", self.host)
+            return None
+        except Exception as exc:
+            LOGGER.warning("Selenium HTML fetch failed for %s: %s", self.host, exc)
+            return None
         finally:
             with contextlib.suppress(Exception):
                 if driver is not None:
