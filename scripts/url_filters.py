@@ -64,6 +64,8 @@ _HOST_ALLOW_LIST = {
     "www.minfin.gov.ru": (
         re.compile(r"^/ru/press-center/(?:news|press-relizy)/[^/?#]+(?:/[^/?#]+)*/?$", re.IGNORECASE),
     ),
+    "government.ru": (re.compile(r"^/news/\d+/?$"),),
+    "www.government.ru": (re.compile(r"^/news/\d+/?$"),),
 }
 
 _HOST_LISTING_HUBS = {
@@ -107,6 +109,9 @@ def is_listing_url(url: str | None, start_url: str | None = None) -> bool:
         return True
 
     if host_no_www == "minfin.gov.ru":
+        for key, value in query_pairs:
+            if key.lower() == "id_4" and value:
+                return False
         for key, _ in query_pairs:
             if key.lower() in {"ysclid", "yclid", "fbclid", "gclid", "search"}:
                 return True
