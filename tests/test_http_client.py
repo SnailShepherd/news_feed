@@ -218,7 +218,7 @@ def test_warmup_401_without_cookies_uses_selenium(monkeypatch):
     )
     selenium_called = {"count": 0}
 
-    def fake_selenium(url):
+    def fake_selenium(url, force=False):
         selenium_called["count"] += 1
         client._session.cookies.set("__ddgid", "value", domain="example.com", path="/")
         client._store_cookies()
@@ -247,7 +247,7 @@ def test_warmup_401_without_cookies_and_failed_selenium(monkeypatch):
         ]
     )
 
-    def fake_selenium(url):
+    def fake_selenium(url, force=False):
         return False
 
     monkeypatch.setattr(client, "_selenium_warmup", fake_selenium)
@@ -273,7 +273,7 @@ def test_retry_status_401_triggers_selenium(monkeypatch):
     )
     selenium_called = {"count": 0}
 
-    def fake_selenium(url):
+    def fake_selenium(url, force=False):
         selenium_called["count"] += 1
         return True
 

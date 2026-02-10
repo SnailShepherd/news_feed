@@ -204,6 +204,7 @@ class HostClient:
             "attempts": 0,
             "status": None,
             "error": None,
+            "attempt_log": [],
         }
 
         attempt = 0
@@ -216,7 +217,6 @@ class HostClient:
             proxy_cfg = proxies or next(proxies_cycle)
             request_headers = dict(headers)
             request_headers.update(self.strategy.extra_headers)
-            dns_started = time.monotonic()
             dns_ms = self._perform_dns_lookup(url)
             request_started = time.monotonic()
             try:
@@ -232,6 +232,24 @@ class HostClient:
                 if dns_ms is not None and metrics["response_ms"] is not None:
                     metrics["connect_ms"] = max(0.0, metrics["response_ms"] - dns_ms)
                 metrics["status"] = response.status_code
+                metrics["attempt_log"].append({
+                    "attempt": attempt,
+                    "status": response.status_code,
+                    "proxy": proxy_cfg,
+                    "dns_ms": dns_ms,
+                    "response_ms": metrics.get("response_ms"),
+                    "final_url": getattr(response, "url", url),
+                })
+                LOGGER.info(
+                    "Fetch attempt host=%s attempt=%d/%d status=%s dns_ms=%s response_ms=%.1f url=%s",
+                    self.host,
+                    attempt,
+                    max(1, self.strategy.max_attempts),
+                    response.status_code,
+                    f"{dns_ms:.1f}" if isinstance(dns_ms, (int, float)) else "n/a",
+                    float(metrics.get("response_ms") or 0.0),
+                    url,
+                )
                 if response.status_code in self.strategy.retry_statuses and attempt < self.strategy.max_attempts:
                     self._handle_retry_status(url, response.status_code)
                     self._backoff(attempt)
@@ -247,6 +265,8 @@ class HostClient:
                 err_text = str(exc)
                 errors.append(err_text)
                 metrics["error"] = err_text
+                metrics["attempt_log"].append({"attempt": attempt, "error": err_text, "proxy": proxy_cfg})
+                LOGGER.warning("Fetch attempt failed host=%s attempt=%d/%d url=%s error=%s", self.host, attempt, max(1, self.strategy.max_attempts), url, err_text)
                 should_switch = self._is_network_unreachable(exc)
                 if should_switch:
                     proxy_cfg = None  # ensure next iteration selects new proxy
@@ -259,6 +279,8 @@ class HostClient:
                 err_text = f"{exc.__class__.__name__}: {exc}"
                 errors.append(err_text)
                 metrics["error"] = err_text
+                metrics["attempt_log"].append({"attempt": attempt, "error": err_text, "proxy": proxy_cfg})
+                LOGGER.warning("Fetch attempt failed host=%s attempt=%d/%d url=%s error=%s", self.host, attempt, max(1, self.strategy.max_attempts), url, err_text)
                 if attempt >= self.strategy.max_attempts:
                     break
                 self._record_failure(err_text)
