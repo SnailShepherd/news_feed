@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import contextlib
+import importlib.util
 import json
 import logging
 import os
@@ -66,6 +67,8 @@ class RequestStrategy:
     warmup: Optional[WarmupConfig] = None
     selenium_fallback: bool = False
     selenium_wait: float = 5.0
+    selenium_wait_for: List[str] = field(default_factory=list)
+    selenium_scroll_steps: int = 0
     selenium_extra_options: List[str] = field(default_factory=list)
     capture_cookies: bool = True
     name: Optional[str] = None
@@ -145,6 +148,12 @@ def build_strategy_from_config(name: str, config: Dict[str, Any]) -> RequestStra
     strategy.selenium_fallback = bool(config.get("selenium_fallback"))
     if config.get("selenium_wait") is not None:
         strategy.selenium_wait = float(config["selenium_wait"])
+    wait_for = config.get("selenium_wait_for") or []
+    if isinstance(wait_for, (str, bytes)):
+        wait_for = [wait_for]
+    strategy.selenium_wait_for = [str(x) for x in wait_for if x]
+    if config.get("selenium_scroll_steps") is not None:
+        strategy.selenium_scroll_steps = max(0, int(config["selenium_scroll_steps"]))
     extra_options = config.get("selenium_extra_options") or []
     if extra_options:
         strategy.selenium_extra_options = [str(x) for x in extra_options]
@@ -405,18 +414,9 @@ class HostClient:
                 warmup_metrics.update({"mode": "selenium", "result": "selenium_failed"})
             raise SourceTemporarilyUnavailable(f"warm-up failed for {self.host}: {exc}")
 
-    def _selenium_warmup(self, url: str, force: bool = False) -> bool:
-        if not self.strategy.selenium_fallback:
-            return False
-        if not force and self.strategy.capture_cookies and self._has_protection_cookies():
-            LOGGER.info("Skipping Selenium warm-up for %s: protection cookies already loaded", self.host)
-            return True
-        try:
-            from selenium import webdriver
-            from selenium.webdriver.chrome.options import Options as ChromeOptions
-        except Exception as exc:  # pragma: no cover - optional dependency missing
-            LOGGER.warning("Selenium not available for %s: %s", self.host, exc)
-            return False
+
+    def _build_chrome_options(self):
+        from selenium.webdriver.chrome.options import Options as ChromeOptions
 
         options = ChromeOptions()
         options.add_argument("--headless=new")
@@ -434,28 +434,95 @@ class HostClient:
             LOGGER.debug("Using Chrome binary for %s: %s", self.host, binary_location)
         for extra in self.strategy.selenium_extra_options:
             options.add_argument(extra)
+        return options
+
+    def _apply_selenium_rendering(self, driver, url: str) -> None:
+        from selenium.webdriver.common.by import By
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+        from selenium.common.exceptions import TimeoutException
+
+        driver.get(url)
+        if self.strategy.selenium_wait > 0:
+            time.sleep(self.strategy.selenium_wait)
+
+        for selector in self.strategy.selenium_wait_for:
+            try:
+                WebDriverWait(driver, max(1.0, self.strategy.selenium_wait)).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, selector))
+                )
+            except TimeoutException:
+                LOGGER.debug("Selenium wait_for timeout for %s selector=%s", self.host, selector)
+
+        for _ in range(self.strategy.selenium_scroll_steps):
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(0.8)
+
+    def _apply_selenium_cookies(self, cookies: List[Dict[str, Any]]) -> None:
+        if not cookies:
+            return
+        self._session.cookies.clear()
+        for cookie in cookies:
+            params = {k: cookie.get(k) for k in ["name", "value", "domain", "path", "secure", "expiry"]}
+            if params.get("expiry") is not None:
+                params["expires"] = params.pop("expiry")
+            params = {k: v for k, v in params.items() if v is not None}
+            self._session.cookies.set(**params)
+        self._store_cookies()
+
+    def _selenium_warmup(self, url: str, force: bool = False) -> bool:
+        if not self.strategy.selenium_fallback:
+            return False
+        if not force and self.strategy.capture_cookies and self._has_protection_cookies():
+            LOGGER.info("Skipping Selenium warm-up for %s: protection cookies already loaded", self.host)
+            return True
+        if importlib.util.find_spec("selenium") is None:
+            LOGGER.warning("Selenium not available for %s: missing dependency", self.host)
+            return False
+
+        from selenium import webdriver
 
         driver = None
         try:
-            driver = webdriver.Chrome(options=options)
-            driver.get(url)
-            time.sleep(self.strategy.selenium_wait)
+            driver = webdriver.Chrome(options=self._build_chrome_options())
+            self._apply_selenium_rendering(driver, url)
             cookies = driver.get_cookies()
             if not cookies:
                 return False
-            self._session.cookies.clear()
-            for cookie in cookies:
-                params = {k: cookie.get(k) for k in ["name", "value", "domain", "path", "secure", "expiry"]}
-                if params.get("expiry") is not None:
-                    params["expires"] = params.pop("expiry")
-                params = {k: v for k, v in params.items() if v is not None}
-                self._session.cookies.set(**params)
-            self._store_cookies()
+            self._apply_selenium_cookies(cookies)
             LOGGER.info("Selenium warm-up success for %s", self.host)
             return True
         except Exception as exc:
             LOGGER.warning("Selenium warm-up failed for %s: %s", self.host, exc)
             return False
+        finally:
+            with contextlib.suppress(Exception):
+                if driver is not None:
+                    driver.quit()
+
+    def fetch_html_with_selenium(self, url: str) -> Optional[str]:
+        if not self.strategy.selenium_fallback:
+            return None
+        if importlib.util.find_spec("selenium") is None:
+            LOGGER.warning("Selenium not available for %s: missing dependency", self.host)
+            return None
+
+        from selenium import webdriver
+
+        driver = None
+        try:
+            driver = webdriver.Chrome(options=self._build_chrome_options())
+            self._apply_selenium_rendering(driver, url)
+            html = driver.page_source or ""
+            self._apply_selenium_cookies(driver.get_cookies())
+            if html.strip():
+                LOGGER.info("Selenium HTML fetch success for %s", self.host)
+                return html
+            LOGGER.warning("Selenium HTML fetch returned empty page for %s", self.host)
+            return None
+        except Exception as exc:
+            LOGGER.warning("Selenium HTML fetch failed for %s: %s", self.host, exc)
+            return None
         finally:
             with contextlib.suppress(Exception):
                 if driver is not None:

@@ -64,6 +64,63 @@
     "html_fallback_on_empty_api": true
   },
   {
+    "name": "Главгосэкспертиза России",
+    "base_url": "https://gge.ru",
+    "start_url": "https://gge.ru/press-center/news/",
+    "parse_embedded_links": true,
+    "include_patterns": [
+      "/press-center/news/"
+    ],
+    "exclude_regex": [
+      "^https?://(?:www\\.)?gge\\.ru/press-center/news/?$",
+      "^https?://(?:www\\.)?gge\\.ru/press-center/news/\\?"
+    ],
+    "link_min_text_len": 8,
+    "enabled": true,
+    "min_words": 80,
+    "content_selectors": [
+      ".news-detail__content",
+      ".article__content",
+      "[itemprop='articleBody']",
+      "article"
+    ],
+    "request_strategy": {
+      "connect_timeout": 6,
+      "read_timeout": 30,
+      "max_attempts": 4,
+      "backoff_factor": 1.5,
+      "retry_statuses": [
+        401,
+        403,
+        429,
+        500,
+        502,
+        503,
+        504
+      ],
+      "extra_headers": {
+        "Accept-Language": "ru-RU,ru;q=0.9,en;q=0.8",
+        "Referer": "https://gge.ru/"
+      },
+      "warmup": {
+        "url": "https://gge.ru/press-center/news/",
+        "delay": [
+          2,
+          4
+        ],
+        "timeout": 40
+      },
+      "selenium_fallback": true,
+      "selenium_wait": 6,
+      "selenium_wait_for": [
+        "a[href*=\"/press-center/news/\"]"
+      ],
+      "selenium_scroll_steps": 3,
+      "capture_cookies": true,
+      "record_path_on_success": true
+    }
+  },
+  {
     "name": "АНЦБ",
     "base_url": "http://ancb.ru",
     "start_url": "http://ancb.ru/publication",
@@ -160,6 +217,10 @@
       },
       "selenium_fallback": true,
       "selenium_wait": 5,
+      "selenium_wait_for": [
+        "a[href*=\"/20\"]"
+      ],
+      "selenium_scroll_steps": 4,
       "capture_cookies": true,
       "record_path_on_success": true
     }
@@ -234,6 +295,10 @@
       },
       "selenium_fallback": true,
       "selenium_wait": 5,
+      "selenium_wait_for": [
+        "a[href*=\"/20\"]"
+      ],
+      "selenium_scroll_steps": 4,
       "capture_cookies": true,
       "record_path_on_success": true
     }
@@ -331,6 +396,7 @@
     "name": "Российская газета: Экономика",
     "base_url": "https://rg.ru",
     "start_url": "https://rg.ru/rubric/tema/ekonomika",
+    "parse_embedded_links": true,
     "include_patterns": [
       "/20"
     ],
@@ -371,6 +437,10 @@
       },
       "selenium_fallback": true,
       "selenium_wait": 5,
+      "selenium_wait_for": [
+        "a[href*=\"/20\"]"
+      ],
+      "selenium_scroll_steps": 4,
       "capture_cookies": true,
       "record_path_on_success": true
     }
