@@ -457,6 +457,22 @@ def fetch_amp_if_available(
             logging.debug("AMP/mobile fetch failed for %s: %s", candidate, exc)
     return None, None
 
+
+def _count_index_candidates(index_html: str, parse_embedded_links: bool = False) -> int:
+    soup = BeautifulSoup(index_html, "xml" if index_html.lstrip().startswith("<?xml") else "html.parser")
+    count = 0
+    count += len(soup.find_all("a"))
+    for tag_name in ("loc", "link"):
+        for tag in soup.find_all(tag_name):
+            text = tag.get_text(strip=True)
+            if text.startswith("http"):
+                count += 1
+    if parse_embedded_links:
+        expanded_html = index_html.replace("\\/", "/")
+        count += len(re.findall(r'https?://[^\s"\'<>]+', expanded_html))
+        count += len(re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html))
+    return count
+
 # ---- Date parsing helpers ----
 RU_MONTHS = {
     "января": 1, "февраля": 2, "марта": 3, "апреля": 4, "мая": 5, "июня": 6,
@@ -1959,7 +1975,19 @@ def harvest_source(src: dict, force: bool = False):
                 candidate_url,
             )
             try:
-                index_html = fetch_page(candidate_url, src=src)
+                candidate_html = fetch_page(candidate_url, src=src)
+                candidate_raw_links = _count_index_candidates(
+                    candidate_html,
+                    parse_embedded_links=bool(src.get("parse_embedded_links")),
+                )
+                if candidate_raw_links == 0 and candidate_idx < len(start_candidates):
+                    logging.warning(
+                        "Index candidate produced 0 raw links for %s: %s -> trying fallback",
+                        src.get("name"),
+                        candidate_url,
+                    )
+                    continue
+                index_html = candidate_html
                 if candidate_url != src["start_url"]:
                     logging.info("Index fetched via fallback URL for %s: %s", src.get("name"), candidate_url)
                 start_url = candidate_url

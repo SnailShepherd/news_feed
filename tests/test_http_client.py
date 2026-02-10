@@ -77,7 +77,7 @@ def test_host_client_retries_and_records_metrics(monkeypatch):
     client = HostClient("example.com", strategy, state)
     client._session = DummySession(
         [
-            requests.exceptions.ConnectionError("Network is unreachable"),
+            requests.exceptions.ReadTimeout("read timeout"),
             DummyResponse(status_code=200, headers={"ETag": "abc"}),
         ]
     )
@@ -284,3 +284,32 @@ def test_retry_status_401_triggers_selenium(monkeypatch):
 
     assert response.status_code == 200
     assert selenium_called["count"] == 1
+
+
+def test_network_cooldown_short_circuits_retries(monkeypatch):
+    state = {}
+    strategy = RequestStrategy(max_attempts=6, backoff_factor=0)
+    client = HostClient("example.com", strategy, state)
+
+    class CountingSession(DummySession):
+        def __init__(self):
+            super().__init__([requests.exceptions.ConnectTimeout("connect timeout")])
+            self.calls = 0
+
+        def get(self, *args, **kwargs):
+            self.calls += 1
+            return super().get(*args, **kwargs)
+
+    session = CountingSession()
+    client._session = session
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    with pytest.raises(SourceTemporarilyUnavailable):
+        client.get("https://example.com/data", headers={})
+
+    assert session.calls == 1
+
+    with pytest.raises(SourceTemporarilyUnavailable) as exc_info:
+        client.get("https://example.com/data", headers={})
+
+    assert "network cooldown active" in str(exc_info.value)
