@@ -112,6 +112,10 @@
       },
       "selenium_fallback": true,
       "selenium_wait": 6,
+      "selenium_wait_for": [
+        "a[href*=\"/press-center/news/\"]"
+      ],
+      "selenium_scroll_steps": 3,
       "capture_cookies": true,
       "record_path_on_success": true
     }
@@ -213,6 +217,10 @@
       },
       "selenium_fallback": true,
       "selenium_wait": 5,
+      "selenium_wait_for": [
+        "a[href*=\"/20\"]"
+      ],
+      "selenium_scroll_steps": 4,
       "capture_cookies": true,
       "record_path_on_success": true
     }
@@ -287,6 +295,10 @@
       },
       "selenium_fallback": true,
       "selenium_wait": 5,
+      "selenium_wait_for": [
+        "a[href*=\"/20\"]"
+      ],
+      "selenium_scroll_steps": 4,
       "capture_cookies": true,
       "record_path_on_success": true
     }
@@ -425,6 +437,10 @@
       },
       "selenium_fallback": true,
       "selenium_wait": 5,
+      "selenium_wait_for": [
+        "a[href*=\"/20\"]"
+      ],
+      "selenium_scroll_steps": 4,
       "capture_cookies": true,
       "record_path_on_success": true
     }
