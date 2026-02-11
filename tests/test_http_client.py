@@ -350,3 +350,30 @@ def test_connect_timeout_without_proxy_pool_triggers_cooldown(monkeypatch):
 
     failures = state["host_state"]["example.com"].get("failures", {})
     assert failures.get("network_cooldown_until")
+
+
+def test_repeated_401_for_same_url_aborts_strategy_retries(monkeypatch):
+    state = {}
+    strategy = RequestStrategy(max_attempts=4, backoff_factor=0, retry_statuses=[401], selenium_fallback=True)
+    client = HostClient("example.com", strategy, state)
+    client._session = DummySession(
+        [
+            DummyResponse(status_code=401),
+            DummyResponse(status_code=401),
+        ]
+    )
+    selenium_called = {"count": 0}
+
+    def fake_selenium(url, force=False):
+        selenium_called["count"] += 1
+        return True
+
+    monkeypatch.setattr(client, "_selenium_warmup", fake_selenium)
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    with pytest.raises(SourceTemporarilyUnavailable):
+        client.get("https://example.com/data", headers={})
+
+    assert selenium_called["count"] == 1
+    metrics = state["stats"]["metrics"]["example.com"]
+    assert metrics["attempts"] == 2

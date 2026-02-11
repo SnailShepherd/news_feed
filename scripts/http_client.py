@@ -253,9 +253,14 @@ class HostClient:
                     url,
                 )
                 if response.status_code in self.strategy.retry_statuses and attempt < self.strategy.max_attempts:
-                    self._handle_retry_status(url, response.status_code)
-                    self._backoff(attempt)
-                    continue
+                    should_retry = self._handle_retry_status(url, response.status_code)
+                    if should_retry:
+                        self._backoff(attempt)
+                        continue
+                    retry_abort_msg = f"retry aborted for status={response.status_code}"
+                    errors.append(retry_abort_msg)
+                    metrics["error"] = retry_abort_msg
+                    break
                 response.raise_for_status()
                 self._record_success(url, response)
                 self._persist_metrics(metrics)
@@ -661,12 +666,20 @@ class HostClient:
             return None
         return (time.monotonic() - start) * 1000
 
-    def _handle_retry_status(self, url: str, status_code: int) -> None:
+    def _handle_retry_status(self, url: str, status_code: int) -> bool:
         LOGGER.warning("Status %s for %s -> retry via strategy", status_code, url)
         if status_code in {401, 403, 404} and self.strategy.selenium_fallback:
-            if self._selenium_warmup(url, force=True):
-                return
+            failures = self.state_root.setdefault("failures", {})
+            challenge_retry = failures.setdefault("challenge_retry", {})
+            now = time.time()
+            last_ts = challenge_retry.get(url)
+            if last_ts and (now - float(last_ts)) < 120:
+                LOGGER.warning("Skip repeated anti-bot warm-up for %s: %s", self.host, url)
+                return False
+            challenge_retry[url] = now
+            return bool(self._selenium_warmup(url, force=True))
         self._reset_session()
+        return True
 
     def _reset_session(self) -> None:
         self._session.close()

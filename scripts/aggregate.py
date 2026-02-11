@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os, re, json, logging, pathlib, sys, hashlib, argparse, random
+import os, re, json, logging, pathlib, sys, hashlib, argparse, random, html
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse, parse_qsl, urlencode
 
@@ -244,18 +244,44 @@ def _get_host_for_source(src: dict | None) -> str | None:
     return urlparse(base).netloc
 
 
+def _normalize_host(host: str | None) -> str:
+    if not host:
+        return ""
+    host = host.lower().strip()
+    if host.startswith("www."):
+        host = host[4:]
+    return host
+
+
 def get_host_client(url: str, src: dict | None = None) -> HostClient | None:
-    host = urlparse(url).netloc
+    request_host = urlparse(url).netloc
     src_host = _get_host_for_source(src)
-    if src_host:
-        host = src_host
-    strategy = HOST_STRATEGIES.get(host)
+
+    candidate_hosts: list[str] = []
+
+    for raw in [request_host, _normalize_host(request_host), src_host, _normalize_host(src_host)]:
+        if not raw:
+            continue
+        if raw not in candidate_hosts:
+            candidate_hosts.append(raw)
+
+    # For cross-domain article links found inside a source index (e.g. rg.ru -> ria.ru),
+    # do not force the source strategy to unrelated hosts.
+    req_norm = _normalize_host(request_host)
+    src_norm = _normalize_host(src_host)
+    if req_norm and src_norm and req_norm != src_norm:
+        candidate_hosts = [h for h in candidate_hosts if _normalize_host(h) == req_norm]
+
+    strategy_host = next((h for h in candidate_hosts if h in HOST_STRATEGIES), None)
+    if not strategy_host:
+        return None
+    strategy = HOST_STRATEGIES.get(strategy_host)
     if not strategy:
         return None
-    client = HOST_CLIENTS.get(host)
+    client = HOST_CLIENTS.get(strategy_host)
     if client is None:
-        client = HostClient(host, strategy, STATE)
-        HOST_CLIENTS[host] = client
+        client = HostClient(strategy_host, strategy, STATE)
+        HOST_CLIENTS[strategy_host] = client
     return client
 
 
@@ -468,10 +494,29 @@ def _count_index_candidates(index_html: str, parse_embedded_links: bool = False)
             if text.startswith("http"):
                 count += 1
     if parse_embedded_links:
-        expanded_html = index_html.replace("\\/", "/")
-        count += len(re.findall(r'https?://[^\s"\'<>]+', expanded_html))
-        count += len(re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html))
+        for expanded_html in _embedded_text_variants(index_html):
+            count += len(re.findall(r'https?://[^\s"\'<>]+', expanded_html))
+            count += len(re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html))
     return count
+
+
+def _embedded_text_variants(index_html: str) -> list[str]:
+    """Build variants for pages where links are present only inside escaped blobs."""
+
+    variants = [index_html]
+    normalized = index_html.replace("\\/", "/")
+    if normalized != index_html:
+        variants.append(normalized)
+
+    unescaped_quotes = normalized.replace('\\"', '"').replace("\\'", "'")
+    if unescaped_quotes not in variants:
+        variants.append(unescaped_quotes)
+
+    html_unescaped = html.unescape(unescaped_quotes)
+    if html_unescaped not in variants:
+        variants.append(html_unescaped)
+
+    return variants
 
 # ---- Date parsing helpers ----
 RU_MONTHS = {
@@ -2192,15 +2237,15 @@ def harvest_source(src: dict, force: bool = False):
 
     # Some protected/dynamic pages expose URLs only inside JSON blobs (e.g. script data).
     if src.get("parse_embedded_links"):
-        expanded_html = index_html.replace("\\/", "/")
-        for match in re.findall(r'https?://[^\s"\'<>]+', expanded_html):
-            raw_candidates.append((match, "", False))
-
         include_snippets = [str(pattern) for pattern in include_patterns if pattern]
-        for rel in re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html):
-            if include_snippets and not any(snippet in rel for snippet in include_snippets):
-                continue
-            raw_candidates.append((rel, "", False))
+        for expanded_html in _embedded_text_variants(index_html):
+            for match in re.findall(r'https?://[^\s"\'<>]+', expanded_html):
+                raw_candidates.append((match, "", False))
+
+            for rel in re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html):
+                if include_snippets and not any(snippet in rel for snippet in include_snippets):
+                    continue
+                raw_candidates.append((rel, "", False))
 
     base_host = urlparse(src["base_url"]).netloc.replace("www.", "")
     for raw_href, link_text, is_anchor in raw_candidates:
