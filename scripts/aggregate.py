@@ -1976,10 +1976,26 @@ def harvest_source(src: dict, force: bool = False):
             )
             try:
                 candidate_html = fetch_page(candidate_url, src=src)
+                candidate_cache_path = PAGES_DIR / cache_key_for(candidate_url)
                 candidate_raw_links = _count_index_candidates(
                     candidate_html,
                     parse_embedded_links=bool(src.get("parse_embedded_links")),
                 )
+                if candidate_raw_links == 0 and candidate_cache_path.exists():
+                    cached_candidate_html = candidate_cache_path.read_text(encoding="utf-8")
+                    cached_raw_links = _count_index_candidates(
+                        cached_candidate_html,
+                        parse_embedded_links=bool(src.get("parse_embedded_links")),
+                    )
+                    if cached_raw_links > 0:
+                        logging.warning(
+                            "Index candidate empty for %s: %s -> using cached index with %d raw links",
+                            src.get("name"),
+                            candidate_url,
+                            cached_raw_links,
+                        )
+                        candidate_html = cached_candidate_html
+                        candidate_raw_links = cached_raw_links
                 if candidate_raw_links == 0 and candidate_idx < len(start_candidates):
                     logging.warning(
                         "Index candidate produced 0 raw links for %s: %s -> trying fallback",

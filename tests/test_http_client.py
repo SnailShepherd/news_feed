@@ -313,3 +313,40 @@ def test_network_cooldown_short_circuits_retries(monkeypatch):
         client.get("https://example.com/data", headers={})
 
     assert "network cooldown active" in str(exc_info.value)
+
+
+def test_connect_timeout_with_proxy_pool_does_not_trigger_immediate_cooldown(monkeypatch):
+    state = {}
+    strategy = RequestStrategy(
+        max_attempts=2,
+        backoff_factor=0,
+        proxies=[{"http": "http://proxy-1", "https": "http://proxy-1"}],
+    )
+    client = HostClient("example.com", strategy, state)
+    client._session = DummySession(
+        [
+            requests.exceptions.ConnectTimeout("connect timeout"),
+            DummyResponse(status_code=200),
+        ]
+    )
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    response = client.get("https://example.com/data", headers={})
+
+    assert response.status_code == 200
+    failures = state["host_state"]["example.com"].get("failures", {})
+    assert not failures.get("network_cooldown_until")
+
+
+def test_connect_timeout_without_proxy_pool_triggers_cooldown(monkeypatch):
+    state = {}
+    strategy = RequestStrategy(max_attempts=3, backoff_factor=0)
+    client = HostClient("example.com", strategy, state)
+    client._session = DummySession([requests.exceptions.ConnectTimeout("connect timeout")])
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    with pytest.raises(SourceTemporarilyUnavailable):
+        client.get("https://example.com/data", headers={})
+
+    failures = state["host_state"]["example.com"].get("failures", {})
+    assert failures.get("network_cooldown_until")

@@ -269,11 +269,13 @@ class HostClient:
                 metrics["error"] = err_text
                 metrics["attempt_log"].append({"attempt": attempt, "error": err_text, "proxy": proxy_cfg})
                 LOGGER.warning("Fetch attempt failed host=%s attempt=%d/%d url=%s error=%s", self.host, attempt, max(1, self.strategy.max_attempts), url, err_text)
-                should_switch = self._is_network_unreachable(exc)
-                if should_switch:
-                    self._activate_network_cooldown(err_text)
-                    break
-                if self._is_connect_timeout(exc):
+                should_cooldown = self._should_activate_network_cooldown(
+                    exc,
+                    attempt=attempt,
+                    proxy_cfg=proxy_cfg,
+                    explicit_proxies=proxies,
+                )
+                if should_cooldown:
                     self._activate_network_cooldown(err_text)
                     break
                 if attempt >= self.strategy.max_attempts:
@@ -621,6 +623,31 @@ class HostClient:
         if isinstance(exc, requests.exceptions.ConnectTimeout):
             return True
         return "connect timeout" in str(exc).lower()
+
+    def _should_activate_network_cooldown(
+        self,
+        exc: Exception,
+        attempt: int,
+        proxy_cfg: Optional[Dict[str, str]],
+        explicit_proxies: Optional[Dict[str, str]],
+    ) -> bool:
+        if not (self._is_network_unreachable(exc) or self._is_connect_timeout(exc)):
+            return False
+
+        max_attempts = max(1, self.strategy.max_attempts)
+        if attempt >= max_attempts:
+            return True
+
+        # When a proxy pool is configured, do not cooldown the host before trying
+        # the remaining proxy attempts.
+        if explicit_proxies is None and self.strategy.proxies:
+            return False
+
+        # Single explicit proxy for this request should also get full retry window.
+        if explicit_proxies is not None and proxy_cfg is not None and attempt < max_attempts:
+            return False
+
+        return True
 
     def _perform_dns_lookup(self, url: str) -> Optional[float]:
         host = requests.utils.urlparse(url).hostname
