@@ -77,7 +77,7 @@ def test_host_client_retries_and_records_metrics(monkeypatch):
     client = HostClient("example.com", strategy, state)
     client._session = DummySession(
         [
-            requests.exceptions.ConnectionError("Network is unreachable"),
+            requests.exceptions.ReadTimeout("read timeout"),
             DummyResponse(status_code=200, headers={"ETag": "abc"}),
         ]
     )
@@ -218,7 +218,7 @@ def test_warmup_401_without_cookies_uses_selenium(monkeypatch):
     )
     selenium_called = {"count": 0}
 
-    def fake_selenium(url):
+    def fake_selenium(url, force=False):
         selenium_called["count"] += 1
         client._session.cookies.set("__ddgid", "value", domain="example.com", path="/")
         client._store_cookies()
@@ -247,7 +247,7 @@ def test_warmup_401_without_cookies_and_failed_selenium(monkeypatch):
         ]
     )
 
-    def fake_selenium(url):
+    def fake_selenium(url, force=False):
         return False
 
     monkeypatch.setattr(client, "_selenium_warmup", fake_selenium)
@@ -273,7 +273,7 @@ def test_retry_status_401_triggers_selenium(monkeypatch):
     )
     selenium_called = {"count": 0}
 
-    def fake_selenium(url):
+    def fake_selenium(url, force=False):
         selenium_called["count"] += 1
         return True
 
@@ -284,3 +284,69 @@ def test_retry_status_401_triggers_selenium(monkeypatch):
 
     assert response.status_code == 200
     assert selenium_called["count"] == 1
+
+
+def test_network_cooldown_short_circuits_retries(monkeypatch):
+    state = {}
+    strategy = RequestStrategy(max_attempts=6, backoff_factor=0)
+    client = HostClient("example.com", strategy, state)
+
+    class CountingSession(DummySession):
+        def __init__(self):
+            super().__init__([requests.exceptions.ConnectTimeout("connect timeout")])
+            self.calls = 0
+
+        def get(self, *args, **kwargs):
+            self.calls += 1
+            return super().get(*args, **kwargs)
+
+    session = CountingSession()
+    client._session = session
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    with pytest.raises(SourceTemporarilyUnavailable):
+        client.get("https://example.com/data", headers={})
+
+    assert session.calls == 1
+
+    with pytest.raises(SourceTemporarilyUnavailable) as exc_info:
+        client.get("https://example.com/data", headers={})
+
+    assert "network cooldown active" in str(exc_info.value)
+
+
+def test_connect_timeout_with_proxy_pool_does_not_trigger_immediate_cooldown(monkeypatch):
+    state = {}
+    strategy = RequestStrategy(
+        max_attempts=2,
+        backoff_factor=0,
+        proxies=[{"http": "http://proxy-1", "https": "http://proxy-1"}],
+    )
+    client = HostClient("example.com", strategy, state)
+    client._session = DummySession(
+        [
+            requests.exceptions.ConnectTimeout("connect timeout"),
+            DummyResponse(status_code=200),
+        ]
+    )
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    response = client.get("https://example.com/data", headers={})
+
+    assert response.status_code == 200
+    failures = state["host_state"]["example.com"].get("failures", {})
+    assert not failures.get("network_cooldown_until")
+
+
+def test_connect_timeout_without_proxy_pool_triggers_cooldown(monkeypatch):
+    state = {}
+    strategy = RequestStrategy(max_attempts=3, backoff_factor=0)
+    client = HostClient("example.com", strategy, state)
+    client._session = DummySession([requests.exceptions.ConnectTimeout("connect timeout")])
+    monkeypatch.setattr(time, "sleep", lambda *_args, **_kwargs: None)
+
+    with pytest.raises(SourceTemporarilyUnavailable):
+        client.get("https://example.com/data", headers={})
+
+    failures = state["host_state"]["example.com"].get("failures", {})
+    assert failures.get("network_cooldown_until")
