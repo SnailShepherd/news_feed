@@ -118,7 +118,10 @@
       "selenium_scroll_steps": 3,
       "capture_cookies": true,
       "record_path_on_success": true
-    }
+    },
+    "fallback_start_urls": [
+      "https://www.gge.ru/press-center/news/"
+    ]
   },
   {
     "name": "АНЦБ",
@@ -443,6 +446,9 @@
       "selenium_scroll_steps": 4,
       "capture_cookies": true,
       "record_path_on_success": true
-    }
+    },
+    "fallback_start_urls": [
+      "https://rg.ru/xml/index.xml"
+    ]
   }
 ]

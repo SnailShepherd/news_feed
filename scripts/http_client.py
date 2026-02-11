@@ -20,6 +20,7 @@ from requests.adapters import HTTPAdapter
 
 
 LOGGER = logging.getLogger(__name__)
+NETWORK_COOLDOWN_SECONDS = int(os.environ.get("NEWSFEED_NETWORK_COOLDOWN_SECONDS", "900"))
 
 DEFAULT_USER_AGENT = os.environ.get(
     "NEWSFEED_USER_AGENT",
@@ -195,6 +196,7 @@ class HostClient:
     # Public API ---------------------------------------------------------
     def get(self, url: str, headers: Dict[str, str], allow_redirects: bool = True, timeout: Optional[Tuple[float, float]] = None,
             proxies: Optional[Dict[str, str]] = None) -> Response:
+        self._raise_if_network_cooldown()
         self._ensure_warmup(url)
         timeout_value = timeout or self.strategy.timeout
         metrics = {
@@ -204,6 +206,7 @@ class HostClient:
             "attempts": 0,
             "status": None,
             "error": None,
+            "attempt_log": [],
         }
 
         attempt = 0
@@ -216,7 +219,6 @@ class HostClient:
             proxy_cfg = proxies or next(proxies_cycle)
             request_headers = dict(headers)
             request_headers.update(self.strategy.extra_headers)
-            dns_started = time.monotonic()
             dns_ms = self._perform_dns_lookup(url)
             request_started = time.monotonic()
             try:
@@ -232,10 +234,33 @@ class HostClient:
                 if dns_ms is not None and metrics["response_ms"] is not None:
                     metrics["connect_ms"] = max(0.0, metrics["response_ms"] - dns_ms)
                 metrics["status"] = response.status_code
+                metrics["attempt_log"].append({
+                    "attempt": attempt,
+                    "status": response.status_code,
+                    "proxy": proxy_cfg,
+                    "dns_ms": dns_ms,
+                    "response_ms": metrics.get("response_ms"),
+                    "final_url": getattr(response, "url", url),
+                })
+                LOGGER.debug(
+                    "Fetch attempt host=%s attempt=%d/%d status=%s dns_ms=%s response_ms=%.1f url=%s",
+                    self.host,
+                    attempt,
+                    max(1, self.strategy.max_attempts),
+                    response.status_code,
+                    f"{dns_ms:.1f}" if isinstance(dns_ms, (int, float)) else "n/a",
+                    float(metrics.get("response_ms") or 0.0),
+                    url,
+                )
                 if response.status_code in self.strategy.retry_statuses and attempt < self.strategy.max_attempts:
-                    self._handle_retry_status(url, response.status_code)
-                    self._backoff(attempt)
-                    continue
+                    should_retry = self._handle_retry_status(url, response.status_code)
+                    if should_retry:
+                        self._backoff(attempt)
+                        continue
+                    retry_abort_msg = f"retry aborted for status={response.status_code}"
+                    errors.append(retry_abort_msg)
+                    metrics["error"] = retry_abort_msg
+                    break
                 response.raise_for_status()
                 self._record_success(url, response)
                 self._persist_metrics(metrics)
@@ -247,9 +272,17 @@ class HostClient:
                 err_text = str(exc)
                 errors.append(err_text)
                 metrics["error"] = err_text
-                should_switch = self._is_network_unreachable(exc)
-                if should_switch:
-                    proxy_cfg = None  # ensure next iteration selects new proxy
+                metrics["attempt_log"].append({"attempt": attempt, "error": err_text, "proxy": proxy_cfg})
+                LOGGER.warning("Fetch attempt failed host=%s attempt=%d/%d url=%s error=%s", self.host, attempt, max(1, self.strategy.max_attempts), url, err_text)
+                should_cooldown = self._should_activate_network_cooldown(
+                    exc,
+                    attempt=attempt,
+                    proxy_cfg=proxy_cfg,
+                    explicit_proxies=proxies,
+                )
+                if should_cooldown:
+                    self._activate_network_cooldown(err_text)
+                    break
                 if attempt >= self.strategy.max_attempts:
                     break
                 self._record_failure(err_text)
@@ -259,6 +292,8 @@ class HostClient:
                 err_text = f"{exc.__class__.__name__}: {exc}"
                 errors.append(err_text)
                 metrics["error"] = err_text
+                metrics["attempt_log"].append({"attempt": attempt, "error": err_text, "proxy": proxy_cfg})
+                LOGGER.warning("Fetch attempt failed host=%s attempt=%d/%d url=%s error=%s", self.host, attempt, max(1, self.strategy.max_attempts), url, err_text)
                 if attempt >= self.strategy.max_attempts:
                     break
                 self._record_failure(err_text)
@@ -562,6 +597,23 @@ class HostClient:
         failures["last_error"] = reason
         failures["last_ts"] = time.time()
 
+    def _activate_network_cooldown(self, reason: str) -> None:
+        failures = self.state_root.setdefault("failures", {})
+        failures["network_cooldown_until"] = time.time() + NETWORK_COOLDOWN_SECONDS
+        failures["last_error"] = reason
+        failures["last_ts"] = time.time()
+
+    def _raise_if_network_cooldown(self) -> None:
+        failures = self.state_root.get("failures") or {}
+        until = failures.get("network_cooldown_until")
+        if not until:
+            return
+        if until <= time.time():
+            failures.pop("network_cooldown_until", None)
+            return
+        wait = int(max(1, until - time.time()))
+        raise SourceTemporarilyUnavailable(f"{self.host}: host network cooldown active ({wait}s left)")
+
     def _persist_metrics(self, metrics: Dict[str, Any]) -> None:
         metrics_copy = json.loads(json.dumps(metrics))  # ensure JSON serialisable (floats -> floats)
         self.stats_root.update(metrics_copy)
@@ -570,6 +622,37 @@ class HostClient:
     def _is_network_unreachable(exc: Exception) -> bool:
         message = str(exc)
         return "Network is unreachable" in message or "ENETUNREACH" in message
+
+    @staticmethod
+    def _is_connect_timeout(exc: Exception) -> bool:
+        if isinstance(exc, requests.exceptions.ConnectTimeout):
+            return True
+        return "connect timeout" in str(exc).lower()
+
+    def _should_activate_network_cooldown(
+        self,
+        exc: Exception,
+        attempt: int,
+        proxy_cfg: Optional[Dict[str, str]],
+        explicit_proxies: Optional[Dict[str, str]],
+    ) -> bool:
+        if not (self._is_network_unreachable(exc) or self._is_connect_timeout(exc)):
+            return False
+
+        max_attempts = max(1, self.strategy.max_attempts)
+        if attempt >= max_attempts:
+            return True
+
+        # When a proxy pool is configured, do not cooldown the host before trying
+        # the remaining proxy attempts.
+        if explicit_proxies is None and self.strategy.proxies:
+            return False
+
+        # Single explicit proxy for this request should also get full retry window.
+        if explicit_proxies is not None and proxy_cfg is not None and attempt < max_attempts:
+            return False
+
+        return True
 
     def _perform_dns_lookup(self, url: str) -> Optional[float]:
         host = requests.utils.urlparse(url).hostname
@@ -583,12 +666,20 @@ class HostClient:
             return None
         return (time.monotonic() - start) * 1000
 
-    def _handle_retry_status(self, url: str, status_code: int) -> None:
+    def _handle_retry_status(self, url: str, status_code: int) -> bool:
         LOGGER.warning("Status %s for %s -> retry via strategy", status_code, url)
         if status_code in {401, 403, 404} and self.strategy.selenium_fallback:
-            if self._selenium_warmup(url, force=True):
-                return
+            failures = self.state_root.setdefault("failures", {})
+            challenge_retry = failures.setdefault("challenge_retry", {})
+            now = time.time()
+            last_ts = challenge_retry.get(url)
+            if last_ts and (now - float(last_ts)) < 120:
+                LOGGER.warning("Skip repeated anti-bot warm-up for %s: %s", self.host, url)
+                return False
+            challenge_retry[url] = now
+            return bool(self._selenium_warmup(url, force=True))
         self._reset_session()
+        return True
 
     def _reset_session(self) -> None:
         self._session.close()
