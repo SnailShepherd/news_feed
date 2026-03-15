@@ -251,7 +251,7 @@
     "https://www.metalinfo.ru/ru/news/181113": {},
     "https://www.metalinfo.ru/ru/news/181137": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sun, 15 Mar 2026 09:32:54 GMT"
+      "Last-Modified": "Sun, 15 Mar 2026 12:44:34 GMT"
     },
     "https://www.pnp.ru/economics/issledovatelskie-kompanii-predlozhili-osvobodit-ot-goskontrolya.html": {
       "Last-Modified": "Wed, 11 Feb 2026 03:32:28 GMT"
@@ -320,7 +320,7 @@
       "Last-Modified": "Wed, 11 Feb 2026 03:33:30 GMT"
     },
     "https://erzrf.ru/news/news-archive": {
-      "ETag": "W/\"26947-w6hJTIsEFAMT/yawFhMuSf0p7So\""
+      "ETag": "W/\"26945-KukyrDmxctHM3UfN+uj8Wu9HaCU\""
     },
     "https://erzrf.ru/news/rosreyestr-v-tretyem-kvartale-na-ipotechnom-rynke-stolichnykh-novostroyek-zafiksirovano-snizheniye?tag=%D0%A0%D0%BE%D1%81%D1%80%D0%B5%D0%B5%D1%81%D1%82%D1%80": {
       "ETag": "W/\"27196-uXWClowdDCdLhLQUOBSMasqmEVI\""
@@ -46813,7 +46813,31 @@
     },
     "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html": {
       "ETag": "\"1q5qejvmt31upa\""
-    }
+    },
+    "https://ardexpert.ru/article/28856": {},
+    "http://ancb.ru/publication/read/21129": {},
+    "https://www.pnp.ru/economics/deputaty-predlozhili-vvesti-zapret-na-nachislenie-procentov-po-kreditu-do-oformleniya-nasledstva.html": {
+      "Last-Modified": "Sun, 15 Mar 2026 12:44:46 GMT"
+    },
+    "https://rg.ru/2026/03/15/dermatolog-egorova-rasskazala-o-sindrome-talogo-snega-i-ego-vliianii-na-kozhu.html": {
+      "ETag": "\"kuwj68v3eq1xzs\""
+    },
+    "https://rg.ru/2026/03/15/patriarh-kirill-my-zhivem-vo-vremena-zakonchivshihsia-potriasenij.html": {
+      "ETag": "\"7z3fg5qzg31n9j\""
+    },
+    "https://rg.ru/2026/03/15/patriarh-kirill-napomnil-ob-obretenii-ikony-derzhavnaia.html": {
+      "ETag": "\"9e37hx3ity1oxt\""
+    },
+    "https://rg.ru/2026/03/15/shvejcariia-otklonila-2-zaprosa-na-prolet-voennyh-samoletov-ssha-nad-ee-territoriej.html": {
+      "ETag": "\"aogz2mnu6u1ons\""
+    },
+    "https://rg.ru/2026/03/15/baza-turisty-iz-rf-otravilis-v-tailande-vtoroj-raz-za-mesiac.html": {
+      "ETag": "\"laek43g9fl1mr9\""
+    },
+    "https://rg.ru/2026/03/15/lyzhnica-bagiian-zavoevala-trete-zoloto-na-paralimpiade-2026.html": {
+      "ETag": "\"4drs87wb441oz9\""
+    },
+    "https://t.me/mvd_rb/20893": {}
   },
   "stats": {
     "cooldowns": {},
@@ -46827,9 +46851,9 @@
     ],
     "metrics": {
       "www.gostinfo.ru": {
-        "dns_ms": 599.649262000014,
-        "connect_ms": 4660.427423999978,
-        "response_ms": 5260.076685999991,
+        "dns_ms": 614.2418900000166,
+        "connect_ms": 483.4889209999744,
+        "response_ms": 1097.730810999991,
         "attempts": 1,
         "status": 200,
         "error": null,
@@ -46838,24 +46862,27 @@
             "attempt": 1,
             "status": 200,
             "proxy": null,
-            "dns_ms": 599.649262000014,
-            "response_ms": 5260.076685999991,
+            "dns_ms": 614.2418900000166,
+            "response_ms": 1097.730810999991,
             "final_url": "https://www.gostinfo.ru/News/List"
           }
         ]
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
+        "dns_ms": 289.1364900000042,
+        "connect_ms": 42.11933400000589,
+        "response_ms": 331.2558240000101,
         "attempts": 1,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5c6f228d60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": 200,
+        "error": null,
         "attempt_log": [
           {
             "attempt": 1,
-            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5c6f228d60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-            "proxy": null
+            "status": 200,
+            "proxy": null,
+            "dns_ms": 289.1364900000042,
+            "response_ms": 331.2558240000101,
+            "final_url": "https://ancb.ru/publication/read/21129"
           }
         ]
       },
@@ -46866,9 +46893,9 @@
           "result": "http_success",
           "cookies": []
         },
-        "dns_ms": 793.8949279999861,
-        "connect_ms": 36.92707900000869,
-        "response_ms": 830.8220069999948,
+        "dns_ms": 6435.387668000004,
+        "connect_ms": 0.0,
+        "response_ms": 6070.498491000024,
         "attempts": 1,
         "status": 200,
         "error": null,
@@ -46877,8 +46904,8 @@
             "attempt": 1,
             "status": 200,
             "proxy": null,
-            "dns_ms": 793.8949279999861,
-            "response_ms": 830.8220069999948,
+            "dns_ms": 6435.387668000004,
+            "response_ms": 6070.498491000024,
             "final_url": "https://minfin.gov.ru/ru/press-center/"
           }
         ]
@@ -46897,9 +46924,9 @@
             "usr_abt_grp"
           ]
         },
-        "dns_ms": 349.3658659999994,
-        "connect_ms": 1069.3834530000004,
-        "response_ms": 1418.7493189999998,
+        "dns_ms": 4164.767535999999,
+        "connect_ms": 0.0,
+        "response_ms": 302.6136630000167,
         "attempts": 1,
         "status": 200,
         "error": null,
@@ -46908,24 +46935,27 @@
             "attempt": 1,
             "status": 200,
             "proxy": null,
-            "dns_ms": 349.3658659999994,
-            "response_ms": 1418.7493189999998,
-            "final_url": "https://www.pnp.ru/economics/"
+            "dns_ms": 4164.767535999999,
+            "response_ms": 302.6136630000167,
+            "final_url": "https://www.pnp.ru/economics/deputaty-predlozhili-vvesti-zapret-na-nachislenie-procentov-po-kreditu-do-oformleniya-nasledstva.html"
           }
         ]
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
+        "dns_ms": 741.7069749999996,
+        "connect_ms": 0.0,
+        "response_ms": 674.6539859999814,
         "attempts": 1,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f5c6f1d2ad0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": 200,
+        "error": null,
         "attempt_log": [
           {
             "attempt": 1,
-            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f5c6f1d2ad0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-            "proxy": null
+            "status": 200,
+            "proxy": null,
+            "dns_ms": 741.7069749999996,
+            "response_ms": 674.6539859999814,
+            "final_url": "https://ria-stk.ru/news/vse-novosti.php"
           }
         ]
       },
@@ -46938,20 +46968,28 @@
             "qrator_jsr"
           ]
         },
-        "dns_ms": 2.5880759999949987,
-        "connect_ms": 627.305358000001,
-        "response_ms": 629.893433999996,
-        "attempts": 1,
-        "status": 200,
-        "error": null,
+        "dns_ms": 887.7961450002658,
+        "connect_ms": 0.0,
+        "response_ms": 29.30237999999008,
+        "attempts": 2,
+        "status": 401,
+        "error": "retry aborted for status=401",
         "attempt_log": [
           {
             "attempt": 1,
-            "status": 200,
+            "status": 401,
             "proxy": null,
-            "dns_ms": 2.5880759999949987,
-            "response_ms": 629.893433999996,
-            "final_url": "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html"
+            "dns_ms": 151.1877140001161,
+            "response_ms": 29.00820400009252,
+            "final_url": "https://rg.ru/2026/03/15/proshli-bolee-400-tysiach-kilometrov-nazvany-samye-nadezhnye-modeli-toyota.html/amp"
+          },
+          {
+            "attempt": 2,
+            "status": 401,
+            "proxy": null,
+            "dns_ms": 887.7961450002658,
+            "response_ms": 29.30237999999008,
+            "final_url": "https://rg.ru/2026/03/15/proshli-bolee-400-tysiach-kilometrov-nazvany-samye-nadezhnye-modeli-toyota.html/amp"
           }
         ]
       },
@@ -46965,27 +47003,27 @@
         }
       }
     },
-    "last_run": "2026-03-15T09:35:52.793270+00:00",
+    "last_run": "2026-03-15T13:22:35.573673+00:00",
     "items": 500
   },
   "index_hash": {
     "https://notim.ru": "32ae211f891ccd4324408b9a2e65ad817760be5bea54193fbb620407a751b7ed",
-    "https://ardexpert.ru/article": "2d5a829f4de6b4caa0cfb651eade64ed77f05f38717bc6846ff86cf8c7c45cd1",
+    "https://ardexpert.ru/article": "aedcfd636703530c2a44c41cc3f3048f0e41b838ac5dd4be21a413da7affb4bf",
     "https://www.gostinfo.ru/News/List": "78e1835f03ea5a83d86e24bee61862f70b6a27f8dbc22bc9487ecff70f6b572a",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "f67b71631575f4bca935f3176af5509fff8096dd74711755d5653a535f64af8a",
-    "http://ancb.ru/publication": "ef1c9cf79e036aa44ae584dd084e327a9455dbba91428724c775a4671e35fcba",
-    "https://eec.eaeunion.org/news/": "7138a61089f31f8530ea3c55dd4a78f0a05b9bb2c0a5520342f706f8a136e9c1",
-    "https://minfin.gov.ru/ru/press-center/": "acecd12e03384c125f6b1b19747ee9ab3958335c8359223ec309e33eb956e060",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "1d8a157f241b5325bcd65f1056db473e30b41e46101f3c9afa296fdc8484fb73",
-    "https://www.metalinfo.ru/ru/news": "cc08bc2835e54a8ad781355cc4a8419d9f52c1db9822874d525101351ebbfb06",
-    "https://www.pnp.ru/economics/": "3bc1706579731370531cdf9c0746011c09dc201c31c7d836475616fd040f5314",
-    "https://erzrf.ru/news/news-archive": "8ae2ba24e15a9d3c3e63d99136560e4c1ddfdd0a075d07982a215833832da503",
-    "https://ria-stk.ru/news/vse-novosti.php": "d92ffbcc37f12c3d0e510ce230d39c03a81a7741d4e45c1ca6b18d61b3bbe287",
-    "http://government.ru/news/": "656d6e27057eb22e2c70e689a1865846c3a710c9573904072d3fb95fdc06298a",
-    "https://stroygaz.ru/news/": "c9f2e8146dcc47a2e667a9e6ea83523600dc2efa01710a9d98f4114790c0fbf5",
-    "https://realty.ria.ru/lenta/": "5026adb855c9d62165932fba82ab42db30fc2d629f3e14e3cfb889a889a32bf3",
-    "https://gge.ru/press-center/news/": "5005f852ee3f7fbe0866c58fa099285f9dda9729baf16a4446e5605d86db428f",
-    "https://rg.ru/rubric/tema/ekonomika": "e884a1b3011987e43721e53cc486e92fbf3df512053e15a0c9780b06a9130fb2",
+    "http://ancb.ru/publication": "ba0f06358bb98e58956f6e23a7e1f684195144a69fd27c0caf2b226d8c035e0e",
+    "https://eec.eaeunion.org/news/": "cbc4d4a334c793c2c3565f2e835a0dd5028965028ee90b531395c0d58e880087",
+    "https://minfin.gov.ru/ru/press-center/": "1b7cb4bbe9b475d5613e0ca8f2880ca54ccf5659a1a01a518e584669f4f0b0ce",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "93976ee78edb7d3d6228a7f5f371ce541e214b5bda7006e88a8f20bcc5d43fed",
+    "https://www.metalinfo.ru/ru/news": "687d66f919214811b86d3178a70ef04f1f246599f5e866846a2a5c738717e929",
+    "https://www.pnp.ru/economics/": "814fb171c739e1e8c4f8c0c53f9ac520fa7d70ee7768a210d1403dc027a87ba9",
+    "https://erzrf.ru/news/news-archive": "83223a7615b9737852bcd25e63497f6e40e68374fc0079df570789d84a5a6d5e",
+    "https://ria-stk.ru/news/vse-novosti.php": "27e1d25cef646ec4b23865283b653980c7c37ba499459de4befa2d3bebaed471",
+    "http://government.ru/news/": "9113fec909db745ac68018c5fca207519d8d87783c8880e6701b8c36192bf328",
+    "https://stroygaz.ru/news/": "8cd25e57dba74d5fd1049179501cf43f05c2b5a830b6e4ade30fbfa39dc34246",
+    "https://realty.ria.ru/lenta/": "972caf5272cc892b7a8018fa151de8fc0af1367d6208ec645187c38ad834b63d",
+    "https://gge.ru/press-center/news/": "bedf125baa8d5288181715f10bc1c336ca13959705209f7c8390f82ad2259df4",
+    "https://rg.ru/rubric/tema/ekonomika": "a75b61d3940621fa3a68c1c832623a237bfa868f93ca799475b8e40dde5911ff",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
   "seen_urls": {
@@ -47045,6 +47083,7 @@
       "https://notim.ru/news/segodnya-pod-predsedatelstvom-mikhaila-viktorova-sostoyalos-zasedanie-pravleniya-notim/"
     ],
     "АРД: статьи": [
+      "https://ardexpert.ru/article/28856",
       "https://ardexpert.ru/article/28854",
       "https://ardexpert.ru/article/28853",
       "https://ardexpert.ru/article/28852",
@@ -47057,8 +47096,7 @@
       "https://ardexpert.ru/article/28839",
       "https://ardexpert.ru/article/28841",
       "https://ardexpert.ru/article/28840",
-      "https://ardexpert.ru/article/28838",
-      "https://ardexpert.ru/article/28837"
+      "https://ardexpert.ru/article/28838"
     ],
     "Гостинформ": [
       "https://www.gostinfo.ru/News/Details/2081",
@@ -47300,6 +47338,7 @@
       "https://faufcc.ru/press-tsentr/novosti/razvitie-normativnoi-bazy-obsudili-s-uchastiem-fau-ftss-na-mezhdunarodnom-kongresse-po-energoeffektivnosti"
     ],
     "АНЦБ": [
+      "http://ancb.ru/publication/read/21129",
       "http://ancb.ru/publication/read/21128",
       "http://ancb.ru/publication/read/21126",
       "http://ancb.ru/publication/read/21124",
@@ -47333,8 +47372,7 @@
       "http://ancb.ru/publication/read/21015",
       "http://ancb.ru/publication/read/21013",
       "http://ancb.ru/publication/read/21012",
-      "http://ancb.ru/publication/read/21007",
-      "http://ancb.ru/publication/read/20996"
+      "http://ancb.ru/publication/read/21007"
     ],
     "ЕЭК ЕАЭС": [
       "https://eec.eaeunion.org/news/bakytzhan-sagintaev-pozdravil-aleksandra-lukashenko-s-dnem-konstitutsii-belarusi/",
@@ -47435,6 +47473,7 @@
       "https://www.metalinfo.ru/ru/news/182174"
     ],
     "Парламентская газета: Экономика": [
+      "https://www.pnp.ru/economics/deputaty-predlozhili-vvesti-zapret-na-nachislenie-procentov-po-kreditu-do-oformleniya-nasledstva.html",
       "https://www.pnp.ru/economics/slozhnosti-s-vozvratom-tovara-i-poddelki-chem-riskuet-sovremennyy-pokupatel.html",
       "https://www.pnp.ru/economics/deputat-govyrin-rasskazal-kak-budet-rabotat-sistema-podtverzhdeniya-ozhidaniya-tovarov.html",
       "https://www.pnp.ru/economics/dni-otdykha-ili-doplata-kak-kompensiruyut-pererabotku.html",
@@ -47446,7 +47485,6 @@
       "https://www.pnp.ru/economics/v-rossii-sozdadut-nacionalnuyu-sistemu-podtverzhdeniya-ozhidaniya-tovarov.html",
       "https://www.pnp.ru/economics/senator-v-2025-godu-prinyato-bolee-30-zakonov-napravlennykh-na-podderzhku-uchastnikov-svo.html",
       "https://www.pnp.ru/economics/obespechitelnyy-platezh-importera-khotyat-uchityvat-v-nalogovoy-deklaracii.html",
-      "https://www.pnp.ru/economics/rossiyane-stali-chashhe-rasplachivatsya-qr-kodami-i-po-licu.html",
       "https://www.pnp.ru/economics/zakony-vstupayushhie-v-silu-v-marte-4.html"
     ],
     "ЕРЗ.РФ": [
@@ -47902,6 +47940,69 @@
     ],
     "Главгосэкспертиза России": [],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/03/15/dermatolog-egorova-rasskazala-o-sindrome-talogo-snega-i-ego-vliianii-na-kozhu.html",
+      "https://rg.ru/2026/03/15/patriarh-kirill-my-zhivem-vo-vremena-zakonchivshihsia-potriasenij.html",
+      "https://rg.ru/2026/03/15/patriarh-kirill-napomnil-ob-obretenii-ikony-derzhavnaia.html",
+      "https://rg.ru/2026/03/15/shvejcariia-otklonila-2-zaprosa-na-prolet-voennyh-samoletov-ssha-nad-ee-territoriej.html",
+      "https://rg.ru/2026/03/15/baza-turisty-iz-rf-otravilis-v-tailande-vtoroj-raz-za-mesiac.html",
+      "https://rg.ru/2026/03/15/lyzhnica-bagiian-zavoevala-trete-zoloto-na-paralimpiade-2026.html",
+      "https://rg.ru/2026/03/15/importozameshchennyj-ms-21-ispytaiut-v-estestvennyh-usloviiah-obledeneniia.html",
+      "https://rg.ru/2026/03/15/nikolaj-patrushev-vnutrennie-passazhirskie-perevozki-po-vode-dostigli-13-mln-v-god.html",
+      "https://rg.ru/2026/03/15/times-epshtejn-postavlial-devushek-egipetskomu-milliarderu-al-fajedu.html",
+      "https://rg.ru/2026/03/15/agressiia-ssha-protiv-irana-vse-bolshe-prevrashchaetsia-v-bitvu-za-chernoe-zoloto.html",
+      "https://rg.ru/2026/03/14/neftianaia-infrastruktura-ne-postradala-posle-bombardirovki-iranskogo-ostrova-harg.html",
+      "https://rg.ru/2026/03/15/reg-pfo/v-kazani-soshli-s-relsov-tri-vagona-s-zernom.html",
+      "https://rg.ru/2026/03/15/v-kremle-obiasnili-zachem-predstaviteli-francii-poseshchali-rossiiu.html",
+      "https://rg.ru/2026/03/15/v-kitae-polzovateli-stali-oplakivat-poteriu-ii-sobesednika-posle-obnovlenij.html",
+      "https://rg.ru/2026/03/15/reg-dnr/pushilin-zaiavil-chto-vs-rf-otdeliaiut-ot-slavianska-schitannye-kilometry.html",
+      "https://rg.ru/2026/03/15/reg-cfo/sobianin-silami-pvo-minoborony-unichtozheny-37-bpla-letevshih-na-moskvu.html",
+      "https://rg.ru/2026/03/15/reg-cfo/ukrainskie-drony-atakovali-brianskij-gorod-sevsk.html",
+      "https://rg.ru/2026/03/15/v-dubai-roskoshnye-oteli-rezko-snizili-ceny-iz-za-vojny-v-irane.html",
+      "https://rg.ru/2026/03/15/glava-mid-irana-rasskazal-o-sostoianii-novogo-verhovnogo-lidera-strany.html",
+      "https://rg.ru/2026/03/15/soiuz-posadil-kosmicheskie-semena-tomatov.html",
+      "https://rg.ru/2026/03/15/oskolki-iranskoj-rakety-mogli-popast-v-rezidenciiu-konsula-ssha-v-izraile.html",
+      "https://rg.ru/2026/03/15/aeroporty-vnukovo-i-sheremetevo-rabotaiut-v-rezhime-vremennyh-ogranichenij.html",
+      "https://rg.ru/2026/03/15/mash-zhivushchij-v-rossii-otec-glavkoma-vsu-syrskogo-perestal-uznavat-rodnyh.html",
+      "https://rg.ru/2026/03/15/komandira-brigady-polkovnika-vsu-sbil-molodoj-kapitan-vks-rossii.html",
+      "https://rg.ru/2026/03/15/frontovaia-svodka-za-15-marta-tck-prinuditelno-mobilizuiut-invalidov-i-bezdomnyh.html",
+      "https://rg.ru/2026/03/15/reg-pfo/v-centre-ufy-obvalilas-krysha-zhilogo-doma.html",
+      "https://rg.ru/2026/03/15/reg-pfo/semia-iz-ufy-lishilas-kvartiry-i-bolee-55-mln-rublej-iz-za-moshennikov.html",
+      "https://t.me/mvd_rb/20893",
+      "https://rg.ru/2026/03/15/v-uzbekistane-zhenshchina-bolee-30-let-zhila-s-pasportom-sssr.html",
+      "https://rg.ru/2026/03/15/hakery-vzlomali-bazu-telefonnyh-nomerov-15-tysiachi-oficerov-vsu.html",
+      "https://rg.ru/2026/03/15/reg-ufo/na-kubani-lokalizovali-poslednij-ochag-pozhara-na-neftebaze-posle-ataki-bpla.html",
+      "https://rg.ru/2026/03/15/rosstat-raskryl-srednie-zarplaty-pedagogov-i-medikov-po-itogam-2025-goda.html",
+      "https://rg.ru/2026/03/15/v-budapeshte-prohodit-marsh-mira.html",
+      "https://rg.ru/2026/03/15/senator-karasin-ukrainskie-dronovody-aktivnee-biut-po-grazhdanskim-obektam.html",
+      "https://rg.ru/2026/03/15/umer-akter-iz-kavkazskoj-plennicy-i-kin-dza-dza-nikolaj-garo.html",
+      "https://rg.ru/2026/03/15/reg-cfo/chislo-postradavshih-v-dtp-s-tramvaiami-v-moskve-vyroslo-do-22-sredi-nih-5-detej.html",
+      "https://rg.ru/2026/03/15/bazu-ssha-viktoriia-vpervye-atakoval-optovolokonnyj-dron-i-snial-svoj-udar.html",
+      "https://rg.ru/2026/03/15/film-lily-i-ego-avtor-stali-gvozdem-programmy-na-forume-ii-kino-generator.html",
+      "https://rg.ru/2026/03/15/premer-ministr-kenii-vyletel-na-peregovory-v-moskvu.html",
+      "https://rg.ru/2026/03/15/tailand-usilivaet-proverki-na-granice-na-fone-blizhnevostochnogo-konflikta.html",
+      "https://rg.ru/2026/03/15/reg-ufo/fokus-ostalsia-v-stroiu.html",
+      "https://rg.ru/2026/03/15/opublikovany-kadry-iznutri-tramvaia-kotoryj-popal-v-dtp-s-22-postradavshimi.html",
+      "https://rg.ru/2026/03/15/britanskij-lyzhnik-rasskazal-ob-ugoshchenii-alkogolem-vo-vremia-kubka-mira-v-norvegii.html",
+      "https://rg.ru/2026/03/15/na-ukrainskom-fronte-testiruiut-boevyh-robotov-kotorye-v-budushchem-zameniat-soldat.html",
+      "https://rg.ru/2026/03/15/reg-dfo/rospotrebnadzor-pomog-seme-otsudit-u-podriadchika-bolee-3-millionov-rublej.html",
+      "https://rg.ru/2026/03/15/udary-fab-3000-po-poziciiam-vsu-v-limane-i-konstantinovke-sniali-na-video.html",
+      "https://rg.ru/2026/03/15/reg-urfo/na-duhe-ognia-v-iugre-pokazali-tri-serii-novogo-seriala-katastrofy.html",
+      "https://rg.ru/2026/03/15/reg-cfo/vagon-vyletel-na-vstrechku-ochevidcy-rasskazali-o-dtp-s-tramvaiami-v-moskve.html",
+      "https://rg.ru/2026/03/15/reg-cfo/dopros-podozrevaemogo-v-ubijstve-zhenshchiny-v-moskve-sniali-na-video.html",
+      "https://rg.ru/2026/03/15/hezbolla-vstupila-v-priamye-boestolknoveniia-s-armiej-izrailia-na-iuge-livana.html",
+      "https://rg.ru/2026/03/15/revoliucionnaia-gvardiia-irana-poklialas-vysledit-i-ubit-biniamina-netaniahu.html",
+      "https://rg.ru/2026/03/15/poiavilos-foto-ukrainskogo-f-16-v-rezhime-zveria.html",
+      "https://rg.ru/2026/03/15/referendum-po-konstitucii-kazahstana-sostoialsia-iavka-prevysila-50-procentov.html",
+      "https://rg.ru/2026/03/15/v-kazahstane-segodnia-projdet-referendum-ob-izmenenii-konstitucii.html",
+      "https://rg.ru/2026/03/15/otkaz-ot-mandata-dlia-deputatov-rady-vskore-stanet-biletom-na-front.html",
+      "https://rg.ru/2026/03/15/reg-cfo/sk-prediavil-obvineniia-podozrevaemomu-v-ubijstve-v-moskve-raskryty-detali-dela.html",
+      "https://rg.ru/2026/03/15/bolee-150-chelovek-zarazilis-norovirusom-v-karibskom-bassejne-na-kruiznom-sudne.html",
+      "https://rg.ru/2026/03/15/reg-ufo/na-kubani-likvidirovali-dva-iz-treh-ochagov-pozhara-na-neftebaze-posle-ataki-bpla.html",
+      "https://rg.ru/2026/03/15/shot-muzhchina-propal-v-tajge-v-krasnoiarske-on-ushel-v-pohod-kak-usolcevy.html",
+      "https://rg.ru/2026/03/15/finrazvedka-sosredotochitsia-na-sdelkah-s-dorogoj-nedvizhimostiu.html",
+      "https://rg.ru/2026/03/15/ekspert-celikov-prodazhi-krossoverov-xcite-idut-vniz-zapasy-skoro-zakonchatsia.html",
+      "https://rg.ru/2026/03/15/lyzhnik-golubkov-prines-rossii-shestoe-zoloto-paralimpijskih-igr-v-italii.html",
+      "https://rg.ru/2026/03/15/proshli-bolee-400-tysiach-kilometrov-nazvany-samye-nadezhnye-modeli-toyota.html",
       "https://rg.ru/2026/03/15/goroskop-na-16-marta-izmenite-taktiku-i-pridete-k-finishu-pervymi.html",
       "https://rg.ru/2026/03/15/uchenye-otkryli-mehanizm-vosstanovleniia-immuniteta-istoshchennogo-onkozabolevaniem.html",
       "https://rg.ru/2026/03/15/narodnye-primety-na-16-marta-ne-vynosi-musor-s-nim-schaste-svoe-otdash.html",
@@ -47937,69 +48038,6 @@
       "https://rg.ru/2026/03/15/reg-ufo/vladelec-parka-tajgan-obiasnil-pochemu-kapibary-stoiat-2-mln-rublej.html",
       "https://rg.ru/2026/03/15/reg-cfo/sobianin-ataka-na-moskvu-srazu-14-ti-bpla-otrazhena-sistemoj-pvo-minoborony.html",
       "https://rg.ru/2026/03/15/rossiian-v-tailande-predosteregli-ot-foto-s-possumami.html",
-      "https://rg.ru/2026/03/15/reg-pfo/penzenec-lishilsia-pochti-dvuh-millionov-rublej-v-nadezhde-priobresti-inomarku.html",
-      "https://rg.ru/2026/03/15/sbornaia-ukrainy-propustit-zakrytie-paralimpiady-iz-za-uchastiia-rossiian.html",
-      "https://rg.ru/2026/03/15/reg-cfo/pri-atake-bespilotnikov-na-kurskuiu-oblast-postradal-zhitel-oboiani.html",
-      "https://rg.ru/2026/03/15/rossijskij-tor-m1-sbil-slozhnuiu-cel-rech-idet-o-boepripase-switchblade.html",
-      "https://rg.ru/2026/03/15/rfs-nakazhet-talalaeva-za-provocirovanie-draki-uchtia-ego-predydushchie-narusheniia.html",
-      "https://rg.ru/2026/03/15/reg-ufo/chto-izvestno-o-nochnoj-atake-na-okrestnosti-universiteta-v-volgograde.html",
-      "https://rg.ru/2026/03/15/v-moskve-nachalis-semki-filma-cirk-s-minekaevym-i-kologrivym.html",
-      "https://rg.ru/2026/03/15/taker-karlson-zaiavil-o-podgotovke-cru-ugolovnogo-dela-protiv-nego.html",
-      "https://rg.ru/2026/03/15/reg-ufo/v-kalmykii-mogut-razmestit-unikalnyj-astrofizicheskij-kompleks-taiga-100.html",
-      "https://rg.ru/2026/03/15/rossiian-predupredili-o-hakerah-vzlamyvaiushchih-televizory.html",
-      "https://rg.ru/2026/03/15/reg-cfo/tass-na-volokolamskom-shosse-stolknulis-dva-tramvaia-odin-soshel-s-relsov.html",
-      "https://rg.ru/2026/03/15/v-fonde-oms-rasskazali-kak-iskusstvennyj-intellekt-pomogaet-v-lechenii-bolnyh.html",
-      "https://rg.ru/2026/03/15/volodin-napomnil-o-novyh-merah-po-povysheniiu-kachestva-podgotovki-medikov.html",
-      "https://rg.ru/2026/03/15/ksir-zaiavili-chto-osvobodili-tankery-s-neftiu-za-tysiachi-kilometrov-ot-irana.html",
-      "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html",
-      "https://rg.ru/2026/03/15/alkaras-ob-igre-medvedeva-nikogda-ne-videl-chtoby-on-igral-tak.html",
-      "https://rg.ru/2026/03/15/panarin-i-gavrikov-nabrali-po-3-ochka-v-matchah-chempionata-nhl.html",
-      "https://rg.ru/2026/03/15/reg-pfo/v-prikame-vozbuzhdeno-delo-po-faktu-dtp-s-postradavshimi-passazhirami-avtobusa.html",
-      "https://rg.ru/2026/03/14/reg-pfo/piat-chelovek-postradali-v-dtp-s-uchastiem-avtobusa-v-permskom-krae.html",
-      "https://rg.ru/2026/03/15/rossiianin-demidov-vyshel-v-lidery-sredi-bombardirov-novichkov-nhl.html",
-      "https://rg.ru/2026/03/15/reg-ufo/sily-pvo-i-chernomorskogo-flota-otrazili-ataku-bpla-so-storony-ukrainy.html",
-      "https://rg.ru/2026/03/15/reg-pfo/v-permi-vozbudili-delo-o-gibeli-rebenka-iz-za-padeniia-snega-s-kryshi.html",
-      "https://rg.ru/2026/03/15/reg-cfo/tass-ataka-dronov-vsu-na-moskvu-stala-krupnejshej-s-nachala-goda.html",
-      "https://rg.ru/2026/03/15/glava-fonda-oms-balanin-rasskazal-o-novyh-besplatnyh-vidah-medicinskoj-pomoshchi.html",
-      "https://rg.ru/2026/03/15/reg-dfo/v-iakutske-prohodit-konkurs-dlia-masterov-po-derevu.html",
-      "https://rg.ru/2026/03/15/gerani-atakovali-zhd-stancii-v-okrestnostiah-krivogo-roga-udary-sniali-na-video.html",
-      "https://rg.ru/2026/03/15/tass-umerla-eshche-odna-postradavshaia-pri-terakte-v-krokus-siti-holle.html",
-      "https://rg.ru/2026/03/15/reg-dfo/v-buriatii-pozharnye-spasli-pozhilogo-muzhchinu.html",
-      "https://rg.ru/2026/03/15/rossijskomu-rynku-grozit-deficit-iranskogo-shafrana.html",
-      "https://rg.ru/2026/03/15/medvedev-obygral-pervuiu-raketku-mira-alkarasa-i-vyshel-v-final-v-indian-uellse.html",
-      "https://rg.ru/2026/03/15/reg-ufo/eduard-limonov-vdohnovil-hudozhnicu-na-sozdanie-komiksa-o-krymskoj-vesne.html",
-      "https://rg.ru/2026/03/15/reg-dnr/dron-snial-na-video-moment-unichtozheniia-zamaskirovannogo-tanka-leopard-vsu.html",
-      "https://rg.ru/2026/03/15/v-roskachestve-rasskazali-pochemu-opasno-rasplachivatsia-s-pomoshchiu-perevoda.html",
-      "https://rg.ru/2026/03/15/vs-rf-unichtozhili-pod-kievom-sekretnyj-gruz-iz-francii.html",
-      "https://rg.ru/2026/03/15/reg-pfo/saransk-nochiu-podvergsia-atake-ukrainskih-bpla-idet-likvidaciia-posledstvij.html",
-      "https://rg.ru/2026/03/15/shrivastava-indii-sleduet-zakliuchit-dolgosrochnye-kontrakty-na-pokupku-nefti-rf.html",
-      "https://rg.ru/2026/03/15/mvd-kuby-protestuiushchie-razgromili-odno-iz-otdelenij-kommunisticheskoj-partii.html",
-      "https://rg.ru/2026/03/15/pvo-za-noch-sbila-170-dronov-vsu-nad-rossiej-20-iz-nih-leteli-na-moskvu.html",
-      "https://rg.ru/2026/03/15/mogilev-chto-ostavil-v-pamiati-uchastnikov-mezhdunarodnyj-forum-dirizherov.html",
-      "https://rg.ru/2026/03/15/reg-sibfo/piat-chelovek-pogibli-v-dtp-pod-novosibirskom-vinovnogo-v-avarii-zaderzhali.html",
-      "https://rg.ru/2026/03/15/minfin-rossii-limit-socvychetov-po-ndfl-na-2026-god-150-tysiach-rublej.html",
-      "https://rg.ru/2026/03/15/reg-ufo/iurij-sliusar-v-rostovskoj-oblasti-sbito-poriadka-40-bpla-protivnika.html",
-      "https://rg.ru/2026/03/15/semafor-u-izrailia-zapasy-raket-perehvatchikov-istoshchilis-do-kriticheskogo-urovnia.html",
-      "https://rg.ru/2026/03/15/zapuskaet-rak-ne-zhirnaia-kolbasa-pervye-zvonochki-bolezni-nazval-vrach.html",
-      "https://rg.ru/2026/03/11/terrorist-iz-piatogo-b.html",
-      "https://rg.ru/2026/03/15/v-minske-zaversheny-ispytaniia-novoj-modeli-tiagacha-belaz.html",
-      "https://rg.ru/2026/03/15/tass-tela-soldat-vsu-ostaiutsia-lezhat-na-lbs-poka-ih-ne-evakuiruiut-bojcy-rf.html",
-      "https://rg.ru/2026/03/15/dmitriev-ocenil-slova-zelenskogo-ob-otnoshenii-trampa-k-nemu-kak-k-synu.html",
-      "https://rg.ru/2026/03/15/minsk-rossijskij-loukoster-vozobnovliaet-reguliarnye-rejsy.html",
-      "https://rg.ru/2026/03/11/krasota-trebuet-zhertv.html",
-      "https://rg.ru/2026/03/15/ukrainskij-konflikt-stal-centralnoj-temoj-izbiratelnoj-kampanii-v-vengrii.html",
-      "https://rg.ru/2026/03/15/reg-ufo/pozhar-nachalsia-na-neftebaze-krasnodarskogo-kraia-posle-padeniia-oblomkov-bpla.html",
-      "https://rg.ru/2026/03/15/reg-ufo/v-volgograde-bpla-popal-v-mnogokvartirnyj-dom-vybity-stekla-nikto-ne-postradal.html",
-      "https://rg.ru/2026/03/15/ynet-netaniahu-zaprosil-telefonnyj-razgovor-s-zelenskim.html",
-      "https://rg.ru/2026/03/15/reg-cfo/belgorod-podvergsia-massirovannomu-raketnomu-obstrelu-idet-utochnenie-posledstvij.html",
-      "https://rg.ru/2026/03/15/v-rossii-sniali-s-hraneniia-i-vystavili-na-prodazhu-vaz-2109-dorogo.html",
-      "https://rg.ru/2026/03/15/tramp-nazval-zelenskogo-poslednim-chelovekom-v-chej-pomoshchi-nuzhdaiutsia-ssha.html",
-      "https://rg.ru/2026/03/15/zastriavshij-v-dubae-rossiianin-rasskazal-kak-poterial-bolee-400-tysiach-rublej.html",
-      "https://ria.ru/20260315/dubay-2080731960.html",
-      "https://rg.ru/2026/03/15/tramp-priznalsia-chto-udivlen-nezhelaniem-zelenskogo-zakliuchit-sdelku.html",
-      "https://rg.ru/2026/03/15/chislo-bankrotov-sredi-zumerov-v-rossii-vyroslo-v-10-raz-za-2-goda.html",
-      "https://rg.ru/2026/03/15/v-turcii-nashli-mertvoj-telezvezdu-ajshegiul-eraslan-ee-smert-vyzvala-voprosy.html",
-      "https://rg.ru/2026/03/14/baltika-pobedila-cska-match-zavershilsia-potasovkoj-s-uchastiem-glavnyh-trenerov.html",
       "https://rg.ru/2026/03/14/tramp-prizval-napravit-voennye-korabli-dlia-patrulirovaniia-ormuzskogo-proliva.html"
     ]
   },
@@ -64582,7 +64620,19 @@
     "9313106660f810e18900b19809c9e027346146c2f7e827f43ba7f3e9c0ab3d36": "2026-03-15T12:35:00+03:00",
     "accee499cbbe5372f6cbc064e1a0f6273904ca13c021dc02f4f6a80791335101": "2026-03-15T12:35:00+03:00",
     "8cced56d9eb40d592199ca85041197021fd4af80260328f99048e80268daf3ad": "2026-03-15T12:35:00+03:00",
-    "58b25bc73a3abb3bfc39e3b005b5d55d8ec94067d35eb91e5c562efa44146dbd": "2026-03-15T12:35:00+03:00"
+    "58b25bc73a3abb3bfc39e3b005b5d55d8ec94067d35eb91e5c562efa44146dbd": "2026-03-15T12:35:00+03:00",
+    "f3a9509c25614093659d243e34d24c79437e929001e0d8efed6a180d7387f9b8": "2026-03-15T15:42:00+03:00",
+    "504bf033399c52263d3e248243387cb0ecdafaf35f310a2c70049c6d6292c0dd": "2026-03-15T15:44:00+03:00",
+    "5d58386ddbe44381fcdef8a13054bd4f9eabd10601d1a4fe95c1350a2ab29b69": "2026-03-15T15:44:00+03:00",
+    "33ed12eb387b9ce6dd98b8b944a50180d404fcc64bdbb4b06f4eaa810d1f2790": "2026-03-15T15:45:00+03:00",
+    "1d33e684e5c67c97d501872399e5bb36c570d55b47447d7c42dab81dbeb965ae": "2026-03-15T15:45:00+03:00",
+    "8507501df8a6008e9260399bd69096c9eaa2e20e1cc3d350600bffeb693da1b6": "2026-03-15T15:45:00+03:00",
+    "1d77a1c2cda73da576f7e55c89371d70d044927e789b9044e3f2c10ed8425e67": "2026-03-15T15:45:00+03:00",
+    "e6d550bd68399c5ffb6ac3e0dc5d946e0b615f8dd00532422b7cfed7fc5864e3": "2026-03-15T15:45:00+03:00",
+    "240a710a836f42091756ed65c1bb964998528d8c08521e86d880615166ddbe30": "2026-03-15T15:45:00+03:00",
+    "b0bf6a06400246c67a7046e4ccb58f312390ad0ff7c551fd470f9f540bdf152e": "2026-03-15T15:56:00+03:00",
+    "b8345f27ac802be9fac66d97bfc9c4ecddb92c1dd4bc8dc5f68b701d2c57ba83": "2026-03-15T16:00:00+03:00",
+    "8037f02481f59ab84f74e7f15a554e8199900aea122bb501b7667b3a90755cb8": "2026-03-15T16:04:00+03:00"
   },
   "host_state": {
     "www.gostinfo.ru": {
@@ -64607,10 +64657,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5c6f228d60>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "last_error": null,
         "consecutive": 0,
-        "last_ts": 1773567161.4309812,
-        "network_cooldown_until": 1773568061.4309785
+        "last_ts": 1773567161.4309812
       },
       "warmup_done": false,
       "last_success_path": null
@@ -64627,14 +64676,6 @@
     "www.pnp.ru": {
       "cookies": [
         {
-          "name": "PHPSESSID",
-          "value": "2vakfdkeb72fotf7gqsubcv2eu",
-          "domain": "www.pnp.ru",
-          "path": "/",
-          "secure": false,
-          "expires": null
-        },
-        {
           "name": "usr_abt_grp",
           "value": "2",
           "domain": "www.pnp.ru",
@@ -64648,17 +64689,17 @@
         "consecutive": 0
       },
       "warmup_done": true,
-      "last_success_path": "/economics/"
+      "last_success_path": "/economics/deputaty-predlozhili-vvesti-zapret-na-nachislenie-procentov-po-kreditu-do-oformleniya-nasledstva.html"
     },
     "ria-stk.ru": {
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "9WzwOWoJc1Hb6sx81CZjxXKWTdEVWGw3",
+          "value": "LnlDRtxt9q8VKMZ2CyLs4fNnhOU0r3K7",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1773534315
+          "expires": 1773589490
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -64666,14 +64707,13 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1804627515
+          "expires": 1804682690
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f5c6f1d2ad0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "last_error": null,
         "consecutive": 0,
-        "last_ts": 1773567182.2262483,
-        "network_cooldown_until": 1773568082.2262459
+        "last_ts": 1773567182.2262483
       },
       "warmup_done": false,
       "last_success_path": null
@@ -64682,34 +64722,18 @@
       "cookies": [
         {
           "name": "qrator_jsr",
-          "value": "v2.0.1773567208.951.acb6d132YsVtRGbd|u9iUu0aSD7UFNKg8|VcluE5y0H6b3CUFSohesUb3wJUsKwx/m6ramUT3FPMx8C96WkjdFqAlt5v/AyEZy6xSdjQngMiRG+iFM8t1atQ==-ApX7Q8CGaaYtg63xZ//xO+IUH3I=-00",
+          "value": "v2.0.1773580941.645.84c45325a6NNqsam|IWU87kxZQ2Wgx3XE|VYT842H8u+QZ/M9h1kp5HkIn98RjWfcsYxvsP4YOyZjk/+6p0SE/fq1GJbPRQPb8QpRUfE8d6uPggMg4+V0Oww==-jX2jqFE0mjhuX2yWEmcm4vItwNg=-00",
           "domain": ".rg.ru",
           "path": "/",
           "secure": false,
-          "expires": 1773567508
-        },
-        {
-          "name": "qrator_ssid2",
-          "value": "v2.0.1773567222.773.acb6d132a9Lu9pCQ|gKhr1mgrdJoIjVYr|2u4cf9h+5mKfBLAVCsjfSHV8tn8Z8x0zauEMrjAhzmjv9730whBAlQs0xSoMVbXFyei2ryGReLpbj8OZ5Xv+pA==-lmehBsM0eZzrAYftxrkIL6i0P0w=",
-          "domain": ".rg.ru",
-          "path": "/",
-          "secure": false,
-          "expires": 1773568224
-        },
-        {
-          "name": "INGRESSCOOKIE",
-          "value": "c5df5c78ebf77a6d2e465d60eebd088b|a7a1f0ff35aa6c88794bfc21045df38e",
-          "domain": "rg.ru",
-          "path": "/",
-          "secure": true,
-          "expires": null
+          "expires": 1773581241
         }
       ],
       "failures": {
-        "last_error": null,
-        "consecutive": 0,
+        "last_error": "HTTPSConnectionPool(host='rg.ru', port=443): Max retries exceeded with url: /2026/03/15/reg-cfo/chislo-postradavshih-v-dtp-s-tramvaiami-v-moskve-vyroslo-do-22-sredi-nih-5-detej.html/amp (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7faea14cfed0>, 'Connection to rg.ru timed out. (connect timeout=6.0)'))",
+        "consecutive": 4,
         "challenge_retry": {
-          "https://rg.ru/rubric/tema/ekonomika": 1773567191.841743,
+          "https://rg.ru/rubric/tema/ekonomika": 1773578697.2150166,
           "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html": 1770947884.1021295,
           "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html/amp": 1770947914.4087703,
           "https://rg.ru/2026/02/13/la-stampa-v-olimpijskoj-derevne-za-tri-dnia-zakonchilis-besplatnye-prezervativy.html": 1770947944.7083402,
@@ -64937,12 +64961,20 @@
           "https://rg.ru/2026/03/10/mid-irana-tegeran-ne-stanet-vesti-peregovory-s-ssha-posle-gorkogo-opyta.html": 1773138694.16475,
           "https://rg.ru/2026/03/10/mid-irana-tegeran-ne-stanet-vesti-peregovory-s-ssha-posle-gorkogo-opyta.html/amp": 1773138724.514852,
           "https://rg.ru/2026/03/10/reg-skfo/na-stavropole-piat-chelovek-postradali-v-lobovom-stolknovenii-avtomobilej.html": 1773138754.8561738,
-          "https://rg.ru/2026/03/10/reg-skfo/na-stavropole-piat-chelovek-postradali-v-lobovom-stolknovenii-avtomobilej.html/amp": 1773138785.389846
+          "https://rg.ru/2026/03/10/reg-skfo/na-stavropole-piat-chelovek-postradali-v-lobovom-stolknovenii-avtomobilej.html/amp": 1773138785.389846,
+          "https://rg.ru/2026/03/15/reg-cfo/chislo-postradavshih-v-dtp-s-tramvaiami-v-moskve-vyroslo-do-22-sredi-nih-5-detej.html": 1773579701.9744873,
+          "https://rg.ru/2026/03/15/finrazvedka-sosredotochitsia-na-sdelkah-s-dorogoj-nedvizhimostiu.html/amp": 1773580736.288784,
+          "https://rg.ru/2026/03/15/ekspert-celikov-prodazhi-krossoverov-xcite-idut-vniz-zapasy-skoro-zakonchatsia.html": 1773580767.5246282,
+          "https://rg.ru/2026/03/15/ekspert-celikov-prodazhi-krossoverov-xcite-idut-vniz-zapasy-skoro-zakonchatsia.html/amp": 1773580798.5938702,
+          "https://rg.ru/2026/03/15/lyzhnik-golubkov-prines-rossii-shestoe-zoloto-paralimpijskih-igr-v-italii.html": 1773580829.6417575,
+          "https://rg.ru/2026/03/15/lyzhnik-golubkov-prines-rossii-shestoe-zoloto-paralimpijskih-igr-v-italii.html/amp": 1773580860.7507308,
+          "https://rg.ru/2026/03/15/proshli-bolee-400-tysiach-kilometrov-nazvany-samye-nadezhnye-modeli-toyota.html": 1773580892.676737,
+          "https://rg.ru/2026/03/15/proshli-bolee-400-tysiach-kilometrov-nazvany-samye-nadezhnye-modeli-toyota.html/amp": 1773580923.7347343
         },
-        "last_ts": 1772726049.4134004
+        "last_ts": 1773579803.637489
       },
       "warmup_done": true,
-      "last_success_path": "/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html"
+      "last_success_path": "/2026/03/15/lyzhnica-bagiian-zavoevala-trete-zoloto-na-paralimpiade-2026.html"
     },
     "gge.ru": {
       "cookies": [],
@@ -82823,7 +82855,7 @@
     "https://rg.ru/2026/03/14/chempion-ufc-mahachev-vstretitsia-s-irlandcem-gerri-na-ufc-329.html": "https://rg.ru/2026/03/14/chempion-ufc-mahachev-vstretitsia-s-irlandcem-gerri-na-ufc-329.html",
     "https://rg.ru/2026/03/14/reg-pfo/v-saratove-naled-s-kryshi-upala-na-podrostka.html": "https://rg.ru/2026/03/14/reg-pfo/v-saratove-naled-s-kryshi-upala-na-podrostka.html",
     "https://rg.ru/2026/03/14/dmitriev-lideram-es-neploho-by-pouchitsia-u-ekonomista-saksa.html": "https://rg.ru/2026/03/14/dmitriev-lideram-es-neploho-by-pouchitsia-u-ekonomista-saksa.html",
-    "https://rg.ru/2026/03/14/neftianaia-infrastruktura-ne-postradala-posle-bombardirovki-iranskogo-ostrova-harg.html": "https://rg.ru/2026/03/14/neftianaia-infrastruktura-ne-postradala-posle-bombardirovki-iranskogo-ostrova-harg.html",
+    "https://rg.ru/2026/03/14/neftianaia-infrastruktura-ne-postradala-posle-bombardirovki-iranskogo-ostrova-harg.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
     "https://rg.ru/2026/03/14/reg-cfo/fsb-zaderzhala-v-tambovskoj-oblasti-prizyvavshego-k-terrorizmu-inostranca.html": "https://rg.ru/2026/03/14/reg-cfo/fsb-zaderzhala-v-tambovskoj-oblasti-prizyvavshego-k-terrorizmu-inostranca.html",
     "https://rg.ru/2026/03/14/iubilejnoj-plavkoj-otmetil-kollektiv-solikamskogo-magnievogo-zavoda-90-let-svoej-istorii.html": "https://rg.ru/2026/03/14/iubilejnoj-plavkoj-otmetil-kollektiv-solikamskogo-magnievogo-zavoda-90-let-svoej-istorii.html",
     "https://rg.ru/2026/03/14/reg-urfo/kubinskie-animatory-privezli-v-iugru-trogatelnye-multfilmy.html": "https://rg.ru/2026/03/14/reg-urfo/kubinskie-animatory-privezli-v-iugru-trogatelnye-multfilmy.html",
@@ -82999,7 +83031,7 @@
     "https://rg.ru/2026/03/14/goroskop-na-15-marta-pridetsia-meniat-plany-otkladyvaia-vazhnye-dela.html": "https://rg.ru/2026/03/14/goroskop-na-15-marta-pridetsia-meniat-plany-otkladyvaia-vazhnye-dela.html",
     "https://www.pnp.ru/economics/slozhnosti-s-vozvratom-tovara-i-poddelki-chem-riskuet-sovremennyy-pokupatel.html": "https://www.pnp.ru/economics/slozhnosti-s-vozvratom-tovara-i-poddelki-chem-riskuet-sovremennyy-pokupatel.html",
     "https://realty.ria.ru/20260315/zhkkh-2080531187.html": "https://realty.ria.ru/20260315/zhkkh-2080531187.html",
-    "https://rg.ru/2026/03/15/v-kazahstane-segodnia-projdet-referendum-ob-izmenenii-konstitucii.html": "https://rg.ru/2026/03/15/v-kazahstane-segodnia-projdet-referendum-ob-izmenenii-konstitucii.html",
+    "https://rg.ru/2026/03/15/v-kazahstane-segodnia-projdet-referendum-ob-izmenenii-konstitucii.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
     "https://rg.ru/2026/03/14/putin-pozdravil-patriarha-kirilla-s-50-letiem-episkopskogo-sluzheniia.html": "https://rg.ru/2026/03/14/putin-pozdravil-patriarha-kirilla-s-50-letiem-episkopskogo-sluzheniia.html",
     "https://rg.ru/2026/03/14/reg-cfo/sobianin-za-sutki-na-podlete-k-moskve-unichtozheny-65-vrazheskih-bespilotnika.html": "https://rg.ru/2026/03/14/reg-cfo/sobianin-za-sutki-na-podlete-k-moskve-unichtozheny-65-vrazheskih-bespilotnika.html",
     "https://rg.ru/2026/03/14/na-ostrove-reiunon-prosnulsia-vulkan-kilometrovye-potoki-lavy-idut-k-okeanu.html": "https://rg.ru/2026/03/14/na-ostrove-reiunon-prosnulsia-vulkan-kilometrovye-potoki-lavy-idut-k-okeanu.html",
@@ -83117,7 +83149,71 @@
     "https://rg.ru/2026/03/15/v-fonde-oms-rasskazali-kak-iskusstvennyj-intellekt-pomogaet-v-lechenii-bolnyh.html": "https://rg.ru/2026/03/15/v-fonde-oms-rasskazali-kak-iskusstvennyj-intellekt-pomogaet-v-lechenii-bolnyh.html",
     "https://rg.ru/2026/03/15/volodin-napomnil-o-novyh-merah-po-povysheniiu-kachestva-podgotovki-medikov.html": "https://rg.ru/2026/03/15/volodin-napomnil-o-novyh-merah-po-povysheniiu-kachestva-podgotovki-medikov.html",
     "https://rg.ru/2026/03/15/ksir-zaiavili-chto-osvobodili-tankery-s-neftiu-za-tysiachi-kilometrov-ot-irana.html": "https://rg.ru/2026/03/15/ksir-zaiavili-chto-osvobodili-tankery-s-neftiu-za-tysiachi-kilometrov-ot-irana.html",
-    "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html": "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html"
+    "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html": "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html",
+    "https://ardexpert.ru/article/28856": "https://ardexpert.ru/article/28856",
+    "http://ancb.ru/publication/read/21129": "http://ancb.ru/publication/read/21129",
+    "https://www.pnp.ru/economics/deputaty-predlozhili-vvesti-zapret-na-nachislenie-procentov-po-kreditu-do-oformleniya-nasledstva.html": "https://www.pnp.ru/economics/deputaty-predlozhili-vvesti-zapret-na-nachislenie-procentov-po-kreditu-do-oformleniya-nasledstva.html",
+    "https://rg.ru/2026/03/15/dermatolog-egorova-rasskazala-o-sindrome-talogo-snega-i-ego-vliianii-na-kozhu.html": "https://rg.ru/2026/03/15/dermatolog-egorova-rasskazala-o-sindrome-talogo-snega-i-ego-vliianii-na-kozhu.html",
+    "https://rg.ru/2026/03/15/patriarh-kirill-my-zhivem-vo-vremena-zakonchivshihsia-potriasenij.html": "https://rg.ru/2026/03/15/patriarh-kirill-my-zhivem-vo-vremena-zakonchivshihsia-potriasenij.html",
+    "https://rg.ru/2026/03/15/patriarh-kirill-napomnil-ob-obretenii-ikony-derzhavnaia.html": "https://rg.ru/2026/03/15/patriarh-kirill-napomnil-ob-obretenii-ikony-derzhavnaia.html",
+    "https://rg.ru/2026/03/15/shvejcariia-otklonila-2-zaprosa-na-prolet-voennyh-samoletov-ssha-nad-ee-territoriej.html": "https://rg.ru/2026/03/15/shvejcariia-otklonila-2-zaprosa-na-prolet-voennyh-samoletov-ssha-nad-ee-territoriej.html",
+    "https://rg.ru/2026/03/15/baza-turisty-iz-rf-otravilis-v-tailande-vtoroj-raz-za-mesiac.html": "https://rg.ru/2026/03/15/baza-turisty-iz-rf-otravilis-v-tailande-vtoroj-raz-za-mesiac.html",
+    "https://rg.ru/2026/03/15/lyzhnica-bagiian-zavoevala-trete-zoloto-na-paralimpiade-2026.html": "https://rg.ru/2026/03/15/lyzhnica-bagiian-zavoevala-trete-zoloto-na-paralimpiade-2026.html",
+    "https://rg.ru/2026/03/15/importozameshchennyj-ms-21-ispytaiut-v-estestvennyh-usloviiah-obledeneniia.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/nikolaj-patrushev-vnutrennie-passazhirskie-perevozki-po-vode-dostigli-13-mln-v-god.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/times-epshtejn-postavlial-devushek-egipetskomu-milliarderu-al-fajedu.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/agressiia-ssha-protiv-irana-vse-bolshe-prevrashchaetsia-v-bitvu-za-chernoe-zoloto.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-pfo/v-kazani-soshli-s-relsov-tri-vagona-s-zernom.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/v-kremle-obiasnili-zachem-predstaviteli-francii-poseshchali-rossiiu.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/v-kitae-polzovateli-stali-oplakivat-poteriu-ii-sobesednika-posle-obnovlenij.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-dnr/pushilin-zaiavil-chto-vs-rf-otdeliaiut-ot-slavianska-schitannye-kilometry.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-cfo/sobianin-silami-pvo-minoborony-unichtozheny-37-bpla-letevshih-na-moskvu.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-cfo/ukrainskie-drony-atakovali-brianskij-gorod-sevsk.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/v-dubai-roskoshnye-oteli-rezko-snizili-ceny-iz-za-vojny-v-irane.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/glava-mid-irana-rasskazal-o-sostoianii-novogo-verhovnogo-lidera-strany.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/soiuz-posadil-kosmicheskie-semena-tomatov.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/oskolki-iranskoj-rakety-mogli-popast-v-rezidenciiu-konsula-ssha-v-izraile.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/aeroporty-vnukovo-i-sheremetevo-rabotaiut-v-rezhime-vremennyh-ogranichenij.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/mash-zhivushchij-v-rossii-otec-glavkoma-vsu-syrskogo-perestal-uznavat-rodnyh.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/komandira-brigady-polkovnika-vsu-sbil-molodoj-kapitan-vks-rossii.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/frontovaia-svodka-za-15-marta-tck-prinuditelno-mobilizuiut-invalidov-i-bezdomnyh.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-pfo/v-centre-ufy-obvalilas-krysha-zhilogo-doma.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-pfo/semia-iz-ufy-lishilas-kvartiry-i-bolee-55-mln-rublej-iz-za-moshennikov.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://t.me/mvd_rb/20893": "https://t.me/mvd_rb/20893",
+    "https://rg.ru/2026/03/15/v-uzbekistane-zhenshchina-bolee-30-let-zhila-s-pasportom-sssr.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/hakery-vzlomali-bazu-telefonnyh-nomerov-15-tysiachi-oficerov-vsu.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-ufo/na-kubani-lokalizovali-poslednij-ochag-pozhara-na-neftebaze-posle-ataki-bpla.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/rosstat-raskryl-srednie-zarplaty-pedagogov-i-medikov-po-itogam-2025-goda.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/v-budapeshte-prohodit-marsh-mira.html": "https://rg.ru/2026/03/15/v-budapeshte-prohodit-marsh-mira.html",
+    "https://rg.ru/2026/03/15/senator-karasin-ukrainskie-dronovody-aktivnee-biut-po-grazhdanskim-obektam.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/umer-akter-iz-kavkazskoj-plennicy-i-kin-dza-dza-nikolaj-garo.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-cfo/chislo-postradavshih-v-dtp-s-tramvaiami-v-moskve-vyroslo-do-22-sredi-nih-5-detej.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/bazu-ssha-viktoriia-vpervye-atakoval-optovolokonnyj-dron-i-snial-svoj-udar.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/film-lily-i-ego-avtor-stali-gvozdem-programmy-na-forume-ii-kino-generator.html": "https://rg.ru/2026/03/15/film-lily-i-ego-avtor-stali-gvozdem-programmy-na-forume-ii-kino-generator.html",
+    "https://rg.ru/2026/03/15/premer-ministr-kenii-vyletel-na-peregovory-v-moskvu.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/tailand-usilivaet-proverki-na-granice-na-fone-blizhnevostochnogo-konflikta.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-ufo/fokus-ostalsia-v-stroiu.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/opublikovany-kadry-iznutri-tramvaia-kotoryj-popal-v-dtp-s-22-postradavshimi.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/britanskij-lyzhnik-rasskazal-ob-ugoshchenii-alkogolem-vo-vremia-kubka-mira-v-norvegii.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/na-ukrainskom-fronte-testiruiut-boevyh-robotov-kotorye-v-budushchem-zameniat-soldat.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-dfo/rospotrebnadzor-pomog-seme-otsudit-u-podriadchika-bolee-3-millionov-rublej.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/udary-fab-3000-po-poziciiam-vsu-v-limane-i-konstantinovke-sniali-na-video.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-urfo/na-duhe-ognia-v-iugre-pokazali-tri-serii-novogo-seriala-katastrofy.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-cfo/vagon-vyletel-na-vstrechku-ochevidcy-rasskazali-o-dtp-s-tramvaiami-v-moskve.html": "https://rg.ru/2026/03/15/v-budapeshte-prohodit-marsh-mira.html",
+    "https://rg.ru/2026/03/15/reg-cfo/dopros-podozrevaemogo-v-ubijstve-zhenshchiny-v-moskve-sniali-na-video.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/hezbolla-vstupila-v-priamye-boestolknoveniia-s-armiej-izrailia-na-iuge-livana.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/revoliucionnaia-gvardiia-irana-poklialas-vysledit-i-ubit-biniamina-netaniahu.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/poiavilos-foto-ukrainskogo-f-16-v-rezhime-zveria.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/referendum-po-konstitucii-kazahstana-sostoialsia-iavka-prevysila-50-procentov.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/otkaz-ot-mandata-dlia-deputatov-rady-vskore-stanet-biletom-na-front.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-cfo/sk-prediavil-obvineniia-podozrevaemomu-v-ubijstve-v-moskve-raskryty-detali-dela.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/bolee-150-chelovek-zarazilis-norovirusom-v-karibskom-bassejne-na-kruiznom-sudne.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/reg-ufo/na-kubani-likvidirovali-dva-iz-treh-ochagov-pozhara-na-neftebaze-posle-ataki-bpla.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/shot-muzhchina-propal-v-tajge-v-krasnoiarske-on-ushel-v-pohod-kak-usolcevy.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/finrazvedka-sosredotochitsia-na-sdelkah-s-dorogoj-nedvizhimostiu.html": "https://rg.ru/2026/03/15/v-budapeshte-prohodit-marsh-mira.html",
+    "https://rg.ru/2026/03/15/ekspert-celikov-prodazhi-krossoverov-xcite-idut-vniz-zapasy-skoro-zakonchatsia.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/lyzhnik-golubkov-prines-rossii-shestoe-zoloto-paralimpijskih-igr-v-italii.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html",
+    "https://rg.ru/2026/03/15/proshli-bolee-400-tysiach-kilometrov-nazvany-samye-nadezhnye-modeli-toyota.html": "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html"
   },
   "content_hashes": {
     "def4ab53202a18cd047c5e28dda6555d7cca15a0": "https://notim.ru/news-partners",
@@ -99892,7 +99988,17 @@
     "5c05a73eece40cc1e69e70f4358cd7eb6c90306c": "https://rg.ru/2026/03/15/v-fonde-oms-rasskazali-kak-iskusstvennyj-intellekt-pomogaet-v-lechenii-bolnyh.html",
     "94b1db97c5f930dfcb38dd6e40425b0c7f516cf5": "https://rg.ru/2026/03/15/volodin-napomnil-o-novyh-merah-po-povysheniiu-kachestva-podgotovki-medikov.html",
     "fedb2cd3fbd5558e793626ad7824b50cbab6a3b7": "https://rg.ru/2026/03/15/ksir-zaiavili-chto-osvobodili-tankery-s-neftiu-za-tysiachi-kilometrov-ot-irana.html",
-    "295f962b4861c26f0470cd8264d96ce1e0ef2ad0": "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html"
+    "295f962b4861c26f0470cd8264d96ce1e0ef2ad0": "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html",
+    "4c0e36a32ead79b2c7aa71808354aa29d6b5c612": "https://ardexpert.ru/article/28856",
+    "52669ceee9659f105f9c4aa23a1d940d8500cd89": "http://ancb.ru/publication/read/21129",
+    "ec308295b314abac28dedb6d6dceb5a02a94c70e": "https://www.pnp.ru/economics/deputaty-predlozhili-vvesti-zapret-na-nachislenie-procentov-po-kreditu-do-oformleniya-nasledstva.html",
+    "6a4b71c4fbe68cb2cca8554407414c90658375f3": "https://rg.ru/2026/03/15/dermatolog-egorova-rasskazala-o-sindrome-talogo-snega-i-ego-vliianii-na-kozhu.html",
+    "1af9131cd3b83254f66c221e1053e44a81ea70dd": "https://rg.ru/2026/03/15/patriarh-kirill-my-zhivem-vo-vremena-zakonchivshihsia-potriasenij.html",
+    "2e5b229a202aa10c2efc5292f5821338d3809d12": "https://rg.ru/2026/03/15/patriarh-kirill-napomnil-ob-obretenii-ikony-derzhavnaia.html",
+    "c1729f24c4f24e4ea910c7b72c6d469a77d7e967": "https://rg.ru/2026/03/15/shvejcariia-otklonila-2-zaprosa-na-prolet-voennyh-samoletov-ssha-nad-ee-territoriej.html",
+    "5f8b0ff3589f18524c29f30018b6eb188a9c8cb1": "https://rg.ru/2026/03/15/baza-turisty-iz-rf-otravilis-v-tailande-vtoroj-raz-za-mesiac.html",
+    "a385fb12354d92e8d387b7544c9033f12b09291b": "https://rg.ru/2026/03/15/lyzhnica-bagiian-zavoevala-trete-zoloto-na-paralimpiade-2026.html",
+    "3f6f19a20fbb543bbcb2ea26f7d5e60cea6a70a1": "https://rg.ru/2026/03/15/v-budapeshte-prohodit-marsh-mira.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -118720,7 +118826,7 @@
     "https://rg.ru/2026/03/14/chempion-ufc-mahachev-vstretitsia-s-irlandcem-gerri-na-ufc-329.html": "4acf7788b4877bfb198da074eae360c1db8c4aca150e805196203f9da111fd93",
     "https://rg.ru/2026/03/14/reg-pfo/v-saratove-naled-s-kryshi-upala-na-podrostka.html": "7c73b0a91e5af88f3e82134765ad3d47b98808c73f3b3218b43852de91c037ec",
     "https://rg.ru/2026/03/14/dmitriev-lideram-es-neploho-by-pouchitsia-u-ekonomista-saksa.html": "1ab0f25af06c73e9efdb2a56e55e9c622d4c00bac63a2e767469bc08a0260995",
-    "https://rg.ru/2026/03/14/neftianaia-infrastruktura-ne-postradala-posle-bombardirovki-iranskogo-ostrova-harg.html": "3ea4d50f60ab335645eee75ced1df385a0d91fbe459190b9cd6cbfd51ce08bd7",
+    "https://rg.ru/2026/03/14/neftianaia-infrastruktura-ne-postradala-posle-bombardirovki-iranskogo-ostrova-harg.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
     "https://rg.ru/2026/03/14/reg-cfo/fsb-zaderzhala-v-tambovskoj-oblasti-prizyvavshego-k-terrorizmu-inostranca.html": "a9b758c82d2e43104b518f5755dac79be3a021eb87e4719a6adb18cd9e31282c",
     "https://rg.ru/2026/03/14/iubilejnoj-plavkoj-otmetil-kollektiv-solikamskogo-magnievogo-zavoda-90-let-svoej-istorii.html": "e43e6f742301989fcf11f2e6bf9156dc56db78718070f34850a8140def109804",
     "https://rg.ru/2026/03/14/reg-urfo/kubinskie-animatory-privezli-v-iugru-trogatelnye-multfilmy.html": "3289b2e935867b05f0df9f1d3a68ecbe47bfed918feb7b6ed9296801c424e9a2",
@@ -118897,7 +119003,7 @@
     "https://rg.ru/2026/03/14/goroskop-na-15-marta-pridetsia-meniat-plany-otkladyvaia-vazhnye-dela.html": "3ded71fc7c4f076027e2f8437502b2c0d5fe13dbe4be8305a1b8d06800952f7a",
     "https://www.pnp.ru/economics/slozhnosti-s-vozvratom-tovara-i-poddelki-chem-riskuet-sovremennyy-pokupatel.html": "9dd8c4f9b961697a1fe2f4d5fbf30c470a1295589de7799aab49e47b5f6347db",
     "https://realty.ria.ru/20260315/zhkkh-2080531187.html": "ded549ce99f5379f8dae8e1a04ada7b49dcc5300568c1fb2e14f61eba471b3de",
-    "https://rg.ru/2026/03/15/v-kazahstane-segodnia-projdet-referendum-ob-izmenenii-konstitucii.html": "72951a9fb2d7679ba6435e21297d27cba2279299fd13de3d11317c82e8a775ea",
+    "https://rg.ru/2026/03/15/v-kazahstane-segodnia-projdet-referendum-ob-izmenenii-konstitucii.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
     "https://rg.ru/2026/03/14/putin-pozdravil-patriarha-kirilla-s-50-letiem-episkopskogo-sluzheniia.html": "278153660d969d03f0544da980d1c8d5783d19f2cf3b688ddfccb573ee471a89",
     "https://rg.ru/2026/03/14/reg-cfo/sobianin-za-sutki-na-podlete-k-moskve-unichtozheny-65-vrazheskih-bespilotnika.html": "a17efc16a7307ef4e190bc1bd108677b9f53f86d667db5c1f540da4af1bec240",
     "https://rg.ru/2026/03/14/na-ostrove-reiunon-prosnulsia-vulkan-kilometrovye-potoki-lavy-idut-k-okeanu.html": "450a250a9fec8797def6c0f3bc486484ed1e6a361c9cad14970623f3b7713e11",
@@ -119019,6 +119125,70 @@
     "https://rg.ru/2026/03/15/v-fonde-oms-rasskazali-kak-iskusstvennyj-intellekt-pomogaet-v-lechenii-bolnyh.html": "9313106660f810e18900b19809c9e027346146c2f7e827f43ba7f3e9c0ab3d36",
     "https://rg.ru/2026/03/15/volodin-napomnil-o-novyh-merah-po-povysheniiu-kachestva-podgotovki-medikov.html": "accee499cbbe5372f6cbc064e1a0f6273904ca13c021dc02f4f6a80791335101",
     "https://rg.ru/2026/03/15/ksir-zaiavili-chto-osvobodili-tankery-s-neftiu-za-tysiachi-kilometrov-ot-irana.html": "8cced56d9eb40d592199ca85041197021fd4af80260328f99048e80268daf3ad",
-    "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html": "58b25bc73a3abb3bfc39e3b005b5d55d8ec94067d35eb91e5c562efa44146dbd"
+    "https://rg.ru/2026/03/15/ekspert-roskachestva-obiasnila-kak-zakonno-uvolit-toksichnogo-sotrudnika.html": "58b25bc73a3abb3bfc39e3b005b5d55d8ec94067d35eb91e5c562efa44146dbd",
+    "https://ardexpert.ru/article/28856": "f3a9509c25614093659d243e34d24c79437e929001e0d8efed6a180d7387f9b8",
+    "http://ancb.ru/publication/read/21129": "504bf033399c52263d3e248243387cb0ecdafaf35f310a2c70049c6d6292c0dd",
+    "https://www.pnp.ru/economics/deputaty-predlozhili-vvesti-zapret-na-nachislenie-procentov-po-kreditu-do-oformleniya-nasledstva.html": "5d58386ddbe44381fcdef8a13054bd4f9eabd10601d1a4fe95c1350a2ab29b69",
+    "https://rg.ru/2026/03/15/dermatolog-egorova-rasskazala-o-sindrome-talogo-snega-i-ego-vliianii-na-kozhu.html": "33ed12eb387b9ce6dd98b8b944a50180d404fcc64bdbb4b06f4eaa810d1f2790",
+    "https://rg.ru/2026/03/15/patriarh-kirill-my-zhivem-vo-vremena-zakonchivshihsia-potriasenij.html": "1d33e684e5c67c97d501872399e5bb36c570d55b47447d7c42dab81dbeb965ae",
+    "https://rg.ru/2026/03/15/patriarh-kirill-napomnil-ob-obretenii-ikony-derzhavnaia.html": "8507501df8a6008e9260399bd69096c9eaa2e20e1cc3d350600bffeb693da1b6",
+    "https://rg.ru/2026/03/15/shvejcariia-otklonila-2-zaprosa-na-prolet-voennyh-samoletov-ssha-nad-ee-territoriej.html": "1d77a1c2cda73da576f7e55c89371d70d044927e789b9044e3f2c10ed8425e67",
+    "https://rg.ru/2026/03/15/baza-turisty-iz-rf-otravilis-v-tailande-vtoroj-raz-za-mesiac.html": "e6d550bd68399c5ffb6ac3e0dc5d946e0b615f8dd00532422b7cfed7fc5864e3",
+    "https://rg.ru/2026/03/15/lyzhnica-bagiian-zavoevala-trete-zoloto-na-paralimpiade-2026.html": "240a710a836f42091756ed65c1bb964998528d8c08521e86d880615166ddbe30",
+    "https://rg.ru/2026/03/15/importozameshchennyj-ms-21-ispytaiut-v-estestvennyh-usloviiah-obledeneniia.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/nikolaj-patrushev-vnutrennie-passazhirskie-perevozki-po-vode-dostigli-13-mln-v-god.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/times-epshtejn-postavlial-devushek-egipetskomu-milliarderu-al-fajedu.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/agressiia-ssha-protiv-irana-vse-bolshe-prevrashchaetsia-v-bitvu-za-chernoe-zoloto.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-pfo/v-kazani-soshli-s-relsov-tri-vagona-s-zernom.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/v-kremle-obiasnili-zachem-predstaviteli-francii-poseshchali-rossiiu.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/v-kitae-polzovateli-stali-oplakivat-poteriu-ii-sobesednika-posle-obnovlenij.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-dnr/pushilin-zaiavil-chto-vs-rf-otdeliaiut-ot-slavianska-schitannye-kilometry.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-cfo/sobianin-silami-pvo-minoborony-unichtozheny-37-bpla-letevshih-na-moskvu.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-cfo/ukrainskie-drony-atakovali-brianskij-gorod-sevsk.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/v-dubai-roskoshnye-oteli-rezko-snizili-ceny-iz-za-vojny-v-irane.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/glava-mid-irana-rasskazal-o-sostoianii-novogo-verhovnogo-lidera-strany.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/soiuz-posadil-kosmicheskie-semena-tomatov.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/oskolki-iranskoj-rakety-mogli-popast-v-rezidenciiu-konsula-ssha-v-izraile.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/aeroporty-vnukovo-i-sheremetevo-rabotaiut-v-rezhime-vremennyh-ogranichenij.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/mash-zhivushchij-v-rossii-otec-glavkoma-vsu-syrskogo-perestal-uznavat-rodnyh.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/komandira-brigady-polkovnika-vsu-sbil-molodoj-kapitan-vks-rossii.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/frontovaia-svodka-za-15-marta-tck-prinuditelno-mobilizuiut-invalidov-i-bezdomnyh.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-pfo/v-centre-ufy-obvalilas-krysha-zhilogo-doma.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-pfo/semia-iz-ufy-lishilas-kvartiry-i-bolee-55-mln-rublej-iz-za-moshennikov.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://t.me/mvd_rb/20893": "b0bf6a06400246c67a7046e4ccb58f312390ad0ff7c551fd470f9f540bdf152e",
+    "https://rg.ru/2026/03/15/v-uzbekistane-zhenshchina-bolee-30-let-zhila-s-pasportom-sssr.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/hakery-vzlomali-bazu-telefonnyh-nomerov-15-tysiachi-oficerov-vsu.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-ufo/na-kubani-lokalizovali-poslednij-ochag-pozhara-na-neftebaze-posle-ataki-bpla.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/rosstat-raskryl-srednie-zarplaty-pedagogov-i-medikov-po-itogam-2025-goda.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/v-budapeshte-prohodit-marsh-mira.html": "b8345f27ac802be9fac66d97bfc9c4ecddb92c1dd4bc8dc5f68b701d2c57ba83",
+    "https://rg.ru/2026/03/15/senator-karasin-ukrainskie-dronovody-aktivnee-biut-po-grazhdanskim-obektam.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/umer-akter-iz-kavkazskoj-plennicy-i-kin-dza-dza-nikolaj-garo.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-cfo/chislo-postradavshih-v-dtp-s-tramvaiami-v-moskve-vyroslo-do-22-sredi-nih-5-detej.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/bazu-ssha-viktoriia-vpervye-atakoval-optovolokonnyj-dron-i-snial-svoj-udar.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/film-lily-i-ego-avtor-stali-gvozdem-programmy-na-forume-ii-kino-generator.html": "8037f02481f59ab84f74e7f15a554e8199900aea122bb501b7667b3a90755cb8",
+    "https://rg.ru/2026/03/15/premer-ministr-kenii-vyletel-na-peregovory-v-moskvu.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/tailand-usilivaet-proverki-na-granice-na-fone-blizhnevostochnogo-konflikta.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-ufo/fokus-ostalsia-v-stroiu.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/opublikovany-kadry-iznutri-tramvaia-kotoryj-popal-v-dtp-s-22-postradavshimi.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/britanskij-lyzhnik-rasskazal-ob-ugoshchenii-alkogolem-vo-vremia-kubka-mira-v-norvegii.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/na-ukrainskom-fronte-testiruiut-boevyh-robotov-kotorye-v-budushchem-zameniat-soldat.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-dfo/rospotrebnadzor-pomog-seme-otsudit-u-podriadchika-bolee-3-millionov-rublej.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/udary-fab-3000-po-poziciiam-vsu-v-limane-i-konstantinovke-sniali-na-video.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-urfo/na-duhe-ognia-v-iugre-pokazali-tri-serii-novogo-seriala-katastrofy.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-cfo/vagon-vyletel-na-vstrechku-ochevidcy-rasskazali-o-dtp-s-tramvaiami-v-moskve.html": "b8345f27ac802be9fac66d97bfc9c4ecddb92c1dd4bc8dc5f68b701d2c57ba83",
+    "https://rg.ru/2026/03/15/reg-cfo/dopros-podozrevaemogo-v-ubijstve-zhenshchiny-v-moskve-sniali-na-video.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/hezbolla-vstupila-v-priamye-boestolknoveniia-s-armiej-izrailia-na-iuge-livana.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/revoliucionnaia-gvardiia-irana-poklialas-vysledit-i-ubit-biniamina-netaniahu.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/poiavilos-foto-ukrainskogo-f-16-v-rezhime-zveria.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/referendum-po-konstitucii-kazahstana-sostoialsia-iavka-prevysila-50-procentov.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/otkaz-ot-mandata-dlia-deputatov-rady-vskore-stanet-biletom-na-front.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-cfo/sk-prediavil-obvineniia-podozrevaemomu-v-ubijstve-v-moskve-raskryty-detali-dela.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/bolee-150-chelovek-zarazilis-norovirusom-v-karibskom-bassejne-na-kruiznom-sudne.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/reg-ufo/na-kubani-likvidirovali-dva-iz-treh-ochagov-pozhara-na-neftebaze-posle-ataki-bpla.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/shot-muzhchina-propal-v-tajge-v-krasnoiarske-on-ushel-v-pohod-kak-usolcevy.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/finrazvedka-sosredotochitsia-na-sdelkah-s-dorogoj-nedvizhimostiu.html": "b8345f27ac802be9fac66d97bfc9c4ecddb92c1dd4bc8dc5f68b701d2c57ba83",
+    "https://rg.ru/2026/03/15/ekspert-celikov-prodazhi-krossoverov-xcite-idut-vniz-zapasy-skoro-zakonchatsia.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/lyzhnik-golubkov-prines-rossii-shestoe-zoloto-paralimpijskih-igr-v-italii.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6",
+    "https://rg.ru/2026/03/15/proshli-bolee-400-tysiach-kilometrov-nazvany-samye-nadezhnye-modeli-toyota.html": "c07d8d6817bd9d499651208096ded84b27b139399f05b47ad7528a7e1f6a32d6"
   }
 }
