@@ -251,7 +251,7 @@
     "https://www.metalinfo.ru/ru/news/181113": {},
     "https://www.metalinfo.ru/ru/news/181137": {},
     "https://www.pnp.ru/economics/": {
-      "Last-Modified": "Sat, 21 Mar 2026 01:32:29 GMT"
+      "Last-Modified": "Sat, 21 Mar 2026 04:26:59 GMT"
     },
     "https://www.pnp.ru/economics/issledovatelskie-kompanii-predlozhili-osvobodit-ot-goskontrolya.html": {
       "Last-Modified": "Wed, 11 Feb 2026 03:32:28 GMT"
@@ -320,7 +320,7 @@
       "Last-Modified": "Wed, 11 Feb 2026 03:33:30 GMT"
     },
     "https://erzrf.ru/news/news-archive": {
-      "ETag": "W/\"260a5-XdEgKG6EkoA+ycZkB5uasbeCIeU\""
+      "ETag": "W/\"260a6-s84SzY0wEA5XicTf4ABlMf6Wu1s\""
     },
     "https://erzrf.ru/news/rosreyestr-v-tretyem-kvartale-na-ipotechnom-rynke-stolichnykh-novostroyek-zafiksirovano-snizheniye?tag=%D0%A0%D0%BE%D1%81%D1%80%D0%B5%D0%B5%D1%81%D1%82%D1%80": {
       "ETag": "W/\"27196-uXWClowdDCdLhLQUOBSMasqmEVI\""
@@ -55966,6 +55966,36 @@
     },
     "https://rg.ru/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html": {
       "ETag": "\"15qn7q3gnnw1lhc\""
+    },
+    "https://rg.ru/2026/03/21/pervyj-zvonochek-raka-vrach-nazvala-osoboe-mesto-na-tele.html": {
+      "ETag": "\"ti9hldg50b1mm7\""
+    },
+    "https://rg.ru/2026/03/21/v-belgii-uzhestochili-trebovaniia-k-ukrainskim-bezhencam.html": {
+      "ETag": "\"hav3uhu44q1mam\""
+    },
+    "https://rg.ru/2026/03/21/iran-gotov-propustit-iaponskie-tankery-cherez-ormuzskij-proliv.html": {
+      "ETag": "\"125ve4qwfx01q6d\""
+    },
+    "https://rg.ru/2026/03/21/na-chukotke-proshla-tradicionnaia-gonka-na-olenih-upriazhkah-rilet.html": {
+      "ETag": "\"10pigeoo3gp1plj\""
+    },
+    "https://rg.ru/2026/03/21/reg-cfo/opublikovany-kadry-s-mesta-krusheniia-legkomotornogo-samoleta-v-kolomne.html": {
+      "ETag": "\"jfx8wbbnvc1ndi\""
+    },
+    "https://rg.ru/2026/03/21/v-zabajkale-v-dtp-pogibli-dva-cheloveka.html": {
+      "ETag": "\"pe2b0apyxz1m0o\""
+    },
+    "https://rg.ru/2026/03/21/vlasti-iaponii-obratilis-k-zhiteliam-s-prosboj-ne-skupat-tualetnuiu-bumagu.html": {
+      "ETag": "\"fx5nng3vjd1m0d\""
+    },
+    "https://rg.ru/2026/03/21/reg-pfo/busargin-dva-cheloveka-postradali-pri-atake-bpla-vsu-na-saratovskuiu-oblast.html": {
+      "ETag": "\"hv8alzs9b51kws\""
+    },
+    "https://rg.ru/2026/03/21/populiaciia-amurskogo-tigra-v-dikoj-prirode-v-rossii-dostigla-stabilnogo-urovnia.html": {
+      "ETag": "\"jxdolrkjf1q9c\""
+    },
+    "https://rg.ru/2026/03/21/v-germanii-prohozhij-nashel-na-trotuare-chelovecheskie-zuby-ih-bolee-30.html": {
+      "ETag": "\"13q9yruwyq81l9l\""
     }
   },
   "stats": {
@@ -55980,9 +56010,9 @@
     ],
     "metrics": {
       "www.gostinfo.ru": {
-        "dns_ms": 616.3759399999833,
-        "connect_ms": 312.33012100000224,
-        "response_ms": 928.7060609999855,
+        "dns_ms": 442.3710890000052,
+        "connect_ms": 403.41592199999354,
+        "response_ms": 845.7870109999988,
         "attempts": 1,
         "status": 200,
         "error": null,
@@ -55991,24 +56021,27 @@
             "attempt": 1,
             "status": 200,
             "proxy": null,
-            "dns_ms": 616.3759399999833,
-            "response_ms": 928.7060609999855,
+            "dns_ms": 442.3710890000052,
+            "response_ms": 845.7870109999988,
             "final_url": "https://www.gostinfo.ru/News/List"
           }
         ]
       },
       "ancb.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
+        "dns_ms": 154.96873000000733,
+        "connect_ms": 1007.3441539999806,
+        "response_ms": 1162.312883999988,
         "attempts": 1,
-        "status": null,
-        "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f89ea1823f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "status": 200,
+        "error": null,
         "attempt_log": [
           {
             "attempt": 1,
-            "error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f89ea1823f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
-            "proxy": null
+            "status": 200,
+            "proxy": null,
+            "dns_ms": 154.96873000000733,
+            "response_ms": 1162.312883999988,
+            "final_url": "https://ancb.ru/publication"
           }
         ]
       },
@@ -56019,9 +56052,9 @@
           "result": "http_success",
           "cookies": []
         },
-        "dns_ms": 4316.217176999999,
-        "connect_ms": 0.0,
-        "response_ms": 1214.6457549999923,
+        "dns_ms": 681.3289760000032,
+        "connect_ms": 612.1859830000176,
+        "response_ms": 1293.5149590000208,
         "attempts": 1,
         "status": 200,
         "error": null,
@@ -56030,8 +56063,8 @@
             "attempt": 1,
             "status": 200,
             "proxy": null,
-            "dns_ms": 4316.217176999999,
-            "response_ms": 1214.6457549999923,
+            "dns_ms": 681.3289760000032,
+            "response_ms": 1293.5149590000208,
             "final_url": "https://minfin.gov.ru/ru/press-center/"
           }
         ]
@@ -56050,9 +56083,9 @@
             "usr_abt_grp"
           ]
         },
-        "dns_ms": 4898.017414000009,
+        "dns_ms": 4393.92988100002,
         "connect_ms": 0.0,
-        "response_ms": 310.8252339999922,
+        "response_ms": 4129.25182699999,
         "attempts": 1,
         "status": 200,
         "error": null,
@@ -56061,24 +56094,27 @@
             "attempt": 1,
             "status": 200,
             "proxy": null,
-            "dns_ms": 4898.017414000009,
-            "response_ms": 310.8252339999922,
-            "final_url": "https://www.pnp.ru/economics/fas-zaprosila-u-marketpleysov-dannye-o-komissii-dlya-rossiyskikh-i-inostrannykh-prodavcov.html"
+            "dns_ms": 4393.92988100002,
+            "response_ms": 4129.25182699999,
+            "final_url": "https://www.pnp.ru/economics/"
           }
         ]
       },
       "ria-stk.ru": {
-        "dns_ms": null,
-        "connect_ms": null,
-        "response_ms": null,
+        "dns_ms": 274.27575699999807,
+        "connect_ms": 383.64357099999324,
+        "response_ms": 657.9193279999913,
         "attempts": 1,
-        "status": null,
-        "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f89ea205450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "status": 200,
+        "error": null,
         "attempt_log": [
           {
             "attempt": 1,
-            "error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f89ea205450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
-            "proxy": null
+            "status": 200,
+            "proxy": null,
+            "dns_ms": 274.27575699999807,
+            "response_ms": 657.9193279999913,
+            "final_url": "https://ria-stk.ru/news/vse-novosti.php"
           }
         ]
       },
@@ -56091,9 +56127,9 @@
             "qrator_jsr"
           ]
         },
-        "dns_ms": 2.123429999983273,
-        "connect_ms": 345.88103900000533,
-        "response_ms": 348.0044689999886,
+        "dns_ms": 2.635576999978184,
+        "connect_ms": 381.02656300003446,
+        "response_ms": 383.66214000001264,
         "attempts": 1,
         "status": 200,
         "error": null,
@@ -56102,9 +56138,9 @@
             "attempt": 1,
             "status": 200,
             "proxy": null,
-            "dns_ms": 2.123429999983273,
-            "response_ms": 348.0044689999886,
-            "final_url": "https://rg.ru/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html"
+            "dns_ms": 2.635576999978184,
+            "response_ms": 383.66214000001264,
+            "final_url": "https://rg.ru/2026/03/21/v-germanii-prohozhij-nashel-na-trotuare-chelovecheskie-zuby-ih-bolee-30.html"
           }
         ]
       },
@@ -56118,27 +56154,27 @@
         }
       }
     },
-    "last_run": "2026-03-21T01:34:18.864077+00:00",
+    "last_run": "2026-03-21T04:28:12.428417+00:00",
     "items": 500
   },
   "index_hash": {
     "https://notim.ru": "30740094819768e88519835b6e7dad7d279d47901f428e80a5b047f07f7707fe",
-    "https://ardexpert.ru/article": "8825b96f053159b2c6045e79c53311dd859a42c1c7c6390b724c697ed0fe6440",
+    "https://ardexpert.ru/article": "d919e11638c72a54bee09082b0687ea99e8ae63e0e5b8e0242e5cb7e96c1928a",
     "https://www.gostinfo.ru/News/List": "8062c864aa1a772b30be6757e98656fb34d0175b67c6a9e759354af82237f702",
     "https://api.faufcc.ru/api/publications?type=news&page=1&limit=50": "f67b71631575f4bca935f3176af5509fff8096dd74711755d5653a535f64af8a",
-    "http://ancb.ru/publication": "42e03dba79e46e9b220205c5bc9232081767fcbf0aea98d54a3a663854012ce2",
-    "https://eec.eaeunion.org/news/": "be2e7269cbc9da15ed560c537486b37a441ecd02de1f28907eb3cffb37d24598",
-    "https://minfin.gov.ru/ru/press-center/": "24e3d8dc5e15494c3c87e584b5625c4ee5e2e8309896a8ae637717862637db53",
-    "https://www.interfax-russia.ru/realty/news?per-page=32": "14a6ac737652f9c905ea5e90921f465ddf75b1905e09dc17b0269f79a6606471",
+    "http://ancb.ru/publication": "1665d8670f539769d6229aa2be782a00e2cb4f0ec491a808f92d274d0b1be9a3",
+    "https://eec.eaeunion.org/news/": "e4cce08ebf3d17ba362aa53cc71f58d50c6e8b40af362bf759827fe930b8ba72",
+    "https://minfin.gov.ru/ru/press-center/": "080716c9b2bf9ad667fbf2693b0b8d80c4b4d77aad1c4fbbb2accfcd8b5e70da",
+    "https://www.interfax-russia.ru/realty/news?per-page=32": "066a5c9e326346d18aecaded323da793458bb07195674ea66a483d78e9987e74",
     "https://www.metalinfo.ru/ru/news": "29dadf133cea98a1b53a3053148ef678e6e77fda4fb774fdc9bc26979c7fe5d5",
-    "https://www.pnp.ru/economics/": "6e18d1c4aaa00b27a1ff96b22f558df648a9e7423a56427d6cbe7be9525c9c8a",
-    "https://erzrf.ru/news/news-archive": "72c938ab760a6c13ccbb3645dcd71a6711ee6da58fb242a4faad5d6735e47d09",
-    "https://ria-stk.ru/news/vse-novosti.php": "ce6619214ce9b159c81ff37e54a470ca6396b2aa3c1ec4ec634cf0c96d5da231",
-    "http://government.ru/news/": "007af041242a47a3768fb4e4c75ca7bccdcc43a123de6b32e60b8ad2637515f6",
-    "https://stroygaz.ru/news/": "306b3222ab7747cd178ad6586e3aa7045fb5ed96dee5e78858954abd306d315c",
-    "https://realty.ria.ru/lenta/": "4dfba0779b71a3d244e7a63f1c2fe4b31822c7441e83b949914e702236c6f1c9",
-    "https://gge.ru/press-center/news/": "db1419f12364b3c97bd2a983d8ecec57bd5f6f58fa5c5618e63c8a2b500215ae",
-    "https://rg.ru/rubric/tema/ekonomika": "e02c2ee8a7868225fcfc46f68c9ab2c7a819a6cb909524714c58213b79693193",
+    "https://www.pnp.ru/economics/": "c71fa8f2383837f01f55ee24180fe9d4226037d2bf91598cf5958abe8dd2fb8f",
+    "https://erzrf.ru/news/news-archive": "a8918bf3e4e49ea460374821cf1d554df5cbba491fd1331c7ffc8c38c64d75bc",
+    "https://ria-stk.ru/news/vse-novosti.php": "1e28381fb6293b9eb2b957283a98ae860bec4ce1dfa48c7e5dc94b141f9a6fbe",
+    "http://government.ru/news/": "e91ad4b5e5a39ccbc84ddb5d3adc696e2259452fbad1308e2c8294eb16de11c6",
+    "https://stroygaz.ru/news/": "9c4591a40d722aadd431328fc5e4b3d6ce1e01fe9f4e5cd75dec2d1ee20788fd",
+    "https://realty.ria.ru/lenta/": "5dc7d134ad8112804118d46ca78ffb7233282e015377fe9c40b830844f54a387",
+    "https://gge.ru/press-center/news/": "a566c4131061f39db18f12a1c13e411680400a7bba63ce23756e81421366b216",
+    "https://rg.ru/rubric/tema/ekonomika": "8446a07177628db65c4839a3abfc171f23e68c3a3317e5cf85190b73bea7c2a5",
     "https://faufcc.ru/press-tsentr/novosti": "03f666e7d940e6e39a89694c96f0098e3b57c2ad5e37e9a1cfeb866443819ac8"
   },
   "seen_urls": {
@@ -57073,6 +57109,18 @@
     ],
     "Главгосэкспертиза России": [],
     "Российская газета: Экономика": [
+      "https://rg.ru/2026/03/21/pervyj-zvonochek-raka-vrach-nazvala-osoboe-mesto-na-tele.html",
+      "https://rg.ru/2026/03/21/v-belgii-uzhestochili-trebovaniia-k-ukrainskim-bezhencam.html",
+      "https://rg.ru/2026/03/21/iran-gotov-propustit-iaponskie-tankery-cherez-ormuzskij-proliv.html",
+      "https://rg.ru/2026/03/03/mirovye-energeticheskie-vorota-pochemu-tak-vazhen-ormuzskij-proliv.html",
+      "https://rg.ru/2026/03/21/na-chukotke-proshla-tradicionnaia-gonka-na-olenih-upriazhkah-rilet.html",
+      "https://rg.ru/2026/03/21/reg-cfo/opublikovany-kadry-s-mesta-krusheniia-legkomotornogo-samoleta-v-kolomne.html",
+      "https://rg.ru/2026/03/20/v-kolomne-razbilsia-legkomotornyj-samolet-mesto-padeniia-sniali-na-foto.html",
+      "https://rg.ru/2026/03/21/v-zabajkale-v-dtp-pogibli-dva-cheloveka.html",
+      "https://rg.ru/2026/03/21/vlasti-iaponii-obratilis-k-zhiteliam-s-prosboj-ne-skupat-tualetnuiu-bumagu.html",
+      "https://rg.ru/2026/03/21/reg-pfo/busargin-dva-cheloveka-postradali-pri-atake-bpla-vsu-na-saratovskuiu-oblast.html",
+      "https://rg.ru/2026/03/21/populiaciia-amurskogo-tigra-v-dikoj-prirode-v-rossii-dostigla-stabilnogo-urovnia.html",
+      "https://rg.ru/2026/03/21/v-germanii-prohozhij-nashel-na-trotuare-chelovecheskie-zuby-ih-bolee-30.html",
       "https://rg.ru/2026/03/21/kak-largi-otmetiat-mezhdunarodnyj-den-lastonogih-v-primorskom-okeanariume.html",
       "https://rg.ru/2026/03/21/proshlo-13-let-a-on-kak-novyj-na-prodazhu-vystavili-honda-cr-v-za-365-mln.html",
       "https://rg.ru/2026/03/21/onishchenko-ocenil-zdorove-rossiian-preduprediv-o-riske-epidemii-ozhireniia.html",
@@ -57155,18 +57203,7 @@
       "https://rg.ru/2026/03/20/reg-ufo/v-astrahani-soobshchili-o-pervyh-postradavshih-ot-ukusov-kleshchej.html",
       "https://rg.ru/2026/03/20/lukashenko-hochet-prodat-ssha-rudnik-rech-idet-o-treh-milliardah-dollarov.html",
       "https://rg.ru/2026/03/20/reg-sibfo/v-sibiri-siloviki-v-hode-pogoni-zaderzhali-omichej-ukravshih-tri-mln-u-pensionerki.html",
-      "https://rg.ru/2026/03/20/minstroj-obiasnil-pochemu-rastet-oficialnaia-stoimost-zhilia.html",
-      "https://rg.ru/2026/03/20/sozdannyj-v-misis-kompozit-v-3-raza-legche-stali-ne-ustupaia-ej-po-prochnosti.html",
-      "https://rg.ru/2026/03/20/reg-ufo/sobaka-prokusila-nogu-zhitelnice-sela-borisovka.html",
-      "https://rg.ru/2026/03/20/idet-rabota-nad-novym-ramnym-vnedorozhnikom-audi.html",
-      "https://rg.ru/2026/03/20/iskusnaia-bezyskusnost-chto-mozhno-sozdat-iz-pshenichnogo-kolosa.html",
-      "https://rg.ru/2026/03/20/rover-perseverance-obnaruzhil-na-marse-drevniuiu-reku-kotoraia-mogla-byt-obitaema.html",
-      "https://rg.ru/2026/03/20/ft-mirovye-aviakompanii-gotoviatsia-k-pereboiam-v-postavkah-topliva.html",
-      "https://rg.ru/2026/03/20/v-rukovodstve-cska-rasskazali-o-nakazanii-mojzesu.html",
-      "https://rg.ru/2026/03/20/reg-pfo/v-samarskoj-oblasti-ot-vzryva-gaza-razrushilsia-zhiloj-dom.html",
-      "https://rg.ru/2026/03/20/ukrainskaia-vlast-nachala-prinuditelnyj-vyvoz-detej-iz-slavianska.html",
-      "https://rg.ru/2026/03/20/eks-glavu-departamenta-tehniki-rosgvardii-riabyh-prigovorili-k-12-godam.html",
-      "https://rg.ru/2026/03/20/reg-szfo/v-vologodskoj-oblasti-u-mnogodetnoj-semi-sgorel-dom.html"
+      "https://rg.ru/2026/03/20/minstroj-obiasnil-pochemu-rastet-oficialnaia-stoimost-zhilia.html"
     ]
   },
   "first_seen": {
@@ -76949,7 +76986,17 @@
     "3ee343d64722209d48cd11ec6ecc2486c6190db2d8f9fab3bc320c5ec4d561cd": "2026-03-21T04:34:00+03:00",
     "764b95c83ed2c34f66c07e6adb979ad636c88ec817f5794ba4dee25e827ee089": "2026-03-21T04:34:00+03:00",
     "4196d04aba71229673a4507effef00628fe47d4331a2bb676624fe69c93a9cbf": "2026-03-21T04:34:00+03:00",
-    "1d5fa4d8e3f1b2129f1d3351db724a40191c7b99c0a43cc6c7b8850f2a064624": "2026-03-21T04:34:00+03:00"
+    "1d5fa4d8e3f1b2129f1d3351db724a40191c7b99c0a43cc6c7b8850f2a064624": "2026-03-21T04:34:00+03:00",
+    "b7e81c00f626253ace8872b1d14cead0ab8c5e8c63ed0dba1f22d8b55d9b657d": "2026-03-21T07:27:00+03:00",
+    "9d51723aed399ddebb4221c3c617a64e0a2aded10ba39cc6f54aa4ec9bd3bf8a": "2026-03-21T07:27:00+03:00",
+    "8a4641c90192bec7e22859fb8b0c63d11525a0a0c06f01c8e074278a5eb84575": "2026-03-21T07:27:00+03:00",
+    "d89b26c6f7902eeb300ce9d6d44c1c6b71c79a96ec7ba1ac922ae4c2f35b079e": "2026-03-21T07:27:00+03:00",
+    "e7b982cbf2234a3485e5377722d14efd397010b18f93a86c1508cd020ab3aade": "2026-03-21T07:27:00+03:00",
+    "88e8908a3574e3b18db8c3e4c8feaf4e0e4e6d046ae6dfe9fcafdffae0281fb6": "2026-03-21T07:27:00+03:00",
+    "965e8d2cb6ac37b6f382bc72f91c1dbf7a303ce72624a569b9f5899e13a02124": "2026-03-21T07:28:00+03:00",
+    "dbe3c736d4b6a2480e4ab73551fda88ac8dc3f73fa6da261c074410aab638ca2": "2026-03-21T07:28:00+03:00",
+    "a67f458484333cd0a08711a45914056471a1ac5c4ebb33aefdbb5c4165e286bd": "2026-03-21T07:28:00+03:00",
+    "7afe8b8a5f5f2bbe047b9cf2a7b745cb5f2a34415e7c8a2d8dea7d9c2d8fe609": "2026-03-21T07:28:00+03:00"
   },
   "host_state": {
     "www.gostinfo.ru": {
@@ -76974,10 +77021,9 @@
         }
       ],
       "failures": {
-        "last_error": "HTTPConnectionPool(host='ancb.ru', port=80): Max retries exceeded with url: /publication (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f89ea1823f0>, 'Connection to ancb.ru timed out. (connect timeout=4.0)'))",
+        "last_error": null,
         "consecutive": 0,
-        "last_ts": 1774056720.5924094,
-        "network_cooldown_until": 1774057620.5924072
+        "last_ts": 1774056720.5924094
       },
       "warmup_done": false,
       "last_success_path": null
@@ -76994,6 +77040,14 @@
     "www.pnp.ru": {
       "cookies": [
         {
+          "name": "PHPSESSID",
+          "value": "ckb47msfd4avhhvqks3rif7fdt",
+          "domain": "www.pnp.ru",
+          "path": "/",
+          "secure": false,
+          "expires": null
+        },
+        {
           "name": "usr_abt_grp",
           "value": "2",
           "domain": "www.pnp.ru",
@@ -77007,17 +77061,17 @@
         "consecutive": 0
       },
       "warmup_done": true,
-      "last_success_path": "/economics/fas-zaprosila-u-marketpleysov-dannye-o-komissii-dlya-rossiyskikh-i-inostrannykh-prodavcov.html"
+      "last_success_path": "/economics/"
     },
     "ria-stk.ru": {
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "dYOb0gr8zKlONam4WH0E24mW5RpqlarY",
+          "value": "oNk6B1CT343vA2Zf2Xy5N9NODs8xO02f",
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": false,
-          "expires": 1773982156
+          "expires": 1774078022
         },
         {
           "name": "BITRIX_SM_SALE_UID",
@@ -77025,14 +77079,13 @@
           "domain": ".ria-stk.ru",
           "path": "/",
           "secure": true,
-          "expires": 1805075356
+          "expires": 1805171222
         }
       ],
       "failures": {
-        "last_error": "HTTPSConnectionPool(host='ria-stk.ru', port=443): Max retries exceeded with url: /news/vse-novosti.php (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f89ea205450>: Failed to establish a new connection: [Errno 101] Network is unreachable'))",
+        "last_error": null,
         "consecutive": 0,
-        "last_ts": 1774056770.36129,
-        "network_cooldown_until": 1774057670.3612883
+        "last_ts": 1774056770.36129
       },
       "warmup_done": false,
       "last_success_path": null
@@ -77041,23 +77094,23 @@
       "cookies": [
         {
           "name": "qrator_jsr",
-          "value": "v2.0.1774056796.319.34adb6a2bYDrfblZ|LvHdkB9dGiNuIUL0|nXPQsNmEq/Tbx6EdwgNulUGSgVvgzW27zjATbMck4zRd+YcUeVBodO8yxZnpwzmlfVN788ThiqyaCEquV4V3Dg==-XI3S+8Rv0V/ZLdWHMiLcfkP/FcQ=-00",
+          "value": "v2.0.1774067245.967.87e8d084EiEizX85|OJjuW2qosMWb2jHU|rRQPeql0IF/RIFF0QTNuXfY6yehUQfT0dw/8yONNb3X07iFOzaStdZUoDarhrZ5r1OaMwayFvfsSC1IHlqZe1mNgkuNVFpELA9cczhidQ54=-29opGg+PGXtOgqVCG+OIlSq0tq0=-00",
           "domain": ".rg.ru",
           "path": "/",
           "secure": false,
-          "expires": 1774057096
+          "expires": 1774067545
         },
         {
           "name": "qrator_ssid2",
-          "value": "v2.0.1774056810.432.34adb6a2BXg1g6gX|OtuuZSsds1oQHaub|eMatP3sSb9KkVdkCTnS6dNoIGvTRBYWBZEvQSYJyZ7JRfJ4Uofm9mvp0lU9AgbONmiVMtFtYLAYSLxqfEy6DYQ==-7J+GoFODAd+8icx1Tnrwl2RHYCc=",
+          "value": "v2.0.1774067260.861.87e8d0848biKykI3|k8FKK9dAtt6a7JAJ|WOgKklKanw50zCNzKZvOoNR5fwgxuQhiNHUJ2hfxM8p8JIaKI65eaTTMZQ7WmybG3Nxm5CEACDI5yLtQFimabu1IRZLz3ofydbO98z127T8=-9Fm+NnhQwm3XDB68j2NGKaYngPo=",
           "domain": ".rg.ru",
           "path": "/",
           "secure": false,
-          "expires": 1774057810
+          "expires": 1774068261
         },
         {
           "name": "INGRESSCOOKIE",
-          "value": "82205c3c1dcc5a7f8a19c9f0974934bf|a7a1f0ff35aa6c88794bfc21045df38e",
+          "value": "c5df5c78ebf77a6d2e465d60eebd088b|a7a1f0ff35aa6c88794bfc21045df38e",
           "domain": "rg.ru",
           "path": "/",
           "secure": true,
@@ -77068,7 +77121,7 @@
         "last_error": null,
         "consecutive": 0,
         "challenge_retry": {
-          "https://rg.ru/rubric/tema/ekonomika": 1774056778.0076227,
+          "https://rg.ru/rubric/tema/ekonomika": 1774067228.5953066,
           "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html": 1770947884.1021295,
           "https://rg.ru/2026/02/13/the-atlantic-v-ofise-zelenskogo-soobshchili-o-gotovnosti-vyvesti-vsu-iz-donbassa.html/amp": 1770947914.4087703,
           "https://rg.ru/2026/02/13/la-stampa-v-olimpijskoj-derevne-za-tri-dnia-zakonchilis-besplatnye-prezervativy.html": 1770947944.7083402,
@@ -77309,7 +77362,7 @@
         "last_ts": 1773850466.1788788
       },
       "warmup_done": true,
-      "last_success_path": "/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html"
+      "last_success_path": "/2026/03/21/v-germanii-prohozhij-nashel-na-trotuare-chelovecheskie-zuby-ih-bolee-30.html"
     },
     "gge.ru": {
       "cookies": [],
@@ -99084,7 +99137,17 @@
     "https://rg.ru/2026/03/21/ssha-sniali-ogranicheniia-na-postavku-iranskoj-nefti-rech-idet-o-140-millionah-barrelej.html": "https://rg.ru/2026/03/21/ssha-sniali-ogranicheniia-na-postavku-iranskoj-nefti-rech-idet-o-140-millionah-barrelej.html",
     "https://rg.ru/2026/03/21/cbs-idet-tshchatelnaia-podgotovka-k-razvertyvaniiu-suhoputnyh-vojsk-ssha-v-irane.html": "https://rg.ru/2026/03/21/cbs-idet-tshchatelnaia-podgotovka-k-razvertyvaniiu-suhoputnyh-vojsk-ssha-v-irane.html",
     "https://rg.ru/2026/03/21/tramp-dopustil-vozmozhnost-skorogo-zaversheniia-voennoj-operacii-protiv-irana.html": "https://rg.ru/2026/03/21/tramp-dopustil-vozmozhnost-skorogo-zaversheniia-voennoj-operacii-protiv-irana.html",
-    "https://rg.ru/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html": "https://rg.ru/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html"
+    "https://rg.ru/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html": "https://rg.ru/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html",
+    "https://rg.ru/2026/03/21/pervyj-zvonochek-raka-vrach-nazvala-osoboe-mesto-na-tele.html": "https://rg.ru/2026/03/21/pervyj-zvonochek-raka-vrach-nazvala-osoboe-mesto-na-tele.html",
+    "https://rg.ru/2026/03/21/v-belgii-uzhestochili-trebovaniia-k-ukrainskim-bezhencam.html": "https://rg.ru/2026/03/21/v-belgii-uzhestochili-trebovaniia-k-ukrainskim-bezhencam.html",
+    "https://rg.ru/2026/03/21/iran-gotov-propustit-iaponskie-tankery-cherez-ormuzskij-proliv.html": "https://rg.ru/2026/03/21/iran-gotov-propustit-iaponskie-tankery-cherez-ormuzskij-proliv.html",
+    "https://rg.ru/2026/03/21/na-chukotke-proshla-tradicionnaia-gonka-na-olenih-upriazhkah-rilet.html": "https://rg.ru/2026/03/21/na-chukotke-proshla-tradicionnaia-gonka-na-olenih-upriazhkah-rilet.html",
+    "https://rg.ru/2026/03/21/reg-cfo/opublikovany-kadry-s-mesta-krusheniia-legkomotornogo-samoleta-v-kolomne.html": "https://rg.ru/2026/03/21/reg-cfo/opublikovany-kadry-s-mesta-krusheniia-legkomotornogo-samoleta-v-kolomne.html",
+    "https://rg.ru/2026/03/21/v-zabajkale-v-dtp-pogibli-dva-cheloveka.html": "https://rg.ru/2026/03/21/v-zabajkale-v-dtp-pogibli-dva-cheloveka.html",
+    "https://rg.ru/2026/03/21/vlasti-iaponii-obratilis-k-zhiteliam-s-prosboj-ne-skupat-tualetnuiu-bumagu.html": "https://rg.ru/2026/03/21/vlasti-iaponii-obratilis-k-zhiteliam-s-prosboj-ne-skupat-tualetnuiu-bumagu.html",
+    "https://rg.ru/2026/03/21/reg-pfo/busargin-dva-cheloveka-postradali-pri-atake-bpla-vsu-na-saratovskuiu-oblast.html": "https://rg.ru/2026/03/21/reg-pfo/busargin-dva-cheloveka-postradali-pri-atake-bpla-vsu-na-saratovskuiu-oblast.html",
+    "https://rg.ru/2026/03/21/populiaciia-amurskogo-tigra-v-dikoj-prirode-v-rossii-dostigla-stabilnogo-urovnia.html": "https://rg.ru/2026/03/21/populiaciia-amurskogo-tigra-v-dikoj-prirode-v-rossii-dostigla-stabilnogo-urovnia.html",
+    "https://rg.ru/2026/03/21/v-germanii-prohozhij-nashel-na-trotuare-chelovecheskie-zuby-ih-bolee-30.html": "https://rg.ru/2026/03/21/v-germanii-prohozhij-nashel-na-trotuare-chelovecheskie-zuby-ih-bolee-30.html"
   },
   "content_hashes": {
     "def4ab53202a18cd047c5e28dda6555d7cca15a0": "https://notim.ru/news-partners",
@@ -119076,7 +119139,17 @@
     "a3b2ff3740921ce431b1a70c9558597660b97028": "https://rg.ru/2026/03/21/ssha-sniali-ogranicheniia-na-postavku-iranskoj-nefti-rech-idet-o-140-millionah-barrelej.html",
     "a292088573b6c94f1cc51cec0bcba0b80a00c707": "https://rg.ru/2026/03/21/cbs-idet-tshchatelnaia-podgotovka-k-razvertyvaniiu-suhoputnyh-vojsk-ssha-v-irane.html",
     "90e8be83fca03b9d32e7b64e480f838a76607d85": "https://rg.ru/2026/03/21/tramp-dopustil-vozmozhnost-skorogo-zaversheniia-voennoj-operacii-protiv-irana.html",
-    "a42e78d78a2873efbed195fdb384b3f35b57fbaf": "https://rg.ru/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html"
+    "a42e78d78a2873efbed195fdb384b3f35b57fbaf": "https://rg.ru/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html",
+    "adb68e39bfdf29926808298e7e70cc2d785d2c2a": "https://rg.ru/2026/03/21/pervyj-zvonochek-raka-vrach-nazvala-osoboe-mesto-na-tele.html",
+    "fe3c5da96d72b4d461162187229ecd8c5dbd8f09": "https://rg.ru/2026/03/21/v-belgii-uzhestochili-trebovaniia-k-ukrainskim-bezhencam.html",
+    "6e005172d93420b85e26161c5d86dda980618430": "https://rg.ru/2026/03/21/iran-gotov-propustit-iaponskie-tankery-cherez-ormuzskij-proliv.html",
+    "36b31eaa5ff7c3bfb25d3f92b51de6163e9d192c": "https://rg.ru/2026/03/21/na-chukotke-proshla-tradicionnaia-gonka-na-olenih-upriazhkah-rilet.html",
+    "4b3d500ca1a4c93b01db7bc1bc7afff414f25d5f": "https://rg.ru/2026/03/21/reg-cfo/opublikovany-kadry-s-mesta-krusheniia-legkomotornogo-samoleta-v-kolomne.html",
+    "048b68939b40fb73219c4d7158bdca5adaa6fc56": "https://rg.ru/2026/03/21/v-zabajkale-v-dtp-pogibli-dva-cheloveka.html",
+    "9e09961c5016d076f31403b1f9403b7f483ee744": "https://rg.ru/2026/03/21/vlasti-iaponii-obratilis-k-zhiteliam-s-prosboj-ne-skupat-tualetnuiu-bumagu.html",
+    "2d984dddfce6e48c0184c63fef016aef45a9c5a0": "https://rg.ru/2026/03/21/reg-pfo/busargin-dva-cheloveka-postradali-pri-atake-bpla-vsu-na-saratovskuiu-oblast.html",
+    "80149948814817b1515877cff0d0a786764d21f5": "https://rg.ru/2026/03/21/populiaciia-amurskogo-tigra-v-dikoj-prirode-v-rossii-dostigla-stabilnogo-urovnia.html",
+    "d91601d7f04d9e462b6f018bca7b275179a11011": "https://rg.ru/2026/03/21/v-germanii-prohozhij-nashel-na-trotuare-chelovecheskie-zuby-ih-bolee-30.html"
   },
   "canonical_item_ids": {
     "https://notim.ru/news-partners": "37d858c49ba7595cf8edda84363a6575f4c8341ef097ee5d56dfacbac86267b1",
@@ -141973,6 +142046,16 @@
     "https://rg.ru/2026/03/21/ssha-sniali-ogranicheniia-na-postavku-iranskoj-nefti-rech-idet-o-140-millionah-barrelej.html": "3ee343d64722209d48cd11ec6ecc2486c6190db2d8f9fab3bc320c5ec4d561cd",
     "https://rg.ru/2026/03/21/cbs-idet-tshchatelnaia-podgotovka-k-razvertyvaniiu-suhoputnyh-vojsk-ssha-v-irane.html": "764b95c83ed2c34f66c07e6adb979ad636c88ec817f5794ba4dee25e827ee089",
     "https://rg.ru/2026/03/21/tramp-dopustil-vozmozhnost-skorogo-zaversheniia-voennoj-operacii-protiv-irana.html": "4196d04aba71229673a4507effef00628fe47d4331a2bb676624fe69c93a9cbf",
-    "https://rg.ru/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html": "1d5fa4d8e3f1b2129f1d3351db724a40191c7b99c0a43cc6c7b8850f2a064624"
+    "https://rg.ru/2026/03/21/na-zemle-nachalas-magnitnaia-buria-v-noch-na-21-marta-ona-usililas-do-urovnia-g2.html": "1d5fa4d8e3f1b2129f1d3351db724a40191c7b99c0a43cc6c7b8850f2a064624",
+    "https://rg.ru/2026/03/21/pervyj-zvonochek-raka-vrach-nazvala-osoboe-mesto-na-tele.html": "b7e81c00f626253ace8872b1d14cead0ab8c5e8c63ed0dba1f22d8b55d9b657d",
+    "https://rg.ru/2026/03/21/v-belgii-uzhestochili-trebovaniia-k-ukrainskim-bezhencam.html": "9d51723aed399ddebb4221c3c617a64e0a2aded10ba39cc6f54aa4ec9bd3bf8a",
+    "https://rg.ru/2026/03/21/iran-gotov-propustit-iaponskie-tankery-cherez-ormuzskij-proliv.html": "8a4641c90192bec7e22859fb8b0c63d11525a0a0c06f01c8e074278a5eb84575",
+    "https://rg.ru/2026/03/21/na-chukotke-proshla-tradicionnaia-gonka-na-olenih-upriazhkah-rilet.html": "d89b26c6f7902eeb300ce9d6d44c1c6b71c79a96ec7ba1ac922ae4c2f35b079e",
+    "https://rg.ru/2026/03/21/reg-cfo/opublikovany-kadry-s-mesta-krusheniia-legkomotornogo-samoleta-v-kolomne.html": "e7b982cbf2234a3485e5377722d14efd397010b18f93a86c1508cd020ab3aade",
+    "https://rg.ru/2026/03/21/v-zabajkale-v-dtp-pogibli-dva-cheloveka.html": "88e8908a3574e3b18db8c3e4c8feaf4e0e4e6d046ae6dfe9fcafdffae0281fb6",
+    "https://rg.ru/2026/03/21/vlasti-iaponii-obratilis-k-zhiteliam-s-prosboj-ne-skupat-tualetnuiu-bumagu.html": "965e8d2cb6ac37b6f382bc72f91c1dbf7a303ce72624a569b9f5899e13a02124",
+    "https://rg.ru/2026/03/21/reg-pfo/busargin-dva-cheloveka-postradali-pri-atake-bpla-vsu-na-saratovskuiu-oblast.html": "dbe3c736d4b6a2480e4ab73551fda88ac8dc3f73fa6da261c074410aab638ca2",
+    "https://rg.ru/2026/03/21/populiaciia-amurskogo-tigra-v-dikoj-prirode-v-rossii-dostigla-stabilnogo-urovnia.html": "a67f458484333cd0a08711a45914056471a1ac5c4ebb33aefdbb5c4165e286bd",
+    "https://rg.ru/2026/03/21/v-germanii-prohozhij-nashel-na-trotuare-chelovecheskie-zuby-ih-bolee-30.html": "7afe8b8a5f5f2bbe047b9cf2a7b745cb5f2a34415e7c8a2d8dea7d9c2d8fe609"
   }
 }
