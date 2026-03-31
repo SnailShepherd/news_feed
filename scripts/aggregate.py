@@ -49,7 +49,7 @@ READ_TIMEOUT = 10.0
 REQUEST_TIMEOUT = (CONNECT_TIMEOUT, READ_TIMEOUT)
 USER_AGENT = DEFAULT_USER_AGENT
 MAX_LINKS_PER_SOURCE = 100
-FEED_MAX_ITEMS = int(os.environ.get("FEED_MAX_ITEMS", "500"))
+FEED_MAX_ITEMS = int(os.environ.get("FEED_MAX_ITEMS", "800"))
 ARGS = None  # будет заполнено в main()
 SMOKE_DEFAULT_SOURCES = {
     "НОТИМ",
@@ -1949,7 +1949,7 @@ def harvest_json_source(src: dict, force: bool = False):
         logging.info("API empty/too short for %s — falling back to HTML index", src_name)
         return harvest_source(src, force=ARGS.rebuild if ARGS else False)
 
-    keep = 500
+    keep = 800
     tail = [u for u in already_seen_list if u in entry_urls]
     seen_map[src["name"]] = (processed_links + tail)[:keep]
 
@@ -2400,8 +2400,8 @@ def harvest_source(src: dict, force: bool = False):
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
 
-    # обновим «виденные» ссылки — держим скользящее окно последних 500
-    keep = 500
+    # обновим «виденные» ссылки — держим скользящее окно последних 800
+    keep = 800
     # сначала — новые (в порядке обхода), затем часть старых, которые ещё встречаются в uniq
     tail = [u for u in already_seen_list if u in uniq]
     # при rebuild тоже обновляем, чтобы после форс-прогона обычные запуски работали эффективно
