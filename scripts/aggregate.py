@@ -10,7 +10,7 @@ import time
 from collections import defaultdict
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, FeatureNotFound
 from dateutil import parser as dparser
 import pytz
 
@@ -535,8 +535,17 @@ def fetch_amp_if_available(
     return None, None
 
 
+def _parse_index_soup(index_html: str) -> BeautifulSoup:
+    """Parse HTML or XML indexes without making the optional lxml parser mandatory."""
+    parser = "xml" if index_html.lstrip().startswith("<?xml") else "html.parser"
+    try:
+        return BeautifulSoup(index_html, parser)
+    except FeatureNotFound:
+        return BeautifulSoup(index_html, "html.parser")
+
+
 def _count_index_candidates(index_html: str, parse_embedded_links: bool = False) -> int:
-    soup = BeautifulSoup(index_html, "xml" if index_html.lstrip().startswith("<?xml") else "html.parser")
+    soup = _parse_index_soup(index_html)
     count = 0
     count += len(soup.find_all("a"))
     for tag_name in ("loc", "link"):
@@ -2222,7 +2231,7 @@ def harvest_source(src: dict, force: bool = False):
     ih[src["start_url"]] = idx_digest
 
     # XML/HTML автодетект
-    soup = BeautifulSoup(index_html, "xml" if index_html.lstrip().startswith("<?xml") else "html.parser")
+    soup = _parse_index_soup(index_html)
 
     # Collect candidate links
     links = []
