@@ -81,6 +81,9 @@ HOST_MIN_WORD_OVERRIDES = {
     "rg.ru": 150,
     "faufcc.ru": 70,
 }
+PUBLICATION_CLOCK_SKEW = timedelta(
+    hours=float(os.environ.get("PUBLICATION_CLOCK_SKEW_HOURS", "24"))
+)
 
 ESSENTIAL_ITEM_FIELDS = (
     "id",
@@ -630,6 +633,38 @@ def finalize_datetime(dt: datetime):
     dt = dt.replace(microsecond=0)
     return clamp_year(dt)
 
+
+def validate_publication_datetime(
+    dt: datetime | None,
+    *,
+    raw_value: object = None,
+    url: str | None = None,
+    source: str | None = None,
+    signal: str = "unknown",
+    now: datetime | None = None,
+    allowance: timedelta = PUBLICATION_CLOCK_SKEW,
+) -> datetime | None:
+    """Return a normalized, plausible publication time, or reject it.
+
+    ``now`` and ``allowance`` are injectable so callers and tests do not need
+    to depend on wall-clock time. All extraction paths should pass through
+    this single boundary before a value is stored as ``published_at``.
+    """
+    dt = finalize_datetime(dt)
+    if dt is None:
+        return None
+    reference = finalize_datetime(now or datetime.now(MSK))
+    if dt > reference + allowance:
+        logging.warning(
+            "Reject future publication time value=%r url=%s source=%s signal=%s",
+            raw_value if raw_value is not None else dt.isoformat(),
+            url or "",
+            source or "",
+            signal,
+        )
+        return None
+    return dt
+
 DEFAULT_CONTENT_SELECTORS = [
     "article",
     "main article",
@@ -840,8 +875,17 @@ def ensure_item_metadata(item: dict[str, object]) -> None:
     published_val = item.get("published_at")
     if published_val:
         published_dt = _coerce_msk_datetime(published_val)
+        published_dt = validate_publication_datetime(
+            published_dt,
+            raw_value=published_val,
+            url=str(item.get("url") or ""),
+            source=str(item.get("source") or ""),
+            signal="stored:published_at",
+        )
         if published_dt:
             item["published_at"] = published_dt.isoformat()
+        else:
+            item.pop("published_at", None)
 
 
 def _filter_by_min_words(items: list[dict]) -> list[dict]:
@@ -1259,7 +1303,7 @@ def extract_date_candidates(soup: BeautifulSoup):
         uniq.append(s)
     return uniq[:20]
 
-def try_parse_any_date(candidates):
+def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic", now=None):
     default_base = make_aware_msk(datetime.now(MSK).replace(month=1, day=1, hour=0, minute=0, second=0, microsecond=0))
     for raw in candidates:
         s = raw.strip()
@@ -1268,16 +1312,17 @@ def try_parse_any_date(candidates):
             m = re.search(r"(\d{1,2}):(\d{2})", low)
             hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
             dt = make_aware_msk(datetime.now(MSK)).replace(hour=hh, minute=mm, second=0, microsecond=0)
-            return dt
+            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
         if "вчера" in low or "yesterday" in low:
             m = re.search(r"(\d{1,2}):(\d{2})", low)
             hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
             dt = make_aware_msk(datetime.now(MSK) - timedelta(days=1)).replace(hour=hh, minute=mm, second=0, microsecond=0)
-            return dt
+            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
         # Try ISO-like first
         try:
             dt = finalize_datetime(dparser.isoparse(s))
-            if dt: return dt
+            if dt:
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
         except Exception:
             pass
         # Try generic parser in day-first mode
@@ -1288,18 +1333,20 @@ def try_parse_any_date(candidates):
                 fuzzy=True,
                 default=default_base,
             ))
-            if dt: return dt
+            if dt:
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
         except Exception:
             pass
         # Try Russian words
         dt = parse_ru_date_words(s)
         if dt:
             dt = finalize_datetime(dt)
-            if dt: return dt
+            if dt:
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
     return None
 
 
-def _parse_datetime_signal(value: str | None, signal: str) -> datetime | None:
+def _parse_datetime_signal(value: str | None, signal: str, *, url=None, source=None, now=None) -> datetime | None:
     if not value:
         return None
     value = value.strip()
@@ -1327,11 +1374,13 @@ def _parse_datetime_signal(value: str | None, signal: str) -> datetime | None:
             dt = finalize_datetime(words_dt)
     if dt:
         logging.debug("Published time signal (%s): %s -> %s", signal, value, dt.isoformat())
-        return dt
+        return validate_publication_datetime(
+            dt, raw_value=value, url=url, source=source, signal=signal, now=now
+        )
     return None
 
 
-def extract_published_datetime(soup: BeautifulSoup, url: str | None = None) -> datetime | None:
+def extract_published_datetime(soup: BeautifulSoup, url: str | None = None, source: str | None = None) -> datetime | None:
     seen_candidates: set[tuple[str, str]] = set()
 
     def attempt(value: str | None, signal: str) -> datetime | None:
@@ -1344,7 +1393,7 @@ def extract_published_datetime(soup: BeautifulSoup, url: str | None = None) -> d
         if key in seen_candidates:
             return None
         seen_candidates.add(key)
-        return _parse_datetime_signal(candidate, signal)
+        return _parse_datetime_signal(candidate, signal, url=url, source=source)
 
     # Primary meta tags.
     for tag in soup.find_all("meta", attrs={"property": "article:published_time"}):
@@ -1582,14 +1631,20 @@ def build_item(
                 content_source = amp_label or amp_source or "amp"
                 amp_used = True
 
-    dt = extract_published_datetime(soup, url)
+    dt = extract_published_datetime(soup, url, source_name)
 
     if dt is None:
         m = re.search(r"/(20\d{2})/([01]\d)/([0-3]\d)/", url)
         if m:
             y, mo, d = map(int, m.groups())
             try:
-                dt = finalize_datetime(datetime(y, mo, d))
+                dt = validate_publication_datetime(
+                    datetime(y, mo, d),
+                    raw_value=m.group(0),
+                    url=url,
+                    source=source_name,
+                    signal="url:path",
+                )
             except ValueError:
                 dt = None
 
@@ -1945,11 +2000,15 @@ def harvest_json_source(src: dict, force: bool = False):
             date_val = _first_non_empty(containers, API_DATE_KEYS)
             parsed_dt = None
             if date_val:
-                parsed_dt = _parse_datetime_signal(date_val, "api:date")
+                parsed_dt = _parse_datetime_signal(
+                    date_val, "api:date", url=url, source=src_name
+                )
             if not parsed_dt:
                 human_date = _first_non_empty(containers, API_DATE_HUMAN_KEYS)
                 if human_date:
-                    parsed_dt = try_parse_any_date([human_date])
+                    parsed_dt = try_parse_any_date(
+                        [human_date], url=url, source=src_name, signal="api:human_date"
+                    )
             if parsed_dt:
                 item["published_at"] = parsed_dt.isoformat()
             content_text = item.get("content_text") or ""
@@ -2503,7 +2562,7 @@ def build_feed(all_items):
 
     items = _filter_by_min_words(list(by_id.values()))
     items.sort(
-        key=lambda x: x.get("published_at") or x.get("first_seen") or "",
+        key=lambda x: x.get("published_at") or x.get("fetched_at") or x.get("first_seen") or "",
         reverse=True,
     )
 
@@ -2548,6 +2607,10 @@ def merge_items(existing, new):
         by_key[key] = _finalize_item_schema(dict(it))
 
     for it in new:
+        # Sanitize incoming records before comparing publication times. This
+        # prevents a rejected future value from replacing (and then erasing) a
+        # plausible date already held by the existing record.
+        it = _finalize_item_schema(dict(it))
         key = it.get("id") or it.get("url")
         if not key:
             continue
@@ -2605,7 +2668,10 @@ def merge_items(existing, new):
         by_key[key] = _finalize_item_schema(merged)
 
     merged_items = list(by_key.values())
-    merged_items.sort(key=lambda x: x.get("published_at") or x.get("first_seen") or "", reverse=True)
+    merged_items.sort(
+        key=lambda x: x.get("published_at") or x.get("fetched_at") or x.get("first_seen") or "",
+        reverse=True,
+    )
 
     if FEED_MAX_ITEMS and len(merged_items) > FEED_MAX_ITEMS:
         merged_items = merged_items[:FEED_MAX_ITEMS]
