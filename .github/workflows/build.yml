@@ -21,11 +21,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # кэш страниц (HTML), чтобы экономить запросы
       - name: Restore .cache/pages (HTML cache)
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .cache/pages
           key: pages-${{ hashFiles('sources.json', 'scripts/aggregate.py') }}-${{ github.run_id }}
@@ -34,7 +34,7 @@ jobs:
             pages-
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.x"
 
