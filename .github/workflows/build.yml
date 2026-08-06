@@ -55,7 +55,13 @@ jobs:
           fi
 
       - name: Check source health
-        run: python scripts/metrics.py docs/unified.json --sources sources.json
+        # A source can be absent from the globally capped feed even when its
+        # crawl succeeded. Report crawl degradation, but do not discard a good
+        # feed merely because an upstream site is temporarily unavailable.
+        run: >-
+          python scripts/metrics.py docs/unified.json
+          --sources sources.json
+          --source-health docs/source-health.json
 
       - name: Commit output (feed, source health & state)
         run: |

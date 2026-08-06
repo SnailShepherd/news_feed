@@ -6,6 +6,7 @@ from scripts.metrics import (
     check_anti_genie,
     compute_metrics,
     compute_source_metrics,
+    classify_source_health,
     find_unexpected_empty_sources,
 )
 
@@ -78,3 +79,18 @@ def test_healthy_source_uses_fetch_timestamp_when_publication_is_invalid():
 def test_explicitly_exempted_empty_source_passes():
     _, report = compute_source_metrics([], [{"name": "expected empty"}], stale_after=timedelta(days=7), now=NOW)
     assert find_unexpected_empty_sources(report, {"expected empty"}) == []
+
+
+def test_source_health_distinguishes_failures_from_degraded_sources():
+    failures, warnings = classify_source_health([
+        {"source": "broken", "index_fetch_status": "failed", "last_error": "timeout"},
+        {"source": "cached", "index_fetch_status": "cached", "cached_fallback_used": True},
+        {"source": "changed markup", "index_fetch_status": "fetched", "raw_link_candidates": 0},
+        {"source": "good", "index_fetch_status": "unchanged"},
+    ])
+
+    assert failures == ["broken: failed (timeout)"]
+    assert warnings == [
+        "cached: cached fallback used",
+        "changed markup: fetched index contained no link candidates",
+    ]
