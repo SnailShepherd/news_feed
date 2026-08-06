@@ -21,6 +21,8 @@ from requests.adapters import HTTPAdapter
 
 LOGGER = logging.getLogger(__name__)
 NETWORK_COOLDOWN_SECONDS = int(os.environ.get("NEWSFEED_NETWORK_COOLDOWN_SECONDS", "900"))
+SELENIUM_RUN_BUDGET_SECONDS = float(os.environ.get("NEWSFEED_SELENIUM_BUDGET_SECONDS", "90"))
+_SELENIUM_SECONDS_USED = 0.0
 
 DEFAULT_USER_AGENT = os.environ.get(
     "NEWSFEED_USER_AGENT",
@@ -453,12 +455,6 @@ class HostClient:
     def _build_chrome_options(self):
         from selenium.webdriver.chrome.options import Options as ChromeOptions
 
-        from selenium import webdriver
-        from selenium.webdriver.chrome.options import Options as ChromeOptions
-
-        from selenium import webdriver
-        from selenium.webdriver.chrome.options import Options as ChromeOptions
-
         options = ChromeOptions()
         options.add_argument("--headless=new")
         options.add_argument("--disable-gpu")
@@ -476,6 +472,24 @@ class HostClient:
         for extra in self.strategy.selenium_extra_options:
             options.add_argument(extra)
         return options
+
+    def _selenium_budget_available(self) -> bool:
+        if SELENIUM_RUN_BUDGET_SECONDS <= 0:
+            return False
+        if _SELENIUM_SECONDS_USED >= SELENIUM_RUN_BUDGET_SECONDS:
+            LOGGER.warning(
+                "Skip Selenium for %s: run budget exhausted (%.1fs/%.1fs)",
+                self.host,
+                _SELENIUM_SECONDS_USED,
+                SELENIUM_RUN_BUDGET_SECONDS,
+            )
+            return False
+        return True
+
+    @staticmethod
+    def _record_selenium_runtime(started: float) -> None:
+        global _SELENIUM_SECONDS_USED
+        _SELENIUM_SECONDS_USED += max(0.0, time.monotonic() - started)
 
     def _apply_selenium_rendering(self, driver, url: str) -> None:
         from selenium.webdriver.common.by import By
@@ -520,10 +534,13 @@ class HostClient:
         if importlib.util.find_spec("selenium") is None:
             LOGGER.warning("Selenium not available for %s: missing dependency", self.host)
             return False
+        if not self._selenium_budget_available():
+            return False
 
         from selenium import webdriver
 
         driver = None
+        started = time.monotonic()
         try:
             driver = webdriver.Chrome(options=self._build_chrome_options())
             self._apply_selenium_rendering(driver, url)
@@ -540,6 +557,7 @@ class HostClient:
             with contextlib.suppress(Exception):
                 if driver is not None:
                     driver.quit()
+            self._record_selenium_runtime(started)
 
     def fetch_html_with_selenium(self, url: str) -> Optional[str]:
         if not self.strategy.selenium_fallback:
@@ -547,10 +565,13 @@ class HostClient:
         if importlib.util.find_spec("selenium") is None:
             LOGGER.warning("Selenium not available for %s: missing dependency", self.host)
             return None
+        if not self._selenium_budget_available():
+            return None
 
         from selenium import webdriver
 
         driver = None
+        started = time.monotonic()
         try:
             driver = webdriver.Chrome(options=self._build_chrome_options())
             self._apply_selenium_rendering(driver, url)
@@ -568,6 +589,7 @@ class HostClient:
             with contextlib.suppress(Exception):
                 if driver is not None:
                     driver.quit()
+            self._record_selenium_runtime(started)
 
     def _iter_proxies(self) -> Iterable[Optional[Dict[str, str]]]:
         if not self.strategy.proxies:

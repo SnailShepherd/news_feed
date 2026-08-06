@@ -83,14 +83,31 @@ def test_explicitly_exempted_empty_source_passes():
 
 def test_source_health_distinguishes_failures_from_degraded_sources():
     failures, warnings = classify_source_health([
-        {"source": "broken", "index_fetch_status": "failed", "last_error": "timeout"},
+        {"source": "broken", "index_fetch_status": "failed", "consecutive_failures": 3, "last_error": "timeout"},
         {"source": "cached", "index_fetch_status": "cached", "cached_fallback_used": True},
         {"source": "changed markup", "index_fetch_status": "fetched", "raw_link_candidates": 0},
         {"source": "good", "index_fetch_status": "unchanged"},
     ])
 
-    assert failures == ["broken: failed (timeout)"]
+    assert failures == ["broken: failed for 3 consecutive runs (timeout)"]
     assert warnings == [
         "cached: cached fallback used",
         "changed markup: fetched index contained no link candidates",
+    ]
+
+
+def test_source_health_warns_before_failure_threshold_and_counts_bad_dates():
+    failures, warnings = classify_source_health([
+        {
+            "source": "flaky",
+            "index_fetch_status": "failed",
+            "consecutive_failures": 2,
+            "future_date_rejections": 4,
+        }
+    ])
+
+    assert failures == []
+    assert warnings == [
+        "flaky: transient failed (run 2/3)",
+        "flaky: rejected 4 future publication dates",
     ]

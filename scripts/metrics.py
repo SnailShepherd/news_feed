@@ -115,7 +115,9 @@ def _load_source_health(path: pathlib.Path) -> list[dict[str, Any]]:
     return [row for row in rows if isinstance(row, dict)]
 
 
-def classify_source_health(rows: list[dict[str, Any]]) -> tuple[list[str], list[str]]:
+def classify_source_health(
+    rows: list[dict[str, Any]], *, failure_threshold: int = 3
+) -> tuple[list[str], list[str]]:
     """Return hard crawl failures and degraded-but-usable source diagnostics.
 
     Feed retention is deliberately not used here: the globally bounded feed can
@@ -128,13 +130,19 @@ def classify_source_health(rows: list[dict[str, Any]]) -> tuple[list[str], list[
         name = str(row.get("source") or "<unnamed>")
         status = str(row.get("index_fetch_status") or "not_attempted")
         error = row.get("last_error")
-        if status in {"failed", "parser_error", "not_attempted"}:
+        streak = int(row.get("consecutive_failures") or 0)
+        if status in {"failed", "parser_error", "not_attempted"} and streak >= failure_threshold:
             detail = f" ({error})" if error else ""
-            failures.append(f"{name}: {status}{detail}")
+            failures.append(f"{name}: {status} for {streak} consecutive runs{detail}")
+        elif status in {"failed", "parser_error", "not_attempted"}:
+            warnings.append(f"{name}: transient {status} (run {streak}/{failure_threshold})")
         elif status == "cached" or row.get("cached_fallback_used"):
             warnings.append(f"{name}: cached fallback used")
         elif status == "fetched" and int(row.get("raw_link_candidates") or 0) == 0:
             warnings.append(f"{name}: fetched index contained no link candidates")
+        future_rejections = int(row.get("future_date_rejections") or 0)
+        if future_rejections:
+            warnings.append(f"{name}: rejected {future_rejections} future publication dates")
     return failures, warnings
 
 
@@ -170,7 +178,11 @@ def main() -> int:
     )
     parser.add_argument(
         "--strict-source-health", action="store_true",
-        help="Fail on crawl failures reported by --source-health (transient upstream failures otherwise warn)",
+        help="Fail on repeated crawl failures reported by --source-health",
+    )
+    parser.add_argument(
+        "--failure-threshold", type=int, default=3,
+        help="Consecutive failed crawls required for a hard source-health failure (default: 3)",
     )
     parser.add_argument(
         "--baseline",
@@ -217,7 +229,9 @@ def main() -> int:
         if not health_path.exists():
             raise SystemExit(f"Source health file not found: {health_path}")
         health_rows = _load_source_health(health_path)
-        failures, warnings = classify_source_health(health_rows)
+        failures, warnings = classify_source_health(
+            health_rows, failure_threshold=max(1, args.failure_threshold)
+        )
         print(f"crawl_sources_reported: {len(health_rows)}")
         print(f"crawl_failures: {len(failures)}")
         print(f"crawl_warnings: {len(warnings)}")
