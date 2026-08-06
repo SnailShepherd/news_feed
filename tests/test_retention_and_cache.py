@@ -1,4 +1,6 @@
+import json
 import os
+from collections import defaultdict
 
 from scripts import aggregate
 
@@ -45,3 +47,39 @@ def test_page_cache_pruning_removes_old_then_excess_files(tmp_path, monkeypatch)
     assert not old.exists()
     assert not middle.exists()
     assert newest.exists()
+
+
+def test_health_report_preserves_skipped_streak_and_counts_article_outage(tmp_path, monkeypatch):
+    health_path = tmp_path / "health.json"
+    state_path = tmp_path / "state.json"
+    pages = tmp_path / "pages"
+    pages.mkdir()
+    summaries = defaultdict(dict)
+    summaries["selected"] = {
+        "index_fetch_status": "fetched",
+        "attempted_articles": 2,
+        "total": 0,
+        "last_error": "timeout",
+    }
+    summaries["skipped"] = {"index_fetch_status": "skipped_selection"}
+    summaries["new skipped"] = {"index_fetch_status": "skipped_selection"}
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", health_path)
+    monkeypatch.setattr(aggregate, "STATE_FILE", state_path)
+    monkeypatch.setattr(aggregate, "PAGES_DIR", pages)
+    monkeypatch.setattr(aggregate, "SOURCE_SUMMARY", summaries)
+    monkeypatch.setattr(
+        aggregate,
+        "STATE",
+        {"source_health_streaks": {"selected": 1, "skipped": 7}},
+    )
+
+    aggregate.write_source_health_report([
+        {"name": "selected", "enabled": True},
+        {"name": "skipped", "enabled": True},
+        {"name": "new skipped", "enabled": True},
+    ])
+
+    rows = {row["source"]: row for row in json.loads(health_path.read_text())["sources"]}
+    assert rows["selected"]["consecutive_failures"] == 2
+    assert rows["skipped"]["consecutive_failures"] == 7
+    assert rows["new skipped"]["consecutive_failures"] == 0

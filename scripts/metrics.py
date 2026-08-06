@@ -131,15 +131,30 @@ def classify_source_health(
         status = str(row.get("index_fetch_status") or "not_attempted")
         error = row.get("last_error")
         streak = int(row.get("consecutive_failures") or 0)
-        if status in {"failed", "parser_error", "not_attempted"} and streak >= failure_threshold:
+        attempted = int(row.get("attempted_articles") or 0)
+        accepted = int(row.get("accepted_articles") or 0)
+        article_outage = attempted > 0 and accepted == 0 and bool(error)
+        failure_kind = "article crawl failed" if article_outage else status
+        hard_status = status in {"failed", "parser_error", "not_attempted"}
+        if status == "skipped_selection":
+            pass
+        elif (hard_status or article_outage) and streak >= failure_threshold:
             detail = f" ({error})" if error else ""
-            failures.append(f"{name}: {status} for {streak} consecutive runs{detail}")
-        elif status in {"failed", "parser_error", "not_attempted"}:
-            warnings.append(f"{name}: transient {status} (run {streak}/{failure_threshold})")
+            failures.append(f"{name}: {failure_kind} for {streak} consecutive runs{detail}")
+        elif hard_status or article_outage:
+            warnings.append(
+                f"{name}: transient {failure_kind} (run {streak}/{failure_threshold})"
+            )
         elif status == "cached" or row.get("cached_fallback_used"):
             warnings.append(f"{name}: cached fallback used")
-        elif status == "fetched" and int(row.get("raw_link_candidates") or 0) == 0:
+        elif (
+            status == "fetched"
+            and attempted == 0
+            and int(row.get("raw_link_candidates") or 0) == 0
+        ):
             warnings.append(f"{name}: fetched index contained no link candidates")
+        elif attempted > 0 and accepted == 0:
+            warnings.append(f"{name}: attempted {attempted} articles but accepted none")
         future_rejections = int(row.get("future_date_rejections") or 0)
         if future_rejections:
             warnings.append(f"{name}: rejected {future_rejections} future publication dates")

@@ -2601,6 +2601,7 @@ def harvest_source(src: dict, force: bool = False):
                 handle_item(item, url)
             else:
                 logging.warning("  skip %s: %s", url, exc)
+                SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
             SOURCE_SUMMARY[src_name]["last_error"] = str(e)
@@ -2644,16 +2645,23 @@ def write_source_health_report(sources: list[dict]) -> None:
         name = source.get("name", "")
         summary = SOURCE_SUMMARY[name]
         status = summary.get("index_fetch_status", "not_attempted")
-        failed = status in {"failed", "parser_error", "not_attempted"}
-        streaks[name] = int(streaks.get(name, 0) or 0) + 1 if failed else 0
+        attempted = int(summary.get("attempted_articles", 0) or 0)
+        accepted = int(summary.get("total", 0) or 0)
+        article_outage = attempted > 0 and accepted == 0 and bool(summary.get("last_error"))
+        failed = status in {"failed", "parser_error", "not_attempted"} or article_outage
+        previous_streak = int(streaks.get(name, 0) or 0)
+        if status != "skipped_selection":
+            streaks[name] = previous_streak + 1 if failed else 0
+        else:
+            streaks.setdefault(name, previous_streak)
         rows.append({
             "source": name,
             "index_fetch_status": status,
             "consecutive_failures": streaks[name],
             "raw_link_candidates": summary.get("raw_link_candidates", 0),
             "accepted_links": summary.get("accepted_links", 0),
-            "attempted_articles": summary.get("attempted_articles", 0),
-            "accepted_articles": summary.get("total", 0),
+            "attempted_articles": attempted,
+            "accepted_articles": accepted,
             "empty_rejections": summary.get("empty", 0),
             "short_rejections": summary.get("short", 0),
             "future_date_rejections": summary.get("future_date_rejections", 0),
@@ -2916,6 +2924,7 @@ def main():
             logging.info("Skip disabled source: %s — %s", src.get('name'), src.get('start_url'))
             continue
         if selected_sources and src.get("name") not in selected_sources:
+            SOURCE_SUMMARY[src_name]["index_fetch_status"] = "skipped_selection"
             continue
         seen_source_names.add(src_name)
         try:
