@@ -43,6 +43,7 @@ CACHE_DIR = ROOT / ".cache"
 PAGES_DIR = CACHE_DIR / "pages"
 STATE_FILE = CACHE_DIR / "state.json"
 OUT_JSON = DOCS_DIR / "unified.json"
+SOURCE_HEALTH_JSON = DOCS_DIR / "source-health.json"
 
 CONNECT_TIMEOUT = 5.0
 READ_TIMEOUT = 10.0
@@ -70,6 +71,12 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
         "api": 0,
         "amp": 0,
         "min_words": DEFAULT_MIN_WORDS,
+        "index_fetch_status": "not_attempted",
+        "raw_link_candidates": 0,
+        "accepted_links": 0,
+        "attempted_articles": 0,
+        "cached_fallback_used": False,
+        "last_error": None,
     }
 )
 SOURCE_MIN_WORDS: dict[str, int] = {}
@@ -1753,16 +1760,20 @@ def harvest_json_source(src: dict, force: bool = False):
         resp.raise_for_status()
     except requests.RequestException as exc:
         logging.warning("API fetch failed for %s: %s", src_name, exc)
+        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
+        SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
         if src.get("html_fallback_on_empty_api"):
             logging.info("API failed for %s — falling back to HTML index", src_name)
             return harvest_source(src, force=ARGS.rebuild if ARGS else False)
         raise
 
     text = resp.text
+    SOURCE_SUMMARY[src_name]["index_fetch_status"] = "fetched"
     idx_digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
     ih = STATE.setdefault("index_hash", {})
     if not force and ih.get(endpoint) == idx_digest:
         logging.info("Index unchanged (API): %s — %s", src.get("name"), endpoint)
+        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "unchanged"
         return []
     ih[endpoint] = idx_digest
 
@@ -1770,6 +1781,8 @@ def harvest_json_source(src: dict, force: bool = False):
         payload = resp.json()
     except ValueError as exc:
         logging.error("  invalid JSON for %s: %s", src.get("name"), exc)
+        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
+        SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
         if src.get("html_fallback_on_empty_api"):
             logging.info("API invalid JSON for %s — falling back to HTML index", src_name)
             return harvest_source(src, force=ARGS.rebuild if ARGS else False)
@@ -1824,6 +1837,9 @@ def harvest_json_source(src: dict, force: bool = False):
         if len(entries) >= max_links:
             break
 
+    SOURCE_SUMMARY[src_name]["raw_link_candidates"] = len(data)
+    SOURCE_SUMMARY[src_name]["accepted_links"] = len(entries)
+
     entry_urls = [url for url, _, _ in entries]
 
     if force:
@@ -1833,6 +1849,7 @@ def harvest_json_source(src: dict, force: bool = False):
         if not new_entries:
             logging.info("  no new links for %s", src["name"])
             return []
+    SOURCE_SUMMARY[src_name]["attempted_articles"] += len(new_entries)
 
     items = []
     processed_links = []
@@ -1989,6 +2006,7 @@ def harvest_json_source(src: dict, force: bool = False):
             processed_links.append(url)
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
+            SOURCE_SUMMARY[src_name]["last_error"] = str(e)
 
     attempted_links = bool(processed_links)
 
@@ -2043,6 +2061,8 @@ def harvest_source(src: dict, force: bool = False):
             )
             index_html = cache_path.read_text(encoding="utf-8")
             use_only_cache = True
+            SOURCE_SUMMARY[src_name]["index_fetch_status"] = "cached"
+            SOURCE_SUMMARY[src_name]["cached_fallback_used"] = True
         else:
             logging.warning(
                 "Skip due to active cooldown until %s: %s — %s",
@@ -2100,6 +2120,7 @@ def harvest_source(src: dict, force: bool = False):
                     )
                     continue
                 index_html = candidate_html
+                SOURCE_SUMMARY[src_name]["index_fetch_status"] = "fetched"
                 if candidate_url != src["start_url"]:
                     logging.info("Index fetched via fallback URL for %s: %s", src.get("name"), candidate_url)
                 start_url = candidate_url
@@ -2110,6 +2131,8 @@ def harvest_source(src: dict, force: bool = False):
                 logging.warning("Index candidate failed for %s: %s (%s)", src.get("name"), candidate_url, exc)
 
         if index_html is None and last_exc is not None:
+            SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
+            SOURCE_SUMMARY[src_name]["last_error"] = str(last_exc)
             try:
                 raise last_exc
             except requests.HTTPError as exc:
@@ -2133,6 +2156,8 @@ def harvest_source(src: dict, force: bool = False):
                         )
                         index_html = cache_path.read_text(encoding="utf-8")
                         use_only_cache = True
+                        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "cached"
+                        SOURCE_SUMMARY[src_name]["cached_fallback_used"] = True
                     else:
                         logging.warning(
                             "Server error %s, cooldown 6h: %s — %s",
@@ -2167,6 +2192,8 @@ def harvest_source(src: dict, force: bool = False):
                     )
                     index_html = cache_path.read_text(encoding="utf-8")
                     use_only_cache = True
+                    SOURCE_SUMMARY[src_name]["index_fetch_status"] = "cached"
+                    SOURCE_SUMMARY[src_name]["cached_fallback_used"] = True
                 else:
                     logging.warning(
                         "Server error (retry exhausted), cooldown 6h: %s — %s",
@@ -2202,6 +2229,8 @@ def harvest_source(src: dict, force: bool = False):
                     )
                     index_html = cache_path.read_text(encoding="utf-8")
                     use_only_cache = True
+                    SOURCE_SUMMARY[src_name]["index_fetch_status"] = "cached"
+                    SOURCE_SUMMARY[src_name]["cached_fallback_used"] = True
                 else:
                     failures.append(
                         {
@@ -2218,6 +2247,7 @@ def harvest_source(src: dict, force: bool = False):
     ih = STATE.setdefault("index_hash", {})
     if not force and ih.get(src["start_url"]) == idx_digest:
         logging.info("Index unchanged: %s — %s", src["name"], src["start_url"])
+        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "unchanged"
         return []
     ih[src["start_url"]] = idx_digest
 
@@ -2327,6 +2357,8 @@ def harvest_source(src: dict, force: bool = False):
         links.append(href)
 
     logging.info("Link extraction stats for %s: raw=%d accepted=%d", src_name, len(raw_candidates), len(links))
+    SOURCE_SUMMARY[src_name]["raw_link_candidates"] = len(raw_candidates)
+    SOURCE_SUMMARY[src_name]["accepted_links"] = len(links)
 
     # Dedup and limit
     uniq = []
@@ -2352,6 +2384,7 @@ def harvest_source(src: dict, force: bool = False):
         if not new_links:
             logging.info("  no new links for %s", src["name"])
             return []
+    SOURCE_SUMMARY[src_name]["attempted_articles"] += len(new_links)
 
     items = []
     processed_links = []
@@ -2434,6 +2467,7 @@ def harvest_source(src: dict, force: bool = False):
         except SourceTemporarilyUnavailable as exc:
             page_path = PAGES_DIR / cache_key_for(url)
             if page_path.exists():
+                SOURCE_SUMMARY[src_name]["cached_fallback_used"] = True
                 logging.warning(
                     "  using cached copy for %s due to temporary issue: %s", url, exc
                 )
@@ -2450,6 +2484,7 @@ def harvest_source(src: dict, force: bool = False):
                 logging.warning("  skip %s: %s", url, exc)
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
+            SOURCE_SUMMARY[src_name]["last_error"] = str(e)
 
     # обновим «виденные» ссылки — держим скользящее окно последних 800
     keep = 800
@@ -2478,6 +2513,30 @@ def log_source_summary() -> None:
             summary.get("amp", 0),
             int(summary.get("min_words", DEFAULT_MIN_WORDS) or 0),
         )
+
+
+def write_source_health_report(sources: list[dict]) -> None:
+    """Persist crawl diagnostics independently from the retained feed."""
+    rows = []
+    for source in sources:
+        if not source.get("enabled", True):
+            continue
+        name = source.get("name", "")
+        summary = SOURCE_SUMMARY[name]
+        rows.append({
+            "source": name,
+            "index_fetch_status": summary.get("index_fetch_status", "not_attempted"),
+            "raw_link_candidates": summary.get("raw_link_candidates", 0),
+            "accepted_links": summary.get("accepted_links", 0),
+            "attempted_articles": summary.get("attempted_articles", 0),
+            "accepted_articles": summary.get("total", 0),
+            "empty_rejections": summary.get("empty", 0),
+            "short_rejections": summary.get("short", 0),
+            "cached_fallback_used": bool(summary.get("cached_fallback_used", False)),
+            "last_error": summary.get("last_error"),
+        })
+    payload = {"generated_at": datetime.now(timezone.utc).isoformat(), "sources": rows}
+    SOURCE_HEALTH_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def build_feed(all_items):
@@ -2690,6 +2749,8 @@ def main():
             all_items.extend(items)
         except Exception as e:
             logging.error("  !! Failed: %s (%s)", src.get("name"), e)
+            SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
+            SOURCE_SUMMARY[src_name]["last_error"] = str(e)
             STATE.setdefault("stats", {}).setdefault("errors", []).append({"source": src.get("name"), "url": src.get("start_url"), "error": str(e)})
 
     if selected_sources and ARGS.sources:
@@ -2713,6 +2774,7 @@ def main():
             existing_items = load_existing_feed_items()
             prune_state(existing_items, sources)
             save_state()
+            write_source_health_report(sources)
         logging.info("No new items -> keep existing %s as-is (%d items)", OUT_JSON, existing_count)
         return
 
@@ -2728,6 +2790,7 @@ def main():
         if not ARGS.dry_run:
             prune_state(feed["items"], sources)
             save_state()
+            write_source_health_report(sources)
         logging.info("Rewrote(existing only) %s (%d items)", OUT_JSON, len(feed["items"]))
         return
 
@@ -2743,6 +2806,7 @@ def main():
     if not ARGS.dry_run:
         prune_state(feed["items"], sources)
         save_state()
+        write_source_health_report(sources)
     logging.info("Saved feed to %s (%d items)", OUT_JSON, len(feed["items"]))
 
     if RUNTIME_EXCEEDED and os.environ.get("CI"):
