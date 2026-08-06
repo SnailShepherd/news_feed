@@ -1,6 +1,13 @@
 import json
+from datetime import datetime, timedelta, timezone
 
-from scripts.metrics import _load_items, check_anti_genie, compute_metrics
+from scripts.metrics import (
+    _load_items,
+    check_anti_genie,
+    compute_metrics,
+    compute_source_metrics,
+    find_unexpected_empty_sources,
+)
 
 
 def test_compute_metrics_counts(tmp_path):
@@ -39,3 +46,35 @@ def test_check_anti_genie_allows_listing_reduction():
 
     assert ok
     assert message is None
+
+
+NOW = datetime(2026, 8, 6, tzinfo=timezone.utc)
+SOURCES = [
+    {"name": "healthy", "enabled": True},
+    {"name": "missing", "enabled": True},
+    {"name": "disabled", "enabled": False},
+]
+
+
+def test_missing_enabled_source_fails_health_check():
+    _, report = compute_source_metrics([], SOURCES, stale_after=timedelta(days=7), now=NOW)
+    assert find_unexpected_empty_sources(report, set()) == ["healthy", "missing"]
+
+
+def test_stale_source_is_reported():
+    items = [{"source": "healthy", "published_at": "2026-07-01T00:00:00Z"}]
+    totals, report = compute_source_metrics(items, SOURCES, stale_after=timedelta(days=7), now=NOW)
+    assert totals["stale_sources"] == 1
+    assert report[0]["stale"] is True
+
+
+def test_healthy_source_uses_fetch_timestamp_when_publication_is_invalid():
+    items = [{"source": "healthy", "published_at": "not-a-date", "fetched_at": "2026-08-05T00:00:00Z"}]
+    totals, report = compute_source_metrics(items, SOURCES, stale_after=timedelta(days=7), now=NOW)
+    assert totals == {"enabled_sources": 2, "sources_with_items": 1, "sources_without_items": 1, "stale_sources": 0}
+    assert report[0]["newest_timestamp"] == "2026-08-05T00:00:00+00:00"
+
+
+def test_explicitly_exempted_empty_source_passes():
+    _, report = compute_source_metrics([], [{"name": "expected empty"}], stale_after=timedelta(days=7), now=NOW)
+    assert find_unexpected_empty_sources(report, {"expected empty"}) == []
