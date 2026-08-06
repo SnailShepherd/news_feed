@@ -242,6 +242,12 @@
     "name": "Металлоснабжение и сбыт",
     "base_url": "https://www.metalinfo.ru",
     "start_url": "https://www.metalinfo.ru/ru/news",
+    "request_strategy": {
+      "connect_timeout": 4,
+      "read_timeout": 8,
+      "max_attempts": 1,
+      "backoff_factor": 0
+    },
     "include_patterns": [
       "/ru/news/"
     ],

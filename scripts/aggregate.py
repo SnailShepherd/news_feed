@@ -97,7 +97,9 @@ OPTIONAL_ITEM_FIELDS = ("published_at", "canonical_url")
 # Перехваты ошибок/429 и паузы между запросами к одному хосту
 SESSION = requests.Session()
 _retry = Retry(
-    total=5, connect=3, read=3, backoff_factor=1.5,
+    # Keep the generic path resilient without multiplying a 10 second timeout
+    # into ~47 seconds for every cached article on an unavailable host.
+    total=1, connect=1, read=1, backoff_factor=0.5,
     status_forcelist=[429,500,502,503,504],
     allowed_methods=["GET","HEAD"]
 )
@@ -212,6 +214,55 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
 
 def save_state():
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def prune_state(feed_items: list[dict], sources: list[dict]) -> None:
+    """Discard crawl metadata which can no longer affect the bounded feed.
+
+    The feed contains at most ``FEED_MAX_ITEMS`` records, but the historical
+    lookup maps used to grow forever (past 80k entries / 60 MB).  Retaining the
+    live feed, configured indexes and the bounded seen-URL windows preserves
+    stable IDs and conditional requests while keeping checkout/push inexpensive.
+    """
+    active_ids = {item.get("id") for item in feed_items if item.get("id")}
+    active_urls = {
+        value
+        for item in feed_items
+        for value in (item.get("url"), item.get("canonical_url"))
+        if value
+    }
+    for source in sources:
+        active_urls.update(
+            value
+            for value in (source.get("start_url"), source.get("base_url"))
+            if value
+        )
+        active_urls.update(source.get("index_fallback_urls") or [])
+    for urls in STATE.get("seen_urls", {}).values():
+        if isinstance(urls, list):
+            active_urls.update(urls)
+
+    STATE["headers"] = {
+        key: value for key, value in STATE.get("headers", {}).items() if key in active_urls
+    }
+    STATE["first_seen"] = {
+        key: value for key, value in STATE.get("first_seen", {}).items() if key in active_ids
+    }
+    STATE["aliases"] = {
+        key: value
+        for key, value in STATE.get("aliases", {}).items()
+        if key in active_urls or value in active_urls
+    }
+    STATE["content_hashes"] = {
+        key: value
+        for key, value in STATE.get("content_hashes", {}).items()
+        if value in active_urls
+    }
+    STATE["canonical_item_ids"] = {
+        key: value
+        for key, value in STATE.get("canonical_item_ids", {}).items()
+        if key in active_urls or value in active_ids
+    }
 
 
 def runtime_expired() -> bool:
@@ -2659,6 +2710,8 @@ def main():
         STATE.setdefault("stats", {})["last_run"] = datetime.now(timezone.utc).isoformat()
         STATE["stats"]["items"] = existing_count
         if not ARGS.dry_run:
+            existing_items = load_existing_feed_items()
+            prune_state(existing_items, sources)
             save_state()
         logging.info("No new items -> keep existing %s as-is (%d items)", OUT_JSON, existing_count)
         return
@@ -2673,6 +2726,7 @@ def main():
         STATE.setdefault("stats", {})["last_run"] = datetime.now(timezone.utc).isoformat()
         STATE["stats"]["items"] = len(feed["items"])
         if not ARGS.dry_run:
+            prune_state(feed["items"], sources)
             save_state()
         logging.info("Rewrote(existing only) %s (%d items)", OUT_JSON, len(feed["items"]))
         return
@@ -2687,6 +2741,7 @@ def main():
     STATE.setdefault("stats", {})["last_run"] = datetime.now(timezone.utc).isoformat()
     STATE["stats"]["items"] = len(feed["items"])
     if not ARGS.dry_run:
+        prune_state(feed["items"], sources)
         save_state()
     logging.info("Saved feed to %s (%d items)", OUT_JSON, len(feed["items"]))
 

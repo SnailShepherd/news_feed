@@ -109,6 +109,21 @@ def test_host_client_raises_after_failures(monkeypatch):
         client.get("https://fail.example/path", headers={})
 
 
+def test_read_timeout_activates_host_cooldown(monkeypatch):
+    state = {}
+    strategy = RequestStrategy(max_attempts=1, backoff_factor=0)
+    client = HostClient("slow.example", strategy, state)
+    client._session = DummySession([requests.exceptions.ReadTimeout("read timed out")])
+    monkeypatch.setattr(client, "_perform_dns_lookup", lambda url: 1.0)
+
+    with pytest.raises(SourceTemporarilyUnavailable):
+        client.get("https://slow.example/first", headers={})
+
+    assert client.state_root["failures"]["network_cooldown_until"] > time.time()
+    with pytest.raises(SourceTemporarilyUnavailable, match="cooldown active"):
+        client.get("https://slow.example/second", headers={})
+
+
 def test_build_strategy_registry_skips_without_base_url():
     sources = [
         {"name": "Broken", "request_strategy": {"max_attempts": 2}},

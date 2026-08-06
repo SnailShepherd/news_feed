@@ -1,6 +1,32 @@
 from scripts import aggregate
 
 
+def test_prune_state_keeps_only_feed_and_seen_metadata(monkeypatch):
+    monkeypatch.setattr(
+        aggregate,
+        "STATE",
+        {
+            "headers": {"https://live": {}, "https://old": {}},
+            "first_seen": {"live-id": "now", "old-id": "then"},
+            "seen_urls": {"Source": ["https://seen"]},
+            "aliases": {"https://live": "https://canonical", "https://old": "https://old"},
+            "content_hashes": {"live-hash": "https://canonical", "old-hash": "https://old"},
+            "canonical_item_ids": {"https://live": "live-id", "https://old": "old-id"},
+        },
+    )
+
+    aggregate.prune_state(
+        [{"id": "live-id", "url": "https://live", "canonical_url": "https://canonical"}],
+        [{"start_url": "https://index", "base_url": "https://base"}],
+    )
+
+    assert "https://old" not in aggregate.STATE["headers"]
+    assert aggregate.STATE["first_seen"] == {"live-id": "now"}
+    assert aggregate.STATE["aliases"] == {"https://live": "https://canonical"}
+    assert aggregate.STATE["content_hashes"] == {"live-hash": "https://canonical"}
+    assert aggregate.STATE["canonical_item_ids"] == {"https://live": "live-id"}
+
+
 def test_ensure_state_keys_adds_missing_fields(monkeypatch):
     legacy_state = {
         "headers": {"X-Test": "1"},

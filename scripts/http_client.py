@@ -636,10 +636,21 @@ class HostClient:
         proxy_cfg: Optional[Dict[str, str]],
         explicit_proxies: Optional[Dict[str, str]],
     ) -> bool:
-        if not (self._is_network_unreachable(exc) or self._is_connect_timeout(exc)):
+        # A timeout is a host-level failure, not an article-level failure.  Once
+        # the configured attempts are exhausted, short-circuit the rest of the
+        # host for this run so a rebuild can immediately use its page cache.
+        # Without this, an unavailable host with 20 cached articles can consume
+        # 20 * read_timeout seconds (metalinfo.ru previously added ~16 minutes).
+        is_timeout = isinstance(
+            exc,
+            (requests.exceptions.ConnectTimeout, requests.exceptions.ReadTimeout),
+        ) or "timed out" in str(exc).lower()
+        if not (self._is_network_unreachable(exc) or self._is_connect_timeout(exc) or is_timeout):
             return False
 
         max_attempts = max(1, self.strategy.max_attempts)
+        if is_timeout and not self._is_connect_timeout(exc) and attempt < max_attempts:
+            return False
         if attempt >= max_attempts:
             return True
 
