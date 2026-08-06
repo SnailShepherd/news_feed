@@ -115,7 +115,7 @@ MODE="rebuild" python scripts/aggregate.py --rebuild --sources "Российск
 - новые карточки объединяются с существующим `docs/unified.json`;
 - для `content_text` предпочитается более полный текст;
 - для времени (`published_at`, `fetched_at`) выбирается более релевантное/новое значение;
-- итог ограничивается `FEED_MAX_ITEMS` (по умолчанию 500).
+- итог ограничивается `FEED_MAX_ITEMS` (по умолчанию 800).
 
 ---
 
@@ -146,6 +146,28 @@ MODE="rebuild" python scripts/aggregate.py --rebuild --sources "Российск
 - итог по источнику (`-> N items`),
 - сводку `SOURCE_SUMMARY`.
 
+После сборки `docs/source-health.json` сохраняет результат именно текущего
+обхода отдельно от ограниченной итоговой ленты. Проверка `scripts/metrics.py
+--source-health docs/source-health.json` сообщает о сетевых сбоях, кешированных
+fallback и неожиданно пустых index-страницах. Отсутствие источника среди 800
+сохранённых карточек само по себе не считается ошибкой: активный источник может
+быть вытеснен более частым источником. Для диагностического строгого режима
+доступны `--strict-source-health` и `--fail-on-empty-source`.
+
+Нормальная сборка использует следующие ограничители ресурсов и качества,
+которые можно переопределить переменными окружения:
+
+- `FEED_MIN_ITEMS_PER_SOURCE=5` резервирует небольшую долю ленты для каждого
+  представленного источника до заполнения оставшихся мест по общей свежести;
+- `NEWSFEED_SELENIUM_BUDGET_SECONDS=90` ограничивает суммарное время браузерных
+  fallback в одном запуске;
+- `NEWSFEED_CACHE_MAX_BYTES=536870912` и `NEWSFEED_CACHE_MAX_AGE_DAYS=14`
+  ограничивают HTML-кеш объёмом и возрастом.
+
+Отчёт также содержит `consecutive_failures` и `future_date_rejections`.
+Строгая проверка становится ошибкой только после трёх последовательных
+неудачных обходов, поэтому единичный сетевой сбой остаётся предупреждением.
+
 На DEBUG-уровне дополнительно:
 
 - детальные fetch-attempt метрики,
@@ -170,4 +192,3 @@ pip install -r requirements.txt
 
 - Автосборка выполняется в GitHub Actions (`.github/workflows/build.yml`).
 - Публикуемый файл: `docs/unified.json` (GitHub Pages endpoint `/unified.json`).
-

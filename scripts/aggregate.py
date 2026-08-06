@@ -51,6 +51,9 @@ REQUEST_TIMEOUT = (CONNECT_TIMEOUT, READ_TIMEOUT)
 USER_AGENT = DEFAULT_USER_AGENT
 MAX_LINKS_PER_SOURCE = 100
 FEED_MAX_ITEMS = int(os.environ.get("FEED_MAX_ITEMS", "800"))
+FEED_MIN_ITEMS_PER_SOURCE = int(os.environ.get("FEED_MIN_ITEMS_PER_SOURCE", "5"))
+CACHE_MAX_BYTES = int(os.environ.get("NEWSFEED_CACHE_MAX_BYTES", str(512 * 1024 * 1024)))
+CACHE_MAX_AGE_DAYS = int(os.environ.get("NEWSFEED_CACHE_MAX_AGE_DAYS", "14"))
 ARGS = None  # будет заполнено в main()
 SMOKE_DEFAULT_SOURCES = {
     "НОТИМ",
@@ -76,6 +79,7 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
         "accepted_links": 0,
         "attempted_articles": 0,
         "cached_fallback_used": False,
+        "future_date_rejections": 0,
         "last_error": None,
     }
 )
@@ -224,6 +228,44 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
 
 def save_state():
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def prune_page_cache(*, now: float | None = None) -> tuple[int, int]:
+    """Bound the persistent HTML cache by age and total bytes, oldest first."""
+    now = now if now is not None else time.time()
+    cutoff = now - max(0, CACHE_MAX_AGE_DAYS) * 86400
+    files = [path for path in PAGES_DIR.iterdir() if path.is_file()]
+    removed_files = 0
+    removed_bytes = 0
+    retained: list[tuple[float, int, pathlib.Path]] = []
+    for path in files:
+        try:
+            stat = path.stat()
+        except OSError:
+            continue
+        if CACHE_MAX_AGE_DAYS >= 0 and stat.st_mtime < cutoff:
+            try:
+                path.unlink()
+                removed_files += 1
+                removed_bytes += stat.st_size
+            except OSError:
+                pass
+        else:
+            retained.append((stat.st_mtime, stat.st_size, path))
+    total = sum(size for _, size, _ in retained)
+    for _, size, path in sorted(retained):
+        if CACHE_MAX_BYTES <= 0 or total <= CACHE_MAX_BYTES:
+            break
+        try:
+            path.unlink()
+            removed_files += 1
+            removed_bytes += size
+            total -= size
+        except OSError:
+            pass
+    if removed_files:
+        logging.info("Pruned page cache: files=%d bytes=%d retained_bytes=%d", removed_files, removed_bytes, total)
+    return removed_files, removed_bytes
 
 
 def prune_state(feed_items: list[dict], sources: list[dict]) -> None:
@@ -671,13 +713,22 @@ def validate_publication_datetime(
         return None
     reference = finalize_datetime(now or datetime.now(MSK))
     if dt > reference + allowance:
-        logging.warning(
-            "Reject future publication time value=%r url=%s source=%s signal=%s",
-            raw_value if raw_value is not None else dt.isoformat(),
-            url or "",
-            source or "",
-            signal,
-        )
+        rejection_count = 1
+        if source:
+            rejection_count = int(
+                SOURCE_SUMMARY[source].get("future_date_rejections", 0) or 0
+            ) + 1
+            SOURCE_SUMMARY[source]["future_date_rejections"] = rejection_count
+        if rejection_count <= 3:
+            logging.warning(
+                "Reject future publication time value=%r url=%s source=%s signal=%s",
+                raw_value if raw_value is not None else dt.isoformat(),
+                url or "",
+                source or "",
+                signal,
+            )
+        elif rejection_count == 4:
+            logging.warning("Suppress further future-date warnings for source=%s", source or "")
         return None
     return dt
 
@@ -2550,6 +2601,7 @@ def harvest_source(src: dict, force: bool = False):
                 handle_item(item, url)
             else:
                 logging.warning("  skip %s: %s", url, exc)
+                SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
             SOURCE_SUMMARY[src_name]["last_error"] = str(e)
@@ -2586,25 +2638,83 @@ def log_source_summary() -> None:
 def write_source_health_report(sources: list[dict]) -> None:
     """Persist crawl diagnostics independently from the retained feed."""
     rows = []
+    streaks = STATE.setdefault("source_health_streaks", {})
     for source in sources:
         if not source.get("enabled", True):
             continue
         name = source.get("name", "")
         summary = SOURCE_SUMMARY[name]
+        status = summary.get("index_fetch_status", "not_attempted")
+        attempted = int(summary.get("attempted_articles", 0) or 0)
+        accepted = int(summary.get("total", 0) or 0)
+        article_outage = attempted > 0 and accepted == 0 and bool(summary.get("last_error"))
+        failed = status in {"failed", "parser_error", "not_attempted"} or article_outage
+        previous_streak = int(streaks.get(name, 0) or 0)
+        if status != "skipped_selection":
+            streaks[name] = previous_streak + 1 if failed else 0
+        else:
+            streaks.setdefault(name, previous_streak)
         rows.append({
             "source": name,
-            "index_fetch_status": summary.get("index_fetch_status", "not_attempted"),
+            "index_fetch_status": status,
+            "consecutive_failures": streaks[name],
             "raw_link_candidates": summary.get("raw_link_candidates", 0),
             "accepted_links": summary.get("accepted_links", 0),
-            "attempted_articles": summary.get("attempted_articles", 0),
-            "accepted_articles": summary.get("total", 0),
+            "attempted_articles": attempted,
+            "accepted_articles": accepted,
             "empty_rejections": summary.get("empty", 0),
             "short_rejections": summary.get("short", 0),
+            "future_date_rejections": summary.get("future_date_rejections", 0),
             "cached_fallback_used": bool(summary.get("cached_fallback_used", False)),
             "last_error": summary.get("last_error"),
         })
     payload = {"generated_at": datetime.now(timezone.utc).isoformat(), "sources": rows}
     SOURCE_HEALTH_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    # Streaks are updated while producing the report, after the normal state
+    # save in the caller, so persist them here as part of the same operation.
+    prune_page_cache()
+    save_state()
+
+
+def retain_bounded_items(items: list[dict]) -> list[dict]:
+    """Apply fair, deterministic retention to an already newest-first list."""
+    if not FEED_MAX_ITEMS or len(items) <= FEED_MAX_ITEMS:
+        return items
+    if FEED_MIN_ITEMS_PER_SOURCE <= 0:
+        return items[:FEED_MAX_ITEMS]
+    reserved: list[dict] = []
+    counts: dict[str, int] = defaultdict(int)
+    reserved_ids: set[str] = set()
+    for item in items:
+        source = str(item.get("source") or "")
+        item_id = str(item.get("id") or item.get("url") or "")
+        if source and counts[source] < FEED_MIN_ITEMS_PER_SOURCE:
+            reserved.append(item)
+            reserved_ids.add(item_id)
+            counts[source] += 1
+    if len(reserved) > FEED_MAX_ITEMS:
+        return items[:FEED_MAX_ITEMS]
+    remainder = [
+        item for item in items
+        if str(item.get("id") or item.get("url") or "") not in reserved_ids
+    ]
+    combined = reserved + remainder
+    combined.sort(
+        key=lambda x: x.get("published_at") or x.get("fetched_at") or x.get("first_seen") or "",
+        reverse=True,
+    )
+    selected_ids = {
+        str(item.get("id") or item.get("url") or "") for item in reserved
+    }
+    # Keep reservations even when they are older than the global cutoff.
+    selected = list(reserved)
+    selected.extend(item for item in combined if str(item.get("id") or item.get("url") or "") not in selected_ids)
+    selected = selected[:FEED_MAX_ITEMS]
+    selected.sort(
+        key=lambda x: x.get("published_at") or x.get("fetched_at") or x.get("first_seen") or "",
+        reverse=True,
+    )
+    return selected
 
 
 def build_feed(all_items):
@@ -2633,6 +2743,8 @@ def build_feed(all_items):
         key=lambda x: x.get("published_at") or x.get("fetched_at") or x.get("first_seen") or "",
         reverse=True,
     )
+
+    items = retain_bounded_items(items)
 
     feed = {
         "version": "https://jsonfeed.org/version/1.1",
@@ -2741,8 +2853,7 @@ def merge_items(existing, new):
         reverse=True,
     )
 
-    if FEED_MAX_ITEMS and len(merged_items) > FEED_MAX_ITEMS:
-        merged_items = merged_items[:FEED_MAX_ITEMS]
+    merged_items = retain_bounded_items(merged_items)
 
     return merged_items
 
@@ -2813,6 +2924,7 @@ def main():
             logging.info("Skip disabled source: %s — %s", src.get('name'), src.get('start_url'))
             continue
         if selected_sources and src.get("name") not in selected_sources:
+            SOURCE_SUMMARY[src_name]["index_fetch_status"] = "skipped_selection"
             continue
         seen_source_names.add(src_name)
         try:

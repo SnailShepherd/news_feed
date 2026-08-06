@@ -75,6 +75,8 @@ _HOST_LISTING_HUBS = {
     "www.erzrf.ru": (re.compile(r"^/news/news-archive/?$", re.IGNORECASE),),
     "ria-stk.ru": (re.compile(r"^/news/vse-novosti\.php$"),),
     "www.ria-stk.ru": (re.compile(r"^/news/vse-novosti\.php$"),),
+    "stroygaz.ru": (re.compile(r"^/news/(?:regulation|official)/?$", re.IGNORECASE),),
+    "www.stroygaz.ru": (re.compile(r"^/news/(?:regulation|official)/?$", re.IGNORECASE),),
 }
 
 
@@ -172,7 +174,7 @@ def is_listing_url(url: str | None, start_url: str | None = None) -> bool:
             len(segments) == 2
             and segments[0] in _SECTION_PREFIXES
             and not is_eec_news
-            and (segments[1] in _LISTING_SEGMENTS or segments[1].isdigit())
+            and segments[1] in _LISTING_SEGMENTS
         ):
             return True
     if any(segment in _LISTING_SEGMENTS for segment in segments):

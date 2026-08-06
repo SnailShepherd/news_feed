@@ -6,6 +6,7 @@ from scripts.metrics import (
     check_anti_genie,
     compute_metrics,
     compute_source_metrics,
+    classify_source_health,
     find_unexpected_empty_sources,
 )
 
@@ -78,3 +79,73 @@ def test_healthy_source_uses_fetch_timestamp_when_publication_is_invalid():
 def test_explicitly_exempted_empty_source_passes():
     _, report = compute_source_metrics([], [{"name": "expected empty"}], stale_after=timedelta(days=7), now=NOW)
     assert find_unexpected_empty_sources(report, {"expected empty"}) == []
+
+
+def test_source_health_distinguishes_failures_from_degraded_sources():
+    failures, warnings = classify_source_health([
+        {"source": "broken", "index_fetch_status": "failed", "consecutive_failures": 3, "last_error": "timeout"},
+        {"source": "cached", "index_fetch_status": "cached", "cached_fallback_used": True},
+        {"source": "changed markup", "index_fetch_status": "fetched", "raw_link_candidates": 0},
+        {"source": "good", "index_fetch_status": "unchanged"},
+    ])
+
+    assert failures == ["broken: failed for 3 consecutive runs (timeout)"]
+    assert warnings == [
+        "cached: cached fallback used",
+        "changed markup: fetched index contained no link candidates",
+    ]
+
+
+def test_source_health_warns_before_failure_threshold_and_counts_bad_dates():
+    failures, warnings = classify_source_health([
+        {
+            "source": "flaky",
+            "index_fetch_status": "failed",
+            "consecutive_failures": 2,
+            "future_date_rejections": 4,
+        }
+    ])
+
+    assert failures == []
+    assert warnings == [
+        "flaky: transient failed (run 2/3)",
+        "flaky: rejected 4 future publication dates",
+    ]
+
+
+def test_article_crawl_outage_uses_failure_streak():
+    failures, warnings = classify_source_health([
+        {
+            "source": "articles broken",
+            "index_fetch_status": "fetched",
+            "attempted_articles": 5,
+            "accepted_articles": 0,
+            "last_error": "article timeout",
+            "consecutive_failures": 3,
+        },
+        {
+            "source": "content rejected",
+            "index_fetch_status": "fetched",
+            "attempted_articles": 4,
+            "accepted_articles": 0,
+            "consecutive_failures": 0,
+        },
+    ])
+
+    assert failures == [
+        "articles broken: article crawl failed for 3 consecutive runs (article timeout)"
+    ]
+    assert warnings == ["content rejected: attempted 4 articles but accepted none"]
+
+
+def test_sources_skipped_by_selection_are_ignored():
+    failures, warnings = classify_source_health([
+        {
+            "source": "not selected",
+            "index_fetch_status": "skipped_selection",
+            "consecutive_failures": 99,
+        }
+    ])
+
+    assert failures == []
+    assert warnings == []

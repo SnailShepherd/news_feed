@@ -55,7 +55,19 @@ jobs:
           fi
 
       - name: Check source health
-        run: python scripts/metrics.py docs/unified.json --sources sources.json
+        # A source can be absent from the globally capped feed even when its
+        # crawl succeeded. Report crawl degradation, but do not discard a good
+        # feed merely because an upstream site is temporarily unavailable.
+        run: |
+          set -o pipefail
+          {
+            echo '## Feed and source health'
+            echo '```text'
+            python scripts/metrics.py docs/unified.json \
+              --sources sources.json \
+              --source-health docs/source-health.json
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Commit output (feed, source health & state)
         run: |
@@ -64,3 +76,12 @@ jobs:
           git add docs/unified.json docs/source-health.json .cache/state.json || true
           git commit -m "Update unified feed [skip ci]" || echo "No changes"
           git push
+
+      # Alert only after the usable feed and diagnostics have been published.
+      # A source becomes a hard failure after three consecutive bad runs.
+      - name: Enforce repeated source failures
+        run: >-
+          python scripts/metrics.py docs/unified.json
+          --sources sources.json
+          --source-health docs/source-health.json
+          --strict-source-health
