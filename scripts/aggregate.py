@@ -256,10 +256,19 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
 def save_state():
     # Serialize an explicit allow-list so future client/session fields cannot
     # accidentally place cookie material in the committed state document.
-    durable_keys = {
-        "headers", "index_hash", "seen_urls", "first_seen", "aliases",
-        "content_hashes", "canonical_item_ids", "source_health_streaks",
-    }
+    # A tuple keeps the large top-level sections stable across Python
+    # processes; a set would make scheduled runs rewrite the file solely due
+    # to hash-randomized iteration order.
+    durable_keys = (
+        "headers",
+        "index_hash",
+        "seen_urls",
+        "first_seen",
+        "aliases",
+        "content_hashes",
+        "canonical_item_ids",
+        "source_health_streaks",
+    )
     durable_state = {key: STATE[key] for key in durable_keys if key in STATE}
     run_stats = {
         key: STATE.get("stats", {}).get(key)

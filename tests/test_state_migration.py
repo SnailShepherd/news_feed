@@ -76,7 +76,9 @@ def test_save_state_never_serializes_session_cookies(tmp_path, monkeypatch):
         aggregate,
         "STATE",
         {
+            "seen_urls": {"Source": ["https://example.com/article"]},
             "index_hash": {"url": "digest"},
+            "headers": {"url": {"ETag": "digest"}},
             "host_state": {"leak.example": {"cookies": [{"value": "durable-secret"}]}},
         },
     )
@@ -91,4 +93,5 @@ def test_save_state_never_serializes_session_cookies(tmp_path, monkeypatch):
     durable = durable_path.read_text(encoding="utf-8")
     assert "cookie" not in durable.lower()
     assert "secret" not in durable
+    assert list(json.loads(durable)) == ["headers", "index_hash", "seen_urls"]
     assert json.loads(session_path.read_text(encoding="utf-8"))["host_state"]
