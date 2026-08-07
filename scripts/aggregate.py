@@ -42,6 +42,7 @@ DOCS_DIR = ROOT / "docs"
 CACHE_DIR = ROOT / ".cache"
 PAGES_DIR = CACHE_DIR / "pages"
 STATE_FILE = CACHE_DIR / "state.json"
+SESSION_STATE_FILE = CACHE_DIR / "session-state.json"
 OUT_JSON = DOCS_DIR / "unified.json"
 SOURCE_HEALTH_JSON = DOCS_DIR / "source-health.json"
 
@@ -143,11 +144,9 @@ DOCS_DIR.mkdir(exist_ok=True)
 def ensure_state_keys(state: dict) -> dict:
     required_defaults = {
         "headers": {},
-        "stats": {},
         "index_hash": {},
         "seen_urls": {},
         "first_seen": {},
-        "host_state": {},
         "aliases": {},
         "content_hashes": {},
         "canonical_item_ids": {},
@@ -159,17 +158,45 @@ def ensure_state_keys(state: dict) -> dict:
     return state
 
 
+def ensure_session_state_keys(state: dict) -> dict:
+    """Normalize state that is meaningful only to a particular runner."""
+    for key in ("host_state", "stats"):
+        if not isinstance(state.get(key), dict):
+            state[key] = {}
+    return state
+
+
 if STATE_FILE.exists():
     STATE = json.loads(STATE_FILE.read_text(encoding="utf-8"))
 else:
     STATE = {
         "headers": {},
-        "stats": {},
         "index_hash": {},
         "seen_urls": {},
     }
 
 STATE = ensure_state_keys(STATE)
+
+# Migrate runner data written by older versions out of the tracked document.
+_legacy_host_state = STATE.pop("host_state", {})
+_legacy_stats = STATE.get("stats", {})
+_legacy_session_stats = {
+    key: _legacy_stats.pop(key)
+    for key in ("cooldowns", "errors", "metrics")
+    if key in _legacy_stats
+}
+if not _legacy_stats:
+    STATE.pop("stats", None)
+
+if SESSION_STATE_FILE.exists():
+    SESSION_STATE = json.loads(SESSION_STATE_FILE.read_text(encoding="utf-8"))
+else:
+    SESSION_STATE = {}
+SESSION_STATE = ensure_session_state_keys(SESSION_STATE)
+if _legacy_host_state and not SESSION_STATE["host_state"]:
+    SESSION_STATE["host_state"] = _legacy_host_state
+for key, value in _legacy_session_stats.items():
+    SESSION_STATE["stats"].setdefault(key, value)
 
 HOST_STRATEGIES: dict[str, RequestStrategy] = {}
 HOST_CLIENTS: dict[str, HostClient] = {}
@@ -227,7 +254,35 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
 }
 
 def save_state():
-    STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
+    # Serialize an explicit allow-list so future client/session fields cannot
+    # accidentally place cookie material in the committed state document.
+    # A tuple keeps the large top-level sections stable across Python
+    # processes; a set would make scheduled runs rewrite the file solely due
+    # to hash-randomized iteration order.
+    durable_keys = (
+        "headers",
+        "index_hash",
+        "seen_urls",
+        "first_seen",
+        "aliases",
+        "content_hashes",
+        "canonical_item_ids",
+        "source_health_streaks",
+    )
+    durable_state = {key: STATE[key] for key in durable_keys if key in STATE}
+    run_stats = {
+        key: STATE.get("stats", {}).get(key)
+        for key in ("last_run", "items")
+        if key in STATE.get("stats", {})
+    }
+    if run_stats:
+        durable_state["stats"] = run_stats
+    STATE_FILE.write_text(
+        json.dumps(durable_state, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    SESSION_STATE_FILE.write_text(
+        json.dumps(SESSION_STATE, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 def prune_page_cache(*, now: float | None = None) -> tuple[int, int]:
@@ -383,7 +438,7 @@ def get_host_client(url: str, src: dict | None = None) -> HostClient | None:
         return None
     client = HOST_CLIENTS.get(strategy_host)
     if client is None:
-        client = HostClient(strategy_host, strategy, STATE)
+        client = HostClient(strategy_host, strategy, SESSION_STATE)
         HOST_CLIENTS[strategy_host] = client
     return client
 
@@ -2145,7 +2200,7 @@ def harvest_json_source(src: dict, force: bool = False):
 
 
 def harvest_source(src: dict, force: bool = False):
-    stats = STATE.setdefault("stats", {})
+    stats = SESSION_STATE.setdefault("stats", {})
     cooldowns = stats.setdefault("cooldowns", {})
     errors = stats.setdefault("errors", [])
 
@@ -2328,7 +2383,7 @@ def harvest_source(src: dict, force: bool = False):
                     )
                     return []
             except SourceTemporarilyUnavailable as exc:
-                failures = STATE.setdefault("stats", {}).setdefault("errors", [])
+                failures = SESSION_STATE.setdefault("stats", {}).setdefault("errors", [])
                 logging.warning(
                     "Temporary unavailability for %s: %s", src.get("name"), exc
                 )
@@ -2938,7 +2993,7 @@ def main():
             logging.error("  !! Failed: %s (%s)", src.get("name"), e)
             SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
             SOURCE_SUMMARY[src_name]["last_error"] = str(e)
-            STATE.setdefault("stats", {}).setdefault("errors", []).append({"source": src.get("name"), "url": src.get("start_url"), "error": str(e)})
+            SESSION_STATE.setdefault("stats", {}).setdefault("errors", []).append({"source": src.get("name"), "url": src.get("start_url"), "error": str(e)})
 
     if selected_sources and ARGS.sources:
         missing = selected_sources - seen_source_names
