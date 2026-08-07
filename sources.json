@@ -467,6 +467,7 @@
       "/20"
     ],
     "link_min_text_len": 8,
+    "retention_weight": 0.75,
     "enabled": true,
     "content_selectors": [
       "article .article__body",
@@ -512,6 +513,22 @@
     },
     "fallback_start_urls": [
       "https://rg.ru/xml/index.xml"
+    ],
+    "discovery_categories": [
+      "эконом",
+      "строител",
+      "недвижим",
+      "жиль",
+      "инфраструктур",
+      "стандарт",
+      "регулирован",
+      "economics",
+      "construction",
+      "real estate",
+      "housing",
+      "infrastructure",
+      "standards",
+      "regulatory"
     ]
   }
 ]

@@ -28,6 +28,46 @@ def test_fair_retention_reserves_items_for_low_volume_sources(monkeypatch):
     assert retained == sorted(retained, key=lambda item: item["published_at"], reverse=True)
 
 
+def test_soft_shares_materially_improve_specialist_representation(monkeypatch):
+    monkeypatch.setattr(aggregate, "FEED_MAX_ITEMS", 12)
+    monkeypatch.setattr(aggregate, "FEED_MIN_ITEMS_PER_SOURCE", 1)
+    monkeypatch.setattr(aggregate, "SOURCE_RETENTION_WEIGHTS", {})
+    items = [_item("dominant", day) for day in range(20, 0, -1)]
+    items += [_item("planning", day) for day in range(3, 0, -1)]
+    items += [_item("standards", day) for day in range(3, 0, -1)]
+
+    retained = aggregate.retain_bounded_items(items)
+
+    assert sum(item["source"] != "dominant" for item in retained) == 6
+
+
+def test_soft_shares_leave_no_capacity_unused(monkeypatch):
+    monkeypatch.setattr(aggregate, "FEED_MAX_ITEMS", 8)
+    monkeypatch.setattr(aggregate, "FEED_MIN_ITEMS_PER_SOURCE", 1)
+    monkeypatch.setattr(aggregate, "SOURCE_RETENTION_WEIGHTS", {"dominant": 0.25})
+    items = [_item("dominant", day) for day in range(10, 0, -1)] + [_item("specialist", 1)]
+
+    retained = aggregate.retain_bounded_items(items)
+
+    assert len(retained) == 8
+    assert sum(item["source"] == "dominant" for item in retained) == 7
+
+
+def test_soft_share_result_is_newest_first_with_stable_source_order(monkeypatch):
+    monkeypatch.setattr(aggregate, "FEED_MAX_ITEMS", 7)
+    monkeypatch.setattr(aggregate, "FEED_MIN_ITEMS_PER_SOURCE", 1)
+    monkeypatch.setattr(aggregate, "SOURCE_RETENTION_WEIGHTS", {})
+    items = [_item("dominant", day) for day in range(9, 0, -1)]
+    items += [_item("specialist", day) for day in range(3, 0, -1)]
+
+    retained = aggregate.retain_bounded_items(items)
+
+    assert retained == sorted(retained, key=lambda item: item["published_at"], reverse=True)
+    for source in {item["source"] for item in retained}:
+        source_dates = [item["published_at"] for item in retained if item["source"] == source]
+        assert source_dates == sorted(source_dates, reverse=True)
+
+
 def test_page_cache_pruning_removes_old_then_excess_files(tmp_path, monkeypatch):
     monkeypatch.setattr(aggregate, "PAGES_DIR", tmp_path)
     monkeypatch.setattr(aggregate, "CACHE_MAX_AGE_DAYS", 2)

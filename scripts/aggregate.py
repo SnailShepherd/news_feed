@@ -92,6 +92,7 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
     }
 )
 SOURCE_MIN_WORDS: dict[str, int] = {}
+SOURCE_RETENTION_WEIGHTS: dict[str, float] = {}
 DEFAULT_MIN_WORDS = 100
 HOST_MIN_WORD_OVERRIDES = {
     "realty.ria.ru": 120,
@@ -2527,32 +2528,47 @@ def extract_index_links(
 
     include_res = compile_patterns("include_regex")
     exclude_res = compile_patterns("exclude_regex")
-    raw_candidates: list[tuple[str, str, bool]] = []
+    # Keep discovery metadata attached to its URL.  In particular, sitemap
+    # category data must not be discarded and then reconstructed from article
+    # text after an expensive fetch.
+    raw_candidates: list[tuple[str, str, bool, str]] = []
     for anchor in soup.find_all("a"):
         href = anchor.get("href")
         if href:
-            raw_candidates.append((href, anchor.get_text(strip=True) or "", True))
+            raw_candidates.append((href, anchor.get_text(strip=True) or "", True, ""))
     for tag_name in ("loc", "link"):
         for tag in soup.find_all(tag_name):
             value = tag.get_text(strip=True)
             if value.startswith("http"):
-                raw_candidates.append((value, value, False))
-    if src.get("parse_embedded_links"):
+                record = tag.find_parent("url") or tag.parent
+                metadata = " ".join(
+                    node.get_text(" ", strip=True)
+                    for node in record.find_all(True)
+                    if node.name.split(":")[-1].lower()
+                    in {"category", "keywords", "subject", "section", "rubric"}
+                )
+                raw_candidates.append((value, value, False, metadata))
+    discovery_categories = src.get("discovery_categories") or []
+    if isinstance(discovery_categories, str):
+        discovery_categories = [discovery_categories]
+    category_terms = [str(term).casefold() for term in discovery_categories if term]
+    metadata_available = bool(category_terms and any(candidate[3] for candidate in raw_candidates))
+    if src.get("parse_embedded_links") and not metadata_available:
         include_snippets = [str(pattern) for pattern in include_patterns]
         for expanded_html in _embedded_text_variants(index_html):
             raw_candidates.extend(
-                (match, "", False)
+                (match, "", False, "")
                 for match in re.findall(r'https?://[^\s"\'<>]+', expanded_html)
             )
             for relative in re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html):
                 if not include_snippets or any(part in relative for part in include_snippets):
-                    raw_candidates.append((relative, "", False))
+                    raw_candidates.append((relative, "", False, ""))
 
     base_url = src["base_url"]
     base_host = urlparse(base_url).netloc.removeprefix("www.")
     current_index = index_url or src["start_url"]
     accepted = []
-    for raw_href, link_text, is_anchor in raw_candidates:
+    for raw_href, link_text, is_anchor, metadata in raw_candidates:
         href = urljoin(base_url, raw_href)
         if href.rstrip("/") == current_index.rstrip("/") or is_listing_url(href, start_url=current_index):
             continue
@@ -2565,6 +2581,8 @@ def extract_index_links(
         if include_res and not any(pattern.search(href) for pattern in include_res):
             continue
         if exclude_res and any(pattern.search(href) for pattern in exclude_res):
+            continue
+        if metadata_available and not any(term in metadata.casefold() for term in category_terms):
             continue
         if is_anchor:
             min_len = int(src.get("link_min_text_len", 0))
@@ -3131,7 +3149,12 @@ def write_source_health_report(sources: list[dict]) -> None:
 
 
 def retain_bounded_items(items: list[dict]) -> list[dict]:
-    """Apply fair, deterministic retention to an already newest-first list."""
+    """Reserve source minima, then allocate soft weighted shares.
+
+    A source's next item scores ``weight / (already_selected + 1)``.  Thus a
+    deep dominant queue progressively yields to specialist queues, but remains
+    eligible and can consume every unfilled slot once those queues run dry.
+    """
     if not FEED_MAX_ITEMS or len(items) <= FEED_MAX_ITEMS:
         return items
     if FEED_MIN_ITEMS_PER_SOURCE <= 0:
@@ -3148,22 +3171,30 @@ def retain_bounded_items(items: list[dict]) -> list[dict]:
             counts[source] += 1
     if len(reserved) > FEED_MAX_ITEMS:
         return items[:FEED_MAX_ITEMS]
-    remainder = [
-        item for item in items
-        if str(item.get("id") or item.get("url") or "") not in reserved_ids
-    ]
-    combined = reserved + remainder
-    combined.sort(
-        key=lambda x: x.get("published_at") or x.get("fetched_at") or x.get("first_seen") or "",
-        reverse=True,
-    )
-    selected_ids = {
-        str(item.get("id") or item.get("url") or "") for item in reserved
-    }
-    # Keep reservations even when they are older than the global cutoff.
     selected = list(reserved)
-    selected.extend(item for item in combined if str(item.get("id") or item.get("url") or "") not in selected_ids)
-    selected = selected[:FEED_MAX_ITEMS]
+    queues: dict[str, list[tuple[int, dict]]] = defaultdict(list)
+    for position, item in enumerate(items):
+        item_id = str(item.get("id") or item.get("url") or "")
+        if item_id not in reserved_ids:
+            queues[str(item.get("source") or "")].append((position, item))
+
+    while len(selected) < FEED_MAX_ITEMS and queues:
+        eligible = [source for source, queue in queues.items() if queue]
+        if not eligible:
+            break
+        source = min(
+            eligible,
+            key=lambda name: (
+                -(max(0.01, SOURCE_RETENTION_WEIGHTS.get(name, 1.0)) / (counts[name] + 1)),
+                queues[name][0][0],
+                name,
+            ),
+        )
+        _, item = queues[source].pop(0)
+        selected.append(item)
+        counts[source] += 1
+        if not queues[source]:
+            del queues[source]
     selected.sort(
         key=lambda x: x.get("published_at") or x.get("fetched_at") or x.get("first_seen") or "",
         reverse=True,
@@ -3365,6 +3396,14 @@ def main():
             ARGS.limit_per_source = 3
 
     sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
+    SOURCE_RETENTION_WEIGHTS.clear()
+    for source in sources:
+        configured_weight = source.get("retention_weight", 1.0)
+        try:
+            SOURCE_RETENTION_WEIGHTS[source.get("name", "")] = max(0.01, float(configured_weight))
+        except (TypeError, ValueError):
+            logging.warning("Invalid retention_weight for %s; using 1.0", source.get("name"))
+            SOURCE_RETENTION_WEIGHTS[source.get("name", "")] = 1.0
     HOST_STRATEGIES.update(build_strategy_registry(sources))
 
     selected_sources = None

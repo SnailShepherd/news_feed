@@ -88,13 +88,21 @@ def test_xml_fallback_index_contract(monkeypatch):
     expected = json.loads((directory / "expected.json").read_text())
     xml_index = (directory / "index.xml").read_text()
     article = (directory / "article.html").read_text()
-    monkeypatch.setattr(
-        aggregate,
-        "fetch_page",
-        lambda url, src=None: xml_index if url == source["start_url"] else article,
-    )
+    unrelated = "https://rg.ru/2026/08/06/unrelated-sports-fixture.html"
+
+    def fixture_fetch(url, src=None):
+        if url == source["start_url"]:
+            return xml_index
+        if url == expected["article_url"]:
+            return article
+        raise AssertionError(f"unrelated sitemap record was fetched: {url}")
+
+    monkeypatch.setattr(aggregate, "fetch_page", fixture_fetch)
     monkeypatch.setattr(aggregate, "fetch_amp_if_available", lambda *args, **kwargs: (None, None))
-    assert expected["article_url"] in [item["url"] for item in aggregate.harvest_source(source, force=True)]
+    items = aggregate.harvest_source(source, force=True)
+    assert [item["url"] for item in items] == [expected["article_url"]]
+    assert aggregate.STATE["candidate_urls"][source["name"]] == [expected["article_url"]]
+    assert unrelated not in aggregate.STATE["candidate_urls"][source["name"]]
 
 
 def test_fallback_skips_anchor_page_without_accepted_articles(monkeypatch, tmp_path):
