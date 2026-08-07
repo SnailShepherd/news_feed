@@ -142,6 +142,67 @@ def test_fallback_skips_anchor_page_without_accepted_articles(monkeypatch, tmp_p
     ]
 
 
+def test_challenge_response_does_not_overwrite_valid_cached_index(monkeypatch, tmp_path):
+    primary = "https://example.test/news"
+    fallback = "https://example.test/fallback"
+    article_url = "https://example.test/articles/cached-story"
+    source = {
+        "name": "Cached index fixture",
+        "start_url": primary,
+        "fallback_start_urls": [fallback],
+        "base_url": "https://example.test/",
+        "include_patterns": ["/articles/"],
+        "restrict_domain": True,
+    }
+    cached_index = f'<a href="{article_url}">Cached article</a>'
+    challenge = '<nav><a href="/login">Log in</a></nav>'
+    fallback_index = '<a href="/articles/fallback-story">Fallback article</a>'
+    monkeypatch.setattr(aggregate, "PAGES_DIR", tmp_path)
+    cache_path = tmp_path / aggregate.cache_key_for(primary)
+    cache_path.write_text(cached_index, encoding="utf-8")
+
+    def fixture_fetch(url, src=None):
+        if url == primary:
+            # Match fetch_page's behavior: a successful response is cached
+            # before harvest_source has had a chance to validate its links.
+            cache_path.write_text(challenge, encoding="utf-8")
+            return challenge
+        if url == article_url:
+            return "article body"
+        if url == fallback:
+            return fallback_index
+        raise AssertionError(f"unexpected fetch: {url}")
+
+    monkeypatch.setattr(aggregate, "fetch_page", fixture_fetch)
+    monkeypatch.setattr(
+        aggregate,
+        "build_item",
+        lambda url, *args, **kwargs: {
+            "id": "cached-story",
+            "source": source["name"],
+            "title": "Cached story",
+            "url": url,
+            "content_text": "cached article body",
+            "first_seen": "2026-08-07T00:00:00+00:00",
+            "bucketed_at": "2026-08-07T00:00:00+00:00",
+            "fetched_at": "2026-08-07T00:00:00+00:00",
+        },
+    )
+    aggregate.SOURCE_MIN_WORDS[source["name"]] = 1
+
+    items = aggregate.harvest_source(source, force=True)
+
+    assert [item["url"] for item in items] == [article_url]
+    assert cache_path.read_text(encoding="utf-8") == cached_index
+    assert aggregate.SOURCE_SUMMARY[source["name"]]["index_attempts"] == [{
+        "url": primary,
+        "raw_link_candidates": 1,
+        "accepted_links": 1,
+        "cached": True,
+    }]
+    assert aggregate.SOURCE_SUMMARY[source["name"]]["cached_fallback_used"] is True
+
+
 def test_faufcc_api_response_contract(monkeypatch):
     source = next(source for source in SOURCES if source["name"] == "ФАУ ФЦС")
     directory = fixture_dir(source)

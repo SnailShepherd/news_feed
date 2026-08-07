@@ -2295,15 +2295,23 @@ def harvest_source(src: dict, force: bool = False):
                 candidate_url,
             )
             try:
-                candidate_html = fetch_page(candidate_url, src=src)
                 candidate_cache_path = PAGES_DIR / cache_key_for(candidate_url)
+                # fetch_page writes successful responses to this path. Snapshot a
+                # known-good index first so an HTTP-200 challenge page cannot
+                # destroy the only usable cached copy before validation.
+                prior_candidate_html = (
+                    candidate_cache_path.read_text(encoding="utf-8")
+                    if candidate_cache_path.exists()
+                    else None
+                )
+                candidate_html = fetch_page(candidate_url, src=src)
                 candidate_links, candidate_raw_links, candidate_accepted_links = extract_index_links(
                     candidate_html, src, index_url=candidate_url
                 )
-                if candidate_accepted_links == 0 and candidate_cache_path.exists():
-                    cached_candidate_html = candidate_cache_path.read_text(encoding="utf-8")
+                candidate_used_cache = False
+                if candidate_accepted_links == 0 and prior_candidate_html is not None:
                     cached_links, cached_raw_links, cached_accepted_links = extract_index_links(
-                        cached_candidate_html, src, index_url=candidate_url
+                        prior_candidate_html, src, index_url=candidate_url
                     )
                     if cached_accepted_links > 0:
                         logging.warning(
@@ -2312,15 +2320,21 @@ def harvest_source(src: dict, force: bool = False):
                             candidate_url,
                             cached_accepted_links,
                         )
-                        candidate_html = cached_candidate_html
+                        candidate_html = prior_candidate_html
                         candidate_links = cached_links
                         candidate_raw_links = cached_raw_links
                         candidate_accepted_links = cached_accepted_links
-                SOURCE_SUMMARY[src_name]["index_attempts"].append({
+                        candidate_used_cache = True
+                        candidate_cache_path.write_text(prior_candidate_html, encoding="utf-8")
+                candidate_attempt = {
                     "url": candidate_url,
                     "raw_link_candidates": candidate_raw_links,
                     "accepted_links": candidate_accepted_links,
-                })
+                }
+                if candidate_used_cache:
+                    candidate_attempt["cached"] = True
+                    SOURCE_SUMMARY[src_name]["cached_fallback_used"] = True
+                SOURCE_SUMMARY[src_name]["index_attempts"].append(candidate_attempt)
                 if candidate_accepted_links == 0:
                     logging.warning(
                         "Index candidate produced 0 accepted article links for %s: %s",
