@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os, re, json, logging, pathlib, sys, hashlib, argparse, random, html
+from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse, parse_qsl, urlencode
 
@@ -81,6 +82,9 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
         "attempted_articles": 0,
         "cached_fallback_used": False,
         "future_date_rejections": 0,
+        "publication_rejections_by_signal": {},
+        "publication_rejection_samples": [],
+        "maximum_future_offset_seconds": 0,
         "last_error": None,
     }
 )
@@ -94,7 +98,13 @@ HOST_MIN_WORD_OVERRIDES = {
     "faufcc.ru": 70,
 }
 PUBLICATION_CLOCK_SKEW = timedelta(
-    hours=float(os.environ.get("PUBLICATION_CLOCK_SKEW_HOURS", "24"))
+    minutes=float(os.environ.get("PUBLICATION_CLOCK_SKEW_MINUTES", "15"))
+)
+PUBLICATION_TIMEZONE_SKEW = timedelta(
+    hours=float(os.environ.get("PUBLICATION_TIMEZONE_SKEW_HOURS", "26"))
+)
+PUBLICATION_REJECTION_SAMPLE_LIMIT = int(
+    os.environ.get("PUBLICATION_REJECTION_SAMPLE_LIMIT", "5")
 )
 
 ESSENTIAL_ITEM_FIELDS = (
@@ -747,6 +757,35 @@ def finalize_datetime(dt: datetime):
     return clamp_year(dt)
 
 
+@dataclass
+class PublicationDiagnostics:
+    """Explicit sink for diagnostics produced while parsing this crawl only."""
+
+    source: str
+
+    def reject(self, *, signal: str, raw_value: object, url: str, offset: timedelta) -> None:
+        summary = SOURCE_SUMMARY[self.source]
+        counts = summary.setdefault("publication_rejections_by_signal", {})
+        counts[signal] = int(counts.get(signal, 0) or 0) + 1
+        summary["future_date_rejections"] = sum(int(value) for value in counts.values())
+        offset_seconds = max(0, int(offset.total_seconds()))
+        summary["maximum_future_offset_seconds"] = max(
+            int(summary.get("maximum_future_offset_seconds", 0) or 0), offset_seconds
+        )
+        samples = summary.setdefault("publication_rejection_samples", [])
+        if len(samples) < max(0, PUBLICATION_REJECTION_SAMPLE_LIMIT):
+            samples.append({
+                "signal": signal,
+                "raw_value": str(raw_value),
+                "url": url,
+                "future_offset_seconds": offset_seconds,
+                "classification": (
+                    "timezone_scale_skew" if offset <= PUBLICATION_TIMEZONE_SKEW
+                    else "clearly_invalid_future_date"
+                ),
+            })
+
+
 def validate_publication_datetime(
     dt: datetime | None,
     *,
@@ -755,13 +794,16 @@ def validate_publication_datetime(
     source: str | None = None,
     signal: str = "unknown",
     now: datetime | None = None,
-    allowance: timedelta = PUBLICATION_CLOCK_SKEW,
+    allowance: timedelta = PUBLICATION_TIMEZONE_SKEW,
+    diagnostics: PublicationDiagnostics | None = None,
 ) -> datetime | None:
     """Return a normalized, plausible publication time, or reject it.
 
     ``now`` and ``allowance`` are injectable so callers and tests do not need
     to depend on wall-clock time. All extraction paths should pass through
-    this single boundary before a value is stored as ``published_at``.
+    this single boundary before a value is stored as ``published_at``. The
+    default accommodates timezone-scale metadata errors; signals known not to
+    contain a timezone can opt into the smaller clock-skew allowance.
     """
     dt = finalize_datetime(dt)
     if dt is None:
@@ -769,12 +811,15 @@ def validate_publication_datetime(
     reference = finalize_datetime(now or datetime.now(MSK))
     if dt > reference + allowance:
         rejection_count = 1
-        if source:
-            rejection_count = int(
-                SOURCE_SUMMARY[source].get("future_date_rejections", 0) or 0
-            ) + 1
-            SOURCE_SUMMARY[source]["future_date_rejections"] = rejection_count
-        if rejection_count <= 3:
+        if diagnostics is not None:
+            diagnostics.reject(
+                signal=signal,
+                raw_value=raw_value if raw_value is not None else dt.isoformat(),
+                url=url or "",
+                offset=dt - reference,
+            )
+            rejection_count = int(SOURCE_SUMMARY[diagnostics.source]["future_date_rejections"])
+        if diagnostics is not None and rejection_count <= 3:
             logging.warning(
                 "Reject future publication time value=%r url=%s source=%s signal=%s",
                 raw_value if raw_value is not None else dt.isoformat(),
@@ -782,7 +827,7 @@ def validate_publication_datetime(
                 source or "",
                 signal,
             )
-        elif rejection_count == 4:
+        elif diagnostics is not None and rejection_count == 4:
             logging.warning("Suppress further future-date warnings for source=%s", source or "")
         return None
     return dt
@@ -1425,7 +1470,10 @@ def extract_date_candidates(soup: BeautifulSoup):
         uniq.append(s)
     return uniq[:20]
 
-def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic", now=None):
+def try_parse_any_date(
+    candidates, *, url=None, source=None, signal="heuristic", now=None,
+    diagnostics=None,
+):
     default_base = make_aware_msk(datetime.now(MSK).replace(month=1, day=1, hour=0, minute=0, second=0, microsecond=0))
     for raw in candidates:
         s = raw.strip()
@@ -1434,17 +1482,17 @@ def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic",
             m = re.search(r"(\d{1,2}):(\d{2})", low)
             hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
             dt = make_aware_msk(datetime.now(MSK)).replace(hour=hh, minute=mm, second=0, microsecond=0)
-            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         if "вчера" in low or "yesterday" in low:
             m = re.search(r"(\d{1,2}):(\d{2})", low)
             hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
             dt = make_aware_msk(datetime.now(MSK) - timedelta(days=1)).replace(hour=hh, minute=mm, second=0, microsecond=0)
-            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         # Try ISO-like first
         try:
             dt = finalize_datetime(dparser.isoparse(s))
             if dt:
-                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         except Exception:
             pass
         # Try generic parser in day-first mode
@@ -1456,7 +1504,7 @@ def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic",
                 default=default_base,
             ))
             if dt:
-                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         except Exception:
             pass
         # Try Russian words
@@ -1464,11 +1512,14 @@ def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic",
         if dt:
             dt = finalize_datetime(dt)
             if dt:
-                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
     return None
 
 
-def _parse_datetime_signal(value: str | None, signal: str, *, url=None, source=None, now=None) -> datetime | None:
+def _parse_datetime_signal(
+    value: str | None, signal: str, *, url=None, source=None, now=None,
+    diagnostics=None,
+) -> datetime | None:
     if not value:
         return None
     value = value.strip()
@@ -1497,12 +1548,18 @@ def _parse_datetime_signal(value: str | None, signal: str, *, url=None, source=N
     if dt:
         logging.debug("Published time signal (%s): %s -> %s", signal, value, dt.isoformat())
         return validate_publication_datetime(
-            dt, raw_value=value, url=url, source=source, signal=signal, now=now
+            dt, raw_value=value, url=url, source=source, signal=signal, now=now,
+            diagnostics=diagnostics,
         )
     return None
 
 
-def extract_published_datetime(soup: BeautifulSoup, url: str | None = None, source: str | None = None) -> datetime | None:
+def extract_published_datetime(
+    soup: BeautifulSoup,
+    url: str | None = None,
+    source: str | None = None,
+    diagnostics: PublicationDiagnostics | None = None,
+) -> datetime | None:
     seen_candidates: set[tuple[str, str]] = set()
 
     def attempt(value: str | None, signal: str) -> datetime | None:
@@ -1515,7 +1572,7 @@ def extract_published_datetime(soup: BeautifulSoup, url: str | None = None, sour
         if key in seen_candidates:
             return None
         seen_candidates.add(key)
-        return _parse_datetime_signal(candidate, signal, url=url, source=source)
+        return _parse_datetime_signal(candidate, signal, url=url, source=source, diagnostics=diagnostics)
 
     # Primary meta tags.
     for tag in soup.find_all("meta", attrs={"property": "article:published_time"}):
@@ -1719,6 +1776,7 @@ def build_item(
     src: dict | None = None,
     pre_extracted_content: str | None = None,
 ):
+    publication_diagnostics = PublicationDiagnostics(source_name)
     amp_used = False
     selectors = content_selectors
     content_text: str | None
@@ -1753,7 +1811,9 @@ def build_item(
                 content_source = amp_label or amp_source or "amp"
                 amp_used = True
 
-    dt = extract_published_datetime(soup, url, source_name)
+    dt = extract_published_datetime(
+        soup, url, source_name, diagnostics=publication_diagnostics
+    )
 
     if dt is None:
         m = re.search(r"/(20\d{2})/([01]\d)/([0-3]\d)/", url)
@@ -1766,6 +1826,8 @@ def build_item(
                     url=url,
                     source=source_name,
                     signal="url:path",
+                    diagnostics=publication_diagnostics,
+                    allowance=PUBLICATION_CLOCK_SKEW,
                 )
             except ValueError:
                 dt = None
@@ -2133,13 +2195,15 @@ def harvest_json_source(src: dict, force: bool = False):
             parsed_dt = None
             if date_val:
                 parsed_dt = _parse_datetime_signal(
-                    date_val, "api:date", url=url, source=src_name
+                    date_val, "api:date", url=url, source=src_name,
+                    diagnostics=PublicationDiagnostics(src_name),
                 )
             if not parsed_dt:
                 human_date = _first_non_empty(containers, API_DATE_HUMAN_KEYS)
                 if human_date:
                     parsed_dt = try_parse_any_date(
-                        [human_date], url=url, source=src_name, signal="api:human_date"
+                        [human_date], url=url, source=src_name, signal="api:human_date",
+                        diagnostics=PublicationDiagnostics(src_name),
                     )
             if parsed_dt:
                 item["published_at"] = parsed_dt.isoformat()
@@ -2720,6 +2784,15 @@ def write_source_health_report(sources: list[dict]) -> None:
             "empty_rejections": summary.get("empty", 0),
             "short_rejections": summary.get("short", 0),
             "future_date_rejections": summary.get("future_date_rejections", 0),
+            "publication_rejections_by_signal": summary.get(
+                "publication_rejections_by_signal", {}
+            ),
+            "publication_rejection_samples": summary.get(
+                "publication_rejection_samples", []
+            ),
+            "maximum_future_offset_seconds": summary.get(
+                "maximum_future_offset_seconds", 0
+            ),
             "cached_fallback_used": bool(summary.get("cached_fallback_used", False)),
             "last_error": summary.get("last_error"),
         })
