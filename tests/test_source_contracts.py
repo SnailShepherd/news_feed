@@ -160,6 +160,26 @@ def test_fallback_skips_anchor_page_without_accepted_articles(monkeypatch, tmp_p
     ]
 
 
+def test_parser_exception_is_reported_as_crawler_parser_error(monkeypatch, tmp_path):
+    source = {
+        "name": "Broken parser fixture",
+        "start_url": "https://example.test/news",
+        "base_url": "https://example.test/",
+    }
+    monkeypatch.setattr(aggregate, "fetch_page", lambda *args, **kwargs: "<html>valid</html>")
+    monkeypatch.setattr(aggregate, "_parse_index_soup", lambda html: (_ for _ in ()).throw(ValueError("parser exploded")))
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", tmp_path / "health.json")
+
+    assert aggregate.harvest_source(source, force=True) == []
+    aggregate.write_source_health_report([source])
+    row = json.loads((tmp_path / "health.json").read_text())["sources"][0]
+    assert row["index_fetch_status"] == "parser_error"
+    assert row["failure_class"] == "crawler_parser_error"
+    assert row["consecutive_fetch_failures"] == 0
+    assert row["consecutive_parser_failures"] == 1
+    assert row["index_attempts"][0]["error"] == "parser exploded"
+
+
 def test_challenge_response_does_not_overwrite_valid_cached_index(monkeypatch, tmp_path):
     primary = "https://example.test/news"
     fallback = "https://example.test/fallback"

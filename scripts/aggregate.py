@@ -23,6 +23,7 @@ except ModuleNotFoundError:  # pragma: no cover - fallback when run as a script
 try:
     from scripts.http_client import (
         HostClient,
+        CrawlerParserError,
         RequestStrategy,
         SourceTemporarilyUnavailable,
         build_strategy_registry,
@@ -31,6 +32,7 @@ try:
 except ModuleNotFoundError:  # pragma: no cover - fallback when run as a script
     from http_client import (  # type: ignore
         HostClient,
+        CrawlerParserError,
         RequestStrategy,
         SourceTemporarilyUnavailable,
         build_strategy_registry,
@@ -728,6 +730,8 @@ def fetch_page(url: str, src: dict | None = None) -> str:
         client = get_host_client(url, src)
         if client and client.strategy.selenium_fallback:
             selenium_html = client.fetch_html_with_selenium(url)
+            if selenium_html is not None and not isinstance(selenium_html, str):
+                raise CrawlerParserError("fetch_page.selenium_fallback", url, selenium_html)
             if selenium_html:
                 content = selenium_html
             else:
@@ -753,6 +757,8 @@ def fetch_page(url: str, src: dict | None = None) -> str:
             headers={"User-Agent": USER_AGENT},
             timeout=REQUEST_TIMEOUT,
         ).text
+    if not isinstance(content, str) or not content.strip():
+        raise CrawlerParserError("fetch_page.response", url, content)
     page_path.write_text(content, encoding="utf-8")
     return content
 
@@ -2533,6 +2539,8 @@ def extract_index_links(
     applied. Accepted links retain document order and duplicates; callers may
     deduplicate them after recording diagnostics.
     """
+    if not isinstance(index_html, str) or not index_html.strip():
+        raise CrawlerParserError("extract_index_links", index_url or src["start_url"], index_html)
     soup = _parse_index_soup(index_html)
     include_patterns = src.get("include_patterns")
     if include_patterns:
@@ -2683,6 +2691,8 @@ def harvest_source(src: dict, force: bool = False):
     logging.info("Harvest: %s — %s", src["name"], start_url)
     if index_html is None:
         last_exc = None
+        total_raw_candidates = 0
+        total_accepted_links = 0
         for candidate_idx, candidate_url in enumerate(start_candidates, start=1):
             logging.info(
                 "Index candidate %d/%d for %s: %s",
@@ -2705,6 +2715,7 @@ def harvest_source(src: dict, force: bool = False):
                 candidate_links, candidate_raw_links, candidate_accepted_links = extract_index_links(
                     candidate_html, src, index_url=candidate_url
                 )
+                SOURCE_SUMMARY[src_name]["index_fetch_status"] = "fetched"
                 candidate_used_cache = False
                 if candidate_accepted_links == 0 and prior_candidate_html is not None:
                     cached_links, cached_raw_links, cached_accepted_links = extract_index_links(
@@ -2723,6 +2734,8 @@ def harvest_source(src: dict, force: bool = False):
                         candidate_accepted_links = cached_accepted_links
                         candidate_used_cache = True
                         candidate_cache_path.write_text(prior_candidate_html, encoding="utf-8")
+                total_raw_candidates += candidate_raw_links
+                total_accepted_links += candidate_accepted_links
                 candidate_attempt = {
                     "url": candidate_url,
                     "raw_link_candidates": candidate_raw_links,
@@ -2738,11 +2751,15 @@ def harvest_source(src: dict, force: bool = False):
                         src.get("name"),
                         candidate_url,
                     )
+                    # Retain the last valid index so an all-filtered crawl is
+                    # diagnosed as discovery failure rather than hashed as None.
+                    index_html = candidate_html
+                    links = candidate_links
                     continue
                 index_html = candidate_html
                 links = candidate_links
-                SOURCE_SUMMARY[src_name]["raw_link_candidates"] = candidate_raw_links
-                SOURCE_SUMMARY[src_name]["accepted_links"] = candidate_accepted_links
+                SOURCE_SUMMARY[src_name]["raw_link_candidates"] = total_raw_candidates
+                SOURCE_SUMMARY[src_name]["accepted_links"] = total_accepted_links
                 SOURCE_SUMMARY[src_name]["index_fetch_status"] = "fetched"
                 if candidate_url != src["start_url"]:
                     logging.info("Index fetched via fallback URL for %s: %s", src.get("name"), candidate_url)
@@ -2758,11 +2775,32 @@ def harvest_source(src: dict, force: bool = False):
                     "error": str(exc),
                 })
                 logging.warning("Index candidate failed for %s: %s (%s)", src.get("name"), candidate_url, exc)
+            except Exception as exc:
+                # Parser/library failures are crawler defects, not upstream
+                # transport failures. Preserve whatever earlier attempts saw.
+                last_exc = exc
+                SOURCE_SUMMARY[src_name]["index_attempts"].append({
+                    "url": candidate_url,
+                    "raw_link_candidates": 0,
+                    "accepted_links": 0,
+                    "error": str(exc),
+                })
+                SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
+                SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
+                logging.exception("Index crawler/parser failed for %s: %s", src.get("name"), candidate_url)
+
+        SOURCE_SUMMARY[src_name]["raw_link_candidates"] = total_raw_candidates
+        SOURCE_SUMMARY[src_name]["accepted_links"] = total_accepted_links
 
         all_candidates_failed = SOURCE_SUMMARY[src_name]["index_attempts"] and all(
             "error" in attempt for attempt in SOURCE_SUMMARY[src_name]["index_attempts"]
         )
-        if index_html is None and last_exc is not None and all_candidates_failed:
+        if (
+            index_html is None
+            and last_exc is not None
+            and all_candidates_failed
+            and SOURCE_SUMMARY[src_name]["index_fetch_status"] != "parser_error"
+        ):
             SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
             SOURCE_SUMMARY[src_name]["last_error"] = str(last_exc)
             try:
@@ -2875,7 +2913,15 @@ def harvest_source(src: dict, force: bool = False):
                     )
                     return []
 
+        if index_html is None and SOURCE_SUMMARY[src_name]["index_fetch_status"] == "parser_error":
+            return []
+
     # An unchanged index must still be parsed so retryable article URLs are revisited.
+    if not isinstance(index_html, str) or not index_html.strip():
+        exc = CrawlerParserError("harvest_source.index_hash", start_url, index_html)
+        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
+        SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
+        return []
     idx_digest = hashlib.sha256(index_html.encode("utf-8")).hexdigest()
     ih = STATE.setdefault("index_hash", {})
     if not force and ih.get(src["start_url"]) == idx_digest:
@@ -3084,6 +3130,7 @@ def write_source_health_report(sources: list[dict]) -> None:
     # succeeded.
     legacy_streaks = SOURCE_HEALTH_STATE
     fetch_streaks = STATE.setdefault("source_fetch_failure_streaks", {})
+    parser_streaks = STATE.setdefault("source_parser_failure_streaks", {})
     discovery_streaks = STATE.setdefault("source_discovery_failure_streaks", {})
     article_streaks = STATE.setdefault("source_article_failure_streaks", {})
     discovery_state = STATE.setdefault("source_discovery_state", {})
@@ -3099,7 +3146,8 @@ def write_source_health_report(sources: list[dict]) -> None:
         raw_candidates = int(summary.get("raw_link_candidates", 0) or 0)
         accepted_links = int(summary.get("accepted_links", 0) or 0)
         source_discovery = discovery_state.setdefault(name, {})
-        fetch_failed = status in {"failed", "parser_error", "not_attempted"}
+        fetch_failed = status in {"failed", "not_attempted"}
+        parser_failed = status == "parser_error"
         discovery_failed: bool | None = None
         if status == "fetched":
             discovery_failed = raw_candidates == 0 or accepted_links == 0
@@ -3122,6 +3170,14 @@ def write_source_health_report(sources: list[dict]) -> None:
                 else None
             )
         article_failed = (accepted == 0) if attempted > 0 else None
+        if status == "parser_error":
+            failure_class = "crawler_parser_error"
+        elif fetch_failed:
+            failure_class = "source_fetch_failure"
+        elif discovery_failed is True and raw_candidates > 0 and accepted_links == 0:
+            failure_class = "discovery_filter_failure"
+        else:
+            failure_class = None
 
         def update_streak(streak_map: dict, failed: bool | None) -> int:
             previous = int(streak_map.get(name, 0) or 0)
@@ -3133,21 +3189,25 @@ def write_source_health_report(sources: list[dict]) -> None:
 
         if status != "skipped_selection":
             fetch_streak = update_streak(fetch_streaks, fetch_failed)
+            parser_streak = update_streak(parser_streaks, parser_failed)
             discovery_streak = update_streak(discovery_streaks, discovery_failed)
             article_streak = update_streak(article_streaks, article_failed)
             previous_legacy = int(legacy_streaks.get(name, 0) or 0)
-            any_failure = fetch_failed or discovery_failed is True or article_failed is True
+            any_failure = parser_failed or fetch_failed or discovery_failed is True or article_failed is True
             legacy_streaks[name] = previous_legacy + 1 if any_failure else 0
         else:
             fetch_streak = int(fetch_streaks.get(name, 0) or 0)
+            parser_streak = int(parser_streaks.get(name, 0) or 0)
             discovery_streak = int(discovery_streaks.get(name, 0) or 0)
             article_streak = int(article_streaks.get(name, 0) or 0)
             legacy_streaks.setdefault(name, int(legacy_streaks.get(name, 0) or 0))
         rows.append({
             "source": name,
             "index_fetch_status": status,
+            "failure_class": failure_class,
             "consecutive_failures": legacy_streaks[name],
             "consecutive_fetch_failures": fetch_streak,
+            "consecutive_parser_failures": parser_streak,
             "consecutive_discovery_failures": discovery_streak,
             "consecutive_article_failures": article_streak,
             "raw_link_candidates": raw_candidates,

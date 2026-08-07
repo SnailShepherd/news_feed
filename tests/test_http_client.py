@@ -1,6 +1,7 @@
 import pathlib
 import sys
 import time
+import types
 
 import pytest
 import requests
@@ -11,11 +12,45 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from scripts.http_client import (
     DEFAULT_USER_AGENT,
     HostClient,
+    CrawlerParserError,
     RequestStrategy,
     SourceTemporarilyUnavailable,
     WarmupConfig,
     build_strategy_registry,
 )
+
+
+def test_selenium_non_string_page_source_is_crawler_parser_error(monkeypatch):
+    client = HostClient(
+        "example.com", RequestStrategy(selenium_fallback=True), {}
+    )
+
+    class Driver:
+        page_source = {"unexpected": "payload"}
+
+        def get(self, url):
+            pass
+
+        def get_cookies(self):
+            return []
+
+        def quit(self):
+            pass
+
+    selenium = types.ModuleType("selenium")
+    selenium.webdriver = types.SimpleNamespace(Chrome=lambda options: Driver())
+    monkeypatch.setitem(sys.modules, "selenium", selenium)
+    monkeypatch.setattr("scripts.http_client.importlib.util.find_spec", lambda name: object())
+    monkeypatch.setattr(client, "_build_chrome_options", lambda: object())
+    monkeypatch.setattr(client, "_apply_selenium_rendering", lambda driver, url: driver.get(url))
+
+    with pytest.raises(CrawlerParserError) as exc_info:
+        client.fetch_html_with_selenium("https://example.com/index")
+
+    message = str(exc_info.value)
+    assert "selenium.page_source" in message
+    assert "https://example.com/index" in message
+    assert "dict" in message
 
 
 class DummyResponse:

@@ -154,6 +154,7 @@ def merge_current_crawl_metrics(
             "attempted_articles",
             "accepted_articles",
             "consecutive_fetch_failures",
+            "consecutive_parser_failures",
             "consecutive_discovery_failures",
             "consecutive_article_failures",
         )
@@ -272,6 +273,7 @@ def classify_source_health(
         error = row.get("last_error")
         legacy_streak = int(row.get("consecutive_failures") or 0)
         fetch_streak = int(row.get("consecutive_fetch_failures", legacy_streak) or 0)
+        parser_streak = int(row.get("consecutive_parser_failures", legacy_streak) or 0)
         discovery_streak = int(row.get("consecutive_discovery_failures") or 0)
         article_streak = int(
             row.get("consecutive_article_failures", legacy_streak) or 0
@@ -284,16 +286,17 @@ def classify_source_health(
         article_outage = attempted > 0 and accepted == 0
         failure_kind = "article crawl failed" if article_outage else status
         hard_status = status in {"failed", "parser_error", "not_attempted"}
+        hard_streak = parser_streak if status == "parser_error" else fetch_streak
         if status == "skipped_selection":
             continue
-        elif hard_status and fetch_streak >= failure_threshold:
+        elif hard_status and hard_streak >= failure_threshold:
             detail = f" ({error})" if error else ""
             failures.append(
-                f"{name}: {status} for {fetch_streak} consecutive runs{detail}"
+                f"{name}: {status} for {hard_streak} consecutive runs{detail}"
             )
         elif hard_status:
             warnings.append(
-                f"{name}: transient {status} (run {fetch_streak}/{failure_threshold})"
+                f"{name}: transient {status} (run {hard_streak}/{failure_threshold})"
             )
         elif discovery_streak:
             detail = (

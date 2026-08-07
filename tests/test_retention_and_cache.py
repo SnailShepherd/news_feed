@@ -192,6 +192,31 @@ def test_unchanged_index_preserves_zero_accepted_discovery_failure(tmp_path, mon
     assert row["last_successful_discovery_at"] == "2026-08-06T12:00:00+00:00"
 
 
+def test_filtered_attempts_retain_aggregate_raw_candidates(tmp_path, monkeypatch):
+    health_path = tmp_path / "health.json"
+    summaries = defaultdict(dict)
+    summaries["filtered"] = {
+        "index_fetch_status": "fetched",
+        "raw_link_candidates": 37,
+        "accepted_links": 0,
+        "index_attempts": [
+            {"url": "https://example.test/a", "raw_link_candidates": 20, "accepted_links": 0},
+            {"url": "https://example.test/b", "raw_link_candidates": 17, "accepted_links": 0},
+        ],
+    }
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", health_path)
+    monkeypatch.setattr(aggregate, "SOURCE_SUMMARY", summaries)
+    monkeypatch.setattr(aggregate, "STATE", {})
+
+    aggregate.write_source_health_report([{"name": "filtered", "enabled": True}])
+
+    row = json.loads(health_path.read_text())["sources"][0]
+    assert row["raw_link_candidates"] == 37
+    assert row["accepted_links"] == 0
+    assert row["failure_class"] == "discovery_filter_failure"
+    assert [attempt["raw_link_candidates"] for attempt in row["index_attempts"]] == [20, 17]
+
+
 def test_failed_discovery_does_not_advance_last_success_timestamp(tmp_path, monkeypatch):
     health_path = tmp_path / "health.json"
     state_path = tmp_path / "state.json"

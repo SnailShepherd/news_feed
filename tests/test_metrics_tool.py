@@ -384,6 +384,24 @@ def test_failed_crawl_is_prominent_despite_recent_retained_content():
     assert row["discovery_recency_status"] == "recent"
 
 
+def test_repeated_parser_error_uses_parser_streak_for_strict_validation():
+    rows = [{
+        "source": "broken parser",
+        "index_fetch_status": "parser_error",
+        "consecutive_fetch_failures": 0,
+        "consecutive_parser_failures": 3,
+        "consecutive_failures": 3,
+        "last_error": "parser exploded",
+    }]
+
+    failures, warnings = classify_source_health(rows, failure_threshold=3)
+
+    assert failures == [
+        "broken parser: parser_error for 3 consecutive runs (parser exploded)"
+    ]
+    assert warnings == []
+
+
 def test_successful_discovery_without_new_article_is_healthy():
     row = _merged_report(
         None,
