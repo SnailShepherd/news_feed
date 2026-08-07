@@ -65,6 +65,7 @@ def test_health_report_preserves_skipped_streak_and_counts_article_outage(tmp_pa
     summaries["new skipped"] = {"index_fetch_status": "skipped_selection"}
     monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", health_path)
     monkeypatch.setattr(aggregate, "STATE_FILE", state_path)
+    monkeypatch.setattr(aggregate, "SESSION_STATE_FILE", tmp_path / "session-state.json")
     monkeypatch.setattr(aggregate, "PAGES_DIR", pages)
     monkeypatch.setattr(aggregate, "SOURCE_SUMMARY", summaries)
     monkeypatch.setattr(

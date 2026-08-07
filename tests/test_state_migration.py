@@ -1,3 +1,5 @@
+import json
+
 from scripts import aggregate
 
 
@@ -36,11 +38,9 @@ def test_ensure_state_keys_adds_missing_fields(monkeypatch):
     aggregate.ensure_state_keys(legacy_state)
     for required in [
         "headers",
-        "stats",
         "index_hash",
         "seen_urls",
         "first_seen",
-        "host_state",
         "aliases",
         "content_hashes",
         "canonical_item_ids",
@@ -65,3 +65,30 @@ def test_ensure_state_keys_adds_missing_fields(monkeypatch):
     canonical_ids = aggregate.STATE.get("canonical_item_ids", {})
     assert canonical_ids.get(url) == item_a["id"]
     assert canonical_ids.get(tracked_url) == item_a["id"]
+
+
+def test_save_state_never_serializes_session_cookies(tmp_path, monkeypatch):
+    durable_path = tmp_path / "state.json"
+    session_path = tmp_path / "session-state.json"
+    monkeypatch.setattr(aggregate, "STATE_FILE", durable_path)
+    monkeypatch.setattr(aggregate, "SESSION_STATE_FILE", session_path)
+    monkeypatch.setattr(
+        aggregate,
+        "STATE",
+        {
+            "index_hash": {"url": "digest"},
+            "host_state": {"leak.example": {"cookies": [{"value": "durable-secret"}]}},
+        },
+    )
+    monkeypatch.setattr(
+        aggregate,
+        "SESSION_STATE",
+        {"host_state": {"example.com": {"cookies": [{"name": "sid", "value": "secret"}]}}},
+    )
+
+    aggregate.save_state()
+
+    durable = durable_path.read_text(encoding="utf-8")
+    assert "cookie" not in durable.lower()
+    assert "secret" not in durable
+    assert json.loads(session_path.read_text(encoding="utf-8"))["host_state"]
