@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os, re, json, logging, pathlib, sys, hashlib, argparse, random, html, shutil
+from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse, parse_qsl, urlencode
 
@@ -42,6 +43,7 @@ DOCS_DIR = ROOT / "docs"
 CACHE_DIR = ROOT / ".cache"
 PAGES_DIR = CACHE_DIR / "pages"
 STATE_FILE = CACHE_DIR / "state.json"
+SESSION_STATE_FILE = CACHE_DIR / "session-state.json"
 SOURCE_HEALTH_STATE_FILE = CACHE_DIR / "source-health-state.json"
 OUT_JSON = DOCS_DIR / "unified.json"
 EXISTING_FEED_JSON = OUT_JSON
@@ -168,6 +170,14 @@ def ensure_state_keys(state: dict) -> dict:
         val = state.get(key)
         if not isinstance(val, dict):
             state[key] = dict(default)
+    return state
+
+
+def ensure_session_state_keys(state: dict) -> dict:
+    """Normalize state that is meaningful only to a particular runner."""
+    for key in ("host_state", "stats"):
+        if not isinstance(state.get(key), dict):
+            state[key] = {}
     return state
 
 
@@ -320,6 +330,28 @@ else:
 
 STATE = ensure_state_keys(STATE)
 
+# Runner-specific throttling and diagnostics are cached separately from the
+# durable crawler state committed by the workflow.
+_legacy_host_state = STATE.pop("host_state", {})
+_legacy_stats = STATE.get("stats", {})
+_legacy_session_stats = {
+    key: _legacy_stats.pop(key)
+    for key in ("cooldowns", "errors", "metrics")
+    if key in _legacy_stats
+}
+if not _legacy_stats:
+    STATE.pop("stats", None)
+
+if SESSION_STATE_FILE.exists():
+    SESSION_STATE = json.loads(SESSION_STATE_FILE.read_text(encoding="utf-8"))
+else:
+    SESSION_STATE = {}
+SESSION_STATE = ensure_session_state_keys(SESSION_STATE)
+if _legacy_host_state and not SESSION_STATE["host_state"]:
+    SESSION_STATE["host_state"] = _legacy_host_state
+for key, value in _legacy_session_stats.items():
+    SESSION_STATE["stats"].setdefault(key, value)
+
 if SOURCE_HEALTH_STATE_FILE.exists():
     SOURCE_HEALTH_STATE = json.loads(SOURCE_HEALTH_STATE_FILE.read_text(encoding="utf-8"))
 else:
@@ -386,6 +418,9 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
 def save_state():
     STATE.pop("source_health_streaks", None)
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
+    SESSION_STATE_FILE.write_text(
+        json.dumps(SESSION_STATE, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 def save_source_health_state():
@@ -2997,7 +3032,7 @@ def write_source_health_report(sources: list[dict]) -> None:
     # Keep the three stages independent: a 200 response does not mean that the
     # index yielded links, and discovered links do not mean article extraction
     # succeeded.
-    legacy_streaks = STATE.setdefault("source_health_streaks", {})
+    legacy_streaks = SOURCE_HEALTH_STATE
     fetch_streaks = STATE.setdefault("source_fetch_failure_streaks", {})
     discovery_streaks = STATE.setdefault("source_discovery_failure_streaks", {})
     article_streaks = STATE.setdefault("source_article_failure_streaks", {})
@@ -3067,6 +3102,7 @@ def write_source_health_report(sources: list[dict]) -> None:
             "consecutive_article_failures": article_streak,
             "raw_link_candidates": raw_candidates,
             "accepted_links": accepted_links,
+            "index_attempts": summary.get("index_attempts", []),
             "last_successful_discovery_at": source_discovery.get("last_successful_discovery_at"),
             "attempted_articles": attempted,
             "accepted_articles": accepted,
@@ -3306,6 +3342,8 @@ def main():
     if SOURCE_HEALTH_STATE_FILE.exists():
         loaded_health_state = json.loads(SOURCE_HEALTH_STATE_FILE.read_text(encoding="utf-8"))
         SOURCE_HEALTH_STATE = loaded_health_state if isinstance(loaded_health_state, dict) else {}
+    else:
+        SOURCE_HEALTH_STATE = {}
 
     SOURCE_SUMMARY.clear()
     SOURCE_MIN_WORDS.clear()

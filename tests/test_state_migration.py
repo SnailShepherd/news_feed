@@ -1,6 +1,36 @@
 import json
+import sys
 
 from scripts import aggregate
+
+
+def test_main_resets_health_state_for_missing_selected_file(tmp_path, monkeypatch):
+    (tmp_path / "sources.json").write_text("[]", encoding="utf-8")
+    health_state_path = tmp_path / "new-health-state.json"
+    monkeypatch.setattr(aggregate, "ROOT", tmp_path)
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_STATE", {"unrelated source": 4})
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "aggregate.py",
+            "--dry-run",
+            "--output",
+            str(tmp_path / "unified.json"),
+            "--existing-feed",
+            str(tmp_path / "existing.json"),
+            "--state-output",
+            str(tmp_path / "state.json"),
+            "--source-health-output",
+            str(tmp_path / "source-health.json"),
+            "--source-health-state",
+            str(health_state_path),
+        ],
+    )
+
+    aggregate.main()
+
+    assert aggregate.SOURCE_HEALTH_STATE == {}
 
 
 def test_prune_state_keeps_only_feed_and_seen_metadata(monkeypatch):
