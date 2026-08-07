@@ -1838,14 +1838,66 @@ def _first_non_empty(containers: list[dict], keys: list[str]) -> str | None:
     return None
 
 
-def harvest_json_source(src: dict, force: bool = False):
+def _object_path(value, path: str):
+    """Return a value from a JSON object using a dotted path (lists are supported)."""
+    current = value
+    for part in (path or "").split("."):
+        if not part:
+            continue
+        if isinstance(current, dict):
+            current = current.get(part)
+        elif isinstance(current, list) and part.isdigit():
+            index = int(part)
+            current = current[index] if index < len(current) else None
+        else:
+            return None
+    return current
+
+
+def _api_items(payload, src: dict) -> list:
+    """Extract records from both flat and wrapped first-party API responses."""
+    paths = src.get("api_items_path", ["data", "items", "results"])
+    if isinstance(paths, str):
+        paths = [paths]
+    if isinstance(payload, list):
+        return payload
+    for path in paths:
+        candidate = _object_path(payload, path)
+        if isinstance(candidate, list):
+            return candidate
+    return []
+
+
+def _api_endpoints(src: dict) -> list[str]:
+    """Expand an endpoint template into a bounded set of discovery pages."""
+    configured = src.get("api_endpoints")
+    if configured:
+        return [str(endpoint) for endpoint in configured]
     endpoint = src.get("api_endpoint")
-    if not endpoint:
+    pages = int(src.get("api_endpoint_pages", 1))
+    if pages <= 1:
+        return [endpoint] if endpoint else []
+    start = int(src.get("api_page_start", 1))
+    page_param = str(src.get("api_page_param", "page"))
+    endpoints = []
+    for page in range(start, start + pages):
+        if "{page}" in endpoint:
+            endpoints.append(endpoint.format(page=page))
+        else:
+            separator = "&" if "?" in endpoint else "?"
+            endpoints.append(f"{endpoint}{separator}{page_param}={page}")
+    return endpoints
+
+
+def harvest_json_source(src: dict, force: bool = False):
+    endpoints = _api_endpoints(src)
+    if not endpoints:
         logging.warning("  missing api_endpoint for %s", src.get("name"))
         return []
 
     src_name = src.get("name", "")
-    logging.info("Harvest API: %s — %s", src_name, endpoint)
+    endpoint = endpoints[0]
+    logging.info("Harvest API: %s — %s", src_name, ", ".join(endpoints))
 
     headers = {
         "User-Agent": USER_AGENT,
@@ -1859,20 +1911,34 @@ def harvest_json_source(src: dict, force: bool = False):
     if sleep_for > 0:
         time.sleep(sleep_for)
 
+    payloads = []
+    response_texts = []
     try:
-        resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
-        _last_req_at[host] = time.time()
-        if resp.status_code == 429:
-            ra = resp.headers.get("Retry-After")
-            try:
-                wait = int(ra) if ra else 5
-            except ValueError:
-                wait = 5
-            logging.warning("429 Too Many Requests (API): %s -> sleep %ss", endpoint, wait)
-            time.sleep(wait)
+        for endpoint in endpoints:
             resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
             _last_req_at[host] = time.time()
-        resp.raise_for_status()
+            if resp.status_code == 429:
+                ra = resp.headers.get("Retry-After")
+                try:
+                    wait = int(ra) if ra else 5
+                except ValueError:
+                    wait = 5
+                logging.warning(
+                    "429 Too Many Requests (API): %s -> sleep %ss", endpoint, wait
+                )
+                time.sleep(wait)
+                resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
+                _last_req_at[host] = time.time()
+            resp.raise_for_status()
+            response_texts.append(resp.text)
+            payloads.append(resp.json())
+    except ValueError as exc:
+        logging.error("  invalid JSON for %s: %s", src.get("name"), exc)
+        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
+        SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
+        if src.get("html_fallback_on_empty_api"):
+            return harvest_source(src, force=ARGS.rebuild if ARGS else False)
+        return []
     except requests.RequestException as exc:
         logging.warning("API fetch failed for %s: %s", src_name, exc)
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
@@ -1882,29 +1948,24 @@ def harvest_json_source(src: dict, force: bool = False):
             return harvest_source(src, force=ARGS.rebuild if ARGS else False)
         raise
 
-    text = resp.text
+    text = "\n".join(response_texts)
     SOURCE_SUMMARY[src_name]["index_fetch_status"] = "fetched"
     idx_digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
     ih = STATE.setdefault("index_hash", {})
-    if not force and ih.get(endpoint) == idx_digest:
+    digest_key = "|".join(endpoints)
+    if not force and ih.get(digest_key) == idx_digest:
         logging.info("Index unchanged (API): %s — %s", src.get("name"), endpoint)
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "unchanged"
         return []
-    ih[endpoint] = idx_digest
+    ih[digest_key] = idx_digest
 
-    try:
-        payload = resp.json()
-    except ValueError as exc:
-        logging.error("  invalid JSON for %s: %s", src.get("name"), exc)
-        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
-        SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
-        if src.get("html_fallback_on_empty_api"):
-            logging.info("API invalid JSON for %s — falling back to HTML index", src_name)
-            return harvest_source(src, force=ARGS.rebuild if ARGS else False)
-        return []
-
-    data = payload.get("data") if isinstance(payload, dict) else payload
-    if not isinstance(data, list):
+    data = []
+    for payload in payloads:
+        data.extend(_api_items(payload, src))
+    invalid_payload = payloads and not data and any(
+        not isinstance(payload, (dict, list)) for payload in payloads
+    )
+    if not isinstance(data, list) or invalid_payload:
         logging.warning("  unexpected API payload for %s", src.get("name"))
         if src.get("html_fallback_on_empty_api"):
             logging.info("API unexpected payload for %s — falling back to HTML index", src_name)
