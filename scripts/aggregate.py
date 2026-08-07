@@ -1904,17 +1904,15 @@ def harvest_json_source(src: dict, force: bool = False):
         "Accept": "application/json",
         "Accept-Language": "ru,en;q=0.9",
     }
-    host = urlparse(endpoint).netloc
-    delay = HOST_DELAY_OVERRIDES.get(host, HOST_DELAY_DEFAULT)
-    now = time.time()
-    sleep_for = _last_req_at[host] + delay - now
-    if sleep_for > 0:
-        time.sleep(sleep_for)
-
     payloads = []
     response_texts = []
     try:
         for endpoint in endpoints:
+            host = urlparse(endpoint).netloc
+            delay = HOST_DELAY_OVERRIDES.get(host, HOST_DELAY_DEFAULT)
+            sleep_for = _last_req_at[host] + delay - time.time()
+            if sleep_for > 0:
+                time.sleep(sleep_for)
             resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
             _last_req_at[host] = time.time()
             if resp.status_code == 429:

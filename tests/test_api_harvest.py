@@ -261,3 +261,42 @@ def test_nested_api_items_and_multiple_endpoint_pages(monkeypatch):
     aggregate.SOURCE_MIN_WORDS[src["name"]] = 5
     items = aggregate.harvest_json_source(src, force=True)
     assert {item["url"] for item in items} == {"https://example.test/news/one", "https://example.test/news/two"}
+
+
+def test_multiple_api_pages_are_throttled_per_host(monkeypatch):
+    """Every page request observes the configured host delay."""
+    clock = {"now": 100.0}
+    request_times = []
+
+    class Response:
+        status_code = 200
+        headers = {}
+        text = '{"items": []}'
+
+        def json(self):
+            return {"items": []}
+
+        def raise_for_status(self):
+            return None
+
+    def fake_sleep(seconds):
+        clock["now"] += seconds
+
+    def fake_get(*args, **kwargs):
+        request_times.append(clock["now"])
+        return Response()
+
+    monkeypatch.setattr(aggregate.time, "time", lambda: clock["now"])
+    monkeypatch.setattr(aggregate.time, "sleep", fake_sleep)
+    monkeypatch.setattr(aggregate.SESSION, "get", fake_get)
+    monkeypatch.setattr(aggregate, "HOST_DELAY_DEFAULT", 2.5)
+
+    src = {
+        "name": "Throttled API",
+        "base_url": "https://example.test",
+        "api_endpoint": "https://example.test/api/news",
+        "api_endpoint_pages": 3,
+    }
+    aggregate.harvest_json_source(src, force=True)
+
+    assert request_times == [100.0, 102.5, 105.0]
