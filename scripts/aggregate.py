@@ -3342,6 +3342,8 @@ def main():
     if SOURCE_HEALTH_STATE_FILE.exists():
         loaded_health_state = json.loads(SOURCE_HEALTH_STATE_FILE.read_text(encoding="utf-8"))
         SOURCE_HEALTH_STATE = loaded_health_state if isinstance(loaded_health_state, dict) else {}
+    else:
+        SOURCE_HEALTH_STATE = {}
 
     SOURCE_SUMMARY.clear()
     SOURCE_MIN_WORDS.clear()
