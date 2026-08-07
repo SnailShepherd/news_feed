@@ -104,9 +104,6 @@ HOST_MIN_WORD_OVERRIDES = {
 PUBLICATION_CLOCK_SKEW = timedelta(
     minutes=float(os.environ.get("PUBLICATION_CLOCK_SKEW_MINUTES", "15"))
 )
-PUBLICATION_TIMEZONE_SKEW = timedelta(
-    hours=float(os.environ.get("PUBLICATION_TIMEZONE_SKEW_HOURS", "26"))
-)
 PUBLICATION_REJECTION_SAMPLE_LIMIT = int(
     os.environ.get("PUBLICATION_REJECTION_SAMPLE_LIMIT", "5")
 )
@@ -933,7 +930,7 @@ class PublicationDiagnostics:
                 "url": url,
                 "future_offset_seconds": offset_seconds,
                 "classification": (
-                    "timezone_scale_skew" if offset <= PUBLICATION_TIMEZONE_SKEW
+                    "clock_skew" if offset <= PUBLICATION_CLOCK_SKEW
                     else "clearly_invalid_future_date"
                 ),
             })
@@ -947,7 +944,7 @@ def validate_publication_datetime(
     source: str | None = None,
     signal: str = "unknown",
     now: datetime | None = None,
-    allowance: timedelta = PUBLICATION_TIMEZONE_SKEW,
+    allowance: timedelta = PUBLICATION_CLOCK_SKEW,
     diagnostics: PublicationDiagnostics | None = None,
 ) -> datetime | None:
     """Return a normalized, plausible publication time, or reject it.
@@ -955,8 +952,8 @@ def validate_publication_datetime(
     ``now`` and ``allowance`` are injectable so callers and tests do not need
     to depend on wall-clock time. All extraction paths should pass through
     this single boundary before a value is stored as ``published_at``. The
-    default accommodates timezone-scale metadata errors; signals known not to
-    contain a timezone can opt into the smaller clock-skew allowance.
+    deliberately small default is also used for timezone-aware values:
+    timezone offsets are normalized, not excused with a day-scale allowance.
     """
     dt = finalize_datetime(dt)
     if dt is None:
@@ -1195,17 +1192,35 @@ def ensure_item_metadata(item: dict[str, object]) -> None:
     published_val = item.get("published_at")
     if published_val:
         published_dt = _coerce_msk_datetime(published_val)
+        trustworthy = bool(item.get("_published_at_trustworthy"))
         published_dt = validate_publication_datetime(
             published_dt,
             raw_value=published_val,
             url=str(item.get("url") or ""),
             source=str(item.get("source") or ""),
             signal="stored:published_at",
+            now=fetched_dt,
         )
+        # Old feeds commonly copied crawl time into published_at.  Without
+        # fresh extraction provenance it is not a publication signal.
+        if published_dt and not trustworthy and published_dt >= fetched_dt:
+            published_dt = None
         if published_dt:
             item["published_at"] = published_dt.isoformat()
         else:
             item.pop("published_at", None)
+
+
+def sort_timestamp(item: dict[str, object]) -> str:
+    """Return a stable chronology key which never rewards a later refetch."""
+    published = _coerce_msk_datetime(item.get("published_at"))
+    fetched = _coerce_msk_datetime(item.get("fetched_at"))
+    if published and fetched:
+        published = validate_publication_datetime(published, now=fetched)
+    if published:
+        return published.isoformat()
+    first_seen = _coerce_msk_datetime(item.get("first_seen"))
+    return first_seen.isoformat() if first_seen else ""
 
 
 def _filter_by_min_words(items: list[dict]) -> list[dict]:
@@ -1727,7 +1742,9 @@ def extract_published_datetime(
         seen_candidates.add(key)
         return _parse_datetime_signal(candidate, signal, url=url, source=source, diagnostics=diagnostics)
 
-    # Primary meta tags.
+    # Explicit publication metadata is trustworthy.  Modified/upload dates
+    # are intentionally not fallbacks: they describe page activity, not the
+    # article's original chronology.
     for tag in soup.find_all("meta", attrs={"property": "article:published_time"}):
         dt = attempt(tag.get("content") or tag.get("value"), "meta[property=article:published_time]")
         if dt:
@@ -1738,24 +1755,29 @@ def extract_published_datetime(
         if dt:
             return dt
 
-    for node in soup.find_all(attrs={"itemprop": "datePublished"}):
-        dt = attempt(
-            node.get("content")
-            or node.get("datetime")
-            or node.get_text(" ", strip=True),
-            "[itemprop=datePublished]",
-        )
-        if dt:
-            return dt
+    article_roots = list(soup.select(
+        "article, [itemscope][itemtype*='Article'], [itemtype*='NewsArticle']"
+    ))
+    for root in article_roots:
+        for node in root.find_all(attrs={"itemprop": "datePublished"}):
+            dt = attempt(
+                node.get("content")
+                or node.get("datetime")
+                or node.get_text(" ", strip=True),
+                "[itemprop=datePublished]",
+            )
+            if dt:
+                return dt
 
-    # <time> elements
-    for t in soup.find_all("time"):
+    # Only article-scoped time elements are independent evidence.  Global
+    # time/date widgets are commonly current-dated sidebar or header chrome.
+    for t in (tag for root in article_roots for tag in root.find_all("time")):
         for candidate in (t.get("datetime"), t.get("content"), t.get_text(" ", strip=True)):
             dt = attempt(candidate, "<time>")
             if dt:
                 return dt
 
-    # JSON-LD datePublished/dateCreated.
+    # JSON-LD must identify an Article/NewsArticle object and datePublished.
     for script in soup.find_all("script"):
         script_type = script.get("type") or ""
         if "ld+json" not in script_type.lower():
@@ -1779,18 +1801,27 @@ def extract_published_datetime(
             if not isinstance(node, dict):
                 continue
             types = _json_ld_types(node)
-            if types and not any(t in JSON_LD_ARTICLE_TYPES for t in types):
+            if not types or not any(t in JSON_LD_ARTICLE_TYPES for t in types):
                 continue
-            for key in ("datePublished", "dateCreated", "dateModified", "uploadDate"):
-                raw_val = node.get(key)
-                if isinstance(raw_val, str):
-                    dt = attempt(raw_val, f"json_ld:{key}")
-                    if dt:
-                        return dt
+            raw_val = node.get("datePublished")
+            if isinstance(raw_val, str):
+                dt = attempt(raw_val, "json_ld:datePublished")
+                if dt:
+                    return dt
 
-    # Fallback heuristics.
-    for candidate in extract_date_candidates(soup):
-        dt = attempt(candidate, "heuristic")
+    # A date embedded in the canonical article URL is stable and independent
+    # of page chrome.  Try it even after a suspicious metadata value failed.
+    canonical = extract_canonical_url(soup, url or "") or url or ""
+    match = re.search(r"/(20\d{2})/([01]\d)/([0-3]\d)(?:/|$)", canonical)
+    if match:
+        try:
+            dt = validate_publication_datetime(
+                datetime(*map(int, match.groups())), raw_value=match.group(0),
+                url=url, source=source, signal="canonical_url:path",
+                diagnostics=diagnostics,
+            )
+        except ValueError:
+            dt = None
         if dt:
             return dt
 
@@ -2044,6 +2075,7 @@ def build_item(
     item["_content_source"] = content_source
     if dt:
         item["published_at"] = dt.isoformat()
+        item["_published_at_trustworthy"] = True
     if canonical_url and canonical_url != url:
         item["canonical_url"] = canonical_url
     if amp_used:
@@ -3196,7 +3228,7 @@ def retain_bounded_items(items: list[dict]) -> list[dict]:
         if not queues[source]:
             del queues[source]
     selected.sort(
-        key=lambda x: x.get("published_at") or x.get("fetched_at") or x.get("first_seen") or "",
+        key=sort_timestamp,
         reverse=True,
     )
     return selected
@@ -3225,7 +3257,7 @@ def build_feed(all_items):
 
     items = _filter_by_min_words(list(by_id.values()))
     items.sort(
-        key=lambda x: x.get("published_at") or x.get("fetched_at") or x.get("first_seen") or "",
+        key=sort_timestamp,
         reverse=True,
     )
 
@@ -3275,6 +3307,7 @@ def merge_items(existing, new):
         # Sanitize incoming records before comparing publication times. This
         # prevents a rejected future value from replacing (and then erasing) a
         # plausible date already held by the existing record.
+        incoming_publication_is_trustworthy = bool(it.get("_published_at_trustworthy"))
         it = _finalize_item_schema(dict(it))
         key = it.get("id") or it.get("url")
         if not key:
@@ -3330,11 +3363,13 @@ def merge_items(existing, new):
             elif value not in (None, ""):
                 merged[field] = value
 
+        if incoming_publication_is_trustworthy and it.get("published_at") == merged.get("published_at"):
+            merged["_published_at_trustworthy"] = True
         by_key[key] = _finalize_item_schema(merged)
 
     merged_items = list(by_key.values())
     merged_items.sort(
-        key=lambda x: x.get("published_at") or x.get("fetched_at") or x.get("first_seen") or "",
+        key=sort_timestamp,
         reverse=True,
     )
 
