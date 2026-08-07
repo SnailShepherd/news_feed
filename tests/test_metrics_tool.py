@@ -1,4 +1,5 @@
 import json
+import sys
 from datetime import datetime, timedelta, timezone
 
 from scripts.metrics import (
@@ -11,6 +12,7 @@ from scripts.metrics import (
     find_unexpected_empty_sources,
     merge_current_crawl_metrics,
 )
+from scripts import metrics
 
 
 def test_compute_metrics_counts(tmp_path):
@@ -216,3 +218,35 @@ def test_sources_skipped_by_selection_are_ignored():
 
     assert failures == []
     assert warnings == []
+
+
+def test_hard_source_failure_does_not_publish_candidate(tmp_path, monkeypatch):
+    published = tmp_path / "published.json"
+    published_health = tmp_path / "published-health.json"
+    candidate = tmp_path / "candidate.json"
+    candidate_health = tmp_path / "candidate-health.json"
+    published_state = tmp_path / "published-state.json"
+    candidate_state = tmp_path / "candidate-state.json"
+    sources = tmp_path / "sources.json"
+    published.write_text('{"items": [{"id": "last-good"}]}', encoding="utf-8")
+    published_health.write_text('{"sources": [{"source": "good"}]}', encoding="utf-8")
+    candidate.write_text('{"items": [{"id": "invalid-new"}]}', encoding="utf-8")
+    candidate_health.write_text(json.dumps({"sources": [{
+        "source": "upstream", "index_fetch_status": "failed",
+        "consecutive_failures": 3, "last_error": "outage"
+    }]}), encoding="utf-8")
+    published_state.write_text('{"seen_urls": {"upstream": ["old"]}}', encoding="utf-8")
+    candidate_state.write_text('{"seen_urls": {"upstream": ["rejected-new"]}}', encoding="utf-8")
+    sources.write_text('[{"name": "upstream"}]', encoding="utf-8")
+    monkeypatch.setattr(sys, "argv", ["metrics.py", str(candidate), "--sources", str(sources),
+        "--source-health", str(candidate_health), "--strict-source-health",
+        "--promote-feed", str(published), "--promote-source-health", str(published_health),
+        "--candidate-state", str(candidate_state), "--promote-state", str(published_state)])
+
+    assert metrics.main() == 1
+    assert json.loads(published.read_text(encoding="utf-8"))["items"][0]["id"] == "last-good"
+    assert json.loads(published_health.read_text(encoding="utf-8"))["sources"][0]["source"] == "good"
+    assert json.loads(published_state.read_text(encoding="utf-8"))["seen_urls"]["upstream"] == ["old"]
+    assert candidate.exists()
+    assert candidate_health.exists()
+    assert candidate_state.exists()

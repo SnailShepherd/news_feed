@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import pathlib
 from datetime import datetime, timedelta, timezone
 from typing import Any, Tuple
@@ -271,6 +272,10 @@ def main() -> int:
         "--baseline",
         help="Optional baseline feed JSON to enforce anti-genie rule (total can't drop except filtered listings)",
     )
+    parser.add_argument("--promote-feed", metavar="PATH", help="Replace this published feed only after every check passes")
+    parser.add_argument("--promote-source-health", metavar="PATH", help="Replace this published health report only after every check passes")
+    parser.add_argument("--candidate-state", metavar="PATH", help="Candidate crawler state to promote after validation")
+    parser.add_argument("--promote-state", metavar="PATH", help="Published crawler state replaced after validation")
     args = parser.parse_args()
 
     path = pathlib.Path(args.path)
@@ -360,6 +365,26 @@ def main() -> int:
         if not ok and message:
             print(f"anti_genie_violation: {message}")
             exit_code = 1
+
+    if exit_code == 0 and args.promote_feed:
+        if not all((args.source_health, args.promote_source_health, args.candidate_state, args.promote_state)):
+            parser.error(
+                "promotion requires --source-health, --promote-source-health, "
+                "--candidate-state, and --promote-state"
+            )
+        candidate_state = pathlib.Path(args.candidate_state)
+        if not candidate_state.exists():
+            raise SystemExit(f"Candidate state file not found: {candidate_state}")
+        # The crawler state belongs to the candidate feed. Advance it only when
+        # that feed passes validation, otherwise rejected URLs must be retried.
+        os.replace(candidate_state, args.promote_state)
+        # Both candidates have already parsed successfully. Replace health first
+        # and the public feed last, so a crash can never expose an unvalidated feed.
+        os.replace(args.source_health, args.promote_source_health)
+        os.replace(path, args.promote_feed)
+        print(f"promoted_feed: {args.promote_feed}")
+        print(f"promoted_source_health: {args.promote_source_health}")
+        print(f"promoted_state: {args.promote_state}")
 
     return exit_code
 
