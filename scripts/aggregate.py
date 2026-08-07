@@ -163,6 +163,8 @@ def ensure_state_keys(state: dict) -> dict:
 
 ARTICLE_MAX_ATTEMPTS = max(1, int(os.environ.get("ARTICLE_MAX_ATTEMPTS", "2")))
 ARTICLE_RETRY_DELAY = max(0.0, float(os.environ.get("ARTICLE_RETRY_DELAY", "1")))
+MAX_EXTRACTION_FAILURES = max(1, int(os.environ.get("MAX_EXTRACTION_FAILURES", "3")))
+EXTRACTION_RULES_VERSION = "2026-08-07-v1"
 _RETAINED_URL_CACHE: tuple[tuple[str, int, int] | None, dict[str, set[str]]] | None = None
 
 
@@ -216,6 +218,56 @@ def _record_url_state(source_name: str, url: str, status: str, error: str | None
     if error:
         record["error"] = error
     STATE.setdefault("url_states", {}).setdefault(source_name, {})[url] = record
+
+
+def _extraction_fingerprint(src: dict, min_words: int) -> str:
+    """Identify extraction rules so terminal content failures can be reconsidered."""
+    configuration = {
+        "version": EXTRACTION_RULES_VERSION,
+        "min_words": min_words,
+        "content_selectors": src.get("content_selectors"),
+        "api_content_field": src.get("api_content_field"),
+        "host_content_selectors": HOST_CONTENT_SELECTORS,
+    }
+    encoded = json.dumps(configuration, ensure_ascii=False, sort_keys=True, default=str)
+    return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def _record_extraction_failure(
+    source_name: str,
+    url: str,
+    *,
+    kind: str,
+    error: str,
+    fingerprint: str,
+) -> None:
+    states = STATE.setdefault("url_states", {}).setdefault(source_name, {})
+    previous = states.get(url, {})
+    same_failure = (
+        previous.get("fingerprint") == fingerprint
+        and previous.get("failure_kind") == kind
+    )
+    failures = int(previous.get("failure_count", 0)) + 1 if same_failure else 1
+    status = "permanently_rejected" if failures >= MAX_EXTRACTION_FAILURES else "retryable_failure"
+    states[url] = {
+        "status": status,
+        "failure_kind": kind,
+        "failure_count": failures,
+        "fingerprint": fingerprint,
+        "error": error,
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+    }
+
+
+def _should_attempt_url(record: dict | None, fingerprint: str) -> bool:
+    if not record:
+        return True
+    status = record.get("status")
+    if status == "accepted":
+        return False
+    if status == "permanently_rejected" and record.get("fingerprint") == fingerprint:
+        return False
+    return True
 
 
 def _with_article_retries(src: dict, url: str, operation):
@@ -381,6 +433,23 @@ def prune_state(feed_items: list[dict], sources: list[dict]) -> None:
     for urls in STATE.get("seen_urls", {}).values():
         if isinstance(urls, list):
             active_urls.update(urls)
+
+    active_source_names = {source.get("name") for source in sources if source.get("name")}
+    candidate_urls = {
+        name: list(dict.fromkeys(urls))
+        for name, urls in STATE.get("candidate_urls", {}).items()
+        if name in active_source_names and isinstance(urls, list)
+    }
+    STATE["candidate_urls"] = candidate_urls
+    lifecycle_urls = {
+        name: set(candidate_urls.get(name, [])) | set(STATE.get("seen_urls", {}).get(name, []))
+        for name in active_source_names
+    }
+    STATE["url_states"] = {
+        name: {url: record for url, record in records.items() if url in lifecycle_urls.get(name, set())}
+        for name, records in STATE.get("url_states", {}).items()
+        if name in active_source_names and isinstance(records, dict)
+    }
 
     STATE["headers"] = {
         key: value for key, value in STATE.get("headers", {}).items() if key in active_urls
@@ -2001,6 +2070,7 @@ def harvest_json_source(src: dict, force: bool = False):
     base_url = src.get("base_url") or endpoint
     max_links = int(src.get("max_links", MAX_LINKS_PER_SOURCE))
     min_words = SOURCE_MIN_WORDS.get(src_name, DEFAULT_MIN_WORDS)
+    extraction_fingerprint = _extraction_fingerprint(src, min_words)
     SOURCE_SUMMARY[src_name]["min_words"] = min_words
     summary_total_before = SOURCE_SUMMARY[src_name]["total"]
 
@@ -2051,7 +2121,7 @@ def harvest_json_source(src: dict, force: bool = False):
     else:
         new_entries = [
             it for it in entries
-            if url_states.get(it[0], {}).get("status") not in {"accepted", "permanently_rejected"}
+            if _should_attempt_url(url_states.get(it[0]), extraction_fingerprint)
         ]
         if not new_entries:
             logging.info("  no new links for %s", src["name"])
@@ -2200,7 +2270,10 @@ def harvest_json_source(src: dict, force: bool = False):
                 SOURCE_SUMMARY[src_name]["empty"] += 1
                 if amp_flag:
                     SOURCE_SUMMARY[src_name]["amp"] += 1
-                _record_url_state(src_name, url, "retryable_failure", "empty extraction")
+                _record_extraction_failure(
+                    src_name, url, kind="empty", error="empty extraction",
+                    fingerprint=extraction_fingerprint,
+                )
                 continue
             if amp_flag:
                 SOURCE_SUMMARY[src_name]["amp"] += 1
@@ -2213,7 +2286,11 @@ def harvest_json_source(src: dict, force: bool = False):
                     drop_source,
                 )
                 SOURCE_SUMMARY[src_name]["short"] += 1
-                _record_url_state(src_name, url, "retryable_failure", f"short extraction: {word_count} words")
+                _record_extraction_failure(
+                    src_name, url, kind="short",
+                    error=f"short extraction: {word_count} words",
+                    fingerprint=extraction_fingerprint,
+                )
                 continue
             SOURCE_SUMMARY[src_name]["total"] += 1
             items.append(_finalize_item_schema(item))
@@ -2253,6 +2330,7 @@ def harvest_source(src: dict, force: bool = False):
         fallback_start_urls = [fallback_start_urls]
     start_candidates = [start_url] + [u for u in fallback_start_urls if u and u != start_url]
     min_words = SOURCE_MIN_WORDS.get(src_name, DEFAULT_MIN_WORDS)
+    extraction_fingerprint = _extraction_fingerprint(src, min_words)
     SOURCE_SUMMARY[src_name]["min_words"] = min_words
     cache_path = PAGES_DIR / cache_key_for(start_url)
     cooldown_until = cooldowns.get(start_url)
@@ -2599,7 +2677,7 @@ def harvest_source(src: dict, force: bool = False):
     else:
         new_links = [
             u for u in uniq
-            if url_states.get(u, {}).get("status") not in {"accepted", "permanently_rejected"}
+            if _should_attempt_url(url_states.get(u), extraction_fingerprint)
         ]
         if not new_links:
             logging.info("  no new links for %s", src["name"])
@@ -2629,7 +2707,10 @@ def harvest_source(src: dict, force: bool = False):
             SOURCE_SUMMARY[src_name]["empty"] += 1
             if amp_flag:
                 SOURCE_SUMMARY[src_name]["amp"] += 1
-            _record_url_state(src_name, url, "retryable_failure", "empty extraction")
+            _record_extraction_failure(
+                src_name, url, kind="empty", error="empty extraction",
+                fingerprint=extraction_fingerprint,
+            )
             return
         if amp_flag:
             SOURCE_SUMMARY[src_name]["amp"] += 1
@@ -2642,7 +2723,11 @@ def harvest_source(src: dict, force: bool = False):
                 drop_source,
             )
             SOURCE_SUMMARY[src_name]["short"] += 1
-            _record_url_state(src_name, url, "retryable_failure", f"short extraction: {word_count} words")
+            _record_extraction_failure(
+                src_name, url, kind="short",
+                error=f"short extraction: {word_count} words",
+                fingerprint=extraction_fingerprint,
+            )
             return
         SOURCE_SUMMARY[src_name]["total"] += 1
         items.append(_finalize_item_schema(item))

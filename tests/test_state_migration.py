@@ -93,3 +93,29 @@ def test_legacy_seen_urls_are_accepted_only_when_retained(tmp_path, monkeypatch)
 
     assert states[retained_url]["status"] == "accepted"
     assert states[rejected_url]["status"] == "retryable_failure"
+
+
+def test_stable_extraction_failures_are_bounded_by_fingerprint(monkeypatch):
+    monkeypatch.setattr(aggregate, "STATE", aggregate.ensure_state_keys({}))
+    monkeypatch.setattr(aggregate, "MAX_EXTRACTION_FAILURES", 3)
+    url = "https://example.test/login-page"
+    fingerprint = aggregate._extraction_fingerprint({"content_selectors": ["article"]}, 100)
+
+    for _ in range(3):
+        aggregate._record_extraction_failure(
+            "Source",
+            url,
+            kind="short",
+            error="short extraction: 5 words",
+            fingerprint=fingerprint,
+        )
+
+    record = aggregate.STATE["url_states"]["Source"][url]
+    assert record["status"] == "permanently_rejected"
+    assert record["failure_count"] == 3
+    assert not aggregate._should_attempt_url(record, fingerprint)
+
+    changed_fingerprint = aggregate._extraction_fingerprint(
+        {"content_selectors": ["main article"]}, 100
+    )
+    assert aggregate._should_attempt_url(record, changed_fingerprint)
