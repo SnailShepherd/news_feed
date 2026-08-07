@@ -175,6 +175,8 @@ def test_parser_exception_is_reported_as_crawler_parser_error(monkeypatch, tmp_p
     row = json.loads((tmp_path / "health.json").read_text())["sources"][0]
     assert row["index_fetch_status"] == "parser_error"
     assert row["failure_class"] == "crawler_parser_error"
+    assert row["consecutive_fetch_failures"] == 0
+    assert row["consecutive_parser_failures"] == 1
     assert row["index_attempts"][0]["error"] == "parser exploded"
 
 

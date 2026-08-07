@@ -3130,6 +3130,7 @@ def write_source_health_report(sources: list[dict]) -> None:
     # succeeded.
     legacy_streaks = SOURCE_HEALTH_STATE
     fetch_streaks = STATE.setdefault("source_fetch_failure_streaks", {})
+    parser_streaks = STATE.setdefault("source_parser_failure_streaks", {})
     discovery_streaks = STATE.setdefault("source_discovery_failure_streaks", {})
     article_streaks = STATE.setdefault("source_article_failure_streaks", {})
     discovery_state = STATE.setdefault("source_discovery_state", {})
@@ -3188,6 +3189,7 @@ def write_source_health_report(sources: list[dict]) -> None:
 
         if status != "skipped_selection":
             fetch_streak = update_streak(fetch_streaks, fetch_failed)
+            parser_streak = update_streak(parser_streaks, parser_failed)
             discovery_streak = update_streak(discovery_streaks, discovery_failed)
             article_streak = update_streak(article_streaks, article_failed)
             previous_legacy = int(legacy_streaks.get(name, 0) or 0)
@@ -3195,6 +3197,7 @@ def write_source_health_report(sources: list[dict]) -> None:
             legacy_streaks[name] = previous_legacy + 1 if any_failure else 0
         else:
             fetch_streak = int(fetch_streaks.get(name, 0) or 0)
+            parser_streak = int(parser_streaks.get(name, 0) or 0)
             discovery_streak = int(discovery_streaks.get(name, 0) or 0)
             article_streak = int(article_streaks.get(name, 0) or 0)
             legacy_streaks.setdefault(name, int(legacy_streaks.get(name, 0) or 0))
@@ -3204,6 +3207,7 @@ def write_source_health_report(sources: list[dict]) -> None:
             "failure_class": failure_class,
             "consecutive_failures": legacy_streaks[name],
             "consecutive_fetch_failures": fetch_streak,
+            "consecutive_parser_failures": parser_streak,
             "consecutive_discovery_failures": discovery_streak,
             "consecutive_article_failures": article_streak,
             "raw_link_candidates": raw_candidates,
