@@ -49,6 +49,39 @@ def test_page_cache_pruning_removes_old_then_excess_files(tmp_path, monkeypatch)
     assert newest.exists()
 
 
+def test_state_pruning_bounds_url_lifecycle_to_current_candidates(monkeypatch):
+    monkeypatch.setattr(
+        aggregate,
+        "STATE",
+        aggregate.ensure_state_keys({
+            "seen_urls": {"active": ["https://example.test/seen"]},
+            "candidate_urls": {
+                "active": ["https://example.test/current"],
+                "removed": ["https://old.test/current"],
+            },
+            "url_states": {
+                "active": {
+                    "https://example.test/current": {"status": "retryable_failure"},
+                    "https://example.test/seen": {"status": "accepted"},
+                    "https://example.test/stale": {"status": "permanently_rejected"},
+                },
+                "removed": {"https://old.test/current": {"status": "accepted"}},
+            },
+        }),
+    )
+
+    aggregate.prune_state([], [{"name": "active", "start_url": "https://example.test"}])
+
+    assert aggregate.STATE["candidate_urls"] == {
+        "active": ["https://example.test/current"]
+    }
+    assert set(aggregate.STATE["url_states"]["active"]) == {
+        "https://example.test/current",
+        "https://example.test/seen",
+    }
+    assert "removed" not in aggregate.STATE["url_states"]
+
+
 def test_health_report_preserves_skipped_streak_and_counts_article_outage(tmp_path, monkeypatch):
     health_path = tmp_path / "health.json"
     state_path = tmp_path / "state.json"

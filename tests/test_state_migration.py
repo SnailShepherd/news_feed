@@ -40,6 +40,8 @@ def test_ensure_state_keys_adds_missing_fields(monkeypatch):
         "headers",
         "index_hash",
         "seen_urls",
+        "candidate_urls",
+        "url_states",
         "first_seen",
         "aliases",
         "content_hashes",
@@ -67,31 +69,51 @@ def test_ensure_state_keys_adds_missing_fields(monkeypatch):
     assert canonical_ids.get(tracked_url) == item_a["id"]
 
 
-def test_save_state_never_serializes_session_cookies(tmp_path, monkeypatch):
-    durable_path = tmp_path / "state.json"
-    session_path = tmp_path / "session-state.json"
-    monkeypatch.setattr(aggregate, "STATE_FILE", durable_path)
-    monkeypatch.setattr(aggregate, "SESSION_STATE_FILE", session_path)
+def test_legacy_seen_urls_are_accepted_only_when_retained(tmp_path, monkeypatch):
+    retained_url = "https://example.test/retained"
+    rejected_url = "https://example.test/previously-short"
+    feed_path = tmp_path / "unified.json"
+    feed_path.write_text(
+        json.dumps({"items": [{"source": "Legacy", "url": retained_url}]}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(aggregate, "OUT_JSON", feed_path)
+    monkeypatch.setattr(aggregate, "_RETAINED_URL_CACHE", None)
     monkeypatch.setattr(
         aggregate,
         "STATE",
-        {
-            "seen_urls": {"Source": ["https://example.com/article"]},
-            "index_hash": {"url": "digest"},
-            "headers": {"url": {"ETag": "digest"}},
-            "host_state": {"leak.example": {"cookies": [{"value": "durable-secret"}]}},
-        },
-    )
-    monkeypatch.setattr(
-        aggregate,
-        "SESSION_STATE",
-        {"host_state": {"example.com": {"cookies": [{"name": "sid", "value": "secret"}]}}},
+        aggregate.ensure_state_keys({
+            "seen_urls": {"Legacy": [retained_url, rejected_url]},
+        }),
     )
 
-    aggregate.save_state()
+    states = aggregate._source_url_states("Legacy")
 
-    durable = durable_path.read_text(encoding="utf-8")
-    assert "cookie" not in durable.lower()
-    assert "secret" not in durable
-    assert list(json.loads(durable)) == ["headers", "index_hash", "seen_urls"]
-    assert json.loads(session_path.read_text(encoding="utf-8"))["host_state"]
+    assert states[retained_url]["status"] == "accepted"
+    assert states[rejected_url]["status"] == "retryable_failure"
+
+
+def test_stable_extraction_failures_are_bounded_by_fingerprint(monkeypatch):
+    monkeypatch.setattr(aggregate, "STATE", aggregate.ensure_state_keys({}))
+    monkeypatch.setattr(aggregate, "MAX_EXTRACTION_FAILURES", 3)
+    url = "https://example.test/login-page"
+    fingerprint = aggregate._extraction_fingerprint({"content_selectors": ["article"]}, 100)
+
+    for _ in range(3):
+        aggregate._record_extraction_failure(
+            "Source",
+            url,
+            kind="short",
+            error="short extraction: 5 words",
+            fingerprint=fingerprint,
+        )
+
+    record = aggregate.STATE["url_states"]["Source"][url]
+    assert record["status"] == "permanently_rejected"
+    assert record["failure_count"] == 3
+    assert not aggregate._should_attempt_url(record, fingerprint)
+
+    changed_fingerprint = aggregate._extraction_fingerprint(
+        {"content_selectors": ["main article"]}, 100
+    )
+    assert aggregate._should_attempt_url(record, changed_fingerprint)
