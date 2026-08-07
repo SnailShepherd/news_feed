@@ -1929,18 +1929,34 @@ def _article_url_rejection_reason(url: str, src: dict | None) -> str | None:
         return "outside_source_domain"
     if is_listing_url(url, start_url=src.get("start_url")):
         return "listing_page"
+    # Canonical normalization intentionally removes a trailing path slash. Some
+    # discovery rules describe the source's raw links instead (including the
+    # slash immediately before a query string), so match both equivalent forms.
+    rule_urls = {url}
+    if parsed.path != "/" and not parsed.path.endswith("/"):
+        rule_urls.add(parsed._replace(path=f"{parsed.path}/").geturl())
     patterns = src.get("include_patterns") or []
     if isinstance(patterns, str):
         patterns = [patterns]
-    if patterns and not any(pattern in url for pattern in patterns):
+    if patterns and not any(
+        pattern in candidate for pattern in patterns for candidate in rule_urls
+    ):
         return "does_not_match_include_patterns"
     include_regex = src.get("include_regex")
     regexes = [include_regex] if isinstance(include_regex, str) else (include_regex or [])
-    if regexes and not any(re.search(pattern, url) for pattern in regexes):
+    if regexes and not any(
+        re.search(pattern, candidate)
+        for pattern in regexes
+        for candidate in rule_urls
+    ):
         return "does_not_match_include_regex"
     exclude_regex = src.get("exclude_regex")
     regexes = [exclude_regex] if isinstance(exclude_regex, str) else (exclude_regex or [])
-    if any(re.search(pattern, url) for pattern in regexes):
+    if any(
+        re.search(pattern, candidate)
+        for pattern in regexes
+        for candidate in rule_urls
+    ):
         return "matches_exclude_regex"
     return None
 

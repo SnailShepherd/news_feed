@@ -1,3 +1,4 @@
+from scripts import aggregate
 from scripts.aggregate import _normalize_canonical_url
 
 
@@ -8,9 +9,6 @@ def test_canonical_drops_tracking_params():
 
     assert _normalize_canonical_url(url_with_trackers) == base
     assert _normalize_canonical_url(alt_url) == base
-
-from scripts import aggregate
-
 
 def test_root_canonical_is_rejected_for_valid_article(monkeypatch):
     source = {
@@ -38,3 +36,28 @@ def test_root_canonical_is_rejected_for_valid_article(monkeypatch):
     assert aggregate.SOURCE_SUMMARY[source["name"]][
         "canonical_rejections_by_reason"
     ] == {"site_root": 1}
+
+
+def test_canonical_rules_accept_equivalent_trailing_slash_form():
+    source = {
+        "base_url": "https://stroygaz.example",
+        "start_url": "https://stroygaz.example/news/",
+        "include_regex": r"^https://stroygaz\.example/news/business/article/$",
+    }
+
+    assert aggregate._article_url_rejection_reason(
+        "https://stroygaz.example/news/business/article", source
+    ) is None
+
+
+def test_canonical_rules_accept_equivalent_slash_before_query():
+    source = {
+        "base_url": "https://minfin.gov.ru",
+        "start_url": "https://minfin.gov.ru/ru/press-center/",
+        "include_patterns": ["/press-center/?id_4="],
+        "include_regex": r"/press-center/\?id_4=\d+$",
+    }
+
+    assert aggregate._article_url_rejection_reason(
+        "https://minfin.gov.ru/ru/press-center?id_4=123", source
+    ) is None
