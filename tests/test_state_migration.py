@@ -1,3 +1,5 @@
+import json
+
 from scripts import aggregate
 
 
@@ -67,3 +69,27 @@ def test_ensure_state_keys_adds_missing_fields(monkeypatch):
     canonical_ids = aggregate.STATE.get("canonical_item_ids", {})
     assert canonical_ids.get(url) == item_a["id"]
     assert canonical_ids.get(tracked_url) == item_a["id"]
+
+
+def test_legacy_seen_urls_are_accepted_only_when_retained(tmp_path, monkeypatch):
+    retained_url = "https://example.test/retained"
+    rejected_url = "https://example.test/previously-short"
+    feed_path = tmp_path / "unified.json"
+    feed_path.write_text(
+        json.dumps({"items": [{"source": "Legacy", "url": retained_url}]}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(aggregate, "OUT_JSON", feed_path)
+    monkeypatch.setattr(aggregate, "_RETAINED_URL_CACHE", None)
+    monkeypatch.setattr(
+        aggregate,
+        "STATE",
+        aggregate.ensure_state_keys({
+            "seen_urls": {"Legacy": [retained_url, rejected_url]},
+        }),
+    )
+
+    states = aggregate._source_url_states("Legacy")
+
+    assert states[retained_url]["status"] == "accepted"
+    assert states[rejected_url]["status"] == "retryable_failure"

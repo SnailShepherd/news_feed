@@ -163,13 +163,51 @@ def ensure_state_keys(state: dict) -> dict:
 
 ARTICLE_MAX_ATTEMPTS = max(1, int(os.environ.get("ARTICLE_MAX_ATTEMPTS", "2")))
 ARTICLE_RETRY_DELAY = max(0.0, float(os.environ.get("ARTICLE_RETRY_DELAY", "1")))
+_RETAINED_URL_CACHE: tuple[tuple[str, int, int] | None, dict[str, set[str]]] | None = None
+
+
+def _retained_urls_by_source() -> dict[str, set[str]]:
+    """Load URLs that are known to have passed extraction from the retained feed."""
+    global _RETAINED_URL_CACHE
+    try:
+        stat = OUT_JSON.stat()
+        signature = (str(OUT_JSON.resolve()), stat.st_mtime_ns, stat.st_size)
+    except OSError:
+        signature = None
+    if _RETAINED_URL_CACHE is not None and _RETAINED_URL_CACHE[0] == signature:
+        return _RETAINED_URL_CACHE[1]
+
+    retained: dict[str, set[str]] = defaultdict(set)
+    if signature is not None:
+        try:
+            payload = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+            items = payload.get("items", []) if isinstance(payload, dict) else []
+            for item in items:
+                if not isinstance(item, dict):
+                    continue
+                source = item.get("source")
+                url = item.get("url")
+                if isinstance(source, str) and isinstance(url, str):
+                    retained[source].add(url)
+        except (OSError, ValueError) as exc:
+            logging.warning("Unable to read retained feed URLs for state migration: %s", exc)
+    result = dict(retained)
+    _RETAINED_URL_CACHE = (signature, result)
+    return result
 
 
 def _source_url_states(source_name: str) -> dict:
-    """Return per-URL crawl states, migrating the legacy successful URL list."""
+    """Return URL states, treating only retained legacy articles as accepted."""
     states = STATE.setdefault("url_states", {}).setdefault(source_name, {})
+    retained_urls = _retained_urls_by_source().get(source_name, set())
     for url in STATE.setdefault("seen_urls", {}).get(source_name, []):
-        states.setdefault(url, {"status": "accepted"})
+        states.setdefault(
+            url,
+            {"status": "accepted"} if url in retained_urls else {
+                "status": "retryable_failure",
+                "error": "legacy seen URL not found in retained feed",
+            },
+        )
     return states
 
 
