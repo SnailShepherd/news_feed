@@ -105,6 +105,16 @@ HOST_MIN_WORD_OVERRIDES = {
     "rg.ru": 150,
     "faufcc.ru": 70,
 }
+
+
+def _effective_source_min_words(src: dict, url: str | None = None) -> int:
+    """Resolve the same extraction threshold used by harvest validation."""
+    source_defined = int(src.get("min_words", 0) or 0)
+    if source_defined > 0:
+        return source_defined
+    host = urlparse(url).netloc if url else _get_host_for_source(src)
+    normalized_host = host.lower().lstrip("www.") if host else ""
+    return HOST_MIN_WORD_OVERRIDES.get(normalized_host, DEFAULT_MIN_WORDS)
 PUBLICATION_CLOCK_SKEW = timedelta(
     minutes=float(os.environ.get("PUBLICATION_CLOCK_SKEW_MINUTES", "15"))
 )
@@ -1343,7 +1353,9 @@ _DATED_HEADLINE_RE = re.compile(
 )
 
 
-def _score_content_candidate(node, text: str, title: str | None) -> float:
+def _score_content_candidate(
+    node, text: str, title: str | None, structural_text: str | None = None
+) -> float:
     """Rank a possible body without letting a long link list win by size alone."""
     compact = re.sub(r"\s+", " ", text).strip()
     if not compact:
@@ -1356,7 +1368,9 @@ def _score_content_candidate(node, text: str, title: str | None) -> float:
     links = " ".join(a.get_text(" ", strip=True) for a in node.find_all("a"))
     link_ratio = min(1.0, len(links) / max(1, len(compact)))
     list_items = len(node.find_all("li"))
-    dated_headlines = len(_DATED_HEADLINE_RE.findall(text))
+    # ``structural_text`` retains separators between child elements. Cleaned
+    # text intentionally does not, so it cannot reveal standalone timestamps.
+    dated_headlines = len(_DATED_HEADLINE_RE.findall(structural_text or text))
     markup_size = max(1, len(str(node)))
     density = len(compact) / markup_size
     title_bonus = 0.0
@@ -1395,7 +1409,8 @@ def _rank_content_candidates(soup, selectors, title=None, min_words=0):
             if identity in seen:
                 continue
             seen.add(identity)
-            raw = _normalize_whitespace(node.get_text("\n", strip=True))
+            structural_text = node.get_text("\n", strip=True)
+            raw = _normalize_whitespace(structural_text)
             cleaned = clean_content_text(raw, title=title)
             cleaned = _strip_deny_phrases(cleaned or "")
             cleaned = _normalize_whitespace(cleaned)
@@ -1403,7 +1418,9 @@ def _rank_content_candidates(soup, selectors, title=None, min_words=0):
             # duplicated page title are not usable article content.
             if not cleaned or (min_words and _word_count(cleaned) < min_words):
                 continue
-            score = _score_content_candidate(node, cleaned, title) - selector_index * 0.01
+            score = _score_content_candidate(
+                node, cleaned, title, structural_text=structural_text
+            ) - selector_index * 0.01
             candidates.append((score, cleaned, node))
     return sorted(candidates, key=lambda candidate: candidate[0], reverse=True)
 
@@ -1954,6 +1971,7 @@ def extract_article_content(
     selectors: list[str] | str | None = None,
     title: str | None = None,
     src: dict | None = None,
+    min_words: int | None = None,
 ):
     soup = BeautifulSoup(html or "", "html.parser")
     if title is None:
@@ -1965,7 +1983,8 @@ def extract_article_content(
     combined_selectors = _selectors_for_url(url, selector_list)
 
     primary_soup = _clone_soup(soup)
-    min_words = int(src.get("min_words", 0) or 0) if src else 0
+    if min_words is None:
+        min_words = _effective_source_min_words(src, url) if src else 0
     raw_text = extract_content_text(
         primary_soup, selectors=combined_selectors, title=title, min_words=min_words
     )
@@ -2012,6 +2031,9 @@ def build_item(
     content_text: str | None
     title: str
     content_source = "primary_selectors"
+    resolved_min_words = SOURCE_MIN_WORDS.get(
+        source_name, _effective_source_min_words(src, url) if src else DEFAULT_MIN_WORDS
+    )
     if pre_extracted_content is not None:
         soup = BeautifulSoup(html or "", "html.parser")
         title = extract_title(soup) or url
@@ -2024,6 +2046,7 @@ def build_item(
             selectors=selectors,
             title=None,
             src=src,
+            min_words=resolved_min_words,
         )
 
     if (not content_text or _is_short_content(content_text)) and html.strip():
@@ -2035,6 +2058,7 @@ def build_item(
                 selectors=selectors,
                 title=title,
                 src=src,
+                min_words=resolved_min_words,
             )
             if amp_text and not _is_short_content(amp_text):
                 content_text = amp_text
@@ -3573,17 +3597,7 @@ def main():
     seen_source_names = set()
     for src in sources:
         src_name = src.get("name", "")
-        configured_min = DEFAULT_MIN_WORDS
-        source_defined = int(src.get("min_words", 0) or 0)
-        if source_defined > 0:
-            configured_min = source_defined
-        host = _get_host_for_source(src)
-        if host:
-            normalized_host = host.lower().lstrip("www.")
-            override = HOST_MIN_WORD_OVERRIDES.get(normalized_host)
-            if override and source_defined <= 0:
-                configured_min = override
-        SOURCE_MIN_WORDS[src_name] = configured_min
+        SOURCE_MIN_WORDS[src_name] = _effective_source_min_words(src)
         if runtime_expired():
             logging.info("Stop processing further sources due to max-runtime limit")
             break

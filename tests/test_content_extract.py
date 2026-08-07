@@ -3,7 +3,9 @@ from datetime import timedelta
 from bs4 import BeautifulSoup
 
 from scripts.aggregate import (
+    _effective_source_min_words,
     clean_content_text,
+    extract_content_text,
     extract_content_with_fallback,
     extract_published_datetime,
 )
@@ -19,6 +21,42 @@ def test_not_equals_title():
     assert text.strip()
     assert text.strip() != title
     assert len(text) >= 20
+
+
+def test_source_without_explicit_min_words_uses_host_override():
+    short_widget = " ".join(f"карточка{i}" for i in range(35))
+    html = f"""
+      <html><head><title>Рынок недвижимости</title></head><body>
+        <div class="widget"><p><a href="#one">{short_widget}</a></p>
+          <p><a href="#two">{short_widget}</a></p></div>
+      </body></html>
+    """
+    min_words = _effective_source_min_words(
+        {"name": "РИА Недвижимость"},
+        "https://realty.ria.ru/20260807/example.html",
+    )
+    text = extract_content_text(
+        BeautifulSoup(html, "html.parser"), selectors=[".widget"], min_words=min_words
+    )
+    assert min_words == 120
+    assert text is None
+
+
+def test_standalone_dated_headlines_are_penalized_before_normalization():
+    headlines = "".join(
+        f"<p><span>0{i}.08.2026</span><span>Рекомендация номер {i} с подробным заголовком</span></p>"
+        for i in range(1, 7)
+    )
+    body = "".join(
+        f"<p>Основной абзац {i} содержит факты публикации и подробное объяснение события.</p>"
+        for i in range(1, 4)
+    )
+    html = f"<main><div class='recommendations'>{headlines}</div><div class='body'>{body}</div></main>"
+    text = extract_content_with_fallback(
+        html, [".recommendations", ".body"], title=None, min_words=20
+    )
+    assert "Основной абзац" in text
+    assert "Рекомендация номер" not in text
 
 
 def test_clean_content_text_removes_noise_and_formats():
