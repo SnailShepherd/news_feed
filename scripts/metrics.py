@@ -83,19 +83,17 @@ def compute_source_metrics(
         freshness_window = stale_after
         if expected_update_hours is not None:
             freshness_window = timedelta(hours=max(0, float(expected_update_hours)))
-        freshness_status = (
+        retained_freshness_status = (
             "no_data"
             if newest is None
-            else "stale"
-            if newest < now - freshness_window
-            else "fresh"
+            else "stale" if newest < now - freshness_window else "fresh"
         )
         report.append(
             {
                 "source": name,
                 "retained_item_count": len(source_items),
-                "newest_timestamp": newest.isoformat() if newest else None,
-                "freshness_status": freshness_status,
+                "newest_retained_timestamp": newest.isoformat() if newest else None,
+                "retained_content_freshness_status": retained_freshness_status,
                 "expected_min_candidates": source.get("expected_min_candidates"),
                 "expected_update_hours": expected_update_hours,
                 # Bounded feeds are allowed to omit a source unless its
@@ -109,9 +107,11 @@ def compute_source_metrics(
         "enabled_sources": len(report),
         "sources_with_items": sum(row["retained_item_count"] > 0 for row in report),
         "sources_without_items": sum(row["retained_item_count"] == 0 for row in report),
-        "stale_sources": sum(row["freshness_status"] == "stale" for row in report),
+        "stale_sources": sum(
+            row["retained_content_freshness_status"] == "stale" for row in report
+        ),
         "sources_without_freshness_data": sum(
-            row["freshness_status"] == "no_data" for row in report
+            row["retained_content_freshness_status"] == "no_data" for row in report
         ),
     }
     return totals, report
@@ -137,17 +137,71 @@ def find_unexpected_empty_sources(
 
 
 def merge_current_crawl_metrics(
-    source_report: list[dict[str, Any]], health_rows: list[dict[str, Any]]
+    source_report: list[dict[str, Any]],
+    health_rows: list[dict[str, Any]],
+    *,
+    now: datetime | None = None,
 ) -> None:
-    """Attach current-run discovery and acceptance counts to retained rows."""
+    """Attach current-run health without deriving it from retained feed items."""
+    now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
     health_by_source = {str(row.get("source", "")): row for row in health_rows}
     for row in source_report:
         health = health_by_source.get(str(row["source"]))
-        row["raw_link_candidates"] = (
-            int(health.get("raw_link_candidates") or 0) if health is not None else None
+        count_fields = (
+            "raw_link_candidates",
+            "accepted_links",
+            "attempted_articles",
+            "accepted_articles",
+            "consecutive_fetch_failures",
+            "consecutive_discovery_failures",
+            "consecutive_article_failures",
         )
-        row["accepted_articles"] = (
-            int(health.get("accepted_articles") or 0) if health is not None else None
+        for field in count_fields:
+            row[field] = int(health.get(field) or 0) if health is not None else None
+        row["index_fetch_status"] = health.get("index_fetch_status") if health else None
+        row["last_successful_discovery_at"] = (
+            health.get("last_successful_discovery_at") if health else None
+        )
+        row["cached_fallback_used"] = (
+            bool(health.get("cached_fallback_used")) if health else None
+        )
+
+        status = (
+            str(health.get("index_fetch_status") or "not_attempted")
+            if health
+            else "not_attempted"
+        )
+        if status in {"not_attempted", "skipped_selection"}:
+            crawl_status = "not_attempted"
+        elif status in {"failed", "parser_error"}:
+            crawl_status = "failed"
+        elif (
+            status == "cached"
+            or bool(health.get("cached_fallback_used"))
+            or any(int(health.get(field) or 0) for field in count_fields[4:])
+            or (
+                int(health.get("attempted_articles") or 0) > 0
+                and int(health.get("accepted_articles") or 0) == 0
+            )
+        ):
+            crawl_status = "degraded"
+        else:
+            crawl_status = "healthy"
+        row["current_crawl_status"] = crawl_status
+
+        discovery = _parse_timestamp(row["last_successful_discovery_at"])
+        expected_hours = row.get("expected_update_hours")
+        window = (
+            timedelta(hours=max(0, float(expected_hours)))
+            if expected_hours is not None
+            else None
+        )
+        row["discovery_recency_status"] = (
+            "no_data"
+            if discovery is None
+            else (
+                "stale" if window is not None and discovery < now - window else "recent"
+            )
         )
 
 
@@ -167,9 +221,27 @@ def find_source_expectation_failures(source_report: list[dict[str, Any]]) -> lis
                 failures.append(
                     f"{name}: discovered {discovered} candidates, expected at least {int(minimum)}"
                 )
-        if row.get("expected_update_hours") is not None and row["freshness_status"] != "fresh":
+        if row.get("expected_update_hours") is not None:
+            # Once crawl health is merged, update expectations concern discovery
+            # activity. Retained content age remains an independent diagnostic.
+            status_key = (
+                "discovery_recency_status"
+                if "discovery_recency_status" in row
+                else "retained_content_freshness_status"
+            )
+            recency = row[status_key]
+            satisfactory = (
+                "recent" if status_key == "discovery_recency_status" else "fresh"
+            )
+            if recency == satisfactory:
+                continue
+            subject = (
+                "discovery recency"
+                if status_key == "discovery_recency_status"
+                else "retained content freshness"
+            )
             failures.append(
-                f"{name}: freshness is {row['freshness_status']}, expected an update within "
+                f"{name}: {subject} is {recency}, expected an update within "
                 f"{row['expected_update_hours']} hours"
             )
     return failures
@@ -202,7 +274,9 @@ def classify_source_health(
         legacy_streak = int(row.get("consecutive_failures") or 0)
         fetch_streak = int(row.get("consecutive_fetch_failures", legacy_streak) or 0)
         discovery_streak = int(row.get("consecutive_discovery_failures") or 0)
-        article_streak = int(row.get("consecutive_article_failures", legacy_streak) or 0)
+        article_streak = int(
+            row.get("consecutive_article_failures", legacy_streak) or 0
+        )
         attempted = int(row.get("attempted_articles") or 0)
         accepted = int(row.get("accepted_articles") or 0)
         raw_candidates = int(row.get("raw_link_candidates") or 0)
@@ -215,7 +289,9 @@ def classify_source_health(
             continue
         elif hard_status and fetch_streak >= failure_threshold:
             detail = f" ({error})" if error else ""
-            failures.append(f"{name}: {status} for {fetch_streak} consecutive runs{detail}")
+            failures.append(
+                f"{name}: {status} for {fetch_streak} consecutive runs{detail}"
+            )
         elif hard_status:
             warnings.append(
                 f"{name}: transient {status} (run {fetch_streak}/{failure_threshold})"
@@ -229,31 +305,35 @@ def classify_source_health(
             if discovery_streak >= failure_threshold:
                 failures.append(message)
             else:
-                warnings.append(f"{name}: transient discovery failure (run {discovery_streak}/{failure_threshold}; {detail})")
+                warnings.append(
+                    f"{name}: transient discovery failure (run {discovery_streak}/{failure_threshold}; {detail})"
+                )
         elif article_outage and article_streak >= failure_threshold:
             detail = f" ({error})" if error else ""
-            failures.append(f"{name}: {failure_kind} for {article_streak} consecutive runs{detail}")
+            failures.append(
+                f"{name}: {failure_kind} for {article_streak} consecutive runs{detail}"
+            )
         elif article_outage and article_streak:
             warnings.append(
                 f"{name}: transient {failure_kind} (run {article_streak}/{failure_threshold})"
             )
         elif status == "cached" or row.get("cached_fallback_used"):
             warnings.append(f"{name}: cached fallback used")
-        elif (
-            status == "fetched"
-            and attempted == 0
-            and raw_candidates == 0
-        ):
+        elif status == "fetched" and attempted == 0 and raw_candidates == 0:
             warnings.append(f"{name}: fetched index contained no link candidates")
         elif attempted > 0 and accepted == 0:
             warnings.append(f"{name}: attempted {attempted} articles but accepted none")
         future_rejections = int(row.get("future_date_rejections") or 0)
         if future_rejections:
-            warnings.append(f"{name}: rejected {future_rejections} future publication dates")
+            warnings.append(
+                f"{name}: rejected {future_rejections} future publication dates"
+            )
     return failures, warnings
 
 
-def check_anti_genie(baseline: dict[str, int], current: dict[str, int]) -> Tuple[bool, str | None]:
+def check_anti_genie(
+    baseline: dict[str, int], current: dict[str, int]
+) -> Tuple[bool, str | None]:
     """Ensure totals do not shrink except for removed listings."""
 
     allowed_min_total = baseline["total"] - baseline["listing_urls_count"]
@@ -268,37 +348,70 @@ def check_anti_genie(baseline: dict[str, int], current: dict[str, int]) -> Tuple
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Compute quick feed metrics")
-    parser.add_argument("path", nargs="?", default="docs/unified.json", help="Path to unified feed JSON")
-    parser.add_argument("--sources", default="sources.json", help="Path to source configuration JSON")
-    parser.add_argument("--stale-hours", type=float, default=168, help="Age in hours after which a source is stale")
     parser.add_argument(
-        "--allow-empty", action="append", default=[], metavar="SOURCE",
+        "path", nargs="?", default="docs/unified.json", help="Path to unified feed JSON"
+    )
+    parser.add_argument(
+        "--sources", default="sources.json", help="Path to source configuration JSON"
+    )
+    parser.add_argument(
+        "--stale-hours",
+        type=float,
+        default=168,
+        help="Age in hours after which a source is stale",
+    )
+    parser.add_argument(
+        "--allow-empty",
+        action="append",
+        default=[],
+        metavar="SOURCE",
         help="Source exempted from empty-source enforcement (repeat or comma-separated)",
     )
     parser.add_argument(
-        "--fail-on-empty-source", action="store_true",
+        "--fail-on-empty-source",
+        action="store_true",
         help="Globally fail when a non-exempt enabled source has no retained feed items",
     )
     parser.add_argument(
-        "--source-health", metavar="PATH",
+        "--source-health",
+        metavar="PATH",
         help="Crawl diagnostics JSON produced by aggregate.py",
     )
     parser.add_argument(
-        "--strict-source-health", action="store_true",
+        "--strict-source-health",
+        action="store_true",
         help="Fail on repeated crawl failures reported by --source-health",
     )
     parser.add_argument(
-        "--failure-threshold", type=int, default=3,
+        "--failure-threshold",
+        type=int,
+        default=3,
         help="Consecutive failed crawls required for a hard source-health failure (default: 3)",
     )
     parser.add_argument(
         "--baseline",
         help="Optional baseline feed JSON to enforce anti-genie rule (total can't drop except filtered listings)",
     )
-    parser.add_argument("--promote-feed", metavar="PATH", help="Replace this published feed only after every check passes")
-    parser.add_argument("--promote-source-health", metavar="PATH", help="Replace this published health report only after every check passes")
-    parser.add_argument("--candidate-state", metavar="PATH", help="Candidate crawler state to promote after validation")
-    parser.add_argument("--promote-state", metavar="PATH", help="Published crawler state replaced after validation")
+    parser.add_argument(
+        "--promote-feed",
+        metavar="PATH",
+        help="Replace this published feed only after every check passes",
+    )
+    parser.add_argument(
+        "--promote-source-health",
+        metavar="PATH",
+        help="Replace this published health report only after every check passes",
+    )
+    parser.add_argument(
+        "--candidate-state",
+        metavar="PATH",
+        help="Candidate crawler state to promote after validation",
+    )
+    parser.add_argument(
+        "--promote-state",
+        metavar="PATH",
+        help="Published crawler state replaced after validation",
+    )
     args = parser.parse_args()
 
     path = pathlib.Path(args.path)
@@ -329,18 +442,28 @@ def main() -> int:
         merge_current_crawl_metrics(source_report, health_rows)
 
     for row in source_report:
-        newest = row["newest_timestamp"] or "none"
+        newest = row["newest_retained_timestamp"] or "none"
         fields = [
             f"source: {row['source']}",
             f"retained_item_count={row['retained_item_count']}",
-            f"newest={newest}",
-            f"freshness_status={row['freshness_status']}",
+            f"newest_retained_timestamp={newest}",
+            f"retained_content_freshness_status={row['retained_content_freshness_status']}",
         ]
         if args.source_health:
             fields.extend(
                 [
+                    f"current_crawl_status={row['current_crawl_status']}",
+                    f"index_fetch_status={row['index_fetch_status']}",
                     f"raw_link_candidates={row['raw_link_candidates']}",
+                    f"accepted_links={row['accepted_links']}",
+                    f"attempted_articles={row['attempted_articles']}",
                     f"accepted_articles={row['accepted_articles']}",
+                    f"consecutive_fetch_failures={row['consecutive_fetch_failures']}",
+                    f"consecutive_discovery_failures={row['consecutive_discovery_failures']}",
+                    f"consecutive_article_failures={row['consecutive_article_failures']}",
+                    f"last_successful_discovery_at={row['last_successful_discovery_at'] or 'none'}",
+                    f"discovery_recency_status={row['discovery_recency_status']}",
+                    f"cached_fallback_used={row['cached_fallback_used']}",
                 ]
             )
         print(" | ".join(fields))
@@ -349,7 +472,10 @@ def main() -> int:
 
     exit_code = 0
     allow_empty = {
-        name.strip() for value in args.allow_empty for name in value.split(",") if name.strip()
+        name.strip()
+        for value in args.allow_empty
+        for name in value.split(",")
+        if name.strip()
     }
     unexpected_empty = find_unexpected_empty_sources(
         source_report, allow_empty, fail_on_all=args.fail_on_empty_source
@@ -390,7 +516,14 @@ def main() -> int:
             exit_code = 1
 
     if exit_code == 0 and args.promote_feed:
-        if not all((args.source_health, args.promote_source_health, args.candidate_state, args.promote_state)):
+        if not all(
+            (
+                args.source_health,
+                args.promote_source_health,
+                args.candidate_state,
+                args.promote_state,
+            )
+        ):
             parser.error(
                 "promotion requires --source-health, --promote-source-health, "
                 "--candidate-state, and --promote-state"
