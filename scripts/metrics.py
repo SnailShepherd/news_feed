@@ -99,7 +99,9 @@ def compute_source_metrics(
                 "expected_update_hours": expected_update_hours,
                 # Bounded feeds are allowed to omit a source unless its
                 # configuration explicitly opts in to an emptiness check.
-                "allow_empty": bool(source.get("allow_empty", True)),
+                # Preserve an omitted value so the global CLI check can tell it
+                # apart from an explicit per-source exemption.
+                "allow_empty": source.get("allow_empty"),
             }
         )
     totals = {
@@ -115,15 +117,21 @@ def compute_source_metrics(
 
 
 def find_unexpected_empty_sources(
-    source_report: list[dict[str, Any]], allow_empty: set[str]
+    source_report: list[dict[str, Any]],
+    allow_empty: set[str],
+    *,
+    fail_on_all: bool = False,
 ) -> list[str]:
-    """List empty enabled sources that are not explicitly exempted."""
+    """List empty sources selected by per-source or global enforcement."""
     return [
         str(row["source"])
         for row in source_report
         if row["retained_item_count"] == 0
-        and not row.get("allow_empty", True)
         and row["source"] not in allow_empty
+        and (
+            row.get("allow_empty") is False
+            or (fail_on_all and row.get("allow_empty") is not True)
+        )
     ]
 
 
@@ -241,11 +249,11 @@ def main() -> int:
     parser.add_argument("--stale-hours", type=float, default=168, help="Age in hours after which a source is stale")
     parser.add_argument(
         "--allow-empty", action="append", default=[], metavar="SOURCE",
-        help="Source exempted when --fail-on-empty-source is enabled (repeat or comma-separated)",
+        help="Source exempted from empty-source enforcement (repeat or comma-separated)",
     )
     parser.add_argument(
         "--fail-on-empty-source", action="store_true",
-        help="Fail when an enabled source has no retained feed items (unsafe for bounded feeds)",
+        help="Globally fail when a non-exempt enabled source has no retained feed items",
     )
     parser.add_argument(
         "--source-health", metavar="PATH",
@@ -315,11 +323,12 @@ def main() -> int:
     allow_empty = {
         name.strip() for value in args.allow_empty for name in value.split(",") if name.strip()
     }
-    unexpected_empty = find_unexpected_empty_sources(source_report, allow_empty)
+    unexpected_empty = find_unexpected_empty_sources(
+        source_report, allow_empty, fail_on_all=args.fail_on_empty_source
+    )
     if unexpected_empty:
         print(f"unexpected_empty_sources: {', '.join(unexpected_empty)}")
-        if args.fail_on_empty_source:
-            exit_code = 1
+        exit_code = 1
 
     if args.source_health:
         failures, warnings = classify_source_health(

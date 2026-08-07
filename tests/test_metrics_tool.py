@@ -64,6 +64,19 @@ def test_bounded_feed_emptiness_is_allowed_by_default():
     assert find_unexpected_empty_sources(report, set()) == []
 
 
+def test_global_empty_check_includes_sources_without_per_source_setting():
+    _, report = compute_source_metrics([], SOURCES, stale_after=timedelta(days=7), now=NOW)
+    assert find_unexpected_empty_sources(report, set(), fail_on_all=True) == [
+        "healthy", "missing"
+    ]
+
+
+def test_explicit_allow_empty_exempts_source_from_global_check():
+    sources = [{"name": "optional", "allow_empty": True}]
+    _, report = compute_source_metrics([], sources, stale_after=timedelta(days=7), now=NOW)
+    assert find_unexpected_empty_sources(report, set(), fail_on_all=True) == []
+
+
 def test_source_can_require_a_retained_item():
     sources = [{"name": "required", "allow_empty": False}]
     _, report = compute_source_metrics([], sources, stale_after=timedelta(days=7), now=NOW)
