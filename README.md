@@ -156,11 +156,19 @@ fallback и неожиданно пустых index-страницах. Отсу
 
 Строка каждого источника разделяет `retained_item_count` (число карточек в
 ограниченной ленте) и, при передаче `--source-health`, показатели текущего
-обхода `raw_link_candidates` и `accepted_articles`. Источник без сохранённой
-временной метки получает `freshness_status=no_data`, а не считается свежим.
+обхода: `current_crawl_status`, `index_fetch_status`, `raw_link_candidates`,
+`accepted_links`, `attempted_articles` и `accepted_articles`. Отдельно выводятся
+`newest_retained_timestamp` и `retained_content_freshness_status`; источник без
+сохранённой временной метки получает
+`retained_content_freshness_status=no_data`, а не считается свежим. Время
+`last_successful_discovery_at` и `discovery_recency_status` описывают успешное
+обнаружение ссылок независимо от возраста сохранённых карточек. Если для
+источника не задан свой интервал, для discovery recency применяется общий
+`--stale-hours`.
 Проверки можно включить точечно в объекте источника в `sources.json`:
 `expected_min_candidates` задаёт минимум найденных при обходе кандидатов,
-`expected_update_hours` — максимальный возраст последней сохранённой карточки,
+`expected_update_hours` — максимальный возраст последнего успешного обнаружения
+при наличии `--source-health` (без него — возраст последней сохранённой карточки),
 а `allow_empty: false` включает проверку отсутствия карточек только для этого
 источника. Флаг `--fail-on-empty-source` включает такую проверку глобально;
 `allow_empty: true` или одноимённый аргумент со значением имени источника

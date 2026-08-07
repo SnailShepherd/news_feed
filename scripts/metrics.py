@@ -140,6 +140,7 @@ def merge_current_crawl_metrics(
     source_report: list[dict[str, Any]],
     health_rows: list[dict[str, Any]],
     *,
+    stale_after: timedelta = timedelta(days=7),
     now: datetime | None = None,
 ) -> None:
     """Attach current-run health without deriving it from retained feed items."""
@@ -191,17 +192,15 @@ def merge_current_crawl_metrics(
 
         discovery = _parse_timestamp(row["last_successful_discovery_at"])
         expected_hours = row.get("expected_update_hours")
-        window = (
+        discovery_window = (
             timedelta(hours=max(0, float(expected_hours)))
             if expected_hours is not None
-            else None
+            else stale_after
         )
         row["discovery_recency_status"] = (
             "no_data"
             if discovery is None
-            else (
-                "stale" if window is not None and discovery < now - window else "recent"
-            )
+            else ("stale" if discovery < now - discovery_window else "recent")
         )
 
 
@@ -439,7 +438,11 @@ def main() -> int:
         if not health_path.exists():
             raise SystemExit(f"Source health file not found: {health_path}")
         health_rows = _load_source_health(health_path)
-        merge_current_crawl_metrics(source_report, health_rows)
+        merge_current_crawl_metrics(
+            source_report,
+            health_rows,
+            stale_after=timedelta(hours=max(0, args.stale_hours)),
+        )
 
     for row in source_report:
         newest = row["newest_retained_timestamp"] or "none"

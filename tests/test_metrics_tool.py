@@ -415,3 +415,24 @@ def test_cached_fallback_is_degraded_but_retained_content_can_be_fresh():
     assert row["current_crawl_status"] == "degraded"
     assert row["cached_fallback_used"] is True
     assert row["retained_content_freshness_status"] == "fresh"
+
+
+def test_discovery_recency_uses_global_stale_window_when_not_configured():
+    _, report = compute_source_metrics(
+        [], [{"name": "source"}], stale_after=timedelta(days=30), now=NOW
+    )
+    merge_current_crawl_metrics(
+        report,
+        [
+            {
+                "source": "source",
+                "index_fetch_status": "unchanged",
+                "last_successful_discovery_at": "2026-07-20T00:00:00Z",
+            }
+        ],
+        stale_after=timedelta(days=7),
+        now=NOW,
+    )
+
+    assert report[0]["current_crawl_status"] == "healthy"
+    assert report[0]["discovery_recency_status"] == "stale"
