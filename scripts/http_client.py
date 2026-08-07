@@ -47,6 +47,19 @@ class SeleniumUnavailable(RuntimeError):
     """Raised when Selenium fallback cannot be executed."""
 
 
+class CrawlerParserError(RuntimeError):
+    """Raised when an internal crawler stage returns unusable page content."""
+
+    def __init__(self, stage: str, url: str, value: Any):
+        self.stage = stage
+        self.url = url
+        self.returned_type = type(value).__name__
+        super().__init__(
+            f"crawler/parser error at {stage} for {url}: "
+            f"expected non-empty str, got {self.returned_type}"
+        )
+
+
 @dataclass
 class WarmupConfig:
     """Configuration for a warm-up request before regular traffic."""
@@ -582,13 +595,17 @@ class HostClient:
         try:
             driver = webdriver.Chrome(options=self._build_chrome_options())
             self._apply_selenium_rendering(driver, url)
-            html = driver.page_source or ""
+            html = driver.page_source
             self._apply_selenium_cookies(driver.get_cookies())
+            if not isinstance(html, str):
+                raise CrawlerParserError("selenium.page_source", url, html)
             if html.strip():
                 LOGGER.info("Selenium HTML fetch success for %s", self.host)
                 return html
             LOGGER.warning("Selenium HTML fetch returned empty page for %s", self.host)
             return None
+        except CrawlerParserError:
+            raise
         except Exception as exc:
             LOGGER.warning("Selenium HTML fetch failed for %s: %s", self.host, exc)
             return None
