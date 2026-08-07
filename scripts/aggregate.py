@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os, re, json, logging, pathlib, sys, hashlib, argparse, random, html
+import os, re, json, logging, pathlib, sys, hashlib, argparse, random, html, shutil
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse, parse_qsl, urlencode
 
@@ -42,7 +42,9 @@ DOCS_DIR = ROOT / "docs"
 CACHE_DIR = ROOT / ".cache"
 PAGES_DIR = CACHE_DIR / "pages"
 STATE_FILE = CACHE_DIR / "state.json"
+SOURCE_HEALTH_STATE_FILE = CACHE_DIR / "source-health-state.json"
 OUT_JSON = DOCS_DIR / "unified.json"
+EXISTING_FEED_JSON = OUT_JSON
 SOURCE_HEALTH_JSON = DOCS_DIR / "source-health.json"
 
 CONNECT_TIMEOUT = 5.0
@@ -171,6 +173,14 @@ else:
 
 STATE = ensure_state_keys(STATE)
 
+if SOURCE_HEALTH_STATE_FILE.exists():
+    SOURCE_HEALTH_STATE = json.loads(SOURCE_HEALTH_STATE_FILE.read_text(encoding="utf-8"))
+else:
+    # Migrate streaks out of the crawler cache without resetting escalation.
+    SOURCE_HEALTH_STATE = STATE.pop("source_health_streaks", {})
+if not isinstance(SOURCE_HEALTH_STATE, dict):
+    SOURCE_HEALTH_STATE = {}
+
 HOST_STRATEGIES: dict[str, RequestStrategy] = {}
 HOST_CLIENTS: dict[str, HostClient] = {}
 
@@ -227,7 +237,15 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
 }
 
 def save_state():
+    STATE.pop("source_health_streaks", None)
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def save_source_health_state():
+    SOURCE_HEALTH_STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    SOURCE_HEALTH_STATE_FILE.write_text(
+        json.dumps(SOURCE_HEALTH_STATE, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 def prune_page_cache(*, now: float | None = None) -> tuple[int, int]:
@@ -2638,7 +2656,7 @@ def log_source_summary() -> None:
 def write_source_health_report(sources: list[dict]) -> None:
     """Persist crawl diagnostics independently from the retained feed."""
     rows = []
-    streaks = STATE.setdefault("source_health_streaks", {})
+    streaks = SOURCE_HEALTH_STATE
     for source in sources:
         if not source.get("enabled", True):
             continue
@@ -2674,6 +2692,7 @@ def write_source_health_report(sources: list[dict]) -> None:
     # save in the caller, so persist them here as part of the same operation.
     prune_page_cache()
     save_state()
+    save_source_health_state()
 
 
 def retain_bounded_items(items: list[dict]) -> list[dict]:
@@ -2758,10 +2777,10 @@ def build_feed(all_items):
 # ---- Merge helpers (Variant B) ----
 def load_existing_feed_items():
     """Загрузить текущие items из docs/unified.json, если файл существует."""
-    if not OUT_JSON.exists():
+    if not EXISTING_FEED_JSON.exists():
         return []
     try:
-        data = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        data = json.loads(EXISTING_FEED_JSON.read_text(encoding="utf-8"))
         if isinstance(data, dict) and "items" in data and isinstance(data["items"], list):
             return data["items"]
         # на всякий случай поддержим старый формат (если кто-то сохранил чистый список)
@@ -2859,6 +2878,7 @@ def merge_items(existing, new):
 
 def main():
     global ARGS, CONNECT_TIMEOUT, READ_TIMEOUT, REQUEST_TIMEOUT, START_TIME, RUNTIME_EXCEEDED, _RUNTIME_LOGGED
+    global OUT_JSON, EXISTING_FEED_JSON, SOURCE_HEALTH_JSON, SOURCE_HEALTH_STATE_FILE, SOURCE_HEALTH_STATE
     parser = argparse.ArgumentParser(description="Aggregate news feed")
     parser.add_argument("--rebuild", action="store_true", help="Force rebuild: ignore index unchanged and seen-URL filters; always rewrite unified.json")
     parser.add_argument("--dry-run", action="store_true", help="Run without writing unified.json/state")
@@ -2869,7 +2889,21 @@ def main():
     parser.add_argument("--read-timeout", type=float, default=10.0, help="Read timeout in seconds")
     parser.add_argument("--max-runtime", type=int, default=None, help="Maximum runtime in seconds before stopping gracefully")
     parser.add_argument("--debug", action="store_true", help="Enable verbose debug logging")
+    parser.add_argument("--output", type=pathlib.Path, default=OUT_JSON, help="Candidate feed output path")
+    parser.add_argument("--source-health-output", type=pathlib.Path, default=SOURCE_HEALTH_JSON, help="Candidate crawl-health output path")
+    parser.add_argument("--existing-feed", type=pathlib.Path, default=EXISTING_FEED_JSON, help="Published feed used as the merge baseline")
+    parser.add_argument("--source-health-state", type=pathlib.Path, default=SOURCE_HEALTH_STATE_FILE, help="Persistent failure-streak state path")
     ARGS = parser.parse_args()
+
+    OUT_JSON = ARGS.output
+    SOURCE_HEALTH_JSON = ARGS.source_health_output
+    EXISTING_FEED_JSON = ARGS.existing_feed
+    SOURCE_HEALTH_STATE_FILE = ARGS.source_health_state
+    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+    SOURCE_HEALTH_JSON.parent.mkdir(parents=True, exist_ok=True)
+    if SOURCE_HEALTH_STATE_FILE.exists():
+        loaded_health_state = json.loads(SOURCE_HEALTH_STATE_FILE.read_text(encoding="utf-8"))
+        SOURCE_HEALTH_STATE = loaded_health_state if isinstance(loaded_health_state, dict) else {}
 
     SOURCE_SUMMARY.clear()
     SOURCE_MIN_WORDS.clear()
@@ -2959,6 +2993,14 @@ def main():
         STATE["stats"]["items"] = existing_count
         if not ARGS.dry_run:
             existing_items = load_existing_feed_items()
+            if OUT_JSON != EXISTING_FEED_JSON:
+                if EXISTING_FEED_JSON.exists():
+                    shutil.copyfile(EXISTING_FEED_JSON, OUT_JSON)
+                else:
+                    OUT_JSON.write_text(
+                        json.dumps(build_feed([]), ensure_ascii=False, indent=2),
+                        encoding="utf-8",
+                    )
             prune_state(existing_items, sources)
             save_state()
             write_source_health_report(sources)

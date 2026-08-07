@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import pathlib
 from datetime import datetime, timedelta, timezone
 from typing import Any, Tuple
@@ -203,6 +204,8 @@ def main() -> int:
         "--baseline",
         help="Optional baseline feed JSON to enforce anti-genie rule (total can't drop except filtered listings)",
     )
+    parser.add_argument("--promote-feed", metavar="PATH", help="Replace this published feed only after every check passes")
+    parser.add_argument("--promote-source-health", metavar="PATH", help="Replace this published health report only after every check passes")
     args = parser.parse_args()
 
     path = pathlib.Path(args.path)
@@ -271,6 +274,16 @@ def main() -> int:
         if not ok and message:
             print(f"anti_genie_violation: {message}")
             exit_code = 1
+
+    if exit_code == 0 and args.promote_feed:
+        if not args.source_health or not args.promote_source_health:
+            parser.error("promotion requires --source-health and --promote-source-health")
+        # Both candidates have already parsed successfully. Replace health first
+        # and the public feed last, so a crash can never expose an unvalidated feed.
+        os.replace(args.source_health, args.promote_source_health)
+        os.replace(path, args.promote_feed)
+        print(f"promoted_feed: {args.promote_feed}")
+        print(f"promoted_source_health: {args.promote_source_health}")
 
     return exit_code
 

@@ -45,43 +45,51 @@ jobs:
 
       - name: Build feed
         run: |
+          mkdir -p .cache/candidates
           MODE="${{ github.event.inputs.mode }}"
           if [ "${MODE}" = "rebuild" ]; then
             echo "Running in REBUILD mode"
-            python scripts/aggregate.py --rebuild
+            python scripts/aggregate.py --rebuild \
+              --output .cache/candidates/unified.json \
+              --source-health-output .cache/candidates/source-health.json
           else
             echo "Running in NORMAL mode"
-            python scripts/aggregate.py
+            python scripts/aggregate.py \
+              --output .cache/candidates/unified.json \
+              --source-health-output .cache/candidates/source-health.json
           fi
 
-      - name: Check source health
-        # A source can be absent from the globally capped feed even when its
-        # crawl succeeded. Report crawl degradation, but do not discard a good
-        # feed merely because an upstream site is temporarily unavailable.
+      - name: Validate and publish candidate
+        id: validation
+        continue-on-error: true
+        # Strict validation happens before publication. On failure metrics does
+        # not replace either published file, preserving the last usable feed.
         run: |
           set -o pipefail
           {
             echo '## Feed and source health'
             echo '```text'
-            python scripts/metrics.py docs/unified.json \
+            python scripts/metrics.py .cache/candidates/unified.json \
               --sources sources.json \
-              --source-health docs/source-health.json
+              --source-health .cache/candidates/source-health.json \
+              --strict-source-health \
+              --promote-feed docs/unified.json \
+              --promote-source-health docs/source-health.json
             echo '```'
           } | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Commit output (feed, source health & state)
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/unified.json docs/source-health.json .cache/state.json || true
+          git add docs/unified.json docs/source-health.json .cache/state.json \
+            .cache/source-health-state.json || true
           git commit -m "Update unified feed [skip ci]" || echo "No changes"
           git push
 
-      # Alert only after the usable feed and diagnostics have been published.
-      # A source becomes a hard failure after three consecutive bad runs.
-      - name: Enforce repeated source failures
-        run: >-
-          python scripts/metrics.py docs/unified.json
-          --sources sources.json
-          --source-health docs/source-health.json
-          --strict-source-health
+      - name: Report validation failure
+        if: steps.validation.outcome == 'failure'
+        run: |
+          echo "Candidate failed strict source-health validation; prior feed was retained." >&2
+          exit 1

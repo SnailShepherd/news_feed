@@ -1,4 +1,5 @@
 import json
+import sys
 from datetime import datetime, timedelta, timezone
 
 from scripts.metrics import (
@@ -9,6 +10,7 @@ from scripts.metrics import (
     classify_source_health,
     find_unexpected_empty_sources,
 )
+from scripts import metrics
 
 
 def test_compute_metrics_counts(tmp_path):
@@ -149,3 +151,28 @@ def test_sources_skipped_by_selection_are_ignored():
 
     assert failures == []
     assert warnings == []
+
+
+def test_hard_source_failure_does_not_publish_candidate(tmp_path, monkeypatch):
+    published = tmp_path / "published.json"
+    published_health = tmp_path / "published-health.json"
+    candidate = tmp_path / "candidate.json"
+    candidate_health = tmp_path / "candidate-health.json"
+    sources = tmp_path / "sources.json"
+    published.write_text('{"items": [{"id": "last-good"}]}', encoding="utf-8")
+    published_health.write_text('{"sources": [{"source": "good"}]}', encoding="utf-8")
+    candidate.write_text('{"items": [{"id": "invalid-new"}]}', encoding="utf-8")
+    candidate_health.write_text(json.dumps({"sources": [{
+        "source": "upstream", "index_fetch_status": "failed",
+        "consecutive_failures": 3, "last_error": "outage"
+    }]}), encoding="utf-8")
+    sources.write_text('[{"name": "upstream"}]', encoding="utf-8")
+    monkeypatch.setattr(sys, "argv", ["metrics.py", str(candidate), "--sources", str(sources),
+        "--source-health", str(candidate_health), "--strict-source-health",
+        "--promote-feed", str(published), "--promote-source-health", str(published_health)])
+
+    assert metrics.main() == 1
+    assert json.loads(published.read_text(encoding="utf-8"))["items"][0]["id"] == "last-good"
+    assert json.loads(published_health.read_text(encoding="utf-8"))["sources"][0]["source"] == "good"
+    assert candidate.exists()
+    assert candidate_health.exists()
