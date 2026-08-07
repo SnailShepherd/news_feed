@@ -90,6 +90,8 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
         "publication_rejections_by_signal": {},
         "publication_rejection_samples": [],
         "maximum_future_offset_seconds": 0,
+        "canonical_rejections_by_reason": {},
+        "canonical_rejection_samples": [],
         "last_error": None,
     }
 )
@@ -1913,6 +1915,75 @@ def extract_canonical_url(soup: BeautifulSoup, base_url: str) -> str | None:
     return None
 
 
+def _article_url_rejection_reason(url: str, src: dict | None) -> str | None:
+    """Return why *url* cannot identify an article for the configured source."""
+    parsed = urlparse(url)
+    if not parsed.scheme or not parsed.netloc:
+        return "invalid_url"
+    if parsed.path.rstrip("/") == "":
+        return "site_root"
+    if not src:
+        return None
+    base_host = urlparse(src.get("base_url", "")).netloc.removeprefix("www.")
+    if base_host and parsed.netloc.removeprefix("www.") != base_host:
+        return "outside_source_domain"
+    if is_listing_url(url, start_url=src.get("start_url")):
+        return "listing_page"
+    # Canonical normalization intentionally removes a trailing path slash. Some
+    # discovery rules describe the source's raw links instead (including the
+    # slash immediately before a query string), so match both equivalent forms.
+    rule_urls = {url}
+    if parsed.path != "/" and not parsed.path.endswith("/"):
+        rule_urls.add(parsed._replace(path=f"{parsed.path}/").geturl())
+    patterns = src.get("include_patterns") or []
+    if isinstance(patterns, str):
+        patterns = [patterns]
+    if patterns and not any(
+        pattern in candidate for pattern in patterns for candidate in rule_urls
+    ):
+        return "does_not_match_include_patterns"
+    include_regex = src.get("include_regex")
+    regexes = [include_regex] if isinstance(include_regex, str) else (include_regex or [])
+    if regexes and not any(
+        re.search(pattern, candidate)
+        for pattern in regexes
+        for candidate in rule_urls
+    ):
+        return "does_not_match_include_regex"
+    exclude_regex = src.get("exclude_regex")
+    regexes = [exclude_regex] if isinstance(exclude_regex, str) else (exclude_regex or [])
+    if any(
+        re.search(pattern, candidate)
+        for pattern in regexes
+        for candidate in rule_urls
+    ):
+        return "matches_exclude_regex"
+    return None
+
+
+def _validated_canonical_url(
+    canonical_url: str | None, fetched_url: str, src: dict | None, source_name: str
+) -> str | None:
+    """Reject malformed metadata when the fetched URL is demonstrably an article."""
+    if not canonical_url or not src or _article_url_rejection_reason(fetched_url, src):
+        return canonical_url
+    reason = _article_url_rejection_reason(canonical_url, src)
+    if not reason:
+        return canonical_url
+    summary = SOURCE_SUMMARY[source_name]
+    counts = summary.setdefault("canonical_rejections_by_reason", {})
+    counts[reason] = int(counts.get(reason, 0)) + 1
+    samples = summary.setdefault("canonical_rejection_samples", [])
+    if len(samples) < PUBLICATION_REJECTION_SAMPLE_LIMIT:
+        samples.append({
+            "fetched_url": fetched_url,
+            "canonical_url": canonical_url,
+            "reason": reason,
+        })
+    logging.warning("Rejected canonical for %s (%s): %s", fetched_url, reason, canonical_url)
+    return None
+
+
 def extract_article_content(
     url: str,
     html: str,
@@ -2022,7 +2093,9 @@ def build_item(
             except ValueError:
                 dt = None
 
-    canonical_url = extract_canonical_url(soup, url)
+    canonical_url = _validated_canonical_url(
+        extract_canonical_url(soup, url), url, src, source_name
+    )
     url_key = _normalize_canonical_url(url) or url
     alias_map = STATE.setdefault("aliases", {})
     content_hashes = STATE.setdefault("content_hashes", {})
@@ -2571,11 +2644,11 @@ def extract_index_links(
     # Keep discovery metadata attached to its URL.  In particular, sitemap
     # category data must not be discarded and then reconstructed from article
     # text after an expensive fetch.
-    raw_candidates: list[tuple[str, str, bool, str]] = []
+    raw_candidates: list[tuple[str, str, bool, str, str]] = []
     for anchor in soup.find_all("a"):
         href = anchor.get("href")
         if href:
-            raw_candidates.append((href, anchor.get_text(strip=True) or "", True, ""))
+            raw_candidates.append((href, anchor.get_text(strip=True) or "", True, "", ""))
     for tag_name in ("loc", "link"):
         for tag in soup.find_all(tag_name):
             value = tag.get_text(strip=True)
@@ -2587,7 +2660,18 @@ def extract_index_links(
                     if node.name.split(":")[-1].lower()
                     in {"category", "keywords", "subject", "section", "rubric"}
                 )
-                raw_candidates.append((value, value, False, metadata))
+                lastmod = record.find(
+                    lambda node: node.name
+                    and node.name.split(":")[-1].lower() == "lastmod"
+                )
+                raw_candidates.append((
+                    value, value, False, metadata,
+                    lastmod.get_text(strip=True) if lastmod else "",
+                ))
+    if src.get("sort_sitemap_by_lastmod"):
+        # ISO sitemap timestamps sort chronologically. Undated records remain
+        # usable, but cannot displace explicitly recent records from the cap.
+        raw_candidates.sort(key=lambda candidate: candidate[4], reverse=True)
     discovery_categories = src.get("discovery_categories") or []
     if isinstance(discovery_categories, str):
         discovery_categories = [discovery_categories]
@@ -2597,18 +2681,18 @@ def extract_index_links(
         include_snippets = [str(pattern) for pattern in include_patterns]
         for expanded_html in _embedded_text_variants(index_html):
             raw_candidates.extend(
-                (match, "", False, "")
+                (match, "", False, "", "")
                 for match in re.findall(r'https?://[^\s"\'<>]+', expanded_html)
             )
             for relative in re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html):
                 if not include_snippets or any(part in relative for part in include_snippets):
-                    raw_candidates.append((relative, "", False, ""))
+                    raw_candidates.append((relative, "", False, "", ""))
 
     base_url = src["base_url"]
     base_host = urlparse(base_url).netloc.removeprefix("www.")
     current_index = index_url or src["start_url"]
     accepted = []
-    for raw_href, link_text, is_anchor, metadata in raw_candidates:
+    for raw_href, link_text, is_anchor, metadata, _lastmod in raw_candidates:
         href = urljoin(base_url, raw_href)
         if href.rstrip("/") == current_index.rstrip("/") or is_listing_url(href, start_url=current_index):
             continue
@@ -3224,6 +3308,12 @@ def write_source_health_report(sources: list[dict]) -> None:
             ),
             "publication_rejection_samples": summary.get(
                 "publication_rejection_samples", []
+            ),
+            "canonical_rejections_by_reason": summary.get(
+                "canonical_rejections_by_reason", {}
+            ),
+            "canonical_rejection_samples": summary.get(
+                "canonical_rejection_samples", []
             ),
             "maximum_future_offset_seconds": summary.get(
                 "maximum_future_offset_seconds", 0
