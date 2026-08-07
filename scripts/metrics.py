@@ -78,19 +78,38 @@ def compute_source_metrics(
             if timestamp is not None:
                 timestamps.append(timestamp)
         newest = max(timestamps, default=None)
+        expected_update_hours = source.get("expected_update_hours")
+        freshness_window = stale_after
+        if expected_update_hours is not None:
+            freshness_window = timedelta(hours=max(0, float(expected_update_hours)))
+        freshness_status = (
+            "no_data"
+            if newest is None
+            else "stale"
+            if newest < now - freshness_window
+            else "fresh"
+        )
         report.append(
             {
                 "source": name,
-                "item_count": len(source_items),
+                "retained_item_count": len(source_items),
                 "newest_timestamp": newest.isoformat() if newest else None,
-                "stale": newest is not None and newest < now - stale_after,
+                "freshness_status": freshness_status,
+                "expected_min_candidates": source.get("expected_min_candidates"),
+                "expected_update_hours": expected_update_hours,
+                # Bounded feeds are allowed to omit a source unless its
+                # configuration explicitly opts in to an emptiness check.
+                "allow_empty": bool(source.get("allow_empty", True)),
             }
         )
     totals = {
         "enabled_sources": len(report),
-        "sources_with_items": sum(row["item_count"] > 0 for row in report),
-        "sources_without_items": sum(row["item_count"] == 0 for row in report),
-        "stale_sources": sum(row["stale"] for row in report),
+        "sources_with_items": sum(row["retained_item_count"] > 0 for row in report),
+        "sources_without_items": sum(row["retained_item_count"] == 0 for row in report),
+        "stale_sources": sum(row["freshness_status"] == "stale" for row in report),
+        "sources_without_freshness_data": sum(
+            row["freshness_status"] == "no_data" for row in report
+        ),
     }
     return totals, report
 
@@ -102,8 +121,49 @@ def find_unexpected_empty_sources(
     return [
         str(row["source"])
         for row in source_report
-        if row["item_count"] == 0 and row["source"] not in allow_empty
+        if row["retained_item_count"] == 0
+        and not row.get("allow_empty", True)
+        and row["source"] not in allow_empty
     ]
+
+
+def merge_current_crawl_metrics(
+    source_report: list[dict[str, Any]], health_rows: list[dict[str, Any]]
+) -> None:
+    """Attach current-run discovery and acceptance counts to retained rows."""
+    health_by_source = {str(row.get("source", "")): row for row in health_rows}
+    for row in source_report:
+        health = health_by_source.get(str(row["source"]))
+        row["raw_link_candidates"] = (
+            int(health.get("raw_link_candidates") or 0) if health is not None else None
+        )
+        row["accepted_articles"] = (
+            int(health.get("accepted_articles") or 0) if health is not None else None
+        )
+
+
+def find_source_expectation_failures(source_report: list[dict[str, Any]]) -> list[str]:
+    """Return violations of opt-in per-source crawl/freshness expectations."""
+    failures: list[str] = []
+    for row in source_report:
+        name = str(row["source"])
+        minimum = row.get("expected_min_candidates")
+        discovered = row.get("raw_link_candidates")
+        if minimum is not None:
+            if discovered is None:
+                failures.append(
+                    f"{name}: no current-crawl candidate count, expected at least {int(minimum)}"
+                )
+            elif discovered < int(minimum):
+                failures.append(
+                    f"{name}: discovered {discovered} candidates, expected at least {int(minimum)}"
+                )
+        if row.get("expected_update_hours") is not None and row["freshness_status"] != "fresh":
+            failures.append(
+                f"{name}: freshness is {row['freshness_status']}, expected an update within "
+                f"{row['expected_update_hours']} hours"
+            )
+    return failures
 
 
 def _load_source_health(path: pathlib.Path) -> list[dict[str, Any]]:
@@ -223,9 +283,31 @@ def main() -> int:
     source_totals, source_report = compute_source_metrics(
         items, sources, stale_after=timedelta(hours=max(0, args.stale_hours))
     )
+
+    health_rows: list[dict[str, Any]] = []
+    if args.source_health:
+        health_path = pathlib.Path(args.source_health)
+        if not health_path.exists():
+            raise SystemExit(f"Source health file not found: {health_path}")
+        health_rows = _load_source_health(health_path)
+        merge_current_crawl_metrics(source_report, health_rows)
+
     for row in source_report:
         newest = row["newest_timestamp"] or "none"
-        print(f"source: {row['source']} | items={row['item_count']} | newest={newest} | stale={str(row['stale']).lower()}")
+        fields = [
+            f"source: {row['source']}",
+            f"retained_item_count={row['retained_item_count']}",
+            f"newest={newest}",
+            f"freshness_status={row['freshness_status']}",
+        ]
+        if args.source_health:
+            fields.extend(
+                [
+                    f"raw_link_candidates={row['raw_link_candidates']}",
+                    f"accepted_articles={row['accepted_articles']}",
+                ]
+            )
+        print(" | ".join(fields))
     for key, value in source_totals.items():
         print(f"{key}: {value}")
 
@@ -240,13 +322,11 @@ def main() -> int:
             exit_code = 1
 
     if args.source_health:
-        health_path = pathlib.Path(args.source_health)
-        if not health_path.exists():
-            raise SystemExit(f"Source health file not found: {health_path}")
-        health_rows = _load_source_health(health_path)
         failures, warnings = classify_source_health(
             health_rows, failure_threshold=max(1, args.failure_threshold)
         )
+        expectation_failures = find_source_expectation_failures(source_report)
+        failures.extend(expectation_failures)
         print(f"crawl_sources_reported: {len(health_rows)}")
         print(f"crawl_failures: {len(failures)}")
         print(f"crawl_warnings: {len(warnings)}")
