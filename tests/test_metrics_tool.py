@@ -149,3 +149,54 @@ def test_sources_skipped_by_selection_are_ignored():
 
     assert failures == []
     assert warnings == []
+
+
+def test_repeated_zero_raw_links_becomes_discovery_failure():
+    failures, warnings = classify_source_health([{
+        "source": "empty index",
+        "index_fetch_status": "fetched",
+        "consecutive_discovery_failures": 3,
+        "raw_link_candidates": 0,
+        "accepted_links": 0,
+        "last_successful_discovery_at": "2026-08-06T12:00:00+00:00",
+    }])
+
+    assert warnings == []
+    assert failures == [
+        "empty index: discovery failed for 3 consecutive runs (raw candidates=0, "
+        "accepted links=0, last successful discovery=2026-08-06T12:00:00+00:00)"
+    ]
+
+
+def test_single_zero_accepted_links_is_discovery_warning():
+    failures, warnings = classify_source_health([{
+        "source": "filtered index",
+        "index_fetch_status": "fetched",
+        "consecutive_discovery_failures": 1,
+        "raw_link_candidates": 14,
+        "accepted_links": 0,
+        "last_successful_discovery_at": "2026-08-07T08:30:00+00:00",
+    }])
+
+    assert failures == []
+    assert warnings == [
+        "filtered index: transient discovery failure (run 1/3; raw candidates=14, "
+        "accepted links=0, last successful discovery=2026-08-07T08:30:00+00:00)"
+    ]
+
+
+def test_repeated_unchanged_empty_index_becomes_discovery_failure():
+    failures, warnings = classify_source_health([{
+        "source": "unchanged empty",
+        "index_fetch_status": "unchanged",
+        "consecutive_discovery_failures": 4,
+        "raw_link_candidates": 0,
+        "accepted_links": 0,
+        "last_successful_discovery_at": "2026-08-01T00:00:00+00:00",
+    }])
+
+    assert warnings == []
+    assert failures == [
+        "unchanged empty: discovery failed for 4 consecutive runs (raw candidates=0, "
+        "accepted links=0, last successful discovery=2026-08-01T00:00:00+00:00)"
+    ]

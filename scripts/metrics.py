@@ -130,27 +130,50 @@ def classify_source_health(
         name = str(row.get("source") or "<unnamed>")
         status = str(row.get("index_fetch_status") or "not_attempted")
         error = row.get("last_error")
-        streak = int(row.get("consecutive_failures") or 0)
+        legacy_streak = int(row.get("consecutive_failures") or 0)
+        fetch_streak = int(row.get("consecutive_fetch_failures", legacy_streak) or 0)
+        discovery_streak = int(row.get("consecutive_discovery_failures") or 0)
+        article_streak = int(row.get("consecutive_article_failures", legacy_streak) or 0)
         attempted = int(row.get("attempted_articles") or 0)
         accepted = int(row.get("accepted_articles") or 0)
-        article_outage = attempted > 0 and accepted == 0 and bool(error)
+        raw_candidates = int(row.get("raw_link_candidates") or 0)
+        accepted_links = int(row.get("accepted_links") or 0)
+        discovery_at = row.get("last_successful_discovery_at") or "unknown"
+        article_outage = attempted > 0 and accepted == 0
         failure_kind = "article crawl failed" if article_outage else status
         hard_status = status in {"failed", "parser_error", "not_attempted"}
         if status == "skipped_selection":
-            pass
-        elif (hard_status or article_outage) and streak >= failure_threshold:
+            continue
+        elif hard_status and fetch_streak >= failure_threshold:
             detail = f" ({error})" if error else ""
-            failures.append(f"{name}: {failure_kind} for {streak} consecutive runs{detail}")
-        elif hard_status or article_outage:
+            failures.append(f"{name}: {status} for {fetch_streak} consecutive runs{detail}")
+        elif hard_status:
             warnings.append(
-                f"{name}: transient {failure_kind} (run {streak}/{failure_threshold})"
+                f"{name}: transient {status} (run {fetch_streak}/{failure_threshold})"
+            )
+        elif discovery_streak:
+            detail = (
+                f"raw candidates={raw_candidates}, accepted links={accepted_links}, "
+                f"last successful discovery={discovery_at}"
+            )
+            message = f"{name}: discovery failed for {discovery_streak} consecutive runs ({detail})"
+            if discovery_streak >= failure_threshold:
+                failures.append(message)
+            else:
+                warnings.append(f"{name}: transient discovery failure (run {discovery_streak}/{failure_threshold}; {detail})")
+        elif article_outage and article_streak >= failure_threshold:
+            detail = f" ({error})" if error else ""
+            failures.append(f"{name}: {failure_kind} for {article_streak} consecutive runs{detail}")
+        elif article_outage and article_streak:
+            warnings.append(
+                f"{name}: transient {failure_kind} (run {article_streak}/{failure_threshold})"
             )
         elif status == "cached" or row.get("cached_fallback_used"):
             warnings.append(f"{name}: cached fallback used")
         elif (
             status == "fetched"
             and attempted == 0
-            and int(row.get("raw_link_candidates") or 0) == 0
+            and raw_candidates == 0
         ):
             warnings.append(f"{name}: fetched index contained no link candidates")
         elif attempted > 0 and accepted == 0:
