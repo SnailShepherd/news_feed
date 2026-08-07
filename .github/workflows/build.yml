@@ -33,6 +33,16 @@ jobs:
             pages-${{ hashFiles('sources.json', 'scripts/aggregate.py') }}-
             pages-
 
+      # Cookies, cooldowns and anti-bot retry timestamps are runner-specific.
+      # Restore them through Actions cache, never through the Git repository.
+      - name: Restore runner session state
+        uses: actions/cache@v6
+        with:
+          path: .cache/session-state.json
+          key: session-state-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            session-state-${{ runner.os }}-
+
       - name: Set up Python
         uses: actions/setup-python@v7
         with:

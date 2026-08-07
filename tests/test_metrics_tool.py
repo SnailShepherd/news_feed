@@ -8,7 +8,9 @@ from scripts.metrics import (
     compute_metrics,
     compute_source_metrics,
     classify_source_health,
+    find_source_expectation_failures,
     find_unexpected_empty_sources,
+    merge_current_crawl_metrics,
 )
 from scripts import metrics
 
@@ -59,28 +61,93 @@ SOURCES = [
 ]
 
 
-def test_missing_enabled_source_fails_health_check():
+def test_bounded_feed_emptiness_is_allowed_by_default():
     _, report = compute_source_metrics([], SOURCES, stale_after=timedelta(days=7), now=NOW)
-    assert find_unexpected_empty_sources(report, set()) == ["healthy", "missing"]
+    assert find_unexpected_empty_sources(report, set()) == []
+
+
+def test_global_empty_check_includes_sources_without_per_source_setting():
+    _, report = compute_source_metrics([], SOURCES, stale_after=timedelta(days=7), now=NOW)
+    assert find_unexpected_empty_sources(report, set(), fail_on_all=True) == [
+        "healthy", "missing"
+    ]
+
+
+def test_explicit_allow_empty_exempts_source_from_global_check():
+    sources = [{"name": "optional", "allow_empty": True}]
+    _, report = compute_source_metrics([], sources, stale_after=timedelta(days=7), now=NOW)
+    assert find_unexpected_empty_sources(report, set(), fail_on_all=True) == []
+
+
+def test_source_can_require_a_retained_item():
+    sources = [{"name": "required", "allow_empty": False}]
+    _, report = compute_source_metrics([], sources, stale_after=timedelta(days=7), now=NOW)
+    assert find_unexpected_empty_sources(report, set()) == ["required"]
 
 
 def test_stale_source_is_reported():
     items = [{"source": "healthy", "published_at": "2026-07-01T00:00:00Z"}]
     totals, report = compute_source_metrics(items, SOURCES, stale_after=timedelta(days=7), now=NOW)
     assert totals["stale_sources"] == 1
-    assert report[0]["stale"] is True
+    assert report[0]["freshness_status"] == "stale"
 
 
 def test_healthy_source_uses_fetch_timestamp_when_publication_is_invalid():
     items = [{"source": "healthy", "published_at": "not-a-date", "fetched_at": "2026-08-05T00:00:00Z"}]
     totals, report = compute_source_metrics(items, SOURCES, stale_after=timedelta(days=7), now=NOW)
-    assert totals == {"enabled_sources": 2, "sources_with_items": 1, "sources_without_items": 1, "stale_sources": 0}
+    assert totals == {
+        "enabled_sources": 2,
+        "sources_with_items": 1,
+        "sources_without_items": 1,
+        "stale_sources": 0,
+        "sources_without_freshness_data": 1,
+    }
     assert report[0]["newest_timestamp"] == "2026-08-05T00:00:00+00:00"
 
 
+def test_source_without_timestamp_reports_no_data_instead_of_not_stale():
+    _, report = compute_source_metrics([], SOURCES, stale_after=timedelta(days=7), now=NOW)
+    assert report[0]["freshness_status"] == "no_data"
+
+
 def test_explicitly_exempted_empty_source_passes():
-    _, report = compute_source_metrics([], [{"name": "expected empty"}], stale_after=timedelta(days=7), now=NOW)
+    _, report = compute_source_metrics(
+        [], [{"name": "expected empty", "allow_empty": False}],
+        stale_after=timedelta(days=7), now=NOW
+    )
     assert find_unexpected_empty_sources(report, {"expected empty"}) == []
+
+
+def test_current_crawl_counts_and_source_expectations_are_combined():
+    sources = [{
+        "name": "active",
+        "expected_min_candidates": 3,
+        "expected_update_hours": 24,
+    }]
+    items = [{"source": "active", "published_at": "2026-08-04T23:59:00Z"}]
+    _, report = compute_source_metrics(
+        items, sources, stale_after=timedelta(days=7), now=NOW
+    )
+    merge_current_crawl_metrics(report, [{
+        "source": "active", "raw_link_candidates": 2, "accepted_articles": 1
+    }])
+
+    assert report[0]["retained_item_count"] == 1
+    assert report[0]["raw_link_candidates"] == 2
+    assert report[0]["accepted_articles"] == 1
+    assert find_source_expectation_failures(report) == [
+        "active: discovered 2 candidates, expected at least 3",
+        "active: freshness is stale, expected an update within 24 hours",
+    ]
+
+
+def test_candidate_expectation_requires_a_current_crawl_row():
+    sources = [{"name": "missing crawl", "expected_min_candidates": 1}]
+    _, report = compute_source_metrics([], sources, stale_after=timedelta(days=7), now=NOW)
+    merge_current_crawl_metrics(report, [])
+    assert find_source_expectation_failures(report) == [
+        "missing crawl: no current-crawl candidate count, expected at least 1"
+    ]
 
 
 def test_source_health_distinguishes_failures_from_degraded_sources():
