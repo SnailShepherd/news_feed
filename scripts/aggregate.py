@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os, re, json, logging, pathlib, sys, hashlib, argparse, random, html
+from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse, parse_qsl, urlencode
 
@@ -42,6 +43,7 @@ DOCS_DIR = ROOT / "docs"
 CACHE_DIR = ROOT / ".cache"
 PAGES_DIR = CACHE_DIR / "pages"
 STATE_FILE = CACHE_DIR / "state.json"
+SESSION_STATE_FILE = CACHE_DIR / "session-state.json"
 OUT_JSON = DOCS_DIR / "unified.json"
 SOURCE_HEALTH_JSON = DOCS_DIR / "source-health.json"
 
@@ -81,6 +83,9 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
         "attempted_articles": 0,
         "cached_fallback_used": False,
         "future_date_rejections": 0,
+        "publication_rejections_by_signal": {},
+        "publication_rejection_samples": [],
+        "maximum_future_offset_seconds": 0,
         "last_error": None,
     }
 )
@@ -94,7 +99,13 @@ HOST_MIN_WORD_OVERRIDES = {
     "faufcc.ru": 70,
 }
 PUBLICATION_CLOCK_SKEW = timedelta(
-    hours=float(os.environ.get("PUBLICATION_CLOCK_SKEW_HOURS", "24"))
+    minutes=float(os.environ.get("PUBLICATION_CLOCK_SKEW_MINUTES", "15"))
+)
+PUBLICATION_TIMEZONE_SKEW = timedelta(
+    hours=float(os.environ.get("PUBLICATION_TIMEZONE_SKEW_HOURS", "26"))
+)
+PUBLICATION_REJECTION_SAMPLE_LIMIT = int(
+    os.environ.get("PUBLICATION_REJECTION_SAMPLE_LIMIT", "5")
 )
 
 ESSENTIAL_ITEM_FIELDS = (
@@ -144,11 +155,9 @@ DOCS_DIR.mkdir(exist_ok=True)
 def ensure_state_keys(state: dict) -> dict:
     required_defaults = {
         "headers": {},
-        "stats": {},
         "index_hash": {},
         "seen_urls": {},
         "first_seen": {},
-        "host_state": {},
         "aliases": {},
         "content_hashes": {},
         "canonical_item_ids": {},
@@ -160,17 +169,45 @@ def ensure_state_keys(state: dict) -> dict:
     return state
 
 
+def ensure_session_state_keys(state: dict) -> dict:
+    """Normalize state that is meaningful only to a particular runner."""
+    for key in ("host_state", "stats"):
+        if not isinstance(state.get(key), dict):
+            state[key] = {}
+    return state
+
+
 if STATE_FILE.exists():
     STATE = json.loads(STATE_FILE.read_text(encoding="utf-8"))
 else:
     STATE = {
         "headers": {},
-        "stats": {},
         "index_hash": {},
         "seen_urls": {},
     }
 
 STATE = ensure_state_keys(STATE)
+
+# Migrate runner data written by older versions out of the tracked document.
+_legacy_host_state = STATE.pop("host_state", {})
+_legacy_stats = STATE.get("stats", {})
+_legacy_session_stats = {
+    key: _legacy_stats.pop(key)
+    for key in ("cooldowns", "errors", "metrics")
+    if key in _legacy_stats
+}
+if not _legacy_stats:
+    STATE.pop("stats", None)
+
+if SESSION_STATE_FILE.exists():
+    SESSION_STATE = json.loads(SESSION_STATE_FILE.read_text(encoding="utf-8"))
+else:
+    SESSION_STATE = {}
+SESSION_STATE = ensure_session_state_keys(SESSION_STATE)
+if _legacy_host_state and not SESSION_STATE["host_state"]:
+    SESSION_STATE["host_state"] = _legacy_host_state
+for key, value in _legacy_session_stats.items():
+    SESSION_STATE["stats"].setdefault(key, value)
 
 HOST_STRATEGIES: dict[str, RequestStrategy] = {}
 HOST_CLIENTS: dict[str, HostClient] = {}
@@ -228,7 +265,35 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
 }
 
 def save_state():
-    STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
+    # Serialize an explicit allow-list so future client/session fields cannot
+    # accidentally place cookie material in the committed state document.
+    # A tuple keeps the large top-level sections stable across Python
+    # processes; a set would make scheduled runs rewrite the file solely due
+    # to hash-randomized iteration order.
+    durable_keys = (
+        "headers",
+        "index_hash",
+        "seen_urls",
+        "first_seen",
+        "aliases",
+        "content_hashes",
+        "canonical_item_ids",
+        "source_health_streaks",
+    )
+    durable_state = {key: STATE[key] for key in durable_keys if key in STATE}
+    run_stats = {
+        key: STATE.get("stats", {}).get(key)
+        for key in ("last_run", "items")
+        if key in STATE.get("stats", {})
+    }
+    if run_stats:
+        durable_state["stats"] = run_stats
+    STATE_FILE.write_text(
+        json.dumps(durable_state, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    SESSION_STATE_FILE.write_text(
+        json.dumps(SESSION_STATE, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 def prune_page_cache(*, now: float | None = None) -> tuple[int, int]:
@@ -384,7 +449,7 @@ def get_host_client(url: str, src: dict | None = None) -> HostClient | None:
         return None
     client = HOST_CLIENTS.get(strategy_host)
     if client is None:
-        client = HostClient(strategy_host, strategy, STATE)
+        client = HostClient(strategy_host, strategy, SESSION_STATE)
         HOST_CLIENTS[strategy_host] = client
     return client
 
@@ -693,6 +758,35 @@ def finalize_datetime(dt: datetime):
     return clamp_year(dt)
 
 
+@dataclass
+class PublicationDiagnostics:
+    """Explicit sink for diagnostics produced while parsing this crawl only."""
+
+    source: str
+
+    def reject(self, *, signal: str, raw_value: object, url: str, offset: timedelta) -> None:
+        summary = SOURCE_SUMMARY[self.source]
+        counts = summary.setdefault("publication_rejections_by_signal", {})
+        counts[signal] = int(counts.get(signal, 0) or 0) + 1
+        summary["future_date_rejections"] = sum(int(value) for value in counts.values())
+        offset_seconds = max(0, int(offset.total_seconds()))
+        summary["maximum_future_offset_seconds"] = max(
+            int(summary.get("maximum_future_offset_seconds", 0) or 0), offset_seconds
+        )
+        samples = summary.setdefault("publication_rejection_samples", [])
+        if len(samples) < max(0, PUBLICATION_REJECTION_SAMPLE_LIMIT):
+            samples.append({
+                "signal": signal,
+                "raw_value": str(raw_value),
+                "url": url,
+                "future_offset_seconds": offset_seconds,
+                "classification": (
+                    "timezone_scale_skew" if offset <= PUBLICATION_TIMEZONE_SKEW
+                    else "clearly_invalid_future_date"
+                ),
+            })
+
+
 def validate_publication_datetime(
     dt: datetime | None,
     *,
@@ -701,13 +795,16 @@ def validate_publication_datetime(
     source: str | None = None,
     signal: str = "unknown",
     now: datetime | None = None,
-    allowance: timedelta = PUBLICATION_CLOCK_SKEW,
+    allowance: timedelta = PUBLICATION_TIMEZONE_SKEW,
+    diagnostics: PublicationDiagnostics | None = None,
 ) -> datetime | None:
     """Return a normalized, plausible publication time, or reject it.
 
     ``now`` and ``allowance`` are injectable so callers and tests do not need
     to depend on wall-clock time. All extraction paths should pass through
-    this single boundary before a value is stored as ``published_at``.
+    this single boundary before a value is stored as ``published_at``. The
+    default accommodates timezone-scale metadata errors; signals known not to
+    contain a timezone can opt into the smaller clock-skew allowance.
     """
     dt = finalize_datetime(dt)
     if dt is None:
@@ -715,12 +812,15 @@ def validate_publication_datetime(
     reference = finalize_datetime(now or datetime.now(MSK))
     if dt > reference + allowance:
         rejection_count = 1
-        if source:
-            rejection_count = int(
-                SOURCE_SUMMARY[source].get("future_date_rejections", 0) or 0
-            ) + 1
-            SOURCE_SUMMARY[source]["future_date_rejections"] = rejection_count
-        if rejection_count <= 3:
+        if diagnostics is not None:
+            diagnostics.reject(
+                signal=signal,
+                raw_value=raw_value if raw_value is not None else dt.isoformat(),
+                url=url or "",
+                offset=dt - reference,
+            )
+            rejection_count = int(SOURCE_SUMMARY[diagnostics.source]["future_date_rejections"])
+        if diagnostics is not None and rejection_count <= 3:
             logging.warning(
                 "Reject future publication time value=%r url=%s source=%s signal=%s",
                 raw_value if raw_value is not None else dt.isoformat(),
@@ -728,7 +828,7 @@ def validate_publication_datetime(
                 source or "",
                 signal,
             )
-        elif rejection_count == 4:
+        elif diagnostics is not None and rejection_count == 4:
             logging.warning("Suppress further future-date warnings for source=%s", source or "")
         return None
     return dt
@@ -1371,7 +1471,10 @@ def extract_date_candidates(soup: BeautifulSoup):
         uniq.append(s)
     return uniq[:20]
 
-def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic", now=None):
+def try_parse_any_date(
+    candidates, *, url=None, source=None, signal="heuristic", now=None,
+    diagnostics=None,
+):
     default_base = make_aware_msk(datetime.now(MSK).replace(month=1, day=1, hour=0, minute=0, second=0, microsecond=0))
     for raw in candidates:
         s = raw.strip()
@@ -1380,17 +1483,17 @@ def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic",
             m = re.search(r"(\d{1,2}):(\d{2})", low)
             hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
             dt = make_aware_msk(datetime.now(MSK)).replace(hour=hh, minute=mm, second=0, microsecond=0)
-            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         if "вчера" in low or "yesterday" in low:
             m = re.search(r"(\d{1,2}):(\d{2})", low)
             hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
             dt = make_aware_msk(datetime.now(MSK) - timedelta(days=1)).replace(hour=hh, minute=mm, second=0, microsecond=0)
-            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         # Try ISO-like first
         try:
             dt = finalize_datetime(dparser.isoparse(s))
             if dt:
-                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         except Exception:
             pass
         # Try generic parser in day-first mode
@@ -1402,7 +1505,7 @@ def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic",
                 default=default_base,
             ))
             if dt:
-                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         except Exception:
             pass
         # Try Russian words
@@ -1410,11 +1513,14 @@ def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic",
         if dt:
             dt = finalize_datetime(dt)
             if dt:
-                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
     return None
 
 
-def _parse_datetime_signal(value: str | None, signal: str, *, url=None, source=None, now=None) -> datetime | None:
+def _parse_datetime_signal(
+    value: str | None, signal: str, *, url=None, source=None, now=None,
+    diagnostics=None,
+) -> datetime | None:
     if not value:
         return None
     value = value.strip()
@@ -1443,12 +1549,18 @@ def _parse_datetime_signal(value: str | None, signal: str, *, url=None, source=N
     if dt:
         logging.debug("Published time signal (%s): %s -> %s", signal, value, dt.isoformat())
         return validate_publication_datetime(
-            dt, raw_value=value, url=url, source=source, signal=signal, now=now
+            dt, raw_value=value, url=url, source=source, signal=signal, now=now,
+            diagnostics=diagnostics,
         )
     return None
 
 
-def extract_published_datetime(soup: BeautifulSoup, url: str | None = None, source: str | None = None) -> datetime | None:
+def extract_published_datetime(
+    soup: BeautifulSoup,
+    url: str | None = None,
+    source: str | None = None,
+    diagnostics: PublicationDiagnostics | None = None,
+) -> datetime | None:
     seen_candidates: set[tuple[str, str]] = set()
 
     def attempt(value: str | None, signal: str) -> datetime | None:
@@ -1461,7 +1573,7 @@ def extract_published_datetime(soup: BeautifulSoup, url: str | None = None, sour
         if key in seen_candidates:
             return None
         seen_candidates.add(key)
-        return _parse_datetime_signal(candidate, signal, url=url, source=source)
+        return _parse_datetime_signal(candidate, signal, url=url, source=source, diagnostics=diagnostics)
 
     # Primary meta tags.
     for tag in soup.find_all("meta", attrs={"property": "article:published_time"}):
@@ -1665,6 +1777,7 @@ def build_item(
     src: dict | None = None,
     pre_extracted_content: str | None = None,
 ):
+    publication_diagnostics = PublicationDiagnostics(source_name)
     amp_used = False
     selectors = content_selectors
     content_text: str | None
@@ -1699,7 +1812,9 @@ def build_item(
                 content_source = amp_label or amp_source or "amp"
                 amp_used = True
 
-    dt = extract_published_datetime(soup, url, source_name)
+    dt = extract_published_datetime(
+        soup, url, source_name, diagnostics=publication_diagnostics
+    )
 
     if dt is None:
         m = re.search(r"/(20\d{2})/([01]\d)/([0-3]\d)/", url)
@@ -1712,6 +1827,8 @@ def build_item(
                     url=url,
                     source=source_name,
                     signal="url:path",
+                    diagnostics=publication_diagnostics,
+                    allowance=PUBLICATION_CLOCK_SKEW,
                 )
             except ValueError:
                 dt = None
@@ -1839,41 +1956,105 @@ def _first_non_empty(containers: list[dict], keys: list[str]) -> str | None:
     return None
 
 
-def harvest_json_source(src: dict, force: bool = False):
+def _object_path(value, path: str):
+    """Return a value from a JSON object using a dotted path (lists are supported)."""
+    current = value
+    for part in (path or "").split("."):
+        if not part:
+            continue
+        if isinstance(current, dict):
+            current = current.get(part)
+        elif isinstance(current, list) and part.isdigit():
+            index = int(part)
+            current = current[index] if index < len(current) else None
+        else:
+            return None
+    return current
+
+
+def _api_items(payload, src: dict) -> list:
+    """Extract records from both flat and wrapped first-party API responses."""
+    paths = src.get("api_items_path", ["data", "items", "results"])
+    if isinstance(paths, str):
+        paths = [paths]
+    if isinstance(payload, list):
+        return payload
+    for path in paths:
+        candidate = _object_path(payload, path)
+        if isinstance(candidate, list):
+            return candidate
+    return []
+
+
+def _api_endpoints(src: dict) -> list[str]:
+    """Expand an endpoint template into a bounded set of discovery pages."""
+    configured = src.get("api_endpoints")
+    if configured:
+        return [str(endpoint) for endpoint in configured]
     endpoint = src.get("api_endpoint")
-    if not endpoint:
+    pages = int(src.get("api_endpoint_pages", 1))
+    if pages <= 1:
+        return [endpoint] if endpoint else []
+    start = int(src.get("api_page_start", 1))
+    page_param = str(src.get("api_page_param", "page"))
+    endpoints = []
+    for page in range(start, start + pages):
+        if "{page}" in endpoint:
+            endpoints.append(endpoint.format(page=page))
+        else:
+            separator = "&" if "?" in endpoint else "?"
+            endpoints.append(f"{endpoint}{separator}{page_param}={page}")
+    return endpoints
+
+
+def harvest_json_source(src: dict, force: bool = False):
+    endpoints = _api_endpoints(src)
+    if not endpoints:
         logging.warning("  missing api_endpoint for %s", src.get("name"))
         return []
 
     src_name = src.get("name", "")
-    logging.info("Harvest API: %s — %s", src_name, endpoint)
+    endpoint = endpoints[0]
+    logging.info("Harvest API: %s — %s", src_name, ", ".join(endpoints))
 
     headers = {
         "User-Agent": USER_AGENT,
         "Accept": "application/json",
         "Accept-Language": "ru,en;q=0.9",
     }
-    host = urlparse(endpoint).netloc
-    delay = HOST_DELAY_OVERRIDES.get(host, HOST_DELAY_DEFAULT)
-    now = time.time()
-    sleep_for = _last_req_at[host] + delay - now
-    if sleep_for > 0:
-        time.sleep(sleep_for)
-
+    payloads = []
+    response_texts = []
     try:
-        resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
-        _last_req_at[host] = time.time()
-        if resp.status_code == 429:
-            ra = resp.headers.get("Retry-After")
-            try:
-                wait = int(ra) if ra else 5
-            except ValueError:
-                wait = 5
-            logging.warning("429 Too Many Requests (API): %s -> sleep %ss", endpoint, wait)
-            time.sleep(wait)
+        for endpoint in endpoints:
+            host = urlparse(endpoint).netloc
+            delay = HOST_DELAY_OVERRIDES.get(host, HOST_DELAY_DEFAULT)
+            sleep_for = _last_req_at[host] + delay - time.time()
+            if sleep_for > 0:
+                time.sleep(sleep_for)
             resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
             _last_req_at[host] = time.time()
-        resp.raise_for_status()
+            if resp.status_code == 429:
+                ra = resp.headers.get("Retry-After")
+                try:
+                    wait = int(ra) if ra else 5
+                except ValueError:
+                    wait = 5
+                logging.warning(
+                    "429 Too Many Requests (API): %s -> sleep %ss", endpoint, wait
+                )
+                time.sleep(wait)
+                resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
+                _last_req_at[host] = time.time()
+            resp.raise_for_status()
+            response_texts.append(resp.text)
+            payloads.append(resp.json())
+    except ValueError as exc:
+        logging.error("  invalid JSON for %s: %s", src.get("name"), exc)
+        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
+        SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
+        if src.get("html_fallback_on_empty_api"):
+            return harvest_source(src, force=ARGS.rebuild if ARGS else False)
+        return []
     except requests.RequestException as exc:
         logging.warning("API fetch failed for %s: %s", src_name, exc)
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
@@ -1883,29 +2064,24 @@ def harvest_json_source(src: dict, force: bool = False):
             return harvest_source(src, force=ARGS.rebuild if ARGS else False)
         raise
 
-    text = resp.text
+    text = "\n".join(response_texts)
     SOURCE_SUMMARY[src_name]["index_fetch_status"] = "fetched"
     idx_digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
     ih = STATE.setdefault("index_hash", {})
-    if not force and ih.get(endpoint) == idx_digest:
+    digest_key = "|".join(endpoints)
+    if not force and ih.get(digest_key) == idx_digest:
         logging.info("Index unchanged (API): %s — %s", src.get("name"), endpoint)
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "unchanged"
         return []
-    ih[endpoint] = idx_digest
+    ih[digest_key] = idx_digest
 
-    try:
-        payload = resp.json()
-    except ValueError as exc:
-        logging.error("  invalid JSON for %s: %s", src.get("name"), exc)
-        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
-        SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
-        if src.get("html_fallback_on_empty_api"):
-            logging.info("API invalid JSON for %s — falling back to HTML index", src_name)
-            return harvest_source(src, force=ARGS.rebuild if ARGS else False)
-        return []
-
-    data = payload.get("data") if isinstance(payload, dict) else payload
-    if not isinstance(data, list):
+    data = []
+    for payload in payloads:
+        data.extend(_api_items(payload, src))
+    invalid_payload = payloads and not data and any(
+        not isinstance(payload, (dict, list)) for payload in payloads
+    )
+    if not isinstance(data, list) or invalid_payload:
         logging.warning("  unexpected API payload for %s", src.get("name"))
         if src.get("html_fallback_on_empty_api"):
             logging.info("API unexpected payload for %s — falling back to HTML index", src_name)
@@ -2079,13 +2255,15 @@ def harvest_json_source(src: dict, force: bool = False):
             parsed_dt = None
             if date_val:
                 parsed_dt = _parse_datetime_signal(
-                    date_val, "api:date", url=url, source=src_name
+                    date_val, "api:date", url=url, source=src_name,
+                    diagnostics=PublicationDiagnostics(src_name),
                 )
             if not parsed_dt:
                 human_date = _first_non_empty(containers, API_DATE_HUMAN_KEYS)
                 if human_date:
                     parsed_dt = try_parse_any_date(
-                        [human_date], url=url, source=src_name, signal="api:human_date"
+                        [human_date], url=url, source=src_name, signal="api:human_date",
+                        diagnostics=PublicationDiagnostics(src_name),
                     )
             if parsed_dt:
                 item["published_at"] = parsed_dt.isoformat()
@@ -2229,7 +2407,7 @@ def extract_index_links(
 
 
 def harvest_source(src: dict, force: bool = False):
-    stats = STATE.setdefault("stats", {})
+    stats = SESSION_STATE.setdefault("stats", {})
     cooldowns = stats.setdefault("cooldowns", {})
     errors = stats.setdefault("errors", [])
 
@@ -2445,7 +2623,7 @@ def harvest_source(src: dict, force: bool = False):
                     return []
 
             except SourceTemporarilyUnavailable as exc:
-                failures = STATE.setdefault("stats", {}).setdefault("errors", [])
+                failures = SESSION_STATE.setdefault("stats", {}).setdefault("errors", [])
                 logging.warning(
                     "Temporary unavailability for %s: %s", src.get("name"), exc
                 )
@@ -2699,6 +2877,15 @@ def write_source_health_report(sources: list[dict]) -> None:
             "empty_rejections": summary.get("empty", 0),
             "short_rejections": summary.get("short", 0),
             "future_date_rejections": summary.get("future_date_rejections", 0),
+            "publication_rejections_by_signal": summary.get(
+                "publication_rejections_by_signal", {}
+            ),
+            "publication_rejection_samples": summary.get(
+                "publication_rejection_samples", []
+            ),
+            "maximum_future_offset_seconds": summary.get(
+                "maximum_future_offset_seconds", 0
+            ),
             "cached_fallback_used": bool(summary.get("cached_fallback_used", False)),
             "last_error": summary.get("last_error"),
         })
@@ -2972,7 +3159,7 @@ def main():
             logging.error("  !! Failed: %s (%s)", src.get("name"), e)
             SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
             SOURCE_SUMMARY[src_name]["last_error"] = str(e)
-            STATE.setdefault("stats", {}).setdefault("errors", []).append({"source": src.get("name"), "url": src.get("start_url"), "error": str(e)})
+            SESSION_STATE.setdefault("stats", {}).setdefault("errors", []).append({"source": src.get("name"), "url": src.get("start_url"), "error": str(e)})
 
     if selected_sources and ARGS.sources:
         missing = selected_sources - seen_source_names

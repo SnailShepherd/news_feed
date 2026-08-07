@@ -45,7 +45,12 @@ def test_source_index_and_article_contract(source, monkeypatch):
     """Use production harvesting with captured index and article responses only."""
     directory = fixture_dir(source)
     expected = json.loads((directory / "expected.json").read_text())
-    index = (directory / "index.html").read_text()
+    index = (directory / expected.get("discovery_fixture", "index.html")).read_text()
+    fallback = (
+        (directory / expected["fallback_fixture"]).read_text()
+        if expected.get("fallback_fixture")
+        else None
+    )
     article = (directory / "article.html").read_text()
 
     assert expected["capture_date"] == "2026-08-06"
@@ -53,6 +58,8 @@ def test_source_index_and_article_contract(source, monkeypatch):
     def fixture_fetch(url, src=None):
         if url == source["start_url"]:
             return index
+        if fallback is not None and url in source.get("fallback_start_urls", []):
+            return fallback
         if url.rstrip("/") == expected["article_url"].rstrip("/"):
             return article
         raise AssertionError(f"offline contract attempted an unexpected request: {url}")
@@ -70,6 +77,9 @@ def test_source_index_and_article_contract(source, monkeypatch):
     assert aggregate._word_count(item["content_text"]) > int(
         source.get("min_words", aggregate.DEFAULT_MIN_WORDS)
     )
+
+    if source["name"] in {"Гостинформ", "Интерфакс-Недвижимость", "Металлоснабжение и сбыт", "ЕРЗ.РФ", "РИА СТК"}:
+        assert expected["capture_kind"] == "sanitized first-party discovery response"
 
 
 def test_xml_fallback_index_contract(monkeypatch):
@@ -201,6 +211,33 @@ def test_challenge_response_does_not_overwrite_valid_cached_index(monkeypatch, t
         "cached": True,
     }]
     assert aggregate.SOURCE_SUMMARY[source["name"]]["cached_fallback_used"] is True
+@pytest.mark.parametrize(
+    "source",
+    [source for source in SOURCES if source["name"] in {
+        "Гостинформ", "Интерфакс-Недвижимость", "Металлоснабжение и сбыт", "ЕРЗ.РФ", "РИА СТК"
+    }],
+    ids=lambda source: source["name"],
+)
+def test_configured_fallback_discovery_contract(source, monkeypatch):
+    """Each configured alternate index remains a usable production discovery path."""
+    directory = fixture_dir(source)
+    expected = json.loads((directory / "expected.json").read_text())
+    index = (directory / expected["fallback_fixture"]).read_text()
+    article = (directory / "article.html").read_text()
+    fallback_url = source["fallback_start_urls"][0]
+    fallback_source = dict(source, start_url=fallback_url, fallback_start_urls=[])
+
+    def fixture_fetch(url, src=None):
+        if url == fallback_url:
+            return index
+        if url.rstrip("/") == expected["article_url"].rstrip("/"):
+            return article
+        raise AssertionError(f"offline fallback attempted an unexpected request: {url}")
+
+    monkeypatch.setattr(aggregate, "fetch_page", fixture_fetch)
+    monkeypatch.setattr(aggregate, "fetch_amp_if_available", lambda *args, **kwargs: (None, None))
+    items = aggregate.harvest_source(fallback_source, force=True)
+    assert expected["article_url"] in [item["url"] for item in items]
 
 
 def test_faufcc_api_response_contract(monkeypatch):

@@ -232,3 +232,71 @@ def test_api_short_payload_triggers_html_fallback(monkeypatch):
     assert call_counter["fetch"] == 1
     assert call_counter["fallback"] == 1
     assert items == [fallback_item]
+
+
+def test_nested_api_items_and_multiple_endpoint_pages(monkeypatch):
+    """Wrapped records from every configured first-party API page are harvested."""
+    pages = {
+        "https://example.test/api/news?page=1": {"result": {"items": [{"url": "/news/one", "title": "One", "content": "word " * 30}]}},
+        "https://example.test/api/news?page=2": {"result": {"items": [{"url": "/news/two", "title": "Two", "content": "word " * 30}]}},
+    }
+
+    class Response:
+        status_code = 200
+        headers = {}
+        def __init__(self, payload):
+            self.payload = payload
+            self.text = json.dumps(payload)
+        def json(self):
+            return self.payload
+        def raise_for_status(self):
+            return None
+
+    monkeypatch.setattr(aggregate.SESSION, "get", lambda url, **kwargs: Response(pages[url]))
+    src = {
+        "name": "Nested API", "base_url": "https://example.test",
+        "start_url": "https://example.test/news", "api_endpoint": "https://example.test/api/news",
+        "api_endpoint_pages": 2, "api_items_path": "result.items", "min_words": 5,
+    }
+    aggregate.SOURCE_MIN_WORDS[src["name"]] = 5
+    items = aggregate.harvest_json_source(src, force=True)
+    assert {item["url"] for item in items} == {"https://example.test/news/one", "https://example.test/news/two"}
+
+
+def test_multiple_api_pages_are_throttled_per_host(monkeypatch):
+    """Every page request observes the configured host delay."""
+    clock = {"now": 100.0}
+    request_times = []
+
+    class Response:
+        status_code = 200
+        headers = {}
+        text = '{"items": []}'
+
+        def json(self):
+            return {"items": []}
+
+        def raise_for_status(self):
+            return None
+
+    def fake_sleep(seconds):
+        clock["now"] += seconds
+
+    def fake_get(*args, **kwargs):
+        request_times.append(clock["now"])
+        return Response()
+
+    monkeypatch.setattr(aggregate.time, "time", lambda: clock["now"])
+    monkeypatch.setattr(aggregate.time, "sleep", fake_sleep)
+    monkeypatch.setattr(aggregate.SESSION, "get", fake_get)
+    monkeypatch.setattr(aggregate, "HOST_DELAY_DEFAULT", 2.5)
+
+    src = {
+        "name": "Throttled API",
+        "base_url": "https://example.test",
+        "api_endpoint": "https://example.test/api/news",
+        "api_endpoint_pages": 3,
+    }
+    aggregate.harvest_json_source(src, force=True)
+
+    assert request_times == [100.0, 102.5, 105.0]
