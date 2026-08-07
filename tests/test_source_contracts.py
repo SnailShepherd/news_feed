@@ -53,7 +53,12 @@ def test_source_index_and_article_contract(source, monkeypatch):
     )
     article = (directory / "article.html").read_text()
 
-    assert expected["capture_date"] == "2026-08-06"
+    expected_capture = (
+        "2026-08-07"
+        if source["name"] == "Парламентская газета: Экономика"
+        else "2026-08-06"
+    )
+    assert expected["capture_date"] == expected_capture
 
     def fixture_fetch(url, src=None):
         if url == source["start_url"]:
@@ -77,6 +82,13 @@ def test_source_index_and_article_contract(source, monkeypatch):
     assert aggregate._word_count(item["content_text"]) > int(
         source.get("min_words", aggregate.DEFAULT_MIN_WORDS)
     )
+
+    if source["name"] == "Парламентская газета: Экономика":
+        assert source["content_selectors"][0] == ".js-mediator-article"
+        assert "Количество же неработающих пенсионеров" in item["content_text"]
+        assert "Средний размер назначенной пенсии" in item["content_text"]
+        assert "Минтруд предложил расширить категории лиц" not in item["content_text"]
+        assert "Интересное за неделю" not in item["content_text"]
 
     if source["name"] in {"Гостинформ", "Интерфакс-Недвижимость", "Металлоснабжение и сбыт", "ЕРЗ.РФ", "РИА СТК"}:
         assert expected["capture_kind"] == "sanitized first-party discovery response"
