@@ -79,6 +79,7 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
         "index_fetch_status": "not_attempted",
         "raw_link_candidates": 0,
         "accepted_links": 0,
+        "index_attempts": [],
         "attempted_articles": 0,
         "cached_fallback_used": False,
         "future_date_rejections": 0,
@@ -2322,6 +2323,89 @@ def harvest_json_source(src: dict, force: bool = False):
     return items
 
 
+def extract_index_links(
+    index_html: str, src: dict, *, index_url: str | None = None
+) -> tuple[list[str], int, int]:
+    """Normalize and filter article links from one index candidate.
+
+    The returned counts describe candidates before and after source policy is
+    applied. Accepted links retain document order and duplicates; callers may
+    deduplicate them after recording diagnostics.
+    """
+    soup = _parse_index_soup(index_html)
+    include_patterns = src.get("include_patterns")
+    if include_patterns:
+        if isinstance(include_patterns, (str, bytes)):
+            include_patterns = [include_patterns]
+        else:
+            include_patterns = [pattern for pattern in include_patterns if pattern]
+    else:
+        include_patterns = []
+
+    def compile_patterns(setting: str) -> list[re.Pattern]:
+        configured = src.get(setting)
+        if not configured:
+            return []
+        patterns = [configured] if isinstance(configured, (str, bytes)) else configured
+        compiled = []
+        for pattern in patterns:
+            if not pattern:
+                continue
+            try:
+                compiled.append(re.compile(pattern))
+            except re.error as exc:
+                logging.warning("Invalid %s %r for %s: %s", setting, pattern, src.get("name"), exc)
+        return compiled
+
+    include_res = compile_patterns("include_regex")
+    exclude_res = compile_patterns("exclude_regex")
+    raw_candidates: list[tuple[str, str, bool]] = []
+    for anchor in soup.find_all("a"):
+        href = anchor.get("href")
+        if href:
+            raw_candidates.append((href, anchor.get_text(strip=True) or "", True))
+    for tag_name in ("loc", "link"):
+        for tag in soup.find_all(tag_name):
+            value = tag.get_text(strip=True)
+            if value.startswith("http"):
+                raw_candidates.append((value, value, False))
+    if src.get("parse_embedded_links"):
+        include_snippets = [str(pattern) for pattern in include_patterns]
+        for expanded_html in _embedded_text_variants(index_html):
+            raw_candidates.extend(
+                (match, "", False)
+                for match in re.findall(r'https?://[^\s"\'<>]+', expanded_html)
+            )
+            for relative in re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html):
+                if not include_snippets or any(part in relative for part in include_snippets):
+                    raw_candidates.append((relative, "", False))
+
+    base_url = src["base_url"]
+    base_host = urlparse(base_url).netloc.removeprefix("www.")
+    current_index = index_url or src["start_url"]
+    accepted = []
+    for raw_href, link_text, is_anchor in raw_candidates:
+        href = urljoin(base_url, raw_href)
+        if href.rstrip("/") == current_index.rstrip("/") or is_listing_url(href, start_url=current_index):
+            continue
+        if src.get("restrict_domain"):
+            host = urlparse(href).netloc.removeprefix("www.")
+            if host != base_host:
+                continue
+        if include_patterns and not any(pattern in href for pattern in include_patterns):
+            continue
+        if include_res and not any(pattern.search(href) for pattern in include_res):
+            continue
+        if exclude_res and any(pattern.search(href) for pattern in exclude_res):
+            continue
+        if is_anchor:
+            min_len = int(src.get("link_min_text_len", 0))
+            if len(link_text) < min_len and not src.get("accept_empty_anchor"):
+                continue
+        accepted.append(href)
+    return accepted, len(raw_candidates), len(accepted)
+
+
 def harvest_source(src: dict, force: bool = False):
     stats = SESSION_STATE.setdefault("stats", {})
     cooldowns = stats.setdefault("cooldowns", {})
@@ -2340,6 +2424,7 @@ def harvest_source(src: dict, force: bool = False):
     now = time.time()
     use_only_cache = False
     index_html = None
+    links = None
     if cooldown_until and cooldown_until > now:
         until_dt = datetime.fromtimestamp(cooldown_until, timezone.utc)
         if cache_path.exists():
@@ -2388,35 +2473,57 @@ def harvest_source(src: dict, force: bool = False):
                 candidate_url,
             )
             try:
-                candidate_html = fetch_page(candidate_url, src=src)
                 candidate_cache_path = PAGES_DIR / cache_key_for(candidate_url)
-                candidate_raw_links = _count_index_candidates(
-                    candidate_html,
-                    parse_embedded_links=bool(src.get("parse_embedded_links")),
+                # fetch_page writes successful responses to this path. Snapshot a
+                # known-good index first so an HTTP-200 challenge page cannot
+                # destroy the only usable cached copy before validation.
+                prior_candidate_html = (
+                    candidate_cache_path.read_text(encoding="utf-8")
+                    if candidate_cache_path.exists()
+                    else None
                 )
-                if candidate_raw_links == 0 and candidate_cache_path.exists():
-                    cached_candidate_html = candidate_cache_path.read_text(encoding="utf-8")
-                    cached_raw_links = _count_index_candidates(
-                        cached_candidate_html,
-                        parse_embedded_links=bool(src.get("parse_embedded_links")),
+                candidate_html = fetch_page(candidate_url, src=src)
+                candidate_links, candidate_raw_links, candidate_accepted_links = extract_index_links(
+                    candidate_html, src, index_url=candidate_url
+                )
+                candidate_used_cache = False
+                if candidate_accepted_links == 0 and prior_candidate_html is not None:
+                    cached_links, cached_raw_links, cached_accepted_links = extract_index_links(
+                        prior_candidate_html, src, index_url=candidate_url
                     )
-                    if cached_raw_links > 0:
+                    if cached_accepted_links > 0:
                         logging.warning(
-                            "Index candidate empty for %s: %s -> using cached index with %d raw links",
+                            "Index candidate has no accepted links for %s: %s -> using cached index with %d accepted links",
                             src.get("name"),
                             candidate_url,
-                            cached_raw_links,
+                            cached_accepted_links,
                         )
-                        candidate_html = cached_candidate_html
+                        candidate_html = prior_candidate_html
+                        candidate_links = cached_links
                         candidate_raw_links = cached_raw_links
-                if candidate_raw_links == 0 and candidate_idx < len(start_candidates):
+                        candidate_accepted_links = cached_accepted_links
+                        candidate_used_cache = True
+                        candidate_cache_path.write_text(prior_candidate_html, encoding="utf-8")
+                candidate_attempt = {
+                    "url": candidate_url,
+                    "raw_link_candidates": candidate_raw_links,
+                    "accepted_links": candidate_accepted_links,
+                }
+                if candidate_used_cache:
+                    candidate_attempt["cached"] = True
+                    SOURCE_SUMMARY[src_name]["cached_fallback_used"] = True
+                SOURCE_SUMMARY[src_name]["index_attempts"].append(candidate_attempt)
+                if candidate_accepted_links == 0:
                     logging.warning(
-                        "Index candidate produced 0 raw links for %s: %s -> trying fallback",
+                        "Index candidate produced 0 accepted article links for %s: %s",
                         src.get("name"),
                         candidate_url,
                     )
                     continue
                 index_html = candidate_html
+                links = candidate_links
+                SOURCE_SUMMARY[src_name]["raw_link_candidates"] = candidate_raw_links
+                SOURCE_SUMMARY[src_name]["accepted_links"] = candidate_accepted_links
                 SOURCE_SUMMARY[src_name]["index_fetch_status"] = "fetched"
                 if candidate_url != src["start_url"]:
                     logging.info("Index fetched via fallback URL for %s: %s", src.get("name"), candidate_url)
@@ -2425,9 +2532,18 @@ def harvest_source(src: dict, force: bool = False):
                 break
             except (requests.RequestException, SourceTemporarilyUnavailable) as exc:
                 last_exc = exc
+                SOURCE_SUMMARY[src_name]["index_attempts"].append({
+                    "url": candidate_url,
+                    "raw_link_candidates": 0,
+                    "accepted_links": 0,
+                    "error": str(exc),
+                })
                 logging.warning("Index candidate failed for %s: %s (%s)", src.get("name"), candidate_url, exc)
 
-        if index_html is None and last_exc is not None:
+        all_candidates_failed = SOURCE_SUMMARY[src_name]["index_attempts"] and all(
+            "error" in attempt for attempt in SOURCE_SUMMARY[src_name]["index_attempts"]
+        )
+        if index_html is None and last_exc is not None and all_candidates_failed:
             SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
             SOURCE_SUMMARY[src_name]["last_error"] = str(last_exc)
             try:
@@ -2505,6 +2621,7 @@ def harvest_source(src: dict, force: bool = False):
                         }
                     )
                     return []
+
             except SourceTemporarilyUnavailable as exc:
                 failures = SESSION_STATE.setdefault("stats", {}).setdefault("errors", [])
                 logging.warning(
@@ -2539,6 +2656,11 @@ def harvest_source(src: dict, force: bool = False):
                     )
                     return []
 
+        if index_html is None:
+            SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
+            SOURCE_SUMMARY[src_name]["last_error"] = "no accepted article links in index candidates"
+            return []
+
     # Если содержимое ленты не изменилось — пропускаем весь источник
     idx_digest = hashlib.sha256(index_html.encode("utf-8")).hexdigest()
     ih = STATE.setdefault("index_hash", {})
@@ -2548,114 +2670,25 @@ def harvest_source(src: dict, force: bool = False):
         return []
     ih[src["start_url"]] = idx_digest
 
-    # XML/HTML автодетект
-    soup = _parse_index_soup(index_html)
-
-    # Collect candidate links
-    links = []
-    include_patterns = src.get("include_patterns")
-    if include_patterns:
-        if isinstance(include_patterns, (str, bytes)):
-            include_patterns = [include_patterns]
-        else:
-            include_patterns = [p for p in include_patterns if p]
-    else:
-        include_patterns = []
-
-    include_regex = src.get("include_regex")
-    include_res = []
-    if include_regex:
-        raw_patterns = (
-            [include_regex]
-            if isinstance(include_regex, (str, bytes))
-            else [p for p in include_regex if p]
+    # Cached/cooldown indexes have not gone through candidate selection above.
+    if links is None:
+        links, raw_count, accepted_count = extract_index_links(
+            index_html, src, index_url=start_url
         )
-        for pattern in raw_patterns:
-            try:
-                include_res.append(re.compile(pattern))
-            except re.error as exc:
-                logging.warning(
-                    "Invalid include_regex %r for %s: %s",
-                    pattern,
-                    src.get("name"),
-                    exc,
-                )
-
-    exclude_regex = src.get("exclude_regex")
-    exclude_res = []
-    if exclude_regex:
-        raw_patterns = (
-            [exclude_regex]
-            if isinstance(exclude_regex, (str, bytes))
-            else [p for p in exclude_regex if p]
-        )
-        for pattern in raw_patterns:
-            try:
-                exclude_res.append(re.compile(pattern))
-            except re.error as exc:
-                logging.warning(
-                    "Invalid exclude_regex %r for %s: %s",
-                    pattern,
-                    src.get("name"),
-                    exc,
-                )
-
-    raw_candidates: list[tuple[str, str, bool]] = []
-    for a in soup.find_all("a"):
-        href = a.get("href")
-        if not href:
-            continue
-        raw_candidates.append((href, a.get_text(strip=True) or "", True))
-
-    for tag_name in ("loc", "link"):
-        for tag in soup.find_all(tag_name):
-            text = tag.get_text(strip=True)
-            if text.startswith("http"):
-                raw_candidates.append((text, text, False))
-
-    # Some protected/dynamic pages expose URLs only inside JSON blobs (e.g. script data).
-    if src.get("parse_embedded_links"):
-        include_snippets = [str(pattern) for pattern in include_patterns if pattern]
-        for expanded_html in _embedded_text_variants(index_html):
-            for match in re.findall(r'https?://[^\s"\'<>]+', expanded_html):
-                raw_candidates.append((match, "", False))
-
-            for rel in re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html):
-                if include_snippets and not any(snippet in rel for snippet in include_snippets):
-                    continue
-                raw_candidates.append((rel, "", False))
-
-    base_host = urlparse(src["base_url"]).netloc.replace("www.", "")
-    for raw_href, link_text, is_anchor in raw_candidates:
-        href = urljoin(src["base_url"], raw_href)
-        if href.rstrip("/") == start_url.rstrip("/"):
-            SOURCE_SUMMARY[src_name]["listing"] += 1
-            continue
-        if is_listing_url(href, start_url=start_url):
-            SOURCE_SUMMARY[src_name]["listing"] += 1
-            if ARGS and getattr(ARGS, "debug", False):
-                logging.debug("Filtered listing URL: %s", href)
-            continue
-        if src.get("restrict_domain"):
-            h = urlparse(href).netloc.replace("www.", "")
-            if h != base_host:
-                continue
-        if include_patterns and not any(p in href for p in include_patterns):
-            continue
-        if include_res and not any(r.search(href) for r in include_res):
-            continue
-        if exclude_res and any(r.search(href) for r in exclude_res):
-            continue
-        if is_anchor:
-            # Allow empty anchors when source explicitly permits it.
-            min_len = int(src.get("link_min_text_len", 0))
-            if len(link_text) < min_len and not src.get("accept_empty_anchor"):
-                continue
-        links.append(href)
-
-    logging.info("Link extraction stats for %s: raw=%d accepted=%d", src_name, len(raw_candidates), len(links))
-    SOURCE_SUMMARY[src_name]["raw_link_candidates"] = len(raw_candidates)
-    SOURCE_SUMMARY[src_name]["accepted_links"] = len(links)
+        SOURCE_SUMMARY[src_name]["raw_link_candidates"] = raw_count
+        SOURCE_SUMMARY[src_name]["accepted_links"] = accepted_count
+        SOURCE_SUMMARY[src_name]["index_attempts"].append({
+            "url": start_url,
+            "raw_link_candidates": raw_count,
+            "accepted_links": accepted_count,
+            "cached": use_only_cache,
+        })
+    logging.info(
+        "Link extraction stats for %s: raw=%d accepted=%d",
+        src_name,
+        SOURCE_SUMMARY[src_name]["raw_link_candidates"],
+        SOURCE_SUMMARY[src_name]["accepted_links"],
+    )
 
     # Dedup and limit
     uniq = []
@@ -2838,6 +2871,7 @@ def write_source_health_report(sources: list[dict]) -> None:
             "consecutive_failures": streaks[name],
             "raw_link_candidates": summary.get("raw_link_candidates", 0),
             "accepted_links": summary.get("accepted_links", 0),
+            "index_attempts": summary.get("index_attempts", []),
             "attempted_articles": attempted,
             "accepted_articles": accepted,
             "empty_rejections": summary.get("empty", 0),
