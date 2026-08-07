@@ -38,13 +38,11 @@ def test_ensure_state_keys_adds_missing_fields(monkeypatch):
     aggregate.ensure_state_keys(legacy_state)
     for required in [
         "headers",
-        "stats",
         "index_hash",
         "seen_urls",
         "candidate_urls",
         "url_states",
         "first_seen",
-        "host_state",
         "aliases",
         "content_hashes",
         "canonical_item_ids",

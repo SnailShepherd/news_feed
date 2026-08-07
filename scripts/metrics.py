@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import pathlib
 from datetime import datetime, timedelta, timezone
 from typing import Any, Tuple
@@ -78,32 +79,100 @@ def compute_source_metrics(
             if timestamp is not None:
                 timestamps.append(timestamp)
         newest = max(timestamps, default=None)
+        expected_update_hours = source.get("expected_update_hours")
+        freshness_window = stale_after
+        if expected_update_hours is not None:
+            freshness_window = timedelta(hours=max(0, float(expected_update_hours)))
+        freshness_status = (
+            "no_data"
+            if newest is None
+            else "stale"
+            if newest < now - freshness_window
+            else "fresh"
+        )
         report.append(
             {
                 "source": name,
-                "item_count": len(source_items),
+                "retained_item_count": len(source_items),
                 "newest_timestamp": newest.isoformat() if newest else None,
-                "stale": newest is not None and newest < now - stale_after,
+                "freshness_status": freshness_status,
+                "expected_min_candidates": source.get("expected_min_candidates"),
+                "expected_update_hours": expected_update_hours,
+                # Bounded feeds are allowed to omit a source unless its
+                # configuration explicitly opts in to an emptiness check.
+                # Preserve an omitted value so the global CLI check can tell it
+                # apart from an explicit per-source exemption.
+                "allow_empty": source.get("allow_empty"),
             }
         )
     totals = {
         "enabled_sources": len(report),
-        "sources_with_items": sum(row["item_count"] > 0 for row in report),
-        "sources_without_items": sum(row["item_count"] == 0 for row in report),
-        "stale_sources": sum(row["stale"] for row in report),
+        "sources_with_items": sum(row["retained_item_count"] > 0 for row in report),
+        "sources_without_items": sum(row["retained_item_count"] == 0 for row in report),
+        "stale_sources": sum(row["freshness_status"] == "stale" for row in report),
+        "sources_without_freshness_data": sum(
+            row["freshness_status"] == "no_data" for row in report
+        ),
     }
     return totals, report
 
 
 def find_unexpected_empty_sources(
-    source_report: list[dict[str, Any]], allow_empty: set[str]
+    source_report: list[dict[str, Any]],
+    allow_empty: set[str],
+    *,
+    fail_on_all: bool = False,
 ) -> list[str]:
-    """List empty enabled sources that are not explicitly exempted."""
+    """List empty sources selected by per-source or global enforcement."""
     return [
         str(row["source"])
         for row in source_report
-        if row["item_count"] == 0 and row["source"] not in allow_empty
+        if row["retained_item_count"] == 0
+        and row["source"] not in allow_empty
+        and (
+            row.get("allow_empty") is False
+            or (fail_on_all and row.get("allow_empty") is not True)
+        )
     ]
+
+
+def merge_current_crawl_metrics(
+    source_report: list[dict[str, Any]], health_rows: list[dict[str, Any]]
+) -> None:
+    """Attach current-run discovery and acceptance counts to retained rows."""
+    health_by_source = {str(row.get("source", "")): row for row in health_rows}
+    for row in source_report:
+        health = health_by_source.get(str(row["source"]))
+        row["raw_link_candidates"] = (
+            int(health.get("raw_link_candidates") or 0) if health is not None else None
+        )
+        row["accepted_articles"] = (
+            int(health.get("accepted_articles") or 0) if health is not None else None
+        )
+
+
+def find_source_expectation_failures(source_report: list[dict[str, Any]]) -> list[str]:
+    """Return violations of opt-in per-source crawl/freshness expectations."""
+    failures: list[str] = []
+    for row in source_report:
+        name = str(row["source"])
+        minimum = row.get("expected_min_candidates")
+        discovered = row.get("raw_link_candidates")
+        if minimum is not None:
+            if discovered is None:
+                failures.append(
+                    f"{name}: no current-crawl candidate count, expected at least {int(minimum)}"
+                )
+            elif discovered < int(minimum):
+                failures.append(
+                    f"{name}: discovered {discovered} candidates, expected at least {int(minimum)}"
+                )
+        if row.get("expected_update_hours") is not None and row["freshness_status"] != "fresh":
+            failures.append(
+                f"{name}: freshness is {row['freshness_status']}, expected an update within "
+                f"{row['expected_update_hours']} hours"
+            )
+    return failures
 
 
 def _load_source_health(path: pathlib.Path) -> list[dict[str, Any]]:
@@ -130,27 +199,50 @@ def classify_source_health(
         name = str(row.get("source") or "<unnamed>")
         status = str(row.get("index_fetch_status") or "not_attempted")
         error = row.get("last_error")
-        streak = int(row.get("consecutive_failures") or 0)
+        legacy_streak = int(row.get("consecutive_failures") or 0)
+        fetch_streak = int(row.get("consecutive_fetch_failures", legacy_streak) or 0)
+        discovery_streak = int(row.get("consecutive_discovery_failures") or 0)
+        article_streak = int(row.get("consecutive_article_failures", legacy_streak) or 0)
         attempted = int(row.get("attempted_articles") or 0)
         accepted = int(row.get("accepted_articles") or 0)
-        article_outage = attempted > 0 and accepted == 0 and bool(error)
+        raw_candidates = int(row.get("raw_link_candidates") or 0)
+        accepted_links = int(row.get("accepted_links") or 0)
+        discovery_at = row.get("last_successful_discovery_at") or "unknown"
+        article_outage = attempted > 0 and accepted == 0
         failure_kind = "article crawl failed" if article_outage else status
         hard_status = status in {"failed", "parser_error", "not_attempted"}
         if status == "skipped_selection":
-            pass
-        elif (hard_status or article_outage) and streak >= failure_threshold:
+            continue
+        elif hard_status and fetch_streak >= failure_threshold:
             detail = f" ({error})" if error else ""
-            failures.append(f"{name}: {failure_kind} for {streak} consecutive runs{detail}")
-        elif hard_status or article_outage:
+            failures.append(f"{name}: {status} for {fetch_streak} consecutive runs{detail}")
+        elif hard_status:
             warnings.append(
-                f"{name}: transient {failure_kind} (run {streak}/{failure_threshold})"
+                f"{name}: transient {status} (run {fetch_streak}/{failure_threshold})"
+            )
+        elif discovery_streak:
+            detail = (
+                f"raw candidates={raw_candidates}, accepted links={accepted_links}, "
+                f"last successful discovery={discovery_at}"
+            )
+            message = f"{name}: discovery failed for {discovery_streak} consecutive runs ({detail})"
+            if discovery_streak >= failure_threshold:
+                failures.append(message)
+            else:
+                warnings.append(f"{name}: transient discovery failure (run {discovery_streak}/{failure_threshold}; {detail})")
+        elif article_outage and article_streak >= failure_threshold:
+            detail = f" ({error})" if error else ""
+            failures.append(f"{name}: {failure_kind} for {article_streak} consecutive runs{detail}")
+        elif article_outage and article_streak:
+            warnings.append(
+                f"{name}: transient {failure_kind} (run {article_streak}/{failure_threshold})"
             )
         elif status == "cached" or row.get("cached_fallback_used"):
             warnings.append(f"{name}: cached fallback used")
         elif (
             status == "fetched"
             and attempted == 0
-            and int(row.get("raw_link_candidates") or 0) == 0
+            and raw_candidates == 0
         ):
             warnings.append(f"{name}: fetched index contained no link candidates")
         elif attempted > 0 and accepted == 0:
@@ -181,11 +273,11 @@ def main() -> int:
     parser.add_argument("--stale-hours", type=float, default=168, help="Age in hours after which a source is stale")
     parser.add_argument(
         "--allow-empty", action="append", default=[], metavar="SOURCE",
-        help="Source exempted when --fail-on-empty-source is enabled (repeat or comma-separated)",
+        help="Source exempted from empty-source enforcement (repeat or comma-separated)",
     )
     parser.add_argument(
         "--fail-on-empty-source", action="store_true",
-        help="Fail when an enabled source has no retained feed items (unsafe for bounded feeds)",
+        help="Globally fail when a non-exempt enabled source has no retained feed items",
     )
     parser.add_argument(
         "--source-health", metavar="PATH",
@@ -203,6 +295,10 @@ def main() -> int:
         "--baseline",
         help="Optional baseline feed JSON to enforce anti-genie rule (total can't drop except filtered listings)",
     )
+    parser.add_argument("--promote-feed", metavar="PATH", help="Replace this published feed only after every check passes")
+    parser.add_argument("--promote-source-health", metavar="PATH", help="Replace this published health report only after every check passes")
+    parser.add_argument("--candidate-state", metavar="PATH", help="Candidate crawler state to promote after validation")
+    parser.add_argument("--promote-state", metavar="PATH", help="Published crawler state replaced after validation")
     args = parser.parse_args()
 
     path = pathlib.Path(args.path)
@@ -223,9 +319,31 @@ def main() -> int:
     source_totals, source_report = compute_source_metrics(
         items, sources, stale_after=timedelta(hours=max(0, args.stale_hours))
     )
+
+    health_rows: list[dict[str, Any]] = []
+    if args.source_health:
+        health_path = pathlib.Path(args.source_health)
+        if not health_path.exists():
+            raise SystemExit(f"Source health file not found: {health_path}")
+        health_rows = _load_source_health(health_path)
+        merge_current_crawl_metrics(source_report, health_rows)
+
     for row in source_report:
         newest = row["newest_timestamp"] or "none"
-        print(f"source: {row['source']} | items={row['item_count']} | newest={newest} | stale={str(row['stale']).lower()}")
+        fields = [
+            f"source: {row['source']}",
+            f"retained_item_count={row['retained_item_count']}",
+            f"newest={newest}",
+            f"freshness_status={row['freshness_status']}",
+        ]
+        if args.source_health:
+            fields.extend(
+                [
+                    f"raw_link_candidates={row['raw_link_candidates']}",
+                    f"accepted_articles={row['accepted_articles']}",
+                ]
+            )
+        print(" | ".join(fields))
     for key, value in source_totals.items():
         print(f"{key}: {value}")
 
@@ -233,20 +351,19 @@ def main() -> int:
     allow_empty = {
         name.strip() for value in args.allow_empty for name in value.split(",") if name.strip()
     }
-    unexpected_empty = find_unexpected_empty_sources(source_report, allow_empty)
+    unexpected_empty = find_unexpected_empty_sources(
+        source_report, allow_empty, fail_on_all=args.fail_on_empty_source
+    )
     if unexpected_empty:
         print(f"unexpected_empty_sources: {', '.join(unexpected_empty)}")
-        if args.fail_on_empty_source:
-            exit_code = 1
+        exit_code = 1
 
     if args.source_health:
-        health_path = pathlib.Path(args.source_health)
-        if not health_path.exists():
-            raise SystemExit(f"Source health file not found: {health_path}")
-        health_rows = _load_source_health(health_path)
         failures, warnings = classify_source_health(
             health_rows, failure_threshold=max(1, args.failure_threshold)
         )
+        expectation_failures = find_source_expectation_failures(source_report)
+        failures.extend(expectation_failures)
         print(f"crawl_sources_reported: {len(health_rows)}")
         print(f"crawl_failures: {len(failures)}")
         print(f"crawl_warnings: {len(warnings)}")
@@ -271,6 +388,26 @@ def main() -> int:
         if not ok and message:
             print(f"anti_genie_violation: {message}")
             exit_code = 1
+
+    if exit_code == 0 and args.promote_feed:
+        if not all((args.source_health, args.promote_source_health, args.candidate_state, args.promote_state)):
+            parser.error(
+                "promotion requires --source-health, --promote-source-health, "
+                "--candidate-state, and --promote-state"
+            )
+        candidate_state = pathlib.Path(args.candidate_state)
+        if not candidate_state.exists():
+            raise SystemExit(f"Candidate state file not found: {candidate_state}")
+        # The crawler state belongs to the candidate feed. Advance it only when
+        # that feed passes validation, otherwise rejected URLs must be retried.
+        os.replace(candidate_state, args.promote_state)
+        # Both candidates have already parsed successfully. Replace health first
+        # and the public feed last, so a crash can never expose an unvalidated feed.
+        os.replace(args.source_health, args.promote_source_health)
+        os.replace(path, args.promote_feed)
+        print(f"promoted_feed: {args.promote_feed}")
+        print(f"promoted_source_health: {args.promote_source_health}")
+        print(f"promoted_state: {args.promote_state}")
 
     return exit_code
 

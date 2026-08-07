@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os, re, json, logging, pathlib, sys, hashlib, argparse, random, html
+import os, re, json, logging, pathlib, sys, hashlib, argparse, random, html, shutil
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse, parse_qsl, urlencode
 
@@ -42,7 +42,9 @@ DOCS_DIR = ROOT / "docs"
 CACHE_DIR = ROOT / ".cache"
 PAGES_DIR = CACHE_DIR / "pages"
 STATE_FILE = CACHE_DIR / "state.json"
+SOURCE_HEALTH_STATE_FILE = CACHE_DIR / "source-health-state.json"
 OUT_JSON = DOCS_DIR / "unified.json"
+EXISTING_FEED_JSON = OUT_JSON
 SOURCE_HEALTH_JSON = DOCS_DIR / "source-health.json"
 
 CONNECT_TIMEOUT = 5.0
@@ -77,9 +79,13 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
         "index_fetch_status": "not_attempted",
         "raw_link_candidates": 0,
         "accepted_links": 0,
+        "index_attempts": [],
         "attempted_articles": 0,
         "cached_fallback_used": False,
         "future_date_rejections": 0,
+        "publication_rejections_by_signal": {},
+        "publication_rejection_samples": [],
+        "maximum_future_offset_seconds": 0,
         "last_error": None,
     }
 )
@@ -93,7 +99,13 @@ HOST_MIN_WORD_OVERRIDES = {
     "faufcc.ru": 70,
 }
 PUBLICATION_CLOCK_SKEW = timedelta(
-    hours=float(os.environ.get("PUBLICATION_CLOCK_SKEW_HOURS", "24"))
+    minutes=float(os.environ.get("PUBLICATION_CLOCK_SKEW_MINUTES", "15"))
+)
+PUBLICATION_TIMEZONE_SKEW = timedelta(
+    hours=float(os.environ.get("PUBLICATION_TIMEZONE_SKEW_HOURS", "26"))
+)
+PUBLICATION_REJECTION_SAMPLE_LIMIT = int(
+    os.environ.get("PUBLICATION_REJECTION_SAMPLE_LIMIT", "5")
 )
 
 ESSENTIAL_ITEM_FIELDS = (
@@ -143,13 +155,11 @@ DOCS_DIR.mkdir(exist_ok=True)
 def ensure_state_keys(state: dict) -> dict:
     required_defaults = {
         "headers": {},
-        "stats": {},
         "index_hash": {},
         "seen_urls": {},
         "candidate_urls": {},
         "url_states": {},
         "first_seen": {},
-        "host_state": {},
         "aliases": {},
         "content_hashes": {},
         "canonical_item_ids": {},
@@ -304,12 +314,19 @@ if STATE_FILE.exists():
 else:
     STATE = {
         "headers": {},
-        "stats": {},
         "index_hash": {},
         "seen_urls": {},
     }
 
 STATE = ensure_state_keys(STATE)
+
+if SOURCE_HEALTH_STATE_FILE.exists():
+    SOURCE_HEALTH_STATE = json.loads(SOURCE_HEALTH_STATE_FILE.read_text(encoding="utf-8"))
+else:
+    # Migrate streaks out of the crawler cache without resetting escalation.
+    SOURCE_HEALTH_STATE = STATE.pop("source_health_streaks", {})
+if not isinstance(SOURCE_HEALTH_STATE, dict):
+    SOURCE_HEALTH_STATE = {}
 
 HOST_STRATEGIES: dict[str, RequestStrategy] = {}
 HOST_CLIENTS: dict[str, HostClient] = {}
@@ -367,7 +384,15 @@ HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
 }
 
 def save_state():
+    STATE.pop("source_health_streaks", None)
     STATE_FILE.write_text(json.dumps(STATE, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def save_source_health_state():
+    SOURCE_HEALTH_STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    SOURCE_HEALTH_STATE_FILE.write_text(
+        json.dumps(SOURCE_HEALTH_STATE, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 def prune_page_cache(*, now: float | None = None) -> tuple[int, int]:
@@ -540,7 +565,7 @@ def get_host_client(url: str, src: dict | None = None) -> HostClient | None:
         return None
     client = HOST_CLIENTS.get(strategy_host)
     if client is None:
-        client = HostClient(strategy_host, strategy, STATE)
+        client = HostClient(strategy_host, strategy, SESSION_STATE)
         HOST_CLIENTS[strategy_host] = client
     return client
 
@@ -849,6 +874,35 @@ def finalize_datetime(dt: datetime):
     return clamp_year(dt)
 
 
+@dataclass
+class PublicationDiagnostics:
+    """Explicit sink for diagnostics produced while parsing this crawl only."""
+
+    source: str
+
+    def reject(self, *, signal: str, raw_value: object, url: str, offset: timedelta) -> None:
+        summary = SOURCE_SUMMARY[self.source]
+        counts = summary.setdefault("publication_rejections_by_signal", {})
+        counts[signal] = int(counts.get(signal, 0) or 0) + 1
+        summary["future_date_rejections"] = sum(int(value) for value in counts.values())
+        offset_seconds = max(0, int(offset.total_seconds()))
+        summary["maximum_future_offset_seconds"] = max(
+            int(summary.get("maximum_future_offset_seconds", 0) or 0), offset_seconds
+        )
+        samples = summary.setdefault("publication_rejection_samples", [])
+        if len(samples) < max(0, PUBLICATION_REJECTION_SAMPLE_LIMIT):
+            samples.append({
+                "signal": signal,
+                "raw_value": str(raw_value),
+                "url": url,
+                "future_offset_seconds": offset_seconds,
+                "classification": (
+                    "timezone_scale_skew" if offset <= PUBLICATION_TIMEZONE_SKEW
+                    else "clearly_invalid_future_date"
+                ),
+            })
+
+
 def validate_publication_datetime(
     dt: datetime | None,
     *,
@@ -857,13 +911,16 @@ def validate_publication_datetime(
     source: str | None = None,
     signal: str = "unknown",
     now: datetime | None = None,
-    allowance: timedelta = PUBLICATION_CLOCK_SKEW,
+    allowance: timedelta = PUBLICATION_TIMEZONE_SKEW,
+    diagnostics: PublicationDiagnostics | None = None,
 ) -> datetime | None:
     """Return a normalized, plausible publication time, or reject it.
 
     ``now`` and ``allowance`` are injectable so callers and tests do not need
     to depend on wall-clock time. All extraction paths should pass through
-    this single boundary before a value is stored as ``published_at``.
+    this single boundary before a value is stored as ``published_at``. The
+    default accommodates timezone-scale metadata errors; signals known not to
+    contain a timezone can opt into the smaller clock-skew allowance.
     """
     dt = finalize_datetime(dt)
     if dt is None:
@@ -871,12 +928,15 @@ def validate_publication_datetime(
     reference = finalize_datetime(now or datetime.now(MSK))
     if dt > reference + allowance:
         rejection_count = 1
-        if source:
-            rejection_count = int(
-                SOURCE_SUMMARY[source].get("future_date_rejections", 0) or 0
-            ) + 1
-            SOURCE_SUMMARY[source]["future_date_rejections"] = rejection_count
-        if rejection_count <= 3:
+        if diagnostics is not None:
+            diagnostics.reject(
+                signal=signal,
+                raw_value=raw_value if raw_value is not None else dt.isoformat(),
+                url=url or "",
+                offset=dt - reference,
+            )
+            rejection_count = int(SOURCE_SUMMARY[diagnostics.source]["future_date_rejections"])
+        if diagnostics is not None and rejection_count <= 3:
             logging.warning(
                 "Reject future publication time value=%r url=%s source=%s signal=%s",
                 raw_value if raw_value is not None else dt.isoformat(),
@@ -884,7 +944,7 @@ def validate_publication_datetime(
                 source or "",
                 signal,
             )
-        elif rejection_count == 4:
+        elif diagnostics is not None and rejection_count == 4:
             logging.warning("Suppress further future-date warnings for source=%s", source or "")
         return None
     return dt
@@ -1527,7 +1587,10 @@ def extract_date_candidates(soup: BeautifulSoup):
         uniq.append(s)
     return uniq[:20]
 
-def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic", now=None):
+def try_parse_any_date(
+    candidates, *, url=None, source=None, signal="heuristic", now=None,
+    diagnostics=None,
+):
     default_base = make_aware_msk(datetime.now(MSK).replace(month=1, day=1, hour=0, minute=0, second=0, microsecond=0))
     for raw in candidates:
         s = raw.strip()
@@ -1536,17 +1599,17 @@ def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic",
             m = re.search(r"(\d{1,2}):(\d{2})", low)
             hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
             dt = make_aware_msk(datetime.now(MSK)).replace(hour=hh, minute=mm, second=0, microsecond=0)
-            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         if "вчера" in low or "yesterday" in low:
             m = re.search(r"(\d{1,2}):(\d{2})", low)
             hh, mm = (int(m.group(1)), int(m.group(2))) if m else (12, 0)
             dt = make_aware_msk(datetime.now(MSK) - timedelta(days=1)).replace(hour=hh, minute=mm, second=0, microsecond=0)
-            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+            return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         # Try ISO-like first
         try:
             dt = finalize_datetime(dparser.isoparse(s))
             if dt:
-                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         except Exception:
             pass
         # Try generic parser in day-first mode
@@ -1558,7 +1621,7 @@ def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic",
                 default=default_base,
             ))
             if dt:
-                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
         except Exception:
             pass
         # Try Russian words
@@ -1566,11 +1629,14 @@ def try_parse_any_date(candidates, *, url=None, source=None, signal="heuristic",
         if dt:
             dt = finalize_datetime(dt)
             if dt:
-                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now)
+                return validate_publication_datetime(dt, raw_value=s, url=url, source=source, signal=signal, now=now, diagnostics=diagnostics)
     return None
 
 
-def _parse_datetime_signal(value: str | None, signal: str, *, url=None, source=None, now=None) -> datetime | None:
+def _parse_datetime_signal(
+    value: str | None, signal: str, *, url=None, source=None, now=None,
+    diagnostics=None,
+) -> datetime | None:
     if not value:
         return None
     value = value.strip()
@@ -1599,12 +1665,18 @@ def _parse_datetime_signal(value: str | None, signal: str, *, url=None, source=N
     if dt:
         logging.debug("Published time signal (%s): %s -> %s", signal, value, dt.isoformat())
         return validate_publication_datetime(
-            dt, raw_value=value, url=url, source=source, signal=signal, now=now
+            dt, raw_value=value, url=url, source=source, signal=signal, now=now,
+            diagnostics=diagnostics,
         )
     return None
 
 
-def extract_published_datetime(soup: BeautifulSoup, url: str | None = None, source: str | None = None) -> datetime | None:
+def extract_published_datetime(
+    soup: BeautifulSoup,
+    url: str | None = None,
+    source: str | None = None,
+    diagnostics: PublicationDiagnostics | None = None,
+) -> datetime | None:
     seen_candidates: set[tuple[str, str]] = set()
 
     def attempt(value: str | None, signal: str) -> datetime | None:
@@ -1617,7 +1689,7 @@ def extract_published_datetime(soup: BeautifulSoup, url: str | None = None, sour
         if key in seen_candidates:
             return None
         seen_candidates.add(key)
-        return _parse_datetime_signal(candidate, signal, url=url, source=source)
+        return _parse_datetime_signal(candidate, signal, url=url, source=source, diagnostics=diagnostics)
 
     # Primary meta tags.
     for tag in soup.find_all("meta", attrs={"property": "article:published_time"}):
@@ -1821,6 +1893,7 @@ def build_item(
     src: dict | None = None,
     pre_extracted_content: str | None = None,
 ):
+    publication_diagnostics = PublicationDiagnostics(source_name)
     amp_used = False
     selectors = content_selectors
     content_text: str | None
@@ -1855,7 +1928,9 @@ def build_item(
                 content_source = amp_label or amp_source or "amp"
                 amp_used = True
 
-    dt = extract_published_datetime(soup, url, source_name)
+    dt = extract_published_datetime(
+        soup, url, source_name, diagnostics=publication_diagnostics
+    )
 
     if dt is None:
         m = re.search(r"/(20\d{2})/([01]\d)/([0-3]\d)/", url)
@@ -1868,6 +1943,8 @@ def build_item(
                     url=url,
                     source=source_name,
                     signal="url:path",
+                    diagnostics=publication_diagnostics,
+                    allowance=PUBLICATION_CLOCK_SKEW,
                 )
             except ValueError:
                 dt = None
@@ -1995,41 +2072,105 @@ def _first_non_empty(containers: list[dict], keys: list[str]) -> str | None:
     return None
 
 
-def harvest_json_source(src: dict, force: bool = False):
+def _object_path(value, path: str):
+    """Return a value from a JSON object using a dotted path (lists are supported)."""
+    current = value
+    for part in (path or "").split("."):
+        if not part:
+            continue
+        if isinstance(current, dict):
+            current = current.get(part)
+        elif isinstance(current, list) and part.isdigit():
+            index = int(part)
+            current = current[index] if index < len(current) else None
+        else:
+            return None
+    return current
+
+
+def _api_items(payload, src: dict) -> list:
+    """Extract records from both flat and wrapped first-party API responses."""
+    paths = src.get("api_items_path", ["data", "items", "results"])
+    if isinstance(paths, str):
+        paths = [paths]
+    if isinstance(payload, list):
+        return payload
+    for path in paths:
+        candidate = _object_path(payload, path)
+        if isinstance(candidate, list):
+            return candidate
+    return []
+
+
+def _api_endpoints(src: dict) -> list[str]:
+    """Expand an endpoint template into a bounded set of discovery pages."""
+    configured = src.get("api_endpoints")
+    if configured:
+        return [str(endpoint) for endpoint in configured]
     endpoint = src.get("api_endpoint")
-    if not endpoint:
+    pages = int(src.get("api_endpoint_pages", 1))
+    if pages <= 1:
+        return [endpoint] if endpoint else []
+    start = int(src.get("api_page_start", 1))
+    page_param = str(src.get("api_page_param", "page"))
+    endpoints = []
+    for page in range(start, start + pages):
+        if "{page}" in endpoint:
+            endpoints.append(endpoint.format(page=page))
+        else:
+            separator = "&" if "?" in endpoint else "?"
+            endpoints.append(f"{endpoint}{separator}{page_param}={page}")
+    return endpoints
+
+
+def harvest_json_source(src: dict, force: bool = False):
+    endpoints = _api_endpoints(src)
+    if not endpoints:
         logging.warning("  missing api_endpoint for %s", src.get("name"))
         return []
 
     src_name = src.get("name", "")
-    logging.info("Harvest API: %s — %s", src_name, endpoint)
+    endpoint = endpoints[0]
+    logging.info("Harvest API: %s — %s", src_name, ", ".join(endpoints))
 
     headers = {
         "User-Agent": USER_AGENT,
         "Accept": "application/json",
         "Accept-Language": "ru,en;q=0.9",
     }
-    host = urlparse(endpoint).netloc
-    delay = HOST_DELAY_OVERRIDES.get(host, HOST_DELAY_DEFAULT)
-    now = time.time()
-    sleep_for = _last_req_at[host] + delay - now
-    if sleep_for > 0:
-        time.sleep(sleep_for)
-
+    payloads = []
+    response_texts = []
     try:
-        resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
-        _last_req_at[host] = time.time()
-        if resp.status_code == 429:
-            ra = resp.headers.get("Retry-After")
-            try:
-                wait = int(ra) if ra else 5
-            except ValueError:
-                wait = 5
-            logging.warning("429 Too Many Requests (API): %s -> sleep %ss", endpoint, wait)
-            time.sleep(wait)
+        for endpoint in endpoints:
+            host = urlparse(endpoint).netloc
+            delay = HOST_DELAY_OVERRIDES.get(host, HOST_DELAY_DEFAULT)
+            sleep_for = _last_req_at[host] + delay - time.time()
+            if sleep_for > 0:
+                time.sleep(sleep_for)
             resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
             _last_req_at[host] = time.time()
-        resp.raise_for_status()
+            if resp.status_code == 429:
+                ra = resp.headers.get("Retry-After")
+                try:
+                    wait = int(ra) if ra else 5
+                except ValueError:
+                    wait = 5
+                logging.warning(
+                    "429 Too Many Requests (API): %s -> sleep %ss", endpoint, wait
+                )
+                time.sleep(wait)
+                resp = SESSION.get(endpoint, headers=headers, timeout=REQUEST_TIMEOUT)
+                _last_req_at[host] = time.time()
+            resp.raise_for_status()
+            response_texts.append(resp.text)
+            payloads.append(resp.json())
+    except ValueError as exc:
+        logging.error("  invalid JSON for %s: %s", src.get("name"), exc)
+        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
+        SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
+        if src.get("html_fallback_on_empty_api"):
+            return harvest_source(src, force=ARGS.rebuild if ARGS else False)
+        return []
     except requests.RequestException as exc:
         logging.warning("API fetch failed for %s: %s", src_name, exc)
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
@@ -2039,28 +2180,23 @@ def harvest_json_source(src: dict, force: bool = False):
             return harvest_source(src, force=ARGS.rebuild if ARGS else False)
         raise
 
-    text = resp.text
+    text = "\n".join(response_texts)
     SOURCE_SUMMARY[src_name]["index_fetch_status"] = "fetched"
     idx_digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
     ih = STATE.setdefault("index_hash", {})
-    if not force and ih.get(endpoint) == idx_digest:
+    digest_key = "|".join(endpoints)
+    if not force and ih.get(digest_key) == idx_digest:
         logging.info("Index unchanged (API): %s — %s", src.get("name"), endpoint)
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "unchanged"
     ih[endpoint] = idx_digest
 
-    try:
-        payload = resp.json()
-    except ValueError as exc:
-        logging.error("  invalid JSON for %s: %s", src.get("name"), exc)
-        SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
-        SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
-        if src.get("html_fallback_on_empty_api"):
-            logging.info("API invalid JSON for %s — falling back to HTML index", src_name)
-            return harvest_source(src, force=ARGS.rebuild if ARGS else False)
-        return []
-
-    data = payload.get("data") if isinstance(payload, dict) else payload
-    if not isinstance(data, list):
+    data = []
+    for payload in payloads:
+        data.extend(_api_items(payload, src))
+    invalid_payload = payloads and not data and any(
+        not isinstance(payload, (dict, list)) for payload in payloads
+    )
+    if not isinstance(data, list) or invalid_payload:
         logging.warning("  unexpected API payload for %s", src.get("name"))
         if src.get("html_fallback_on_empty_api"):
             logging.info("API unexpected payload for %s — falling back to HTML index", src_name)
@@ -2243,13 +2379,15 @@ def harvest_json_source(src: dict, force: bool = False):
             parsed_dt = None
             if date_val:
                 parsed_dt = _parse_datetime_signal(
-                    date_val, "api:date", url=url, source=src_name
+                    date_val, "api:date", url=url, source=src_name,
+                    diagnostics=PublicationDiagnostics(src_name),
                 )
             if not parsed_dt:
                 human_date = _first_non_empty(containers, API_DATE_HUMAN_KEYS)
                 if human_date:
                     parsed_dt = try_parse_any_date(
-                        [human_date], url=url, source=src_name, signal="api:human_date"
+                        [human_date], url=url, source=src_name, signal="api:human_date",
+                        diagnostics=PublicationDiagnostics(src_name),
                     )
             if parsed_dt:
                 item["published_at"] = parsed_dt.isoformat()
@@ -2318,8 +2456,91 @@ def harvest_json_source(src: dict, force: bool = False):
     return items
 
 
+def extract_index_links(
+    index_html: str, src: dict, *, index_url: str | None = None
+) -> tuple[list[str], int, int]:
+    """Normalize and filter article links from one index candidate.
+
+    The returned counts describe candidates before and after source policy is
+    applied. Accepted links retain document order and duplicates; callers may
+    deduplicate them after recording diagnostics.
+    """
+    soup = _parse_index_soup(index_html)
+    include_patterns = src.get("include_patterns")
+    if include_patterns:
+        if isinstance(include_patterns, (str, bytes)):
+            include_patterns = [include_patterns]
+        else:
+            include_patterns = [pattern for pattern in include_patterns if pattern]
+    else:
+        include_patterns = []
+
+    def compile_patterns(setting: str) -> list[re.Pattern]:
+        configured = src.get(setting)
+        if not configured:
+            return []
+        patterns = [configured] if isinstance(configured, (str, bytes)) else configured
+        compiled = []
+        for pattern in patterns:
+            if not pattern:
+                continue
+            try:
+                compiled.append(re.compile(pattern))
+            except re.error as exc:
+                logging.warning("Invalid %s %r for %s: %s", setting, pattern, src.get("name"), exc)
+        return compiled
+
+    include_res = compile_patterns("include_regex")
+    exclude_res = compile_patterns("exclude_regex")
+    raw_candidates: list[tuple[str, str, bool]] = []
+    for anchor in soup.find_all("a"):
+        href = anchor.get("href")
+        if href:
+            raw_candidates.append((href, anchor.get_text(strip=True) or "", True))
+    for tag_name in ("loc", "link"):
+        for tag in soup.find_all(tag_name):
+            value = tag.get_text(strip=True)
+            if value.startswith("http"):
+                raw_candidates.append((value, value, False))
+    if src.get("parse_embedded_links"):
+        include_snippets = [str(pattern) for pattern in include_patterns]
+        for expanded_html in _embedded_text_variants(index_html):
+            raw_candidates.extend(
+                (match, "", False)
+                for match in re.findall(r'https?://[^\s"\'<>]+', expanded_html)
+            )
+            for relative in re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html):
+                if not include_snippets or any(part in relative for part in include_snippets):
+                    raw_candidates.append((relative, "", False))
+
+    base_url = src["base_url"]
+    base_host = urlparse(base_url).netloc.removeprefix("www.")
+    current_index = index_url or src["start_url"]
+    accepted = []
+    for raw_href, link_text, is_anchor in raw_candidates:
+        href = urljoin(base_url, raw_href)
+        if href.rstrip("/") == current_index.rstrip("/") or is_listing_url(href, start_url=current_index):
+            continue
+        if src.get("restrict_domain"):
+            host = urlparse(href).netloc.removeprefix("www.")
+            if host != base_host:
+                continue
+        if include_patterns and not any(pattern in href for pattern in include_patterns):
+            continue
+        if include_res and not any(pattern.search(href) for pattern in include_res):
+            continue
+        if exclude_res and any(pattern.search(href) for pattern in exclude_res):
+            continue
+        if is_anchor:
+            min_len = int(src.get("link_min_text_len", 0))
+            if len(link_text) < min_len and not src.get("accept_empty_anchor"):
+                continue
+        accepted.append(href)
+    return accepted, len(raw_candidates), len(accepted)
+
+
 def harvest_source(src: dict, force: bool = False):
-    stats = STATE.setdefault("stats", {})
+    stats = SESSION_STATE.setdefault("stats", {})
     cooldowns = stats.setdefault("cooldowns", {})
     errors = stats.setdefault("errors", [])
 
@@ -2337,6 +2558,7 @@ def harvest_source(src: dict, force: bool = False):
     now = time.time()
     use_only_cache = False
     index_html = None
+    links = None
     if cooldown_until and cooldown_until > now:
         until_dt = datetime.fromtimestamp(cooldown_until, timezone.utc)
         if cache_path.exists():
@@ -2385,35 +2607,57 @@ def harvest_source(src: dict, force: bool = False):
                 candidate_url,
             )
             try:
-                candidate_html = fetch_page(candidate_url, src=src)
                 candidate_cache_path = PAGES_DIR / cache_key_for(candidate_url)
-                candidate_raw_links = _count_index_candidates(
-                    candidate_html,
-                    parse_embedded_links=bool(src.get("parse_embedded_links")),
+                # fetch_page writes successful responses to this path. Snapshot a
+                # known-good index first so an HTTP-200 challenge page cannot
+                # destroy the only usable cached copy before validation.
+                prior_candidate_html = (
+                    candidate_cache_path.read_text(encoding="utf-8")
+                    if candidate_cache_path.exists()
+                    else None
                 )
-                if candidate_raw_links == 0 and candidate_cache_path.exists():
-                    cached_candidate_html = candidate_cache_path.read_text(encoding="utf-8")
-                    cached_raw_links = _count_index_candidates(
-                        cached_candidate_html,
-                        parse_embedded_links=bool(src.get("parse_embedded_links")),
+                candidate_html = fetch_page(candidate_url, src=src)
+                candidate_links, candidate_raw_links, candidate_accepted_links = extract_index_links(
+                    candidate_html, src, index_url=candidate_url
+                )
+                candidate_used_cache = False
+                if candidate_accepted_links == 0 and prior_candidate_html is not None:
+                    cached_links, cached_raw_links, cached_accepted_links = extract_index_links(
+                        prior_candidate_html, src, index_url=candidate_url
                     )
-                    if cached_raw_links > 0:
+                    if cached_accepted_links > 0:
                         logging.warning(
-                            "Index candidate empty for %s: %s -> using cached index with %d raw links",
+                            "Index candidate has no accepted links for %s: %s -> using cached index with %d accepted links",
                             src.get("name"),
                             candidate_url,
-                            cached_raw_links,
+                            cached_accepted_links,
                         )
-                        candidate_html = cached_candidate_html
+                        candidate_html = prior_candidate_html
+                        candidate_links = cached_links
                         candidate_raw_links = cached_raw_links
-                if candidate_raw_links == 0 and candidate_idx < len(start_candidates):
+                        candidate_accepted_links = cached_accepted_links
+                        candidate_used_cache = True
+                        candidate_cache_path.write_text(prior_candidate_html, encoding="utf-8")
+                candidate_attempt = {
+                    "url": candidate_url,
+                    "raw_link_candidates": candidate_raw_links,
+                    "accepted_links": candidate_accepted_links,
+                }
+                if candidate_used_cache:
+                    candidate_attempt["cached"] = True
+                    SOURCE_SUMMARY[src_name]["cached_fallback_used"] = True
+                SOURCE_SUMMARY[src_name]["index_attempts"].append(candidate_attempt)
+                if candidate_accepted_links == 0:
                     logging.warning(
-                        "Index candidate produced 0 raw links for %s: %s -> trying fallback",
+                        "Index candidate produced 0 accepted article links for %s: %s",
                         src.get("name"),
                         candidate_url,
                     )
                     continue
                 index_html = candidate_html
+                links = candidate_links
+                SOURCE_SUMMARY[src_name]["raw_link_candidates"] = candidate_raw_links
+                SOURCE_SUMMARY[src_name]["accepted_links"] = candidate_accepted_links
                 SOURCE_SUMMARY[src_name]["index_fetch_status"] = "fetched"
                 if candidate_url != src["start_url"]:
                     logging.info("Index fetched via fallback URL for %s: %s", src.get("name"), candidate_url)
@@ -2422,9 +2666,18 @@ def harvest_source(src: dict, force: bool = False):
                 break
             except (requests.RequestException, SourceTemporarilyUnavailable) as exc:
                 last_exc = exc
+                SOURCE_SUMMARY[src_name]["index_attempts"].append({
+                    "url": candidate_url,
+                    "raw_link_candidates": 0,
+                    "accepted_links": 0,
+                    "error": str(exc),
+                })
                 logging.warning("Index candidate failed for %s: %s (%s)", src.get("name"), candidate_url, exc)
 
-        if index_html is None and last_exc is not None:
+        all_candidates_failed = SOURCE_SUMMARY[src_name]["index_attempts"] and all(
+            "error" in attempt for attempt in SOURCE_SUMMARY[src_name]["index_attempts"]
+        )
+        if index_html is None and last_exc is not None and all_candidates_failed:
             SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
             SOURCE_SUMMARY[src_name]["last_error"] = str(last_exc)
             try:
@@ -2502,8 +2755,9 @@ def harvest_source(src: dict, force: bool = False):
                         }
                     )
                     return []
+
             except SourceTemporarilyUnavailable as exc:
-                failures = STATE.setdefault("stats", {}).setdefault("errors", [])
+                failures = SESSION_STATE.setdefault("stats", {}).setdefault("errors", [])
                 logging.warning(
                     "Temporary unavailability for %s: %s", src.get("name"), exc
                 )
@@ -2544,114 +2798,25 @@ def harvest_source(src: dict, force: bool = False):
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "unchanged"
     ih[src["start_url"]] = idx_digest
 
-    # XML/HTML автодетект
-    soup = _parse_index_soup(index_html)
-
-    # Collect candidate links
-    links = []
-    include_patterns = src.get("include_patterns")
-    if include_patterns:
-        if isinstance(include_patterns, (str, bytes)):
-            include_patterns = [include_patterns]
-        else:
-            include_patterns = [p for p in include_patterns if p]
-    else:
-        include_patterns = []
-
-    include_regex = src.get("include_regex")
-    include_res = []
-    if include_regex:
-        raw_patterns = (
-            [include_regex]
-            if isinstance(include_regex, (str, bytes))
-            else [p for p in include_regex if p]
+    # Cached/cooldown indexes have not gone through candidate selection above.
+    if links is None:
+        links, raw_count, accepted_count = extract_index_links(
+            index_html, src, index_url=start_url
         )
-        for pattern in raw_patterns:
-            try:
-                include_res.append(re.compile(pattern))
-            except re.error as exc:
-                logging.warning(
-                    "Invalid include_regex %r for %s: %s",
-                    pattern,
-                    src.get("name"),
-                    exc,
-                )
-
-    exclude_regex = src.get("exclude_regex")
-    exclude_res = []
-    if exclude_regex:
-        raw_patterns = (
-            [exclude_regex]
-            if isinstance(exclude_regex, (str, bytes))
-            else [p for p in exclude_regex if p]
-        )
-        for pattern in raw_patterns:
-            try:
-                exclude_res.append(re.compile(pattern))
-            except re.error as exc:
-                logging.warning(
-                    "Invalid exclude_regex %r for %s: %s",
-                    pattern,
-                    src.get("name"),
-                    exc,
-                )
-
-    raw_candidates: list[tuple[str, str, bool]] = []
-    for a in soup.find_all("a"):
-        href = a.get("href")
-        if not href:
-            continue
-        raw_candidates.append((href, a.get_text(strip=True) or "", True))
-
-    for tag_name in ("loc", "link"):
-        for tag in soup.find_all(tag_name):
-            text = tag.get_text(strip=True)
-            if text.startswith("http"):
-                raw_candidates.append((text, text, False))
-
-    # Some protected/dynamic pages expose URLs only inside JSON blobs (e.g. script data).
-    if src.get("parse_embedded_links"):
-        include_snippets = [str(pattern) for pattern in include_patterns if pattern]
-        for expanded_html in _embedded_text_variants(index_html):
-            for match in re.findall(r'https?://[^\s"\'<>]+', expanded_html):
-                raw_candidates.append((match, "", False))
-
-            for rel in re.findall(r'"(/[^"<>\s]{6,260})"', expanded_html):
-                if include_snippets and not any(snippet in rel for snippet in include_snippets):
-                    continue
-                raw_candidates.append((rel, "", False))
-
-    base_host = urlparse(src["base_url"]).netloc.replace("www.", "")
-    for raw_href, link_text, is_anchor in raw_candidates:
-        href = urljoin(src["base_url"], raw_href)
-        if href.rstrip("/") == start_url.rstrip("/"):
-            SOURCE_SUMMARY[src_name]["listing"] += 1
-            continue
-        if is_listing_url(href, start_url=start_url):
-            SOURCE_SUMMARY[src_name]["listing"] += 1
-            if ARGS and getattr(ARGS, "debug", False):
-                logging.debug("Filtered listing URL: %s", href)
-            continue
-        if src.get("restrict_domain"):
-            h = urlparse(href).netloc.replace("www.", "")
-            if h != base_host:
-                continue
-        if include_patterns and not any(p in href for p in include_patterns):
-            continue
-        if include_res and not any(r.search(href) for r in include_res):
-            continue
-        if exclude_res and any(r.search(href) for r in exclude_res):
-            continue
-        if is_anchor:
-            # Allow empty anchors when source explicitly permits it.
-            min_len = int(src.get("link_min_text_len", 0))
-            if len(link_text) < min_len and not src.get("accept_empty_anchor"):
-                continue
-        links.append(href)
-
-    logging.info("Link extraction stats for %s: raw=%d accepted=%d", src_name, len(raw_candidates), len(links))
-    SOURCE_SUMMARY[src_name]["raw_link_candidates"] = len(raw_candidates)
-    SOURCE_SUMMARY[src_name]["accepted_links"] = len(links)
+        SOURCE_SUMMARY[src_name]["raw_link_candidates"] = raw_count
+        SOURCE_SUMMARY[src_name]["accepted_links"] = accepted_count
+        SOURCE_SUMMARY[src_name]["index_attempts"].append({
+            "url": start_url,
+            "raw_link_candidates": raw_count,
+            "accepted_links": accepted_count,
+            "cached": use_only_cache,
+        })
+    logging.info(
+        "Link extraction stats for %s: raw=%d accepted=%d",
+        src_name,
+        SOURCE_SUMMARY[src_name]["raw_link_candidates"],
+        SOURCE_SUMMARY[src_name]["accepted_links"],
+    )
 
     # Dedup and limit
     uniq = []
@@ -2829,7 +2994,15 @@ def log_source_summary() -> None:
 def write_source_health_report(sources: list[dict]) -> None:
     """Persist crawl diagnostics independently from the retained feed."""
     rows = []
-    streaks = STATE.setdefault("source_health_streaks", {})
+    # Keep the three stages independent: a 200 response does not mean that the
+    # index yielded links, and discovered links do not mean article extraction
+    # succeeded.
+    legacy_streaks = STATE.setdefault("source_health_streaks", {})
+    fetch_streaks = STATE.setdefault("source_fetch_failure_streaks", {})
+    discovery_streaks = STATE.setdefault("source_discovery_failure_streaks", {})
+    article_streaks = STATE.setdefault("source_article_failure_streaks", {})
+    discovery_state = STATE.setdefault("source_discovery_state", {})
+    report_time = datetime.now(timezone.utc).isoformat()
     for source in sources:
         if not source.get("enabled", True):
             continue
@@ -2838,33 +3011,87 @@ def write_source_health_report(sources: list[dict]) -> None:
         status = summary.get("index_fetch_status", "not_attempted")
         attempted = int(summary.get("attempted_articles", 0) or 0)
         accepted = int(summary.get("total", 0) or 0)
-        article_outage = attempted > 0 and accepted == 0 and bool(summary.get("last_error"))
-        failed = status in {"failed", "parser_error", "not_attempted"} or article_outage
-        previous_streak = int(streaks.get(name, 0) or 0)
+        raw_candidates = int(summary.get("raw_link_candidates", 0) or 0)
+        accepted_links = int(summary.get("accepted_links", 0) or 0)
+        source_discovery = discovery_state.setdefault(name, {})
+        fetch_failed = status in {"failed", "parser_error", "not_attempted"}
+        discovery_failed: bool | None = None
+        if status == "fetched":
+            discovery_failed = raw_candidates == 0 or accepted_links == 0
+            source_discovery.update({
+                "raw_link_candidates": raw_candidates,
+                "accepted_links": accepted_links,
+            })
+            if not discovery_failed:
+                source_discovery["last_successful_discovery_at"] = report_time
+        elif status == "unchanged":
+            # No parser runs for an unchanged index, so carry forward the last
+            # actual discovery result rather than treating HTTP 304/hash reuse
+            # as healthy by itself.
+            has_prior_discovery = "raw_link_candidates" in source_discovery
+            raw_candidates = int(source_discovery.get("raw_link_candidates", raw_candidates) or 0)
+            accepted_links = int(source_discovery.get("accepted_links", accepted_links) or 0)
+            discovery_failed = (
+                raw_candidates == 0 or accepted_links == 0
+                if has_prior_discovery
+                else None
+            )
+        article_failed = (accepted == 0) if attempted > 0 else None
+
+        def update_streak(streak_map: dict, failed: bool | None) -> int:
+            previous = int(streak_map.get(name, 0) or 0)
+            if failed is not None:
+                streak_map[name] = previous + 1 if failed else 0
+            else:
+                streak_map.setdefault(name, previous)
+            return streak_map[name]
+
         if status != "skipped_selection":
-            streaks[name] = previous_streak + 1 if failed else 0
+            fetch_streak = update_streak(fetch_streaks, fetch_failed)
+            discovery_streak = update_streak(discovery_streaks, discovery_failed)
+            article_streak = update_streak(article_streaks, article_failed)
+            previous_legacy = int(legacy_streaks.get(name, 0) or 0)
+            any_failure = fetch_failed or discovery_failed is True or article_failed is True
+            legacy_streaks[name] = previous_legacy + 1 if any_failure else 0
         else:
-            streaks.setdefault(name, previous_streak)
+            fetch_streak = int(fetch_streaks.get(name, 0) or 0)
+            discovery_streak = int(discovery_streaks.get(name, 0) or 0)
+            article_streak = int(article_streaks.get(name, 0) or 0)
+            legacy_streaks.setdefault(name, int(legacy_streaks.get(name, 0) or 0))
         rows.append({
             "source": name,
             "index_fetch_status": status,
-            "consecutive_failures": streaks[name],
-            "raw_link_candidates": summary.get("raw_link_candidates", 0),
-            "accepted_links": summary.get("accepted_links", 0),
+            "consecutive_failures": legacy_streaks[name],
+            "consecutive_fetch_failures": fetch_streak,
+            "consecutive_discovery_failures": discovery_streak,
+            "consecutive_article_failures": article_streak,
+            "raw_link_candidates": raw_candidates,
+            "accepted_links": accepted_links,
+            "last_successful_discovery_at": source_discovery.get("last_successful_discovery_at"),
             "attempted_articles": attempted,
             "accepted_articles": accepted,
             "empty_rejections": summary.get("empty", 0),
             "short_rejections": summary.get("short", 0),
             "future_date_rejections": summary.get("future_date_rejections", 0),
+            "publication_rejections_by_signal": summary.get(
+                "publication_rejections_by_signal", {}
+            ),
+            "publication_rejection_samples": summary.get(
+                "publication_rejection_samples", []
+            ),
+            "maximum_future_offset_seconds": summary.get(
+                "maximum_future_offset_seconds", 0
+            ),
             "cached_fallback_used": bool(summary.get("cached_fallback_used", False)),
             "last_error": summary.get("last_error"),
         })
-    payload = {"generated_at": datetime.now(timezone.utc).isoformat(), "sources": rows}
+    payload = {"generated_at": report_time, "sources": rows}
     SOURCE_HEALTH_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     # Streaks are updated while producing the report, after the normal state
     # save in the caller, so persist them here as part of the same operation.
     prune_page_cache()
     save_state()
+    save_source_health_state()
 
 
 def retain_bounded_items(items: list[dict]) -> list[dict]:
@@ -2949,10 +3176,10 @@ def build_feed(all_items):
 # ---- Merge helpers (Variant B) ----
 def load_existing_feed_items():
     """Загрузить текущие items из docs/unified.json, если файл существует."""
-    if not OUT_JSON.exists():
+    if not EXISTING_FEED_JSON.exists():
         return []
     try:
-        data = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        data = json.loads(EXISTING_FEED_JSON.read_text(encoding="utf-8"))
         if isinstance(data, dict) and "items" in data and isinstance(data["items"], list):
             return data["items"]
         # на всякий случай поддержим старый формат (если кто-то сохранил чистый список)
@@ -3050,6 +3277,7 @@ def merge_items(existing, new):
 
 def main():
     global ARGS, CONNECT_TIMEOUT, READ_TIMEOUT, REQUEST_TIMEOUT, START_TIME, RUNTIME_EXCEEDED, _RUNTIME_LOGGED
+    global OUT_JSON, EXISTING_FEED_JSON, STATE_FILE, SOURCE_HEALTH_JSON, SOURCE_HEALTH_STATE_FILE, SOURCE_HEALTH_STATE
     parser = argparse.ArgumentParser(description="Aggregate news feed")
     parser.add_argument("--rebuild", action="store_true", help="Force rebuild: ignore index unchanged and seen-URL filters; always rewrite unified.json")
     parser.add_argument("--dry-run", action="store_true", help="Run without writing unified.json/state")
@@ -3060,7 +3288,24 @@ def main():
     parser.add_argument("--read-timeout", type=float, default=10.0, help="Read timeout in seconds")
     parser.add_argument("--max-runtime", type=int, default=None, help="Maximum runtime in seconds before stopping gracefully")
     parser.add_argument("--debug", action="store_true", help="Enable verbose debug logging")
+    parser.add_argument("--output", type=pathlib.Path, default=OUT_JSON, help="Candidate feed output path")
+    parser.add_argument("--source-health-output", type=pathlib.Path, default=SOURCE_HEALTH_JSON, help="Candidate crawl-health output path")
+    parser.add_argument("--existing-feed", type=pathlib.Path, default=EXISTING_FEED_JSON, help="Published feed used as the merge baseline")
+    parser.add_argument("--state-output", type=pathlib.Path, default=STATE_FILE, help="Candidate crawler-state output path")
+    parser.add_argument("--source-health-state", type=pathlib.Path, default=SOURCE_HEALTH_STATE_FILE, help="Persistent failure-streak state path")
     ARGS = parser.parse_args()
+
+    OUT_JSON = ARGS.output
+    SOURCE_HEALTH_JSON = ARGS.source_health_output
+    EXISTING_FEED_JSON = ARGS.existing_feed
+    STATE_FILE = ARGS.state_output
+    SOURCE_HEALTH_STATE_FILE = ARGS.source_health_state
+    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+    SOURCE_HEALTH_JSON.parent.mkdir(parents=True, exist_ok=True)
+    STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    if SOURCE_HEALTH_STATE_FILE.exists():
+        loaded_health_state = json.loads(SOURCE_HEALTH_STATE_FILE.read_text(encoding="utf-8"))
+        SOURCE_HEALTH_STATE = loaded_health_state if isinstance(loaded_health_state, dict) else {}
 
     SOURCE_SUMMARY.clear()
     SOURCE_MIN_WORDS.clear()
@@ -3129,7 +3374,7 @@ def main():
             logging.error("  !! Failed: %s (%s)", src.get("name"), e)
             SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
             SOURCE_SUMMARY[src_name]["last_error"] = str(e)
-            STATE.setdefault("stats", {}).setdefault("errors", []).append({"source": src.get("name"), "url": src.get("start_url"), "error": str(e)})
+            SESSION_STATE.setdefault("stats", {}).setdefault("errors", []).append({"source": src.get("name"), "url": src.get("start_url"), "error": str(e)})
 
     if selected_sources and ARGS.sources:
         missing = selected_sources - seen_source_names
@@ -3150,6 +3395,14 @@ def main():
         STATE["stats"]["items"] = existing_count
         if not ARGS.dry_run:
             existing_items = load_existing_feed_items()
+            if OUT_JSON != EXISTING_FEED_JSON:
+                if EXISTING_FEED_JSON.exists():
+                    shutil.copyfile(EXISTING_FEED_JSON, OUT_JSON)
+                else:
+                    OUT_JSON.write_text(
+                        json.dumps(build_feed([]), ensure_ascii=False, indent=2),
+                        encoding="utf-8",
+                    )
             prune_state(existing_items, sources)
             save_state()
             write_source_health_report(sources)

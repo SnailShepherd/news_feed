@@ -85,6 +85,7 @@ def test_state_pruning_bounds_url_lifecycle_to_current_candidates(monkeypatch):
 def test_health_report_preserves_skipped_streak_and_counts_article_outage(tmp_path, monkeypatch):
     health_path = tmp_path / "health.json"
     state_path = tmp_path / "state.json"
+    health_state_path = tmp_path / "health-state.json"
     pages = tmp_path / "pages"
     pages.mkdir()
     summaries = defaultdict(dict)
@@ -98,13 +99,11 @@ def test_health_report_preserves_skipped_streak_and_counts_article_outage(tmp_pa
     summaries["new skipped"] = {"index_fetch_status": "skipped_selection"}
     monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", health_path)
     monkeypatch.setattr(aggregate, "STATE_FILE", state_path)
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_STATE_FILE", health_state_path)
     monkeypatch.setattr(aggregate, "PAGES_DIR", pages)
     monkeypatch.setattr(aggregate, "SOURCE_SUMMARY", summaries)
-    monkeypatch.setattr(
-        aggregate,
-        "STATE",
-        {"source_health_streaks": {"selected": 1, "skipped": 7}},
-    )
+    monkeypatch.setattr(aggregate, "STATE", {})
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_STATE", {"selected": 1, "skipped": 7})
 
     aggregate.write_source_health_report([
         {"name": "selected", "enabled": True},
@@ -116,3 +115,74 @@ def test_health_report_preserves_skipped_streak_and_counts_article_outage(tmp_pa
     assert rows["selected"]["consecutive_failures"] == 2
     assert rows["skipped"]["consecutive_failures"] == 7
     assert rows["new skipped"]["consecutive_failures"] == 0
+
+
+def test_unchanged_index_preserves_zero_accepted_discovery_failure(tmp_path, monkeypatch):
+    health_path = tmp_path / "health.json"
+    state_path = tmp_path / "state.json"
+    pages = tmp_path / "pages"
+    pages.mkdir()
+    summaries = defaultdict(dict)
+    summaries["filtered"] = {"index_fetch_status": "unchanged"}
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", health_path)
+    monkeypatch.setattr(aggregate, "STATE_FILE", state_path)
+    monkeypatch.setattr(aggregate, "PAGES_DIR", pages)
+    monkeypatch.setattr(aggregate, "SOURCE_SUMMARY", summaries)
+    monkeypatch.setattr(
+        aggregate,
+        "STATE",
+        {
+            "source_discovery_failure_streaks": {"filtered": 1},
+            "source_discovery_state": {
+                "filtered": {
+                    "last_successful_discovery_at": "2026-08-06T12:00:00+00:00",
+                    "raw_link_candidates": 12,
+                    "accepted_links": 0,
+                }
+            },
+        },
+    )
+
+    aggregate.write_source_health_report([{"name": "filtered", "enabled": True}])
+
+    row = json.loads(health_path.read_text())["sources"][0]
+    assert row["raw_link_candidates"] == 12
+    assert row["accepted_links"] == 0
+    assert row["consecutive_discovery_failures"] == 2
+    assert row["last_successful_discovery_at"] == "2026-08-06T12:00:00+00:00"
+
+
+def test_failed_discovery_does_not_advance_last_success_timestamp(tmp_path, monkeypatch):
+    health_path = tmp_path / "health.json"
+    state_path = tmp_path / "state.json"
+    pages = tmp_path / "pages"
+    pages.mkdir()
+    summaries = defaultdict(dict)
+    summaries["empty"] = {
+        "index_fetch_status": "fetched",
+        "raw_link_candidates": 0,
+        "accepted_links": 0,
+    }
+    previous_success = "2026-08-01T09:00:00+00:00"
+    state = {
+        "source_discovery_state": {
+            "empty": {
+                "last_successful_discovery_at": previous_success,
+                "raw_link_candidates": 5,
+                "accepted_links": 4,
+            }
+        }
+    }
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", health_path)
+    monkeypatch.setattr(aggregate, "STATE_FILE", state_path)
+    monkeypatch.setattr(aggregate, "PAGES_DIR", pages)
+    monkeypatch.setattr(aggregate, "SOURCE_SUMMARY", summaries)
+    monkeypatch.setattr(aggregate, "STATE", state)
+
+    aggregate.write_source_health_report([{"name": "empty", "enabled": True}])
+
+    row = json.loads(health_path.read_text())["sources"][0]
+    assert row["consecutive_discovery_failures"] == 1
+    assert row["last_successful_discovery_at"] == previous_success
+    assert state["source_discovery_state"]["empty"]["raw_link_candidates"] == 0
+    assert state["source_discovery_state"]["empty"]["accepted_links"] == 0

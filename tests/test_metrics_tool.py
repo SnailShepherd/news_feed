@@ -1,4 +1,5 @@
 import json
+import sys
 from datetime import datetime, timedelta, timezone
 
 from scripts.metrics import (
@@ -7,8 +8,11 @@ from scripts.metrics import (
     compute_metrics,
     compute_source_metrics,
     classify_source_health,
+    find_source_expectation_failures,
     find_unexpected_empty_sources,
+    merge_current_crawl_metrics,
 )
+from scripts import metrics
 
 
 def test_compute_metrics_counts(tmp_path):
@@ -57,28 +61,93 @@ SOURCES = [
 ]
 
 
-def test_missing_enabled_source_fails_health_check():
+def test_bounded_feed_emptiness_is_allowed_by_default():
     _, report = compute_source_metrics([], SOURCES, stale_after=timedelta(days=7), now=NOW)
-    assert find_unexpected_empty_sources(report, set()) == ["healthy", "missing"]
+    assert find_unexpected_empty_sources(report, set()) == []
+
+
+def test_global_empty_check_includes_sources_without_per_source_setting():
+    _, report = compute_source_metrics([], SOURCES, stale_after=timedelta(days=7), now=NOW)
+    assert find_unexpected_empty_sources(report, set(), fail_on_all=True) == [
+        "healthy", "missing"
+    ]
+
+
+def test_explicit_allow_empty_exempts_source_from_global_check():
+    sources = [{"name": "optional", "allow_empty": True}]
+    _, report = compute_source_metrics([], sources, stale_after=timedelta(days=7), now=NOW)
+    assert find_unexpected_empty_sources(report, set(), fail_on_all=True) == []
+
+
+def test_source_can_require_a_retained_item():
+    sources = [{"name": "required", "allow_empty": False}]
+    _, report = compute_source_metrics([], sources, stale_after=timedelta(days=7), now=NOW)
+    assert find_unexpected_empty_sources(report, set()) == ["required"]
 
 
 def test_stale_source_is_reported():
     items = [{"source": "healthy", "published_at": "2026-07-01T00:00:00Z"}]
     totals, report = compute_source_metrics(items, SOURCES, stale_after=timedelta(days=7), now=NOW)
     assert totals["stale_sources"] == 1
-    assert report[0]["stale"] is True
+    assert report[0]["freshness_status"] == "stale"
 
 
 def test_healthy_source_uses_fetch_timestamp_when_publication_is_invalid():
     items = [{"source": "healthy", "published_at": "not-a-date", "fetched_at": "2026-08-05T00:00:00Z"}]
     totals, report = compute_source_metrics(items, SOURCES, stale_after=timedelta(days=7), now=NOW)
-    assert totals == {"enabled_sources": 2, "sources_with_items": 1, "sources_without_items": 1, "stale_sources": 0}
+    assert totals == {
+        "enabled_sources": 2,
+        "sources_with_items": 1,
+        "sources_without_items": 1,
+        "stale_sources": 0,
+        "sources_without_freshness_data": 1,
+    }
     assert report[0]["newest_timestamp"] == "2026-08-05T00:00:00+00:00"
 
 
+def test_source_without_timestamp_reports_no_data_instead_of_not_stale():
+    _, report = compute_source_metrics([], SOURCES, stale_after=timedelta(days=7), now=NOW)
+    assert report[0]["freshness_status"] == "no_data"
+
+
 def test_explicitly_exempted_empty_source_passes():
-    _, report = compute_source_metrics([], [{"name": "expected empty"}], stale_after=timedelta(days=7), now=NOW)
+    _, report = compute_source_metrics(
+        [], [{"name": "expected empty", "allow_empty": False}],
+        stale_after=timedelta(days=7), now=NOW
+    )
     assert find_unexpected_empty_sources(report, {"expected empty"}) == []
+
+
+def test_current_crawl_counts_and_source_expectations_are_combined():
+    sources = [{
+        "name": "active",
+        "expected_min_candidates": 3,
+        "expected_update_hours": 24,
+    }]
+    items = [{"source": "active", "published_at": "2026-08-04T23:59:00Z"}]
+    _, report = compute_source_metrics(
+        items, sources, stale_after=timedelta(days=7), now=NOW
+    )
+    merge_current_crawl_metrics(report, [{
+        "source": "active", "raw_link_candidates": 2, "accepted_articles": 1
+    }])
+
+    assert report[0]["retained_item_count"] == 1
+    assert report[0]["raw_link_candidates"] == 2
+    assert report[0]["accepted_articles"] == 1
+    assert find_source_expectation_failures(report) == [
+        "active: discovered 2 candidates, expected at least 3",
+        "active: freshness is stale, expected an update within 24 hours",
+    ]
+
+
+def test_candidate_expectation_requires_a_current_crawl_row():
+    sources = [{"name": "missing crawl", "expected_min_candidates": 1}]
+    _, report = compute_source_metrics([], sources, stale_after=timedelta(days=7), now=NOW)
+    merge_current_crawl_metrics(report, [])
+    assert find_source_expectation_failures(report) == [
+        "missing crawl: no current-crawl candidate count, expected at least 1"
+    ]
 
 
 def test_source_health_distinguishes_failures_from_degraded_sources():
@@ -149,3 +218,54 @@ def test_sources_skipped_by_selection_are_ignored():
 
     assert failures == []
     assert warnings == []
+
+
+def test_repeated_zero_raw_links_becomes_discovery_failure():
+    failures, warnings = classify_source_health([{
+        "source": "empty index",
+        "index_fetch_status": "fetched",
+        "consecutive_discovery_failures": 3,
+        "raw_link_candidates": 0,
+        "accepted_links": 0,
+        "last_successful_discovery_at": "2026-08-06T12:00:00+00:00",
+    }])
+
+    assert warnings == []
+    assert failures == [
+        "empty index: discovery failed for 3 consecutive runs (raw candidates=0, "
+        "accepted links=0, last successful discovery=2026-08-06T12:00:00+00:00)"
+    ]
+
+
+def test_single_zero_accepted_links_is_discovery_warning():
+    failures, warnings = classify_source_health([{
+        "source": "filtered index",
+        "index_fetch_status": "fetched",
+        "consecutive_discovery_failures": 1,
+        "raw_link_candidates": 14,
+        "accepted_links": 0,
+        "last_successful_discovery_at": "2026-08-07T08:30:00+00:00",
+    }])
+
+    assert failures == []
+    assert warnings == [
+        "filtered index: transient discovery failure (run 1/3; raw candidates=14, "
+        "accepted links=0, last successful discovery=2026-08-07T08:30:00+00:00)"
+    ]
+
+
+def test_repeated_unchanged_empty_index_becomes_discovery_failure():
+    failures, warnings = classify_source_health([{
+        "source": "unchanged empty",
+        "index_fetch_status": "unchanged",
+        "consecutive_discovery_failures": 4,
+        "raw_link_candidates": 0,
+        "accepted_links": 0,
+        "last_successful_discovery_at": "2026-08-01T00:00:00+00:00",
+    }])
+
+    assert warnings == []
+    assert failures == [
+        "unchanged empty: discovery failed for 4 consecutive runs (raw candidates=0, "
+        "accepted links=0, last successful discovery=2026-08-01T00:00:00+00:00)"
+    ]

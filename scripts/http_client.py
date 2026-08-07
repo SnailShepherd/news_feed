@@ -185,6 +185,13 @@ class HostClient:
     """Stateful HTTP client that honours the configured strategy."""
 
     def __init__(self, host: str, strategy: RequestStrategy, state: Dict[str, Any]):
+        """Create a client backed by runner-session state.
+
+        ``state`` must be the ephemeral state document, rather than the durable
+        crawl metadata committed to the repository.  Keeping the boundary here
+        prevents cookies and anti-bot retry timestamps from being serialized
+        alongside feed metadata.
+        """
         self.host = host
         self.strategy = strategy
         self.state_root = state.setdefault("host_state", {}).setdefault(
