@@ -87,6 +87,61 @@ def test_xml_fallback_index_contract(monkeypatch):
     assert expected["article_url"] in [item["url"] for item in aggregate.harvest_source(source, force=True)]
 
 
+def test_fallback_skips_anchor_page_without_accepted_articles(monkeypatch, tmp_path):
+    primary = "https://example.test/challenge"
+    fallback = "https://example.test/news"
+    article_url = "https://example.test/articles/valid-story"
+    source = {
+        "name": "Fallback policy fixture",
+        "start_url": primary,
+        "fallback_start_urls": [fallback],
+        "base_url": "https://example.test/",
+        "include_patterns": ["/articles/"],
+        "include_regex": r"/articles/[a-z-]+$",
+        "exclude_regex": r"/articles/(?:archive|tags)/",
+        "restrict_domain": True,
+        "link_min_text_len": 8,
+        "min_words": 1,
+    }
+    pages = {
+        primary: '<nav><a href="/login">Log in here</a><a href="/help">Help center</a></nav>',
+        fallback: (
+            '<a href="/news">News index</a>'
+            '<a href="https://elsewhere.test/articles/wrong-domain">Wrong domain</a>'
+            '<a href="/articles/archive/old-story">Archived story</a>'
+            f'<a href="{article_url}">A valid article</a>'
+        ),
+        article_url: "<html><head><title>Valid story</title></head>"
+        "<body><article><p>This is a sufficiently complete article body for the fixture.</p>"
+        "<p>It verifies fallback selection after filtering links.</p>"
+        "<p>The final paragraph makes extraction deterministic.</p></article></body></html>",
+    }
+    calls = []
+
+    def fixture_fetch(url, src=None):
+        calls.append(url)
+        return pages[url]
+
+    monkeypatch.setattr(aggregate, "fetch_page", fixture_fetch)
+    monkeypatch.setattr(aggregate, "fetch_amp_if_available", lambda *args, **kwargs: (None, None))
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", tmp_path / "source-health.json")
+    monkeypatch.setattr(aggregate, "save_state", lambda: None)
+    monkeypatch.setattr(aggregate, "prune_page_cache", lambda: (0, 0))
+    aggregate.SOURCE_MIN_WORDS[source["name"]] = 1
+
+    items = aggregate.harvest_source(source, force=True)
+
+    assert [item["url"] for item in items] == [article_url]
+    assert calls[:2] == [primary, fallback]
+    assert article_url in calls
+    aggregate.write_source_health_report([source])
+    health = json.loads((tmp_path / "source-health.json").read_text())["sources"][0]
+    assert health["index_attempts"] == [
+        {"url": primary, "raw_link_candidates": 2, "accepted_links": 0},
+        {"url": fallback, "raw_link_candidates": 4, "accepted_links": 1},
+    ]
+
+
 def test_faufcc_api_response_contract(monkeypatch):
     source = next(source for source in SOURCES if source["name"] == "ФАУ ФЦС")
     directory = fixture_dir(source)
