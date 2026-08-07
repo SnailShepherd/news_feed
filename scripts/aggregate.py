@@ -2816,7 +2816,15 @@ def log_source_summary() -> None:
 def write_source_health_report(sources: list[dict]) -> None:
     """Persist crawl diagnostics independently from the retained feed."""
     rows = []
-    streaks = SOURCE_HEALTH_STATE
+    # Keep the three stages independent: a 200 response does not mean that the
+    # index yielded links, and discovered links do not mean article extraction
+    # succeeded.
+    legacy_streaks = STATE.setdefault("source_health_streaks", {})
+    fetch_streaks = STATE.setdefault("source_fetch_failure_streaks", {})
+    discovery_streaks = STATE.setdefault("source_discovery_failure_streaks", {})
+    article_streaks = STATE.setdefault("source_article_failure_streaks", {})
+    discovery_state = STATE.setdefault("source_discovery_state", {})
+    report_time = datetime.now(timezone.utc).isoformat()
     for source in sources:
         if not source.get("enabled", True):
             continue
@@ -2825,20 +2833,63 @@ def write_source_health_report(sources: list[dict]) -> None:
         status = summary.get("index_fetch_status", "not_attempted")
         attempted = int(summary.get("attempted_articles", 0) or 0)
         accepted = int(summary.get("total", 0) or 0)
-        article_outage = attempted > 0 and accepted == 0 and bool(summary.get("last_error"))
-        failed = status in {"failed", "parser_error", "not_attempted"} or article_outage
-        previous_streak = int(streaks.get(name, 0) or 0)
+        raw_candidates = int(summary.get("raw_link_candidates", 0) or 0)
+        accepted_links = int(summary.get("accepted_links", 0) or 0)
+        source_discovery = discovery_state.setdefault(name, {})
+        fetch_failed = status in {"failed", "parser_error", "not_attempted"}
+        discovery_failed: bool | None = None
+        if status == "fetched":
+            discovery_failed = raw_candidates == 0 or accepted_links == 0
+            source_discovery.update({
+                "raw_link_candidates": raw_candidates,
+                "accepted_links": accepted_links,
+            })
+            if not discovery_failed:
+                source_discovery["last_successful_discovery_at"] = report_time
+        elif status == "unchanged":
+            # No parser runs for an unchanged index, so carry forward the last
+            # actual discovery result rather than treating HTTP 304/hash reuse
+            # as healthy by itself.
+            has_prior_discovery = "raw_link_candidates" in source_discovery
+            raw_candidates = int(source_discovery.get("raw_link_candidates", raw_candidates) or 0)
+            accepted_links = int(source_discovery.get("accepted_links", accepted_links) or 0)
+            discovery_failed = (
+                raw_candidates == 0 or accepted_links == 0
+                if has_prior_discovery
+                else None
+            )
+        article_failed = (accepted == 0) if attempted > 0 else None
+
+        def update_streak(streak_map: dict, failed: bool | None) -> int:
+            previous = int(streak_map.get(name, 0) or 0)
+            if failed is not None:
+                streak_map[name] = previous + 1 if failed else 0
+            else:
+                streak_map.setdefault(name, previous)
+            return streak_map[name]
+
         if status != "skipped_selection":
-            streaks[name] = previous_streak + 1 if failed else 0
+            fetch_streak = update_streak(fetch_streaks, fetch_failed)
+            discovery_streak = update_streak(discovery_streaks, discovery_failed)
+            article_streak = update_streak(article_streaks, article_failed)
+            previous_legacy = int(legacy_streaks.get(name, 0) or 0)
+            any_failure = fetch_failed or discovery_failed is True or article_failed is True
+            legacy_streaks[name] = previous_legacy + 1 if any_failure else 0
         else:
-            streaks.setdefault(name, previous_streak)
+            fetch_streak = int(fetch_streaks.get(name, 0) or 0)
+            discovery_streak = int(discovery_streaks.get(name, 0) or 0)
+            article_streak = int(article_streaks.get(name, 0) or 0)
+            legacy_streaks.setdefault(name, int(legacy_streaks.get(name, 0) or 0))
         rows.append({
             "source": name,
             "index_fetch_status": status,
-            "consecutive_failures": streaks[name],
-            "raw_link_candidates": summary.get("raw_link_candidates", 0),
-            "accepted_links": summary.get("accepted_links", 0),
-            "index_attempts": summary.get("index_attempts", []),
+            "consecutive_failures": legacy_streaks[name],
+            "consecutive_fetch_failures": fetch_streak,
+            "consecutive_discovery_failures": discovery_streak,
+            "consecutive_article_failures": article_streak,
+            "raw_link_candidates": raw_candidates,
+            "accepted_links": accepted_links,
+            "last_successful_discovery_at": source_discovery.get("last_successful_discovery_at"),
             "attempted_articles": attempted,
             "accepted_articles": accepted,
             "empty_rejections": summary.get("empty", 0),
@@ -2856,7 +2907,7 @@ def write_source_health_report(sources: list[dict]) -> None:
             "cached_fallback_used": bool(summary.get("cached_fallback_used", False)),
             "last_error": summary.get("last_error"),
         })
-    payload = {"generated_at": datetime.now(timezone.utc).isoformat(), "sources": rows}
+    payload = {"generated_at": report_time, "sources": rows}
     SOURCE_HEALTH_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     # Streaks are updated while producing the report, after the normal state
     # save in the caller, so persist them here as part of the same operation.
