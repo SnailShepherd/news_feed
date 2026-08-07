@@ -2663,10 +2663,11 @@ def write_source_health_report(sources: list[dict]) -> None:
         if status == "fetched":
             discovery_failed = raw_candidates == 0 or accepted_links == 0
             source_discovery.update({
-                "last_successful_discovery_at": report_time,
                 "raw_link_candidates": raw_candidates,
                 "accepted_links": accepted_links,
             })
+            if not discovery_failed:
+                source_discovery["last_successful_discovery_at"] = report_time
         elif status == "unchanged":
             # No parser runs for an unchanged index, so carry forward the last
             # actual discovery result rather than treating HTTP 304/hash reuse

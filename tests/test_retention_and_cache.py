@@ -118,3 +118,39 @@ def test_unchanged_index_preserves_zero_accepted_discovery_failure(tmp_path, mon
     assert row["accepted_links"] == 0
     assert row["consecutive_discovery_failures"] == 2
     assert row["last_successful_discovery_at"] == "2026-08-06T12:00:00+00:00"
+
+
+def test_failed_discovery_does_not_advance_last_success_timestamp(tmp_path, monkeypatch):
+    health_path = tmp_path / "health.json"
+    state_path = tmp_path / "state.json"
+    pages = tmp_path / "pages"
+    pages.mkdir()
+    summaries = defaultdict(dict)
+    summaries["empty"] = {
+        "index_fetch_status": "fetched",
+        "raw_link_candidates": 0,
+        "accepted_links": 0,
+    }
+    previous_success = "2026-08-01T09:00:00+00:00"
+    state = {
+        "source_discovery_state": {
+            "empty": {
+                "last_successful_discovery_at": previous_success,
+                "raw_link_candidates": 5,
+                "accepted_links": 4,
+            }
+        }
+    }
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", health_path)
+    monkeypatch.setattr(aggregate, "STATE_FILE", state_path)
+    monkeypatch.setattr(aggregate, "PAGES_DIR", pages)
+    monkeypatch.setattr(aggregate, "SOURCE_SUMMARY", summaries)
+    monkeypatch.setattr(aggregate, "STATE", state)
+
+    aggregate.write_source_health_report([{"name": "empty", "enabled": True}])
+
+    row = json.loads(health_path.read_text())["sources"][0]
+    assert row["consecutive_discovery_failures"] == 1
+    assert row["last_successful_discovery_at"] == previous_success
+    assert state["source_discovery_state"]["empty"]["raw_link_candidates"] == 0
+    assert state["source_discovery_state"]["empty"]["accepted_links"] == 0
