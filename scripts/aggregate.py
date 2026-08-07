@@ -377,8 +377,6 @@ DENY_PHRASES = [
 _DENY_PATTERNS = [
     re.compile(rf"\b{re.escape(phrase.lower())}\b") for phrase in DENY_PHRASES
 ]
-_MIN_PARAGRAPH_CLUSTER = 3
-
 HOST_CONTENT_SELECTORS: dict[str, list[str]] = {
     "stroygaz.ru": [
         ".news-detail__content",
@@ -1339,7 +1337,78 @@ def _drop_leading_title(text: str, title: str | None) -> str:
     return trimmed.strip()
 
 
-def extract_content_with_fallback(doc, selectors, title: str | None):
+_DATED_HEADLINE_RE = re.compile(
+    r"(?:^|\n)\s*(?:сегодня|вчера|\d{1,2}[./]\d{1,2}(?:[./]\d{2,4})?)\s*(?:\n|$)",
+    re.IGNORECASE,
+)
+
+
+def _score_content_candidate(node, text: str, title: str | None) -> float:
+    """Rank a possible body without letting a long link list win by size alone."""
+    compact = re.sub(r"\s+", " ", text).strip()
+    if not compact:
+        return float("-inf")
+    paragraphs = [
+        _normalize_whitespace(p.get_text(" ", strip=True))
+        for p in node.find_all("p")
+        if _normalize_whitespace(p.get_text(" ", strip=True))
+    ]
+    links = " ".join(a.get_text(" ", strip=True) for a in node.find_all("a"))
+    link_ratio = min(1.0, len(links) / max(1, len(compact)))
+    list_items = len(node.find_all("li"))
+    dated_headlines = len(_DATED_HEADLINE_RE.findall(text))
+    markup_size = max(1, len(str(node)))
+    density = len(compact) / markup_size
+    title_bonus = 0.0
+    if title:
+        normalized_title = re.sub(r"\s+", " ", title).strip().lower()
+        heading = node.find(["h1", "h2"])
+        if heading and normalized_title in re.sub(
+            r"\s+", " ", heading.get_text(" ", strip=True)
+        ).lower():
+            title_bonus = 240.0
+        elif node.find_previous("h1") is not None:
+            title_bonus = 80.0
+    paragraph_chars = sum(len(p) for p in paragraphs)
+    return (
+        len(compact) * 0.12
+        + paragraph_chars * 0.35
+        + min(len(paragraphs), 12) * 90
+        + density * 300
+        + title_bonus
+        - link_ratio * 1400
+        - list_items * 45
+        - dated_headlines * 180
+    )
+
+
+def _rank_content_candidates(soup, selectors, title=None, min_words=0):
+    candidates = []
+    seen = set()
+    for selector_index, sel in enumerate(selectors):
+        try:
+            nodes = soup.select(sel)
+        except Exception:
+            continue
+        for node in nodes:
+            identity = id(node)
+            if identity in seen:
+                continue
+            seen.add(identity)
+            raw = _normalize_whitespace(node.get_text("\n", strip=True))
+            cleaned = clean_content_text(raw, title=title)
+            cleaned = _strip_deny_phrases(cleaned or "")
+            cleaned = _normalize_whitespace(cleaned)
+            # Validation is deliberately after cleaning: navigation labels and a
+            # duplicated page title are not usable article content.
+            if not cleaned or (min_words and _word_count(cleaned) < min_words):
+                continue
+            score = _score_content_candidate(node, cleaned, title) - selector_index * 0.01
+            candidates.append((score, cleaned, node))
+    return sorted(candidates, key=lambda candidate: candidate[0], reverse=True)
+
+
+def extract_content_with_fallback(doc, selectors, title: str | None, min_words: int = 0):
     if isinstance(selectors, str):
         selectors = [selectors]
     ordered_selectors = []
@@ -1353,88 +1422,15 @@ def extract_content_with_fallback(doc, selectors, title: str | None):
     soup = _clone_soup(doc)
     _clean_for_content(soup)
 
-    candidates: list[tuple[int, str]] = []
-    candidate_nodes = []
-
-    for sel in ordered_selectors:
-        try:
-            nodes = soup.select(sel)
-        except Exception:
-            continue
-        for node in nodes:
-            if node in candidate_nodes:
-                continue
-            text = _normalize_whitespace(node.get_text("\n", strip=True))
-            if not text:
-                continue
-            cleaned_text = _strip_deny_phrases(text)
-            if not cleaned_text:
-                continue
-            candidates.append((len(cleaned_text), cleaned_text))
-            candidate_nodes.append(node)
-
-    article_node = soup.find("article")
-    if article_node and article_node not in candidate_nodes:
-        candidate_nodes.append(article_node)
-    if soup.body and soup.body not in candidate_nodes:
-        candidate_nodes.append(soup.body)
-
-    best_text = ""
-    if candidates:
-        best_text = max(candidates, key=lambda item: item[0])[1]
-
-    best_density_text = ""
-    best_density_score = 0
-    for node in candidate_nodes:
-        parts = []
-        for sub in node.find_all(["p", "li", "h2", "h3"]):
-            fragment = _normalize_whitespace(sub.get_text(" ", strip=True))
-            if fragment:
-                if _contains_deny_phrase(fragment):
-                    continue
-                parts.append(fragment)
-        if not parts:
-            continue
-        joined = "\n\n".join(parts)
-        score = len("".join(parts))
-        if score > best_density_score:
-            best_density_score = score
-            best_density_text = joined
-
-    if best_density_text and len(best_density_text) > len(best_text):
-        best_text = best_density_text
-
-    readability_text = ""
-    readability_score = 0
-    search_nodes = list(candidate_nodes)
-    for extra in soup.find_all(["article", "section", "main", "div", "body"]):
-        if extra not in search_nodes:
-            search_nodes.append(extra)
-    for node in search_nodes:
-        paragraphs = []
-        for p in node.find_all("p"):
-            fragment = _normalize_whitespace(p.get_text(" ", strip=True))
-            if not fragment:
-                continue
-            if _contains_deny_phrase(fragment):
-                continue
-            paragraphs.append(fragment)
-        if len(paragraphs) < _MIN_PARAGRAPH_CLUSTER:
-            continue
-        joined = "\n\n".join(paragraphs)
-        score = len(joined)
-        if score > readability_score:
-            readability_score = score
-            readability_text = joined
-
-    if not best_text and readability_text:
-        best_text = readability_text
+    search_selectors = ordered_selectors + ["article", "main", "section", "body"]
+    ranked = _rank_content_candidates(soup, search_selectors, title, min_words)
+    best_text = ranked[0][1] if ranked else ""
 
     final_text = _drop_leading_title(best_text, title)
     final_text = _strip_deny_phrases(final_text)
     final_text = _normalize_whitespace(final_text)
 
-    if not final_text:
+    if not final_text or (min_words and _word_count(final_text) < min_words):
         return None
 
     return final_text
@@ -1449,47 +1445,15 @@ def html_fragment_to_text(fragment: str) -> str:
     text = soup.get_text("\n", strip=True)
     return _normalize_whitespace(text)
 
-def extract_content_text(soup: BeautifulSoup, selectors=None):
+def extract_content_text(soup: BeautifulSoup, selectors=None, title=None, min_words: int = 0):
     if isinstance(selectors, str):
         selectors = [selectors]
     else:
         selectors = list(selectors or [])
-    tried = []
-
-    def element_text(elem):
-        if elem is None:
-            return ""
-        for junk in elem.find_all(["script", "style", "noscript", "form", "iframe"]):
-            junk.decompose()
-        text = elem.get_text("\n", strip=True)
-        return _normalize_whitespace(text)
-
-    for sel in selectors + DEFAULT_CONTENT_SELECTORS:
-        if sel in tried:
-            continue
-        tried.append(sel)
-        for node in soup.select(sel):
-            text = element_text(node)
-            if len(text) >= 120:
-                return text
-            # Короткие карточки тоже могут встречаться
-            if len(text) >= 40:
-                return text
-
-    # Fallback: собрать параграфы из <article> или <body>
-    container = soup.find("article") or soup.body
-    if container:
-        paragraphs = []
-        for p in container.find_all(["p", "li"]):
-            txt = _normalize_whitespace(p.get_text(" ", strip=True))
-            if len(txt) >= 20:
-                if _contains_deny_phrase(txt):
-                    continue
-                paragraphs.append(txt)
-        if paragraphs:
-            return "\n\n".join(paragraphs)
-
-    return None
+    _clean_for_content(soup)
+    ordered = list(dict.fromkeys(selectors + DEFAULT_CONTENT_SELECTORS + ["article", "body"]))
+    ranked = _rank_content_candidates(soup, ordered, title, min_words)
+    return ranked[0][1] if ranked else None
 
 
 JSON_LD_ARTICLE_TYPES = {
@@ -2001,7 +1965,10 @@ def extract_article_content(
     combined_selectors = _selectors_for_url(url, selector_list)
 
     primary_soup = _clone_soup(soup)
-    raw_text = extract_content_text(primary_soup, selectors=combined_selectors)
+    min_words = int(src.get("min_words", 0) or 0) if src else 0
+    raw_text = extract_content_text(
+        primary_soup, selectors=combined_selectors, title=title, min_words=min_words
+    )
     content_source = "primary_selectors" if raw_text else ""
     content_text = clean_content_text(raw_text, title=title)
 
@@ -2012,8 +1979,10 @@ def extract_article_content(
             content_text = json_ld_clean
             content_source = "jsonld"
 
-    if not content_text:
-        fallback_text = extract_content_with_fallback(soup, combined_selectors, title)
+    if not content_text or (min_words and _word_count(content_text) < min_words):
+        fallback_text = extract_content_with_fallback(
+            soup, combined_selectors, title, min_words=min_words
+        )
         fallback_clean = clean_content_text(fallback_text, title=title)
         if fallback_clean:
             host = urlparse(url).netloc.lower()

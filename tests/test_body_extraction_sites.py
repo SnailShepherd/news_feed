@@ -16,6 +16,8 @@ FIXTURES = {
     "https://faufcc.ru/press-tsentr/novosti/test-article/": "faufcc_article.html",
 }
 
+PNP_URL = "https://www.pnp.ru/economics/pensionerov-v-rossii-za-god-stalo-menshe-na-409-tysyach-chelovek.html"
+
 
 @pytest.mark.parametrize("url, fixture_name", FIXTURES.items())
 def test_body_extraction_clean_text(url, fixture_name):
@@ -30,23 +32,17 @@ def test_body_extraction_clean_text(url, fixture_name):
     assert source_label in {"primary_selectors", "jsonld", "fallback_selectors"}
 
 
-def test_pnp_boilerplate_removed_and_body_nonempty():
-    url = "https://www.pnp.ru/economics/test-article.html"
-    html = """
-    <html>
-      <body>
-        <article class="article__content">
-          <p>Экономика развивается ускоренными темпами.</p>
-          <p>Автор: Редакция</p>
-          <p>Читайте нас в Telegram t.me/pnpdaily</p>
-          <p>Следите за обновлениями: vk.com/pnp</p>
-        </article>
-      </body>
-    </html>
-    """
-    text, _soup, _title, source_label = extract_article_content(url, html, selectors=None, title=None, src=None)
+def test_pnp_production_body_beats_sidebar_recommendations():
+    fixture_path = pathlib.Path(__file__).resolve().parent / "fixtures/pnp.ru/article.html"
+    html = fixture_path.read_text(encoding="utf-8")
+    src = {"min_words": 35, "content_selectors": [".js-mediator-article"]}
+    text, _soup, _title, source_label = extract_article_content(
+        PNP_URL, html, selectors=src["content_selectors"], title=None, src=src
+    )
     assert source_label in {"primary_selectors", "jsonld", "fallback_selectors"}
-    assert _word_count(text) >= 4
-    assert "Автор" not in text
-    assert "Читайте нас" not in text
-    assert "vk.com" not in text
+    assert _word_count(text) >= src["min_words"]
+    assert "Количество же неработающих пенсионеров" in text
+    assert "Средний размер назначенной пенсии" in text
+    assert "Минтруд предложил расширить категории лиц" not in text
+    assert "Интересное за неделю" not in text
+    assert "Главное сегодня" not in text
