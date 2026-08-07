@@ -292,3 +292,64 @@ def test_faufcc_api_response_contract(monkeypatch):
     assert item["title"] == expected["title"]
     assert item["published_at"] == expected["published_at"]
     assert aggregate._word_count(item["content_text"]) > source["min_words"]
+
+
+def test_gostinform_root_canonicals_retain_distinct_articles(monkeypatch, tmp_path):
+    source = next(source for source in SOURCES if source["name"] == "Гостинформ")
+    directory = fixture_dir(source)
+    index = (directory / "root-canonical-index.html").read_text()
+    slugs = [
+        "novaya-sistema-standartov",
+        "izmeneniya-v-reestre",
+        "itogi-konferencii",
+    ]
+    urls = [f"https://www.gostinfo.ru/News/Details/{slug}" for slug in slugs]
+
+    def fixture_fetch(url, src=None):
+        if url == source["start_url"]:
+            return index
+        if url in urls:
+            return (directory / f"{url.rsplit('/', 1)[-1]}.html").read_text()
+        raise AssertionError(f"unexpected Gostinform fixture request: {url}")
+
+    monkeypatch.setattr(aggregate, "fetch_page", fixture_fetch)
+    monkeypatch.setattr(aggregate, "fetch_amp_if_available", lambda *args, **kwargs: (None, None))
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", tmp_path / "source-health.json")
+    monkeypatch.setattr(aggregate, "save_state", lambda: None)
+    monkeypatch.setattr(aggregate, "prune_page_cache", lambda: (0, 0))
+
+    items = aggregate.harvest_source(source, force=True)
+
+    assert {item["url"] for item in items} == set(urls)
+    assert len({item["id"] for item in items}) == 3
+    assert len({item["title"] for item in items}) == 3
+    assert all(
+        aggregate._word_count(item["content_text"])
+        > source.get("min_words", aggregate.DEFAULT_MIN_WORDS)
+        for item in items
+    )
+    assert all("canonical_url" not in item for item in items)
+
+    aggregate.write_source_health_report([source])
+    health = json.loads((tmp_path / "source-health.json").read_text())["sources"][0]
+    assert health["canonical_rejections_by_reason"] == {"site_root": 3}
+    assert len(health["canonical_rejection_samples"]) == 3
+
+
+def test_gostinform_sitemap_orders_recent_records_before_crawl_cap():
+    source = dict(next(source for source in SOURCES if source["name"] == "Гостинформ"))
+    source["max_links"] = 2
+    sitemap = """<?xml version="1.0"?><urlset>
+      <url><loc>https://www.gostinfo.ru/News/Details/ancient</loc><lastmod>2009-01-01</lastmod></url>
+      <url><loc>https://www.gostinfo.ru/News/Details/current</loc><lastmod>2026-08-06</lastmod></url>
+      <url><loc>https://www.gostinfo.ru/News/Details/recent</loc><lastmod>2026-08-05</lastmod></url>
+    </urlset>"""
+
+    links, _, _ = aggregate.extract_index_links(
+        sitemap, source, index_url="https://www.gostinfo.ru/sitemap.xml"
+    )
+
+    assert links[: source["max_links"]] == [
+        "https://www.gostinfo.ru/News/Details/current",
+        "https://www.gostinfo.ru/News/Details/recent",
+    ]

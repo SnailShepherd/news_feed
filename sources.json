@@ -24,10 +24,11 @@
   {
     "name": "Гостинформ",
     "base_url": "https://www.gostinfo.ru",
-    "start_url": "https://www.gostinfo.ru/sitemap.xml",
+    "start_url": "https://www.gostinfo.ru/News/List",
     "include_patterns": [
       "/News/"
     ],
+    "include_regex": "/News/Details/[^/?#]+/?$",
     "link_min_text_len": 8,
     "enabled": true,
     "request_strategy": {
@@ -44,10 +45,11 @@
       "capture_cookies": true
     },
     "fallback_start_urls": [
-      "https://www.gostinfo.ru/News/List"
+      "https://www.gostinfo.ru/sitemap.xml"
     ],
     "restrict_domain": true,
-    "accept_empty_anchor": true
+    "accept_empty_anchor": true,
+    "sort_sitemap_by_lastmod": true
   },
   {
     "name": "ФАУ ФЦС",
