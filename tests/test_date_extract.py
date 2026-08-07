@@ -28,8 +28,7 @@ def fixed_now(monkeypatch):
 
 def test_try_parse_any_date_relative_today(fixed_now):
     result = aggregate.try_parse_any_date(["сегодня 12:45"])
-    assert result is not None
-    assert result.isoformat() == "2024-10-05T12:45:00+03:00"
+    assert result is None
 
 
 def test_try_parse_any_date_relative_yesterday(fixed_now):
@@ -39,7 +38,7 @@ def test_try_parse_any_date_relative_yesterday(fixed_now):
 
 
 def test_extract_published_datetime_time_tag():
-    html = "<html><body><time datetime='2024-10-03T09:15:00+03:00'>03.10.2024</time></body></html>"
+    html = "<html><body><article><time datetime='2024-10-03T09:15:00+03:00'>03.10.2024</time></article></body></html>"
     soup = BeautifulSoup(html, "html.parser")
     dt = aggregate.extract_published_datetime(soup, url="https://example.com/test")
     assert dt is not None
@@ -50,7 +49,7 @@ def test_extract_published_datetime_time_tag():
     ("value", "expected"),
     [
         ("2024-10-05T09:00:00+03:00", "2024-10-05T09:00:00+03:00"),
-        ("2024-10-06T10:00:00+03:00", "2024-10-06T10:00:00+03:00"),
+        ("2024-10-06T10:00:00+03:00", None),
         ("2025-02-05T10:00:00+03:00", None),
     ],
 )
@@ -127,3 +126,32 @@ def test_explicit_publication_diagnostics_are_bounded_and_structured(
         == "2024-10-06T13:00:00+03:00"
     )
     assert summary["maximum_future_offset_seconds"] > 0
+
+
+def test_article_date_wins_over_current_sidebar_date(fixed_now):
+    soup = BeautifulSoup("""
+      <article><time datetime="2020-02-03T09:00:00+03:00">3 февраля 2020</time></article>
+      <aside><div class="date">5 октября 2024</div></aside>
+    """, "html.parser")
+    dt = aggregate.extract_published_datetime(soup, "https://notim.ru/news/story")
+    assert dt.isoformat() == "2020-02-03T09:00:00+03:00"
+
+
+def test_page_chrome_date_is_not_a_publication_date(fixed_now):
+    soup = BeautifulSoup("""
+      <main><h1>Старая новость</h1></main>
+      <aside><time datetime="2024-10-05T09:59:00+03:00">Сегодня</time></aside>
+    """, "html.parser")
+    assert aggregate.extract_published_datetime(
+        soup, "https://gge.ru/press/news/old-story"
+    ) is None
+
+
+def test_rejected_article_metadata_falls_back_to_canonical_url(fixed_now):
+    soup = BeautifulSoup("""
+      <head><meta property="article:published_time" content="2024-10-06T09:00:00+03:00">
+      <link rel="canonical" href="https://example.com/news/2020/02/03/story"></head>
+      <article><p>Story</p></article>
+    """, "html.parser")
+    dt = aggregate.extract_published_datetime(soup, "https://example.com/story")
+    assert dt.isoformat().startswith("2020-02-03T")

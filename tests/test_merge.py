@@ -13,6 +13,7 @@ from scripts.aggregate import (
     _filter_by_min_words,
     build_item,
     merge_items,
+    sort_timestamp,
 )
 
 
@@ -202,6 +203,32 @@ class MergeItemsTests(unittest.TestCase):
             ),
             item_a["id"],
         )
+
+    def test_refetch_does_not_promote_old_undated_item(self):
+        old = {
+            "first_seen": "2020-02-03T09:00:00+03:00",
+            "fetched_at": "2026-08-07T18:00:00+03:00",
+        }
+        recent = {
+            "first_seen": "2024-10-05T08:00:00+03:00",
+            "fetched_at": "2024-10-05T08:05:00+03:00",
+        }
+        self.assertLess(sort_timestamp(old), sort_timestamp(recent))
+
+    def test_migrates_crawl_time_masquerading_as_publication(self):
+        timestamp = "2024-10-05T09:00:00+03:00"
+        merged = merge_items([{
+            "id": "legacy",
+            "source": "Example",
+            "title": "Old undated story",
+            "url": "https://example.com/old",
+            "content_text": "content",
+            "first_seen": "2020-02-03T09:00:00+03:00",
+            "bucketed_at": "2020-02-03T09:00:00+03:00",
+            "fetched_at": timestamp,
+            "published_at": timestamp,
+        }], [])
+        self.assertNotIn("published_at", merged[0])
 
 
 if __name__ == "__main__":
