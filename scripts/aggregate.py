@@ -2674,7 +2674,11 @@ def write_source_health_report(sources: list[dict]) -> None:
             has_prior_discovery = "raw_link_candidates" in source_discovery
             raw_candidates = int(source_discovery.get("raw_link_candidates", raw_candidates) or 0)
             accepted_links = int(source_discovery.get("accepted_links", accepted_links) or 0)
-            discovery_failed = raw_candidates == 0 if has_prior_discovery else None
+            discovery_failed = (
+                raw_candidates == 0 or accepted_links == 0
+                if has_prior_discovery
+                else None
+            )
         article_failed = (accepted == 0) if attempted > 0 else None
 
         def update_streak(streak_map: dict, failed: bool | None) -> int:
