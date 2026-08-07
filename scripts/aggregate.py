@@ -2878,7 +2878,7 @@ def merge_items(existing, new):
 
 def main():
     global ARGS, CONNECT_TIMEOUT, READ_TIMEOUT, REQUEST_TIMEOUT, START_TIME, RUNTIME_EXCEEDED, _RUNTIME_LOGGED
-    global OUT_JSON, EXISTING_FEED_JSON, SOURCE_HEALTH_JSON, SOURCE_HEALTH_STATE_FILE, SOURCE_HEALTH_STATE
+    global OUT_JSON, EXISTING_FEED_JSON, STATE_FILE, SOURCE_HEALTH_JSON, SOURCE_HEALTH_STATE_FILE, SOURCE_HEALTH_STATE
     parser = argparse.ArgumentParser(description="Aggregate news feed")
     parser.add_argument("--rebuild", action="store_true", help="Force rebuild: ignore index unchanged and seen-URL filters; always rewrite unified.json")
     parser.add_argument("--dry-run", action="store_true", help="Run without writing unified.json/state")
@@ -2892,15 +2892,18 @@ def main():
     parser.add_argument("--output", type=pathlib.Path, default=OUT_JSON, help="Candidate feed output path")
     parser.add_argument("--source-health-output", type=pathlib.Path, default=SOURCE_HEALTH_JSON, help="Candidate crawl-health output path")
     parser.add_argument("--existing-feed", type=pathlib.Path, default=EXISTING_FEED_JSON, help="Published feed used as the merge baseline")
+    parser.add_argument("--state-output", type=pathlib.Path, default=STATE_FILE, help="Candidate crawler-state output path")
     parser.add_argument("--source-health-state", type=pathlib.Path, default=SOURCE_HEALTH_STATE_FILE, help="Persistent failure-streak state path")
     ARGS = parser.parse_args()
 
     OUT_JSON = ARGS.output
     SOURCE_HEALTH_JSON = ARGS.source_health_output
     EXISTING_FEED_JSON = ARGS.existing_feed
+    STATE_FILE = ARGS.state_output
     SOURCE_HEALTH_STATE_FILE = ARGS.source_health_state
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     SOURCE_HEALTH_JSON.parent.mkdir(parents=True, exist_ok=True)
+    STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
     if SOURCE_HEALTH_STATE_FILE.exists():
         loaded_health_state = json.loads(SOURCE_HEALTH_STATE_FILE.read_text(encoding="utf-8"))
         SOURCE_HEALTH_STATE = loaded_health_state if isinstance(loaded_health_state, dict) else {}

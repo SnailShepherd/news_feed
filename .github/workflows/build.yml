@@ -51,12 +51,14 @@ jobs:
             echo "Running in REBUILD mode"
             python scripts/aggregate.py --rebuild \
               --output .cache/candidates/unified.json \
-              --source-health-output .cache/candidates/source-health.json
+              --source-health-output .cache/candidates/source-health.json \
+              --state-output .cache/candidates/state.json
           else
             echo "Running in NORMAL mode"
             python scripts/aggregate.py \
               --output .cache/candidates/unified.json \
-              --source-health-output .cache/candidates/source-health.json
+              --source-health-output .cache/candidates/source-health.json \
+              --state-output .cache/candidates/state.json
           fi
 
       - name: Validate and publish candidate
@@ -74,7 +76,9 @@ jobs:
               --source-health .cache/candidates/source-health.json \
               --strict-source-health \
               --promote-feed docs/unified.json \
-              --promote-source-health docs/source-health.json
+              --promote-source-health docs/source-health.json \
+              --candidate-state .cache/candidates/state.json \
+              --promote-state .cache/state.json
             echo '```'
           } | tee -a "$GITHUB_STEP_SUMMARY"
 
