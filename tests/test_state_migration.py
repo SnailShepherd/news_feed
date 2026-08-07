@@ -39,6 +39,8 @@ def test_ensure_state_keys_adds_missing_fields(monkeypatch):
         "stats",
         "index_hash",
         "seen_urls",
+        "candidate_urls",
+        "url_states",
         "first_seen",
         "host_state",
         "aliases",

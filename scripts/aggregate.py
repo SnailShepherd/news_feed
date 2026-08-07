@@ -146,6 +146,8 @@ def ensure_state_keys(state: dict) -> dict:
         "stats": {},
         "index_hash": {},
         "seen_urls": {},
+        "candidate_urls": {},
+        "url_states": {},
         "first_seen": {},
         "host_state": {},
         "aliases": {},
@@ -157,6 +159,54 @@ def ensure_state_keys(state: dict) -> dict:
         if not isinstance(val, dict):
             state[key] = dict(default)
     return state
+
+
+ARTICLE_MAX_ATTEMPTS = max(1, int(os.environ.get("ARTICLE_MAX_ATTEMPTS", "2")))
+ARTICLE_RETRY_DELAY = max(0.0, float(os.environ.get("ARTICLE_RETRY_DELAY", "1")))
+
+
+def _source_url_states(source_name: str) -> dict:
+    """Return per-URL crawl states, migrating the legacy successful URL list."""
+    states = STATE.setdefault("url_states", {}).setdefault(source_name, {})
+    for url in STATE.setdefault("seen_urls", {}).get(source_name, []):
+        states.setdefault(url, {"status": "accepted"})
+    return states
+
+
+def _record_url_state(source_name: str, url: str, status: str, error: str | None = None) -> None:
+    record = {"status": status, "updated_at": datetime.now(timezone.utc).isoformat()}
+    if error:
+        record["error"] = error
+    STATE.setdefault("url_states", {}).setdefault(source_name, {})[url] = record
+
+
+def _with_article_retries(src: dict, url: str, operation):
+    """Retry transient article fetch/parser errors without retrying rejected content."""
+    attempts = max(1, int(src.get("article_max_attempts", ARTICLE_MAX_ATTEMPTS)))
+    delay = max(0.0, float(src.get("article_retry_delay", ARTICLE_RETRY_DELAY)))
+    for attempt in range(1, attempts + 1):
+        try:
+            return operation()
+        except Exception as exc:
+            if attempt >= attempts:
+                raise
+            logging.warning(
+                "  transient article failure %d/%d for %s: %s",
+                attempt,
+                attempts,
+                url,
+                exc,
+            )
+            if delay:
+                time.sleep(delay)
+
+
+def _build_item_with_retries(url: str, crawl_src: dict, *args, **kwargs):
+    return _with_article_retries(
+        crawl_src,
+        url,
+        lambda: build_item(url, *args, **kwargs),
+    )
 
 
 if STATE_FILE.exists():
@@ -1889,7 +1939,6 @@ def harvest_json_source(src: dict, force: bool = False):
     if not force and ih.get(endpoint) == idx_digest:
         logging.info("Index unchanged (API): %s — %s", src.get("name"), endpoint)
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "unchanged"
-        return []
     ih[endpoint] = idx_digest
 
     try:
@@ -1956,11 +2005,16 @@ def harvest_json_source(src: dict, force: bool = False):
     SOURCE_SUMMARY[src_name]["accepted_links"] = len(entries)
 
     entry_urls = [url for url, _, _ in entries]
+    STATE.setdefault("candidate_urls", {})[src_name] = entry_urls
+    url_states = _source_url_states(src_name)
 
     if force:
         new_entries = entries
     else:
-        new_entries = [it for it in entries if it[0] not in already_seen]
+        new_entries = [
+            it for it in entries
+            if url_states.get(it[0], {}).get("status") not in {"accepted", "permanently_rejected"}
+        ]
         if not new_entries:
             logging.info("  no new links for %s", src["name"])
             return []
@@ -2028,8 +2082,9 @@ def harvest_json_source(src: dict, force: bool = False):
             used_api_payload = False
             if api_text:
                 html = ""
-                item = build_item(
+                item = _build_item_with_retries(
                     url,
+                    src,
                     src_name,
                     html,
                     content_selectors=src.get("content_selectors"),
@@ -2046,9 +2101,10 @@ def harvest_json_source(src: dict, force: bool = False):
                             word_count,
                             min_words,
                         )
-                    html = fetch_page(url, src=src)
-                    item = build_item(
+                    html = _with_article_retries(src, url, lambda: fetch_page(url, src=src))
+                    item = _build_item_with_retries(
                         url,
+                        src,
                         src_name,
                         html,
                         content_selectors=src.get("content_selectors"),
@@ -2059,9 +2115,10 @@ def harvest_json_source(src: dict, force: bool = False):
                 else:
                     used_api_payload = True
             else:
-                html = fetch_page(url, src=src)
-                item = build_item(
+                html = _with_article_retries(src, url, lambda: fetch_page(url, src=src))
+                item = _build_item_with_retries(
                     url,
+                    src,
                     src_name,
                     html,
                     content_selectors=src.get("content_selectors"),
@@ -2105,7 +2162,7 @@ def harvest_json_source(src: dict, force: bool = False):
                 SOURCE_SUMMARY[src_name]["empty"] += 1
                 if amp_flag:
                     SOURCE_SUMMARY[src_name]["amp"] += 1
-                processed_links.append(url)
+                _record_url_state(src_name, url, "retryable_failure", "empty extraction")
                 continue
             if amp_flag:
                 SOURCE_SUMMARY[src_name]["amp"] += 1
@@ -2118,16 +2175,18 @@ def harvest_json_source(src: dict, force: bool = False):
                     drop_source,
                 )
                 SOURCE_SUMMARY[src_name]["short"] += 1
-                processed_links.append(url)
+                _record_url_state(src_name, url, "retryable_failure", f"short extraction: {word_count} words")
                 continue
             SOURCE_SUMMARY[src_name]["total"] += 1
             items.append(_finalize_item_schema(item))
             processed_links.append(url)
+            _record_url_state(src_name, url, "accepted")
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
             SOURCE_SUMMARY[src_name]["last_error"] = str(e)
+            _record_url_state(src_name, url, "retryable_failure", str(e))
 
-    attempted_links = bool(processed_links)
+    attempted_links = bool(new_entries)
 
     if (
         src.get("html_fallback_on_empty_api")
@@ -2361,13 +2420,12 @@ def harvest_source(src: dict, force: bool = False):
                     )
                     return []
 
-    # Если содержимое ленты не изменилось — пропускаем весь источник
+    # An unchanged index must still be parsed so retryable article URLs are revisited.
     idx_digest = hashlib.sha256(index_html.encode("utf-8")).hexdigest()
     ih = STATE.setdefault("index_hash", {})
     if not force and ih.get(src["start_url"]) == idx_digest:
         logging.info("Index unchanged: %s — %s", src["name"], src["start_url"])
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "unchanged"
-        return []
     ih[src["start_url"]] = idx_digest
 
     # XML/HTML автодетект
@@ -2490,16 +2548,21 @@ def harvest_source(src: dict, force: bool = False):
 
     # лимит по источнику (берём из sources.json или общий DEFAULT)
     uniq = uniq[: int(src.get("max_links", MAX_LINKS_PER_SOURCE)) ]
+    STATE.setdefault("candidate_urls", {})[src_name] = uniq
 
     # Обрабатываем только новые относительно последнего прогона
     seen_map = STATE.setdefault("seen_urls", {})
     already_seen_list = list(seen_map.get(src["name"], []))
     already_seen = set(already_seen_list)
+    url_states = _source_url_states(src_name)
 
     if force:
         new_links = uniq  # при rebuild обрабатываем все доступные uniq-ссылки
     else:
-        new_links = [u for u in uniq if u not in already_seen]
+        new_links = [
+            u for u in uniq
+            if url_states.get(u, {}).get("status") not in {"accepted", "permanently_rejected"}
+        ]
         if not new_links:
             logging.info("  no new links for %s", src["name"])
             return []
@@ -2528,7 +2591,7 @@ def harvest_source(src: dict, force: bool = False):
             SOURCE_SUMMARY[src_name]["empty"] += 1
             if amp_flag:
                 SOURCE_SUMMARY[src_name]["amp"] += 1
-            processed_links.append(url)
+            _record_url_state(src_name, url, "retryable_failure", "empty extraction")
             return
         if amp_flag:
             SOURCE_SUMMARY[src_name]["amp"] += 1
@@ -2541,11 +2604,12 @@ def harvest_source(src: dict, force: bool = False):
                 drop_source,
             )
             SOURCE_SUMMARY[src_name]["short"] += 1
-            processed_links.append(url)
+            _record_url_state(src_name, url, "retryable_failure", f"short extraction: {word_count} words")
             return
         SOURCE_SUMMARY[src_name]["total"] += 1
         items.append(_finalize_item_schema(item))
         processed_links.append(url)
+        _record_url_state(src_name, url, "accepted")
 
     for idx, url in enumerate(new_links):
         if runtime_expired():
@@ -2574,9 +2638,10 @@ def harvest_source(src: dict, force: bool = False):
                 else:
                     raise FileNotFoundError("cached copy missing during cooldown")
             else:
-                html = fetch_page(url, src=src)
-            item = build_item(
+                html = _with_article_retries(src, url, lambda: fetch_page(url, src=src))
+            item = _build_item_with_retries(
                 url,
+                src,
                 src_name,
                 html,
                 content_selectors=src.get("content_selectors"),
@@ -2591,8 +2656,9 @@ def harvest_source(src: dict, force: bool = False):
                     "  using cached copy for %s due to temporary issue: %s", url, exc
                 )
                 html = page_path.read_text(encoding="utf-8")
-                item = build_item(
+                item = _build_item_with_retries(
                     url,
+                    src,
                     src_name,
                     html,
                     content_selectors=src.get("content_selectors"),
@@ -2602,9 +2668,11 @@ def harvest_source(src: dict, force: bool = False):
             else:
                 logging.warning("  skip %s: %s", url, exc)
                 SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
+                _record_url_state(src_name, url, "retryable_failure", str(exc))
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
             SOURCE_SUMMARY[src_name]["last_error"] = str(e)
+            _record_url_state(src_name, url, "retryable_failure", str(e))
 
     # обновим «виденные» ссылки — держим скользящее окно последних 800
     keep = 800
