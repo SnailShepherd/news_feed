@@ -1697,6 +1697,15 @@ def _parse_datetime_signal(
         dt = finalize_datetime(dparser.isoparse(value))
     except Exception:
         dt = None
+    if dt is None and re.search(
+        r"\b(?:января|февраля|марта|апреля|мая|июня|июля|августа|сентября|"
+        r"октября|ноября|декабря)\b",
+        value,
+        re.IGNORECASE,
+    ):
+        words_dt = parse_ru_date_words(value)
+        if words_dt:
+            dt = finalize_datetime(words_dt)
     if dt is None:
         try:
             dt = finalize_datetime(
@@ -1708,10 +1717,6 @@ def _parse_datetime_signal(
             )
         except Exception:
             dt = None
-    if dt is None:
-        words_dt = parse_ru_date_words(value)
-        if words_dt:
-            dt = finalize_datetime(words_dt)
     if dt:
         logging.debug("Published time signal (%s): %s -> %s", signal, value, dt.isoformat())
         return validate_publication_datetime(
@@ -1726,6 +1731,7 @@ def extract_published_datetime(
     url: str | None = None,
     source: str | None = None,
     diagnostics: PublicationDiagnostics | None = None,
+    selectors: list[str] | None = None,
 ) -> datetime | None:
     seen_candidates: set[tuple[str, str]] = set()
 
@@ -1740,6 +1746,19 @@ def extract_published_datetime(
             return None
         seen_candidates.add(key)
         return _parse_datetime_signal(candidate, signal, url=url, source=source, diagnostics=diagnostics)
+
+    # Source contracts may identify an article's own visible byline. These
+    # narrowly scoped nodes outrank generic metadata, which some templates
+    # accidentally populate from a different news card.
+    for selector in selectors or []:
+        for node in soup.select(selector):
+            for candidate in (
+                node.get("datetime"), node.get("content"),
+                node.get_text(" ", strip=True),
+            ):
+                dt = attempt(candidate, f"selector:{selector}")
+                if dt:
+                    return dt
 
     # Explicit publication metadata is trustworthy.  Modified/upload dates
     # are intentionally not fallbacks: they describe page activity, not the
@@ -2076,7 +2095,8 @@ def build_item(
                 amp_used = True
 
     dt = extract_published_datetime(
-        soup, url, source_name, diagnostics=publication_diagnostics
+        soup, url, source_name, diagnostics=publication_diagnostics,
+        selectors=(src or {}).get("publication_date_selectors"),
     )
 
     if dt is None:
@@ -2626,8 +2646,11 @@ def harvest_json_source(src: dict, force: bool = False):
                         [human_date], url=url, source=src_name, signal="api:human_date",
                         diagnostics=PublicationDiagnostics(src_name),
                     )
-            if parsed_dt:
+            # The API/listing is discovery metadata.  Never let it replace the
+            # date printed by the fetched article itself.
+            if parsed_dt and not item.get("published_at"):
                 item["published_at"] = parsed_dt.isoformat()
+                item["_published_at_trustworthy"] = True
             if src.get("structured_adapter") == "erz":
                 item["source_record_id"] = str(entry["id"])
                 item["tags"] = list(entry.get("tags") or [])

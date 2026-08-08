@@ -147,6 +147,52 @@ def test_page_chrome_date_is_not_a_publication_date(fixed_now):
     ) is None
 
 
+def test_stroygaz_printed_article_date_wins_over_foreign_metadata():
+    html = """
+      <meta property="article:published_time" content="2026-08-08T11:52:00+03:00">
+      <article><header><time>6 августа 2026 16:27</time></header>
+      <div itemprop="articleBody">
+        6 августа 2026 16:27 Shutterstock/FOTODOM В I полугодии 2026 года
+        самыми быстрорастущими стали гостиницы без звезд. Подробный текст
+        публикации с достаточным количеством слов для извлечения материала.
+        {body}
+      </div></article>
+    """.format(body=" ".join(["содержание"] * 130))
+    item = aggregate.build_item(
+        "https://stroygaz.ru/news/commercial/oteli-bez-zvezd/",
+        "Стройгаз.ру",
+        html,
+        content_selectors=["[itemprop='articleBody']"],
+        src={"min_words": 0, "publication_date_selectors": ["article header time"]},
+    )
+    assert item["published_at"] == "2026-08-06T16:27:00+03:00"
+
+
+def test_notim_recovers_old_date_without_swapping_day_and_month():
+    soup = BeautifulSoup(
+        '<div class="news-detail__date">9 декабря 2025</div>', "html.parser"
+    )
+    dt = aggregate.extract_published_datetime(
+        soup, url="https://notim.ru/news/dlya-mostovikov/", source="НОТИМ",
+        selectors=[".news-detail__date"],
+    )
+    assert dt.isoformat() == "2025-12-09T00:00:00+03:00"
+
+
+def test_opening_event_date_cannot_override_article_metadata():
+    soup = BeautifulSoup("""
+      <meta property="article:published_time" content="2026-08-08T11:52:00+03:00">
+      <article><p>5 августа 2026 состоялось заседание рабочей группы.</p></article>
+    """, "html.parser")
+    dt = aggregate.extract_published_datetime(soup, source="Стройгаз.ру")
+    assert dt.isoformat() == "2026-08-08T11:52:00+03:00"
+
+
+def test_numeric_date_with_explicit_offset_keeps_its_instant():
+    dt = aggregate._parse_datetime_signal("09.12.2025 10:30 +0500", "api:date")
+    assert dt.isoformat() == "2025-12-09T08:30:00+03:00"
+
+
 def test_rejected_article_metadata_falls_back_to_canonical_url(fixed_now):
     soup = BeautifulSoup("""
       <head><meta property="article:published_time" content="2024-10-06T09:00:00+03:00">

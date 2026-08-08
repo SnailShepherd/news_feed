@@ -9,6 +9,9 @@
       "/article"
     ],
     "link_min_text_len": 16,
+    "publication_date_selectors": [
+      ".news-detail__date"
+    ],
     "enabled": true
   },
   {
@@ -456,6 +459,9 @@
     "link_min_text_len": 8,
     "min_words": 100,
     "enabled": true,
+    "publication_date_selectors": [
+      "article header time"
+    ],
     "content_selectors": [
       "[itemprop='articleBody']",
       "article .content, article .entry-content, article .article-content",
