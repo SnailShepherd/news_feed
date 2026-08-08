@@ -1698,6 +1698,10 @@ def _parse_datetime_signal(
     except Exception:
         dt = None
     if dt is None:
+        words_dt = parse_ru_date_words(value)
+        if words_dt:
+            dt = finalize_datetime(words_dt)
+    if dt is None:
         try:
             dt = finalize_datetime(
                 dparser.parse(
@@ -1708,10 +1712,6 @@ def _parse_datetime_signal(
             )
         except Exception:
             dt = None
-    if dt is None:
-        words_dt = parse_ru_date_words(value)
-        if words_dt:
-            dt = finalize_datetime(words_dt)
     if dt:
         logging.debug("Published time signal (%s): %s -> %s", signal, value, dt.isoformat())
         return validate_publication_datetime(
@@ -1719,6 +1719,35 @@ def _parse_datetime_signal(
             diagnostics=diagnostics,
         )
     return None
+
+
+def extract_leading_content_datetime(
+    content_text: str | None, *, url=None, source=None, diagnostics=None,
+) -> datetime | None:
+    """Read a printed byline date from the beginning of extracted article text.
+
+    This deliberately accepts only an explicit Russian date (including its
+    year) near the start of the selected article content.  A bounded,
+    article-local signal cannot drift to a dated related-news card later in
+    the page, and parsing it before page metadata avoids broken templates
+    whose metadata belongs to a different card.
+    """
+    if not content_text:
+        return None
+    leading = content_text[:500]
+    match = re.search(
+        r"(?<!\d)([0-3]?\d\s+(?:января|февраля|марта|апреля|мая|июня|июля|"
+        r"августа|сентября|октября|ноября|декабря)\s+20\d{2}"
+        r"(?:\s+(?:[01]?\d|2[0-3]):[0-5]\d)?)(?!\d)",
+        leading,
+        re.IGNORECASE,
+    )
+    if not match:
+        return None
+    return _parse_datetime_signal(
+        match.group(1), "article_content:leading_date", url=url, source=source,
+        diagnostics=diagnostics,
+    )
 
 
 def extract_published_datetime(
@@ -2075,7 +2104,12 @@ def build_item(
                 content_source = amp_label or amp_source or "amp"
                 amp_used = True
 
-    dt = extract_published_datetime(
+    content_dt = None
+    if source_name in {"Стройгаз.ру", "НОТИМ", "ЕРЗ.РФ"}:
+        content_dt = extract_leading_content_datetime(
+            content_text, url=url, source=source_name, diagnostics=publication_diagnostics
+        )
+    dt = content_dt or extract_published_datetime(
         soup, url, source_name, diagnostics=publication_diagnostics
     )
 
@@ -2626,8 +2660,11 @@ def harvest_json_source(src: dict, force: bool = False):
                         [human_date], url=url, source=src_name, signal="api:human_date",
                         diagnostics=PublicationDiagnostics(src_name),
                     )
-            if parsed_dt:
+            # The API/listing is discovery metadata.  Never let it replace the
+            # date printed by the fetched article itself.
+            if parsed_dt and not item.get("published_at"):
                 item["published_at"] = parsed_dt.isoformat()
+                item["_published_at_trustworthy"] = True
             if src.get("structured_adapter") == "erz":
                 item["source_record_id"] = str(entry["id"])
                 item["tags"] = list(entry.get("tags") or [])
