@@ -38,6 +38,26 @@ class MergeItemsTests(unittest.TestCase):
         SOURCE_MIN_WORDS.clear()
         SOURCE_MIN_WORDS.update(self._orig_min_words)
 
+    def test_merge_updates_structured_record_metadata(self):
+        existing = [{
+            "id": "stable", "source": "ЕРЗ.РФ", "title": "Title",
+            "url": "https://erzrf.ru/news/story", "content_text": "old body",
+            "first_seen": "2026-08-01T00:00:00+00:00",
+            "bucketed_at": "2026-08-01T00:00:00+00:00",
+            "fetched_at": "2026-08-01T00:00:00+00:00",
+        }]
+        incoming = [{
+            **existing[0], "source_record_id": "28549959001",
+            "tags": ["Аналитика", "Цены"], "summary": "Updated card annotation",
+            "fetched_at": "2026-08-02T00:00:00+00:00",
+        }]
+
+        merged = merge_items(existing, incoming)
+
+        self.assertEqual(merged[0]["source_record_id"], "28549959001")
+        self.assertEqual(merged[0]["tags"], ["Аналитика", "Цены"])
+        self.assertEqual(merged[0]["summary"], "Updated card annotation")
+
     def test_keeps_existing_content_text_when_new_is_missing(self):
         existing = [
             {

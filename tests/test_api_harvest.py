@@ -84,6 +84,14 @@ def test_erz_structured_discovery_maps_records_and_ignores_embedded_urls(monkeyp
         (Path(__file__).parent / "fixtures" / "erzrf.ru" / "api.json").read_text()
     )
     monkeypatch.setattr(aggregate.SESSION, "get", lambda url, **kwargs: DummyResponse(payload))
+    article_body = " ".join(["Полный текст статьи"] * 20)
+    fetches = []
+
+    def fetch_article(url, src=None):
+        fetches.append(url)
+        return f"<html><body><article><p>{article_body}</p></article></body></html>"
+
+    monkeypatch.setattr(aggregate, "fetch_page", fetch_article)
     src = {
         "name": "ЕРЗ.РФ", "base_url": "https://erzrf.ru",
         "start_url": "https://erzrf.ru/news", "structured_adapter": "erz",
@@ -106,7 +114,33 @@ def test_erz_structured_discovery_maps_records_and_ignores_embedded_urls(monkeyp
     ]
     assert [item["source_record_id"] for item in items] == ["28549959001", "28549380001"]
     assert items[0]["tags"] == ["ТОП ЖК", "Рейтинг ЖК"]
+    assert items[0]["summary"] == payload[0]["annotation"]
+    assert items[0]["content_text"] == article_body
+    assert fetches == [item["url"] for item in items]
     assert not any("images/" in item["url"] or "example" in item["url"] for item in items)
+
+
+def test_erz_structured_diagnostics_are_written_to_health_report(monkeypatch, tmp_path):
+    source = {"name": "ЕРЗ.РФ", "enabled": True}
+    aggregate.SOURCE_SUMMARY[source["name"]].update({
+        "index_fetch_status": "fetched",
+        "structured_endpoint_fetch_failures": 1,
+        "structured_schema_mismatches": 2,
+        "structured_zero_records": 3,
+        "structured_article_extraction_failures": 4,
+    })
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", tmp_path / "health.json")
+    monkeypatch.setattr(aggregate, "save_state", lambda: None)
+    monkeypatch.setattr(aggregate, "save_source_health_state", lambda: None)
+    monkeypatch.setattr(aggregate, "prune_page_cache", lambda: (0, 0))
+
+    aggregate.write_source_health_report([source])
+
+    row = json.loads((tmp_path / "health.json").read_text())["sources"][0]
+    assert row["structured_endpoint_fetch_failures"] == 1
+    assert row["structured_schema_mismatches"] == 2
+    assert row["structured_zero_records"] == 3
+    assert row["structured_article_extraction_failures"] == 4
 
 
 def test_faufcc_api_falls_back_to_html(monkeypatch):

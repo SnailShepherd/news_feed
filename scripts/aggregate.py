@@ -137,7 +137,9 @@ ESSENTIAL_ITEM_FIELDS = (
     "bucketed_at",
     "fetched_at",
 )
-OPTIONAL_ITEM_FIELDS = ("published_at", "canonical_url", "source_record_id", "tags")
+OPTIONAL_ITEM_FIELDS = (
+    "published_at", "canonical_url", "source_record_id", "tags", "summary",
+)
 
 # Перехваты ошибок/429 и паузы между запросами к одному хосту
 SESSION = requests.Session()
@@ -2282,7 +2284,10 @@ def _erz_structured_records(payload, src: dict) -> tuple[list[dict], bool]:
             "url": article_url,
             "title": title.strip(),
             "publishedAt": date_value,
-            "summary": raw.get("annotation") if isinstance(raw.get("annotation"), str) else None,
+            # Keep the card annotation as metadata, not an API content key:
+            # list/short is discovery-only and must never replace the article.
+            "structured_summary": raw.get("annotation")
+            if isinstance(raw.get("annotation"), str) else None,
             "tags": [tag.strip() for tag in tags if isinstance(tag, str) and tag.strip()]
             if isinstance(tags, list) else [],
         })
@@ -2616,6 +2621,8 @@ def harvest_json_source(src: dict, force: bool = False):
             if src.get("structured_adapter") == "erz":
                 item["source_record_id"] = str(entry["id"])
                 item["tags"] = list(entry.get("tags") or [])
+                if entry.get("structured_summary"):
+                    item["summary"] = entry["structured_summary"]
             content_text = item.get("content_text") or ""
             word_count = _word_count(content_text)
             content_source_label = item.pop("_content_source", None)
@@ -3445,7 +3452,9 @@ def log_source_summary() -> None:
     for name in sorted(SOURCE_SUMMARY):
         summary = SOURCE_SUMMARY[name]
         logging.info(
-            "%s | total=%d empty=%d short=%d listing=%d api=%d amp=%d min_words=%d",
+            "%s | total=%d empty=%d short=%d listing=%d api=%d amp=%d min_words=%d "
+            "structured_fetch_failures=%d structured_schema_mismatches=%d "
+            "structured_zero_records=%d structured_article_failures=%d",
             name,
             summary.get("total", 0),
             summary.get("empty", 0),
@@ -3454,6 +3463,10 @@ def log_source_summary() -> None:
             summary.get("api", 0),
             summary.get("amp", 0),
             int(summary.get("min_words", DEFAULT_MIN_WORDS) or 0),
+            summary.get("structured_endpoint_fetch_failures", 0),
+            summary.get("structured_schema_mismatches", 0),
+            summary.get("structured_zero_records", 0),
+            summary.get("structured_article_extraction_failures", 0),
         )
 
 
@@ -3568,6 +3581,16 @@ def write_source_health_report(sources: list[dict]) -> None:
             ),
             "maximum_future_offset_seconds": summary.get(
                 "maximum_future_offset_seconds", 0
+            ),
+            "structured_endpoint_fetch_failures": summary.get(
+                "structured_endpoint_fetch_failures", 0
+            ),
+            "structured_schema_mismatches": summary.get(
+                "structured_schema_mismatches", 0
+            ),
+            "structured_zero_records": summary.get("structured_zero_records", 0),
+            "structured_article_extraction_failures": summary.get(
+                "structured_article_extraction_failures", 0
             ),
             "cached_fallback_used": bool(summary.get("cached_fallback_used", False)),
             "last_error": summary.get("last_error"),
@@ -3734,6 +3757,9 @@ def merge_items(existing, new):
             "published_at",
             "fetched_at",
             "canonical_url",
+            "source_record_id",
+            "tags",
+            "summary",
         ]:
             value = it.get(field)
             if field == "content_text":
