@@ -355,6 +355,10 @@
     "name": "ЕРЗ.РФ",
     "base_url": "https://erzrf.ru",
     "start_url": "https://erzrf.ru/news",
+    "mode": "api",
+    "structured_adapter": "erz",
+    "api_endpoint": "https://erzrf.ru/erz-rest/api/v1/news/list/short?min=0&max=100",
+    "html_fallback_on_empty_api": true,
     "include_patterns": [
       "/news/"
     ],

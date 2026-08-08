@@ -2,6 +2,7 @@ import json
 from collections import defaultdict
 
 import pytest
+from pathlib import Path
 
 from scripts import aggregate
 
@@ -76,6 +77,70 @@ def test_faufcc_api_mapping(monkeypatch):
     assert item["url"].startswith("https://faufcc.ru/press-tsentr/novosti/")
     assert "Читайте нас" not in item["content_text"]
     assert aggregate._word_count(item["content_text"]) >= 110
+
+
+def test_erz_structured_discovery_maps_records_and_ignores_embedded_urls(monkeypatch):
+    payload = json.loads(
+        (Path(__file__).parent / "fixtures" / "erzrf.ru" / "api.json").read_text()
+    )
+    monkeypatch.setattr(aggregate.SESSION, "get", lambda url, **kwargs: DummyResponse(payload))
+    article_body = " ".join(["Полный текст статьи"] * 20)
+    fetches = []
+
+    def fetch_article(url, src=None):
+        fetches.append(url)
+        return f"<html><body><article><p>{article_body}</p></article></body></html>"
+
+    monkeypatch.setattr(aggregate, "fetch_page", fetch_article)
+    src = {
+        "name": "ЕРЗ.РФ", "base_url": "https://erzrf.ru",
+        "start_url": "https://erzrf.ru/news", "structured_adapter": "erz",
+        "api_endpoint": "https://erzrf.ru/erz-rest/api/v1/news/list/short?min=0&max=100",
+        "include_patterns": ["/news/"],
+        "include_regex": r"^https?://(?:www\.)?erzrf\.ru/news/[^?#/]+/?$",
+        "min_words": 5,
+    }
+
+    items = aggregate.harvest_json_source(src, force=True)
+
+    assert [item["url"] for item in items] == [
+        "https://erzrf.ru/news/obyavleny-pobediteli-i-prizery-letnego-konkursa-top-zhk-2026",
+        "https://erzrf.ru/news/v-iyule-tseny-na-stroyashcheyesya-zhilye-rezko-poshli-vverkh",
+    ]
+    assert len({item["url"] for item in items}) == 2
+    assert [item["title"] for item in items] == [row["title"] for row in payload]
+    assert [item["published_at"] for item in items] == [
+        "2026-08-06T13:31:00+03:00", "2026-08-06T10:30:00+03:00"
+    ]
+    assert [item["source_record_id"] for item in items] == ["28549959001", "28549380001"]
+    assert items[0]["tags"] == ["ТОП ЖК", "Рейтинг ЖК"]
+    assert items[0]["summary"] == payload[0]["annotation"]
+    assert items[0]["content_text"] == article_body
+    assert fetches == [item["url"] for item in items]
+    assert not any("images/" in item["url"] or "example" in item["url"] for item in items)
+
+
+def test_erz_structured_diagnostics_are_written_to_health_report(monkeypatch, tmp_path):
+    source = {"name": "ЕРЗ.РФ", "enabled": True}
+    aggregate.SOURCE_SUMMARY[source["name"]].update({
+        "index_fetch_status": "fetched",
+        "structured_endpoint_fetch_failures": 1,
+        "structured_schema_mismatches": 2,
+        "structured_zero_records": 3,
+        "structured_article_extraction_failures": 4,
+    })
+    monkeypatch.setattr(aggregate, "SOURCE_HEALTH_JSON", tmp_path / "health.json")
+    monkeypatch.setattr(aggregate, "save_state", lambda: None)
+    monkeypatch.setattr(aggregate, "save_source_health_state", lambda: None)
+    monkeypatch.setattr(aggregate, "prune_page_cache", lambda: (0, 0))
+
+    aggregate.write_source_health_report([source])
+
+    row = json.loads((tmp_path / "health.json").read_text())["sources"][0]
+    assert row["structured_endpoint_fetch_failures"] == 1
+    assert row["structured_schema_mismatches"] == 2
+    assert row["structured_zero_records"] == 3
+    assert row["structured_article_extraction_failures"] == 4
 
 
 def test_faufcc_api_falls_back_to_html(monkeypatch):

@@ -93,6 +93,10 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
         "maximum_future_offset_seconds": 0,
         "canonical_rejections_by_reason": {},
         "canonical_rejection_samples": [],
+        "structured_endpoint_fetch_failures": 0,
+        "structured_schema_mismatches": 0,
+        "structured_zero_records": 0,
+        "structured_article_extraction_failures": 0,
         "last_error": None,
     }
 )
@@ -133,7 +137,9 @@ ESSENTIAL_ITEM_FIELDS = (
     "bucketed_at",
     "fetched_at",
 )
-OPTIONAL_ITEM_FIELDS = ("published_at", "canonical_url")
+OPTIONAL_ITEM_FIELDS = (
+    "published_at", "canonical_url", "source_record_id", "tags", "summary",
+)
 
 # Перехваты ошибок/429 и паузы между запросами к одному хосту
 SESSION = requests.Session()
@@ -2243,6 +2249,74 @@ def _api_items(payload, src: dict) -> list:
     return []
 
 
+def _erz_structured_records(payload, src: dict) -> tuple[list[dict], bool]:
+    """Map ERZ's ``news/list/short`` response into the generic API contract.
+
+    ERZ cards contain image URLs and other first-party links, so URLs from the
+    response are deliberately ignored.  The public article route is derived
+    only from the stable ``latinTitle`` slug and checked against source policy.
+    """
+    if not isinstance(payload, list):
+        return [], False
+    records: list[dict] = []
+    schema_ok = True
+    for raw in payload:
+        if not isinstance(raw, dict):
+            schema_ok = False
+            continue
+        record_id, slug, title = raw.get("id"), raw.get("latinTitle"), raw.get("title")
+        if record_id in (None, "") or not all(isinstance(v, str) and v.strip() for v in (slug, title)):
+            schema_ok = False
+            continue
+        slug = slug.strip().strip("/")
+        if "/" in slug or not re.fullmatch(r"[a-z0-9-]+", slug):
+            schema_ok = False
+            continue
+        article_url = urljoin(src.get("base_url", "https://erzrf.ru"), f"/news/{slug}")
+        if _article_url_rejection_reason(article_url, src):
+            schema_ok = False
+            continue
+        tags = raw.get("tags")
+        raw_date = raw.get("date")
+        date_value = _erz_publication_date(raw_date) if isinstance(raw_date, str) else None
+        records.append({
+            "id": str(record_id),
+            "url": article_url,
+            "title": title.strip(),
+            "publishedAt": date_value,
+            # Keep the card annotation as metadata, not an API content key:
+            # list/short is discovery-only and must never replace the article.
+            "structured_summary": raw.get("annotation")
+            if isinstance(raw.get("annotation"), str) else None,
+            "tags": [tag.strip() for tag in tags if isinstance(tag, str) and tag.strip()]
+            if isinstance(tags, list) else [],
+        })
+    return records, schema_ok
+
+
+def _erz_publication_date(value: str) -> str | None:
+    """Convert the Russian date label returned by ERZ into an ISO timestamp."""
+    months = {
+        "января": 1, "февраля": 2, "марта": 3, "апреля": 4,
+        "мая": 5, "июня": 6, "июля": 7, "августа": 8,
+        "сентября": 9, "октября": 10, "ноября": 11, "декабря": 12,
+    }
+    match = re.fullmatch(
+        r"\s*(\d{1,2})\s+([а-яё]+)(?:\s+(\d{4}))?\s+(\d{1,2}):(\d{2})\s*",
+        value.lower(),
+    )
+    if not match or match.group(2) not in months:
+        return None
+    day, month_name, year, hour, minute = match.groups()
+    inferred_year = datetime.now(MSK).year
+    try:
+        return MSK.localize(datetime(
+            int(year or inferred_year), months[month_name], int(day), int(hour), int(minute)
+        )).isoformat()
+    except ValueError:
+        return None
+
+
 def _api_endpoints(src: dict) -> list[str]:
     """Expand an endpoint template into a bounded set of discovery pages."""
     configured = src.get("api_endpoints")
@@ -2309,6 +2383,8 @@ def harvest_json_source(src: dict, force: bool = False):
         logging.error("  invalid JSON for %s: %s", src.get("name"), exc)
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
         SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
+        if src.get("structured_adapter") == "erz":
+            SOURCE_SUMMARY[src_name]["structured_endpoint_fetch_failures"] += 1
         if src.get("html_fallback_on_empty_api"):
             return harvest_source(src, force=ARGS.rebuild if ARGS else False)
         return []
@@ -2316,6 +2392,8 @@ def harvest_json_source(src: dict, force: bool = False):
         logging.warning("API fetch failed for %s: %s", src_name, exc)
         SOURCE_SUMMARY[src_name]["index_fetch_status"] = "failed"
         SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
+        if src.get("structured_adapter") == "erz":
+            SOURCE_SUMMARY[src_name]["structured_endpoint_fetch_failures"] += 1
         if src.get("html_fallback_on_empty_api"):
             logging.info("API failed for %s — falling back to HTML index", src_name)
             return harvest_source(src, force=ARGS.rebuild if ARGS else False)
@@ -2333,7 +2411,13 @@ def harvest_json_source(src: dict, force: bool = False):
 
     data = []
     for payload in payloads:
-        data.extend(_api_items(payload, src))
+        if src.get("structured_adapter") == "erz":
+            records, schema_ok = _erz_structured_records(payload, src)
+            data.extend(records)
+            if not schema_ok:
+                SOURCE_SUMMARY[src_name]["structured_schema_mismatches"] += 1
+        else:
+            data.extend(_api_items(payload, src))
     invalid_payload = payloads and not data and any(
         not isinstance(payload, (dict, list)) for payload in payloads
     )
@@ -2346,12 +2430,14 @@ def harvest_json_source(src: dict, force: bool = False):
 
     base_url = src.get("base_url") or endpoint
     max_links = int(src.get("max_links", MAX_LINKS_PER_SOURCE))
-    min_words = SOURCE_MIN_WORDS.get(src_name, DEFAULT_MIN_WORDS)
+    min_words = SOURCE_MIN_WORDS.get(src_name, _effective_source_min_words(src))
     extraction_fingerprint = _extraction_fingerprint(src, min_words)
     SOURCE_SUMMARY[src_name]["min_words"] = min_words
     summary_total_before = SOURCE_SUMMARY[src_name]["total"]
 
     if not data:
+        if src.get("structured_adapter") == "erz":
+            SOURCE_SUMMARY[src_name]["structured_zero_records"] += 1
         if src.get("html_fallback_on_empty_api"):
             logging.info("API empty/too short for %s — falling back to HTML index", src_name)
             return harvest_source(src, force=ARGS.rebuild if ARGS else False)
@@ -2532,6 +2618,11 @@ def harvest_json_source(src: dict, force: bool = False):
                     )
             if parsed_dt:
                 item["published_at"] = parsed_dt.isoformat()
+            if src.get("structured_adapter") == "erz":
+                item["source_record_id"] = str(entry["id"])
+                item["tags"] = list(entry.get("tags") or [])
+                if entry.get("structured_summary"):
+                    item["summary"] = entry["structured_summary"]
             content_text = item.get("content_text") or ""
             word_count = _word_count(content_text)
             content_source_label = item.pop("_content_source", None)
@@ -2553,6 +2644,8 @@ def harvest_json_source(src: dict, force: bool = False):
                     src_name, url, kind="empty", error="empty extraction",
                     fingerprint=extraction_fingerprint,
                 )
+                if src.get("structured_adapter") == "erz":
+                    SOURCE_SUMMARY[src_name]["structured_article_extraction_failures"] += 1
                 continue
             if amp_flag:
                 SOURCE_SUMMARY[src_name]["amp"] += 1
@@ -2570,6 +2663,8 @@ def harvest_json_source(src: dict, force: bool = False):
                     error=f"short extraction: {word_count} words",
                     fingerprint=extraction_fingerprint,
                 )
+                if src.get("structured_adapter") == "erz":
+                    SOURCE_SUMMARY[src_name]["structured_article_extraction_failures"] += 1
                 continue
             SOURCE_SUMMARY[src_name]["total"] += 1
             items.append(_finalize_item_schema(item))
@@ -2578,6 +2673,8 @@ def harvest_json_source(src: dict, force: bool = False):
         except Exception as e:
             logging.warning("  skip %s: %s", url, e)
             SOURCE_SUMMARY[src_name]["last_error"] = str(e)
+            if src.get("structured_adapter") == "erz":
+                SOURCE_SUMMARY[src_name]["structured_article_extraction_failures"] += 1
             _record_url_state(src_name, url, "retryable_failure", str(e))
 
     attempted_links = bool(new_entries)
@@ -3355,7 +3452,9 @@ def log_source_summary() -> None:
     for name in sorted(SOURCE_SUMMARY):
         summary = SOURCE_SUMMARY[name]
         logging.info(
-            "%s | total=%d empty=%d short=%d listing=%d api=%d amp=%d min_words=%d",
+            "%s | total=%d empty=%d short=%d listing=%d api=%d amp=%d min_words=%d "
+            "structured_fetch_failures=%d structured_schema_mismatches=%d "
+            "structured_zero_records=%d structured_article_failures=%d",
             name,
             summary.get("total", 0),
             summary.get("empty", 0),
@@ -3364,6 +3463,10 @@ def log_source_summary() -> None:
             summary.get("api", 0),
             summary.get("amp", 0),
             int(summary.get("min_words", DEFAULT_MIN_WORDS) or 0),
+            summary.get("structured_endpoint_fetch_failures", 0),
+            summary.get("structured_schema_mismatches", 0),
+            summary.get("structured_zero_records", 0),
+            summary.get("structured_article_extraction_failures", 0),
         )
 
 
@@ -3478,6 +3581,16 @@ def write_source_health_report(sources: list[dict]) -> None:
             ),
             "maximum_future_offset_seconds": summary.get(
                 "maximum_future_offset_seconds", 0
+            ),
+            "structured_endpoint_fetch_failures": summary.get(
+                "structured_endpoint_fetch_failures", 0
+            ),
+            "structured_schema_mismatches": summary.get(
+                "structured_schema_mismatches", 0
+            ),
+            "structured_zero_records": summary.get("structured_zero_records", 0),
+            "structured_article_extraction_failures": summary.get(
+                "structured_article_extraction_failures", 0
             ),
             "cached_fallback_used": bool(summary.get("cached_fallback_used", False)),
             "last_error": summary.get("last_error"),
@@ -3644,6 +3757,9 @@ def merge_items(existing, new):
             "published_at",
             "fetched_at",
             "canonical_url",
+            "source_record_id",
+            "tags",
+            "summary",
         ]:
             value = it.get(field)
             if field == "content_text":
