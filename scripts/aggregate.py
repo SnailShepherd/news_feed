@@ -14,6 +14,7 @@ from urllib3.util.retry import Retry
 from bs4 import BeautifulSoup, FeatureNotFound
 from dateutil import parser as dparser
 import pytz
+import xml.etree.ElementTree as ET
 
 try:
     from scripts.url_filters import is_listing_url
@@ -2709,6 +2710,76 @@ def extract_index_links(
     return accepted, len(raw_candidates), len(accepted)
 
 
+def parse_rss_atom_index(index_xml: str, src: dict, *, index_url: str | None = None) -> list[dict]:
+    """Parse RSS/Atom records without treating XML elements as HTML links."""
+    if not isinstance(index_xml, str) or not index_xml.strip():
+        raise CrawlerParserError("parse_rss_atom_index", index_url or src["start_url"], index_xml)
+    try:
+        root = ET.fromstring(index_xml)
+    except ET.ParseError as exc:
+        raise CrawlerParserError("parse_rss_atom_index.xml", index_url or src["start_url"], index_xml) from exc
+
+    def local_name(tag: str) -> str:
+        return tag.rsplit("}", 1)[-1].split(":")[-1].lower()
+
+    records = [node for node in root.iter() if local_name(node.tag) in {"item", "entry"}]
+    entries: list[dict] = []
+
+    def child(record, names: set[str]):
+        return next((node for node in record if local_name(node.tag) in names), None)
+
+    def value(node) -> str:
+        return "" if node is None else "".join(node.itertext()).strip()
+
+    for record in records:
+        link_tag = child(record, {"link"})
+        raw_url = ""
+        if link_tag is not None:
+            raw_url = (link_tag.get("href") or value(link_tag)).strip()
+        url = urljoin(src["base_url"], raw_url)
+        # Feed metadata is only trusted for a URL that passes the exact same
+        # source-domain and article-path policy as a fetched canonical URL.
+        if _article_url_rejection_reason(url, src):
+            continue
+        title_tag = child(record, {"title"})
+        date_tag = child(record, {"pubdate", "published", "updated", "date"})
+        content_tag = child(record, {"encoded", "content"})
+        description_tag = child(record, {"description", "summary"})
+        content_html = value(content_tag)
+        description_html = value(description_tag)
+        entries.append({
+            "url": url,
+            "title": value(title_tag),
+            "published": value(date_tag),
+            "content": content_html or description_html,
+            "content_field": (
+                local_name(content_tag.tag) if content_tag is not None else
+                (local_name(description_tag.tag) if description_tag is not None else "")
+            ),
+        })
+    return entries
+
+
+def _feed_item_fallback(entry: dict, url: str, src: dict, source_name: str) -> dict | None:
+    """Build an item from first-party feed content after an article fetch failure."""
+    if not src.get("feed_content_fallback") or _article_url_rejection_reason(url, src):
+        return None
+    content = entry.get("content") or ""
+    plain = clean_content_text(BeautifulSoup(content, "html.parser").get_text(" ", strip=True))
+    if _word_count(plain) < _effective_source_min_words(src, url):
+        return None
+    title = html.escape(entry.get("title") or url)
+    published = html.escape(entry.get("published") or "")
+    synthetic = (
+        f"<html><head><title>{title}</title>"
+        f'<meta property="article:published_time" content="{published}">'
+        f'<link rel="canonical" href="{html.escape(url)}"></head><body></body></html>'
+    )
+    item = build_item(url, source_name, synthetic, src=src, pre_extracted_content=plain)
+    item["_content_source"] = "official_feed"
+    return item
+
+
 def harvest_source(src: dict, force: bool = False):
     stats = SESSION_STATE.setdefault("stats", {})
     cooldowns = stats.setdefault("cooldowns", {})
@@ -2729,6 +2800,7 @@ def harvest_source(src: dict, force: bool = False):
     use_only_cache = False
     index_html = None
     links = None
+    feed_entries: dict[str, dict] = {}
     if cooldown_until and cooldown_until > now:
         until_dt = datetime.fromtimestamp(cooldown_until, timezone.utc)
         if cache_path.exists():
@@ -2789,9 +2861,26 @@ def harvest_source(src: dict, force: bool = False):
                     else None
                 )
                 candidate_html = fetch_page(candidate_url, src=src)
-                candidate_links, candidate_raw_links, candidate_accepted_links = extract_index_links(
-                    candidate_html, src, index_url=candidate_url
+                is_feed_candidate = (
+                    src.get("index_format") == "rss_atom"
+                    and urlparse(candidate_url).path.lower().endswith((".rss", ".xml", ".atom"))
                 )
+                if is_feed_candidate:
+                    parsed_entries = parse_rss_atom_index(candidate_html, src, index_url=candidate_url)
+                    if not parsed_entries:
+                        raise CrawlerParserError("parse_rss_atom_index.empty", candidate_url, candidate_html)
+                    # Dict insertion order preserves feed order while explicitly
+                    # deduplicating repeated RSS/Atom records.
+                    feed_entries = {}
+                    for entry in parsed_entries:
+                        feed_entries.setdefault(entry["url"], entry)
+                    candidate_links = list(feed_entries)
+                    candidate_raw_links = len(parsed_entries)
+                    candidate_accepted_links = len(candidate_links)
+                else:
+                    candidate_links, candidate_raw_links, candidate_accepted_links = extract_index_links(
+                        candidate_html, src, index_url=candidate_url
+                    )
                 SOURCE_SUMMARY[src_name]["index_fetch_status"] = "fetched"
                 candidate_used_cache = False
                 if candidate_accepted_links == 0 and prior_candidate_html is not None:
@@ -2850,6 +2939,7 @@ def harvest_source(src: dict, force: bool = False):
                     "raw_link_candidates": 0,
                     "accepted_links": 0,
                     "error": str(exc),
+                    "failure_kind": "feed_fetch_failure" if src.get("index_format") == "rss_atom" and urlparse(candidate_url).path.lower().endswith((".rss", ".xml", ".atom")) else "fetch_failure",
                 })
                 logging.warning("Index candidate failed for %s: %s (%s)", src.get("name"), candidate_url, exc)
             except Exception as exc:
@@ -2861,6 +2951,7 @@ def harvest_source(src: dict, force: bool = False):
                     "raw_link_candidates": 0,
                     "accepted_links": 0,
                     "error": str(exc),
+                    "failure_kind": "feed_empty_parse" if isinstance(exc, CrawlerParserError) and "empty" in str(exc) else "parser_error",
                 })
                 SOURCE_SUMMARY[src_name]["index_fetch_status"] = "parser_error"
                 SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
@@ -3162,13 +3253,21 @@ def harvest_source(src: dict, force: bool = False):
                 )
                 handle_item(item, url)
             else:
-                logging.warning("  skip %s: %s", url, exc)
-                SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
-                _record_url_state(src_name, url, "retryable_failure", str(exc))
+                fallback_item = _feed_item_fallback(feed_entries.get(url, {}), url, src, src_name)
+                if fallback_item:
+                    handle_item(fallback_item, url)
+                else:
+                    logging.warning("  skip %s: %s", url, exc)
+                    SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
+                    _record_url_state(src_name, url, "retryable_failure", str(exc))
         except Exception as e:
-            logging.warning("  skip %s: %s", url, e)
-            SOURCE_SUMMARY[src_name]["last_error"] = str(e)
-            _record_url_state(src_name, url, "retryable_failure", str(e))
+            fallback_item = _feed_item_fallback(feed_entries.get(url, {}), url, src, src_name)
+            if fallback_item:
+                handle_item(fallback_item, url)
+            else:
+                logging.warning("  skip %s: %s", url, e)
+                SOURCE_SUMMARY[src_name]["last_error"] = str(e)
+                _record_url_state(src_name, url, "retryable_failure", str(e))
 
     # обновим «виденные» ссылки — держим скользящее окно последних 800
     keep = 800
