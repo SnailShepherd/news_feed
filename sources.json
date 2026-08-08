@@ -264,7 +264,14 @@
   {
     "name": "Металлоснабжение и сбыт",
     "base_url": "https://www.metalinfo.ru",
-    "start_url": "https://www.metalinfo.ru/news",
+    "start_url": "https://www.metalinfo.ru/ru/news/list.rss",
+    "index_format": "rss_atom",
+    "feed_content_fallback": true,
+    "feed_required_metadata": [
+      "title",
+      "published"
+    ],
+    "normalize_numeric_article_urls": true,
     "request_strategy": {
       "connect_timeout": 4,
       "read_timeout": 8,
