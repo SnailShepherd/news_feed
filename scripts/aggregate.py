@@ -97,6 +97,8 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
         "structured_schema_mismatches": 0,
         "structured_zero_records": 0,
         "structured_article_extraction_failures": 0,
+        "article_fetch_degradations": 0,
+        "feed_content_fallbacks": 0,
         "last_error": None,
     }
 )
@@ -2850,6 +2852,22 @@ def parse_rss_atom_index(index_xml: str, src: dict, *, index_url: str | None = N
         if link_tag is not None:
             raw_url = (link_tag.get("href") or value(link_tag)).strip()
         url = urljoin(src["base_url"], raw_url)
+        if src.get("normalize_numeric_article_urls"):
+            parsed_url = urlparse(url)
+            numeric_match = re.fullmatch(r"(/ru/news/\d+)(?:/|\.html)?", parsed_url.path)
+            if numeric_match:
+                # Feed links have historically alternated between the bare and
+                # www host and between three numeric-article suffix forms.
+                # Emit the one stable identity used by state and retained items.
+                base = urlparse(src["base_url"])
+                url = parsed_url._replace(
+                    scheme=base.scheme or parsed_url.scheme,
+                    netloc=base.netloc,
+                    path=numeric_match.group(1),
+                    params="",
+                    query="",
+                    fragment="",
+                ).geturl()
         # Feed metadata is only trusted for a URL that passes the exact same
         # source-domain and article-path policy as a fetched canonical URL.
         if _article_url_rejection_reason(url, src):
@@ -2908,6 +2926,18 @@ def _feed_item_fallback(entry: dict, url: str, src: dict, source_name: str) -> d
     """Build an item from first-party feed content after an article fetch failure."""
     if not src.get("feed_content_fallback") or _article_url_rejection_reason(url, src):
         return None
+    required_metadata = src.get("feed_required_metadata") or []
+    if isinstance(required_metadata, str):
+        required_metadata = [required_metadata]
+    if any(not str(entry.get(field) or "").strip() for field in required_metadata):
+        return None
+    # Reject an unparseable publication value when the source requires one;
+    # build_item would otherwise quietly substitute crawl time.
+    if "published" in required_metadata:
+        try:
+            dparser.parse(str(entry["published"]))
+        except (ValueError, TypeError, OverflowError):
+            return None
     content = entry.get("content") or ""
     plain = clean_content_text(BeautifulSoup(content, "html.parser").get_text(" ", strip=True))
     if _word_count(plain) < _effective_source_min_words(src, url):
@@ -3317,6 +3347,18 @@ def harvest_source(src: dict, force: bool = False):
     items = []
     processed_links = []
 
+    def handle_article_fetch_failure(url: str, exc: Exception) -> None:
+        """Expose transport loss even when an adequate feed record saves the item."""
+        SOURCE_SUMMARY[src_name]["article_fetch_degradations"] += 1
+        message = f"article fetch unavailable: {exc}"
+        SOURCE_SUMMARY[src_name]["last_error"] = message
+        errors.append({
+            "source": src_name,
+            "url": url,
+            "error": message,
+            "failure_kind": "article_fetch_degradation",
+        })
+
     def handle_item(item: dict | None, url: str) -> None:
         if not item:
             return
@@ -3402,6 +3444,7 @@ def harvest_source(src: dict, force: bool = False):
             )
             handle_item(item, url)
         except SourceTemporarilyUnavailable as exc:
+            handle_article_fetch_failure(url, exc)
             page_path = PAGES_DIR / cache_key_for(url)
             if page_path.exists():
                 SOURCE_SUMMARY[src_name]["cached_fallback_used"] = True
@@ -3421,18 +3464,19 @@ def harvest_source(src: dict, force: bool = False):
             else:
                 fallback_item = _feed_item_fallback(feed_entries.get(url, {}), url, src, src_name)
                 if fallback_item:
+                    SOURCE_SUMMARY[src_name]["feed_content_fallbacks"] += 1
                     handle_item(fallback_item, url)
                 else:
                     logging.warning("  skip %s: %s", url, exc)
-                    SOURCE_SUMMARY[src_name]["last_error"] = str(exc)
                     _record_url_state(src_name, url, "retryable_failure", str(exc))
         except Exception as e:
+            handle_article_fetch_failure(url, e)
             fallback_item = _feed_item_fallback(feed_entries.get(url, {}), url, src, src_name)
             if fallback_item:
+                SOURCE_SUMMARY[src_name]["feed_content_fallbacks"] += 1
                 handle_item(fallback_item, url)
             else:
                 logging.warning("  skip %s: %s", url, e)
-                SOURCE_SUMMARY[src_name]["last_error"] = str(e)
                 _record_url_state(src_name, url, "retryable_failure", str(e))
 
     # обновим «виденные» ссылки — держим скользящее окно последних 800
@@ -3493,6 +3537,7 @@ def write_source_health_report(sources: list[dict]) -> None:
         accepted = int(summary.get("total", 0) or 0)
         raw_candidates = int(summary.get("raw_link_candidates", 0) or 0)
         accepted_links = int(summary.get("accepted_links", 0) or 0)
+        article_fetch_degradations = int(summary.get("article_fetch_degradations", 0) or 0)
         source_discovery = discovery_state.setdefault(name, {})
         fetch_failed = status in {"failed", "not_attempted"}
         parser_failed = status == "parser_error"
@@ -3517,13 +3562,15 @@ def write_source_health_report(sources: list[dict]) -> None:
                 if has_prior_discovery
                 else None
             )
-        article_failed = (accepted == 0) if attempted > 0 else None
+        article_failed = (accepted == 0 or article_fetch_degradations > 0) if attempted > 0 else None
         if status == "parser_error":
             failure_class = "crawler_parser_error"
         elif fetch_failed:
             failure_class = "source_fetch_failure"
         elif discovery_failed is True and raw_candidates > 0 and accepted_links == 0:
             failure_class = "discovery_filter_failure"
+        elif article_fetch_degradations > 0:
+            failure_class = "article_fetch_degradation"
         else:
             failure_class = None
 
@@ -3564,6 +3611,8 @@ def write_source_health_report(sources: list[dict]) -> None:
             "last_successful_discovery_at": source_discovery.get("last_successful_discovery_at"),
             "attempted_articles": attempted,
             "accepted_articles": accepted,
+            "article_fetch_degradations": article_fetch_degradations,
+            "feed_content_fallbacks": summary.get("feed_content_fallbacks", 0),
             "empty_rejections": summary.get("empty", 0),
             "short_rejections": summary.get("short", 0),
             "future_date_rejections": summary.get("future_date_rejections", 0),
