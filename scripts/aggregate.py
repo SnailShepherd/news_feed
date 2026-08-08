@@ -2855,7 +2855,9 @@ def parse_rss_atom_index(index_xml: str, src: dict, *, index_url: str | None = N
         if src.get("normalize_numeric_article_urls"):
             parsed_url = urlparse(url)
             numeric_match = re.fullmatch(r"(/ru/news/\d+)(?:/|\.html)?", parsed_url.path)
-            if numeric_match:
+            source_host = urlparse(src["base_url"]).netloc.lower().removeprefix("www.")
+            link_host = parsed_url.netloc.lower().removeprefix("www.")
+            if numeric_match and link_host == source_host:
                 # Feed links have historically alternated between the bare and
                 # www host and between three numeric-article suffix forms.
                 # Emit the one stable identity used by state and retained items.

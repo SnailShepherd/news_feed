@@ -40,6 +40,17 @@ def test_rss_discovery_fields_dates_and_numeric_url_normalization():
     assert "лента129" in entries[0]["content"]
 
 
+def test_numeric_normalization_does_not_rewrite_an_external_feed_link():
+    feed = """<rss><channel><item>
+      <title>External article</title>
+      <link>https://external.example/ru/news/999999.html</link>
+      <pubDate>Wed, 05 Aug 2026 10:30:00 +0300</pubDate>
+      <description>Untrusted content.</description>
+    </item></channel></rss>"""
+
+    assert aggregate.parse_rss_atom_index(feed, SOURCE, index_url=FEED_URL) == []
+
+
 def test_adequate_feed_content_fallback_reports_article_degradation(monkeypatch):
     feed = (FIXTURES / "index.rss").read_text()
     monkeypatch.setattr(aggregate, "fetch_page", lambda url, src=None: feed if url == FEED_URL else (_ for _ in ()).throw(requests.ConnectionError("blocked")))
