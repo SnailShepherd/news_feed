@@ -725,6 +725,18 @@ AMP_QUERY_WHITELIST = {"ria.ru", "realty.ria.ru", "realty.interfax.ru", "interfa
 SHORT_CONTENT_WORDS = 60
 
 
+def _access_challenge_label(content: str | None) -> str | None:
+    lowered = content[:12000].casefold() if isinstance(content, str) else ""
+    for marker, label in (
+        ("servicepipe.tech/loaders/", "Servicepipe browser challenge"),
+        ("js-challenge-script-", "JavaScript access challenge"),
+        ("ваш браузер не смог пройти", "JavaScript access challenge"),
+    ):
+        if marker in lowered:
+            return label
+    return None
+
+
 def _is_short_content(text: str | None) -> bool:
     return _word_count(text or "") < SHORT_CONTENT_WORDS
 
@@ -777,6 +789,27 @@ def fetch_page(url: str, src: dict | None = None) -> str:
             headers={"User-Agent": USER_AGENT},
             timeout=REQUEST_TIMEOUT,
         ).text
+    # Servicepipe commonly answers non-browser clients with HTTP 200, so the
+    # HTTP-error fallback above never runs. Render configured sources before a
+    # challenge page is cached and mistaken for an empty index.
+    if _access_challenge_label(content):
+        client = get_host_client(url, src)
+        if client and client.strategy.selenium_fallback:
+            rendered = client.fetch_html_with_selenium(url)
+            if rendered and not _access_challenge_label(rendered):
+                content = rendered
+        challenge_label = _access_challenge_label(content)
+        if challenge_label:
+            if page_path.exists():
+                logging.warning(
+                    "%s unresolved for %s — preserving and using cached copy",
+                    challenge_label,
+                    url,
+                )
+                return page_path.read_text(encoding="utf-8")
+            raise SourceTemporarilyUnavailable(
+                f"{challenge_label} returned instead of discovery content: {url}"
+            )
     if not isinstance(content, str) or not content.strip():
         raise CrawlerParserError("fetch_page.response", url, content)
     page_path.write_text(content, encoding="utf-8")
@@ -2355,7 +2388,8 @@ def _api_endpoints(src: dict) -> list[str]:
     endpoint = src.get("api_endpoint")
     pages = int(src.get("api_endpoint_pages", 1))
     if pages <= 1:
-        return [endpoint] if endpoint else []
+        endpoints = [endpoint] if endpoint else []
+        return _add_api_current_date(endpoints, src)
     start = int(src.get("api_page_start", 1))
     page_param = str(src.get("api_page_param", "page"))
     endpoints = []
@@ -2365,7 +2399,29 @@ def _api_endpoints(src: dict) -> list[str]:
         else:
             separator = "&" if "?" in endpoint else "?"
             endpoints.append(f"{endpoint}{separator}{page_param}={page}")
-    return endpoints
+    return _add_api_current_date(endpoints, src)
+
+
+def _add_api_current_date(endpoints: list[str], src: dict) -> list[str]:
+    """Add a source-configured, moving upper date bound to API requests.
+
+    Some archive APIs do not default their upper bound to today.  Keeping this
+    opt-in makes the pagination machinery generic while matching the request
+    made by the site's own news UI.
+    """
+    param = src.get("api_current_date_param")
+    if not param:
+        return endpoints
+    date_format = str(src.get("api_current_date_format", "%d.%m.%Y"))
+    current_date = datetime.now(MSK).strftime(date_format)
+    bounded = []
+    for endpoint in endpoints:
+        parsed = urlparse(endpoint)
+        query = parse_qsl(parsed.query, keep_blank_values=True)
+        if not any(key == param for key, _ in query):
+            query.append((str(param), current_date))
+        bounded.append(parsed._replace(query=urlencode(query)).geturl())
+    return bounded
 
 
 def harvest_json_source(src: dict, force: bool = False):
@@ -2935,6 +2991,13 @@ def _is_feed_index(src: dict, index_url: str) -> bool:
 
 def _extract_index_candidate(index_text: str, src: dict, index_url: str):
     """Parse a live or cached index with the parser configured for its format."""
+    challenge_label = _access_challenge_label(index_text)
+    if challenge_label:
+        # A browser challenge returned with HTTP 200 is an upstream access
+        # failure, not malformed XML and not an empty HTML listing.
+        raise SourceTemporarilyUnavailable(
+            f"{challenge_label} returned instead of discovery content: {index_url}"
+        )
     if not _is_feed_index(src, index_url):
         links, raw_count, accepted_count = extract_index_links(
             index_text, src, index_url=index_url

@@ -51,6 +51,19 @@ def test_numeric_normalization_does_not_rewrite_an_external_feed_link():
     assert aggregate.parse_rss_atom_index(feed, SOURCE, index_url=FEED_URL) == []
 
 
+def test_live_javascript_block_page_is_transport_diagnostic_not_xml_error(monkeypatch):
+    blocked = '''<!doctype html><script
+      src="/js-challenge-script-abc.js"></script><h1>Ваш браузер не смог пройти проверку.</h1>'''
+    monkeypatch.setattr(aggregate, "fetch_page", lambda url, src=None: blocked)
+
+    assert aggregate.harvest_source(SOURCE, force=True) == []
+    attempts = aggregate.SOURCE_SUMMARY[SOURCE["name"]]["index_attempts"]
+    assert attempts[0]["failure_kind"] == "feed_fetch_failure"
+    assert attempts[1]["failure_kind"] == "fetch_failure"
+    assert all("JavaScript access challenge" in attempt["error"] for attempt in attempts)
+    assert aggregate.SOURCE_SUMMARY[SOURCE["name"]]["index_fetch_status"] == "failed"
+
+
 def test_adequate_feed_content_fallback_reports_article_degradation(monkeypatch):
     feed = (FIXTURES / "index.rss").read_text()
     monkeypatch.setattr(aggregate, "fetch_page", lambda url, src=None: feed if url == FEED_URL else (_ for _ in ()).throw(requests.ConnectionError("blocked")))
