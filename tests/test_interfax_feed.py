@@ -1,6 +1,7 @@
 from collections import defaultdict
 from pathlib import Path
 import sys
+import time
 
 import requests
 import pytest
@@ -56,6 +57,22 @@ def test_official_feed_fields_and_html_candidates_are_deduplicated():
     assert len(set([entry["url"] for entry in entries] + html_links)) == 2
 
 
+def test_atom_prefers_alternate_link_and_published_date():
+    atom = f'''<feed xmlns="http://www.w3.org/2005/Atom"><entry>
+      <title>Atom article</title>
+      <link rel="self" href="{FEED_URL}"/>
+      <updated>2026-08-08T14:00:00+03:00</updated>
+      <link rel="alternate" href="{ARTICLE_URL}"/>
+      <published>2026-08-07T12:30:00+03:00</published>
+      <content>Complete article content.</content>
+    </entry></feed>'''
+
+    entries = aggregate.parse_rss_atom_index(atom, SOURCE, index_url=FEED_URL)
+
+    assert entries[0]["url"] == ARTICLE_URL
+    assert entries[0]["published"] == "2026-08-07T12:30:00+03:00"
+
+
 def test_feed_content_is_safe_fallback_when_article_fetch_fails(monkeypatch):
     feed = (FIXTURES / "official-feed.xml").read_text()
 
@@ -96,4 +113,44 @@ def test_empty_feed_parse_has_distinct_diagnostic(monkeypatch):
     monkeypatch.setattr(aggregate, "fetch_page", lambda url, src=None: "<rss><channel/></rss>" if url == FEED_URL else (FIXTURES / "saved-news.html").read_text())
     aggregate.harvest_source(SOURCE, force=True)
     attempt = aggregate.SOURCE_SUMMARY[SOURCE["name"]]["index_attempts"][0]
+    assert attempt["failure_kind"] == "feed_empty_parse"
+
+
+def test_cached_feed_uses_feed_parser_and_content_fallback(monkeypatch, tmp_path):
+    feed = (FIXTURES / "official-feed.xml").read_text()
+    monkeypatch.setattr(aggregate, "PAGES_DIR", tmp_path)
+    (tmp_path / aggregate.cache_key_for(FEED_URL)).write_text(feed)
+    aggregate.SESSION_STATE["stats"] = {"cooldowns": {FEED_URL: time.time() + 3600}}
+
+    def fail_if_network_used(*args, **kwargs):
+        raise AssertionError("network used during cooldown")
+
+    monkeypatch.setattr(aggregate, "fetch_page", fail_if_network_used)
+
+    items = aggregate.harvest_source(SOURCE, force=True)
+
+    assert [item["url"] for item in items] == [ARTICLE_URL]
+    assert "содержание134" in items[0]["content_text"]
+    assert aggregate.SOURCE_SUMMARY[SOURCE["name"]]["index_fetch_status"] == "cached"
+
+
+def test_invalid_fresh_feed_restores_prior_cached_feed(monkeypatch, tmp_path):
+    feed = (FIXTURES / "official-feed.xml").read_text()
+    cache_path = tmp_path / aggregate.cache_key_for(FEED_URL)
+    cache_path.write_text(feed)
+    monkeypatch.setattr(aggregate, "PAGES_DIR", tmp_path)
+
+    def fetch(url, src=None):
+        if url == FEED_URL:
+            cache_path.write_text("<rss><channel/></rss>")
+            return "<rss><channel/></rss>"
+        raise requests.ConnectionError("article unavailable")
+
+    monkeypatch.setattr(aggregate, "fetch_page", fetch)
+    items = aggregate.harvest_source(SOURCE, force=True)
+
+    assert [item["url"] for item in items] == [ARTICLE_URL]
+    assert cache_path.read_text() == feed
+    attempt = aggregate.SOURCE_SUMMARY[SOURCE["name"]]["index_attempts"][0]
+    assert attempt["cached"] is True
     assert attempt["failure_kind"] == "feed_empty_parse"
