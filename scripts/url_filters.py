@@ -69,6 +69,8 @@ _HOST_ALLOW_LIST = {
 }
 
 _HOST_LISTING_HUBS = {
+    "notim.ru": (re.compile(r"^/news-partners/?$", re.IGNORECASE),),
+    "www.notim.ru": (re.compile(r"^/news-partners/?$", re.IGNORECASE),),
     "eec.eaeunion.org": (re.compile(r"^/news/(speech|events|video-gallery|photo-gallery|broadcasts)/?$"),),
     "www.eec.eaeunion.org": (re.compile(r"^/news/(speech|events|video-gallery|photo-gallery|broadcasts)/?$"),),
     "erzrf.ru": (re.compile(r"^/news/news-archive/?$", re.IGNORECASE),),

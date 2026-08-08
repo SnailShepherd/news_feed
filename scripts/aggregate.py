@@ -104,6 +104,7 @@ SOURCE_SUMMARY: dict[str, dict[str, object]] = defaultdict(
 )
 SOURCE_MIN_WORDS: dict[str, int] = {}
 SOURCE_RETENTION_WEIGHTS: dict[str, float] = {}
+SOURCE_CONFIGS_BY_NAME: dict[str, dict] = {}
 DEFAULT_MIN_WORDS = 100
 HOST_MIN_WORD_OVERRIDES = {
     "realty.ria.ru": 120,
@@ -2095,17 +2096,24 @@ def build_item(
             except ValueError:
                 dt = None
 
+    reported_canonical_url = extract_canonical_url(soup, url)
     canonical_url = _validated_canonical_url(
-        extract_canonical_url(soup, url), url, src, source_name
+        reported_canonical_url, url, src, source_name
     )
+    # A rejected canonical may already have poisoned persistent identity state
+    # during an earlier crawl.  Rebuilds must recover from that state rather
+    # than continuing to alias distinct articles to the malformed canonical.
+    canonical_was_rejected = bool(reported_canonical_url and not canonical_url)
     url_key = _normalize_canonical_url(url) or url
     alias_map = STATE.setdefault("aliases", {})
     content_hashes = STATE.setdefault("content_hashes", {})
-    canonical_key = canonical_url or alias_map.get(url_key) or url_key
+    canonical_key = canonical_url or (
+        url_key if canonical_was_rejected else alias_map.get(url_key) or url_key
+    )
 
     fingerprint = _content_fingerprint(content_text)
     if fingerprint:
-        existing = content_hashes.get(fingerprint)
+        existing = None if canonical_was_rejected else content_hashes.get(fingerprint)
         if existing:
             canonical_key = existing
         else:
@@ -2118,7 +2126,7 @@ def build_item(
 
     canonical_ids = STATE.setdefault("canonical_item_ids", {})
     id_source = canonical_key or url
-    item_id = canonical_ids.get(id_source)
+    item_id = None if canonical_was_rejected else canonical_ids.get(id_source)
     if not item_id:
         item_id = hashlib.sha256(id_source.encode("utf-8")).hexdigest()
         canonical_ids[id_source] = item_id
@@ -3772,6 +3780,22 @@ def merge_items(existing, new):
         if not key:
             continue
         url = it.get("url") or ""
+        source_config = SOURCE_CONFIGS_BY_NAME.get(str(it.get("source") or ""))
+        invalid_url = source_config and _article_url_rejection_reason(url, source_config)
+        canonical_url = it.get("canonical_url")
+        invalid_canonical = (
+            source_config
+            and canonical_url
+            and _article_url_rejection_reason(str(canonical_url), source_config)
+        )
+        if invalid_url or invalid_canonical:
+            if ARGS and getattr(ARGS, "debug", False):
+                logging.debug(
+                    "Drop source-boundary violation from existing feed: %s (%s)",
+                    url,
+                    invalid_url or invalid_canonical,
+                )
+            continue
         if is_listing_url(url):
             if ARGS and getattr(ARGS, "debug", False):
                 logging.debug("Drop listing URL from existing feed: %s", url)
@@ -3909,6 +3933,8 @@ def main():
             ARGS.limit_per_source = 3
 
     sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
+    SOURCE_CONFIGS_BY_NAME.clear()
+    SOURCE_CONFIGS_BY_NAME.update({source["name"]: source for source in sources})
     SOURCE_RETENTION_WEIGHTS.clear()
     for source in sources:
         configured_weight = source.get("retention_weight", 1.0)

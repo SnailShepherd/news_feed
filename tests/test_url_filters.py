@@ -45,6 +45,7 @@ def test_host_specific_rules():
         "https://notim.ru/news/iskusstvennyy-intellekt-protiv-konservatizma-kak-ii-menyaet-stroitelnuyu-otrasl/"
     )
     assert is_listing_url("https://notim.ru/news/?PAGEN_1=3")
+    assert is_listing_url("https://notim.ru/news-partners/")
 
     # EEC
     assert not is_listing_url(
