@@ -239,6 +239,9 @@
     "name": "Интерфакс-Недвижимость",
     "base_url": "https://www.interfax-russia.ru",
     "start_url": "https://www.interfax-russia.ru/rss/realty/public.rss",
+    "index_format": "rss_atom",
+    "feed_content_fallback": true,
+    "restrict_domain": true,
     "include_patterns": [
       "/realty/news/"
     ],
