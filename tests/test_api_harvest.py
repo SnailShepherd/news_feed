@@ -2,6 +2,7 @@ import json
 from collections import defaultdict
 
 import pytest
+from pathlib import Path
 
 from scripts import aggregate
 
@@ -76,6 +77,36 @@ def test_faufcc_api_mapping(monkeypatch):
     assert item["url"].startswith("https://faufcc.ru/press-tsentr/novosti/")
     assert "Читайте нас" not in item["content_text"]
     assert aggregate._word_count(item["content_text"]) >= 110
+
+
+def test_erz_structured_discovery_maps_records_and_ignores_embedded_urls(monkeypatch):
+    payload = json.loads(
+        (Path(__file__).parent / "fixtures" / "erzrf.ru" / "api.json").read_text()
+    )
+    monkeypatch.setattr(aggregate.SESSION, "get", lambda url, **kwargs: DummyResponse(payload))
+    src = {
+        "name": "ЕРЗ.РФ", "base_url": "https://erzrf.ru",
+        "start_url": "https://erzrf.ru/news", "structured_adapter": "erz",
+        "api_endpoint": "https://erzrf.ru/erz-rest/api/v1/news/list/short?min=0&max=100",
+        "include_patterns": ["/news/"],
+        "include_regex": r"^https?://(?:www\.)?erzrf\.ru/news/[^?#/]+/?$",
+        "min_words": 5,
+    }
+
+    items = aggregate.harvest_json_source(src, force=True)
+
+    assert [item["url"] for item in items] == [
+        "https://erzrf.ru/news/obyavleny-pobediteli-i-prizery-letnego-konkursa-top-zhk-2026",
+        "https://erzrf.ru/news/v-iyule-tseny-na-stroyashcheyesya-zhilye-rezko-poshli-vverkh",
+    ]
+    assert len({item["url"] for item in items}) == 2
+    assert [item["title"] for item in items] == [row["title"] for row in payload]
+    assert [item["published_at"] for item in items] == [
+        "2026-08-06T13:31:00+03:00", "2026-08-06T10:30:00+03:00"
+    ]
+    assert [item["source_record_id"] for item in items] == ["28549959001", "28549380001"]
+    assert items[0]["tags"] == ["ТОП ЖК", "Рейтинг ЖК"]
+    assert not any("images/" in item["url"] or "example" in item["url"] for item in items)
 
 
 def test_faufcc_api_falls_back_to_html(monkeypatch):
