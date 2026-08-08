@@ -4,6 +4,7 @@ The small fixtures intentionally retain only markup which exercises crawler beha
 ``expected.json`` beside each capture records its provenance date and assertions.
 """
 
+import hashlib
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -115,6 +116,50 @@ def test_xml_fallback_index_contract(monkeypatch):
     assert [item["url"] for item in items] == [expected["article_url"]]
     assert aggregate.STATE["candidate_urls"][source["name"]] == [expected["article_url"]]
     assert unrelated not in aggregate.STATE["candidate_urls"][source["name"]]
+
+
+def test_rg_discovery_rejects_external_publishers():
+    source = next(source for source in SOURCES if source["name"] == "Российская газета: Экономика")
+    index = """<html><body>
+      <a href="https://rg.ru/2026/08/08/first-party.html">Первая собственная новость экономики</a>
+      <a href="https://ria.ru/20260808/external.html">Материал внешнего издателя РИА Новости</a>
+      <a href="https://rodina-history.ru/2026/08/08/external.html">Материал внешнего издателя Родина</a>
+      <a href="https://www.mk.ru/economics/2026/08/08/external.html">Материал внешнего издателя МК</a>
+    </body></html>"""
+
+    links, raw_count, accepted_count = aggregate.extract_index_links(index, source)
+
+    # Embedded-link parsing sees the same URLs twice; both discovery paths
+    # must apply the source boundary before harvest deduplicates them.
+    assert raw_count == 8
+    assert accepted_count == 2
+    assert set(links) == {"https://rg.ru/2026/08/08/first-party.html"}
+
+
+def test_existing_feed_source_boundary_cleanup(monkeypatch):
+    configs = {
+        source["name"]: source
+        for source in SOURCES
+        if source["name"] in {"Российская газета: Экономика", "Гостинформ"}
+    }
+    monkeypatch.setattr(aggregate, "SOURCE_CONFIGS_BY_NAME", configs)
+    existing = [
+        {
+            "id": "external-rg",
+            "source": "Российская газета: Экономика",
+            "title": "External publisher",
+            "url": "https://ria.ru/20260808/external.html",
+        },
+        {
+            "id": "collapsed-gost",
+            "source": "Гостинформ",
+            "title": "Collapsed homepage canonical",
+            "url": "https://www.gostinfo.ru/News/Details/2146",
+            "canonical_url": "https://www.gostinfo.ru/",
+        },
+    ]
+
+    assert aggregate.merge_items(existing, []) == []
 
 
 def test_fallback_skips_anchor_page_without_accepted_articles(monkeypatch, tmp_path):
@@ -316,6 +361,22 @@ def test_gostinform_root_canonicals_retain_distinct_articles(monkeypatch, tmp_pa
         "itogi-konferencii",
     ]
     urls = [f"https://www.gostinfo.ru/News/Details/{slug}" for slug in slugs]
+    poisoned_canonical = "https://www.gostinfo.ru/"
+    poisoned_id = "previously-collapsed-homepage-id"
+    monkeypatch.setattr(
+        aggregate,
+        "STATE",
+        {
+            **aggregate.STATE,
+            "aliases": {url: poisoned_canonical for url in urls},
+            "content_hashes": {},
+            "canonical_item_ids": {
+                poisoned_canonical: poisoned_id,
+                **{url: poisoned_id for url in urls},
+            },
+            "first_seen": {},
+        },
+    )
 
     def fixture_fetch(url, src=None):
         if url == source["start_url"]:
@@ -334,6 +395,9 @@ def test_gostinform_root_canonicals_retain_distinct_articles(monkeypatch, tmp_pa
 
     assert {item["url"] for item in items} == set(urls)
     assert len({item["id"] for item in items}) == 3
+    assert {item["id"] for item in items} == {
+        hashlib.sha256(url.encode()).hexdigest() for url in urls
+    }
     assert len({item["title"] for item in items}) == 3
     assert all(
         aggregate._word_count(item["content_text"])
