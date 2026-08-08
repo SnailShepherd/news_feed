@@ -261,7 +261,13 @@
       "warmup": {
         "url": "https://www.interfax-russia.ru/realty/",
         "capture_cookies": true
-      }
+      },
+      "selenium_fallback": true,
+      "selenium_wait": 8,
+      "selenium_wait_for": [
+        "a[href*='/realty/news/']"
+      ],
+      "capture_cookies": true
     }
   },
   {
@@ -368,6 +374,8 @@
     "mode": "api",
     "structured_adapter": "erz",
     "api_endpoint": "https://erzrf.ru/erz-rest/api/v1/news/list/short?min=0&max=100",
+    "api_current_date_param": "periodTo",
+    "api_current_date_format": "%d.%m.%Y",
     "html_fallback_on_empty_api": true,
     "include_patterns": [
       "/news/"

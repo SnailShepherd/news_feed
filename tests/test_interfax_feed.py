@@ -116,6 +116,40 @@ def test_empty_feed_parse_has_distinct_diagnostic(monkeypatch):
     assert attempt["failure_kind"] == "feed_empty_parse"
 
 
+def test_live_servicepipe_pages_are_reported_as_access_failures(monkeypatch):
+    challenge = '''<!doctype html><script
+      src="https://servicepipe.tech/loaders/example.js"></script>'''
+    monkeypatch.setattr(aggregate, "fetch_page", lambda url, src=None: challenge)
+
+    assert aggregate.harvest_source(SOURCE, force=True) == []
+    attempts = aggregate.SOURCE_SUMMARY[SOURCE["name"]]["index_attempts"]
+    assert [attempt["failure_kind"] for attempt in attempts] == [
+        "feed_fetch_failure", "fetch_failure"
+    ]
+    assert all("Servicepipe browser challenge" in attempt["error"] for attempt in attempts)
+
+
+def test_http_200_servicepipe_response_uses_configured_browser(monkeypatch, tmp_path):
+    challenge = '<script src="https://servicepipe.tech/loaders/example.js"></script>'
+    rendered = (FIXTURES / "saved-news.html").read_text()
+
+    class Strategy:
+        selenium_fallback = True
+
+    class Client:
+        strategy = Strategy()
+
+        def fetch_html_with_selenium(self, url):
+            return rendered
+
+    monkeypatch.setattr(aggregate, "PAGES_DIR", tmp_path)
+    monkeypatch.setattr(aggregate, "http_get", lambda *args, **kwargs: (challenge, {}))
+    monkeypatch.setattr(aggregate, "get_host_client", lambda *args, **kwargs: Client())
+
+    assert aggregate.fetch_page(FEED_URL, src=SOURCE) == rendered
+    assert "servicepipe.tech" not in (tmp_path / aggregate.cache_key_for(FEED_URL)).read_text()
+
+
 def test_cached_feed_uses_feed_parser_and_content_fallback(monkeypatch, tmp_path):
     feed = (FIXTURES / "official-feed.xml").read_text()
     monkeypatch.setattr(aggregate, "PAGES_DIR", tmp_path)

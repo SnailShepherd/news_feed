@@ -7,6 +7,26 @@ from pathlib import Path
 from scripts import aggregate
 
 
+def test_erz_endpoint_uses_same_current_upper_bound_as_public_news_page(monkeypatch):
+    real_datetime = aggregate.datetime
+
+    class FixedDatetime(real_datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return cls(2026, 8, 8, tzinfo=tz)
+
+    src = {
+        "api_endpoint": "https://erzrf.ru/erz-rest/api/v1/news/list/short?min=0&max=100",
+        "api_current_date_param": "periodTo",
+        "api_current_date_format": "%d.%m.%Y",
+    }
+    monkeypatch.setattr(aggregate, "datetime", FixedDatetime)
+
+    assert aggregate._api_endpoints(src) == [
+        "https://erzrf.ru/erz-rest/api/v1/news/list/short?min=0&max=100&periodTo=08.08.2026"
+    ]
+
+
 class DummyResponse:
     def __init__(self, payload):
         self._payload = payload
