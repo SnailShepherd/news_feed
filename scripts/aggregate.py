@@ -798,6 +798,18 @@ def fetch_page(url: str, src: dict | None = None) -> str:
             rendered = client.fetch_html_with_selenium(url)
             if rendered and not _access_challenge_label(rendered):
                 content = rendered
+        challenge_label = _access_challenge_label(content)
+        if challenge_label:
+            if page_path.exists():
+                logging.warning(
+                    "%s unresolved for %s — preserving and using cached copy",
+                    challenge_label,
+                    url,
+                )
+                return page_path.read_text(encoding="utf-8")
+            raise SourceTemporarilyUnavailable(
+                f"{challenge_label} returned instead of discovery content: {url}"
+            )
     if not isinstance(content, str) or not content.strip():
         raise CrawlerParserError("fetch_page.response", url, content)
     page_path.write_text(content, encoding="utf-8")
