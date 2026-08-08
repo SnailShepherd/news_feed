@@ -1697,7 +1697,12 @@ def _parse_datetime_signal(
         dt = finalize_datetime(dparser.isoparse(value))
     except Exception:
         dt = None
-    if dt is None:
+    if dt is None and re.search(
+        r"\b(?:января|февраля|марта|апреля|мая|июня|июля|августа|сентября|"
+        r"октября|ноября|декабря)\b",
+        value,
+        re.IGNORECASE,
+    ):
         words_dt = parse_ru_date_words(value)
         if words_dt:
             dt = finalize_datetime(words_dt)
@@ -1721,40 +1726,12 @@ def _parse_datetime_signal(
     return None
 
 
-def extract_leading_content_datetime(
-    content_text: str | None, *, url=None, source=None, diagnostics=None,
-) -> datetime | None:
-    """Read a printed byline date from the beginning of extracted article text.
-
-    This deliberately accepts only an explicit Russian date (including its
-    year) near the start of the selected article content.  A bounded,
-    article-local signal cannot drift to a dated related-news card later in
-    the page, and parsing it before page metadata avoids broken templates
-    whose metadata belongs to a different card.
-    """
-    if not content_text:
-        return None
-    leading = content_text[:500]
-    match = re.search(
-        r"(?<!\d)([0-3]?\d\s+(?:января|февраля|марта|апреля|мая|июня|июля|"
-        r"августа|сентября|октября|ноября|декабря)\s+20\d{2}"
-        r"(?:\s+(?:[01]?\d|2[0-3]):[0-5]\d)?)(?!\d)",
-        leading,
-        re.IGNORECASE,
-    )
-    if not match:
-        return None
-    return _parse_datetime_signal(
-        match.group(1), "article_content:leading_date", url=url, source=source,
-        diagnostics=diagnostics,
-    )
-
-
 def extract_published_datetime(
     soup: BeautifulSoup,
     url: str | None = None,
     source: str | None = None,
     diagnostics: PublicationDiagnostics | None = None,
+    selectors: list[str] | None = None,
 ) -> datetime | None:
     seen_candidates: set[tuple[str, str]] = set()
 
@@ -1769,6 +1746,19 @@ def extract_published_datetime(
             return None
         seen_candidates.add(key)
         return _parse_datetime_signal(candidate, signal, url=url, source=source, diagnostics=diagnostics)
+
+    # Source contracts may identify an article's own visible byline. These
+    # narrowly scoped nodes outrank generic metadata, which some templates
+    # accidentally populate from a different news card.
+    for selector in selectors or []:
+        for node in soup.select(selector):
+            for candidate in (
+                node.get("datetime"), node.get("content"),
+                node.get_text(" ", strip=True),
+            ):
+                dt = attempt(candidate, f"selector:{selector}")
+                if dt:
+                    return dt
 
     # Explicit publication metadata is trustworthy.  Modified/upload dates
     # are intentionally not fallbacks: they describe page activity, not the
@@ -2104,13 +2094,9 @@ def build_item(
                 content_source = amp_label or amp_source or "amp"
                 amp_used = True
 
-    content_dt = None
-    if source_name in {"Стройгаз.ру", "НОТИМ", "ЕРЗ.РФ"}:
-        content_dt = extract_leading_content_datetime(
-            content_text, url=url, source=source_name, diagnostics=publication_diagnostics
-        )
-    dt = content_dt or extract_published_datetime(
-        soup, url, source_name, diagnostics=publication_diagnostics
+    dt = extract_published_datetime(
+        soup, url, source_name, diagnostics=publication_diagnostics,
+        selectors=(src or {}).get("publication_date_selectors"),
     )
 
     if dt is None:
