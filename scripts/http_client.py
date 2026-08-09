@@ -584,9 +584,10 @@ class HostClient:
 
     def _configure_selenium_deadline(self, driver) -> bool:
         # Chrome's page-load timeout interrupts the normally unbounded driver.get.
-        # Driver construction itself is synchronous and cannot be preempted safely;
-        # if it overruns, charge it in finally, report it distinctly, and do not
-        # allow navigation or rendering to extend the overrun.
+        # This is not a full-attempt watchdog: startup and synchronous WebDriver
+        # calls (for example execute_script, page_source, cookies, and quit) are
+        # not safely preemptible in-process. Their time is still accounted for.
+        # If startup exhausts the allowance, report it and skip navigation/rendering.
         remaining = self._selenium_attempt_seconds_left()
         if remaining <= 0:
             deadline = getattr(self, "_selenium_attempt_deadline", time.monotonic())

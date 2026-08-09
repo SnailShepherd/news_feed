@@ -182,12 +182,18 @@ overridden through environment variables:
 
 - `FEED_MIN_ITEMS_PER_SOURCE=5` reserves a small share of the feed for each
   represented source before filling the remaining slots by overall freshness;
-- `NEWSFEED_SELENIUM_BUDGET_SECONDS=90` limits total browser-attempt time per
-  run; `NEWSFEED_SELENIUM_HOST_BUDGET_SECONDS=15` additionally limits each host
-  so that a slow source cannot deprive later sources of browser fallback.
-  Synchronous Chrome startup cannot be safely interrupted by this timer: its
-  runtime is still accounted for, overruns are logged separately, and navigation
-  and rendering do not proceed after the budget is exhausted.
+- `NEWSFEED_SELENIUM_BUDGET_SECONDS=90` provides overall browser-runtime
+  accounting; `NEWSFEED_SELENIUM_HOST_BUDGET_SECONDS=15` adds per-host
+  accounting and fairness so repeated budgeted attempts by one host do not
+  consume the browser opportunity intended for later hosts. These budgets are
+  not hard wall-clock caps for an entire browser attempt. Navigation and
+  explicit waits/sleeps are constrained by the remaining allowance where
+  Selenium exposes suitable controls. Chrome/driver startup and synchronous
+  WebDriver commands such as script execution, page-source or cookie retrieval,
+  and driver shutdown cannot be safely preempted in the current in-process
+  design and may overrun an allowance; their elapsed time is still recorded.
+  If Chrome startup itself consumes the remaining allowance, the overrun is
+  logged and the attempt does not proceed to navigation or rendering.
 - `NEWSFEED_CACHE_MAX_BYTES=536870912` and `NEWSFEED_CACHE_MAX_AGE_DAYS=14`
   limit the HTML cache by size and age.
 
