@@ -28,6 +28,9 @@ def test_selenium_non_string_page_source_is_crawler_parser_error(monkeypatch):
     class Driver:
         page_source = {"unexpected": "payload"}
 
+        def set_page_load_timeout(self, seconds):
+            self.page_load_timeout = seconds
+
         def get(self, url):
             pass
 
@@ -51,6 +54,73 @@ def test_selenium_non_string_page_source_is_crawler_parser_error(monkeypatch):
     assert "selenium.page_source" in message
     assert "https://example.com/index" in message
     assert "dict" in message
+
+
+def test_selenium_host_budget_preserves_unrelated_host_opportunity(monkeypatch):
+    import scripts.http_client as http_client
+
+    monkeypatch.setattr(http_client, "SELENIUM_RUN_BUDGET_SECONDS", 90.0)
+    monkeypatch.setattr(http_client, "SELENIUM_HOST_BUDGET_SECONDS", 15.0)
+    monkeypatch.setattr(http_client, "_SELENIUM_SECONDS_USED", 0.0)
+    monkeypatch.setattr(http_client, "_SELENIUM_SECONDS_BY_HOST", {})
+    monkeypatch.setattr(http_client.time, "monotonic", lambda: 16.0)
+
+    early = HostClient("slow.example", RequestStrategy(selenium_fallback=True), {})
+    later = HostClient("later.example", RequestStrategy(selenium_fallback=True), {})
+    early._record_selenium_runtime(0.0)
+
+    assert not early._selenium_budget_available()
+    assert later._selenium_budget_available()
+
+    class Driver:
+        def set_page_load_timeout(self, seconds):
+            self.timeout = seconds
+
+    driver = Driver()
+    assert later._configure_selenium_deadline(driver)
+    assert driver.timeout == 15.0
+
+
+def test_selenium_startup_overrun_skips_remaining_attempt(monkeypatch, caplog):
+    import scripts.http_client as http_client
+
+    monkeypatch.setattr(http_client, "SELENIUM_RUN_BUDGET_SECONDS", 90.0)
+    monkeypatch.setattr(http_client, "SELENIUM_HOST_BUDGET_SECONDS", 15.0)
+    monkeypatch.setattr(http_client, "_SELENIUM_SECONDS_USED", 0.0)
+    monkeypatch.setattr(http_client, "_SELENIUM_SECONDS_BY_HOST", {})
+    clock = {"now": 0.0}
+    monkeypatch.setattr(http_client.time, "monotonic", lambda: clock["now"])
+    client = HostClient("slow.example", RequestStrategy(selenium_fallback=True), {})
+
+    class Driver:
+        def set_page_load_timeout(self, seconds):
+            raise AssertionError("an exhausted attempt must not receive a navigation timeout")
+
+        def quit(self):
+            pass
+
+    def start_slow_chrome(options):
+        clock["now"] = 16.0
+        return Driver()
+
+    selenium = types.ModuleType("selenium")
+    selenium.webdriver = types.SimpleNamespace(Chrome=start_slow_chrome)
+    monkeypatch.setitem(sys.modules, "selenium", selenium)
+    monkeypatch.setattr("scripts.http_client.importlib.util.find_spec", lambda name: object())
+    monkeypatch.setattr(client, "_build_chrome_options", lambda: object())
+    monkeypatch.setattr(
+        client,
+        "_apply_selenium_rendering",
+        lambda driver, url: pytest.fail("navigation must be skipped after startup overrun"),
+    )
+
+    with caplog.at_level("WARNING"):
+        assert client.fetch_html_with_selenium("https://slow.example/") is None
+
+    assert "Selenium startup budget overrun for slow.example" in caplog.text
+    assert "skip navigation" in caplog.text
+    assert http_client._SELENIUM_SECONDS_USED == 16.0
+    assert http_client._SELENIUM_SECONDS_BY_HOST == {"slow.example": 16.0}
 
 
 class DummyResponse:

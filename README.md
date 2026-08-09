@@ -1,52 +1,52 @@
 # Unified news feed for normacs
 
-Проект агрегирует новости из набора источников и публикует единый JSON Feed в `docs/unified.json`.
+This project aggregates news from a set of sources and publishes a unified JSON Feed to `docs/unified.json`.
 
 ---
 
-## Что делает скрипт
+## What the script does
 
-Сборщик (`scripts/aggregate.py`):
+The aggregator (`scripts/aggregate.py`):
 
-1. Загружает список источников из `sources.json`.
-2. Для каждого источника собирает список ссылок (из HTML/XML/API).
-3. Загружает страницы новостей, извлекает текст, дату публикации и канонический URL.
-4. Фильтрует короткие/пустые материалы.
-5. Объединяет с уже существующей лентой (`docs/unified.json`), не теряя историю.
-6. Сохраняет результат в формате JSON Feed 1.1.
-
----
-
-## Структура репозитория
-
-- `scripts/aggregate.py` — основной pipeline агрегации.
-- `scripts/http_client.py` — stateful HTTP-клиент с per-host стратегиями, куками, warm-up и Selenium-фолбэком.
-- `sources.json` — конфигурация источников.
-- `docs/unified.json` — итоговая лента.
-- `tests/` — unit-тесты.
-- `.cache/state.json` — состояние между запусками (куки, метрики, seen URLs, cooldown, служебные индексы).
-- `.cache/pages/` — кеш скачанных страниц.
+1. Loads the source list from `sources.json`.
+2. Collects links for each source (from HTML/XML/API).
+3. Downloads news pages and extracts their text, publication date, and canonical URL.
+4. Filters out short or empty articles.
+5. Merges the results with the existing feed (`docs/unified.json`) without losing history.
+6. Saves the result in JSON Feed 1.1 format.
 
 ---
 
-## Запуск
+## Repository structure
+
+- `scripts/aggregate.py` — main aggregation pipeline.
+- `scripts/http_client.py` — stateful HTTP client with per-host strategies, cookies, warm-up, and Selenium fallback.
+- `sources.json` — source configuration.
+- `docs/unified.json` — resulting feed.
+- `tests/` — unit tests.
+- `.cache/state.json` — state persisted between runs (cookies, metrics, seen URLs, cooldowns, and internal indexes).
+- `.cache/pages/` — cache of downloaded pages.
+
+---
+
+## Running the aggregator
 
 ```bash
 python scripts/aggregate.py
 ```
 
-Полезные флаги:
+Useful flags:
 
-- `--rebuild` — форс-пересборка (игнорируется оптимизация по неизменившемуся index и seen-URL фильтр).
-- `--dry-run` — не записывать `docs/unified.json` и state.
-- `--smoke` — быстрый прогон (ограниченный набор источников).
-- `--sources "Имя 1,Имя 2"` — запуск только выбранных источников.
-- `--limit-per-source N` — ограничение deep-fetch на источник (актуально для smoke).
-- `--connect-timeout`, `--read-timeout` — глобальные таймауты.
-- `--max-runtime` — мягкий лимит общего времени выполнения.
-- `--debug` — подробные debug-логи.
+- `--rebuild` — force a rebuild (disables the unchanged-index optimization and seen-URL filter).
+- `--dry-run` — do not write `docs/unified.json` or state.
+- `--smoke` — run a quick check against a limited set of sources.
+- `--sources "Name 1,Name 2"` — run only the selected sources.
+- `--limit-per-source N` — limit deep fetches per source (primarily useful for smoke runs).
+- `--connect-timeout`, `--read-timeout` — global timeouts.
+- `--max-runtime` — soft limit on total runtime.
+- `--debug` — enable detailed debug logs.
 
-Пример targeted rebuild:
+Example targeted rebuild:
 
 ```bash
 MODE="rebuild" python scripts/aggregate.py --rebuild --sources "Российская газета: Экономика"
@@ -54,163 +54,174 @@ MODE="rebuild" python scripts/aggregate.py --rebuild --sources "Российск
 
 ---
 
-## Как работает сетевой слой (`request_strategy`)
+## How the network layer works (`request_strategy`)
 
-Для каждого источника можно задать `request_strategy` в `sources.json`:
+Each source can define a `request_strategy` in `sources.json`:
 
-- `connect_timeout`, `read_timeout` — таймауты подключения/чтения.
-- `max_attempts`, `backoff_factor` — число попыток и экспоненциальный backoff.
-- `retry_statuses` — HTTP-коды, при которых выполняется повтор.
-- `extra_headers` — дополнительные заголовки.
-- `proxies` — пул прокси (`string` или `{http,https}`), переключение по попыткам.
-- `warmup` — прогрев (URL/timeout/delay), обычно для антибота/куки.
-- `selenium_fallback` и related (`selenium_wait`, `selenium_wait_for`, `selenium_scroll_steps`) — браузерный фолбэк.
-- `capture_cookies` — сохранять куки в state.
-- `record_path_on_success` — запоминать последний успешный path.
+- `connect_timeout`, `read_timeout` — connection and read timeouts.
+- `max_attempts`, `backoff_factor` — attempt count and exponential backoff.
+- `retry_statuses` — HTTP status codes that trigger a retry.
+- `extra_headers` — additional headers.
+- `proxies` — proxy pool (`string` or `{http,https}`), rotated between attempts.
+- `warmup` — warm-up request (URL/timeout/delay), usually used for anti-bot protection or cookies.
+- `selenium_fallback` and related settings (`selenium_wait`, `selenium_wait_for`, `selenium_scroll_steps`) — browser fallback.
+- `capture_cookies` — persist cookies in state.
+- `record_path_on_success` — remember the last successful path.
 
-### Важная текущая логика (после последних изменений)
+### Important current behavior (after the latest changes)
 
-- При явных сетевых симптомах недоступности (`network unreachable` / `connect timeout`) хост может переводиться во временный cooldown (`NEWSFEED_NETWORK_COOLDOWN_SECONDS`, по умолчанию `900` сек), чтобы не тратить десятки минут на повторные одинаковые таймауты.
-- Если у хоста задан **пул прокси**, cooldown не активируется преждевременно: сначала используются оставшиеся retry-итерации/прокси.
-- Успешные попытки логируются на уровне `DEBUG`, а ошибки остаются в `WARNING`.
-
----
-
-## Fallback-поведение для index-страниц
-
-Для источника можно задать:
-
-- `start_url` — основной index.
-- `fallback_start_urls` — список альтернативных index URL.
-
-Сборщик проходит кандидаты по очереди:
-
-1. Пробует основной URL.
-2. Если запрос упал — переходит к следующему.
-3. Если запрос «успешный», но index фактически пустой (0 raw candidates), пробует fallback.
-4. Если есть кеш index-страницы и он богаче текущего ответа, берётся кешированная версия.
-
-Это особенно полезно для источников, где основной URL часто отдаёт защитную/пустую страницу.
+- When explicit network-unavailability symptoms occur (`network unreachable` / `connect timeout`), the host may enter a temporary cooldown (`NEWSFEED_NETWORK_COOLDOWN_SECONDS`, default `900` seconds) to avoid spending tens of minutes on repeated identical timeouts.
+- If a host has a **proxy pool**, cooldown is not activated prematurely: the remaining retry iterations and proxies are tried first.
+- Successful attempts are logged at `DEBUG`; errors remain at `WARNING`.
 
 ---
 
-## Кеш, состояние и merge
+## Fallback behavior for index pages
+
+A source can define:
+
+- `start_url` — primary index.
+- `fallback_start_urls` — list of alternative index URLs.
+
+The aggregator tries candidates in order:
+
+1. Tries the primary URL.
+2. If the request fails, moves to the next URL.
+3. If the request "succeeds" but the index is effectively empty (0 raw candidates), tries the fallback.
+4. If a cached index page exists and contains more candidates than the current response, uses the cached version.
+
+This is especially useful for sources whose primary URL frequently returns a protection page or an empty page.
+
+---
+
+## Cache, state, and merging
 
 ### `.cache/state.json`
 
-Хранит:
+Stores:
 
-- `host_state` (куки, ошибки, cooldown, warmup flags),
-- `stats.metrics` (тайминги/статусы попыток),
+- `host_state` (cookies, errors, cooldowns, warm-up flags),
+- `stats.metrics` (attempt timings and statuses),
 - `seen_urls`, `index_hash`,
-- `first_seen`, `canonical_item_ids`, `content_hashes` и др.
+- `first_seen`, `canonical_item_ids`, `content_hashes`, and other internal data.
 
 ### `.cache/pages/`
 
-- кеш HTML-страниц index и карточек;
-- при сетевой недоступности используется как fallback.
+- caches HTML index and article pages;
+- serves as a fallback during network outages.
 
-### Merge логика
+### Merge behavior
 
-- новые карточки объединяются с существующим `docs/unified.json`;
-- для `content_text` предпочитается более полный текст;
-- для времени (`published_at`, `fetched_at`) выбирается более релевантное/новое значение;
-- итог ограничивается `FEED_MAX_ITEMS` (по умолчанию 800).
+- new articles are merged with the existing `docs/unified.json`;
+- the more complete text is preferred for `content_text`;
+- the more relevant or newer value is selected for timestamps (`published_at`, `fetched_at`);
+- the resulting feed is limited by `FEED_MAX_ITEMS` (default 800).
 
 ---
 
-## Настройки качества контента
+## Content quality settings
 
-В `sources.json` доступны:
+The following settings are available in `sources.json`:
 
-- `min_words` — минимальный порог слов для карточки,
-- `content_selectors` — селекторы основного текста,
-- `include_patterns`/`include_regex`/`exclude_regex` — фильтрация ссылок,
+- `min_words` — minimum word count for an article,
+- `content_selectors` — selectors for the main text,
+- `include_patterns`/`include_regex`/`exclude_regex` — link filters,
 - `restrict_domain`, `max_links`, `link_min_text_len`, `accept_empty_anchor`.
 
-Есть также поддержка:
+The aggregator also supports:
 
-- API-источников (`mode: api`, `api_endpoint`),
-- fallback API -> HTML (`html_fallback_on_empty_api`),
-- AMP/mobile fallback при извлечении текста.
-
----
-
-## Логи и диагностика
-
-На INFO-уровне обычно видно:
-
-- старт источника,
-- выбор index candidate,
-- число найденных ссылок (`raw`/`accepted`),
-- итог по источнику (`-> N items`),
-- сводку `SOURCE_SUMMARY`.
-
-После сборки `docs/source-health.json` сохраняет результат именно текущего
-обхода отдельно от ограниченной итоговой ленты. Проверка `scripts/metrics.py
---source-health docs/source-health.json` сообщает о сетевых сбоях, кешированных
-fallback и неожиданно пустых index-страницах. Отсутствие источника среди 800
-сохранённых карточек само по себе не считается ошибкой: активный источник может
-быть вытеснен более частым источником. Для диагностического строгого режима
-доступны `--strict-source-health` и `--fail-on-empty-source`.
-
-Строка каждого источника разделяет `retained_item_count` (число карточек в
-ограниченной ленте) и, при передаче `--source-health`, показатели текущего
-обхода: `current_crawl_status`, `index_fetch_status`, `raw_link_candidates`,
-`accepted_links`, `attempted_articles` и `accepted_articles`. Отдельно выводятся
-`newest_retained_timestamp` и `retained_content_freshness_status`; источник без
-сохранённой временной метки получает
-`retained_content_freshness_status=no_data`, а не считается свежим. Время
-`last_successful_discovery_at` и `discovery_recency_status` описывают успешное
-обнаружение ссылок независимо от возраста сохранённых карточек. Если для
-источника не задан свой интервал, для discovery recency применяется общий
-`--stale-hours`.
-Проверки можно включить точечно в объекте источника в `sources.json`:
-`expected_min_candidates` задаёт минимум найденных при обходе кандидатов,
-`expected_update_hours` — максимальный возраст последнего успешного обнаружения
-при наличии `--source-health` (без него — возраст последней сохранённой карточки),
-а `allow_empty: false` включает проверку отсутствия карточек только для этого
-источника. Флаг `--fail-on-empty-source` включает такую проверку глобально;
-`allow_empty: true` или одноимённый аргумент со значением имени источника
-оставляют явное исключение. Первые две проверки становятся ошибками в режиме
-`--strict-source-health`; без настроек и глобального флага ограниченная лента
-остаётся допустимо пустой для любого отдельного источника.
-
-Нормальная сборка использует следующие ограничители ресурсов и качества,
-которые можно переопределить переменными окружения:
-
-- `FEED_MIN_ITEMS_PER_SOURCE=5` резервирует небольшую долю ленты для каждого
-  представленного источника до заполнения оставшихся мест по общей свежести;
-- `NEWSFEED_SELENIUM_BUDGET_SECONDS=90` ограничивает суммарное время браузерных
-  fallback в одном запуске;
-- `NEWSFEED_CACHE_MAX_BYTES=536870912` и `NEWSFEED_CACHE_MAX_AGE_DAYS=14`
-  ограничивают HTML-кеш объёмом и возрастом.
-
-Отчёт также содержит `consecutive_failures` и `future_date_rejections`.
-Строгая проверка становится ошибкой только после трёх последовательных
-неудачных обходов, поэтому единичный сетевой сбой остаётся предупреждением.
-
-На DEBUG-уровне дополнительно:
-
-- детальные fetch-attempt метрики,
-- path извлечения контента (`_content_source`),
-- технические детали warm-up/Selenium.
+- API sources (`mode: api`, `api_endpoint`),
+- API-to-HTML fallback (`html_fallback_on_empty_api`),
+- AMP/mobile fallback during text extraction.
 
 ---
 
-## Зависимости
+## Logging and diagnostics
 
-Установить Python-зависимости:
+At `INFO` level, logs usually show:
+
+- source startup,
+- index candidate selection,
+- the number of discovered links (`raw`/`accepted`),
+- per-source results (`-> N items`),
+- the `SOURCE_SUMMARY` overview.
+
+After aggregation, `docs/source-health.json` stores the result of the current
+crawl separately from the bounded resulting feed. Running `scripts/metrics.py
+--source-health docs/source-health.json` reports network failures, cached
+fallbacks, and unexpectedly empty index pages. A source being absent from the 800
+retained items is not an error by itself: an active source may be displaced by a
+more frequently updated source. Diagnostic strict mode is available through
+`--strict-source-health` and `--fail-on-empty-source`.
+
+Each source row separates `retained_item_count` (the number of items in the
+bounded feed) from current-crawl metrics included when `--source-health` is
+provided: `current_crawl_status`, `index_fetch_status`, `raw_link_candidates`,
+`accepted_links`, `attempted_articles`, and `accepted_articles`. The report also
+shows `newest_retained_timestamp` and `retained_content_freshness_status`; a
+source without a retained timestamp receives
+`retained_content_freshness_status=no_data` rather than being considered fresh.
+`last_successful_discovery_at` and `discovery_recency_status` describe successful
+link discovery independently of the age of retained items. If a source does not
+define its own interval, the global `--stale-hours` value is used for discovery
+recency.
+Checks can be enabled selectively in a source object in `sources.json`:
+`expected_min_candidates` defines the minimum number of candidates discovered
+during a crawl; `expected_update_hours` defines the maximum age of the last
+successful discovery when `--source-health` is present (without it, the age of
+the latest retained item is used); and `allow_empty: false` enables the missing-
+item check only for that source. The `--fail-on-empty-source` flag enables this
+check globally; `allow_empty: true`, or the command-line argument of the same
+name with a source name as its value, provides an explicit exemption. The first
+two checks become errors in `--strict-source-health` mode. Without per-source
+settings or the global flag, the bounded feed may validly contain no items from
+any individual source.
+
+Normal builds use the following resource and quality limits, which can be
+overridden through environment variables:
+
+- `FEED_MIN_ITEMS_PER_SOURCE=5` reserves a small share of the feed for each
+  represented source before filling the remaining slots by overall freshness;
+- `NEWSFEED_SELENIUM_BUDGET_SECONDS=90` provides overall browser-runtime
+  accounting; `NEWSFEED_SELENIUM_HOST_BUDGET_SECONDS=15` adds per-host
+  accounting and fairness so repeated budgeted attempts by one host do not
+  consume the browser opportunity intended for later hosts. These budgets are
+  not hard wall-clock caps for an entire browser attempt. Navigation and
+  explicit waits/sleeps are constrained by the remaining allowance where
+  Selenium exposes suitable controls. Chrome/driver startup and synchronous
+  WebDriver commands such as script execution, page-source or cookie retrieval,
+  and driver shutdown cannot be safely preempted in the current in-process
+  design and may overrun an allowance; their elapsed time is still recorded.
+  If Chrome startup itself consumes the remaining allowance, the overrun is
+  logged and the attempt does not proceed to navigation or rendering.
+- `NEWSFEED_CACHE_MAX_BYTES=536870912` and `NEWSFEED_CACHE_MAX_AGE_DAYS=14`
+  limit the HTML cache by size and age.
+
+The report also includes `consecutive_failures` and `future_date_rejections`.
+Strict validation becomes an error only after three consecutive failed crawls,
+so an isolated network failure remains a warning.
+
+At `DEBUG` level, logs additionally include:
+
+- detailed fetch-attempt metrics,
+- the content extraction path (`_content_source`),
+- technical warm-up/Selenium details.
+
+---
+
+## Dependencies
+
+Install the Python dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Для Selenium-фолбэков нужен браузер + webdriver (Chromium/Chrome + chromedriver).
+Selenium fallbacks require a browser and WebDriver (Chromium/Chrome and chromedriver).
 
 ---
 
-## CI / публикация
+## CI / publication
 
-- Автосборка выполняется в GitHub Actions (`.github/workflows/build.yml`).
-- Публикуемый файл: `docs/unified.json` (GitHub Pages endpoint `/unified.json`).
+- Automated builds run in GitHub Actions (`.github/workflows/build.yml`).
+- Published file: `docs/unified.json` (GitHub Pages endpoint `/unified.json`).
