@@ -21,6 +21,11 @@
     "include_patterns": [
       "/article/"
     ],
+    "content_selectors": [
+      ".b-article__body",
+      "[itemprop='articleBody']",
+      "article"
+    ],
     "link_min_text_len": 8,
     "enabled": true
   },
