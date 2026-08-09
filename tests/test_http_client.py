@@ -127,6 +127,38 @@ def test_host_client_retries_and_records_metrics(monkeypatch):
     assert metrics["status"] == 200
 
 
+def test_host_client_retries_literal_script_cookie_challenge(monkeypatch):
+    state = {}
+    strategy = RequestStrategy(max_attempts=2, backoff_factor=0)
+    client = HostClient("example.com", strategy, state)
+    challenge = (
+        "<script>document.cookie='realauth=token' + '; path=/; SameSite=Lax';"
+        "location.reload();</script>"
+    )
+    client._session = DummySession(
+        [DummyResponse(text=challenge), DummyResponse(text="<a href='/news/1'>News</a>")]
+    )
+    monkeypatch.setattr(client, "_perform_dns_lookup", lambda url: 1.0)
+
+    response = client.get("https://example.com/news", headers={})
+
+    assert response.text == "<a href='/news/1'>News</a>"
+    assert client._session.cookies.get("realauth") == "token"
+    attempts = state["stats"]["metrics"]["example.com"]["attempt_log"]
+    assert attempts[0]["script_cookie_challenge"] is True
+
+
+def test_host_client_does_not_evaluate_nonliteral_script_cookie():
+    state = {}
+    client = HostClient("example.com", RequestStrategy(max_attempts=2), state)
+    response = DummyResponse(
+        text="<script>document.cookie=makeCookie();location.reload();</script>"
+    )
+
+    assert client._apply_script_cookie_challenge(response, "https://example.com") is False
+    assert not client._session.cookies
+
+
 def test_host_client_raises_after_failures(monkeypatch):
     state = {}
     strategy = RequestStrategy(max_attempts=2, backoff_factor=0)

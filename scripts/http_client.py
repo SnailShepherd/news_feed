@@ -8,6 +8,7 @@ import json
 import logging
 import os
 import random
+import re
 import shutil
 import socket
 import time
@@ -274,6 +275,11 @@ class HostClient:
                     float(metrics.get("response_ms") or 0.0),
                     url,
                 )
+                if attempt < self.strategy.max_attempts and self._apply_script_cookie_challenge(
+                    response, url
+                ):
+                    metrics["attempt_log"][-1]["script_cookie_challenge"] = True
+                    continue
                 if response.status_code in self.strategy.retry_statuses and attempt < self.strategy.max_attempts:
                     should_retry = self._handle_retry_status(url, response.status_code)
                     if should_retry:
@@ -325,6 +331,38 @@ class HostClient:
         self._persist_metrics(metrics)
         error_summary = ", ".join(errors) or metrics.get("error") or "unknown error"
         raise SourceTemporarilyUnavailable(f"{self.host}: {error_summary}")
+
+    def _apply_script_cookie_challenge(self, response: Response, url: str) -> bool:
+        """Apply a simple first-party cookie challenge and request the page again.
+
+        Some legacy publishers return HTTP 200 with only a small script that
+        assigns a literal cookie and reloads the page. Treating that response
+        as an index makes discovery report zero links even though no index was
+        served. This deliberately supports only literal string fragments; it
+        does not evaluate arbitrary JavaScript.
+        """
+        body = response.text or ""
+        if "document.cookie" not in body or "location.reload" not in body:
+            return False
+        match = re.search(
+            r"document\.cookie\s*=\s*((?:['\"][^'\"]*['\"]\s*\+?\s*)+)",
+            body,
+            flags=re.IGNORECASE,
+        )
+        if not match:
+            return False
+        fragments = re.findall(r"['\"]([^'\"]*)['\"]", match.group(1))
+        assignment = "".join(fragments).split(";", 1)[0]
+        if "=" not in assignment:
+            return False
+        name, value = (part.strip() for part in assignment.split("=", 1))
+        if not name or not re.fullmatch(r"[A-Za-z0-9_.-]+", name):
+            return False
+        domain = requests.utils.urlparse(url).hostname
+        self._session.cookies.set(name, value, domain=domain, path="/")
+        self._store_cookies()
+        LOGGER.info("Applied script cookie challenge for %s (%s)", self.host, name)
+        return True
 
     # Internal helpers ---------------------------------------------------
     def _create_session(self) -> Session:
