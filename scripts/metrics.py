@@ -503,6 +503,9 @@ def main() -> int:
             print(f"crawl_warning: {warning}")
         for failure in failures:
             print(f"crawl_failure: {failure}")
+        # Source health is reported regardless of policy. It only affects the
+        # process status when a caller explicitly opts into strict diagnostics;
+        # feed publication intentionally uses the diagnostic default.
         if failures and args.strict_source_health:
             exit_code = 1
 

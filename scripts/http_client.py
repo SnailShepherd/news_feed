@@ -23,7 +23,9 @@ from requests.adapters import HTTPAdapter
 LOGGER = logging.getLogger(__name__)
 NETWORK_COOLDOWN_SECONDS = int(os.environ.get("NEWSFEED_NETWORK_COOLDOWN_SECONDS", "900"))
 SELENIUM_RUN_BUDGET_SECONDS = float(os.environ.get("NEWSFEED_SELENIUM_BUDGET_SECONDS", "90"))
+SELENIUM_HOST_BUDGET_SECONDS = float(os.environ.get("NEWSFEED_SELENIUM_HOST_BUDGET_SECONDS", "15"))
 _SELENIUM_SECONDS_USED = 0.0
+_SELENIUM_SECONDS_BY_HOST: Dict[str, float] = {}
 
 DEFAULT_USER_AGENT = os.environ.get(
     "NEWSFEED_USER_AGENT",
@@ -542,12 +544,61 @@ class HostClient:
                 SELENIUM_RUN_BUDGET_SECONDS,
             )
             return False
+        host_used = _SELENIUM_SECONDS_BY_HOST.get(self.host, 0.0)
+        if SELENIUM_HOST_BUDGET_SECONDS <= 0 or host_used >= SELENIUM_HOST_BUDGET_SECONDS:
+            LOGGER.warning(
+                "Skip Selenium for %s: host budget exhausted (%.1fs/%.1fs)",
+                self.host,
+                host_used,
+                SELENIUM_HOST_BUDGET_SECONDS,
+            )
+            return False
         return True
 
-    @staticmethod
-    def _record_selenium_runtime(started: float) -> None:
+    def _record_selenium_runtime(self, started: float) -> None:
         global _SELENIUM_SECONDS_USED
-        _SELENIUM_SECONDS_USED += max(0.0, time.monotonic() - started)
+        elapsed = max(0.0, time.monotonic() - started)
+        _SELENIUM_SECONDS_USED += elapsed
+        _SELENIUM_SECONDS_BY_HOST[self.host] = (
+            _SELENIUM_SECONDS_BY_HOST.get(self.host, 0.0) + elapsed
+        )
+
+    def _selenium_attempt_seconds_left(self) -> float:
+        """Return the enforceable allowance remaining for this browser attempt."""
+        remaining = max(
+            0.0,
+            min(
+                SELENIUM_RUN_BUDGET_SECONDS - _SELENIUM_SECONDS_USED,
+                SELENIUM_HOST_BUDGET_SECONDS - _SELENIUM_SECONDS_BY_HOST.get(self.host, 0.0),
+            ),
+        )
+        deadline = getattr(self, "_selenium_attempt_deadline", None)
+        if deadline is not None:
+            remaining = min(remaining, max(0.0, deadline - time.monotonic()))
+        return remaining
+
+    def _start_selenium_attempt(self) -> float:
+        started = time.monotonic()
+        self._selenium_attempt_deadline = started + self._selenium_attempt_seconds_left()
+        return started
+
+    def _configure_selenium_deadline(self, driver) -> bool:
+        # Chrome's page-load timeout interrupts the normally unbounded driver.get.
+        # Driver construction itself is synchronous and cannot be preempted safely;
+        # if it overruns, charge it in finally, report it distinctly, and do not
+        # allow navigation or rendering to extend the overrun.
+        remaining = self._selenium_attempt_seconds_left()
+        if remaining <= 0:
+            deadline = getattr(self, "_selenium_attempt_deadline", time.monotonic())
+            LOGGER.warning(
+                "Selenium startup budget overrun for %s (%.1fs past attempt deadline); "
+                "skip navigation",
+                self.host,
+                max(0.0, time.monotonic() - deadline),
+            )
+            return False
+        driver.set_page_load_timeout(remaining)
+        return True
 
     def _apply_selenium_rendering(self, driver, url: str) -> None:
         from selenium.webdriver.common.by import By
@@ -556,20 +607,26 @@ class HostClient:
         from selenium.common.exceptions import TimeoutException
 
         driver.get(url)
-        if self.strategy.selenium_wait > 0:
-            time.sleep(self.strategy.selenium_wait)
+        remaining = self._selenium_attempt_seconds_left()
+        if self.strategy.selenium_wait > 0 and remaining > 0:
+            time.sleep(min(self.strategy.selenium_wait, remaining))
 
         for selector in self.strategy.selenium_wait_for:
             try:
-                WebDriverWait(driver, max(1.0, self.strategy.selenium_wait)).until(
+                remaining = self._selenium_attempt_seconds_left()
+                if remaining <= 0:
+                    break
+                WebDriverWait(driver, max(0.1, min(self.strategy.selenium_wait, remaining))).until(
                     EC.presence_of_element_located((By.CSS_SELECTOR, selector))
                 )
             except TimeoutException:
                 LOGGER.debug("Selenium wait_for timeout for %s selector=%s", self.host, selector)
 
         for _ in range(self.strategy.selenium_scroll_steps):
+            if self._selenium_attempt_seconds_left() <= 0:
+                break
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(0.8)
+            time.sleep(min(0.8, self._selenium_attempt_seconds_left()))
 
     def _apply_selenium_cookies(self, cookies: List[Dict[str, Any]]) -> None:
         if not cookies:
@@ -598,9 +655,11 @@ class HostClient:
         from selenium import webdriver
 
         driver = None
-        started = time.monotonic()
+        started = self._start_selenium_attempt()
         try:
             driver = webdriver.Chrome(options=self._build_chrome_options())
+            if not self._configure_selenium_deadline(driver):
+                return False
             self._apply_selenium_rendering(driver, url)
             cookies = driver.get_cookies()
             if not cookies:
@@ -616,6 +675,7 @@ class HostClient:
                 if driver is not None:
                     driver.quit()
             self._record_selenium_runtime(started)
+            self._selenium_attempt_deadline = None
 
     def fetch_html_with_selenium(self, url: str) -> Optional[str]:
         if not self.strategy.selenium_fallback:
@@ -629,9 +689,11 @@ class HostClient:
         from selenium import webdriver
 
         driver = None
-        started = time.monotonic()
+        started = self._start_selenium_attempt()
         try:
             driver = webdriver.Chrome(options=self._build_chrome_options())
+            if not self._configure_selenium_deadline(driver):
+                return None
             self._apply_selenium_rendering(driver, url)
             html = driver.page_source
             self._apply_selenium_cookies(driver.get_cookies())
@@ -652,6 +714,7 @@ class HostClient:
                 if driver is not None:
                     driver.quit()
             self._record_selenium_runtime(started)
+            self._selenium_attempt_deadline = None
 
     def _iter_proxies(self) -> Iterable[Optional[Dict[str, str]]]:
         if not self.strategy.proxies:

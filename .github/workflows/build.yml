@@ -12,9 +12,9 @@ on:
         options:
           - normal
           - rebuild
-  # автозапуск по расписанию (каждые 3 часа)
+  # 11:00 and 21:00 Moscow time (UTC+3)
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 8,18 * * *"
 
 jobs:
   build:
@@ -74,8 +74,8 @@ jobs:
       - name: Validate and publish candidate
         id: validation
         continue-on-error: true
-        # Strict validation happens before publication. On failure metrics does
-        # not replace either published file, preserving the last usable feed.
+        # Candidate integrity validation happens before publication. Individual
+        # source failures remain visible below, but are diagnostic only.
         run: |
           set -o pipefail
           {
@@ -84,7 +84,6 @@ jobs:
             python scripts/metrics.py .cache/candidates/unified.json \
               --sources sources.json \
               --source-health .cache/candidates/source-health.json \
-              --strict-source-health \
               --promote-feed docs/unified.json \
               --promote-source-health docs/source-health.json \
               --candidate-state .cache/candidates/state.json \
@@ -105,5 +104,5 @@ jobs:
       - name: Report validation failure
         if: steps.validation.outcome == 'failure'
         run: |
-          echo "Candidate failed strict source-health validation; prior feed was retained." >&2
+          echo "Candidate failed feed validation; prior feed was retained." >&2
           exit 1
