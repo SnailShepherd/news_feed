@@ -18,6 +18,8 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
@@ -101,8 +103,29 @@ jobs:
           git commit -m "Update unified feed [skip ci]" || echo "No changes"
           git push
 
+      - name: Upload GitHub Pages artifact
+        if: steps.validation.outcome == 'success'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: docs
+
       - name: Report validation failure
         if: steps.validation.outcome == 'failure'
         run: |
           echo "Candidate failed feed validation; prior feed was retained." >&2
           exit 1
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
