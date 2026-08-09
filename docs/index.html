@@ -1,11 +1,62 @@
 <!doctype html>
 <html lang="ru">
-<meta charset="utf-8">
-<title>Unified news feed</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; padding: 2rem; line-height:1.5;">
+<head>
+  <meta charset="utf-8">
+  <title>Unified news feed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; padding: 2rem; line-height: 1.5;">
   <h1>Unified news feed</h1>
-  <p>JSON-лента: <a href="./unified.json">/unified.json</a></p>
-  <p>Последнее обновление: будет заполнено GitHub Actions.</p>
+
+  <p>
+    JSON-лента:
+    <a href="./unified.json">/unified.json</a>
+  </p>
+
+  <p>
+    Последнее обновление:
+    <span id="last-updated">загрузка…</span>
+  </p>
+
+  <script>
+    async function showLastUpdated() {
+      const target = document.getElementById("last-updated");
+
+      try {
+        const response = await fetch(
+          "./source-health.json?t=" + Date.now(),
+          { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (!data.generated_at) {
+          throw new Error("generated_at is missing");
+        }
+
+        const date = new Date(data.generated_at);
+
+        target.textContent = new Intl.DateTimeFormat("ru-RU", {
+          timeZone: "Europe/Moscow",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit"
+        }).format(date) + " МСК";
+      } catch (error) {
+        target.textContent = "не удалось определить";
+        console.error("Failed to load source-health.json:", error);
+      }
+    }
+
+    showLastUpdated();
+  </script>
 </body>
 </html>
