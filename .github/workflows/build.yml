@@ -14,7 +14,7 @@ on:
           - rebuild
   # 11:00 and 21:00 Moscow time (UTC+3)
   schedule:
-    - cron: "0 8,18 * * *"
+    - cron: "17 8,18 * * *"
 
 jobs:
   build:
