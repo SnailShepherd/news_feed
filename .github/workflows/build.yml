@@ -12,9 +12,9 @@ on:
         options:
           - normal
           - rebuild
-  # 11:17 and 21:17 Moscow time (UTC+3)
+  # 12:17 and 20:17 Moscow time (UTC+3)
   schedule:
-    - cron: "17 8,18 * * *"
+    - cron: "17 9,17 * * *"
 
 jobs:
   build:
