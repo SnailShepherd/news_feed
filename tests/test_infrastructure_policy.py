@@ -11,6 +11,11 @@ def test_schedule_has_twice_daily_primary_runs_and_delayed_fallbacks():
     assert 'cron: "47 9,17 * * *"' in workflow
     assert "age >= dt.timedelta(hours=2)" in workflow
     assert "cancel-in-progress: false" in workflow
+    current_head_checkout = (
+        "ref: ${{ github.event_name == 'schedule' && "
+        "github.event.repository.default_branch || github.ref }}"
+    )
+    assert workflow.count(current_head_checkout) == 2
     assert "0 */3 * * *" not in workflow
     utc_hours = (9, 17)
     assert tuple((datetime(2026, 1, 1, hour, tzinfo=timezone.utc).hour + 3) % 24 for hour in utc_hours) == (12, 20)

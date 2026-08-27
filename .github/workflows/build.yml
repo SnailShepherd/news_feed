@@ -29,7 +29,13 @@ jobs:
     outputs:
       run-build: ${{ steps.freshness.outputs.run-build }}
     steps:
-      - uses: actions/checkout@v7
+      - name: Check out current branch head
+        uses: actions/checkout@v7
+        with:
+          # A fallback may have waited behind the primary run. For scheduled
+          # events, resolve the default branch again now instead of checking
+          # out the stale SHA captured when the event was queued.
+          ref: ${{ github.event_name == 'schedule' && github.event.repository.default_branch || github.ref }}
 
       - name: Check whether fallback run is needed
         id: freshness
@@ -67,7 +73,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v7
+      - name: Check out current branch head
+        uses: actions/checkout@v7
+        with:
+          # Keep a scheduled build based on the same up-to-date branch that
+          # the freshness gate inspected. Manual runs retain their chosen ref.
+          ref: ${{ github.event_name == 'schedule' && github.event.repository.default_branch || github.ref }}
 
       # кэш страниц (HTML), чтобы экономить запросы
       - name: Restore .cache/pages (HTML cache)
