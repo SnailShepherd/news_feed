@@ -4,13 +4,30 @@ import sys
 from datetime import datetime, timezone
 
 
-def test_schedule_is_twice_daily_at_requested_moscow_times():
+def test_schedule_has_twice_daily_primary_runs_and_delayed_fallbacks():
     workflow = open(".github/workflows/build.yml", encoding="utf-8").read()
 
-    assert 'cron: "0 8,18 * * *"' in workflow
+    assert 'cron: "17 9,17 * * *"' in workflow
+    assert 'cron: "47 9,17 * * *"' in workflow
+    assert "age >= dt.timedelta(hours=2)" in workflow
+    assert "cancel-in-progress: false" in workflow
+    current_head_checkout = (
+        "ref: ${{ github.event_name == 'schedule' && "
+        "github.event.repository.default_branch || github.ref }}"
+    )
+    assert workflow.count(current_head_checkout) == 2
     assert "0 */3 * * *" not in workflow
-    utc_hours = (8, 18)
-    assert tuple((datetime(2026, 1, 1, hour, tzinfo=timezone.utc).hour + 3) % 24 for hour in utc_hours) == (11, 21)
+    utc_hours = (9, 17)
+    assert tuple((datetime(2026, 1, 1, hour, tzinfo=timezone.utc).hour + 3) % 24 for hour in utc_hours) == (12, 20)
+
+
+def test_page_displays_last_update_in_amsterdam_time():
+    page = open("docs/index.html", encoding="utf-8").read()
+
+    assert 'timeZone: "Europe/Amsterdam"' in page
+    assert 'timeZoneName: "short"' in page
+    assert "(Амстердам)" in page
+    assert 'timeZone: "Europe/Moscow"' not in page
 
 
 def test_workflow_keeps_source_health_diagnostic_only():

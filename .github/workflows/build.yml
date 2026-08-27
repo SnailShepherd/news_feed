@@ -12,18 +12,73 @@ on:
         options:
           - normal
           - rebuild
-  # 12:17 and 20:17 Moscow time (UTC+3)
+  # Primary runs: 12:17 and 20:17 Moscow time (UTC+3).
+  # GitHub can occasionally delay or drop scheduled events, so a run at :47
+  # acts as a fallback and is skipped when the primary run published recently.
   schedule:
     - cron: "17 9,17 * * *"
+    - cron: "47 9,17 * * *"
+
+concurrency:
+  group: unified-feed-build
+  cancel-in-progress: false
 
 jobs:
+  schedule-gate:
+    runs-on: ubuntu-latest
+    outputs:
+      run-build: ${{ steps.freshness.outputs.run-build }}
+    steps:
+      - name: Check out current branch head
+        uses: actions/checkout@v7
+        with:
+          # A fallback may have waited behind the primary run. For scheduled
+          # events, resolve the default branch again now instead of checking
+          # out the stale SHA captured when the event was queued.
+          ref: ${{ github.event_name == 'schedule' && github.event.repository.default_branch || github.ref }}
+
+      - name: Check whether fallback run is needed
+        id: freshness
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import json
+          import os
+
+          is_fallback = os.environ["EVENT_NAME"] == "schedule" and os.environ["EVENT_SCHEDULE"].startswith("47 ")
+          run_build = True
+          if is_fallback:
+              try:
+                  with open("docs/source-health.json", encoding="utf-8") as source:
+                      generated_at = json.load(source)["generated_at"]
+                  generated = dt.datetime.fromisoformat(generated_at.replace("Z", "+00:00"))
+                  age = dt.datetime.now(dt.timezone.utc) - generated.astimezone(dt.timezone.utc)
+                  run_build = age >= dt.timedelta(hours=2)
+                  print(f"Published feed age: {age}")
+              except (OSError, KeyError, TypeError, ValueError) as error:
+                  print(f"Could not establish feed freshness; running fallback: {error}")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              print(f"run-build={str(run_build).lower()}", file=output)
+          PY
+
   build:
+    needs: schedule-gate
+    if: needs.schedule-gate.outputs.run-build == 'true'
     permissions:
       contents: write
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v7
+      - name: Check out current branch head
+        uses: actions/checkout@v7
+        with:
+          # Keep a scheduled build based on the same up-to-date branch that
+          # the freshness gate inspected. Manual runs retain their chosen ref.
+          ref: ${{ github.event_name == 'schedule' && github.event.repository.default_branch || github.ref }}
 
       # кэш страниц (HTML), чтобы экономить запросы
       - name: Restore .cache/pages (HTML cache)
