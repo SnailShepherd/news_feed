@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T14:35:01.771357+00:00",
+  "generated_at": "2026-08-29T19:50:48.233549+00:00",
   "sources": [
     {
       "source": "НОТИМ",
@@ -57,7 +57,7 @@
           "accepted_links": 15
         }
       ],
-      "last_successful_discovery_at": "2026-08-29T14:35:01.771357+00:00",
+      "last_successful_discovery_at": "2026-08-29T19:50:48.233549+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -119,8 +119,8 @@
       "source": "ФАУ ФЦС",
       "index_fetch_status": "failed",
       "failure_class": "source_fetch_failure",
-      "consecutive_failures": 1,
-      "consecutive_fetch_failures": 1,
+      "consecutive_failures": 2,
+      "consecutive_fetch_failures": 2,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
@@ -131,7 +131,7 @@
           "url": "https://faufcc.ru/press-tsentr/novosti",
           "raw_link_candidates": 0,
           "accepted_links": 0,
-          "error": "HTTPSConnectionPool(host='faufcc.ru', port=443): Max retries exceeded with url: /press-tsentr/novosti (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f6ccd0d2b10>, 'Connection to faufcc.ru timed out. (connect timeout=5.0)'))",
+          "error": "HTTPSConnectionPool(host='faufcc.ru', port=443): Max retries exceeded with url: /press-tsentr/novosti (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f8adc71ade0>, 'Connection to faufcc.ru timed out. (connect timeout=5.0)'))",
           "failure_kind": "fetch_failure"
         }
       ],
@@ -153,14 +153,14 @@
       "structured_zero_records": 0,
       "structured_article_extraction_failures": 0,
       "cached_fallback_used": false,
-      "last_error": "HTTPSConnectionPool(host='faufcc.ru', port=443): Max retries exceeded with url: /press-tsentr/novosti (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f6ccd0d2b10>, 'Connection to faufcc.ru timed out. (connect timeout=5.0)'))"
+      "last_error": "HTTPSConnectionPool(host='faufcc.ru', port=443): Max retries exceeded with url: /press-tsentr/novosti (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f8adc71ade0>, 'Connection to faufcc.ru timed out. (connect timeout=5.0)'))"
     },
     {
       "source": "Главгосэкспертиза России",
       "index_fetch_status": "failed",
       "failure_class": "source_fetch_failure",
-      "consecutive_failures": 48,
-      "consecutive_fetch_failures": 12,
+      "consecutive_failures": 49,
+      "consecutive_fetch_failures": 13,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 32,
       "consecutive_article_failures": 0,
@@ -258,7 +258,7 @@
           "accepted_links": 12
         }
       ],
-      "last_successful_discovery_at": "2026-08-29T14:35:01.771357+00:00",
+      "last_successful_discovery_at": "2026-08-29T19:50:48.233549+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -296,7 +296,7 @@
           "accepted_links": 18
         }
       ],
-      "last_successful_discovery_at": "2026-08-29T14:35:01.771357+00:00",
+      "last_successful_discovery_at": "2026-08-29T19:50:48.233549+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -320,9 +320,9 @@
       "source": "Интерфакс-Недвижимость",
       "index_fetch_status": "parser_error",
       "failure_class": "crawler_parser_error",
-      "consecutive_failures": 48,
+      "consecutive_failures": 49,
       "consecutive_fetch_failures": 0,
-      "consecutive_parser_failures": 41,
+      "consecutive_parser_failures": 42,
       "consecutive_discovery_failures": 2,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 0,
@@ -367,10 +367,10 @@
       "source": "Металлоснабжение и сбыт",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 48,
+      "consecutive_failures": 49,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 43,
+      "consecutive_discovery_failures": 44,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 7,
       "accepted_links": 0,
@@ -418,17 +418,17 @@
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 193,
-      "accepted_links": 18,
+      "accepted_links": 19,
       "index_attempts": [
         {
           "url": "https://www.pnp.ru/economics/",
           "raw_link_candidates": 193,
-          "accepted_links": 18
+          "accepted_links": 19
         }
       ],
-      "last_successful_discovery_at": "2026-08-29T14:35:01.771357+00:00",
-      "attempted_articles": 2,
-      "accepted_articles": 2,
+      "last_successful_discovery_at": "2026-08-29T19:50:48.233549+00:00",
+      "attempted_articles": 3,
+      "accepted_articles": 3,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -450,11 +450,11 @@
       "source": "ЕРЗ.РФ",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 41,
+      "consecutive_failures": 42,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 41,
-      "consecutive_article_failures": 41,
+      "consecutive_discovery_failures": 42,
+      "consecutive_article_failures": 42,
       "raw_link_candidates": 213,
       "accepted_links": 0,
       "index_attempts": [
@@ -485,41 +485,41 @@
           "signal": "api:date",
           "raw_value": "2026-10-27T09:41:00+03:00",
           "url": "https://erzrf.ru/news/za-dva-goda-dokhodnost-kvartir-v-rossiyskikh-novostroykakh-vyrosla",
-          "future_offset_seconds": 5069497,
+          "future_offset_seconds": 5050502,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-24T17:30:00+03:00",
           "url": "https://erzrf.ru/news/s-prikhodom-oseni-spros-na-novostroyki-nachal-ostyvat",
-          "future_offset_seconds": 4838435,
+          "future_offset_seconds": 4819439,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-24T14:45:00+03:00",
           "url": "https://erzrf.ru/news/klyuchevaya-stavka-opustilas-do-165-godovykh-grafiki",
-          "future_offset_seconds": 4828533,
+          "future_offset_seconds": 4809536,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-23T17:16:00+03:00",
           "url": "https://erzrf.ru/news/kazan-operedila-drugiye-rossiyskiye-megapolisy-po-srednemu-diskontu-na-arendu-kvartir",
-          "future_offset_seconds": 4751190,
+          "future_offset_seconds": 4732194,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-23T10:25:00+03:00",
           "url": "https://erzrf.ru/news/verkhovnyy-sud-nelzya-trebovat-sokhraneniya-obyekta-kulturnogo-naslediya-sobstvennikom-yesli-on-ne-byl-uvedomlen-o-statuse-okn",
-          "future_offset_seconds": 4726528,
+          "future_offset_seconds": 4707532,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 5069497,
+      "maximum_future_offset_seconds": 5050502,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 1,
       "structured_zero_records": 0,
@@ -545,7 +545,7 @@
           "accepted_links": 60
         }
       ],
-      "last_successful_discovery_at": "2026-08-29T14:35:01.771357+00:00",
+      "last_successful_discovery_at": "2026-08-29T19:50:48.233549+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -583,9 +583,9 @@
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-08-29T14:35:01.771357+00:00",
-      "attempted_articles": 4,
-      "accepted_articles": 3,
+      "last_successful_discovery_at": "2026-08-29T19:50:48.233549+00:00",
+      "attempted_articles": 2,
+      "accepted_articles": 1,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 1,
@@ -621,9 +621,9 @@
           "accepted_links": 36
         }
       ],
-      "last_successful_discovery_at": "2026-08-29T14:35:01.771357+00:00",
-      "attempted_articles": 1,
-      "accepted_articles": 1,
+      "last_successful_discovery_at": "2026-08-29T19:50:48.233549+00:00",
+      "attempted_articles": 0,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -659,9 +659,9 @@
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-08-29T14:35:01.771357+00:00",
-      "attempted_articles": 1,
-      "accepted_articles": 1,
+      "last_successful_discovery_at": "2026-08-29T19:50:48.233549+00:00",
+      "attempted_articles": 0,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -688,8 +688,8 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 260,
-      "accepted_links": 212,
+      "raw_link_candidates": 266,
+      "accepted_links": 226,
       "index_attempts": [
         {
           "url": "https://rg.ru/rubric/tema/ekonomika",
@@ -700,62 +700,62 @@
         },
         {
           "url": "https://rg.ru/xml/index.xml",
-          "raw_link_candidates": 260,
-          "accepted_links": 212
+          "raw_link_candidates": 266,
+          "accepted_links": 226
         }
       ],
-      "last_successful_discovery_at": "2026-08-29T14:35:01.771357+00:00",
-      "attempted_articles": 100,
-      "accepted_articles": 52,
+      "last_successful_discovery_at": "2026-08-29T19:50:48.233549+00:00",
+      "attempted_articles": 77,
+      "accepted_articles": 39,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
-      "empty_rejections": 4,
-      "short_rejections": 44,
-      "future_date_rejections": 84,
+      "empty_rejections": 3,
+      "short_rejections": 35,
+      "future_date_rejections": 36,
       "publication_rejections_by_signal": {
-        "meta[property=article:published_time]": 42,
-        "json_ld:datePublished": 42
+        "meta[property=article:published_time]": 18,
+        "json_ld:datePublished": 18
       },
       "publication_rejection_samples": [
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-08-29T17:22:00+00:00",
-          "url": "https://rg.ru/2026/08/29/mid-rf-otvetil-na-obvineniia-armenii-v-iakoby-sankciiah-protiv-ee-produktov.html",
-          "future_offset_seconds": 10224,
+          "raw_value": "2026-08-29T22:41:00+00:00",
+          "url": "https://rg.ru/2026/08/29/lvova-belova-soobshchila-o-sostoianii-detej-postradavshih-ot-ataki-bpla-v-rostove.html",
+          "future_offset_seconds": 10376,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-08-29T17:22:00+00:00",
-          "url": "https://rg.ru/2026/08/29/mid-rf-otvetil-na-obvineniia-armenii-v-iakoby-sankciiah-protiv-ee-produktov.html",
-          "future_offset_seconds": 10224,
+          "raw_value": "2026-08-29T22:41:00+00:00",
+          "url": "https://rg.ru/2026/08/29/lvova-belova-soobshchila-o-sostoianii-detej-postradavshih-ot-ataki-bpla-v-rostove.html",
+          "future_offset_seconds": 10376,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-08-29T17:20:00+00:00",
-          "url": "https://rg.ru/2026/08/29/v-kitae-obsudili-likvidaciiu-posledstvij-shoda-selevogo-potoka-v-uezde-girong.html",
-          "future_offset_seconds": 10102,
+          "raw_value": "2026-08-29T22:30:00+00:00",
+          "url": "https://rg.ru/2026/08/29/nikitin-bespilotnye-avtobusy-vyjdut-na-dorogi-posle-sozdaniia-normativnoj-bazy.html",
+          "future_offset_seconds": 9714,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-08-29T17:20:00+00:00",
-          "url": "https://rg.ru/2026/08/29/v-kitae-obsudili-likvidaciiu-posledstvij-shoda-selevogo-potoka-v-uezde-girong.html",
-          "future_offset_seconds": 10102,
+          "raw_value": "2026-08-29T22:30:00+00:00",
+          "url": "https://rg.ru/2026/08/29/nikitin-bespilotnye-avtobusy-vyjdut-na-dorogi-posle-sozdaniia-normativnoj-bazy.html",
+          "future_offset_seconds": 9714,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-08-29T17:16:00+00:00",
-          "url": "https://rg.ru/2026/08/29/reg-cfo/v-voronezhe-zenit-v-menshinstve-vyrval-pobedu-u-fakela-blagodaria-penalti.html",
-          "future_offset_seconds": 9860,
+          "raw_value": "2026-08-29T22:29:00+00:00",
+          "url": "https://rg.ru/2026/08/29/ekspert-tiurina-poiasnila-pochemu-s-goriachim-hlebom-nado-byt-ostorozhnee.html",
+          "future_offset_seconds": 9652,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 10224,
+      "maximum_future_offset_seconds": 10376,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 0,
       "structured_zero_records": 0,
