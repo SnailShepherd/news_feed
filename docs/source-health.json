@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T14:33:58.902880+00:00",
+  "generated_at": "2026-08-30T19:56:12.010496+00:00",
   "sources": [
     {
       "source": "НОТИМ",
@@ -57,7 +57,7 @@
           "accepted_links": 15
         }
       ],
-      "last_successful_discovery_at": "2026-08-30T14:33:58.902880+00:00",
+      "last_successful_discovery_at": "2026-08-30T19:56:12.010496+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -117,30 +117,28 @@
     },
     {
       "source": "ФАУ ФЦС",
-      "index_fetch_status": "failed",
-      "failure_class": "source_fetch_failure",
-      "consecutive_failures": 3,
-      "consecutive_fetch_failures": 3,
+      "index_fetch_status": "unchanged",
+      "failure_class": null,
+      "consecutive_failures": 4,
+      "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
-      "consecutive_article_failures": 0,
-      "raw_link_candidates": 0,
-      "accepted_links": 0,
+      "consecutive_article_failures": 1,
+      "raw_link_candidates": 50,
+      "accepted_links": 50,
       "index_attempts": [
         {
           "url": "https://faufcc.ru/press-tsentr/novosti",
           "raw_link_candidates": 0,
-          "accepted_links": 0,
-          "error": "HTTPSConnectionPool(host='faufcc.ru', port=443): Max retries exceeded with url: /press-tsentr/novosti (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f673efe82f0>, 'Connection to faufcc.ru timed out. (connect timeout=5.0)'))",
-          "failure_kind": "fetch_failure"
+          "accepted_links": 0
         }
       ],
       "last_successful_discovery_at": "2026-08-28T21:00:25.868020+00:00",
-      "attempted_articles": 0,
+      "attempted_articles": 1,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
-      "empty_rejections": 0,
+      "empty_rejections": 1,
       "short_rejections": 0,
       "future_date_rejections": 0,
       "publication_rejections_by_signal": {},
@@ -153,14 +151,14 @@
       "structured_zero_records": 0,
       "structured_article_extraction_failures": 0,
       "cached_fallback_used": false,
-      "last_error": "HTTPSConnectionPool(host='faufcc.ru', port=443): Max retries exceeded with url: /press-tsentr/novosti (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f673efe82f0>, 'Connection to faufcc.ru timed out. (connect timeout=5.0)'))"
+      "last_error": null
     },
     {
       "source": "Главгосэкспертиза России",
       "index_fetch_status": "failed",
       "failure_class": "source_fetch_failure",
-      "consecutive_failures": 50,
-      "consecutive_fetch_failures": 14,
+      "consecutive_failures": 51,
+      "consecutive_fetch_failures": 15,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 32,
       "consecutive_article_failures": 0,
@@ -220,7 +218,7 @@
           "accepted_links": 35
         }
       ],
-      "last_successful_discovery_at": "2026-08-30T14:33:58.902880+00:00",
+      "last_successful_discovery_at": "2026-08-30T19:56:12.010496+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -258,9 +256,9 @@
           "accepted_links": 12
         }
       ],
-      "last_successful_discovery_at": "2026-08-30T14:33:58.902880+00:00",
-      "attempted_articles": 1,
-      "accepted_articles": 1,
+      "last_successful_discovery_at": "2026-08-30T19:56:12.010496+00:00",
+      "attempted_articles": 0,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -296,7 +294,7 @@
           "accepted_links": 18
         }
       ],
-      "last_successful_discovery_at": "2026-08-30T14:33:58.902880+00:00",
+      "last_successful_discovery_at": "2026-08-30T19:56:12.010496+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -320,9 +318,9 @@
       "source": "Интерфакс-Недвижимость",
       "index_fetch_status": "parser_error",
       "failure_class": "crawler_parser_error",
-      "consecutive_failures": 50,
+      "consecutive_failures": 51,
       "consecutive_fetch_failures": 0,
-      "consecutive_parser_failures": 43,
+      "consecutive_parser_failures": 44,
       "consecutive_discovery_failures": 2,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 0,
@@ -367,10 +365,10 @@
       "source": "Металлоснабжение и сбыт",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 50,
+      "consecutive_failures": 51,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 45,
+      "consecutive_discovery_failures": 46,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 7,
       "accepted_links": 0,
@@ -426,9 +424,9 @@
           "accepted_links": 21
         }
       ],
-      "last_successful_discovery_at": "2026-08-30T14:33:58.902880+00:00",
-      "attempted_articles": 2,
-      "accepted_articles": 2,
+      "last_successful_discovery_at": "2026-08-30T19:56:12.010496+00:00",
+      "attempted_articles": 0,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -450,11 +448,11 @@
       "source": "ЕРЗ.РФ",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 43,
+      "consecutive_failures": 44,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 43,
-      "consecutive_article_failures": 43,
+      "consecutive_discovery_failures": 44,
+      "consecutive_article_failures": 44,
       "raw_link_candidates": 213,
       "accepted_links": 0,
       "index_attempts": [
@@ -485,41 +483,41 @@
           "signal": "api:date",
           "raw_value": "2026-10-27T09:41:00+03:00",
           "url": "https://erzrf.ru/news/za-dva-goda-dokhodnost-kvartir-v-rossiyskikh-novostroykakh-vyrosla",
-          "future_offset_seconds": 4983224,
+          "future_offset_seconds": 4963789,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-24T17:30:00+03:00",
           "url": "https://erzrf.ru/news/s-prikhodom-oseni-spros-na-novostroyki-nachal-ostyvat",
-          "future_offset_seconds": 4752162,
+          "future_offset_seconds": 4732728,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-24T14:45:00+03:00",
           "url": "https://erzrf.ru/news/klyuchevaya-stavka-opustilas-do-165-godovykh-grafiki",
-          "future_offset_seconds": 4742259,
+          "future_offset_seconds": 4722825,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-23T17:16:00+03:00",
           "url": "https://erzrf.ru/news/kazan-operedila-drugiye-rossiyskiye-megapolisy-po-srednemu-diskontu-na-arendu-kvartir",
-          "future_offset_seconds": 4664917,
+          "future_offset_seconds": 4645483,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-23T10:25:00+03:00",
           "url": "https://erzrf.ru/news/verkhovnyy-sud-nelzya-trebovat-sokhraneniya-obyekta-kulturnogo-naslediya-sobstvennikom-yesli-on-ne-byl-uvedomlen-o-statuse-okn",
-          "future_offset_seconds": 4640254,
+          "future_offset_seconds": 4620821,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 4983224,
+      "maximum_future_offset_seconds": 4963789,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 1,
       "structured_zero_records": 0,
@@ -545,7 +543,7 @@
           "accepted_links": 60
         }
       ],
-      "last_successful_discovery_at": "2026-08-30T14:33:58.902880+00:00",
+      "last_successful_discovery_at": "2026-08-30T19:56:12.010496+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -583,12 +581,12 @@
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-08-30T14:33:58.902880+00:00",
-      "attempted_articles": 7,
-      "accepted_articles": 6,
+      "last_successful_discovery_at": "2026-08-30T19:56:12.010496+00:00",
+      "attempted_articles": 1,
+      "accepted_articles": 1,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
-      "empty_rejections": 1,
+      "empty_rejections": 0,
       "short_rejections": 0,
       "future_date_rejections": 0,
       "publication_rejections_by_signal": {},
@@ -621,9 +619,9 @@
           "accepted_links": 36
         }
       ],
-      "last_successful_discovery_at": "2026-08-30T14:33:58.902880+00:00",
-      "attempted_articles": 1,
-      "accepted_articles": 1,
+      "last_successful_discovery_at": "2026-08-30T19:56:12.010496+00:00",
+      "attempted_articles": 0,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -659,7 +657,7 @@
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-08-30T14:33:58.902880+00:00",
+      "last_successful_discovery_at": "2026-08-30T19:56:12.010496+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -688,8 +686,8 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 280,
-      "accepted_links": 210,
+      "raw_link_candidates": 264,
+      "accepted_links": 212,
       "index_attempts": [
         {
           "url": "https://rg.ru/rubric/tema/ekonomika",
@@ -700,62 +698,62 @@
         },
         {
           "url": "https://rg.ru/xml/index.xml",
-          "raw_link_candidates": 280,
-          "accepted_links": 210
+          "raw_link_candidates": 264,
+          "accepted_links": 212
         }
       ],
-      "last_successful_discovery_at": "2026-08-30T14:33:58.902880+00:00",
-      "attempted_articles": 100,
-      "accepted_articles": 56,
+      "last_successful_discovery_at": "2026-08-30T19:56:12.010496+00:00",
+      "attempted_articles": 92,
+      "accepted_articles": 62,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 1,
-      "short_rejections": 43,
-      "future_date_rejections": 58,
+      "short_rejections": 29,
+      "future_date_rejections": 66,
       "publication_rejections_by_signal": {
-        "meta[property=article:published_time]": 29,
-        "json_ld:datePublished": 29
+        "meta[property=article:published_time]": 33,
+        "json_ld:datePublished": 33
       },
       "publication_rejection_samples": [
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-08-30T17:29:00+00:00",
-          "url": "https://rg.ru/2026/08/30/rg-sobrala-podborku-non-fikshn-knig-kotorye-predstaviat-na-mmkia.html",
-          "future_offset_seconds": 10754,
+          "raw_value": "2026-08-30T22:50:00+00:00",
+          "url": "https://rg.ru/2026/08/30/minzdrav-rasshiril-perechen-organov-i-tkanej-dlia-transplantacii-s-1-sentiabria.html",
+          "future_offset_seconds": 10609,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-08-30T17:29:00+00:00",
-          "url": "https://rg.ru/2026/08/30/rg-sobrala-podborku-non-fikshn-knig-kotorye-predstaviat-na-mmkia.html",
-          "future_offset_seconds": 10754,
+          "raw_value": "2026-08-30T22:50:00+00:00",
+          "url": "https://rg.ru/2026/08/30/minzdrav-rasshiril-perechen-organov-i-tkanej-dlia-transplantacii-s-1-sentiabria.html",
+          "future_offset_seconds": 10609,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-08-30T17:22:00+00:00",
-          "url": "https://rg.ru/2026/08/30/v-roskachestve-dali-sovety-po-vyboru-cvetov-k-1-sentiabria.html",
-          "future_offset_seconds": 10331,
+          "raw_value": "2026-08-30T22:49:00+00:00",
+          "url": "https://rg.ru/2026/08/30/reg-cfo/pushkin-ne-zateriaetsia.html",
+          "future_offset_seconds": 10547,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-08-30T17:22:00+00:00",
-          "url": "https://rg.ru/2026/08/30/v-roskachestve-dali-sovety-po-vyboru-cvetov-k-1-sentiabria.html",
-          "future_offset_seconds": 10331,
+          "raw_value": "2026-08-30T22:49:00+00:00",
+          "url": "https://rg.ru/2026/08/30/reg-cfo/pushkin-ne-zateriaetsia.html",
+          "future_offset_seconds": 10547,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-08-30T17:14:00+00:00",
-          "url": "https://rg.ru/2026/08/30/v-belarusi-opredelili-pobeditelej-spartakiady-smi.html",
-          "future_offset_seconds": 9848,
+          "raw_value": "2026-08-30T22:46:00+00:00",
+          "url": "https://rg.ru/2026/08/30/reg-cfo/sk-vozbudil-delo-o-terakte-posle-udara-vsu-po-belgorodu.html",
+          "future_offset_seconds": 10363,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 10754,
+      "maximum_future_offset_seconds": 10609,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 0,
       "structured_zero_records": 0,
