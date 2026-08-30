@@ -17,7 +17,7 @@ on:
   # acts as a fallback and is skipped when the primary run published recently.
   schedule:
     - cron: "17 9,17 * * *"
-    - cron: "47 9,17 * * *"
+  #  - cron: "47 9,17 * * *"
 
 concurrency:
   group: unified-feed-build
