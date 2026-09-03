@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T13:46:40.900741+00:00",
+  "generated_at": "2026-09-03T18:28:42.216930+00:00",
   "sources": [
     {
       "source": "НОТИМ",
@@ -43,11 +43,11 @@
       "source": "АРД: статьи",
       "index_fetch_status": "fetched",
       "failure_class": null,
-      "consecutive_failures": 1,
+      "consecutive_failures": 2,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
-      "consecutive_article_failures": 1,
+      "consecutive_article_failures": 2,
       "raw_link_candidates": 156,
       "accepted_links": 15,
       "index_attempts": [
@@ -57,7 +57,7 @@
           "accepted_links": 15
         }
       ],
-      "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
+      "last_successful_discovery_at": "2026-09-03T18:28:42.216930+00:00",
       "attempted_articles": 1,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -79,13 +79,13 @@
     },
     {
       "source": "Гостинформ",
-      "index_fetch_status": "fetched",
+      "index_fetch_status": "unchanged",
       "failure_class": null,
-      "consecutive_failures": 1,
+      "consecutive_failures": 2,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
-      "consecutive_article_failures": 1,
+      "consecutive_article_failures": 2,
       "raw_link_candidates": 137,
       "accepted_links": 10,
       "index_attempts": [
@@ -125,22 +125,28 @@
     },
     {
       "source": "ФАУ ФЦС",
-      "index_fetch_status": "fetched",
+      "index_fetch_status": "unchanged",
       "failure_class": null,
-      "consecutive_failures": 0,
+      "consecutive_failures": 1,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
-      "consecutive_article_failures": 0,
+      "consecutive_article_failures": 1,
       "raw_link_candidates": 50,
       "accepted_links": 50,
-      "index_attempts": [],
+      "index_attempts": [
+        {
+          "url": "https://faufcc.ru/press-tsentr/novosti",
+          "raw_link_candidates": 0,
+          "accepted_links": 0
+        }
+      ],
       "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
-      "attempted_articles": 12,
-      "accepted_articles": 2,
+      "attempted_articles": 1,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
-      "empty_rejections": 10,
+      "empty_rejections": 1,
       "short_rejections": 0,
       "future_date_rejections": 0,
       "publication_rejections_by_signal": {},
@@ -159,8 +165,8 @@
       "source": "Главгосэкспертиза России",
       "index_fetch_status": "failed",
       "failure_class": "source_fetch_failure",
-      "consecutive_failures": 58,
-      "consecutive_fetch_failures": 22,
+      "consecutive_failures": 59,
+      "consecutive_fetch_failures": 23,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 32,
       "consecutive_article_failures": 0,
@@ -211,18 +217,18 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 95,
+      "raw_link_candidates": 96,
       "accepted_links": 35,
       "index_attempts": [
         {
           "url": "http://ancb.ru/publication",
-          "raw_link_candidates": 95,
+          "raw_link_candidates": 96,
           "accepted_links": 35
         }
       ],
-      "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
-      "attempted_articles": 0,
-      "accepted_articles": 0,
+      "last_successful_discovery_at": "2026-09-03T18:28:42.216930+00:00",
+      "attempted_articles": 1,
+      "accepted_articles": 1,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -258,9 +264,9 @@
           "accepted_links": 12
         }
       ],
-      "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
-      "attempted_articles": 1,
-      "accepted_articles": 1,
+      "last_successful_discovery_at": "2026-09-03T18:28:42.216930+00:00",
+      "attempted_articles": 0,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -296,9 +302,9 @@
           "accepted_links": 18
         }
       ],
-      "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
-      "attempted_articles": 4,
-      "accepted_articles": 4,
+      "last_successful_discovery_at": "2026-09-03T18:28:42.216930+00:00",
+      "attempted_articles": 1,
+      "accepted_articles": 1,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -320,9 +326,9 @@
       "source": "Интерфакс-Недвижимость",
       "index_fetch_status": "parser_error",
       "failure_class": "crawler_parser_error",
-      "consecutive_failures": 58,
+      "consecutive_failures": 59,
       "consecutive_fetch_failures": 0,
-      "consecutive_parser_failures": 51,
+      "consecutive_parser_failures": 52,
       "consecutive_discovery_failures": 2,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 0,
@@ -367,10 +373,10 @@
       "source": "Металлоснабжение и сбыт",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 58,
+      "consecutive_failures": 59,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 53,
+      "consecutive_discovery_failures": 54,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 7,
       "accepted_links": 0,
@@ -426,9 +432,9 @@
           "accepted_links": 30
         }
       ],
-      "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
-      "attempted_articles": 15,
-      "accepted_articles": 15,
+      "last_successful_discovery_at": "2026-09-03T18:28:42.216930+00:00",
+      "attempted_articles": 2,
+      "accepted_articles": 2,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -450,11 +456,11 @@
       "source": "ЕРЗ.РФ",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 51,
+      "consecutive_failures": 52,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 51,
-      "consecutive_article_failures": 51,
+      "consecutive_discovery_failures": 52,
+      "consecutive_article_failures": 52,
       "raw_link_candidates": 213,
       "accepted_links": 0,
       "index_attempts": [
@@ -485,41 +491,41 @@
           "signal": "api:date",
           "raw_value": "2026-10-27T09:41:00+03:00",
           "url": "https://erzrf.ru/news/za-dva-goda-dokhodnost-kvartir-v-rossiyskikh-novostroykakh-vyrosla",
-          "future_offset_seconds": 4640541,
+          "future_offset_seconds": 4623487,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-24T17:30:00+03:00",
           "url": "https://erzrf.ru/news/s-prikhodom-oseni-spros-na-novostroyki-nachal-ostyvat",
-          "future_offset_seconds": 4409479,
+          "future_offset_seconds": 4392426,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-24T14:45:00+03:00",
           "url": "https://erzrf.ru/news/klyuchevaya-stavka-opustilas-do-165-godovykh-grafiki",
-          "future_offset_seconds": 4399576,
+          "future_offset_seconds": 4382523,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-23T17:16:00+03:00",
           "url": "https://erzrf.ru/news/kazan-operedila-drugiye-rossiyskiye-megapolisy-po-srednemu-diskontu-na-arendu-kvartir",
-          "future_offset_seconds": 4322234,
+          "future_offset_seconds": 4305181,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-23T10:25:00+03:00",
           "url": "https://erzrf.ru/news/verkhovnyy-sud-nelzya-trebovat-sokhraneniya-obyekta-kulturnogo-naslediya-sobstvennikom-yesli-on-ne-byl-uvedomlen-o-statuse-okn",
-          "future_offset_seconds": 4297570,
+          "future_offset_seconds": 4280518,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 4640541,
+      "maximum_future_offset_seconds": 4623487,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 1,
       "structured_zero_records": 0,
@@ -545,9 +551,9 @@
           "accepted_links": 60
         }
       ],
-      "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
-      "attempted_articles": 8,
-      "accepted_articles": 8,
+      "last_successful_discovery_at": "2026-09-03T18:28:42.216930+00:00",
+      "attempted_articles": 0,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -574,21 +580,21 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 130,
+      "raw_link_candidates": 129,
       "accepted_links": 20,
       "index_attempts": [
         {
           "url": "http://government.ru/news/",
-          "raw_link_candidates": 130,
+          "raw_link_candidates": 129,
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
-      "attempted_articles": 5,
-      "accepted_articles": 4,
+      "last_successful_discovery_at": "2026-09-03T18:28:42.216930+00:00",
+      "attempted_articles": 2,
+      "accepted_articles": 2,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
-      "empty_rejections": 1,
+      "empty_rejections": 0,
       "short_rejections": 0,
       "future_date_rejections": 0,
       "publication_rejections_by_signal": {},
@@ -621,9 +627,9 @@
           "accepted_links": 36
         }
       ],
-      "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
-      "attempted_articles": 9,
-      "accepted_articles": 9,
+      "last_successful_discovery_at": "2026-09-03T18:28:42.216930+00:00",
+      "attempted_articles": 2,
+      "accepted_articles": 2,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -650,18 +656,18 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 2295,
+      "raw_link_candidates": 2291,
       "accepted_links": 20,
       "index_attempts": [
         {
           "url": "https://realty.ria.ru/lenta/",
-          "raw_link_candidates": 2295,
+          "raw_link_candidates": 2291,
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
-      "attempted_articles": 20,
-      "accepted_articles": 20,
+      "last_successful_discovery_at": "2026-09-03T18:28:42.216930+00:00",
+      "attempted_articles": 4,
+      "accepted_articles": 4,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -688,8 +694,8 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 258,
-      "accepted_links": 196,
+      "raw_link_candidates": 248,
+      "accepted_links": 202,
       "index_attempts": [
         {
           "url": "https://rg.ru/rubric/tema/ekonomika",
@@ -700,62 +706,62 @@
         },
         {
           "url": "https://rg.ru/xml/index.xml",
-          "raw_link_candidates": 258,
-          "accepted_links": 196
+          "raw_link_candidates": 248,
+          "accepted_links": 202
         }
       ],
-      "last_successful_discovery_at": "2026-09-03T13:46:40.900741+00:00",
-      "attempted_articles": 98,
-      "accepted_articles": 62,
+      "last_successful_discovery_at": "2026-09-03T18:28:42.216930+00:00",
+      "attempted_articles": 100,
+      "accepted_articles": 74,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 1,
-      "short_rejections": 35,
-      "future_date_rejections": 190,
+      "short_rejections": 25,
+      "future_date_rejections": 90,
       "publication_rejections_by_signal": {
-        "meta[property=article:published_time]": 95,
-        "json_ld:datePublished": 95
+        "meta[property=article:published_time]": 45,
+        "json_ld:datePublished": 45
       },
       "publication_rejection_samples": [
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-09-03T16:40:00+00:00",
-          "url": "https://rg.ru/2026/09/03/reg-pfo/v-centr-penzy-vernulis-kamni-solnca-i-liubvi.html",
-          "future_offset_seconds": 10654,
+          "raw_value": "2026-09-03T21:22:00+00:00",
+          "url": "https://rg.ru/2026/09/03/v-tripoli-bespilotnik-atakoval-toplivnyj-rezervuar.html",
+          "future_offset_seconds": 10608,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-09-03T16:40:00+00:00",
-          "url": "https://rg.ru/2026/09/03/reg-pfo/v-centr-penzy-vernulis-kamni-solnca-i-liubvi.html",
-          "future_offset_seconds": 10654,
+          "raw_value": "2026-09-03T21:22:00+00:00",
+          "url": "https://rg.ru/2026/09/03/v-tripoli-bespilotnik-atakoval-toplivnyj-rezervuar.html",
+          "future_offset_seconds": 10608,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-09-03T16:39:00+00:00",
-          "url": "https://rg.ru/2026/09/03/reg-ufo/ufas-vozbudilo-delo-protiv-vladelca-azs-iz-za-cen-na-toplivo-na-kubani.html",
-          "future_offset_seconds": 10592,
+          "raw_value": "2026-09-03T21:22:00+00:00",
+          "url": "https://rg.ru/2026/09/03/zelenskij-rasskazal-o-nakazanii-dlia-gur-i-sbu-za-perestrelku-v-kieve.html",
+          "future_offset_seconds": 10604,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-09-03T16:39:00+00:00",
-          "url": "https://rg.ru/2026/09/03/reg-ufo/ufas-vozbudilo-delo-protiv-vladelca-azs-iz-za-cen-na-toplivo-na-kubani.html",
-          "future_offset_seconds": 10592,
+          "raw_value": "2026-09-03T21:22:00+00:00",
+          "url": "https://rg.ru/2026/09/03/zelenskij-rasskazal-o-nakazanii-dlia-gur-i-sbu-za-perestrelku-v-kieve.html",
+          "future_offset_seconds": 10603,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-09-03T16:38:00+00:00",
-          "url": "https://rg.ru/2026/09/03/reg-dfo/kolymskie-uchitelia-smogut-besplatno-osvoit-ii-dlia-raboty-na-urokah.html",
-          "future_offset_seconds": 10529,
+          "raw_value": "2026-09-03T21:22:00+00:00",
+          "url": "https://rg.ru/2026/09/03/politico-slovakiia-zablokirovala-prodlenie-antirossijskih-sankcij-es.html",
+          "future_offset_seconds": 10601,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 10654,
+      "maximum_future_offset_seconds": 10608,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 0,
       "structured_zero_records": 0,
