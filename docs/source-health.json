@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-13T19:34:54.166069+00:00",
+  "generated_at": "2026-09-14T16:03:48.454412+00:00",
   "sources": [
     {
       "source": "НОТИМ",
-      "index_fetch_status": "unchanged",
+      "index_fetch_status": "fetched",
       "failure_class": null,
       "consecutive_failures": 0,
       "consecutive_fetch_failures": 0,
@@ -19,7 +19,7 @@
           "accepted_links": 11
         }
       ],
-      "last_successful_discovery_at": "2026-08-31T17:14:47.373237+00:00",
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -57,9 +57,9 @@
           "accepted_links": 15
         }
       ],
-      "last_successful_discovery_at": "2026-09-13T19:34:54.166069+00:00",
-      "attempted_articles": 0,
-      "accepted_articles": 0,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 2,
+      "accepted_articles": 2,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -79,7 +79,7 @@
     },
     {
       "source": "Гостинформ",
-      "index_fetch_status": "unchanged",
+      "index_fetch_status": "fetched",
       "failure_class": null,
       "consecutive_failures": 0,
       "consecutive_fetch_failures": 0,
@@ -95,9 +95,9 @@
           "accepted_links": 10
         }
       ],
-      "last_successful_discovery_at": "2026-09-08T13:48:25.221562+00:00",
-      "attempted_articles": 0,
-      "accepted_articles": 0,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 3,
+      "accepted_articles": 3,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -105,8 +105,26 @@
       "future_date_rejections": 0,
       "publication_rejections_by_signal": {},
       "publication_rejection_samples": [],
-      "canonical_rejections_by_reason": {},
-      "canonical_rejection_samples": [],
+      "canonical_rejections_by_reason": {
+        "site_root": 3
+      },
+      "canonical_rejection_samples": [
+        {
+          "fetched_url": "https://www.gostinfo.ru/News/Details/2164",
+          "canonical_url": "https://www.gostinfo.ru/",
+          "reason": "site_root"
+        },
+        {
+          "fetched_url": "https://www.gostinfo.ru/News/Details/2163",
+          "canonical_url": "https://www.gostinfo.ru/",
+          "reason": "site_root"
+        },
+        {
+          "fetched_url": "https://www.gostinfo.ru/News/Details/2162",
+          "canonical_url": "https://www.gostinfo.ru/",
+          "reason": "site_root"
+        }
+      ],
       "maximum_future_offset_seconds": 0,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 0,
@@ -119,11 +137,11 @@
       "source": "ФАУ ФЦС",
       "index_fetch_status": "unchanged",
       "failure_class": null,
-      "consecutive_failures": 9,
+      "consecutive_failures": 10,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
-      "consecutive_article_failures": 9,
+      "consecutive_article_failures": 10,
       "raw_link_candidates": 50,
       "accepted_links": 50,
       "index_attempts": [
@@ -157,8 +175,8 @@
       "source": "Главгосэкспертиза России",
       "index_fetch_status": "failed",
       "failure_class": "source_fetch_failure",
-      "consecutive_failures": 81,
-      "consecutive_fetch_failures": 45,
+      "consecutive_failures": 82,
+      "consecutive_fetch_failures": 46,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 32,
       "consecutive_article_failures": 0,
@@ -218,9 +236,9 @@
           "accepted_links": 35
         }
       ],
-      "last_successful_discovery_at": "2026-09-13T19:34:54.166069+00:00",
-      "attempted_articles": 2,
-      "accepted_articles": 2,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 1,
+      "accepted_articles": 1,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -256,9 +274,9 @@
           "accepted_links": 12
         }
       ],
-      "last_successful_discovery_at": "2026-09-13T19:34:54.166069+00:00",
-      "attempted_articles": 0,
-      "accepted_articles": 0,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 3,
+      "accepted_articles": 3,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -294,9 +312,9 @@
           "accepted_links": 18
         }
       ],
-      "last_successful_discovery_at": "2026-09-13T19:34:54.166069+00:00",
-      "attempted_articles": 0,
-      "accepted_articles": 0,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 1,
+      "accepted_articles": 1,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -318,9 +336,9 @@
       "source": "Интерфакс-Недвижимость",
       "index_fetch_status": "parser_error",
       "failure_class": "crawler_parser_error",
-      "consecutive_failures": 81,
+      "consecutive_failures": 82,
       "consecutive_fetch_failures": 0,
-      "consecutive_parser_failures": 74,
+      "consecutive_parser_failures": 75,
       "consecutive_discovery_failures": 2,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 0,
@@ -365,10 +383,10 @@
       "source": "Металлоснабжение и сбыт",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 81,
+      "consecutive_failures": 82,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 76,
+      "consecutive_discovery_failures": 77,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 7,
       "accepted_links": 0,
@@ -415,18 +433,18 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 178,
-      "accepted_links": 32,
+      "raw_link_candidates": 179,
+      "accepted_links": 35,
       "index_attempts": [
         {
           "url": "https://www.pnp.ru/economics/",
-          "raw_link_candidates": 178,
-          "accepted_links": 32
+          "raw_link_candidates": 179,
+          "accepted_links": 35
         }
       ],
-      "last_successful_discovery_at": "2026-09-13T19:34:54.166069+00:00",
-      "attempted_articles": 1,
-      "accepted_articles": 1,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 9,
+      "accepted_articles": 9,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -448,11 +466,11 @@
       "source": "ЕРЗ.РФ",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 74,
+      "consecutive_failures": 75,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 74,
-      "consecutive_article_failures": 74,
+      "consecutive_discovery_failures": 75,
+      "consecutive_article_failures": 75,
       "raw_link_candidates": 213,
       "accepted_links": 0,
       "index_attempts": [
@@ -483,41 +501,41 @@
           "signal": "api:date",
           "raw_value": "2026-10-27T09:41:00+03:00",
           "url": "https://erzrf.ru/news/za-dva-goda-dokhodnost-kvartir-v-rossiyskikh-novostroykakh-vyrosla",
-          "future_offset_seconds": 3755524,
+          "future_offset_seconds": 3681864,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-24T17:30:00+03:00",
           "url": "https://erzrf.ru/news/s-prikhodom-oseni-spros-na-novostroyki-nachal-ostyvat",
-          "future_offset_seconds": 3524461,
+          "future_offset_seconds": 3450802,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-24T14:45:00+03:00",
           "url": "https://erzrf.ru/news/klyuchevaya-stavka-opustilas-do-165-godovykh-grafiki",
-          "future_offset_seconds": 3514558,
+          "future_offset_seconds": 3440900,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-23T17:16:00+03:00",
           "url": "https://erzrf.ru/news/kazan-operedila-drugiye-rossiyskiye-megapolisy-po-srednemu-diskontu-na-arendu-kvartir",
-          "future_offset_seconds": 3437215,
+          "future_offset_seconds": 3363558,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-23T10:25:00+03:00",
           "url": "https://erzrf.ru/news/verkhovnyy-sud-nelzya-trebovat-sokhraneniya-obyekta-kulturnogo-naslediya-sobstvennikom-yesli-on-ne-byl-uvedomlen-o-statuse-okn",
-          "future_offset_seconds": 3412553,
+          "future_offset_seconds": 3338895,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 3755524,
+      "maximum_future_offset_seconds": 3681864,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 1,
       "structured_zero_records": 0,
@@ -543,9 +561,9 @@
           "accepted_links": 60
         }
       ],
-      "last_successful_discovery_at": "2026-09-13T19:34:54.166069+00:00",
-      "attempted_articles": 0,
-      "accepted_articles": 0,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 10,
+      "accepted_articles": 10,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -572,18 +590,18 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 136,
+      "raw_link_candidates": 138,
       "accepted_links": 20,
       "index_attempts": [
         {
           "url": "http://government.ru/news/",
-          "raw_link_candidates": 136,
+          "raw_link_candidates": 138,
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-09-13T19:34:54.166069+00:00",
-      "attempted_articles": 1,
-      "accepted_articles": 1,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 11,
+      "accepted_articles": 11,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -619,9 +637,9 @@
           "accepted_links": 36
         }
       ],
-      "last_successful_discovery_at": "2026-09-13T19:34:54.166069+00:00",
-      "attempted_articles": 0,
-      "accepted_articles": 0,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 14,
+      "accepted_articles": 14,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -648,18 +666,18 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 2243,
+      "raw_link_candidates": 2244,
       "accepted_links": 20,
       "index_attempts": [
         {
           "url": "https://realty.ria.ru/lenta/",
-          "raw_link_candidates": 2243,
+          "raw_link_candidates": 2244,
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-09-13T19:34:54.166069+00:00",
-      "attempted_articles": 0,
-      "accepted_articles": 0,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 18,
+      "accepted_articles": 18,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -686,8 +704,8 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 266,
-      "accepted_links": 220,
+      "raw_link_candidates": 272,
+      "accepted_links": 194,
       "index_attempts": [
         {
           "url": "https://rg.ru/rubric/tema/ekonomika",
@@ -698,62 +716,62 @@
         },
         {
           "url": "https://rg.ru/xml/index.xml",
-          "raw_link_candidates": 266,
-          "accepted_links": 220
+          "raw_link_candidates": 272,
+          "accepted_links": 194
         }
       ],
-      "last_successful_discovery_at": "2026-09-13T19:34:54.166069+00:00",
-      "attempted_articles": 84,
-      "accepted_articles": 50,
+      "last_successful_discovery_at": "2026-09-14T16:03:48.454412+00:00",
+      "attempted_articles": 97,
+      "accepted_articles": 66,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
-      "empty_rejections": 2,
-      "short_rejections": 32,
-      "future_date_rejections": 48,
+      "empty_rejections": 0,
+      "short_rejections": 31,
+      "future_date_rejections": 142,
       "publication_rejections_by_signal": {
-        "meta[property=article:published_time]": 24,
-        "json_ld:datePublished": 24
+        "meta[property=article:published_time]": 71,
+        "json_ld:datePublished": 71
       },
       "publication_rejection_samples": [
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-09-13T22:30:00+00:00",
-          "url": "https://rg.ru/2026/09/13/ukrainskij-zhurnalist-gordon-zaiavil-chto-emu-zapretili-idti-voevat.html",
-          "future_offset_seconds": 10727,
+          "raw_value": "2026-09-14T18:59:00+00:00",
+          "url": "https://rg.ru/2026/09/14/reg-pfo/verhovnyj-sud-ne-soglasilsia-so-shtrafom-voditeliu-za-neoplachennuiu-parkovku.html",
+          "future_offset_seconds": 10703,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-09-13T22:30:00+00:00",
-          "url": "https://rg.ru/2026/09/13/ukrainskij-zhurnalist-gordon-zaiavil-chto-emu-zapretili-idti-voevat.html",
-          "future_offset_seconds": 10727,
+          "raw_value": "2026-09-14T18:59:00+00:00",
+          "url": "https://rg.ru/2026/09/14/reg-pfo/verhovnyj-sud-ne-soglasilsia-so-shtrafom-voditeliu-za-neoplachennuiu-parkovku.html",
+          "future_offset_seconds": 10703,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-09-13T22:29:00+00:00",
-          "url": "https://rg.ru/2026/09/13/shchelchok-po-favoritu.html",
-          "future_offset_seconds": 10664,
+          "raw_value": "2026-09-14T18:57:00+00:00",
+          "url": "https://rg.ru/2026/09/14/reg-cfo/v-moskve-otkrylsia-xiii-vserossijskij-sezd-transplantologov.html",
+          "future_offset_seconds": 10581,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-09-13T22:29:00+00:00",
-          "url": "https://rg.ru/2026/09/13/shchelchok-po-favoritu.html",
-          "future_offset_seconds": 10664,
+          "raw_value": "2026-09-14T18:57:00+00:00",
+          "url": "https://rg.ru/2026/09/14/reg-cfo/v-moskve-otkrylsia-xiii-vserossijskij-sezd-transplantologov.html",
+          "future_offset_seconds": 10581,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-09-13T22:29:00+00:00",
-          "url": "https://rg.ru/2026/09/13/absoliutnyj-chempionat-mira-po-legkoj-atletike-oboshelsia-bez-mirovyh-rekordov.html",
-          "future_offset_seconds": 10661,
+          "raw_value": "2026-09-14T18:54:00+00:00",
+          "url": "https://rg.ru/2026/09/14/reg-ufo/mama-uchis.html",
+          "future_offset_seconds": 10399,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 10727,
+      "maximum_future_offset_seconds": 10703,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 0,
       "structured_zero_records": 0,
