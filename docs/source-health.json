@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T20:40:23.857269+00:00",
+  "generated_at": "2026-10-24T13:30:21.445397+00:00",
   "sources": [
     {
       "source": "НОТИМ",
@@ -57,7 +57,7 @@
           "accepted_links": 14
         }
       ],
-      "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
+      "last_successful_discovery_at": "2026-10-24T13:30:21.445397+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -119,11 +119,11 @@
       "source": "ФАУ ФЦС",
       "index_fetch_status": "unchanged",
       "failure_class": null,
-      "consecutive_failures": 1,
+      "consecutive_failures": 2,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
-      "consecutive_article_failures": 1,
+      "consecutive_article_failures": 2,
       "raw_link_candidates": 50,
       "accepted_links": 50,
       "index_attempts": [
@@ -157,8 +157,8 @@
       "source": "Главгосэкспертиза России",
       "index_fetch_status": "failed",
       "failure_class": "source_fetch_failure",
-      "consecutive_failures": 159,
-      "consecutive_fetch_failures": 123,
+      "consecutive_failures": 160,
+      "consecutive_fetch_failures": 124,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 32,
       "consecutive_article_failures": 0,
@@ -202,7 +202,7 @@
     },
     {
       "source": "АНЦБ",
-      "index_fetch_status": "fetched",
+      "index_fetch_status": "unchanged",
       "failure_class": null,
       "consecutive_failures": 0,
       "consecutive_fetch_failures": 0,
@@ -219,8 +219,8 @@
         }
       ],
       "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
-      "attempted_articles": 7,
-      "accepted_articles": 7,
+      "attempted_articles": 0,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -256,7 +256,7 @@
           "accepted_links": 12
         }
       ],
-      "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
+      "last_successful_discovery_at": "2026-10-24T13:30:21.445397+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -294,9 +294,9 @@
           "accepted_links": 18
         }
       ],
-      "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
-      "attempted_articles": 2,
-      "accepted_articles": 2,
+      "last_successful_discovery_at": "2026-10-24T13:30:21.445397+00:00",
+      "attempted_articles": 0,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -318,9 +318,9 @@
       "source": "Интерфакс-Недвижимость",
       "index_fetch_status": "parser_error",
       "failure_class": "crawler_parser_error",
-      "consecutive_failures": 159,
+      "consecutive_failures": 160,
       "consecutive_fetch_failures": 0,
-      "consecutive_parser_failures": 152,
+      "consecutive_parser_failures": 153,
       "consecutive_discovery_failures": 2,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 0,
@@ -363,12 +363,12 @@
     },
     {
       "source": "Металлоснабжение и сбыт",
-      "index_fetch_status": "fetched",
+      "index_fetch_status": "unchanged",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 159,
+      "consecutive_failures": 160,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 154,
+      "consecutive_discovery_failures": 155,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 7,
       "accepted_links": 0,
@@ -416,17 +416,17 @@
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 189,
-      "accepted_links": 44,
+      "accepted_links": 39,
       "index_attempts": [
         {
           "url": "https://www.pnp.ru/economics/",
           "raw_link_candidates": 189,
-          "accepted_links": 44
+          "accepted_links": 39
         }
       ],
-      "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
-      "attempted_articles": 5,
-      "accepted_articles": 5,
+      "last_successful_discovery_at": "2026-10-24T13:30:21.445397+00:00",
+      "attempted_articles": 3,
+      "accepted_articles": 3,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -448,11 +448,11 @@
       "source": "ЕРЗ.РФ",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 152,
+      "consecutive_failures": 153,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 152,
-      "consecutive_article_failures": 146,
+      "consecutive_discovery_failures": 153,
+      "consecutive_article_failures": 147,
       "raw_link_candidates": 207,
       "accepted_links": 0,
       "index_attempts": [
@@ -474,36 +474,29 @@
       "feed_content_fallbacks": 0,
       "empty_rejections": 38,
       "short_rejections": 0,
-      "future_date_rejections": 3,
+      "future_date_rejections": 2,
       "publication_rejections_by_signal": {
-        "api:date": 3
+        "api:date": 2
       },
       "publication_rejection_samples": [
         {
           "signal": "api:date",
           "raw_value": "2026-10-27T09:41:00+03:00",
           "url": "https://erzrf.ru/news/za-dva-goda-dokhodnost-kvartir-v-rossiyskikh-novostroykakh-vyrosla",
-          "future_offset_seconds": 295899,
+          "future_offset_seconds": 235157,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "api:date",
           "raw_value": "2026-10-24T17:30:00+03:00",
           "url": "https://erzrf.ru/news/s-prikhodom-oseni-spros-na-novostroyki-nachal-ostyvat",
-          "future_offset_seconds": 64833,
-          "classification": "clearly_invalid_future_date"
-        },
-        {
-          "signal": "api:date",
-          "raw_value": "2026-10-24T14:45:00+03:00",
-          "url": "https://erzrf.ru/news/klyuchevaya-stavka-opustilas-do-165-godovykh-grafiki",
-          "future_offset_seconds": 54927,
+          "future_offset_seconds": 4090,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 295899,
+      "maximum_future_offset_seconds": 235157,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 1,
       "structured_zero_records": 0,
@@ -529,7 +522,7 @@
           "accepted_links": 60
         }
       ],
-      "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
+      "last_successful_discovery_at": "2026-10-24T13:30:21.445397+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -558,18 +551,18 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 146,
+      "raw_link_candidates": 147,
       "accepted_links": 20,
       "index_attempts": [
         {
           "url": "http://government.ru/news/",
-          "raw_link_candidates": 146,
+          "raw_link_candidates": 147,
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
-      "attempted_articles": 4,
-      "accepted_articles": 3,
+      "last_successful_discovery_at": "2026-10-24T13:30:21.445397+00:00",
+      "attempted_articles": 2,
+      "accepted_articles": 1,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 1,
@@ -605,9 +598,9 @@
           "accepted_links": 36
         }
       ],
-      "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
-      "attempted_articles": 3,
-      "accepted_articles": 3,
+      "last_successful_discovery_at": "2026-10-24T13:30:21.445397+00:00",
+      "attempted_articles": 5,
+      "accepted_articles": 5,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -643,9 +636,9 @@
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
-      "attempted_articles": 2,
-      "accepted_articles": 2,
+      "last_successful_discovery_at": "2026-10-24T13:30:21.445397+00:00",
+      "attempted_articles": 0,
+      "accepted_articles": 0,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -672,67 +665,60 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 1888,
-      "accepted_links": 586,
+      "raw_link_candidates": 1728,
+      "accepted_links": 581,
       "index_attempts": [
         {
           "url": "https://rg.ru/rubric/tema/ekonomika",
-          "raw_link_candidates": 1888,
-          "accepted_links": 586
+          "raw_link_candidates": 1728,
+          "accepted_links": 581
         }
       ],
-      "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
-      "attempted_articles": 50,
-      "accepted_articles": 10,
+      "last_successful_discovery_at": "2026-10-24T13:30:21.445397+00:00",
+      "attempted_articles": 41,
+      "accepted_articles": 6,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
-      "empty_rejections": 24,
-      "short_rejections": 16,
-      "future_date_rejections": 14,
+      "empty_rejections": 21,
+      "short_rejections": 14,
+      "future_date_rejections": 4,
       "publication_rejections_by_signal": {
-        "meta[property=article:published_time]": 7,
-        "json_ld:datePublished": 7
+        "meta[property=article:published_time]": 2,
+        "json_ld:datePublished": 2
       },
       "publication_rejection_samples": [
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-10-23T22:44:00+00:00",
-          "url": "https://rg.ru/2026/10/23/novak-tri-tankera-s-dizelem-iz-rf-idut-v-storonu-vostochnogo-poberezhia-atlantiki.html",
-          "future_offset_seconds": 7923,
+          "raw_value": "2026-10-24T14:05:00+00:00",
+          "url": "https://rg.ru/2026/10/24/ekonomist-safonov-rasskazal-stoit-li-ispolzovat-qr-kod-v-max-vmesto-pasporta.html",
+          "future_offset_seconds": 2446,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-10-23T22:44:00+00:00",
-          "url": "https://rg.ru/2026/10/23/novak-tri-tankera-s-dizelem-iz-rf-idut-v-storonu-vostochnogo-poberezhia-atlantiki.html",
-          "future_offset_seconds": 7923,
+          "raw_value": "2026-10-24T14:05:00+00:00",
+          "url": "https://rg.ru/2026/10/24/ekonomist-safonov-rasskazal-stoit-li-ispolzovat-qr-kod-v-max-vmesto-pasporta.html",
+          "future_offset_seconds": 2446,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-10-23T22:41:00+00:00",
-          "url": "https://rg.ru/2026/10/23/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-26-oktiabria-po-1-noiabria.html",
-          "future_offset_seconds": 7740,
+          "raw_value": "2026-10-24T15:27:00+00:00",
+          "url": "https://rg.ru/2026/10/24/minenergo-prinimaiutsia-vse-mery-dlia-vosstanovleniia-elektrosnabzheniia-na-iuge-rf.html",
+          "future_offset_seconds": 7354,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-10-23T22:41:00+00:00",
-          "url": "https://rg.ru/2026/10/23/chto-budet-s-rublem-neftiu-i-birzhej-na-nedele-s-26-oktiabria-po-1-noiabria.html",
-          "future_offset_seconds": 7740,
-          "classification": "clearly_invalid_future_date"
-        },
-        {
-          "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-10-23T20:59:00+00:00",
-          "url": "https://rg.ru/2026/10/23/nabiullina-sdelala-novye-prognozy-i-nazvala-prichiny-ukrepleniia-rublia.html",
-          "future_offset_seconds": 1617,
+          "raw_value": "2026-10-24T15:27:00+00:00",
+          "url": "https://rg.ru/2026/10/24/minenergo-prinimaiutsia-vse-mery-dlia-vosstanovleniia-elektrosnabzheniia-na-iuge-rf.html",
+          "future_offset_seconds": 7354,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 7923,
+      "maximum_future_offset_seconds": 7354,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 0,
       "structured_zero_records": 0,
