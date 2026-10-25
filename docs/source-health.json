@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T19:39:33.296570+00:00",
+  "generated_at": "2026-10-25T13:49:45.900794+00:00",
   "sources": [
     {
       "source": "НОТИМ",
@@ -57,7 +57,7 @@
           "accepted_links": 14
         }
       ],
-      "last_successful_discovery_at": "2026-10-24T19:39:33.296570+00:00",
+      "last_successful_discovery_at": "2026-10-25T13:49:45.900794+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -119,11 +119,11 @@
       "source": "ФАУ ФЦС",
       "index_fetch_status": "unchanged",
       "failure_class": null,
-      "consecutive_failures": 3,
+      "consecutive_failures": 4,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
-      "consecutive_article_failures": 3,
+      "consecutive_article_failures": 4,
       "raw_link_candidates": 50,
       "accepted_links": 50,
       "index_attempts": [
@@ -157,8 +157,8 @@
       "source": "Главгосэкспертиза России",
       "index_fetch_status": "failed",
       "failure_class": "source_fetch_failure",
-      "consecutive_failures": 161,
-      "consecutive_fetch_failures": 125,
+      "consecutive_failures": 162,
+      "consecutive_fetch_failures": 126,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 32,
       "consecutive_article_failures": 0,
@@ -202,7 +202,7 @@
     },
     {
       "source": "АНЦБ",
-      "index_fetch_status": "unchanged",
+      "index_fetch_status": "fetched",
       "failure_class": null,
       "consecutive_failures": 0,
       "consecutive_fetch_failures": 0,
@@ -218,7 +218,7 @@
           "accepted_links": 35
         }
       ],
-      "last_successful_discovery_at": "2026-10-23T20:40:23.857269+00:00",
+      "last_successful_discovery_at": "2026-10-25T13:49:45.900794+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -256,9 +256,9 @@
           "accepted_links": 12
         }
       ],
-      "last_successful_discovery_at": "2026-10-24T19:39:33.296570+00:00",
-      "attempted_articles": 0,
-      "accepted_articles": 0,
+      "last_successful_discovery_at": "2026-10-25T13:49:45.900794+00:00",
+      "attempted_articles": 1,
+      "accepted_articles": 1,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -294,7 +294,7 @@
           "accepted_links": 18
         }
       ],
-      "last_successful_discovery_at": "2026-10-24T19:39:33.296570+00:00",
+      "last_successful_discovery_at": "2026-10-25T13:49:45.900794+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -318,9 +318,9 @@
       "source": "Интерфакс-Недвижимость",
       "index_fetch_status": "parser_error",
       "failure_class": "crawler_parser_error",
-      "consecutive_failures": 161,
+      "consecutive_failures": 162,
       "consecutive_fetch_failures": 0,
-      "consecutive_parser_failures": 154,
+      "consecutive_parser_failures": 155,
       "consecutive_discovery_failures": 2,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 0,
@@ -365,10 +365,10 @@
       "source": "Металлоснабжение и сбыт",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 161,
+      "consecutive_failures": 162,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 156,
+      "consecutive_discovery_failures": 157,
       "consecutive_article_failures": 0,
       "raw_link_candidates": 7,
       "accepted_links": 0,
@@ -415,18 +415,18 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 189,
-      "accepted_links": 39,
+      "raw_link_candidates": 190,
+      "accepted_links": 42,
       "index_attempts": [
         {
           "url": "https://www.pnp.ru/economics/",
-          "raw_link_candidates": 189,
-          "accepted_links": 39
+          "raw_link_candidates": 190,
+          "accepted_links": 42
         }
       ],
-      "last_successful_discovery_at": "2026-10-24T19:39:33.296570+00:00",
-      "attempted_articles": 1,
-      "accepted_articles": 1,
+      "last_successful_discovery_at": "2026-10-25T13:49:45.900794+00:00",
+      "attempted_articles": 3,
+      "accepted_articles": 3,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -448,11 +448,11 @@
       "source": "ЕРЗ.РФ",
       "index_fetch_status": "fetched",
       "failure_class": "discovery_filter_failure",
-      "consecutive_failures": 154,
+      "consecutive_failures": 155,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
-      "consecutive_discovery_failures": 154,
-      "consecutive_article_failures": 148,
+      "consecutive_discovery_failures": 155,
+      "consecutive_article_failures": 149,
       "raw_link_candidates": 207,
       "accepted_links": 0,
       "index_attempts": [
@@ -483,13 +483,13 @@
           "signal": "api:date",
           "raw_value": "2026-10-27T09:41:00+03:00",
           "url": "https://erzrf.ru/news/za-dva-goda-dokhodnost-kvartir-v-rossiyskikh-novostroykakh-vyrosla",
-          "future_offset_seconds": 213012,
+          "future_offset_seconds": 147413,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 213012,
+      "maximum_future_offset_seconds": 147413,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 1,
       "structured_zero_records": 0,
@@ -515,7 +515,7 @@
           "accepted_links": 60
         }
       ],
-      "last_successful_discovery_at": "2026-10-24T19:39:33.296570+00:00",
+      "last_successful_discovery_at": "2026-10-25T13:49:45.900794+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -539,11 +539,11 @@
       "source": "Правительство РФ",
       "index_fetch_status": "fetched",
       "failure_class": null,
-      "consecutive_failures": 1,
+      "consecutive_failures": 0,
       "consecutive_fetch_failures": 0,
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
-      "consecutive_article_failures": 1,
+      "consecutive_article_failures": 0,
       "raw_link_candidates": 147,
       "accepted_links": 20,
       "index_attempts": [
@@ -553,12 +553,12 @@
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-10-24T19:39:33.296570+00:00",
+      "last_successful_discovery_at": "2026-10-25T13:49:45.900794+00:00",
       "attempted_articles": 1,
-      "accepted_articles": 0,
+      "accepted_articles": 1,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
-      "empty_rejections": 1,
+      "empty_rejections": 0,
       "short_rejections": 0,
       "future_date_rejections": 0,
       "publication_rejections_by_signal": {},
@@ -591,9 +591,9 @@
           "accepted_links": 36
         }
       ],
-      "last_successful_discovery_at": "2026-10-24T19:39:33.296570+00:00",
-      "attempted_articles": 0,
-      "accepted_articles": 0,
+      "last_successful_discovery_at": "2026-10-25T13:49:45.900794+00:00",
+      "attempted_articles": 2,
+      "accepted_articles": 2,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
       "empty_rejections": 0,
@@ -629,7 +629,7 @@
           "accepted_links": 20
         }
       ],
-      "last_successful_discovery_at": "2026-10-24T19:39:33.296570+00:00",
+      "last_successful_discovery_at": "2026-10-25T13:49:45.900794+00:00",
       "attempted_articles": 0,
       "accepted_articles": 0,
       "article_fetch_degradations": 0,
@@ -658,22 +658,22 @@
       "consecutive_parser_failures": 0,
       "consecutive_discovery_failures": 0,
       "consecutive_article_failures": 0,
-      "raw_link_candidates": 1728,
-      "accepted_links": 580,
+      "raw_link_candidates": 1602,
+      "accepted_links": 552,
       "index_attempts": [
         {
           "url": "https://rg.ru/rubric/tema/ekonomika",
-          "raw_link_candidates": 1728,
-          "accepted_links": 580
+          "raw_link_candidates": 1602,
+          "accepted_links": 552
         }
       ],
-      "last_successful_discovery_at": "2026-10-24T19:39:33.296570+00:00",
-      "attempted_articles": 33,
-      "accepted_articles": 1,
+      "last_successful_discovery_at": "2026-10-25T13:49:45.900794+00:00",
+      "attempted_articles": 26,
+      "accepted_articles": 4,
       "article_fetch_degradations": 0,
       "feed_content_fallbacks": 0,
-      "empty_rejections": 20,
-      "short_rejections": 12,
+      "empty_rejections": 8,
+      "short_rejections": 14,
       "future_date_rejections": 2,
       "publication_rejections_by_signal": {
         "meta[property=article:published_time]": 1,
@@ -682,22 +682,22 @@
       "publication_rejection_samples": [
         {
           "signal": "meta[property=article:published_time]",
-          "raw_value": "2026-10-24T21:15:00+00:00",
-          "url": "https://rg.ru/2026/10/24/v-roskachestve-rasskazali-chem-otlichaiutsia-kefir-riazhenka-bifidok-i-ajran.html",
-          "future_offset_seconds": 6109,
+          "raw_value": "2026-10-25T14:51:00+00:00",
+          "url": "https://rg.ru/2026/10/25/novak-rasskazal-skolko-dizelia-rf-gotova-eksportirovat.html",
+          "future_offset_seconds": 3869,
           "classification": "clearly_invalid_future_date"
         },
         {
           "signal": "json_ld:datePublished",
-          "raw_value": "2026-10-24T21:15:00+00:00",
-          "url": "https://rg.ru/2026/10/24/v-roskachestve-rasskazali-chem-otlichaiutsia-kefir-riazhenka-bifidok-i-ajran.html",
-          "future_offset_seconds": 6109,
+          "raw_value": "2026-10-25T14:51:00+00:00",
+          "url": "https://rg.ru/2026/10/25/novak-rasskazal-skolko-dizelia-rf-gotova-eksportirovat.html",
+          "future_offset_seconds": 3869,
           "classification": "clearly_invalid_future_date"
         }
       ],
       "canonical_rejections_by_reason": {},
       "canonical_rejection_samples": [],
-      "maximum_future_offset_seconds": 6109,
+      "maximum_future_offset_seconds": 3869,
       "structured_endpoint_fetch_failures": 0,
       "structured_schema_mismatches": 0,
       "structured_zero_records": 0,
