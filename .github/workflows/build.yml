@@ -12,11 +12,11 @@ on:
         options:
           - normal
           - rebuild
-  # Primary runs: 12:17 and 20:17 Moscow time (UTC+3).
+  # Primary runs: 10:17 and 20:17 Moscow time (UTC+3).
   # GitHub can occasionally delay or drop scheduled events, so a run at :47
   # acts as a fallback and is skipped when the primary run published recently.
   schedule:
-    - cron: "17 9,17 * * *"
+    - cron: "17 7,17 * * *"
   #  - cron: "47 9,17 * * *"
 
 concurrency:
